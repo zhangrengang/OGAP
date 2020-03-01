@@ -1,5 +1,0 @@
-
-augustus: ERROR
-	Error: 2 query files given: /dev/shm/tmp/mt-rosids/trng/train-rps7.gb.train_test1.out and /dev/shm/tmp/mt-rosids/trng/train-rps7.gb.test.
-parameter names must start with '--'
-

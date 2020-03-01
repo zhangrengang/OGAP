@@ -124,6 +124,7 @@ class FeatureRecord():
 	#	print >>sys.stderr, feature.__dict__
 	#	print >>sys.stderr, self.__dict__
 		self.id = self.format_id(id)
+		self._seq = seq
 		self.seq = seq
 		self.index = index
 	#	self.qualifiers = qualifiers
@@ -212,7 +213,10 @@ class FeatureRecord():
 
 	@lazyproperty
 	def pep(self):
-		return self.qualifiers['translation'][0]
+		try:
+			return self.qualifiers['translation'][0]
+		except KeyError:
+			return str(self.seq.translate())
 	def write(self, fout, feat_type=None):
 		if feat_type == 'protein':
 			self.write_pep(fout)

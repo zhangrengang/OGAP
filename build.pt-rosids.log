@@ -6,3 +6,39 @@
 2020-02-29 17:11:05,011 -INFO- get transl_table `11` from Counter({11: 95125})
 2020-02-29 17:11:05,011 -INFO- running OrthoFinder to cluster genes
 2020-02-29 17:11:05,011 -INFO- run CMD: `/share/home/app/build/OrthoFinder-2.3.1/OrthoFinder-2.3.1-beta/orthofinder/orthofinder.py -f /dev/shm/tmp/pt-rosids/prot -M msa -T fasttree -t 16 `
+2020-03-03 00:02:10,861 -INFO- parsing OrthoFinder orthologs
+2020-03-03 00:02:13,510 -INFO- parsing orthologs group into /dev/shm/tmp/pt-rosids/alns
+2020-03-03 00:02:43,735 -INFO- using min_count=113.3 to get gene name
+2020-03-03 00:13:46,419 -INFO- get gene name `rpl23` from Counter({'rpl23': 1122})
+2020-03-03 00:13:46,422 -INFO- get product `ribosomal protein L23` from Counter({'ribosomal protein L23': 1086, '50S ribosomal protein L23': 27, '60S ribosomal protein L23': 8, 'rpl23 protein': 1})
+2020-03-03 00:13:46,427 -INFO- get exon number `1` from Counter({1: 1122})
+2020-03-03 00:13:46,427 -INFO- get trans_splicing `False` from Counter({False: 1121, True: 1})
+2020-03-03 00:23:37,561 -INFO- get gene name `ndhB` from Counter({'ndhB': 1118, 'nad2': 3, 'ndh2': 1, 'ndhb': 1})
+2020-03-03 00:23:37,564 -INFO- get product `NADH-plastoquinone oxidoreductase subunit 2` from Counter({'NADH-plastoquinone oxidoreductase subunit 2': 541, 'NADH dehydrogenase subunit 2': 480, 'NdhB': 33, 'NADH dehydrogenase subunit B': 24, 'NADH dehydrogenase ND2': 19, 'NADH-plastoquinone oxidoreductase chain 2': 16, 'NADH dehydrogenase ND2 subunit': 6, 'NADH dehydrogenase subsunit 2': 1, 'NADH-plastoquinone oxidoreductase protein 2': 1, 'ndhB protein': 1, 'NDH complex (ferredoxin:plastoquinone oxidoreductase) subunit B': 1})
+2020-03-03 00:23:37,570 -INFO- get exon number `2` from Counter({2: 1123})
+2020-03-03 00:23:37,570 -INFO- get trans_splicing `False` from Counter({False: 1121, True: 2})
+2020-03-03 00:23:37,863 -INFO- get gene name `psaA` from Counter({'psaA': 1127, 'Bombax_ceiba-gene143': 1, 'psaB': 1})
+2020-03-03 00:23:37,865 -INFO- get product `photosystem I P700 apoprotein A1` from Counter({'photosystem I P700 apoprotein A1': 575, 'photosystem I P700 chlorophyll a apoprotein A1': 357, 'photosystem I P700 chlorophyll a': 52, 'photosystem I p700 apoprotein A1': 44, 'PSI P700 apoprotein A1': 33, 'PsaA': 30, 'photosystem I P700 chlorophyll A apoprotein A1': 20, 'photosystem I P700 apoprotein subunit Ia': 9, 'photosystem I P700 chlorophy11 A apoprotein A1': 5, 'psaA protein': 1, 'PsAA': 1, 'photosystem I P700 chlorophyll A apoprotein A2': 1, 'photosystem I P700 apoprotein A2': 1})
+2020-03-03 00:23:37,869 -INFO- get exon number `1` from Counter({1: 1129})
+2020-03-03 00:23:37,869 -INFO- get trans_splicing `False` from Counter({False: 1128, True: 1})
+2020-03-03 00:23:38,082 -INFO- get gene name `psaB` from Counter({'psaB': 1128, 'psaA': 1})
+2020-03-03 00:23:38,084 -INFO- get product `photosystem I P700 apoprotein A2` from Counter({'photosystem I P700 apoprotein A2': 625, 'photosystem I P700 chlorophyll a apoprotein A2': 351, 'photosystem I P700 chlorophyll a': 52, 'PSI P700 apoprotein A2': 33, 'PsaB': 32, 'photosystem I P700 chlorophyll A apoprotein A2': 20, 'photosystem I P700 apoprotein subunit Ib': 8, 'photosystem I P700 chlorophy11 A apoprotein A2': 5, 'psaB protein': 1, 'PsAB': 1, 'photosystem I P700 apoprotein A1': 1})
+2020-03-03 00:23:38,087 -INFO- get exon number `1` from Counter({1: 1129})
+2020-03-03 00:23:38,087 -INFO- get trans_splicing `False` from Counter({False: 1128, True: 1})
+2020-03-03 00:23:40,357 -INFO- extrat 4 genes: ['rpl23', 'ndhB', 'psaA', 'psaB']
+2020-03-03 00:23:40,357 -INFO- aligning sequences
+2020-03-03 00:25:10,115 -INFO- building hmm profiles
+2020-03-03 00:25:13,630 -INFO- building augustus profiles
+2020-03-03 00:25:19,909 -INFO- training augustus models
+/share/home/yuanqyk/.local/lib/python2.7/site-packages/Bio/SeqIO/InsdcIO.py:687: BiopythonWarning: Increasing length of locus line to allow long name. This will result in fields that are not in usual positions.
+  BiopythonWarning,
+Traceback (most recent call last):
+  File "/share/home/nature/users/zhangrenang/ogap/lib/makedb.py", line 360, in <module>
+  File "/share/home/nature/users/zhangrenang/ogap/lib/makedb.py", line 341, in main
+  File "/share/home/nature/users/zhangrenang/ogap/lib/makedb.py", line 138, in makedb
+  File "/share/home/nature/users/zhangrenang/ogap/lib/makedb.py", line 245, in get_augustus_training_set
+  File "/share/home/nature/users/zhangrenang/ogap/lib/Genbank.py", line 204, in rearrange_trans_splicing
+    seqs += [str(seq)]
+  File "/share/home/yuanqyk/.local/lib/python2.7/site-packages/Bio/SeqFeature.py", line 1156, in __init__
+    "CompoundLocation should have at least 2 parts, not %r" % parts)
+ValueError: CompoundLocation should have at least 2 parts, not [FeatureLocation(ExactPosition(200), ExactPosition(482), strand=1)]

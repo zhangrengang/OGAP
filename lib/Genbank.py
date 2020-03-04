@@ -59,8 +59,11 @@ class GenbankRecord():
 		self.record = gb_record
 		self.seq = gb_record.seq
 	@lazyproperty
-	def organism(self):
+	def species(self):
 		return self.annotations['organism'].replace(' ', '_')
+	@lazyproperty
+	def organism(self):
+		return self.annotations['organism']
 	@lazyproperty
 	def genus(self):
 		return self.annotations['organism'].split()[0]
@@ -113,7 +116,7 @@ class GenbankRecord():
 		if feat_type == 'protein':
 			feature_types.add('CDS')
 		for feat in self.extract_feature_seqs(feature_types):
-			feat.id = '{}|{}'.format(self.organism, feat.id)	# add organism to feat.id
+			feat.id = '{}|{}'.format(self.species, feat.id)	# add organism to feat.id
 			if feat_type == 'protein':
 				feat.seq = feat.pep
 			yield feat

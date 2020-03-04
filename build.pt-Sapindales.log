@@ -1,0 +1,1481 @@
+{'custom': None, 'taxon': 'Sapindales', 'dbdir': '/dev/shm/tmp/ogap_db', 'organ': 'pt', 'gbfiles': ['/share/home/nature/database/RefSeq/plastid/plastid.1.genomic.gbff.gz', '/share/home/nature/database/RefSeq/plastid/plastid.2.genomic.gbff.gz', '/share/home/nature/database/RefSeq/plastid/plastid.3.genomic.gbff.gz']}
+2020-03-01 11:52:46,891 -INFO- parsing ['/share/home/nature/database/RefSeq/plastid/plastid.1.genomic.gbff.gz', '/share/home/nature/database/RefSeq/plastid/plastid.2.genomic.gbff.gz', '/share/home/nature/database/RefSeq/plastid/plastid.3.genomic.gbff.gz']
+2020-03-01 11:52:46,966 -INFO- writing protein sequences into /dev/shm/tmp/pt-Sapindales/prot
+2020-03-01 12:09:41,380 -INFO- 67 taxa: ['Acer_buergerianum', 'Acer_catalpifolium', 'Acer_davidii', 'Acer_griseum', 'Acer_laevigatum', 'Acer_miaotaiense', 'Acer_morrisonense', 'Acer_palmatum', 'Acer_sino-oblongum', 'Acer_truncatum', 'Acer_wilsonii', 'Aesculus_wangii', 'Ailanthus_altissima', 'Anacardium_occidentale', 'Azadirachta_indica', 'Bergera_koenigii', 'Boswellia_sacra', 'Carapa_guianensis', 'Cedrela_odorata', 'Citrus_aurantiifolia', 'Citrus_depressa', 'Citrus_limon', 'Citrus_maxima', 'Citrus_platymamma', 'Citrus_polytrifolia', 'Citrus_reticulata', 'Citrus_sinensis', 'Clausena_excavata', 'Commiphora_foliacea', 'Commiphora_gileadensis', 'Commiphora_wightii', 'Dimocarpus_longan', 'Dipteronia_dyeriana', 'Dipteronia_sinensis', 'Dodonaea_viscosa', 'Entandrophragma_caudatum', 'Entandrophragma_cylindricum', 'Eurycorymbus_cavaleriei', 'Glycosmis_mauritiana', 'Glycosmis_pentaphylla', 'Khaya_madagascariensis', 'Khaya_senegalensis', 'Koelreuteria_paniculata', 'Leitneria_floridana', 'Litchi_chinensis', 'Mangifera_indica', 'Merrillia_caloxylon', 'Micromelum_minutum', 'Phellodendron_amurense', 'Pistacia_vera', 'Pistacia_weinmaniifolia', 'Rhus_chinensis', 'Sapindus_mukorossi', 'Sclerocarya_birrea', 'Spondias_bahiensis', 'Spondias_mombin', 'Spondias_tuberosa', 'Swietenia_mahagoni', 'Toona_ciliata', 'Xanthoceras_sorbifolium', 'Xylocarpus_granatum', 'Xylocarpus_moluccensis', 'Xylocarpus_rumphii', 'Zanthoxylum_bungeanum', 'Zanthoxylum_piperitum', 'Zanthoxylum_schinifolium', 'Zanthoxylum_simulans']
+2020-03-01 12:09:41,380 -INFO- get taxon `Eukaryota;Viridiplantae;Streptophyta;Embryophyta;Tracheophyta;Spermatophyta;Magnoliophyta;eudicotyledons;Gunneridae;Pentapetalae;rosids;malvids;Sapindales` from Counter({'Eukaryota;Viridiplantae;Streptophyta;Embryophyta;Tracheophyta;Spermatophyta;Magnoliophyta;eudicotyledons;Gunneridae;Pentapetalae;rosids;malvids;Sapindales': 62, 'Eukaryota;Viridiplantae;Streptophyta;Embryophyta;Tracheophyta;Spermatophyta;Magnoliopsida;eudicotyledons;Gunneridae;Pentapetalae;rosids;malvids;Sapindales': 5})
+2020-03-01 12:09:41,399 -INFO- get transl_table `11` from Counter({11: 5839})
+2020-03-01 12:09:41,399 -INFO- running OrthoFinder to cluster genes
+2020-03-01 12:09:41,399 -INFO- run CMD: `/share/home/app/build/OrthoFinder-2.3.1/OrthoFinder-2.3.1-beta/orthofinder/orthofinder.py -f /dev/shm/tmp/pt-Sapindales/prot -M msa -T fasttree -t 16 `
+2020-03-01 12:26:09,644 -INFO- parsing OrthoFinder orthologs
+2020-03-01 12:26:09,664 -INFO- parsing orthologs group into /dev/shm/tmp/pt-Sapindales/alns
+2020-03-01 12:26:09,809 -INFO- using min_count=6.7 to get gene name
+2020-03-01 12:26:26,591 -INFO- get gene name `ccsA` from Counter({'ccsA': 67})
+2020-03-01 12:26:26,591 -INFO- get product `cytochrome c biogenesis protein` from Counter({'cytochrome c biogenesis protein': 29, 'cytochrome c heme attachment protein': 24, 'CcsA': 8, 'cytochrome cheme attachment protein': 6})
+2020-03-01 12:26:26,591 -INFO- get exon number `1` from Counter({1: 66, 2: 1})
+2020-03-01 12:26:26,591 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:26:26,592 -INFO- get gene name `atpB` from Counter({'atpB': 67})
+2020-03-01 12:26:26,593 -INFO- get product `ATP synthase CF1 beta subunit` from Counter({'ATP synthase CF1 beta subunit': 50, 'ATP synthase CF1 beta chain': 9, 'AtpB': 8})
+2020-03-01 12:26:26,593 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:26:26,593 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:26:26,594 -INFO- get gene name `atpA` from Counter({'atpA': 67})
+2020-03-01 12:26:26,594 -INFO- get product `ATP synthase CF1 alpha subunit` from Counter({'ATP synthase CF1 alpha subunit': 50, 'ATP synthase CF1 alpha chain': 9, 'AtpA': 8})
+2020-03-01 12:26:26,595 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:26:26,595 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:26:26,596 -INFO- get gene name `atpF` from Counter({'atpF': 67})
+2020-03-01 12:26:26,596 -INFO- get product `ATP synthase CF0 subunit I` from Counter({'ATP synthase CF0 subunit I': 27, 'ATP synthase CF0 B subunit': 20, 'ATP synthase CF0 B chain': 9, 'AtpF': 8, 'ATP synthase CF0 subunitI': 2, 'ATP synthase CF0 subunit III': 1})
+2020-03-01 12:26:26,596 -INFO- get exon number `2` from Counter({2: 67})
+2020-03-01 12:26:26,596 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:26:26,597 -INFO- get gene name `atpE` from Counter({'atpE': 67})
+2020-03-01 12:26:26,597 -INFO- get product `ATP synthase CF1 epsilon subunit` from Counter({'ATP synthase CF1 epsilon subunit': 50, 'ATP synthase CF1 epsilon chain': 9, 'AtpE': 8})
+2020-03-01 12:26:26,598 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:26:26,598 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:26:26,599 -INFO- get gene name `atpH` from Counter({'atpH': 67})
+2020-03-01 12:26:26,599 -INFO- get product `ATP synthase CF0 subunit III` from Counter({'ATP synthase CF0 subunit III': 27, 'ATP synthase CF0 C subunit': 21, 'ATP synthase CF0 C chain': 9, 'AtpH': 8, 'ATP synthase CF0 subunitIII': 2})
+2020-03-01 12:26:26,599 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:26:26,599 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:26:26,600 -INFO- get gene name `atpI` from Counter({'atpI': 67})
+2020-03-01 12:26:26,600 -INFO- get product `ATP synthase CF0 subunit IV` from Counter({'ATP synthase CF0 subunit IV': 27, 'ATP synthase CF0 A subunit': 21, 'ATP synthase CF0 A chain': 9, 'AtpI': 8, 'ATP synthase CF0 subunitIV': 2})
+2020-03-01 12:26:26,600 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:26:26,601 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:26:28,614 -INFO- get gene name `orf56` from Counter({'orf56': 4})
+2020-03-01 12:26:52,610 -INFO- get gene name `ycf1` from Counter({'ycf1': 72, 'Ycf1': 1})
+2020-03-01 12:26:52,611 -INFO- get product `Ycf1` from Counter({'Ycf1': 28, 'hypothetical chloroplast RF1': 24, 'hypothetical chloroplast RF19': 20, 'ycf1': 1})
+2020-03-01 12:26:52,612 -INFO- get exon number `1` from Counter({1: 72, 2: 1})
+2020-03-01 12:26:52,612 -INFO- get trans_splicing `False` from Counter({False: 73})
+2020-03-01 12:27:32,725 -INFO- get gene name `rpl2` from Counter({'rpl2': 68})
+2020-03-01 12:27:32,726 -INFO- get product `ribosomal protein L2` from Counter({'ribosomal protein L2': 57, '50S ribosomal protein L2': 11})
+2020-03-01 12:27:32,727 -INFO- get exon number `2` from Counter({2: 68})
+2020-03-01 12:27:32,727 -INFO- get trans_splicing `False` from Counter({False: 68})
+2020-03-01 12:28:07,428 -INFO- get gene name `rps19` from Counter({'rps19': 67})
+2020-03-01 12:28:07,429 -INFO- get product `ribosomal protein S19` from Counter({'ribosomal protein S19': 57, '30S ribosomal protein S19': 10})
+2020-03-01 12:28:07,430 -INFO- get exon number `1` from Counter({1: 65, 2: 2})
+2020-03-01 12:28:07,430 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:28:07,438 -INFO- get gene name `psbA` from Counter({'psbA': 67})
+2020-03-01 12:28:07,438 -INFO- get product `photosystem II protein D1` from Counter({'photosystem II protein D1': 52, 'PsbA': 8, 'photosystem II Q protein (D1)': 7})
+2020-03-01 12:28:07,439 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:28:07,439 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:28:07,445 -INFO- get gene name `psbB` from Counter({'psbB': 67})
+2020-03-01 12:28:07,445 -INFO- get product `photosystem II 47 kDa protein` from Counter({'photosystem II 47 kDa protein': 28, 'photosystem II CP47 chlorophyll apoprotein': 19, 'photosystem II p680 chlorophyll A apoprotein': 10, 'PsbB': 10})
+2020-03-01 12:28:07,446 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:28:07,446 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:28:07,448 -INFO- get gene name `psbC` from Counter({'psbC': 62})
+2020-03-01 12:28:07,449 -INFO- get product `photosystem II CP43 chlorophyll apoprotein` from Counter({'photosystem II CP43 chlorophyll apoprotein': 28, 'photosystem II 44 kDa protein': 20, 'photosystem II 44 kDa apoprotein': 10, 'PsbC': 3, 'photosystem II protein C': 1})
+2020-03-01 12:28:07,449 -INFO- get exon number `1` from Counter({1: 62})
+2020-03-01 12:28:07,449 -INFO- get trans_splicing `False` from Counter({False: 62})
+2020-03-01 12:28:07,451 -INFO- get gene name `psbD` from Counter({'psbD': 67})
+2020-03-01 12:28:07,452 -INFO- get product `photosystem II protein D2` from Counter({'photosystem II protein D2': 49, 'photosystem II D2 protein': 10, 'PsbD': 8})
+2020-03-01 12:28:07,452 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:28:07,452 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:28:07,454 -INFO- get gene name `psbE` from Counter({'psbE': 67})
+2020-03-01 12:28:07,454 -INFO- get product `photosystem II cytochrome b559 alpha subunit` from Counter({'photosystem II cytochrome b559 alpha subunit': 29, 'photosystem II protein V': 16, 'cytochrome b559 alpha chain': 9, 'PsbE': 8, 'photosystem II protein E': 4, 'cytochrome b559 alpha subunit': 1})
+2020-03-01 12:28:07,455 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:28:07,455 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:28:07,456 -INFO- get gene name `psbF` from Counter({'psbF': 67})
+2020-03-01 12:28:07,457 -INFO- get product `photosystem II cytochrome b559 beta subunit` from Counter({'photosystem II cytochrome b559 beta subunit': 29, 'photosystem II protein VI': 16, 'cytochrome b559 beta chain': 9, 'PsbF': 8, 'photosystem II protein F': 4, 'cytochrome b559 beta subunit': 1})
+2020-03-01 12:28:07,457 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:28:07,457 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:28:07,459 -INFO- get gene name `psbH` from Counter({'psbH': 67})
+2020-03-01 12:28:07,459 -INFO- get product `photosystem II phosphoprotein` from Counter({'photosystem II phosphoprotein': 27, 'photosystem II protein H': 22, 'photosystem II 10 kDa phosphoprotein': 10, 'PsbH': 8})
+2020-03-01 12:28:07,459 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:28:07,459 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:28:07,461 -INFO- get gene name `psbI` from Counter({'psbI': 67})
+2020-03-01 12:28:07,461 -INFO- get product `photosystem II protein I` from Counter({'photosystem II protein I': 59, 'PsbI': 8})
+2020-03-01 12:28:07,462 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:28:07,462 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:28:07,463 -INFO- get gene name `psbJ` from Counter({'psbJ': 67})
+2020-03-01 12:28:07,464 -INFO- get product `photosystem II protein J` from Counter({'photosystem II protein J': 59, 'PsbJ': 8})
+2020-03-01 12:28:07,464 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:28:07,464 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:28:07,466 -INFO- get gene name `psbK` from Counter({'psbK': 67})
+2020-03-01 12:28:07,466 -INFO- get product `photosystem II protein K` from Counter({'photosystem II protein K': 59, 'PsbK': 8})
+2020-03-01 12:28:07,466 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:28:07,466 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:28:07,468 -INFO- get gene name `psbL` from Counter({'psbL': 67})
+2020-03-01 12:28:07,468 -INFO- get product `photosystem II protein L` from Counter({'photosystem II protein L': 59, 'PsbL': 8})
+2020-03-01 12:28:07,468 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:28:07,469 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:28:07,470 -INFO- get gene name `psbM` from Counter({'psbM': 67})
+2020-03-01 12:28:07,470 -INFO- get product `photosystem II protein M` from Counter({'photosystem II protein M': 59, 'PsbM': 8})
+2020-03-01 12:28:07,471 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:28:07,471 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:28:07,472 -INFO- get gene name `psbN` from Counter({'psbN': 67})
+2020-03-01 12:28:07,473 -INFO- get product `photosystem II protein N` from Counter({'photosystem II protein N': 59, 'PsbN': 8})
+2020-03-01 12:28:07,473 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:28:07,473 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:28:07,475 -INFO- get gene name `psbT` from Counter({'psbT': 67})
+2020-03-01 12:28:07,475 -INFO- get product `photosystem II protein T` from Counter({'photosystem II protein T': 59, 'PsbT': 8})
+2020-03-01 12:28:07,475 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:28:07,475 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:28:07,477 -INFO- get gene name `rbcL` from Counter({'rbcL': 67})
+2020-03-01 12:28:07,477 -INFO- get product `ribulose-1,5-bisphosphate carboxylase/oxygenase large subunit` from Counter({'ribulose-1,5-bisphosphate carboxylase/oxygenase large subunit': 36, 'ribulose-1': 11, 'ribulose 1,5-bisphosphate carboxylase/oxygenase large subunit': 9, "ribulose 1,5-bisphosphate carboxylase/oxygenase large subunit'": 8, 'ribulose bisphosphate carboxylase large chain': 2, 'ribulose bisphosphate carboxylase large chain precursor': 1})
+2020-03-01 12:28:07,478 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:28:07,478 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:28:11,293 -INFO- get gene name `ycf68` from Counter({'ycf68': 6})
+2020-03-01 12:28:18,658 -INFO- get gene name `orf42` from Counter({'orf42': 13})
+2020-03-01 12:28:18,658 -INFO- get product `putative pvs-trna-like protein` from Counter({'putative pvs-trna-like protein': 7, 'hypothetical protein': 6})
+2020-03-01 12:28:18,659 -INFO- get exon number `1` from Counter({1: 13})
+2020-03-01 12:28:18,659 -INFO- get trans_splicing `False` from Counter({False: 13})
+2020-03-01 12:29:05,504 -INFO- get gene name `rps7` from Counter({'rps7': 67})
+2020-03-01 12:29:05,505 -INFO- get product `ribosomal protein S7` from Counter({'ribosomal protein S7': 57, '30S ribosomal protein S7': 10})
+2020-03-01 12:29:05,506 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:29:05,506 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:29:05,512 -INFO- get gene name `psaI` from Counter({'psaI': 67})
+2020-03-01 12:29:05,512 -INFO- get product `photosystem I subunit VIII` from Counter({'photosystem I subunit VIII': 49, 'photosystem I reaction center subunit VIII': 10, 'PsaI': 8})
+2020-03-01 12:29:05,512 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:29:05,512 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:29:05,515 -INFO- get gene name `psaJ` from Counter({'psaJ': 67})
+2020-03-01 12:29:05,515 -INFO- get product `photosystem I subunit IX` from Counter({'photosystem I subunit IX': 49, 'photosystem I reaction center subunit IX': 10, 'PsaJ': 8})
+2020-03-01 12:29:05,516 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:29:05,516 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:29:05,518 -INFO- get gene name `accD` from Counter({'accD': 67})
+2020-03-01 12:29:05,518 -INFO- get product `acetyl-CoA carboxylase carboxyltransferase beta subunit` from Counter({'acetyl-CoA carboxylase carboxyltransferase beta subunit': 23, 'acetyl-CoA carboxylase beta subunit': 23, 'acetyl-CoA carboxylase carboxyl transferase beta': 9, 'AccD': 7, 'Acetyl-CoA carboxylase carboxyltransferase beta subunit': 4, 'accD': 1})
+2020-03-01 12:29:05,519 -INFO- get exon number `1` from Counter({1: 63, 2: 4})
+2020-03-01 12:29:05,519 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:29:22,588 -INFO- get gene name `ycf15` from Counter({'ycf15': 28})
+2020-03-01 12:29:22,589 -INFO- get product `hypothetical chloroplast RF15` from Counter({'hypothetical chloroplast RF15': 16, 'Ycf15': 12})
+2020-03-01 12:29:22,589 -INFO- get exon number `1` from Counter({1: 26, 2: 2})
+2020-03-01 12:29:22,589 -INFO- get trans_splicing `False` from Counter({False: 28})
+2020-03-01 12:29:22,597 -INFO- get gene name `psaB` from Counter({'psaB': 67})
+2020-03-01 12:29:22,598 -INFO- get product `photosystem I P700 apoprotein A2` from Counter({'photosystem I P700 apoprotein A2': 30, 'photosystem I P700 chlorophyll a apoprotein A2': 19, 'photosystem I P700 chlorophyll A apoprotein A2': 10, 'PsaB': 8})
+2020-03-01 12:29:22,598 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:29:22,598 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:29:22,602 -INFO- get gene name `psaC` from Counter({'psaC': 67})
+2020-03-01 12:29:22,602 -INFO- get product `photosystem I subunit VII` from Counter({'photosystem I subunit VII': 49, 'photosystem I iron-sulfur center': 10, 'PsaC': 8})
+2020-03-01 12:29:22,603 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:29:22,603 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:29:22,605 -INFO- get gene name `ndhJ` from Counter({'ndhJ': 67})
+2020-03-01 12:29:22,605 -INFO- get product `NADH-plastoquinone oxidoreductase subunit J` from Counter({'NADH-plastoquinone oxidoreductase subunit J': 40, 'NADH dehydrogenase subunit J': 15, 'NdhJ': 12})
+2020-03-01 12:29:22,605 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:29:22,605 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:29:22,607 -INFO- get gene name `ndhK` from Counter({'ndhK': 67})
+2020-03-01 12:29:22,607 -INFO- get product `NADH-plastoquinone oxidoreductase subunit K` from Counter({'NADH-plastoquinone oxidoreductase subunit K': 40, 'NADH dehydrogenase subunit K': 15, 'NdhK': 12})
+2020-03-01 12:29:22,607 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:29:22,608 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:29:22,609 -INFO- get gene name `ndhH` from Counter({'ndhH': 67})
+2020-03-01 12:29:22,610 -INFO- get product `NADH-plastoquinone oxidoreductase subunit 7` from Counter({'NADH-plastoquinone oxidoreductase subunit 7': 30, 'NADH dehydrogenase subunit 7': 15, 'NdhH': 12, 'NADH-plastoquinone oxidoreductase 49 kDa subunit': 10})
+2020-03-01 12:29:22,610 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:29:22,610 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:29:22,612 -INFO- get gene name `ndhI` from Counter({'ndhI': 67})
+2020-03-01 12:29:22,612 -INFO- get product `NADH-plastoquinone oxidoreductase subunit I` from Counter({'NADH-plastoquinone oxidoreductase subunit I': 40, 'NADH dehydrogenase subunit I': 15, 'NdhI': 12})
+2020-03-01 12:29:22,612 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:29:22,612 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:30:14,098 -INFO- get gene name `ndhB` from Counter({'ndhB': 71})
+2020-03-01 12:30:14,098 -INFO- get product `NADH-plastoquinone oxidoreductase subunit 2` from Counter({'NADH-plastoquinone oxidoreductase subunit 2': 35, 'NADH dehydrogenase subunit 2': 15, 'NdhB': 12, 'NADH-plastoquinone oxidoreductase chain 2': 9})
+2020-03-01 12:30:14,099 -INFO- get exon number `2` from Counter({2: 71})
+2020-03-01 12:30:14,099 -INFO- get trans_splicing `False` from Counter({False: 71})
+2020-03-01 12:30:14,108 -INFO- get gene name `ndhC` from Counter({'ndhC': 67})
+2020-03-01 12:30:14,108 -INFO- get product `NADH-plastoquinone oxidoreductase subunit 3` from Counter({'NADH-plastoquinone oxidoreductase subunit 3': 31, 'NADH dehydrogenase subunit 3': 15, 'NdhC': 12, 'NADH-plastoquinone oxidoreductase chain 3': 9})
+2020-03-01 12:30:14,109 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:30:14,109 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:30:14,113 -INFO- get gene name `ndhF` from Counter({'ndhF': 67})
+2020-03-01 12:30:14,113 -INFO- get product `NADH-plastoquinone oxidoreductase subunit 5` from Counter({'NADH-plastoquinone oxidoreductase subunit 5': 30, 'NADH dehydrogenase subunit 5': 15, 'NdhF': 13, 'NADH-plastoquinone oxidoreductase chain 5': 9})
+2020-03-01 12:30:14,113 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:30:14,113 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:30:14,116 -INFO- get gene name `ndhG` from Counter({'ndhG': 67})
+2020-03-01 12:30:14,116 -INFO- get product `NADH-plastoquinone oxidoreductase subunit 6` from Counter({'NADH-plastoquinone oxidoreductase subunit 6': 31, 'NADH dehydrogenase subunit 6': 15, 'NdhG': 11, 'NADH-plastoquinone oxidoreductase chain 6': 9, 'NdhF': 1})
+2020-03-01 12:30:14,116 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:30:14,116 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:30:15,017 -INFO- get gene name `ndhD` from Counter({'ndhD': 67})
+2020-03-01 12:30:15,017 -INFO- get product `NADH-plastoquinone oxidoreductase subunit 4` from Counter({'NADH-plastoquinone oxidoreductase subunit 4': 30, 'NADH dehydrogenase subunit 4': 14, 'NdhD': 12, 'NADH-plastoquinone oxidoreductase chain 4': 9, 'ndhD': 1, 'NADH dehydrogenase subunit': 1})
+2020-03-01 12:30:15,018 -INFO- get exon number `1` from Counter({1: 65, 3: 2})
+2020-03-01 12:30:15,018 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:30:15,027 -INFO- get gene name `ndhE` from Counter({'ndhE': 67})
+2020-03-01 12:30:15,027 -INFO- get product `NADH-plastoquinone oxidoreductase subunit 4L` from Counter({'NADH-plastoquinone oxidoreductase subunit 4L': 31, 'NADH dehydrogenase subunit 4L': 15, 'NdhE': 12, 'NADH-plastoquinone oxidoreductase chain 4L': 9})
+2020-03-01 12:30:15,028 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:30:15,028 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:30:15,032 -INFO- get gene name `petN` from Counter({'petN': 67})
+2020-03-01 12:30:15,032 -INFO- get product `cytochrome b6/f complex subunit VIII` from Counter({'cytochrome b6/f complex subunit VIII': 47, 'cytochrome b6-f complex subunit VIII': 10, 'PetN': 8, 'cytochrome b6f complex subunit VIII': 2})
+2020-03-01 12:30:15,032 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:30:15,032 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:30:15,035 -INFO- get gene name `petL` from Counter({'petL': 67})
+2020-03-01 12:30:15,035 -INFO- get product `cytochrome b6/f complex subunit VI` from Counter({'cytochrome b6/f complex subunit VI': 47, 'cytochrome b6-f complex subunit VI': 10, 'PetL': 8, 'cytochrome b6f complex subunit VI': 2})
+2020-03-01 12:30:15,036 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:30:15,036 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:30:15,038 -INFO- get gene name `petB` from Counter({'petB': 67})
+2020-03-01 12:30:15,038 -INFO- get product `cytochrome b6` from Counter({'cytochrome b6': 59, 'PetB': 8})
+2020-03-01 12:30:15,039 -INFO- get exon number `2` from Counter({2: 54, 1: 13})
+2020-03-01 12:30:15,039 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:30:15,041 -INFO- get gene name `petA` from Counter({'petA': 67})
+2020-03-01 12:30:15,041 -INFO- get product `cytochrome f` from Counter({'cytochrome f': 59, 'PetA': 8})
+2020-03-01 12:30:15,041 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:30:15,041 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:31:03,480 -INFO- get gene name `rps12` from Counter({'rps12': 65})
+2020-03-01 12:31:03,481 -INFO- get product `ribosomal protein S12` from Counter({'ribosomal protein S12': 53, '30S ribosomal protein S12': 11, 'photosystem II protein VI': 1})
+2020-03-01 12:31:03,481 -INFO- get exon number `3` from Counter({3: 43, 2: 22})
+2020-03-01 12:31:03,482 -INFO- get trans_splicing `True` from Counter({True: 64, False: 1})
+2020-03-01 12:31:03,489 -INFO- get gene name `petD` from Counter({'petD': 67})
+2020-03-01 12:31:03,489 -INFO- get product `cytochrome b6/f complex subunit IV` from Counter({'cytochrome b6/f complex subunit IV': 47, 'cytochrome b6-f complex subunit IV': 10, 'PetD': 8, 'cytochrome b6f complex subunit IV': 2})
+2020-03-01 12:31:03,490 -INFO- get exon number `2` from Counter({2: 44, 1: 23})
+2020-03-01 12:31:03,490 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:31:03,494 -INFO- get gene name `rps4` from Counter({'rps4': 67})
+2020-03-01 12:31:03,494 -INFO- get product `ribosomal protein S4` from Counter({'ribosomal protein S4': 57, '30S ribosomal protein S4': 10})
+2020-03-01 12:31:03,494 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:31:03,495 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:31:08,281 -INFO- get gene name `rps3` from Counter({'rps3': 67})
+2020-03-01 12:31:08,282 -INFO- get product `ribosomal protein S3` from Counter({'ribosomal protein S3': 57, '30S ribosomal protein S3': 10})
+2020-03-01 12:31:08,283 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:31:08,283 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:31:08,288 -INFO- get gene name `rps2` from Counter({'rps2': 56})
+2020-03-01 12:31:08,289 -INFO- get product `ribosomal protein S2` from Counter({'ribosomal protein S2': 56})
+2020-03-01 12:31:08,289 -INFO- get exon number `1` from Counter({1: 56})
+2020-03-01 12:31:08,289 -INFO- get trans_splicing `False` from Counter({False: 56})
+2020-03-01 12:31:08,293 -INFO- get gene name `petG` from Counter({'petG': 67})
+2020-03-01 12:31:08,293 -INFO- get product `cytochrome b6/f complex subunit V` from Counter({'cytochrome b6/f complex subunit V': 47, 'cytochrome b6-f complex subunit V': 10, 'PetG': 8, 'cytochrome b6f complex subunit V': 2})
+2020-03-01 12:31:08,293 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:31:08,293 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:31:50,023 -INFO- get gene name `ycf2` from Counter({'ycf2': 64, 'Koelreuteria_paniculata-gene428': 1})
+2020-03-01 12:31:50,024 -INFO- get product `Ycf2` from Counter({'Ycf2': 33, 'hypothetical chloroplast RF21': 19, 'hypothetical chloroplast RF2': 12, 'hypothetical protein RF2': 1})
+2020-03-01 12:31:50,025 -INFO- get exon number `1` from Counter({1: 64, 2: 1})
+2020-03-01 12:31:50,025 -INFO- get trans_splicing `False` from Counter({False: 65})
+2020-03-01 12:31:50,031 -INFO- get gene name `rpl33` from Counter({'rpl33': 67})
+2020-03-01 12:31:50,031 -INFO- get product `ribosomal protein L33` from Counter({'ribosomal protein L33': 57, '50S ribosomal protein L33': 10})
+2020-03-01 12:31:50,032 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:31:50,032 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:31:50,035 -INFO- get gene name `rpl32` from Counter({'rpl32': 67})
+2020-03-01 12:31:50,035 -INFO- get product `ribosomal protein L32` from Counter({'ribosomal protein L32': 56, '50S ribosomal protein L32': 11})
+2020-03-01 12:31:50,036 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:31:50,036 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:31:50,038 -INFO- get gene name `rpl36` from Counter({'rpl36': 67})
+2020-03-01 12:31:50,038 -INFO- get product `ribosomal protein L36` from Counter({'ribosomal protein L36': 57, '50S ribosomal protein L36': 10})
+2020-03-01 12:31:50,038 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:31:50,038 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:32:02,484 -INFO- get gene name `rpl22` from Counter({'rpl22': 67})
+2020-03-01 12:32:02,484 -INFO- get product `ribosomal protein L22` from Counter({'ribosomal protein L22': 58, '50S ribosomal protein L22': 9})
+2020-03-01 12:32:02,485 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:32:02,485 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:32:03,006 -INFO- get gene name `ndhA` from Counter({'ndhA': 66})
+2020-03-01 12:32:03,006 -INFO- get product `NADH-plastoquinone oxidoreductase subunit 1` from Counter({'NADH-plastoquinone oxidoreductase subunit 1': 30, 'NADH dehydrogenase subunit 1': 15, 'NdhA': 12, 'NADH-plastoquinone oxidoreductase chain 1': 9})
+2020-03-01 12:32:03,007 -INFO- get exon number `2` from Counter({2: 66})
+2020-03-01 12:32:03,007 -INFO- get trans_splicing `False` from Counter({False: 66})
+2020-03-01 12:32:03,012 -INFO- get gene name `ycf4` from Counter({'ycf4': 67})
+2020-03-01 12:32:03,012 -INFO- get product `photosystem I assembly protein ycf4` from Counter({'photosystem I assembly protein ycf4': 33, 'photosystem I assembly protein Ycf4': 24, 'Ycf4': 8, 'photosystem I assembly proteinYcf4': 2})
+2020-03-01 12:32:03,013 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:32:03,013 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:32:03,015 -INFO- get gene name `psaA` from Counter({'psaA': 67})
+2020-03-01 12:32:03,016 -INFO- get product `photosystem I P700 apoprotein A1` from Counter({'photosystem I P700 apoprotein A1': 30, 'photosystem I P700 chlorophyll a apoprotein A1': 19, 'photosystem I P700 chlorophyll A apoprotein A1': 10, 'PsaA': 8})
+2020-03-01 12:32:03,016 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:32:03,016 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:32:03,019 -INFO- get gene name `rps8` from Counter({'rps8': 67})
+2020-03-01 12:32:03,020 -INFO- get product `ribosomal protein S8` from Counter({'ribosomal protein S8': 56, '30S ribosomal protein S8': 10, 'ribsomal protein S8': 1})
+2020-03-01 12:32:03,020 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:32:03,020 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:32:45,211 -INFO- get gene name `rpl23` from Counter({'rpl23': 67})
+2020-03-01 12:32:45,211 -INFO- get product `ribosomal protein L23` from Counter({'ribosomal protein L23': 57, '50S ribosomal protein L23': 10})
+2020-03-01 12:32:45,212 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:32:45,212 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:32:45,221 -INFO- get gene name `rpl20` from Counter({'rpl20': 67})
+2020-03-01 12:32:45,222 -INFO- get product `ribosomal protein L20` from Counter({'ribosomal protein L20': 57, '50S ribosomal protein L20': 10})
+2020-03-01 12:32:45,222 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:32:45,222 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:32:45,228 -INFO- get gene name `psbZ` from Counter({'psbZ': 67})
+2020-03-01 12:32:45,229 -INFO- get product `photosystem II protein Z` from Counter({'photosystem II protein Z': 59, 'PsbZ': 8})
+2020-03-01 12:32:45,229 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:32:45,229 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:32:45,231 -INFO- get gene name `cemA` from Counter({'cemA': 67})
+2020-03-01 12:32:45,231 -INFO- get product `envelope membrane protein` from Counter({'envelope membrane protein': 30, 'chloroplast envelope membrane protein': 19, 'chloroplast envelope protein': 10, 'CemA': 8})
+2020-03-01 12:32:45,232 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:32:45,232 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:32:45,234 -INFO- get gene name `rpoB` from Counter({'rpoB': 67})
+2020-03-01 12:32:45,234 -INFO- get product `RNA polymerase beta subunit` from Counter({'RNA polymerase beta subunit': 47, 'DNA-directed RNA polymerase beta chain': 9, 'RpoB': 8, 'RNA polymerase betasubunit': 2, 'DNA-directed RNA polymerase beta subunit': 1})
+2020-03-01 12:32:45,235 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:32:45,235 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:32:45,237 -INFO- get gene name `rpoA` from Counter({'rpoA': 67})
+2020-03-01 12:32:45,238 -INFO- get product `RNA polymerase alpha subunit` from Counter({'RNA polymerase alpha subunit': 49, 'DNA-directed RNA polymerase alpha chain': 9, 'RpoA': 8, 'DNA-directed RNA polymerase alpha subunit': 1})
+2020-03-01 12:32:45,238 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:32:45,238 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:32:45,240 -INFO- get gene name `rpl14` from Counter({'rpl14': 67})
+2020-03-01 12:32:45,240 -INFO- get product `ribosomal protein L14` from Counter({'ribosomal protein L14': 57, '50S ribosomal protein L14': 10})
+2020-03-01 12:32:45,241 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:32:45,241 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:32:45,242 -INFO- get gene name `rpl16` from Counter({'rpl16': 67})
+2020-03-01 12:32:45,243 -INFO- get product `ribosomal protein L16` from Counter({'ribosomal protein L16': 57, '50S ribosomal protein L16': 10})
+2020-03-01 12:32:45,243 -INFO- get exon number `2` from Counter({2: 49, 1: 18})
+2020-03-01 12:32:45,243 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:32:45,245 -INFO- get gene name `rps11` from Counter({'rps11': 66})
+2020-03-01 12:32:45,246 -INFO- get product `ribosomal protein S11` from Counter({'ribosomal protein S11': 56, '30S ribosomal protein S11': 10})
+2020-03-01 12:32:45,246 -INFO- get exon number `1` from Counter({1: 66})
+2020-03-01 12:32:45,246 -INFO- get trans_splicing `False` from Counter({False: 66})
+2020-03-01 12:32:45,248 -INFO- get gene name `rps15` from Counter({'rps15': 66})
+2020-03-01 12:32:45,248 -INFO- get product `ribosomal protein S15` from Counter({'ribosomal protein S15': 56, '30S ribosomal protein S15': 10})
+2020-03-01 12:32:45,248 -INFO- get exon number `1` from Counter({1: 66})
+2020-03-01 12:32:45,248 -INFO- get trans_splicing `False` from Counter({False: 66})
+2020-03-01 12:32:45,250 -INFO- get gene name `rps14` from Counter({'rps14': 67})
+2020-03-01 12:32:45,250 -INFO- get product `ribosomal protein S14` from Counter({'ribosomal protein S14': 57, '30S ribosomal protein S14': 10})
+2020-03-01 12:32:45,251 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:32:45,251 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:32:45,253 -INFO- get gene name `rps16` from Counter({'rps16': 66})
+2020-03-01 12:32:45,253 -INFO- get product `ribosomal protein S16` from Counter({'ribosomal protein S16': 56, '30S ribosomal protein S16': 10})
+2020-03-01 12:32:45,253 -INFO- get exon number `2` from Counter({2: 66})
+2020-03-01 12:32:45,253 -INFO- get trans_splicing `False` from Counter({False: 66})
+2020-03-01 12:32:45,255 -INFO- get gene name `rps18` from Counter({'rps18': 67})
+2020-03-01 12:32:45,255 -INFO- get product `ribosomal protein S18` from Counter({'ribosomal protein S18': 57, '30S ribosomal protein S18': 10})
+2020-03-01 12:32:45,256 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:32:45,256 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:32:45,258 -INFO- get gene name `matK` from Counter({'matK': 67})
+2020-03-01 12:32:45,258 -INFO- get product `maturase K` from Counter({'maturase K': 67})
+2020-03-01 12:32:45,258 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:32:45,259 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:32:45,261 -INFO- get gene name `rpoC2` from Counter({'rpoC2': 66, 'rpoc2': 1})
+2020-03-01 12:32:45,262 -INFO- get product `RNA polymerase beta'' subunit` from Counter({"RNA polymerase beta'' subunit": 32, "RNA polymerase beta' subunit": 12, "DNA-directed RNA polymerase beta'' chain": 9, 'RpoC2': 8, 'RNA polymerase betasubunit': 2, 'RNA polymerase beta subunit': 2, "DNA-directed RNA polymerase beta'' subunit": 1, "RNA polymerase beta' subunit 2": 1})
+2020-03-01 12:32:45,262 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 12:32:45,262 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:32:45,264 -INFO- get gene name `rpoC1` from Counter({'rpoC1': 67})
+2020-03-01 12:32:45,264 -INFO- get product `RNA polymerase beta' subunit` from Counter({"RNA polymerase beta' subunit": 24, 'RNA polymerase beta': 22, "DNA-directed RNA polymerase beta' chain": 9, 'RpoC1': 8, 'RNA polymerase beta subunit': 2, "DNA-directed RNA polymerase beta' subunit": 1, "RNA polymerase beta' subunit 1": 1})
+2020-03-01 12:32:45,264 -INFO- get exon number `2` from Counter({2: 67})
+2020-03-01 12:32:45,264 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:32:45,267 -INFO- get gene name `ycf3` from Counter({'ycf3': 67})
+2020-03-01 12:32:45,267 -INFO- get product `photosystem I assembly protein Ycf3` from Counter({'photosystem I assembly protein Ycf3': 34, 'hypothetical chloroplast RF34': 13, 'photosystem I assembly protein ycf3': 12, 'Ycf3': 8})
+2020-03-01 12:32:45,267 -INFO- get exon number `3` from Counter({3: 67})
+2020-03-01 12:32:45,267 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:32:45,269 -INFO- get gene name `clpP` from Counter({'clpP': 65, 'clpP1': 2})
+2020-03-01 12:32:45,269 -INFO- get product `ATP-dependent Clp protease proteolytic subunit` from Counter({'ATP-dependent Clp protease proteolytic subunit': 26, 'clp protease proteolytic subunit': 21, 'clpP-like protease': 9, 'ClpP': 8, 'Clp protease proteolytic subunit': 2, 'ClpP-like protease': 1})
+2020-03-01 12:32:45,270 -INFO- get exon number `3` from Counter({3: 66, 2: 1})
+2020-03-01 12:32:45,270 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 12:32:57,099 -INFO- get gene name `ycf15` from Counter({'ycf15': 19})
+2020-03-01 12:32:57,099 -INFO- get product `Ycf15` from Counter({'Ycf15': 13, 'hypothetical chloroplast RF15': 6})
+2020-03-01 12:32:57,100 -INFO- get exon number `1` from Counter({1: 19})
+2020-03-01 12:32:57,100 -INFO- get trans_splicing `False` from Counter({False: 19})
+2020-03-01 12:32:57,858 -INFO- get gene name `rps12` from Counter({'rps12': 2})
+2020-03-01 12:32:57,859 -INFO- get gene name `infA` from Counter({'infA': 7})
+2020-03-01 12:32:57,859 -INFO- get product `translational initiation factor 1` from Counter({'translational initiation factor 1': 4, 'translation initiation factor 1': 3})
+2020-03-01 12:32:57,859 -INFO- get exon number `1` from Counter({1: 7})
+2020-03-01 12:32:57,860 -INFO- get trans_splicing `False` from Counter({False: 7})
+2020-03-01 12:32:57,986 -INFO- extrat 82 genes: ['ccsA', 'atpB', 'atpA', 'atpF', 'atpE', 'atpH', 'atpI', 'ycf1', 'rpl2', 'rps19', 'psbA', 'psbB', 'psbC', 'psbD', 'psbE', 'psbF', 'psbH', 'psbI', 'psbJ', 'psbK', 'psbL', 'psbM', 'psbN', 'psbT', 'rbcL', 'orf42', 'rps7', 'psaI', 'psaJ', 'accD', 'ycf15', 'psaB', 'psaC', 'ndhJ', 'ndhK', 'ndhH', 'ndhI', 'ndhB', 'ndhC', 'ndhF', 'ndhG', 'ndhD', 'ndhE', 'petN', 'petL', 'petB', 'petA', 'rps12', 'petD', 'rps4', 'rps3', 'rps2', 'petG', 'ycf2', 'rpl33', 'rpl32', 'rpl36', 'rpl22', 'ndhA', 'ycf4', 'psaA', 'rps8', 'rpl23', 'rpl20', 'psbZ', 'cemA', 'rpoB', 'rpoA', 'rpl14', 'rpl16', 'rps11', 'rps15', 'rps14', 'rps16', 'rps18', 'matK', 'rpoC2', 'rpoC1', 'ycf3', 'clpP', 'ycf15-82', 'infA']
+2020-03-01 12:32:57,986 -INFO- aligning sequences
+2020-03-01 12:55:55,168 -INFO- building hmm profiles
+2020-03-01 12:56:32,879 -INFO- building augustus profiles
+2020-03-01 12:57:15,008 -INFO- training augustus models
+/share/home/yuanqyk/.local/lib/python2.7/site-packages/Bio/SeqIO/InsdcIO.py:687: BiopythonWarning: Increasing length of locus line to allow long name. This will result in fields that are not in usual positions.
+  BiopythonWarning,
+2020-03-01 12:57:16,762 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-ccsA -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-ccsA.gb 22
+new_species.pl --species=pt-Sapindales-ccsA
+etraining --species=pt-Sapindales-ccsA /dev/shm/tmp/pt-Sapindales/trng/train-ccsA.gb.train --translation_table=1
+augustus --species=pt-Sapindales-ccsA /dev/shm/tmp/pt-Sapindales/trng/train-ccsA.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-ccsA.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-ccsA --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-ccsA.gb.train && rm -r tmp_opt_pt-Sapindales-ccsA
+#etraining --species=pt-Sapindales-ccsA /dev/shm/tmp/pt-Sapindales/trng/train-ccsA.gb.train
+#augustus --species=pt-Sapindales-ccsA /dev/shm/tmp/pt-Sapindales/trng/train-ccsA.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-ccsA.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-ccsA.tgz pt-Sapindales-ccsA)
+`
+2020-03-01 12:57:24,115 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-atpB -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-atpB.gb 22
+new_species.pl --species=pt-Sapindales-atpB
+etraining --species=pt-Sapindales-atpB /dev/shm/tmp/pt-Sapindales/trng/train-atpB.gb.train --translation_table=1
+augustus --species=pt-Sapindales-atpB /dev/shm/tmp/pt-Sapindales/trng/train-atpB.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-atpB.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-atpB --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-atpB.gb.train && rm -r tmp_opt_pt-Sapindales-atpB
+#etraining --species=pt-Sapindales-atpB /dev/shm/tmp/pt-Sapindales/trng/train-atpB.gb.train
+#augustus --species=pt-Sapindales-atpB /dev/shm/tmp/pt-Sapindales/trng/train-atpB.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-atpB.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-atpB.tgz pt-Sapindales-atpB)
+`
+2020-03-01 12:57:31,562 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-atpA -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-atpA.gb 22
+new_species.pl --species=pt-Sapindales-atpA
+etraining --species=pt-Sapindales-atpA /dev/shm/tmp/pt-Sapindales/trng/train-atpA.gb.train --translation_table=1
+augustus --species=pt-Sapindales-atpA /dev/shm/tmp/pt-Sapindales/trng/train-atpA.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-atpA.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-atpA --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-atpA.gb.train && rm -r tmp_opt_pt-Sapindales-atpA
+#etraining --species=pt-Sapindales-atpA /dev/shm/tmp/pt-Sapindales/trng/train-atpA.gb.train
+#augustus --species=pt-Sapindales-atpA /dev/shm/tmp/pt-Sapindales/trng/train-atpA.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-atpA.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-atpA.tgz pt-Sapindales-atpA)
+`
+2020-03-01 12:57:39,092 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-atpF -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-atpF.gb 22
+new_species.pl --species=pt-Sapindales-atpF
+etraining --species=pt-Sapindales-atpF /dev/shm/tmp/pt-Sapindales/trng/train-atpF.gb.train --translation_table=1
+augustus --species=pt-Sapindales-atpF /dev/shm/tmp/pt-Sapindales/trng/train-atpF.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-atpF.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-atpF --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-atpF.gb.train && rm -r tmp_opt_pt-Sapindales-atpF
+#etraining --species=pt-Sapindales-atpF /dev/shm/tmp/pt-Sapindales/trng/train-atpF.gb.train
+#augustus --species=pt-Sapindales-atpF /dev/shm/tmp/pt-Sapindales/trng/train-atpF.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-atpF.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-atpF.tgz pt-Sapindales-atpF)
+`
+2020-03-01 12:57:56,421 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-atpE -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-atpE.gb 22
+new_species.pl --species=pt-Sapindales-atpE
+etraining --species=pt-Sapindales-atpE /dev/shm/tmp/pt-Sapindales/trng/train-atpE.gb.train --translation_table=1
+augustus --species=pt-Sapindales-atpE /dev/shm/tmp/pt-Sapindales/trng/train-atpE.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-atpE.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-atpE --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-atpE.gb.train && rm -r tmp_opt_pt-Sapindales-atpE
+#etraining --species=pt-Sapindales-atpE /dev/shm/tmp/pt-Sapindales/trng/train-atpE.gb.train
+#augustus --species=pt-Sapindales-atpE /dev/shm/tmp/pt-Sapindales/trng/train-atpE.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-atpE.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-atpE.tgz pt-Sapindales-atpE)
+`
+2020-03-01 12:58:02,841 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-atpH -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-atpH.gb 22
+new_species.pl --species=pt-Sapindales-atpH
+etraining --species=pt-Sapindales-atpH /dev/shm/tmp/pt-Sapindales/trng/train-atpH.gb.train --translation_table=1
+augustus --species=pt-Sapindales-atpH /dev/shm/tmp/pt-Sapindales/trng/train-atpH.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-atpH.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-atpH --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-atpH.gb.train && rm -r tmp_opt_pt-Sapindales-atpH
+#etraining --species=pt-Sapindales-atpH /dev/shm/tmp/pt-Sapindales/trng/train-atpH.gb.train
+#augustus --species=pt-Sapindales-atpH /dev/shm/tmp/pt-Sapindales/trng/train-atpH.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-atpH.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-atpH.tgz pt-Sapindales-atpH)
+`
+2020-03-01 12:58:08,684 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-atpI -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-atpI.gb 22
+new_species.pl --species=pt-Sapindales-atpI
+etraining --species=pt-Sapindales-atpI /dev/shm/tmp/pt-Sapindales/trng/train-atpI.gb.train --translation_table=1
+augustus --species=pt-Sapindales-atpI /dev/shm/tmp/pt-Sapindales/trng/train-atpI.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-atpI.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-atpI --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-atpI.gb.train && rm -r tmp_opt_pt-Sapindales-atpI
+#etraining --species=pt-Sapindales-atpI /dev/shm/tmp/pt-Sapindales/trng/train-atpI.gb.train
+#augustus --species=pt-Sapindales-atpI /dev/shm/tmp/pt-Sapindales/trng/train-atpI.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-atpI.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-atpI.tgz pt-Sapindales-atpI)
+`
+2020-03-01 12:58:14,757 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-ycf1 -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-ycf1.gb 24
+new_species.pl --species=pt-Sapindales-ycf1
+etraining --species=pt-Sapindales-ycf1 /dev/shm/tmp/pt-Sapindales/trng/train-ycf1.gb.train --translation_table=1
+augustus --species=pt-Sapindales-ycf1 /dev/shm/tmp/pt-Sapindales/trng/train-ycf1.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-ycf1.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-ycf1 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-ycf1.gb.train && rm -r tmp_opt_pt-Sapindales-ycf1
+#etraining --species=pt-Sapindales-ycf1 /dev/shm/tmp/pt-Sapindales/trng/train-ycf1.gb.train
+#augustus --species=pt-Sapindales-ycf1 /dev/shm/tmp/pt-Sapindales/trng/train-ycf1.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-ycf1.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-ycf1.tgz pt-Sapindales-ycf1)
+`
+2020-03-01 12:58:25,582 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-rpl2 -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-rpl2.gb 22
+new_species.pl --species=pt-Sapindales-rpl2
+etraining --species=pt-Sapindales-rpl2 /dev/shm/tmp/pt-Sapindales/trng/train-rpl2.gb.train --translation_table=1
+augustus --species=pt-Sapindales-rpl2 /dev/shm/tmp/pt-Sapindales/trng/train-rpl2.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-rpl2.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-rpl2 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-rpl2.gb.train && rm -r tmp_opt_pt-Sapindales-rpl2
+#etraining --species=pt-Sapindales-rpl2 /dev/shm/tmp/pt-Sapindales/trng/train-rpl2.gb.train
+#augustus --species=pt-Sapindales-rpl2 /dev/shm/tmp/pt-Sapindales/trng/train-rpl2.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-rpl2.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-rpl2.tgz pt-Sapindales-rpl2)
+`
+2020-03-01 12:58:32,678 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-rps19 -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-rps19.gb 22
+new_species.pl --species=pt-Sapindales-rps19
+etraining --species=pt-Sapindales-rps19 /dev/shm/tmp/pt-Sapindales/trng/train-rps19.gb.train --translation_table=1
+augustus --species=pt-Sapindales-rps19 /dev/shm/tmp/pt-Sapindales/trng/train-rps19.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-rps19.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-rps19 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-rps19.gb.train && rm -r tmp_opt_pt-Sapindales-rps19
+#etraining --species=pt-Sapindales-rps19 /dev/shm/tmp/pt-Sapindales/trng/train-rps19.gb.train
+#augustus --species=pt-Sapindales-rps19 /dev/shm/tmp/pt-Sapindales/trng/train-rps19.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-rps19.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-rps19.tgz pt-Sapindales-rps19)
+`
+2020-03-01 12:58:52,408 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-psbA -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-psbA.gb 22
+new_species.pl --species=pt-Sapindales-psbA
+etraining --species=pt-Sapindales-psbA /dev/shm/tmp/pt-Sapindales/trng/train-psbA.gb.train --translation_table=1
+augustus --species=pt-Sapindales-psbA /dev/shm/tmp/pt-Sapindales/trng/train-psbA.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-psbA.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-psbA --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-psbA.gb.train && rm -r tmp_opt_pt-Sapindales-psbA
+#etraining --species=pt-Sapindales-psbA /dev/shm/tmp/pt-Sapindales/trng/train-psbA.gb.train
+#augustus --species=pt-Sapindales-psbA /dev/shm/tmp/pt-Sapindales/trng/train-psbA.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-psbA.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-psbA.tgz pt-Sapindales-psbA)
+`
+2020-03-01 12:58:58,725 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-psbB -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-psbB.gb 22
+new_species.pl --species=pt-Sapindales-psbB
+etraining --species=pt-Sapindales-psbB /dev/shm/tmp/pt-Sapindales/trng/train-psbB.gb.train --translation_table=1
+augustus --species=pt-Sapindales-psbB /dev/shm/tmp/pt-Sapindales/trng/train-psbB.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-psbB.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-psbB --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-psbB.gb.train && rm -r tmp_opt_pt-Sapindales-psbB
+#etraining --species=pt-Sapindales-psbB /dev/shm/tmp/pt-Sapindales/trng/train-psbB.gb.train
+#augustus --species=pt-Sapindales-psbB /dev/shm/tmp/pt-Sapindales/trng/train-psbB.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-psbB.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-psbB.tgz pt-Sapindales-psbB)
+`
+2020-03-01 12:59:06,222 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-psbC -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-psbC.gb 20
+new_species.pl --species=pt-Sapindales-psbC
+etraining --species=pt-Sapindales-psbC /dev/shm/tmp/pt-Sapindales/trng/train-psbC.gb.train --translation_table=1
+augustus --species=pt-Sapindales-psbC /dev/shm/tmp/pt-Sapindales/trng/train-psbC.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-psbC.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-psbC --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-psbC.gb.train && rm -r tmp_opt_pt-Sapindales-psbC
+#etraining --species=pt-Sapindales-psbC /dev/shm/tmp/pt-Sapindales/trng/train-psbC.gb.train
+#augustus --species=pt-Sapindales-psbC /dev/shm/tmp/pt-Sapindales/trng/train-psbC.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-psbC.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-psbC.tgz pt-Sapindales-psbC)
+`
+2020-03-01 12:59:13,199 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-psbD -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-psbD.gb 22
+new_species.pl --species=pt-Sapindales-psbD
+etraining --species=pt-Sapindales-psbD /dev/shm/tmp/pt-Sapindales/trng/train-psbD.gb.train --translation_table=1
+augustus --species=pt-Sapindales-psbD /dev/shm/tmp/pt-Sapindales/trng/train-psbD.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-psbD.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-psbD --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-psbD.gb.train && rm -r tmp_opt_pt-Sapindales-psbD
+#etraining --species=pt-Sapindales-psbD /dev/shm/tmp/pt-Sapindales/trng/train-psbD.gb.train
+#augustus --species=pt-Sapindales-psbD /dev/shm/tmp/pt-Sapindales/trng/train-psbD.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-psbD.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-psbD.tgz pt-Sapindales-psbD)
+`
+2020-03-01 12:59:19,726 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-psbE -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-psbE.gb 22
+new_species.pl --species=pt-Sapindales-psbE
+etraining --species=pt-Sapindales-psbE /dev/shm/tmp/pt-Sapindales/trng/train-psbE.gb.train --translation_table=1
+augustus --species=pt-Sapindales-psbE /dev/shm/tmp/pt-Sapindales/trng/train-psbE.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-psbE.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-psbE --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-psbE.gb.train && rm -r tmp_opt_pt-Sapindales-psbE
+#etraining --species=pt-Sapindales-psbE /dev/shm/tmp/pt-Sapindales/trng/train-psbE.gb.train
+#augustus --species=pt-Sapindales-psbE /dev/shm/tmp/pt-Sapindales/trng/train-psbE.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-psbE.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-psbE.tgz pt-Sapindales-psbE)
+`
+2020-03-01 12:59:25,423 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-psbF -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-psbF.gb 22
+new_species.pl --species=pt-Sapindales-psbF
+etraining --species=pt-Sapindales-psbF /dev/shm/tmp/pt-Sapindales/trng/train-psbF.gb.train --translation_table=1
+augustus --species=pt-Sapindales-psbF /dev/shm/tmp/pt-Sapindales/trng/train-psbF.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-psbF.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-psbF --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-psbF.gb.train && rm -r tmp_opt_pt-Sapindales-psbF
+#etraining --species=pt-Sapindales-psbF /dev/shm/tmp/pt-Sapindales/trng/train-psbF.gb.train
+#augustus --species=pt-Sapindales-psbF /dev/shm/tmp/pt-Sapindales/trng/train-psbF.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-psbF.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-psbF.tgz pt-Sapindales-psbF)
+`
+2020-03-01 12:59:31,255 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-psbH -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-psbH.gb 22
+new_species.pl --species=pt-Sapindales-psbH
+etraining --species=pt-Sapindales-psbH /dev/shm/tmp/pt-Sapindales/trng/train-psbH.gb.train --translation_table=1
+augustus --species=pt-Sapindales-psbH /dev/shm/tmp/pt-Sapindales/trng/train-psbH.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-psbH.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-psbH --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-psbH.gb.train && rm -r tmp_opt_pt-Sapindales-psbH
+#etraining --species=pt-Sapindales-psbH /dev/shm/tmp/pt-Sapindales/trng/train-psbH.gb.train
+#augustus --species=pt-Sapindales-psbH /dev/shm/tmp/pt-Sapindales/trng/train-psbH.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-psbH.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-psbH.tgz pt-Sapindales-psbH)
+`
+2020-03-01 12:59:37,252 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-psbI -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-psbI.gb 22
+new_species.pl --species=pt-Sapindales-psbI
+etraining --species=pt-Sapindales-psbI /dev/shm/tmp/pt-Sapindales/trng/train-psbI.gb.train --translation_table=1
+augustus --species=pt-Sapindales-psbI /dev/shm/tmp/pt-Sapindales/trng/train-psbI.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-psbI.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-psbI --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-psbI.gb.train && rm -r tmp_opt_pt-Sapindales-psbI
+#etraining --species=pt-Sapindales-psbI /dev/shm/tmp/pt-Sapindales/trng/train-psbI.gb.train
+#augustus --species=pt-Sapindales-psbI /dev/shm/tmp/pt-Sapindales/trng/train-psbI.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-psbI.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-psbI.tgz pt-Sapindales-psbI)
+`
+2020-03-01 12:59:42,940 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-psbJ -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-psbJ.gb 22
+new_species.pl --species=pt-Sapindales-psbJ
+etraining --species=pt-Sapindales-psbJ /dev/shm/tmp/pt-Sapindales/trng/train-psbJ.gb.train --translation_table=1
+augustus --species=pt-Sapindales-psbJ /dev/shm/tmp/pt-Sapindales/trng/train-psbJ.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-psbJ.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-psbJ --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-psbJ.gb.train && rm -r tmp_opt_pt-Sapindales-psbJ
+#etraining --species=pt-Sapindales-psbJ /dev/shm/tmp/pt-Sapindales/trng/train-psbJ.gb.train
+#augustus --species=pt-Sapindales-psbJ /dev/shm/tmp/pt-Sapindales/trng/train-psbJ.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-psbJ.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-psbJ.tgz pt-Sapindales-psbJ)
+`
+2020-03-01 12:59:49,083 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-psbK -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-psbK.gb 22
+new_species.pl --species=pt-Sapindales-psbK
+etraining --species=pt-Sapindales-psbK /dev/shm/tmp/pt-Sapindales/trng/train-psbK.gb.train --translation_table=1
+augustus --species=pt-Sapindales-psbK /dev/shm/tmp/pt-Sapindales/trng/train-psbK.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-psbK.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-psbK --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-psbK.gb.train && rm -r tmp_opt_pt-Sapindales-psbK
+#etraining --species=pt-Sapindales-psbK /dev/shm/tmp/pt-Sapindales/trng/train-psbK.gb.train
+#augustus --species=pt-Sapindales-psbK /dev/shm/tmp/pt-Sapindales/trng/train-psbK.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-psbK.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-psbK.tgz pt-Sapindales-psbK)
+`
+2020-03-01 12:59:55,013 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-psbL -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-psbL.gb 22
+new_species.pl --species=pt-Sapindales-psbL
+etraining --species=pt-Sapindales-psbL /dev/shm/tmp/pt-Sapindales/trng/train-psbL.gb.train --translation_table=1
+augustus --species=pt-Sapindales-psbL /dev/shm/tmp/pt-Sapindales/trng/train-psbL.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-psbL.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-psbL --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-psbL.gb.train && rm -r tmp_opt_pt-Sapindales-psbL
+#etraining --species=pt-Sapindales-psbL /dev/shm/tmp/pt-Sapindales/trng/train-psbL.gb.train
+#augustus --species=pt-Sapindales-psbL /dev/shm/tmp/pt-Sapindales/trng/train-psbL.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-psbL.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-psbL.tgz pt-Sapindales-psbL)
+`
+2020-03-01 13:00:00,943 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-psbM -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-psbM.gb 22
+new_species.pl --species=pt-Sapindales-psbM
+etraining --species=pt-Sapindales-psbM /dev/shm/tmp/pt-Sapindales/trng/train-psbM.gb.train --translation_table=1
+augustus --species=pt-Sapindales-psbM /dev/shm/tmp/pt-Sapindales/trng/train-psbM.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-psbM.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-psbM --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-psbM.gb.train && rm -r tmp_opt_pt-Sapindales-psbM
+#etraining --species=pt-Sapindales-psbM /dev/shm/tmp/pt-Sapindales/trng/train-psbM.gb.train
+#augustus --species=pt-Sapindales-psbM /dev/shm/tmp/pt-Sapindales/trng/train-psbM.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-psbM.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-psbM.tgz pt-Sapindales-psbM)
+`
+2020-03-01 13:00:07,046 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-psbN -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-psbN.gb 22
+new_species.pl --species=pt-Sapindales-psbN
+etraining --species=pt-Sapindales-psbN /dev/shm/tmp/pt-Sapindales/trng/train-psbN.gb.train --translation_table=1
+augustus --species=pt-Sapindales-psbN /dev/shm/tmp/pt-Sapindales/trng/train-psbN.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-psbN.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-psbN --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-psbN.gb.train && rm -r tmp_opt_pt-Sapindales-psbN
+#etraining --species=pt-Sapindales-psbN /dev/shm/tmp/pt-Sapindales/trng/train-psbN.gb.train
+#augustus --species=pt-Sapindales-psbN /dev/shm/tmp/pt-Sapindales/trng/train-psbN.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-psbN.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-psbN.tgz pt-Sapindales-psbN)
+`
+2020-03-01 13:00:12,877 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-psbT -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-psbT.gb 22
+new_species.pl --species=pt-Sapindales-psbT
+etraining --species=pt-Sapindales-psbT /dev/shm/tmp/pt-Sapindales/trng/train-psbT.gb.train --translation_table=1
+augustus --species=pt-Sapindales-psbT /dev/shm/tmp/pt-Sapindales/trng/train-psbT.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-psbT.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-psbT --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-psbT.gb.train && rm -r tmp_opt_pt-Sapindales-psbT
+#etraining --species=pt-Sapindales-psbT /dev/shm/tmp/pt-Sapindales/trng/train-psbT.gb.train
+#augustus --species=pt-Sapindales-psbT /dev/shm/tmp/pt-Sapindales/trng/train-psbT.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-psbT.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-psbT.tgz pt-Sapindales-psbT)
+`
+2020-03-01 13:00:18,967 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-rbcL -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-rbcL.gb 22
+new_species.pl --species=pt-Sapindales-rbcL
+etraining --species=pt-Sapindales-rbcL /dev/shm/tmp/pt-Sapindales/trng/train-rbcL.gb.train --translation_table=1
+augustus --species=pt-Sapindales-rbcL /dev/shm/tmp/pt-Sapindales/trng/train-rbcL.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-rbcL.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-rbcL --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-rbcL.gb.train && rm -r tmp_opt_pt-Sapindales-rbcL
+#etraining --species=pt-Sapindales-rbcL /dev/shm/tmp/pt-Sapindales/trng/train-rbcL.gb.train
+#augustus --species=pt-Sapindales-rbcL /dev/shm/tmp/pt-Sapindales/trng/train-rbcL.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-rbcL.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-rbcL.tgz pt-Sapindales-rbcL)
+`
+2020-03-01 13:00:25,616 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-orf42 -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-orf42.gb 4
+new_species.pl --species=pt-Sapindales-orf42
+etraining --species=pt-Sapindales-orf42 /dev/shm/tmp/pt-Sapindales/trng/train-orf42.gb.train --translation_table=1
+augustus --species=pt-Sapindales-orf42 /dev/shm/tmp/pt-Sapindales/trng/train-orf42.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-orf42.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-orf42 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-orf42.gb.train && rm -r tmp_opt_pt-Sapindales-orf42
+#etraining --species=pt-Sapindales-orf42 /dev/shm/tmp/pt-Sapindales/trng/train-orf42.gb.train
+#augustus --species=pt-Sapindales-orf42 /dev/shm/tmp/pt-Sapindales/trng/train-orf42.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-orf42.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-orf42.tgz pt-Sapindales-orf42)
+`
+2020-03-01 13:00:30,019 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-rps7 -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-rps7.gb 22
+new_species.pl --species=pt-Sapindales-rps7
+etraining --species=pt-Sapindales-rps7 /dev/shm/tmp/pt-Sapindales/trng/train-rps7.gb.train --translation_table=1
+augustus --species=pt-Sapindales-rps7 /dev/shm/tmp/pt-Sapindales/trng/train-rps7.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-rps7.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-rps7 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-rps7.gb.train && rm -r tmp_opt_pt-Sapindales-rps7
+#etraining --species=pt-Sapindales-rps7 /dev/shm/tmp/pt-Sapindales/trng/train-rps7.gb.train
+#augustus --species=pt-Sapindales-rps7 /dev/shm/tmp/pt-Sapindales/trng/train-rps7.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-rps7.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-rps7.tgz pt-Sapindales-rps7)
+`
+2020-03-01 13:00:35,971 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-psaI -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-psaI.gb 22
+new_species.pl --species=pt-Sapindales-psaI
+etraining --species=pt-Sapindales-psaI /dev/shm/tmp/pt-Sapindales/trng/train-psaI.gb.train --translation_table=1
+augustus --species=pt-Sapindales-psaI /dev/shm/tmp/pt-Sapindales/trng/train-psaI.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-psaI.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-psaI --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-psaI.gb.train && rm -r tmp_opt_pt-Sapindales-psaI
+#etraining --species=pt-Sapindales-psaI /dev/shm/tmp/pt-Sapindales/trng/train-psaI.gb.train
+#augustus --species=pt-Sapindales-psaI /dev/shm/tmp/pt-Sapindales/trng/train-psaI.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-psaI.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-psaI.tgz pt-Sapindales-psaI)
+`
+2020-03-01 13:00:42,134 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-psaJ -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-psaJ.gb 22
+new_species.pl --species=pt-Sapindales-psaJ
+etraining --species=pt-Sapindales-psaJ /dev/shm/tmp/pt-Sapindales/trng/train-psaJ.gb.train --translation_table=1
+augustus --species=pt-Sapindales-psaJ /dev/shm/tmp/pt-Sapindales/trng/train-psaJ.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-psaJ.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-psaJ --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-psaJ.gb.train && rm -r tmp_opt_pt-Sapindales-psaJ
+#etraining --species=pt-Sapindales-psaJ /dev/shm/tmp/pt-Sapindales/trng/train-psaJ.gb.train
+#augustus --species=pt-Sapindales-psaJ /dev/shm/tmp/pt-Sapindales/trng/train-psaJ.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-psaJ.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-psaJ.tgz pt-Sapindales-psaJ)
+`
+2020-03-01 13:00:47,914 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-accD -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-accD.gb 22
+new_species.pl --species=pt-Sapindales-accD
+etraining --species=pt-Sapindales-accD /dev/shm/tmp/pt-Sapindales/trng/train-accD.gb.train --translation_table=1
+augustus --species=pt-Sapindales-accD /dev/shm/tmp/pt-Sapindales/trng/train-accD.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-accD.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-accD --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-accD.gb.train && rm -r tmp_opt_pt-Sapindales-accD
+#etraining --species=pt-Sapindales-accD /dev/shm/tmp/pt-Sapindales/trng/train-accD.gb.train
+#augustus --species=pt-Sapindales-accD /dev/shm/tmp/pt-Sapindales/trng/train-accD.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-accD.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-accD.tgz pt-Sapindales-accD)
+`
+2020-03-01 13:00:54,993 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-ycf15 -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-ycf15.gb 9
+new_species.pl --species=pt-Sapindales-ycf15
+etraining --species=pt-Sapindales-ycf15 /dev/shm/tmp/pt-Sapindales/trng/train-ycf15.gb.train --translation_table=1
+augustus --species=pt-Sapindales-ycf15 /dev/shm/tmp/pt-Sapindales/trng/train-ycf15.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-ycf15.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-ycf15 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-ycf15.gb.train && rm -r tmp_opt_pt-Sapindales-ycf15
+#etraining --species=pt-Sapindales-ycf15 /dev/shm/tmp/pt-Sapindales/trng/train-ycf15.gb.train
+#augustus --species=pt-Sapindales-ycf15 /dev/shm/tmp/pt-Sapindales/trng/train-ycf15.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-ycf15.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-ycf15.tgz pt-Sapindales-ycf15)
+`
+2020-03-01 13:00:59,900 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-psaB -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-psaB.gb 22
+new_species.pl --species=pt-Sapindales-psaB
+etraining --species=pt-Sapindales-psaB /dev/shm/tmp/pt-Sapindales/trng/train-psaB.gb.train --translation_table=1
+augustus --species=pt-Sapindales-psaB /dev/shm/tmp/pt-Sapindales/trng/train-psaB.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-psaB.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-psaB --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-psaB.gb.train && rm -r tmp_opt_pt-Sapindales-psaB
+#etraining --species=pt-Sapindales-psaB /dev/shm/tmp/pt-Sapindales/trng/train-psaB.gb.train
+#augustus --species=pt-Sapindales-psaB /dev/shm/tmp/pt-Sapindales/trng/train-psaB.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-psaB.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-psaB.tgz pt-Sapindales-psaB)
+`
+2020-03-01 13:01:08,377 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-psaC -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-psaC.gb 22
+new_species.pl --species=pt-Sapindales-psaC
+etraining --species=pt-Sapindales-psaC /dev/shm/tmp/pt-Sapindales/trng/train-psaC.gb.train --translation_table=1
+augustus --species=pt-Sapindales-psaC /dev/shm/tmp/pt-Sapindales/trng/train-psaC.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-psaC.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-psaC --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-psaC.gb.train && rm -r tmp_opt_pt-Sapindales-psaC
+#etraining --species=pt-Sapindales-psaC /dev/shm/tmp/pt-Sapindales/trng/train-psaC.gb.train
+#augustus --species=pt-Sapindales-psaC /dev/shm/tmp/pt-Sapindales/trng/train-psaC.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-psaC.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-psaC.tgz pt-Sapindales-psaC)
+`
+2020-03-01 13:01:14,395 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-ndhJ -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-ndhJ.gb 22
+new_species.pl --species=pt-Sapindales-ndhJ
+etraining --species=pt-Sapindales-ndhJ /dev/shm/tmp/pt-Sapindales/trng/train-ndhJ.gb.train --translation_table=1
+augustus --species=pt-Sapindales-ndhJ /dev/shm/tmp/pt-Sapindales/trng/train-ndhJ.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-ndhJ.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-ndhJ --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-ndhJ.gb.train && rm -r tmp_opt_pt-Sapindales-ndhJ
+#etraining --species=pt-Sapindales-ndhJ /dev/shm/tmp/pt-Sapindales/trng/train-ndhJ.gb.train
+#augustus --species=pt-Sapindales-ndhJ /dev/shm/tmp/pt-Sapindales/trng/train-ndhJ.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-ndhJ.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-ndhJ.tgz pt-Sapindales-ndhJ)
+`
+2020-03-01 13:01:20,295 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-ndhK -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-ndhK.gb 22
+new_species.pl --species=pt-Sapindales-ndhK
+etraining --species=pt-Sapindales-ndhK /dev/shm/tmp/pt-Sapindales/trng/train-ndhK.gb.train --translation_table=1
+augustus --species=pt-Sapindales-ndhK /dev/shm/tmp/pt-Sapindales/trng/train-ndhK.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-ndhK.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-ndhK --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-ndhK.gb.train && rm -r tmp_opt_pt-Sapindales-ndhK
+#etraining --species=pt-Sapindales-ndhK /dev/shm/tmp/pt-Sapindales/trng/train-ndhK.gb.train
+#augustus --species=pt-Sapindales-ndhK /dev/shm/tmp/pt-Sapindales/trng/train-ndhK.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-ndhK.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-ndhK.tgz pt-Sapindales-ndhK)
+`
+2020-03-01 13:01:26,581 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-ndhH -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-ndhH.gb 22
+new_species.pl --species=pt-Sapindales-ndhH
+etraining --species=pt-Sapindales-ndhH /dev/shm/tmp/pt-Sapindales/trng/train-ndhH.gb.train --translation_table=1
+augustus --species=pt-Sapindales-ndhH /dev/shm/tmp/pt-Sapindales/trng/train-ndhH.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-ndhH.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-ndhH --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-ndhH.gb.train && rm -r tmp_opt_pt-Sapindales-ndhH
+#etraining --species=pt-Sapindales-ndhH /dev/shm/tmp/pt-Sapindales/trng/train-ndhH.gb.train
+#augustus --species=pt-Sapindales-ndhH /dev/shm/tmp/pt-Sapindales/trng/train-ndhH.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-ndhH.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-ndhH.tgz pt-Sapindales-ndhH)
+`
+2020-03-01 13:01:33,094 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-ndhI -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-ndhI.gb 22
+new_species.pl --species=pt-Sapindales-ndhI
+etraining --species=pt-Sapindales-ndhI /dev/shm/tmp/pt-Sapindales/trng/train-ndhI.gb.train --translation_table=1
+augustus --species=pt-Sapindales-ndhI /dev/shm/tmp/pt-Sapindales/trng/train-ndhI.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-ndhI.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-ndhI --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-ndhI.gb.train && rm -r tmp_opt_pt-Sapindales-ndhI
+#etraining --species=pt-Sapindales-ndhI /dev/shm/tmp/pt-Sapindales/trng/train-ndhI.gb.train
+#augustus --species=pt-Sapindales-ndhI /dev/shm/tmp/pt-Sapindales/trng/train-ndhI.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-ndhI.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-ndhI.tgz pt-Sapindales-ndhI)
+`
+2020-03-01 13:01:39,339 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-ndhB -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-ndhB.gb 23
+new_species.pl --species=pt-Sapindales-ndhB
+etraining --species=pt-Sapindales-ndhB /dev/shm/tmp/pt-Sapindales/trng/train-ndhB.gb.train --translation_table=1
+augustus --species=pt-Sapindales-ndhB /dev/shm/tmp/pt-Sapindales/trng/train-ndhB.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-ndhB.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-ndhB --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-ndhB.gb.train && rm -r tmp_opt_pt-Sapindales-ndhB
+#etraining --species=pt-Sapindales-ndhB /dev/shm/tmp/pt-Sapindales/trng/train-ndhB.gb.train
+#augustus --species=pt-Sapindales-ndhB /dev/shm/tmp/pt-Sapindales/trng/train-ndhB.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-ndhB.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-ndhB.tgz pt-Sapindales-ndhB)
+`
+2020-03-01 13:01:47,112 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-ndhC -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-ndhC.gb 22
+new_species.pl --species=pt-Sapindales-ndhC
+etraining --species=pt-Sapindales-ndhC /dev/shm/tmp/pt-Sapindales/trng/train-ndhC.gb.train --translation_table=1
+augustus --species=pt-Sapindales-ndhC /dev/shm/tmp/pt-Sapindales/trng/train-ndhC.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-ndhC.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-ndhC --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-ndhC.gb.train && rm -r tmp_opt_pt-Sapindales-ndhC
+#etraining --species=pt-Sapindales-ndhC /dev/shm/tmp/pt-Sapindales/trng/train-ndhC.gb.train
+#augustus --species=pt-Sapindales-ndhC /dev/shm/tmp/pt-Sapindales/trng/train-ndhC.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-ndhC.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-ndhC.tgz pt-Sapindales-ndhC)
+`
+2020-03-01 13:01:53,143 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-ndhF -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-ndhF.gb 22
+new_species.pl --species=pt-Sapindales-ndhF
+etraining --species=pt-Sapindales-ndhF /dev/shm/tmp/pt-Sapindales/trng/train-ndhF.gb.train --translation_table=1
+augustus --species=pt-Sapindales-ndhF /dev/shm/tmp/pt-Sapindales/trng/train-ndhF.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-ndhF.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-ndhF --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-ndhF.gb.train && rm -r tmp_opt_pt-Sapindales-ndhF
+#etraining --species=pt-Sapindales-ndhF /dev/shm/tmp/pt-Sapindales/trng/train-ndhF.gb.train
+#augustus --species=pt-Sapindales-ndhF /dev/shm/tmp/pt-Sapindales/trng/train-ndhF.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-ndhF.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-ndhF.tgz pt-Sapindales-ndhF)
+`
+2020-03-01 13:02:01,763 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-ndhG -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-ndhG.gb 22
+new_species.pl --species=pt-Sapindales-ndhG
+etraining --species=pt-Sapindales-ndhG /dev/shm/tmp/pt-Sapindales/trng/train-ndhG.gb.train --translation_table=1
+augustus --species=pt-Sapindales-ndhG /dev/shm/tmp/pt-Sapindales/trng/train-ndhG.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-ndhG.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-ndhG --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-ndhG.gb.train && rm -r tmp_opt_pt-Sapindales-ndhG
+#etraining --species=pt-Sapindales-ndhG /dev/shm/tmp/pt-Sapindales/trng/train-ndhG.gb.train
+#augustus --species=pt-Sapindales-ndhG /dev/shm/tmp/pt-Sapindales/trng/train-ndhG.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-ndhG.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-ndhG.tgz pt-Sapindales-ndhG)
+`
+2020-03-01 13:02:07,674 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-ndhD -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-ndhD.gb 22
+new_species.pl --species=pt-Sapindales-ndhD
+etraining --species=pt-Sapindales-ndhD /dev/shm/tmp/pt-Sapindales/trng/train-ndhD.gb.train --translation_table=1
+augustus --species=pt-Sapindales-ndhD /dev/shm/tmp/pt-Sapindales/trng/train-ndhD.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-ndhD.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-ndhD --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-ndhD.gb.train && rm -r tmp_opt_pt-Sapindales-ndhD
+#etraining --species=pt-Sapindales-ndhD /dev/shm/tmp/pt-Sapindales/trng/train-ndhD.gb.train
+#augustus --species=pt-Sapindales-ndhD /dev/shm/tmp/pt-Sapindales/trng/train-ndhD.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-ndhD.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-ndhD.tgz pt-Sapindales-ndhD)
+`
+2020-03-01 13:02:14,954 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-ndhE -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-ndhE.gb 22
+new_species.pl --species=pt-Sapindales-ndhE
+etraining --species=pt-Sapindales-ndhE /dev/shm/tmp/pt-Sapindales/trng/train-ndhE.gb.train --translation_table=1
+augustus --species=pt-Sapindales-ndhE /dev/shm/tmp/pt-Sapindales/trng/train-ndhE.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-ndhE.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-ndhE --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-ndhE.gb.train && rm -r tmp_opt_pt-Sapindales-ndhE
+#etraining --species=pt-Sapindales-ndhE /dev/shm/tmp/pt-Sapindales/trng/train-ndhE.gb.train
+#augustus --species=pt-Sapindales-ndhE /dev/shm/tmp/pt-Sapindales/trng/train-ndhE.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-ndhE.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-ndhE.tgz pt-Sapindales-ndhE)
+`
+2020-03-01 13:02:21,009 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-petN -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-petN.gb 22
+new_species.pl --species=pt-Sapindales-petN
+etraining --species=pt-Sapindales-petN /dev/shm/tmp/pt-Sapindales/trng/train-petN.gb.train --translation_table=1
+augustus --species=pt-Sapindales-petN /dev/shm/tmp/pt-Sapindales/trng/train-petN.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-petN.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-petN --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-petN.gb.train && rm -r tmp_opt_pt-Sapindales-petN
+#etraining --species=pt-Sapindales-petN /dev/shm/tmp/pt-Sapindales/trng/train-petN.gb.train
+#augustus --species=pt-Sapindales-petN /dev/shm/tmp/pt-Sapindales/trng/train-petN.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-petN.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-petN.tgz pt-Sapindales-petN)
+`
+2020-03-01 13:02:27,017 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-petL -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-petL.gb 22
+new_species.pl --species=pt-Sapindales-petL
+etraining --species=pt-Sapindales-petL /dev/shm/tmp/pt-Sapindales/trng/train-petL.gb.train --translation_table=1
+augustus --species=pt-Sapindales-petL /dev/shm/tmp/pt-Sapindales/trng/train-petL.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-petL.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-petL --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-petL.gb.train && rm -r tmp_opt_pt-Sapindales-petL
+#etraining --species=pt-Sapindales-petL /dev/shm/tmp/pt-Sapindales/trng/train-petL.gb.train
+#augustus --species=pt-Sapindales-petL /dev/shm/tmp/pt-Sapindales/trng/train-petL.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-petL.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-petL.tgz pt-Sapindales-petL)
+`
+2020-03-01 13:02:32,851 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-petB -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-petB.gb 22
+new_species.pl --species=pt-Sapindales-petB
+etraining --species=pt-Sapindales-petB /dev/shm/tmp/pt-Sapindales/trng/train-petB.gb.train --translation_table=1
+augustus --species=pt-Sapindales-petB /dev/shm/tmp/pt-Sapindales/trng/train-petB.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-petB.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-petB --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-petB.gb.train && rm -r tmp_opt_pt-Sapindales-petB
+#etraining --species=pt-Sapindales-petB /dev/shm/tmp/pt-Sapindales/trng/train-petB.gb.train
+#augustus --species=pt-Sapindales-petB /dev/shm/tmp/pt-Sapindales/trng/train-petB.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-petB.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-petB.tgz pt-Sapindales-petB)
+`
+2020-03-01 13:02:39,648 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-petA -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-petA.gb 22
+new_species.pl --species=pt-Sapindales-petA
+etraining --species=pt-Sapindales-petA /dev/shm/tmp/pt-Sapindales/trng/train-petA.gb.train --translation_table=1
+augustus --species=pt-Sapindales-petA /dev/shm/tmp/pt-Sapindales/trng/train-petA.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-petA.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-petA --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-petA.gb.train && rm -r tmp_opt_pt-Sapindales-petA
+#etraining --species=pt-Sapindales-petA /dev/shm/tmp/pt-Sapindales/trng/train-petA.gb.train
+#augustus --species=pt-Sapindales-petA /dev/shm/tmp/pt-Sapindales/trng/train-petA.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-petA.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-petA.tgz pt-Sapindales-petA)
+`
+2020-03-01 13:02:46,828 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-rps12 -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-rps12.gb 21
+new_species.pl --species=pt-Sapindales-rps12
+etraining --species=pt-Sapindales-rps12 /dev/shm/tmp/pt-Sapindales/trng/train-rps12.gb.train --translation_table=1
+augustus --species=pt-Sapindales-rps12 /dev/shm/tmp/pt-Sapindales/trng/train-rps12.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-rps12.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-rps12 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-rps12.gb.train && rm -r tmp_opt_pt-Sapindales-rps12
+#etraining --species=pt-Sapindales-rps12 /dev/shm/tmp/pt-Sapindales/trng/train-rps12.gb.train
+#augustus --species=pt-Sapindales-rps12 /dev/shm/tmp/pt-Sapindales/trng/train-rps12.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-rps12.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-rps12.tgz pt-Sapindales-rps12)
+`
+2020-03-01 13:02:54,714 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-petD -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-petD.gb 22
+new_species.pl --species=pt-Sapindales-petD
+etraining --species=pt-Sapindales-petD /dev/shm/tmp/pt-Sapindales/trng/train-petD.gb.train --translation_table=1
+augustus --species=pt-Sapindales-petD /dev/shm/tmp/pt-Sapindales/trng/train-petD.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-petD.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-petD --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-petD.gb.train && rm -r tmp_opt_pt-Sapindales-petD
+#etraining --species=pt-Sapindales-petD /dev/shm/tmp/pt-Sapindales/trng/train-petD.gb.train
+#augustus --species=pt-Sapindales-petD /dev/shm/tmp/pt-Sapindales/trng/train-petD.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-petD.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-petD.tgz pt-Sapindales-petD)
+`
+2020-03-01 13:03:01,581 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-rps4 -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-rps4.gb 22
+new_species.pl --species=pt-Sapindales-rps4
+etraining --species=pt-Sapindales-rps4 /dev/shm/tmp/pt-Sapindales/trng/train-rps4.gb.train --translation_table=1
+augustus --species=pt-Sapindales-rps4 /dev/shm/tmp/pt-Sapindales/trng/train-rps4.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-rps4.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-rps4 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-rps4.gb.train && rm -r tmp_opt_pt-Sapindales-rps4
+#etraining --species=pt-Sapindales-rps4 /dev/shm/tmp/pt-Sapindales/trng/train-rps4.gb.train
+#augustus --species=pt-Sapindales-rps4 /dev/shm/tmp/pt-Sapindales/trng/train-rps4.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-rps4.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-rps4.tgz pt-Sapindales-rps4)
+`
+2020-03-01 13:03:07,539 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-rps3 -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-rps3.gb 22
+new_species.pl --species=pt-Sapindales-rps3
+etraining --species=pt-Sapindales-rps3 /dev/shm/tmp/pt-Sapindales/trng/train-rps3.gb.train --translation_table=1
+augustus --species=pt-Sapindales-rps3 /dev/shm/tmp/pt-Sapindales/trng/train-rps3.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-rps3.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-rps3 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-rps3.gb.train && rm -r tmp_opt_pt-Sapindales-rps3
+#etraining --species=pt-Sapindales-rps3 /dev/shm/tmp/pt-Sapindales/trng/train-rps3.gb.train
+#augustus --species=pt-Sapindales-rps3 /dev/shm/tmp/pt-Sapindales/trng/train-rps3.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-rps3.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-rps3.tgz pt-Sapindales-rps3)
+`
+2020-03-01 13:03:13,924 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-rps2 -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-rps2.gb 18
+new_species.pl --species=pt-Sapindales-rps2
+etraining --species=pt-Sapindales-rps2 /dev/shm/tmp/pt-Sapindales/trng/train-rps2.gb.train --translation_table=1
+augustus --species=pt-Sapindales-rps2 /dev/shm/tmp/pt-Sapindales/trng/train-rps2.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-rps2.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-rps2 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-rps2.gb.train && rm -r tmp_opt_pt-Sapindales-rps2
+#etraining --species=pt-Sapindales-rps2 /dev/shm/tmp/pt-Sapindales/trng/train-rps2.gb.train
+#augustus --species=pt-Sapindales-rps2 /dev/shm/tmp/pt-Sapindales/trng/train-rps2.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-rps2.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-rps2.tgz pt-Sapindales-rps2)
+`
+2020-03-01 13:03:19,767 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-petG -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-petG.gb 22
+new_species.pl --species=pt-Sapindales-petG
+etraining --species=pt-Sapindales-petG /dev/shm/tmp/pt-Sapindales/trng/train-petG.gb.train --translation_table=1
+augustus --species=pt-Sapindales-petG /dev/shm/tmp/pt-Sapindales/trng/train-petG.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-petG.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-petG --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-petG.gb.train && rm -r tmp_opt_pt-Sapindales-petG
+#etraining --species=pt-Sapindales-petG /dev/shm/tmp/pt-Sapindales/trng/train-petG.gb.train
+#augustus --species=pt-Sapindales-petG /dev/shm/tmp/pt-Sapindales/trng/train-petG.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-petG.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-petG.tgz pt-Sapindales-petG)
+`
+2020-03-01 13:03:25,514 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-ycf2 -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-ycf2.gb 21
+new_species.pl --species=pt-Sapindales-ycf2
+etraining --species=pt-Sapindales-ycf2 /dev/shm/tmp/pt-Sapindales/trng/train-ycf2.gb.train --translation_table=1
+augustus --species=pt-Sapindales-ycf2 /dev/shm/tmp/pt-Sapindales/trng/train-ycf2.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-ycf2.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-ycf2 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-ycf2.gb.train && rm -r tmp_opt_pt-Sapindales-ycf2
+#etraining --species=pt-Sapindales-ycf2 /dev/shm/tmp/pt-Sapindales/trng/train-ycf2.gb.train
+#augustus --species=pt-Sapindales-ycf2 /dev/shm/tmp/pt-Sapindales/trng/train-ycf2.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-ycf2.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-ycf2.tgz pt-Sapindales-ycf2)
+`
+2020-03-01 13:03:39,098 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-rpl33 -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-rpl33.gb 22
+new_species.pl --species=pt-Sapindales-rpl33
+etraining --species=pt-Sapindales-rpl33 /dev/shm/tmp/pt-Sapindales/trng/train-rpl33.gb.train --translation_table=1
+augustus --species=pt-Sapindales-rpl33 /dev/shm/tmp/pt-Sapindales/trng/train-rpl33.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-rpl33.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-rpl33 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-rpl33.gb.train && rm -r tmp_opt_pt-Sapindales-rpl33
+#etraining --species=pt-Sapindales-rpl33 /dev/shm/tmp/pt-Sapindales/trng/train-rpl33.gb.train
+#augustus --species=pt-Sapindales-rpl33 /dev/shm/tmp/pt-Sapindales/trng/train-rpl33.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-rpl33.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-rpl33.tgz pt-Sapindales-rpl33)
+`
+2020-03-01 13:03:44,727 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-rpl32 -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-rpl32.gb 22
+new_species.pl --species=pt-Sapindales-rpl32
+etraining --species=pt-Sapindales-rpl32 /dev/shm/tmp/pt-Sapindales/trng/train-rpl32.gb.train --translation_table=1
+augustus --species=pt-Sapindales-rpl32 /dev/shm/tmp/pt-Sapindales/trng/train-rpl32.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-rpl32.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-rpl32 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-rpl32.gb.train && rm -r tmp_opt_pt-Sapindales-rpl32
+#etraining --species=pt-Sapindales-rpl32 /dev/shm/tmp/pt-Sapindales/trng/train-rpl32.gb.train
+#augustus --species=pt-Sapindales-rpl32 /dev/shm/tmp/pt-Sapindales/trng/train-rpl32.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-rpl32.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-rpl32.tgz pt-Sapindales-rpl32)
+`
+2020-03-01 13:03:50,441 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-rpl36 -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-rpl36.gb 22
+new_species.pl --species=pt-Sapindales-rpl36
+etraining --species=pt-Sapindales-rpl36 /dev/shm/tmp/pt-Sapindales/trng/train-rpl36.gb.train --translation_table=1
+augustus --species=pt-Sapindales-rpl36 /dev/shm/tmp/pt-Sapindales/trng/train-rpl36.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-rpl36.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-rpl36 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-rpl36.gb.train && rm -r tmp_opt_pt-Sapindales-rpl36
+#etraining --species=pt-Sapindales-rpl36 /dev/shm/tmp/pt-Sapindales/trng/train-rpl36.gb.train
+#augustus --species=pt-Sapindales-rpl36 /dev/shm/tmp/pt-Sapindales/trng/train-rpl36.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-rpl36.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-rpl36.tgz pt-Sapindales-rpl36)
+`
+2020-03-01 13:03:56,596 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-rpl22 -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-rpl22.gb 22
+new_species.pl --species=pt-Sapindales-rpl22
+etraining --species=pt-Sapindales-rpl22 /dev/shm/tmp/pt-Sapindales/trng/train-rpl22.gb.train --translation_table=1
+augustus --species=pt-Sapindales-rpl22 /dev/shm/tmp/pt-Sapindales/trng/train-rpl22.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-rpl22.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-rpl22 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-rpl22.gb.train && rm -r tmp_opt_pt-Sapindales-rpl22
+#etraining --species=pt-Sapindales-rpl22 /dev/shm/tmp/pt-Sapindales/trng/train-rpl22.gb.train
+#augustus --species=pt-Sapindales-rpl22 /dev/shm/tmp/pt-Sapindales/trng/train-rpl22.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-rpl22.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-rpl22.tgz pt-Sapindales-rpl22)
+`
+2020-03-01 13:04:02,606 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-ndhA -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-ndhA.gb 22
+new_species.pl --species=pt-Sapindales-ndhA
+etraining --species=pt-Sapindales-ndhA /dev/shm/tmp/pt-Sapindales/trng/train-ndhA.gb.train --translation_table=1
+augustus --species=pt-Sapindales-ndhA /dev/shm/tmp/pt-Sapindales/trng/train-ndhA.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-ndhA.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-ndhA --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-ndhA.gb.train && rm -r tmp_opt_pt-Sapindales-ndhA
+#etraining --species=pt-Sapindales-ndhA /dev/shm/tmp/pt-Sapindales/trng/train-ndhA.gb.train
+#augustus --species=pt-Sapindales-ndhA /dev/shm/tmp/pt-Sapindales/trng/train-ndhA.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-ndhA.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-ndhA.tgz pt-Sapindales-ndhA)
+`
+2020-03-01 13:04:10,277 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-ycf4 -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-ycf4.gb 22
+new_species.pl --species=pt-Sapindales-ycf4
+etraining --species=pt-Sapindales-ycf4 /dev/shm/tmp/pt-Sapindales/trng/train-ycf4.gb.train --translation_table=1
+augustus --species=pt-Sapindales-ycf4 /dev/shm/tmp/pt-Sapindales/trng/train-ycf4.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-ycf4.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-ycf4 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-ycf4.gb.train && rm -r tmp_opt_pt-Sapindales-ycf4
+#etraining --species=pt-Sapindales-ycf4 /dev/shm/tmp/pt-Sapindales/trng/train-ycf4.gb.train
+#augustus --species=pt-Sapindales-ycf4 /dev/shm/tmp/pt-Sapindales/trng/train-ycf4.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-ycf4.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-ycf4.tgz pt-Sapindales-ycf4)
+`
+2020-03-01 13:04:16,326 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-psaA -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-psaA.gb 22
+new_species.pl --species=pt-Sapindales-psaA
+etraining --species=pt-Sapindales-psaA /dev/shm/tmp/pt-Sapindales/trng/train-psaA.gb.train --translation_table=1
+augustus --species=pt-Sapindales-psaA /dev/shm/tmp/pt-Sapindales/trng/train-psaA.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-psaA.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-psaA --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-psaA.gb.train && rm -r tmp_opt_pt-Sapindales-psaA
+#etraining --species=pt-Sapindales-psaA /dev/shm/tmp/pt-Sapindales/trng/train-psaA.gb.train
+#augustus --species=pt-Sapindales-psaA /dev/shm/tmp/pt-Sapindales/trng/train-psaA.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-psaA.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-psaA.tgz pt-Sapindales-psaA)
+`
+2020-03-01 13:04:25,000 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-rps8 -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-rps8.gb 22
+new_species.pl --species=pt-Sapindales-rps8
+etraining --species=pt-Sapindales-rps8 /dev/shm/tmp/pt-Sapindales/trng/train-rps8.gb.train --translation_table=1
+augustus --species=pt-Sapindales-rps8 /dev/shm/tmp/pt-Sapindales/trng/train-rps8.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-rps8.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-rps8 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-rps8.gb.train && rm -r tmp_opt_pt-Sapindales-rps8
+#etraining --species=pt-Sapindales-rps8 /dev/shm/tmp/pt-Sapindales/trng/train-rps8.gb.train
+#augustus --species=pt-Sapindales-rps8 /dev/shm/tmp/pt-Sapindales/trng/train-rps8.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-rps8.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-rps8.tgz pt-Sapindales-rps8)
+`
+2020-03-01 13:04:31,029 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-rpl23 -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-rpl23.gb 22
+new_species.pl --species=pt-Sapindales-rpl23
+etraining --species=pt-Sapindales-rpl23 /dev/shm/tmp/pt-Sapindales/trng/train-rpl23.gb.train --translation_table=1
+augustus --species=pt-Sapindales-rpl23 /dev/shm/tmp/pt-Sapindales/trng/train-rpl23.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-rpl23.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-rpl23 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-rpl23.gb.train && rm -r tmp_opt_pt-Sapindales-rpl23
+#etraining --species=pt-Sapindales-rpl23 /dev/shm/tmp/pt-Sapindales/trng/train-rpl23.gb.train
+#augustus --species=pt-Sapindales-rpl23 /dev/shm/tmp/pt-Sapindales/trng/train-rpl23.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-rpl23.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-rpl23.tgz pt-Sapindales-rpl23)
+`
+2020-03-01 13:04:37,187 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-rpl20 -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-rpl20.gb 22
+new_species.pl --species=pt-Sapindales-rpl20
+etraining --species=pt-Sapindales-rpl20 /dev/shm/tmp/pt-Sapindales/trng/train-rpl20.gb.train --translation_table=1
+augustus --species=pt-Sapindales-rpl20 /dev/shm/tmp/pt-Sapindales/trng/train-rpl20.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-rpl20.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-rpl20 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-rpl20.gb.train && rm -r tmp_opt_pt-Sapindales-rpl20
+#etraining --species=pt-Sapindales-rpl20 /dev/shm/tmp/pt-Sapindales/trng/train-rpl20.gb.train
+#augustus --species=pt-Sapindales-rpl20 /dev/shm/tmp/pt-Sapindales/trng/train-rpl20.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-rpl20.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-rpl20.tgz pt-Sapindales-rpl20)
+`
+2020-03-01 13:04:43,145 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-psbZ -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-psbZ.gb 22
+new_species.pl --species=pt-Sapindales-psbZ
+etraining --species=pt-Sapindales-psbZ /dev/shm/tmp/pt-Sapindales/trng/train-psbZ.gb.train --translation_table=1
+augustus --species=pt-Sapindales-psbZ /dev/shm/tmp/pt-Sapindales/trng/train-psbZ.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-psbZ.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-psbZ --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-psbZ.gb.train && rm -r tmp_opt_pt-Sapindales-psbZ
+#etraining --species=pt-Sapindales-psbZ /dev/shm/tmp/pt-Sapindales/trng/train-psbZ.gb.train
+#augustus --species=pt-Sapindales-psbZ /dev/shm/tmp/pt-Sapindales/trng/train-psbZ.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-psbZ.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-psbZ.tgz pt-Sapindales-psbZ)
+`
+2020-03-01 13:04:49,348 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-cemA -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-cemA.gb 22
+new_species.pl --species=pt-Sapindales-cemA
+etraining --species=pt-Sapindales-cemA /dev/shm/tmp/pt-Sapindales/trng/train-cemA.gb.train --translation_table=1
+augustus --species=pt-Sapindales-cemA /dev/shm/tmp/pt-Sapindales/trng/train-cemA.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-cemA.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-cemA --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-cemA.gb.train && rm -r tmp_opt_pt-Sapindales-cemA
+#etraining --species=pt-Sapindales-cemA /dev/shm/tmp/pt-Sapindales/trng/train-cemA.gb.train
+#augustus --species=pt-Sapindales-cemA /dev/shm/tmp/pt-Sapindales/trng/train-cemA.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-cemA.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-cemA.tgz pt-Sapindales-cemA)
+`
+2020-03-01 13:04:56,196 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-rpoB -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-rpoB.gb 22
+new_species.pl --species=pt-Sapindales-rpoB
+etraining --species=pt-Sapindales-rpoB /dev/shm/tmp/pt-Sapindales/trng/train-rpoB.gb.train --translation_table=1
+augustus --species=pt-Sapindales-rpoB /dev/shm/tmp/pt-Sapindales/trng/train-rpoB.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-rpoB.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-rpoB --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-rpoB.gb.train && rm -r tmp_opt_pt-Sapindales-rpoB
+#etraining --species=pt-Sapindales-rpoB /dev/shm/tmp/pt-Sapindales/trng/train-rpoB.gb.train
+#augustus --species=pt-Sapindales-rpoB /dev/shm/tmp/pt-Sapindales/trng/train-rpoB.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-rpoB.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-rpoB.tgz pt-Sapindales-rpoB)
+`
+2020-03-01 13:05:06,930 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-rpoA -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-rpoA.gb 22
+new_species.pl --species=pt-Sapindales-rpoA
+etraining --species=pt-Sapindales-rpoA /dev/shm/tmp/pt-Sapindales/trng/train-rpoA.gb.train --translation_table=1
+augustus --species=pt-Sapindales-rpoA /dev/shm/tmp/pt-Sapindales/trng/train-rpoA.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-rpoA.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-rpoA --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-rpoA.gb.train && rm -r tmp_opt_pt-Sapindales-rpoA
+#etraining --species=pt-Sapindales-rpoA /dev/shm/tmp/pt-Sapindales/trng/train-rpoA.gb.train
+#augustus --species=pt-Sapindales-rpoA /dev/shm/tmp/pt-Sapindales/trng/train-rpoA.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-rpoA.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-rpoA.tgz pt-Sapindales-rpoA)
+`
+2020-03-01 13:05:13,508 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-rpl14 -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-rpl14.gb 22
+new_species.pl --species=pt-Sapindales-rpl14
+etraining --species=pt-Sapindales-rpl14 /dev/shm/tmp/pt-Sapindales/trng/train-rpl14.gb.train --translation_table=1
+augustus --species=pt-Sapindales-rpl14 /dev/shm/tmp/pt-Sapindales/trng/train-rpl14.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-rpl14.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-rpl14 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-rpl14.gb.train && rm -r tmp_opt_pt-Sapindales-rpl14
+#etraining --species=pt-Sapindales-rpl14 /dev/shm/tmp/pt-Sapindales/trng/train-rpl14.gb.train
+#augustus --species=pt-Sapindales-rpl14 /dev/shm/tmp/pt-Sapindales/trng/train-rpl14.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-rpl14.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-rpl14.tgz pt-Sapindales-rpl14)
+`
+2020-03-01 13:05:19,809 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-rpl16 -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-rpl16.gb 22
+new_species.pl --species=pt-Sapindales-rpl16
+etraining --species=pt-Sapindales-rpl16 /dev/shm/tmp/pt-Sapindales/trng/train-rpl16.gb.train --translation_table=1
+augustus --species=pt-Sapindales-rpl16 /dev/shm/tmp/pt-Sapindales/trng/train-rpl16.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-rpl16.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-rpl16 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-rpl16.gb.train && rm -r tmp_opt_pt-Sapindales-rpl16
+#etraining --species=pt-Sapindales-rpl16 /dev/shm/tmp/pt-Sapindales/trng/train-rpl16.gb.train
+#augustus --species=pt-Sapindales-rpl16 /dev/shm/tmp/pt-Sapindales/trng/train-rpl16.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-rpl16.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-rpl16.tgz pt-Sapindales-rpl16)
+`
+2020-03-01 13:05:27,127 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-rps11 -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-rps11.gb 22
+new_species.pl --species=pt-Sapindales-rps11
+etraining --species=pt-Sapindales-rps11 /dev/shm/tmp/pt-Sapindales/trng/train-rps11.gb.train --translation_table=1
+augustus --species=pt-Sapindales-rps11 /dev/shm/tmp/pt-Sapindales/trng/train-rps11.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-rps11.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-rps11 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-rps11.gb.train && rm -r tmp_opt_pt-Sapindales-rps11
+#etraining --species=pt-Sapindales-rps11 /dev/shm/tmp/pt-Sapindales/trng/train-rps11.gb.train
+#augustus --species=pt-Sapindales-rps11 /dev/shm/tmp/pt-Sapindales/trng/train-rps11.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-rps11.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-rps11.tgz pt-Sapindales-rps11)
+`
+2020-03-01 13:05:33,443 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-rps15 -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-rps15.gb 22
+new_species.pl --species=pt-Sapindales-rps15
+etraining --species=pt-Sapindales-rps15 /dev/shm/tmp/pt-Sapindales/trng/train-rps15.gb.train --translation_table=1
+augustus --species=pt-Sapindales-rps15 /dev/shm/tmp/pt-Sapindales/trng/train-rps15.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-rps15.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-rps15 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-rps15.gb.train && rm -r tmp_opt_pt-Sapindales-rps15
+#etraining --species=pt-Sapindales-rps15 /dev/shm/tmp/pt-Sapindales/trng/train-rps15.gb.train
+#augustus --species=pt-Sapindales-rps15 /dev/shm/tmp/pt-Sapindales/trng/train-rps15.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-rps15.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-rps15.tgz pt-Sapindales-rps15)
+`
+2020-03-01 13:05:39,318 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-rps14 -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-rps14.gb 22
+new_species.pl --species=pt-Sapindales-rps14
+etraining --species=pt-Sapindales-rps14 /dev/shm/tmp/pt-Sapindales/trng/train-rps14.gb.train --translation_table=1
+augustus --species=pt-Sapindales-rps14 /dev/shm/tmp/pt-Sapindales/trng/train-rps14.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-rps14.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-rps14 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-rps14.gb.train && rm -r tmp_opt_pt-Sapindales-rps14
+#etraining --species=pt-Sapindales-rps14 /dev/shm/tmp/pt-Sapindales/trng/train-rps14.gb.train
+#augustus --species=pt-Sapindales-rps14 /dev/shm/tmp/pt-Sapindales/trng/train-rps14.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-rps14.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-rps14.tgz pt-Sapindales-rps14)
+`
+2020-03-01 13:05:45,182 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-rps16 -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-rps16.gb 22
+new_species.pl --species=pt-Sapindales-rps16
+etraining --species=pt-Sapindales-rps16 /dev/shm/tmp/pt-Sapindales/trng/train-rps16.gb.train --translation_table=1
+augustus --species=pt-Sapindales-rps16 /dev/shm/tmp/pt-Sapindales/trng/train-rps16.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-rps16.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-rps16 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-rps16.gb.train && rm -r tmp_opt_pt-Sapindales-rps16
+#etraining --species=pt-Sapindales-rps16 /dev/shm/tmp/pt-Sapindales/trng/train-rps16.gb.train
+#augustus --species=pt-Sapindales-rps16 /dev/shm/tmp/pt-Sapindales/trng/train-rps16.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-rps16.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-rps16.tgz pt-Sapindales-rps16)
+`
+2020-03-01 13:05:51,818 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-rps18 -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-rps18.gb 22
+new_species.pl --species=pt-Sapindales-rps18
+etraining --species=pt-Sapindales-rps18 /dev/shm/tmp/pt-Sapindales/trng/train-rps18.gb.train --translation_table=1
+augustus --species=pt-Sapindales-rps18 /dev/shm/tmp/pt-Sapindales/trng/train-rps18.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-rps18.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-rps18 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-rps18.gb.train && rm -r tmp_opt_pt-Sapindales-rps18
+#etraining --species=pt-Sapindales-rps18 /dev/shm/tmp/pt-Sapindales/trng/train-rps18.gb.train
+#augustus --species=pt-Sapindales-rps18 /dev/shm/tmp/pt-Sapindales/trng/train-rps18.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-rps18.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-rps18.tgz pt-Sapindales-rps18)
+`
+2020-03-01 13:05:57,775 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-matK -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-matK.gb 22
+new_species.pl --species=pt-Sapindales-matK
+etraining --species=pt-Sapindales-matK /dev/shm/tmp/pt-Sapindales/trng/train-matK.gb.train --translation_table=1
+augustus --species=pt-Sapindales-matK /dev/shm/tmp/pt-Sapindales/trng/train-matK.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-matK.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-matK --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-matK.gb.train && rm -r tmp_opt_pt-Sapindales-matK
+#etraining --species=pt-Sapindales-matK /dev/shm/tmp/pt-Sapindales/trng/train-matK.gb.train
+#augustus --species=pt-Sapindales-matK /dev/shm/tmp/pt-Sapindales/trng/train-matK.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-matK.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-matK.tgz pt-Sapindales-matK)
+`
+2020-03-01 13:06:04,709 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-rpoC2 -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-rpoC2.gb 22
+new_species.pl --species=pt-Sapindales-rpoC2
+etraining --species=pt-Sapindales-rpoC2 /dev/shm/tmp/pt-Sapindales/trng/train-rpoC2.gb.train --translation_table=1
+augustus --species=pt-Sapindales-rpoC2 /dev/shm/tmp/pt-Sapindales/trng/train-rpoC2.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-rpoC2.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-rpoC2 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-rpoC2.gb.train && rm -r tmp_opt_pt-Sapindales-rpoC2
+#etraining --species=pt-Sapindales-rpoC2 /dev/shm/tmp/pt-Sapindales/trng/train-rpoC2.gb.train
+#augustus --species=pt-Sapindales-rpoC2 /dev/shm/tmp/pt-Sapindales/trng/train-rpoC2.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-rpoC2.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-rpoC2.tgz pt-Sapindales-rpoC2)
+`
+2020-03-01 13:06:18,120 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-rpoC1 -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-rpoC1.gb 22
+new_species.pl --species=pt-Sapindales-rpoC1
+etraining --species=pt-Sapindales-rpoC1 /dev/shm/tmp/pt-Sapindales/trng/train-rpoC1.gb.train --translation_table=1
+augustus --species=pt-Sapindales-rpoC1 /dev/shm/tmp/pt-Sapindales/trng/train-rpoC1.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-rpoC1.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-rpoC1 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-rpoC1.gb.train && rm -r tmp_opt_pt-Sapindales-rpoC1
+#etraining --species=pt-Sapindales-rpoC1 /dev/shm/tmp/pt-Sapindales/trng/train-rpoC1.gb.train
+#augustus --species=pt-Sapindales-rpoC1 /dev/shm/tmp/pt-Sapindales/trng/train-rpoC1.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-rpoC1.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-rpoC1.tgz pt-Sapindales-rpoC1)
+`
+2020-03-01 13:06:26,726 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-ycf3 -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-ycf3.gb 22
+new_species.pl --species=pt-Sapindales-ycf3
+etraining --species=pt-Sapindales-ycf3 /dev/shm/tmp/pt-Sapindales/trng/train-ycf3.gb.train --translation_table=1
+augustus --species=pt-Sapindales-ycf3 /dev/shm/tmp/pt-Sapindales/trng/train-ycf3.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-ycf3.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-ycf3 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-ycf3.gb.train && rm -r tmp_opt_pt-Sapindales-ycf3
+#etraining --species=pt-Sapindales-ycf3 /dev/shm/tmp/pt-Sapindales/trng/train-ycf3.gb.train
+#augustus --species=pt-Sapindales-ycf3 /dev/shm/tmp/pt-Sapindales/trng/train-ycf3.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-ycf3.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-ycf3.tgz pt-Sapindales-ycf3)
+`
+2020-03-01 13:06:34,236 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-clpP -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-clpP.gb 22
+new_species.pl --species=pt-Sapindales-clpP
+etraining --species=pt-Sapindales-clpP /dev/shm/tmp/pt-Sapindales/trng/train-clpP.gb.train --translation_table=1
+augustus --species=pt-Sapindales-clpP /dev/shm/tmp/pt-Sapindales/trng/train-clpP.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-clpP.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-clpP --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-clpP.gb.train && rm -r tmp_opt_pt-Sapindales-clpP
+#etraining --species=pt-Sapindales-clpP /dev/shm/tmp/pt-Sapindales/trng/train-clpP.gb.train
+#augustus --species=pt-Sapindales-clpP /dev/shm/tmp/pt-Sapindales/trng/train-clpP.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-clpP.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-clpP.tgz pt-Sapindales-clpP)
+`
+2020-03-01 13:06:41,715 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-ycf15-82 -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-ycf15-82.gb 6
+new_species.pl --species=pt-Sapindales-ycf15-82
+etraining --species=pt-Sapindales-ycf15-82 /dev/shm/tmp/pt-Sapindales/trng/train-ycf15-82.gb.train --translation_table=1
+augustus --species=pt-Sapindales-ycf15-82 /dev/shm/tmp/pt-Sapindales/trng/train-ycf15-82.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-ycf15-82.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-ycf15-82 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-ycf15-82.gb.train && rm -r tmp_opt_pt-Sapindales-ycf15-82
+#etraining --species=pt-Sapindales-ycf15-82 /dev/shm/tmp/pt-Sapindales/trng/train-ycf15-82.gb.train
+#augustus --species=pt-Sapindales-ycf15-82 /dev/shm/tmp/pt-Sapindales/trng/train-ycf15-82.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-ycf15-82.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-ycf15-82.tgz pt-Sapindales-ycf15-82)
+`
+2020-03-01 13:06:45,893 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm pt-Sapindales-infA -r)
+randomSplit.pl /dev/shm/tmp/pt-Sapindales/trng/train-infA.gb 2
+new_species.pl --species=pt-Sapindales-infA
+etraining --species=pt-Sapindales-infA /dev/shm/tmp/pt-Sapindales/trng/train-infA.gb.train --translation_table=1
+augustus --species=pt-Sapindales-infA /dev/shm/tmp/pt-Sapindales/trng/train-infA.gb.test --translation_table=1 &> /dev/shm/tmp/pt-Sapindales/trng/train-infA.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=pt-Sapindales-infA --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/pt-Sapindales/trng/train-infA.gb.train && rm -r tmp_opt_pt-Sapindales-infA
+#etraining --species=pt-Sapindales-infA /dev/shm/tmp/pt-Sapindales/trng/train-infA.gb.train
+#augustus --species=pt-Sapindales-infA /dev/shm/tmp/pt-Sapindales/trng/train-infA.gb.test &> /dev/shm/tmp/pt-Sapindales/trng/train-infA.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/pt-Sapindales/agst/pt-Sapindales-infA.tgz pt-Sapindales-infA)
+`
+2020-03-01 13:06:48,156 -INFO- writing ('rRNA', 'tRNA') sequences into /dev/shm/tmp/pt-Sapindales/rrna
+2020-03-01 13:23:39,061 -INFO- running OrthoFinder to cluster genes
+2020-03-01 13:23:39,109 -INFO- run CMD: `/share/home/app/build/OrthoFinder-2.3.1/OrthoFinder-2.3.1-beta/orthofinder/orthofinder.py -f /dev/shm/tmp/pt-Sapindales/rrna -M msa -T fasttree -t 16 -S blastn`
+2020-03-01 13:45:53,904 -INFO- parsing OrthoFinder orthologs
+2020-03-01 13:45:53,925 -INFO- parsing orthologs group into /dev/shm/tmp/pt-Sapindales/alns
+2020-03-01 13:45:54,007 -INFO- using min_count=3.35 to get gene name
+2020-03-01 13:46:28,029 -INFO- get gene name `rrn16` from Counter({'rrn16': 36, 'rrn16S': 7, 'rrn': 2, 'Mangifera_indica-gene340': 1, 'Litchi_chinensis-gene340': 1, 'Acer_buergerianum-gene334': 1, 'Citrus_reticulata-gene367': 1, 'Xylocarpus_moluccensis-gene344': 1, 'Carapa_guianensis-gene340': 1, 'Xylocarpus_granatum-gene342': 1, 'Citrus_sinensis-gene371': 1, 'Zanthoxylum_piperitum-gene348': 1, 'Dodonaea_viscosa-gene342': 1, 'Azadirachta_indica-gene396': 1, 'Leitneria_floridana-gene258': 1, 'Entandrophragma_cylindricum-gene340': 1, 'Anacardium_occidentale-gene342': 1, 'Zanthoxylum_simulans-gene340': 1, 'Zanthoxylum_schinifolium-gene271': 1, 'Swietenia_mahagoni-gene344': 1, 'Xylocarpus_rumphii-gene344': 1, 'Citrus_maxima-gene366': 1, 'Dimocarpus_longan-gene340': 1, 'Citrus_depressa-gene342': 1, 'Khaya_senegalensis-gene340': 1})
+2020-03-01 13:46:28,030 -INFO- get product `16S ribosomal RNA` from Counter({'16S ribosomal RNA': 67})
+2020-03-01 13:46:28,033 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 13:46:28,033 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 13:46:58,918 -INFO- get gene name `trnN-GUU` from Counter({'trnN-GUU': 54, 'trnN-GTT': 7, 'trnN_guu': 2, 'Entandrophragma_cylindricum-gene354': 1, 'Carapa_guianensis-gene354': 1, 'Dodonaea_viscosa-gene356': 1, 'Khaya_senegalensis-gene354': 1})
+2020-03-01 13:46:58,919 -INFO- get product `tRNA-Asn` from Counter({'tRNA-Asn': 67})
+2020-03-01 13:46:58,920 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 13:46:58,920 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 13:46:58,930 -INFO- get gene name `trnY-GUA` from Counter({'trnY-GUA': 54, 'trnY-GTA': 7, 'trnY_gua': 2, 'Entandrophragma_cylindricum-gene97': 1, 'Carapa_guianensis-gene97': 1, 'Dodonaea_viscosa-gene94': 1, 'Khaya_senegalensis-gene97': 1})
+2020-03-01 13:46:58,930 -INFO- get product `tRNA-Tyr` from Counter({'tRNA-Tyr': 67})
+2020-03-01 13:46:58,931 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 13:46:58,931 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 13:47:29,390 -INFO- get gene name `trnL-CAA` from Counter({'trnL-CAA': 61, 'trnL_caa': 2, 'Dodonaea_viscosa-gene329': 1, 'Khaya_senegalensis-gene327': 1, 'Entandrophragma_cylindricum-gene327': 1, 'Carapa_guianensis-gene327': 1})
+2020-03-01 13:47:29,391 -INFO- get product `tRNA-Leu` from Counter({'tRNA-Leu': 67})
+2020-03-01 13:47:29,392 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 13:47:29,393 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 13:48:00,954 -INFO- get gene name `rrn4-5` from Counter({'rrn4-5': 38, 'rrn4-5S': 7, 'Citrus_sinensis-gene383': 1, 'Azadirachta_indica-gene404': 1, 'Mangifera_indica-gene348': 1, 'Anacardium_occidentale-gene350': 1, 'Litchi_chinensis-gene348': 1, 'Carapa_guianensis-gene348': 1, 'Swietenia_mahagoni-gene352': 1, 'Leitneria_floridana-gene266': 1, 'Citrus_maxima-gene374': 1, 'Xylocarpus_rumphii-gene352': 1, 'Citrus_depressa-gene355': 1, 'Zanthoxylum_simulans-gene348': 1, 'Entandrophragma_cylindricum-gene348': 1, 'Citrus_reticulata-gene375': 1, 'Acer_buergerianum-gene344': 1, 'Xylocarpus_granatum-gene350': 1, 'Xylocarpus_moluccensis-gene352': 1, 'Zanthoxylum_schinifolium-gene279': 1, 'Zanthoxylum_piperitum-gene356': 1, 'Dimocarpus_longan-gene348': 1, 'Dodonaea_viscosa-gene350': 1, 'Khaya_senegalensis-gene348': 1})
+2020-03-01 13:48:00,955 -INFO- get product `4.5S ribosomal RNA` from Counter({'4.5S ribosomal RNA': 67})
+2020-03-01 13:48:00,957 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 13:48:00,957 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 13:48:32,303 -INFO- get gene name `rrn5` from Counter({'rrn5': 38, 'rrn5S': 7, 'Entandrophragma_cylindricum-gene350': 1, 'Azadirachta_indica-gene406': 1, 'Citrus_sinensis-gene385': 1, 'Anacardium_occidentale-gene352': 1, 'Swietenia_mahagoni-gene354': 1, 'Zanthoxylum_schinifolium-gene281': 1, 'Xylocarpus_rumphii-gene354': 1, 'Citrus_maxima-gene376': 1, 'Dimocarpus_longan-gene350': 1, 'Zanthoxylum_simulans-gene350': 1, 'Citrus_depressa-gene357': 1, 'Acer_buergerianum-gene346': 1, 'Litchi_chinensis-gene350': 1, 'Mangifera_indica-gene350': 1, 'Leitneria_floridana-gene268': 1, 'Citrus_reticulata-gene377': 1, 'Carapa_guianensis-gene350': 1, 'Xylocarpus_granatum-gene352': 1, 'Xylocarpus_moluccensis-gene354': 1, 'Zanthoxylum_piperitum-gene358': 1, 'Khaya_senegalensis-gene350': 1, 'Dodonaea_viscosa-gene352': 1})
+2020-03-01 13:48:32,304 -INFO- get product `5S ribosomal RNA` from Counter({'5S ribosomal RNA': 67})
+2020-03-01 13:48:32,305 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 13:48:32,305 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 13:49:02,335 -INFO- get gene name `trnR-ACG` from Counter({'trnR-ACG': 58, 'trnR': 3, 'trnR_acg': 2, 'Entandrophragma_cylindricum-gene352': 1, 'Carapa_guianensis-gene352': 1, 'Dodonaea_viscosa-gene354': 1, 'Khaya_senegalensis-gene352': 1})
+2020-03-01 13:49:02,336 -INFO- get product `tRNA-Arg` from Counter({'tRNA-Arg': 67})
+2020-03-01 13:49:02,337 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 13:49:02,337 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 13:49:34,416 -INFO- get gene name `rrn23` from Counter({'rrn23': 38, 'rrn23S': 7, 'Citrus_sinensis-gene381': 1, 'Litchi_chinensis-gene346': 1, 'Mangifera_indica-gene346': 1, 'Azadirachta_indica-gene402': 1, 'Carapa_guianensis-gene346': 1, 'Xylocarpus_granatum-gene348': 1, 'Swietenia_mahagoni-gene350': 1, 'Xylocarpus_rumphii-gene350': 1, 'Citrus_maxima-gene372': 1, 'Citrus_depressa-gene352': 1, 'Acer_buergerianum-gene342': 1, 'Entandrophragma_cylindricum-gene346': 1, 'Anacardium_occidentale-gene348': 1, 'Leitneria_floridana-gene264': 1, 'Zanthoxylum_simulans-gene346': 1, 'Zanthoxylum_schinifolium-gene277': 1, 'Citrus_reticulata-gene373': 1, 'Xylocarpus_moluccensis-gene350': 1, 'Zanthoxylum_piperitum-gene354': 1, 'Dimocarpus_longan-gene346': 1, 'Dodonaea_viscosa-gene348': 1, 'Khaya_senegalensis-gene346': 1})
+2020-03-01 13:49:34,417 -INFO- get product `23S ribosomal RNA` from Counter({'23S ribosomal RNA': 66, '23 ribosomal RNA': 1})
+2020-03-01 13:49:34,418 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 13:49:34,418 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 13:49:34,792 -INFO- get gene name `trnH-GUG` from Counter({'trnH-GUG': 53, 'trnH-GTG': 7, 'trnH_gug': 2, 'Carapa_guianensis-gene11': 1, 'Khaya_senegalensis-gene11': 1, 'Dodonaea_viscosa-gene11': 1, 'Entandrophragma_cylindricum-gene11': 1})
+2020-03-01 13:49:34,793 -INFO- get product `tRNA-His` from Counter({'tRNA-His': 66})
+2020-03-01 13:49:34,794 -INFO- get exon number `1` from Counter({1: 64, 2: 2})
+2020-03-01 13:49:34,795 -INFO- get trans_splicing `False` from Counter({False: 66})
+2020-03-01 13:49:35,846 -INFO- get gene name `trnK-UUU` from Counter({'trnK-UUU': 54, 'trnK_uuu': 2, 'Carapa_guianensis-gene33': 1, 'Dodonaea_viscosa-gene33': 1, 'Entandrophragma_cylindricum-gene33': 1, 'Khaya_senegalensis-gene33': 1})
+2020-03-01 13:49:35,847 -INFO- get product `tRNA-Lys` from Counter({'tRNA-Lys': 60})
+2020-03-01 13:49:35,848 -INFO- get exon number `2` from Counter({2: 50, 1: 10})
+2020-03-01 13:49:35,848 -INFO- get trans_splicing `False` from Counter({False: 60})
+2020-03-01 13:49:35,854 -INFO- get gene name `trnS-UGA` from Counter({'trnS-UGA': 54, 'trnS-TGA': 7, 'trnS_uga': 2, 'Khaya_senegalensis-gene128': 1, 'Dodonaea_viscosa-gene125': 1, 'Entandrophragma_cylindricum-gene128': 1, 'Carapa_guianensis-gene128': 1})
+2020-03-01 13:49:35,854 -INFO- get product `tRNA-Ser` from Counter({'tRNA-Ser': 67})
+2020-03-01 13:49:35,855 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 13:49:35,855 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 13:50:07,983 -INFO- get gene name `trnV-GAC` from Counter({'trnV-GAC': 61, 'trnV_gac': 2, 'Khaya_senegalensis-gene338': 1, 'Dodonaea_viscosa-gene340': 1, 'Carapa_guianensis-gene338': 1, 'Entandrophragma_cylindricum-gene338': 1})
+2020-03-01 13:50:07,984 -INFO- get product `tRNA-Val` from Counter({'tRNA-Val': 67})
+2020-03-01 13:50:07,985 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 13:50:07,985 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 13:50:18,389 -INFO- get gene name `trnT-GGU` from Counter({'trnT-GGU': 49, 'trnT-GGT': 7, 'trnM-CAU': 5, 'trnT_ggu': 2, 'Carapa_guianensis-gene101': 1, 'Khaya_senegalensis-gene101': 1, 'Dodonaea_viscosa-gene98': 1, 'Entandrophragma_cylindricum-gene101': 1})
+2020-03-01 13:50:18,390 -INFO- get product `tRNA-Thr` from Counter({'tRNA-Thr': 62, 'tRNA-Met': 5})
+2020-03-01 13:50:18,391 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 13:50:18,391 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 13:50:18,400 -INFO- get gene name `trnR-UCU` from Counter({'trnR-UCU': 54, 'trnR-TCT': 7, 'trnR_ucu': 2, 'Khaya_senegalensis-gene53': 1, 'Carapa_guianensis-gene53': 1, 'Dodonaea_viscosa-gene50': 1, 'Entandrophragma_cylindricum-gene53': 1})
+2020-03-01 13:50:18,401 -INFO- get product `tRNA-Arg` from Counter({'tRNA-Arg': 67})
+2020-03-01 13:50:18,401 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 13:50:18,402 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 13:50:49,390 -INFO- get gene name `trnI-GAU` from Counter({'trnI-GAU': 56, 'trnI_gau': 2, 'Entandrophragma_cylindricum-gene342': 1, 'Dodonaea_viscosa-gene344': 1, 'Carapa_guianensis-gene342': 1, 'Xylocarpus_rumphii-gene420': 1, 'Khaya_senegalensis-gene342': 1})
+2020-03-01 13:50:49,390 -INFO- get product `tRNA-Ile` from Counter({'tRNA-Ile': 63})
+2020-03-01 13:50:49,391 -INFO- get exon number `2` from Counter({2: 59, 1: 4})
+2020-03-01 13:50:49,391 -INFO- get trans_splicing `False` from Counter({False: 63})
+2020-03-01 13:51:00,703 -INFO- get gene name `trnM-CAU` from Counter({'trnM-CAU': 49, 'trnM-CAT': 7, 'trnT-GGU': 5, 'trnM_cau': 2, 'Entandrophragma_cylindricum-gene175': 1, 'Khaya_senegalensis-gene175': 1, 'Dodonaea_viscosa-gene172': 1, 'Carapa_guianensis-gene175': 1})
+2020-03-01 13:51:00,704 -INFO- get product `tRNA-Met` from Counter({'tRNA-Met': 62, 'tRNA-Thr': 5})
+2020-03-01 13:51:00,706 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 13:51:00,706 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 13:51:00,713 -INFO- get gene name `trnT-UGU` from Counter({'trnT-UGU': 54, 'trnT-TGT': 7, 'trnT_ugu': 2, 'Dodonaea_viscosa-gene155': 1, 'Khaya_senegalensis-gene158': 1, 'Entandrophragma_cylindricum-gene158': 1, 'Carapa_guianensis-gene158': 1})
+2020-03-01 13:51:00,713 -INFO- get product `tRNA-Thr` from Counter({'tRNA-Thr': 67})
+2020-03-01 13:51:00,714 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 13:51:00,714 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 13:51:00,717 -INFO- get gene name `trnE-UUC` from Counter({'trnE-UUC': 54, 'trnE-TTC': 7, 'trnE_uuc': 2, 'Khaya_senegalensis-gene99': 1, 'Entandrophragma_cylindricum-gene99': 1, 'Dodonaea_viscosa-gene96': 1, 'Carapa_guianensis-gene99': 1})
+2020-03-01 13:51:00,718 -INFO- get product `tRNA-Glu` from Counter({'tRNA-Glu': 67})
+2020-03-01 13:51:00,719 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 13:51:00,719 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 13:51:00,722 -INFO- get gene name `trnS-GCU` from Counter({'trnS-GCU': 54, 'trnS-GCT': 7, 'trnS_gcu': 2, 'Khaya_senegalensis-gene49': 1, 'Carapa_guianensis-gene49': 1, 'Dodonaea_viscosa-gene48': 1, 'Entandrophragma_cylindricum-gene49': 1})
+2020-03-01 13:51:00,722 -INFO- get product `tRNA-Ser` from Counter({'tRNA-Ser': 67})
+2020-03-01 13:51:00,723 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 13:51:00,723 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 13:51:34,672 -INFO- get gene name `trnI-CAU` from Counter({'trnI-CAU': 51, 'trnI-CAT': 7, 'trnI': 3, 'trnI_cau': 2, 'Dodonaea_viscosa-gene321': 1, 'Khaya_senegalensis-gene322': 1, 'Entandrophragma_cylindricum-gene322': 1, 'Carapa_guianensis-gene322': 1})
+2020-03-01 13:51:34,673 -INFO- get product `tRNA-Ile` from Counter({'tRNA-Ile': 56, 'tRNA-Met': 11})
+2020-03-01 13:51:34,674 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 13:51:34,674 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 13:51:44,383 -INFO- get gene name `trnP-UGG` from Counter({'trnP-UGG': 54, 'trnP-TGG': 7, 'trnP_ugg': 2, 'Dodonaea_viscosa-gene226': 1, 'Entandrophragma_cylindricum-gene229': 1, 'Carapa_guianensis-gene229': 1, 'Khaya_senegalensis-gene229': 1})
+2020-03-01 13:51:44,383 -INFO- get product `tRNA-Pro` from Counter({'tRNA-Pro': 67})
+2020-03-01 13:51:44,384 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 13:51:44,384 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 13:51:44,390 -INFO- get gene name `trnW-CCA` from Counter({'trnW-CCA': 61, 'trnW_cca': 2, 'Dodonaea_viscosa-gene224': 1, 'Khaya_senegalensis-gene227': 1, 'Entandrophragma_cylindricum-gene227': 1, 'Carapa_guianensis-gene227': 1})
+2020-03-01 13:51:44,390 -INFO- get product `tRNA-Trp` from Counter({'tRNA-Trp': 67})
+2020-03-01 13:51:44,391 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 13:51:44,391 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 13:51:45,071 -INFO- get gene name `trnV-UAC` from Counter({'trnV-UAC': 55, 'trnV_uac': 2, 'Khaya_senegalensis-gene173': 1, 'Entandrophragma_cylindricum-gene173': 1, 'Carapa_guianensis-gene173': 1, 'Dodonaea_viscosa-gene170': 1})
+2020-03-01 13:51:45,072 -INFO- get product `tRNA-Val` from Counter({'tRNA-Val': 61})
+2020-03-01 13:51:45,073 -INFO- get exon number `2` from Counter({2: 57, 1: 4})
+2020-03-01 13:51:45,073 -INFO- get trans_splicing `False` from Counter({False: 61})
+2020-03-01 13:51:45,081 -INFO- get gene name `trnD-GUC` from Counter({'trnD-GUC': 54, 'trnD-GTC': 7, 'trnD_guc': 2, 'Entandrophragma_cylindricum-gene95': 1, 'Carapa_guianensis-gene95': 1, 'Dodonaea_viscosa-gene92': 1, 'Khaya_senegalensis-gene95': 1})
+2020-03-01 13:51:45,081 -INFO- get product `tRNA-Asp` from Counter({'tRNA-Asp': 67})
+2020-03-01 13:51:45,082 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 13:51:45,082 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 13:51:45,085 -INFO- get gene name `trnS-GGA` from Counter({'trnS-GGA': 61, 'trnS_gga': 2, 'Dodonaea_viscosa-gene150': 1, 'Entandrophragma_cylindricum-gene153': 1, 'Khaya_senegalensis-gene153': 1, 'Carapa_guianensis-gene153': 1})
+2020-03-01 13:51:45,085 -INFO- get product `tRNA-Ser` from Counter({'tRNA-Ser': 67})
+2020-03-01 13:51:45,086 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 13:51:45,086 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 13:52:13,600 -INFO- get gene name `trnA-UGC` from Counter({'trnA-UGC': 52, 'trnA': 2, 'trnA_ugc': 2, 'Khaya_senegalensis-gene344': 1, 'Entandrophragma_cylindricum-gene344': 1, 'Carapa_guianensis-gene344': 1, 'Dodonaea_viscosa-gene346': 1})
+2020-03-01 13:52:13,600 -INFO- get product `tRNA-Ala` from Counter({'tRNA-Ala': 60})
+2020-03-01 13:52:13,601 -INFO- get exon number `2` from Counter({2: 58, 1: 2})
+2020-03-01 13:52:13,602 -INFO- get trans_splicing `False` from Counter({False: 60})
+2020-03-01 13:52:13,612 -INFO- get gene name `trnG-UCC` from Counter({'trnG-UCC': 35, 'trnG-GCC': 24, 'trnG': 2, 'trnG_gcc': 2, 'Entandrophragma_cylindricum-gene133': 1, 'Khaya_senegalensis-gene133': 1, 'Dodonaea_viscosa-gene130': 1, 'Carapa_guianensis-gene133': 1})
+2020-03-01 13:52:13,613 -INFO- get product `tRNA-Gly` from Counter({'tRNA-Gly': 67})
+2020-03-01 13:52:13,614 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 13:52:13,614 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 13:52:13,618 -INFO- get gene name `trnG-UCC` from Counter({'trnG-UCC': 17, 'trnG': 13, 'trnG-GCC': 12, 'trnG_ucc': 2, 'Carapa_guianensis-gene51': 1, 'Khaya_senegalensis-gene51': 1, 'Entandrophragma_cylindricum-gene51': 1})
+2020-03-01 13:52:13,618 -INFO- get product `tRNA-Gly` from Counter({'tRNA-Gly': 47})
+2020-03-01 13:52:13,619 -INFO- get exon number `2` from Counter({2: 45, 1: 2})
+2020-03-01 13:52:13,619 -INFO- get trans_splicing `False` from Counter({False: 47})
+2020-03-01 13:52:13,622 -INFO- get gene name `trnC-GCA` from Counter({'trnC-GCA': 61, 'trnC_gca': 2, 'Entandrophragma_cylindricum-gene87': 1, 'Khaya_senegalensis-gene87': 1, 'Carapa_guianensis-gene87': 1, 'Dodonaea_viscosa-gene84': 1})
+2020-03-01 13:52:13,622 -INFO- get product `tRNA-Cys` from Counter({'tRNA-Cys': 67})
+2020-03-01 13:52:13,623 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 13:52:13,623 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 13:52:13,626 -INFO- get gene name `trnF-GAA` from Counter({'trnF-GAA': 61, 'trnF_gaa': 2, 'Entandrophragma_cylindricum-gene162': 1, 'Dodonaea_viscosa-gene159': 1, 'Carapa_guianensis-gene162': 1, 'Khaya_senegalensis-gene162': 1})
+2020-03-01 13:52:13,626 -INFO- get product `tRNA-Phe` from Counter({'tRNA-Phe': 67})
+2020-03-01 13:52:13,627 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 13:52:13,627 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 13:52:13,630 -INFO- get gene name `trnQ-UUG` from Counter({'trnQ-UUG': 54, 'trnQ-TTG': 7, 'trnQ_uug': 2, 'Khaya_senegalensis-gene41': 1, 'Entandrophragma_cylindricum-gene41': 1, 'Carapa_guianensis-gene41': 1, 'Dodonaea_viscosa-gene40': 1})
+2020-03-01 13:52:13,630 -INFO- get product `tRNA-Gln` from Counter({'tRNA-Gln': 67})
+2020-03-01 13:52:13,631 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 13:52:13,631 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 13:52:13,634 -INFO- get gene name `trnfM-CAU` from Counter({'trnfM-CAU': 50, 'trnM-CAT': 5, 'trnM-CAU': 3, 'trnfM-CAT': 2, 'trnfM_cau': 2, 'Dodonaea_viscosa-gene132': 1, 'Khaya_senegalensis-gene135': 1, 'Carapa_guianensis-gene135': 1, 'Entandrophragma_cylindricum-gene135': 1})
+2020-03-01 13:52:13,634 -INFO- get product `tRNA-Met` from Counter({'tRNA-Met': 56, 'tRNA-fMet': 10})
+2020-03-01 13:52:13,635 -INFO- get exon number `1` from Counter({1: 66})
+2020-03-01 13:52:13,635 -INFO- get trans_splicing `False` from Counter({False: 66})
+2020-03-01 13:52:14,701 -INFO- get gene name `trnL-UAA` from Counter({'trnL-UAA': 56, 'trnL_uaa': 2, 'Dodonaea_viscosa-gene157': 1, 'Khaya_senegalensis-gene160': 1, 'Entandrophragma_cylindricum-gene160': 1, 'Carapa_guianensis-gene160': 1})
+2020-03-01 13:52:14,702 -INFO- get product `tRNA-Leu` from Counter({'tRNA-Leu': 62})
+2020-03-01 13:52:14,703 -INFO- get exon number `2` from Counter({2: 58, 1: 4})
+2020-03-01 13:52:14,703 -INFO- get trans_splicing `False` from Counter({False: 62})
+2020-03-01 13:52:14,711 -INFO- get gene name `trnL-UAG` from Counter({'trnL-UAG': 54, 'trnL-TAG': 7, 'trnL_uag': 2, 'Entandrophragma_cylindricum-gene363': 1, 'Khaya_senegalensis-gene363': 1, 'Carapa_guianensis-gene365': 1, 'Dodonaea_viscosa-gene367': 1})
+2020-03-01 13:52:14,712 -INFO- get product `tRNA-Leu` from Counter({'tRNA-Leu': 67})
+2020-03-01 13:52:14,712 -INFO- get exon number `1` from Counter({1: 67})
+2020-03-01 13:52:14,712 -INFO- get trans_splicing `False` from Counter({False: 67})
+2020-03-01 13:52:14,714 -INFO- get gene name `trnT-GGU` from Counter({'trnT-GGU': 2})
+2020-03-01 13:52:15,799 -INFO- get gene name `trnA-UGC` from Counter({'trnA-UGC': 3})
+2020-03-01 13:52:15,800 -INFO- get gene name `trnR_acg` from Counter({'trnR_acg': 2})
+2020-03-01 13:52:15,887 -INFO- extrat 34 genes: ['rrn16', 'trnN-GUU', 'trnY-GUA', 'trnL-CAA', 'rrn4-5', 'rrn5', 'trnR-ACG', 'rrn23', 'trnH-GUG', 'trnK-UUU', 'trnS-UGA', 'trnV-GAC', 'trnT-GGU', 'trnR-UCU', 'trnI-GAU', 'trnM-CAU', 'trnT-UGU', 'trnE-UUC', 'trnS-GCU', 'trnI-CAU', 'trnP-UGG', 'trnW-CCA', 'trnV-UAC', 'trnD-GUC', 'trnS-GGA', 'trnA-UGC', 'trnG-UCC', 'trnG-UCC-27', 'trnC-GCA', 'trnF-GAA', 'trnQ-UUG', 'trnfM-CAU', 'trnL-UAA', 'trnL-UAG']
+2020-03-01 13:52:15,887 -INFO- aligning sequences
+2020-03-01 14:04:41,289 -INFO- building hmm profiles

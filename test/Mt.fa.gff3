@@ -1,386 +1,368 @@
 ##gff-version 3
-Mt	hmmsearch	gene	391670	391742	.	+	.	ID=trnH-AUG-1;Name=trnH-AUG;product=tRNA-His;gene=trnH-AUG;exception=trans-splicing
-Mt	hmmsearch	tRNA	391670	391742	.	+	.	ID=trnH-AUG-1.t1;Parent=trnH-AUG-1;Name=trnH-AUG;product=tRNA-His;gene=trnH-AUG;exception=trans-splicing
-Mt	hmmsearch	gene	35600	35629	.	+	.	ID=trnH-AUG-1;Name=trnH-AUG;product=tRNA-His;gene=trnH-AUG;exception=trans-splicing
-Mt	hmmsearch	tRNA	35600	35629	.	+	.	ID=trnH-AUG-1.t1;Parent=trnH-AUG-1;Name=trnH-AUG;product=tRNA-His;gene=trnH-AUG;exception=trans-splicing
-Mt	hmmsearch	exon	391671	391742	.	+	.	ID=trnH-AUG-1.t1:e1;Parent=trnH-AUG-1.t1;product=tRNA-His;exception=trans-splicing
-Mt	hmmsearch	exon	35601	35629	.	+	.	ID=trnH-AUG-1.t1:e2;Parent=trnH-AUG-1.t1;product=tRNA-His;exception=trans-splicing
-Mt	hmmsearch	gene	391797	391869	.	+	.	ID=trnH-AUG-2;Name=trnH-AUG;product=tRNA-His;gene=trnH-AUG;exception=trans-splicing
-Mt	hmmsearch	tRNA	391797	391869	.	+	.	ID=trnH-AUG-2.t1;Parent=trnH-AUG-2;Name=trnH-AUG;product=tRNA-His;gene=trnH-AUG;exception=trans-splicing
-Mt	hmmsearch	gene	35600	35629	.	+	.	ID=trnH-AUG-2;Name=trnH-AUG;product=tRNA-His;gene=trnH-AUG;exception=trans-splicing
-Mt	hmmsearch	tRNA	35600	35629	.	+	.	ID=trnH-AUG-2.t1;Parent=trnH-AUG-2;Name=trnH-AUG;product=tRNA-His;gene=trnH-AUG;exception=trans-splicing
-Mt	hmmsearch	exon	391798	391869	.	+	.	ID=trnH-AUG-2.t1:e1;Parent=trnH-AUG-2.t1;product=tRNA-His;exception=trans-splicing
-Mt	hmmsearch	exon	35601	35629	.	+	.	ID=trnH-AUG-2.t1:e2;Parent=trnH-AUG-2.t1;product=tRNA-His;exception=trans-splicing
-Mt	hmmsearch	gene	547659	547731	.	-	.	ID=trnH-AUG-3;Name=trnH-AUG;product=tRNA-His;gene=trnH-AUG;exception=trans-splicing
-Mt	hmmsearch	tRNA	547659	547731	.	-	.	ID=trnH-AUG-3.t1;Parent=trnH-AUG-3;Name=trnH-AUG;product=tRNA-His;gene=trnH-AUG;exception=trans-splicing
-Mt	hmmsearch	gene	35600	35629	.	+	.	ID=trnH-AUG-3;Name=trnH-AUG;product=tRNA-His;gene=trnH-AUG;exception=trans-splicing
-Mt	hmmsearch	tRNA	35600	35629	.	+	.	ID=trnH-AUG-3.t1;Parent=trnH-AUG-3;Name=trnH-AUG;product=tRNA-His;gene=trnH-AUG;exception=trans-splicing
-Mt	hmmsearch	exon	547660	547731	.	-	.	ID=trnH-AUG-3.t1:e1;Parent=trnH-AUG-3.t1;product=tRNA-His;exception=trans-splicing
-Mt	hmmsearch	exon	35601	35629	.	+	.	ID=trnH-AUG-3.t1:e2;Parent=trnH-AUG-3.t1;product=tRNA-His;exception=trans-splicing
-Mt	hmmsearch	gene	547786	547858	.	-	.	ID=trnH-AUG-4;Name=trnH-AUG;product=tRNA-His;gene=trnH-AUG;exception=trans-splicing
-Mt	hmmsearch	tRNA	547786	547858	.	-	.	ID=trnH-AUG-4.t1;Parent=trnH-AUG-4;Name=trnH-AUG;product=tRNA-His;gene=trnH-AUG;exception=trans-splicing
-Mt	hmmsearch	gene	35600	35629	.	+	.	ID=trnH-AUG-4;Name=trnH-AUG;product=tRNA-His;gene=trnH-AUG;exception=trans-splicing
-Mt	hmmsearch	tRNA	35600	35629	.	+	.	ID=trnH-AUG-4.t1;Parent=trnH-AUG-4;Name=trnH-AUG;product=tRNA-His;gene=trnH-AUG;exception=trans-splicing
-Mt	hmmsearch	exon	547787	547858	.	-	.	ID=trnH-AUG-4.t1:e1;Parent=trnH-AUG-4.t1;product=tRNA-His;exception=trans-splicing
-Mt	hmmsearch	exon	35601	35629	.	+	.	ID=trnH-AUG-4.t1:e2;Parent=trnH-AUG-4.t1;product=tRNA-His;exception=trans-splicing
-Mt	hmmsearch	gene	547917	547985	.	-	.	ID=trnH-AUG-5;Name=trnH-AUG;product=tRNA-His;gene=trnH-AUG;exception=trans-splicing
-Mt	hmmsearch	tRNA	547917	547985	.	-	.	ID=trnH-AUG-5.t1;Parent=trnH-AUG-5;Name=trnH-AUG;product=tRNA-His;gene=trnH-AUG;exception=trans-splicing
-Mt	hmmsearch	gene	35600	35629	.	+	.	ID=trnH-AUG-5;Name=trnH-AUG;product=tRNA-His;gene=trnH-AUG;exception=trans-splicing
-Mt	hmmsearch	tRNA	35600	35629	.	+	.	ID=trnH-AUG-5.t1;Parent=trnH-AUG-5;Name=trnH-AUG;product=tRNA-His;gene=trnH-AUG;exception=trans-splicing
-Mt	hmmsearch	exon	547918	547985	.	-	.	ID=trnH-AUG-5.t1:e1;Parent=trnH-AUG-5.t1;product=tRNA-His;exception=trans-splicing
-Mt	hmmsearch	exon	35601	35629	.	+	.	ID=trnH-AUG-5.t1:e2;Parent=trnH-AUG-5.t1;product=tRNA-His;exception=trans-splicing
-Mt	hmmsearch	gene	391543	391611	.	+	.	ID=trnH-AUG-6;Name=trnH-AUG;product=tRNA-His;gene=trnH-AUG;exception=trans-splicing
-Mt	hmmsearch	tRNA	391543	391611	.	+	.	ID=trnH-AUG-6.t1;Parent=trnH-AUG-6;Name=trnH-AUG;product=tRNA-His;gene=trnH-AUG;exception=trans-splicing
-Mt	hmmsearch	gene	35600	35629	.	+	.	ID=trnH-AUG-6;Name=trnH-AUG;product=tRNA-His;gene=trnH-AUG;exception=trans-splicing
-Mt	hmmsearch	tRNA	35600	35629	.	+	.	ID=trnH-AUG-6.t1;Parent=trnH-AUG-6;Name=trnH-AUG;product=tRNA-His;gene=trnH-AUG;exception=trans-splicing
-Mt	hmmsearch	exon	391544	391611	.	+	.	ID=trnH-AUG-6.t1:e1;Parent=trnH-AUG-6.t1;product=tRNA-His;exception=trans-splicing
-Mt	hmmsearch	exon	35601	35629	.	+	.	ID=trnH-AUG-6.t1:e2;Parent=trnH-AUG-6.t1;product=tRNA-His;exception=trans-splicing
-Mt	hmmsearch	gene	547659	547731	.	-	.	ID=trnM-CAU-31-1;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	547659	547731	.	-	.	ID=trnM-CAU-31-1.t1;Parent=trnM-CAU-31-1;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	217578	217625	.	+	.	ID=trnM-CAU-31-1;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	217578	217625	.	+	.	ID=trnM-CAU-31-1.t1;Parent=trnM-CAU-31-1;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	35600	35629	.	+	.	ID=trnM-CAU-31-1;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	35600	35629	.	+	.	ID=trnM-CAU-31-1.t1;Parent=trnM-CAU-31-1;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	exon	547660	547731	.	-	.	ID=trnM-CAU-31-1.t1:e1;Parent=trnM-CAU-31-1.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	217579	217625	.	+	.	ID=trnM-CAU-31-1.t1:e2;Parent=trnM-CAU-31-1.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	35601	35629	.	+	.	ID=trnM-CAU-31-1.t1:e3;Parent=trnM-CAU-31-1.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	gene	547786	547858	.	-	.	ID=trnM-CAU-31-2;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	547786	547858	.	-	.	ID=trnM-CAU-31-2.t1;Parent=trnM-CAU-31-2;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	217578	217625	.	+	.	ID=trnM-CAU-31-2;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	217578	217625	.	+	.	ID=trnM-CAU-31-2.t1;Parent=trnM-CAU-31-2;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	35600	35629	.	+	.	ID=trnM-CAU-31-2;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	35600	35629	.	+	.	ID=trnM-CAU-31-2.t1;Parent=trnM-CAU-31-2;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	exon	547787	547858	.	-	.	ID=trnM-CAU-31-2.t1:e1;Parent=trnM-CAU-31-2.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	217579	217625	.	+	.	ID=trnM-CAU-31-2.t1:e2;Parent=trnM-CAU-31-2.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	35601	35629	.	+	.	ID=trnM-CAU-31-2.t1:e3;Parent=trnM-CAU-31-2.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	gene	191590	191657	.	+	.	ID=trnM-CAU-31-3;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	191590	191657	.	+	.	ID=trnM-CAU-31-3.t1;Parent=trnM-CAU-31-3;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	217578	217625	.	+	.	ID=trnM-CAU-31-3;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	217578	217625	.	+	.	ID=trnM-CAU-31-3.t1;Parent=trnM-CAU-31-3;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	35600	35629	.	+	.	ID=trnM-CAU-31-3;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	35600	35629	.	+	.	ID=trnM-CAU-31-3.t1;Parent=trnM-CAU-31-3;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	exon	191591	191657	.	+	.	ID=trnM-CAU-31-3.t1:e1;Parent=trnM-CAU-31-3.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	217579	217625	.	+	.	ID=trnM-CAU-31-3.t1:e2;Parent=trnM-CAU-31-3.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	35601	35629	.	+	.	ID=trnM-CAU-31-3.t1:e3;Parent=trnM-CAU-31-3.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	gene	391797	391869	.	+	.	ID=trnM-CAU-31-4;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	391797	391869	.	+	.	ID=trnM-CAU-31-4.t1;Parent=trnM-CAU-31-4;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	217578	217625	.	+	.	ID=trnM-CAU-31-4;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	217578	217625	.	+	.	ID=trnM-CAU-31-4.t1;Parent=trnM-CAU-31-4;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	35600	35629	.	+	.	ID=trnM-CAU-31-4;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	35600	35629	.	+	.	ID=trnM-CAU-31-4.t1;Parent=trnM-CAU-31-4;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	exon	391798	391869	.	+	.	ID=trnM-CAU-31-4.t1:e1;Parent=trnM-CAU-31-4.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	217579	217625	.	+	.	ID=trnM-CAU-31-4.t1:e2;Parent=trnM-CAU-31-4.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	35601	35629	.	+	.	ID=trnM-CAU-31-4.t1:e3;Parent=trnM-CAU-31-4.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	gene	391670	391742	.	+	.	ID=trnM-CAU-31-5;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	391670	391742	.	+	.	ID=trnM-CAU-31-5.t1;Parent=trnM-CAU-31-5;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	217578	217625	.	+	.	ID=trnM-CAU-31-5;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	217578	217625	.	+	.	ID=trnM-CAU-31-5.t1;Parent=trnM-CAU-31-5;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	35600	35629	.	+	.	ID=trnM-CAU-31-5;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	35600	35629	.	+	.	ID=trnM-CAU-31-5.t1;Parent=trnM-CAU-31-5;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	exon	391671	391742	.	+	.	ID=trnM-CAU-31-5.t1:e1;Parent=trnM-CAU-31-5.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	217579	217625	.	+	.	ID=trnM-CAU-31-5.t1:e2;Parent=trnM-CAU-31-5.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	35601	35629	.	+	.	ID=trnM-CAU-31-5.t1:e3;Parent=trnM-CAU-31-5.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	gene	391543	391611	.	+	.	ID=trnM-CAU-31-6;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	391543	391611	.	+	.	ID=trnM-CAU-31-6.t1;Parent=trnM-CAU-31-6;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	217578	217625	.	+	.	ID=trnM-CAU-31-6;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	217578	217625	.	+	.	ID=trnM-CAU-31-6.t1;Parent=trnM-CAU-31-6;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	35600	35629	.	+	.	ID=trnM-CAU-31-6;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	35600	35629	.	+	.	ID=trnM-CAU-31-6.t1;Parent=trnM-CAU-31-6;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	exon	391544	391611	.	+	.	ID=trnM-CAU-31-6.t1:e1;Parent=trnM-CAU-31-6.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	217579	217625	.	+	.	ID=trnM-CAU-31-6.t1:e2;Parent=trnM-CAU-31-6.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	35601	35629	.	+	.	ID=trnM-CAU-31-6.t1:e3;Parent=trnM-CAU-31-6.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	gene	547917	547985	.	-	.	ID=trnM-CAU-31-7;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	547917	547985	.	-	.	ID=trnM-CAU-31-7.t1;Parent=trnM-CAU-31-7;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	217578	217625	.	+	.	ID=trnM-CAU-31-7;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	217578	217625	.	+	.	ID=trnM-CAU-31-7.t1;Parent=trnM-CAU-31-7;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	35600	35629	.	+	.	ID=trnM-CAU-31-7;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	35600	35629	.	+	.	ID=trnM-CAU-31-7.t1;Parent=trnM-CAU-31-7;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	exon	547918	547985	.	-	.	ID=trnM-CAU-31-7.t1:e1;Parent=trnM-CAU-31-7.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	217579	217625	.	+	.	ID=trnM-CAU-31-7.t1:e2;Parent=trnM-CAU-31-7.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	35601	35629	.	+	.	ID=trnM-CAU-31-7.t1:e3;Parent=trnM-CAU-31-7.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	gene	547786	547858	.	-	.	ID=trnM-CAU-34-1;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	547786	547858	.	-	.	ID=trnM-CAU-34-1.t1;Parent=trnM-CAU-34-1;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	217578	217625	.	+	.	ID=trnM-CAU-34-1;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	217578	217625	.	+	.	ID=trnM-CAU-34-1.t1;Parent=trnM-CAU-34-1;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	35600	35629	.	+	.	ID=trnM-CAU-34-1;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	35600	35629	.	+	.	ID=trnM-CAU-34-1.t1;Parent=trnM-CAU-34-1;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	exon	547787	547858	.	-	.	ID=trnM-CAU-34-1.t1:e1;Parent=trnM-CAU-34-1.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	217579	217625	.	+	.	ID=trnM-CAU-34-1.t1:e2;Parent=trnM-CAU-34-1.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	35601	35629	.	+	.	ID=trnM-CAU-34-1.t1:e3;Parent=trnM-CAU-34-1.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	gene	547659	547731	.	-	.	ID=trnM-CAU-34-2;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	547659	547731	.	-	.	ID=trnM-CAU-34-2.t1;Parent=trnM-CAU-34-2;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	217578	217625	.	+	.	ID=trnM-CAU-34-2;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	217578	217625	.	+	.	ID=trnM-CAU-34-2.t1;Parent=trnM-CAU-34-2;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	35600	35629	.	+	.	ID=trnM-CAU-34-2;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	35600	35629	.	+	.	ID=trnM-CAU-34-2.t1;Parent=trnM-CAU-34-2;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	exon	547660	547731	.	-	.	ID=trnM-CAU-34-2.t1:e1;Parent=trnM-CAU-34-2.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	217579	217625	.	+	.	ID=trnM-CAU-34-2.t1:e2;Parent=trnM-CAU-34-2.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	35601	35629	.	+	.	ID=trnM-CAU-34-2.t1:e3;Parent=trnM-CAU-34-2.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	gene	391797	391869	.	+	.	ID=trnM-CAU-34-3;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	391797	391869	.	+	.	ID=trnM-CAU-34-3.t1;Parent=trnM-CAU-34-3;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	217578	217625	.	+	.	ID=trnM-CAU-34-3;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	217578	217625	.	+	.	ID=trnM-CAU-34-3.t1;Parent=trnM-CAU-34-3;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	35600	35629	.	+	.	ID=trnM-CAU-34-3;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	35600	35629	.	+	.	ID=trnM-CAU-34-3.t1;Parent=trnM-CAU-34-3;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	exon	391798	391869	.	+	.	ID=trnM-CAU-34-3.t1:e1;Parent=trnM-CAU-34-3.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	217579	217625	.	+	.	ID=trnM-CAU-34-3.t1:e2;Parent=trnM-CAU-34-3.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	35601	35629	.	+	.	ID=trnM-CAU-34-3.t1:e3;Parent=trnM-CAU-34-3.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	gene	547917	547985	.	-	.	ID=trnM-CAU-34-4;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	547917	547985	.	-	.	ID=trnM-CAU-34-4.t1;Parent=trnM-CAU-34-4;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	217578	217625	.	+	.	ID=trnM-CAU-34-4;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	217578	217625	.	+	.	ID=trnM-CAU-34-4.t1;Parent=trnM-CAU-34-4;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	35600	35629	.	+	.	ID=trnM-CAU-34-4;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	35600	35629	.	+	.	ID=trnM-CAU-34-4.t1;Parent=trnM-CAU-34-4;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	exon	547918	547985	.	-	.	ID=trnM-CAU-34-4.t1:e1;Parent=trnM-CAU-34-4.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	217579	217625	.	+	.	ID=trnM-CAU-34-4.t1:e2;Parent=trnM-CAU-34-4.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	35601	35629	.	+	.	ID=trnM-CAU-34-4.t1:e3;Parent=trnM-CAU-34-4.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	gene	391543	391611	.	+	.	ID=trnM-CAU-34-5;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	391543	391611	.	+	.	ID=trnM-CAU-34-5.t1;Parent=trnM-CAU-34-5;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	217578	217625	.	+	.	ID=trnM-CAU-34-5;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	217578	217625	.	+	.	ID=trnM-CAU-34-5.t1;Parent=trnM-CAU-34-5;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	35600	35629	.	+	.	ID=trnM-CAU-34-5;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	35600	35629	.	+	.	ID=trnM-CAU-34-5.t1;Parent=trnM-CAU-34-5;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	exon	391544	391611	.	+	.	ID=trnM-CAU-34-5.t1:e1;Parent=trnM-CAU-34-5.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	217579	217625	.	+	.	ID=trnM-CAU-34-5.t1:e2;Parent=trnM-CAU-34-5.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	35601	35629	.	+	.	ID=trnM-CAU-34-5.t1:e3;Parent=trnM-CAU-34-5.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	gene	391670	391742	.	+	.	ID=trnM-CAU-34-6;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	391670	391742	.	+	.	ID=trnM-CAU-34-6.t1;Parent=trnM-CAU-34-6;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	217578	217625	.	+	.	ID=trnM-CAU-34-6;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	217578	217625	.	+	.	ID=trnM-CAU-34-6.t1;Parent=trnM-CAU-34-6;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	35600	35629	.	+	.	ID=trnM-CAU-34-6;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	35600	35629	.	+	.	ID=trnM-CAU-34-6.t1;Parent=trnM-CAU-34-6;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	exon	391671	391742	.	+	.	ID=trnM-CAU-34-6.t1:e1;Parent=trnM-CAU-34-6.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	217579	217625	.	+	.	ID=trnM-CAU-34-6.t1:e2;Parent=trnM-CAU-34-6.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	35601	35629	.	+	.	ID=trnM-CAU-34-6.t1:e3;Parent=trnM-CAU-34-6.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	gene	191590	191657	.	+	.	ID=trnM-CAU-34-7;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	191590	191657	.	+	.	ID=trnM-CAU-34-7.t1;Parent=trnM-CAU-34-7;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	217578	217625	.	+	.	ID=trnM-CAU-34-7;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	217578	217625	.	+	.	ID=trnM-CAU-34-7.t1;Parent=trnM-CAU-34-7;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	35600	35629	.	+	.	ID=trnM-CAU-34-7;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	35600	35629	.	+	.	ID=trnM-CAU-34-7.t1;Parent=trnM-CAU-34-7;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	exon	191591	191657	.	+	.	ID=trnM-CAU-34-7.t1:e1;Parent=trnM-CAU-34-7.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	217579	217625	.	+	.	ID=trnM-CAU-34-7.t1:e2;Parent=trnM-CAU-34-7.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	35601	35629	.	+	.	ID=trnM-CAU-34-7.t1:e3;Parent=trnM-CAU-34-7.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	gene	391543	391611	.	+	.	ID=trnM-CAU-61-1;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	391543	391611	.	+	.	ID=trnM-CAU-61-1.t1;Parent=trnM-CAU-61-1;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	217578	217625	.	+	.	ID=trnM-CAU-61-1;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	217578	217625	.	+	.	ID=trnM-CAU-61-1.t1;Parent=trnM-CAU-61-1;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	35600	35629	.	+	.	ID=trnM-CAU-61-1;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	35600	35629	.	+	.	ID=trnM-CAU-61-1.t1;Parent=trnM-CAU-61-1;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	exon	391544	391611	.	+	.	ID=trnM-CAU-61-1.t1:e1;Parent=trnM-CAU-61-1.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	217579	217625	.	+	.	ID=trnM-CAU-61-1.t1:e2;Parent=trnM-CAU-61-1.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	35601	35629	.	+	.	ID=trnM-CAU-61-1.t1:e3;Parent=trnM-CAU-61-1.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	gene	391670	391742	.	+	.	ID=trnM-CAU-61-2;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	391670	391742	.	+	.	ID=trnM-CAU-61-2.t1;Parent=trnM-CAU-61-2;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	217578	217625	.	+	.	ID=trnM-CAU-61-2;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	217578	217625	.	+	.	ID=trnM-CAU-61-2.t1;Parent=trnM-CAU-61-2;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	35600	35629	.	+	.	ID=trnM-CAU-61-2;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	35600	35629	.	+	.	ID=trnM-CAU-61-2.t1;Parent=trnM-CAU-61-2;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	exon	391671	391742	.	+	.	ID=trnM-CAU-61-2.t1:e1;Parent=trnM-CAU-61-2.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	217579	217625	.	+	.	ID=trnM-CAU-61-2.t1:e2;Parent=trnM-CAU-61-2.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	35601	35629	.	+	.	ID=trnM-CAU-61-2.t1:e3;Parent=trnM-CAU-61-2.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	gene	391797	391869	.	+	.	ID=trnM-CAU-61-3;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	391797	391869	.	+	.	ID=trnM-CAU-61-3.t1;Parent=trnM-CAU-61-3;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	217578	217625	.	+	.	ID=trnM-CAU-61-3;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	217578	217625	.	+	.	ID=trnM-CAU-61-3.t1;Parent=trnM-CAU-61-3;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	35600	35629	.	+	.	ID=trnM-CAU-61-3;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	35600	35629	.	+	.	ID=trnM-CAU-61-3.t1;Parent=trnM-CAU-61-3;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	exon	391798	391869	.	+	.	ID=trnM-CAU-61-3.t1:e1;Parent=trnM-CAU-61-3.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	217579	217625	.	+	.	ID=trnM-CAU-61-3.t1:e2;Parent=trnM-CAU-61-3.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	35601	35629	.	+	.	ID=trnM-CAU-61-3.t1:e3;Parent=trnM-CAU-61-3.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	gene	191590	191657	.	+	.	ID=trnM-CAU-61-4;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	191590	191657	.	+	.	ID=trnM-CAU-61-4.t1;Parent=trnM-CAU-61-4;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	217578	217625	.	+	.	ID=trnM-CAU-61-4;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	217578	217625	.	+	.	ID=trnM-CAU-61-4.t1;Parent=trnM-CAU-61-4;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	35600	35629	.	+	.	ID=trnM-CAU-61-4;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	35600	35629	.	+	.	ID=trnM-CAU-61-4.t1;Parent=trnM-CAU-61-4;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	exon	191591	191657	.	+	.	ID=trnM-CAU-61-4.t1:e1;Parent=trnM-CAU-61-4.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	217579	217625	.	+	.	ID=trnM-CAU-61-4.t1:e2;Parent=trnM-CAU-61-4.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	35601	35629	.	+	.	ID=trnM-CAU-61-4.t1:e3;Parent=trnM-CAU-61-4.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	gene	547659	547731	.	-	.	ID=trnM-CAU-61-5;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	547659	547731	.	-	.	ID=trnM-CAU-61-5.t1;Parent=trnM-CAU-61-5;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	217578	217625	.	+	.	ID=trnM-CAU-61-5;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	217578	217625	.	+	.	ID=trnM-CAU-61-5.t1;Parent=trnM-CAU-61-5;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	35600	35629	.	+	.	ID=trnM-CAU-61-5;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	35600	35629	.	+	.	ID=trnM-CAU-61-5.t1;Parent=trnM-CAU-61-5;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	exon	547660	547731	.	-	.	ID=trnM-CAU-61-5.t1:e1;Parent=trnM-CAU-61-5.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	217579	217625	.	+	.	ID=trnM-CAU-61-5.t1:e2;Parent=trnM-CAU-61-5.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	35601	35629	.	+	.	ID=trnM-CAU-61-5.t1:e3;Parent=trnM-CAU-61-5.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	gene	547786	547858	.	-	.	ID=trnM-CAU-61-6;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	547786	547858	.	-	.	ID=trnM-CAU-61-6.t1;Parent=trnM-CAU-61-6;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	217578	217625	.	+	.	ID=trnM-CAU-61-6;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	217578	217625	.	+	.	ID=trnM-CAU-61-6.t1;Parent=trnM-CAU-61-6;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	35600	35629	.	+	.	ID=trnM-CAU-61-6;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	35600	35629	.	+	.	ID=trnM-CAU-61-6.t1;Parent=trnM-CAU-61-6;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	exon	547787	547858	.	-	.	ID=trnM-CAU-61-6.t1:e1;Parent=trnM-CAU-61-6.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	217579	217625	.	+	.	ID=trnM-CAU-61-6.t1:e2;Parent=trnM-CAU-61-6.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	35601	35629	.	+	.	ID=trnM-CAU-61-6.t1:e3;Parent=trnM-CAU-61-6.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	gene	547917	547985	.	-	.	ID=trnM-CAU-61-7;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	547917	547985	.	-	.	ID=trnM-CAU-61-7.t1;Parent=trnM-CAU-61-7;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	217578	217625	.	+	.	ID=trnM-CAU-61-7;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	217578	217625	.	+	.	ID=trnM-CAU-61-7.t1;Parent=trnM-CAU-61-7;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	35600	35629	.	+	.	ID=trnM-CAU-61-7;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	35600	35629	.	+	.	ID=trnM-CAU-61-7.t1;Parent=trnM-CAU-61-7;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU;exception=trans-splicing
-Mt	hmmsearch	exon	547918	547985	.	-	.	ID=trnM-CAU-61-7.t1:e1;Parent=trnM-CAU-61-7.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	217579	217625	.	+	.	ID=trnM-CAU-61-7.t1:e2;Parent=trnM-CAU-61-7.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	35601	35629	.	+	.	ID=trnM-CAU-61-7.t1:e3;Parent=trnM-CAU-61-7.t1;product=tRNA-Met;exception=trans-splicing
+Mt	exonerate	gene	19299	20402	.	+	.	ID=rps4-1;Name=rps4;product=ribosomal protein S4;gene=rps4
+Mt	exonerate	mRNA	19299	20402	.	+	.	ID=rps4-1.t1;Parent=rps4-1;Name=rps4;product=ribosomal protein S4;gene=rps4
+Mt	exonerate	exon	19299	19820	.	+	.	ID=rps4-1.t1:e1;Parent=rps4-1.t1;product=ribosomal protein S4
+Mt	exonerate	CDS	19299	19820	.	+	0	ID=rps4-1.t1:c1;Parent=rps4-1.t1;product=ribosomal protein S4
+Mt	exonerate	exon	19851	20212	.	+	.	ID=rps4-1.t1:e2;Parent=rps4-1.t1;product=ribosomal protein S4
+Mt	exonerate	CDS	19851	20212	.	+	0	ID=rps4-1.t1:c2;Parent=rps4-1.t1;product=ribosomal protein S4
+Mt	exonerate	exon	20246	20402	.	+	.	ID=rps4-1.t1:e3;Parent=rps4-1.t1;product=ribosomal protein S4
+Mt	exonerate	CDS	20246	20402	.	+	1	ID=rps4-1.t1:c3;Parent=rps4-1.t1;product=ribosomal protein S4
+# coding sequence = [TTGCCTGCATTAAGATTTCAAACTTGTCGTCTACTTTCAGGAAATGTTCGGAACAGAGAACTTACAATAATACAACGCCGCATTCTCCGAAGATTGAGGAAAAAGAAGAGATCTATTAAGAGAAAGATTTATCCGAGAAAAAATCTTAACAGTTACATCCAATCACAAACTACACGAAAGTTGCCCCTTTTTCATGGGGATTTACCCATCACAGAGATGCACAGAGGAACAGAACAAACTTCATATATCCCTTTTCCACTCAATCCAGAAACAAGATTGGACGTTATTCCGGTTCGTCTCCATTTTCGTGAAACTATTCCTCAAGCAAGGCAGCCGATAAGTCATCGAAGGGTTTGTGTGAATAATGGAATGGTAAGCATTACTCATTTGAGACTTTCCCACGGTGATATAATATCTTTTCAAGAAAATGACGCGAGAATCCGCGGTGAAGAAATAAGGAGATCTTTCTATATCGAAATATCAGTTGAAAAAATAATAGTAGGAAAATTCCTGGATCACCCGATGTGGAGAAGAACCAAAACGGAATGGTTCCACCTACTCAAAACTAAGAGGGGATGCCGCCTACTACTAAAAGACCGGTTTTTGCAACAGTTGCGTTCTTCTATGCAAGAAGAAGACTTAGAAAGAACAAAGAAGTTTGGATCCGAAAAAGTATGCTTAGGCAGTTCCTTCGCTGAGCACAACAGAATGAAGAGGAATTTCTATCATTTCAAATCCCTATTCTTATCGAAGAGAAGGAACGAGAAAAACCGAAATTTTCCTACTCGAACAAGAAGTCCTATAGTTTACTCTTTATTTAGTAATTCGACCTATTGCTCCGCATCCCCCCATCAGTTTACTATGAAGAGAAGAAGAATCAAAAGGATTGAGCTACCTACTCATTATTCGGAGGTGAATCATAGAACACCAAAAGCTGTGGTATCTTATGGACCTAACATAGGTCACATCCCTCACGACATAAGATTGAAAGATCCAAACCTTCCTCTTCGGAGCGGAAACGGACGTAGCCAAAACATATAA]
+# protein sequence = [MPALRFQTCRLLSGNVRNRELTIIQRRILRRLRKKKRSIKRKIYPRKNLNSYIQSQTTRKLPLFHGDLPITEMHRGTEQTSYIPFPLNPETRLDVIPVRLHFRETIPQARQPISHRRVCVNNGMVSITHLRLSHGDIISFQENDARIRGEEIRRSFYIEISVEKIIVGKFLDHPMWRRTKTEWFHLLKTKRGCRLLLKDRFLQQLRSSMQEEDLERTKKFGSEKVCLGSSFAEHNRMKRNFYHFKSLFLSKRRNEKNRNFPTRTRSPIVYSLFSNSTYCSASPHQFTMKRRRIKRIELPTHYSEVNHRTPKAVVSYGPNIGHIPHDIRLKDPNLPLRSGNGRSQNI]
+Mt	augustus	gene	21065	21809	.	+	.	ID=nad6-1;Name=nad6;product=NADH dehydrogenase subunit 6;gene=nad6
+Mt	augustus	mRNA	21065	21809	.	+	.	ID=nad6-1.t1;Parent=nad6-1;Name=nad6;product=NADH dehydrogenase subunit 6;gene=nad6
+Mt	augustus	exon	21065	21592	.	+	.	ID=nad6-1.t1:e1;Parent=nad6-1.t1;product=NADH dehydrogenase subunit 6
+Mt	augustus	CDS	21065	21592	.	+	0	ID=nad6-1.t1:c1;Parent=nad6-1.t1;product=NADH dehydrogenase subunit 6
+Mt	augustus	exon	21720	21809	.	+	.	ID=nad6-1.t1:e2;Parent=nad6-1.t1;product=NADH dehydrogenase subunit 6
+Mt	augustus	CDS	21720	21809	.	+	0	ID=nad6-1.t1:c2;Parent=nad6-1.t1;product=NADH dehydrogenase subunit 6
+# coding sequence = [ATGATACTTTCTGTTTTGTCGAGCCTTGCTTTGGTCTCTGGTTTGATGGTTGCACGTGCTAAAAATCCGGTACATTCCGTTTTGTTTCCTATCCCAGTCTTTTGCGACACTTCAGGTTTACTTCTTTTGTTAGGTCTCGACTTCTCCGCTATGATCTTCCCAGTAGTTCATATAGGAGCTATAGCCGTTTCATTCCTATTCGTTGTTATGATGTTCCATATTCAAATAGCGGAGATTCACGAAGAAGTATTGCGCTATTTACCAGTGAGTGGTATTATTGGACTGATCTTTTGGTGGGAAATGTTCTTCATTTTAGATAATGAAACCATTCCATTACTACCAACCCAAAGAAATACGACCTCTCTGAGATATACGGTTTATGCCGGAAAGGTACGAAGTTGGACTAATTTGGAAACATTGGGCAATTTACTTTATACCTACTATTCCGTCTGGTTTTTGGTTCCTAGTCTTATTTTATTAGTAGCCATGATTGGGGCTATAGTACTGACTATGCATAGGACTACTAAGGTGAAAAGACAGGATGTATTCCGACGAAATGCTATTGATTTTAGGAGGACTATAATGAGGAGGACGACAGACCCACTCACGATCTACTAA]
+# protein sequence = [MILSVLSSLALVSGLMVARAKNPVHSVLFPIPVFCDTSGLLLLLGLDFSAMIFPVVHIGAIAVSFLFVVMMFHIQIAEIHEEVLRYLPVSGIIGLIFWWEMFFILDNETIPLLPTQRNTTSLRYTVYAGKVRSWTNLETLGNLLYTYYSVWFLVPSLILLVAMIGAIVLTMHRTTKVKRQDVFRRNAIDFRRTIMRRTTDPLTIY]
+Mt	exonerate	gene	29224	31943	.	+	.	ID=cox2-1;Name=cox2;product=cytochrome c oxidase subunit 2;gene=cox2
+Mt	exonerate	mRNA	29224	31943	.	+	.	ID=cox2-1.t1;Parent=cox2-1;Name=cox2;product=cytochrome c oxidase subunit 2;gene=cox2
+Mt	exonerate	exon	29224	29923	.	+	.	ID=cox2-1.t1:e1;Parent=cox2-1.t1;product=cytochrome c oxidase subunit 2
+Mt	exonerate	CDS	29224	29923	.	+	0	ID=cox2-1.t1:c1;Parent=cox2-1.t1;product=cytochrome c oxidase subunit 2
+Mt	exonerate	exon	31855	31943	.	+	.	ID=cox2-1.t1:e2;Parent=cox2-1.t1;product=cytochrome c oxidase subunit 2
+Mt	exonerate	CDS	31855	31943	.	+	2	ID=cox2-1.t1:c2;Parent=cox2-1.t1;product=cytochrome c oxidase subunit 2
+# coding sequence = [ATGATTGTTCTAGAATGGTTATTCCTCACAATTGCTCCTTGTGATGCAGCGGAACCGTGGCAATTAGGATCTCAAGACGCAGCAACACCTATGATGCAAGGAATAATAGACTTACATCACGATATCTTTTTCTTCCTCATTCTGATTTTGGTTTTCGTATTATGGATCTTGGTTCGCGCTTTATGGCATTTCCATTATCAAAAGAATCCAATCCCGCAAAGGATTGTTCATGGAACTACTATCGAGATTCTTCGGACCATCTTTCCTAGTATCATCCCGATGTTCATCGCTATACCATCATTTGCTCTGTTATACTCAATGGACGAGGTAGTAGTAGATCCAGCAATTACTATCAAAGCTATTGGACATCAATGGTATCGGACTTATGAGTATTCAGACTATAACAGTTCCGATGAACAGTCACTCACTTTTGACAGTTATACGATTCCAGAAGATGATCTAGAATTGGGTCAATCACGTTTATTAGAAGTGGACAATAGAGTGGTTGTACCAGCCAAAACTCATCTACGTATTATTGTAACATCAGCTGATGTACCTCATAGTTGGGCTGTACCTTCCTCAGGTGTCAAATGTGATGCTGTACCTGGTCGTTTAAATCAGATCTCTATTTTGGTACAACGAGAAGGAGTTTACTATGGTCAGTGCAGTGAAATTTGTGGAACTAATCATGCCTTTATGCCTATCGTCGTAGAAGCTGTTCCTAGGAAAGATTATGGTTCTCGGGTATCCAATCAATTAATCCCCCAAACCAGGGGAGCTGGTATTTGA]
+# protein sequence = [MIVLEWLFLTIAPCDAAEPWQLGSQDAATPMMQGIIDLHHDIFFFLILILVFVLWILVRALWHFHYQKNPIPQRIVHGTTIEILRTIFPSIIPMFIAIPSFALLYSMDEVVVDPAITIKAIGHQWYRTYEYSDYNSSDEQSLTFDSYTIPEDDLELGQSRLLEVDNRVVVPAKTHLRIIVTSADVPHSWAVPSSGVKCDAVPGRLNQISILVQREGVYYGQCSEICGTNHAFMPIVVEAVPRKDYGSRVSNQLIPQTRGAGI]
+Mt	tRNAscan	gene	35561	35629	.	+	.	ID=trnK-CUU-1;Name=trnK-CUU;product=tRNA-Lys;gene=trnK-CUU
+Mt	tRNAscan	tRNA	35561	35629	.	+	.	ID=trnK-CUU-1.t1;Parent=trnK-CUU-1;Name=trnK-CUU;product=tRNA-Lys;gene=trnK-CUU
+Mt	tRNAscan	exon	35561	35629	.	+	.	ID=trnK-CUU-1.t1:e1;Parent=trnK-CUU-1.t1;product=tRNA-Lys
 Mt	hmmsearch	gene	56218	58150	.	+	.	ID=rrn18-1;Name=rrnS;product=18S ribosomal RNA;gene=rrnS
 Mt	hmmsearch	rRNA	56218	58150	.	+	.	ID=rrn18-1.t1;Parent=rrn18-1;Name=rrnS;product=18S ribosomal RNA;gene=rrnS
 Mt	hmmsearch	exon	56219	58150	.	+	.	ID=rrn18-1.t1:e1;Parent=rrn18-1.t1;product=18S ribosomal RNA
 Mt	hmmsearch	gene	58313	58431	.	+	.	ID=rrn5-1;Name=rrn5;product=5S ribosomal RNA;gene=rrn5
 Mt	hmmsearch	rRNA	58313	58431	.	+	.	ID=rrn5-1.t1;Parent=rrn5-1;Name=rrn5;product=5S ribosomal RNA;gene=rrn5
 Mt	hmmsearch	exon	58314	58431	.	+	.	ID=rrn5-1.t1:e1;Parent=rrn5-1.t1;product=5S ribosomal RNA
-Mt	hmmsearch	gene	98157	98231	.	-	.	ID=trnD-GUC-1;Name=trnD-GUC;product=tRNA-Asp;gene=trnD-GUC;exception=trans-splicing
-Mt	hmmsearch	tRNA	98157	98231	.	-	.	ID=trnD-GUC-1.t1;Parent=trnD-GUC-1;Name=trnD-GUC;product=tRNA-Asp;gene=trnD-GUC;exception=trans-splicing
-Mt	hmmsearch	gene	82938	82968	.	+	.	ID=trnD-GUC-1;Name=trnD-GUC;product=tRNA-Asp;gene=trnD-GUC;exception=trans-splicing
-Mt	hmmsearch	tRNA	82938	82968	.	+	.	ID=trnD-GUC-1.t1;Parent=trnD-GUC-1;Name=trnD-GUC;product=tRNA-Asp;gene=trnD-GUC;exception=trans-splicing
-Mt	hmmsearch	exon	98158	98231	.	-	.	ID=trnD-GUC-1.t1:e1;Parent=trnD-GUC-1.t1;product=tRNA-Asp;exception=trans-splicing
-Mt	hmmsearch	exon	82939	82968	.	+	.	ID=trnD-GUC-1.t1:e2;Parent=trnD-GUC-1.t1;product=tRNA-Asp;exception=trans-splicing
-Mt	hmmsearch	gene	98157	98231	.	-	.	ID=trnD-GUC-28-1;Name=trnD-GUC-cp;product=tRNA-Asp;gene=trnD-GUC-cp
-Mt	hmmsearch	tRNA	98157	98231	.	-	.	ID=trnD-GUC-28-1.t1;Parent=trnD-GUC-28-1;Name=trnD-GUC-cp;product=tRNA-Asp;gene=trnD-GUC-cp
-Mt	hmmsearch	exon	98158	98231	.	-	.	ID=trnD-GUC-28-1.t1:e1;Parent=trnD-GUC-28-1.t1;product=tRNA-Asp
-Mt	hmmsearch	gene	119524	119595	.	-	.	ID=trnG-GCC-2;Name=trnG-GCC;product=tRNA-Gly;gene=trnG-GCC
-Mt	hmmsearch	tRNA	119524	119595	.	-	.	ID=trnG-GCC-2.t1;Parent=trnG-GCC-2;Name=trnG-GCC;product=tRNA-Gly;gene=trnG-GCC
-Mt	hmmsearch	exon	119525	119595	.	-	.	ID=trnG-GCC-2.t1:e1;Parent=trnG-GCC-2.t1;product=tRNA-Gly
-Mt	hmmsearch	gene	119529	119601	.	+	.	ID=trnG-GCC-1;Name=trnG-GCC;product=tRNA-Gly;gene=trnG-GCC
-Mt	hmmsearch	tRNA	119529	119601	.	+	.	ID=trnG-GCC-1.t1;Parent=trnG-GCC-1;Name=trnG-GCC;product=tRNA-Gly;gene=trnG-GCC
-Mt	hmmsearch	exon	119530	119601	.	+	.	ID=trnG-GCC-1.t1:e1;Parent=trnG-GCC-1.t1;product=tRNA-Gly
-Mt	hmmsearch	gene	122986	123049	.	+	.	ID=trnS-GCU-3;Name=trnS-GCU;product=tRNA-Ser;gene=trnS-GCU
-Mt	hmmsearch	tRNA	122986	123049	.	+	.	ID=trnS-GCU-3.t1;Parent=trnS-GCU-3;Name=trnS-GCU;product=tRNA-Ser;gene=trnS-GCU
-Mt	hmmsearch	exon	122987	123049	.	+	.	ID=trnS-GCU-3.t1:e1;Parent=trnS-GCU-3.t1;product=tRNA-Ser
-Mt	hmmsearch	gene	425254	426051	.	+	.	ID=trnQ-UUG-1;Name=trnQ-UUG;product=tRNA-Gln;gene=trnQ-UUG;exception=trans-splicing
-Mt	hmmsearch	tRNA	425254	426051	.	+	.	ID=trnQ-UUG-1.t1;Parent=trnQ-UUG-1;Name=trnQ-UUG;product=tRNA-Gln;gene=trnQ-UUG;exception=trans-splicing
-Mt	hmmsearch	gene	123020	123054	.	-	.	ID=trnQ-UUG-1;Name=trnQ-UUG;product=tRNA-Gln;gene=trnQ-UUG;exception=trans-splicing
-Mt	hmmsearch	tRNA	123020	123054	.	-	.	ID=trnQ-UUG-1.t1;Parent=trnQ-UUG-1;Name=trnQ-UUG;product=tRNA-Gln;gene=trnQ-UUG;exception=trans-splicing
-Mt	hmmsearch	exon	425255	425326	.	+	.	ID=trnQ-UUG-1.t1:e1;Parent=trnQ-UUG-1.t1;product=tRNA-Gln;exception=trans-splicing
-Mt	hmmsearch	exon	425999	426051	.	+	.	ID=trnQ-UUG-1.t1:e2;Parent=trnQ-UUG-1.t1;product=tRNA-Gln;exception=trans-splicing
-Mt	hmmsearch	exon	123021	123054	.	-	.	ID=trnQ-UUG-1.t1:e3;Parent=trnQ-UUG-1.t1;product=tRNA-Gln;exception=trans-splicing
-Mt	hmmsearch	gene	122982	123054	.	+	.	ID=trnQ-UUG-2;Name=trnQ-UUG;product=tRNA-Gln;gene=trnQ-UUG;exception=trans-splicing
-Mt	hmmsearch	tRNA	122982	123054	.	+	.	ID=trnQ-UUG-2.t1;Parent=trnQ-UUG-2;Name=trnQ-UUG;product=tRNA-Gln;gene=trnQ-UUG;exception=trans-splicing
-Mt	hmmsearch	gene	123020	123054	.	-	.	ID=trnQ-UUG-2;Name=trnQ-UUG;product=tRNA-Gln;gene=trnQ-UUG;exception=trans-splicing
-Mt	hmmsearch	tRNA	123020	123054	.	-	.	ID=trnQ-UUG-2.t1;Parent=trnQ-UUG-2;Name=trnQ-UUG;product=tRNA-Gln;gene=trnQ-UUG;exception=trans-splicing
-Mt	hmmsearch	exon	122983	123054	.	+	.	ID=trnQ-UUG-2.t1:e1;Parent=trnQ-UUG-2.t1;product=tRNA-Gln;exception=trans-splicing
-Mt	hmmsearch	exon	123021	123054	.	-	.	ID=trnQ-UUG-2.t1:e2;Parent=trnQ-UUG-2.t1;product=tRNA-Gln;exception=trans-splicing
-Mt	hmmsearch	gene	391798	391864	.	+	.	ID=trnK-CUU-1;Name=trnK-CUU;product=tRNA-Lys;gene=trnK-CUU;exception=trans-splicing
-Mt	hmmsearch	tRNA	391798	391864	.	+	.	ID=trnK-CUU-1.t1;Parent=trnK-CUU-1;Name=trnK-CUU;product=tRNA-Lys;gene=trnK-CUU;exception=trans-splicing
-Mt	hmmsearch	gene	170956	170986	.	+	.	ID=trnK-CUU-1;Name=trnK-CUU;product=tRNA-Lys;gene=trnK-CUU;exception=trans-splicing
-Mt	hmmsearch	tRNA	170956	170986	.	+	.	ID=trnK-CUU-1.t1;Parent=trnK-CUU-1;Name=trnK-CUU;product=tRNA-Lys;gene=trnK-CUU;exception=trans-splicing
-Mt	hmmsearch	exon	391799	391864	.	+	.	ID=trnK-CUU-1.t1:e1;Parent=trnK-CUU-1.t1;product=tRNA-Lys;exception=trans-splicing
-Mt	hmmsearch	exon	170957	170986	.	+	.	ID=trnK-CUU-1.t1:e2;Parent=trnK-CUU-1.t1;product=tRNA-Lys;exception=trans-splicing
-Mt	hmmsearch	gene	391544	391609	.	+	.	ID=trnK-CUU-2;Name=trnK-CUU;product=tRNA-Lys;gene=trnK-CUU;exception=trans-splicing
-Mt	hmmsearch	tRNA	391544	391609	.	+	.	ID=trnK-CUU-2.t1;Parent=trnK-CUU-2;Name=trnK-CUU;product=tRNA-Lys;gene=trnK-CUU;exception=trans-splicing
-Mt	hmmsearch	gene	170956	170986	.	+	.	ID=trnK-CUU-2;Name=trnK-CUU;product=tRNA-Lys;gene=trnK-CUU;exception=trans-splicing
-Mt	hmmsearch	tRNA	170956	170986	.	+	.	ID=trnK-CUU-2.t1;Parent=trnK-CUU-2;Name=trnK-CUU;product=tRNA-Lys;gene=trnK-CUU;exception=trans-splicing
-Mt	hmmsearch	exon	391545	391609	.	+	.	ID=trnK-CUU-2.t1:e1;Parent=trnK-CUU-2.t1;product=tRNA-Lys;exception=trans-splicing
-Mt	hmmsearch	exon	170957	170986	.	+	.	ID=trnK-CUU-2.t1:e2;Parent=trnK-CUU-2.t1;product=tRNA-Lys;exception=trans-splicing
-Mt	hmmsearch	gene	391671	391737	.	+	.	ID=trnK-CUU-3;Name=trnK-CUU;product=tRNA-Lys;gene=trnK-CUU;exception=trans-splicing
-Mt	hmmsearch	tRNA	391671	391737	.	+	.	ID=trnK-CUU-3.t1;Parent=trnK-CUU-3;Name=trnK-CUU;product=tRNA-Lys;gene=trnK-CUU;exception=trans-splicing
-Mt	hmmsearch	gene	170956	170986	.	+	.	ID=trnK-CUU-3;Name=trnK-CUU;product=tRNA-Lys;gene=trnK-CUU;exception=trans-splicing
-Mt	hmmsearch	tRNA	170956	170986	.	+	.	ID=trnK-CUU-3.t1;Parent=trnK-CUU-3;Name=trnK-CUU;product=tRNA-Lys;gene=trnK-CUU;exception=trans-splicing
-Mt	hmmsearch	exon	391672	391737	.	+	.	ID=trnK-CUU-3.t1:e1;Parent=trnK-CUU-3.t1;product=tRNA-Lys;exception=trans-splicing
-Mt	hmmsearch	exon	170957	170986	.	+	.	ID=trnK-CUU-3.t1:e2;Parent=trnK-CUU-3.t1;product=tRNA-Lys;exception=trans-splicing
-Mt	hmmsearch	gene	547664	547730	.	-	.	ID=trnK-CUU-4;Name=trnK-CUU;product=tRNA-Lys;gene=trnK-CUU;exception=trans-splicing
-Mt	hmmsearch	tRNA	547664	547730	.	-	.	ID=trnK-CUU-4.t1;Parent=trnK-CUU-4;Name=trnK-CUU;product=tRNA-Lys;gene=trnK-CUU;exception=trans-splicing
-Mt	hmmsearch	gene	170956	170986	.	+	.	ID=trnK-CUU-4;Name=trnK-CUU;product=tRNA-Lys;gene=trnK-CUU;exception=trans-splicing
-Mt	hmmsearch	tRNA	170956	170986	.	+	.	ID=trnK-CUU-4.t1;Parent=trnK-CUU-4;Name=trnK-CUU;product=tRNA-Lys;gene=trnK-CUU;exception=trans-splicing
-Mt	hmmsearch	exon	547665	547730	.	-	.	ID=trnK-CUU-4.t1:e1;Parent=trnK-CUU-4.t1;product=tRNA-Lys;exception=trans-splicing
-Mt	hmmsearch	exon	170957	170986	.	+	.	ID=trnK-CUU-4.t1:e2;Parent=trnK-CUU-4.t1;product=tRNA-Lys;exception=trans-splicing
-Mt	hmmsearch	gene	547791	547857	.	-	.	ID=trnK-CUU-5;Name=trnK-CUU;product=tRNA-Lys;gene=trnK-CUU;exception=trans-splicing
-Mt	hmmsearch	tRNA	547791	547857	.	-	.	ID=trnK-CUU-5.t1;Parent=trnK-CUU-5;Name=trnK-CUU;product=tRNA-Lys;gene=trnK-CUU;exception=trans-splicing
-Mt	hmmsearch	gene	170956	170986	.	+	.	ID=trnK-CUU-5;Name=trnK-CUU;product=tRNA-Lys;gene=trnK-CUU;exception=trans-splicing
-Mt	hmmsearch	tRNA	170956	170986	.	+	.	ID=trnK-CUU-5.t1;Parent=trnK-CUU-5;Name=trnK-CUU;product=tRNA-Lys;gene=trnK-CUU;exception=trans-splicing
-Mt	hmmsearch	exon	547792	547857	.	-	.	ID=trnK-CUU-5.t1:e1;Parent=trnK-CUU-5.t1;product=tRNA-Lys;exception=trans-splicing
-Mt	hmmsearch	exon	170957	170986	.	+	.	ID=trnK-CUU-5.t1:e2;Parent=trnK-CUU-5.t1;product=tRNA-Lys;exception=trans-splicing
-Mt	hmmsearch	gene	547919	547984	.	-	.	ID=trnK-CUU-6;Name=trnK-CUU;product=tRNA-Lys;gene=trnK-CUU;exception=trans-splicing
-Mt	hmmsearch	tRNA	547919	547984	.	-	.	ID=trnK-CUU-6.t1;Parent=trnK-CUU-6;Name=trnK-CUU;product=tRNA-Lys;gene=trnK-CUU;exception=trans-splicing
-Mt	hmmsearch	gene	170956	170986	.	+	.	ID=trnK-CUU-6;Name=trnK-CUU;product=tRNA-Lys;gene=trnK-CUU;exception=trans-splicing
-Mt	hmmsearch	tRNA	170956	170986	.	+	.	ID=trnK-CUU-6.t1;Parent=trnK-CUU-6;Name=trnK-CUU;product=tRNA-Lys;gene=trnK-CUU;exception=trans-splicing
-Mt	hmmsearch	exon	547920	547984	.	-	.	ID=trnK-CUU-6.t1:e1;Parent=trnK-CUU-6.t1;product=tRNA-Lys;exception=trans-splicing
-Mt	hmmsearch	exon	170957	170986	.	+	.	ID=trnK-CUU-6.t1:e2;Parent=trnK-CUU-6.t1;product=tRNA-Lys;exception=trans-splicing
-Mt	hmmsearch	gene	184263	184337	.	+	.	ID=trnP-UGG-1;Name=trnP-UGG-cp;product=tRNA-Pro;gene=trnP-UGG-cp
-Mt	hmmsearch	tRNA	184263	184337	.	+	.	ID=trnP-UGG-1.t1;Parent=trnP-UGG-1;Name=trnP-UGG-cp;product=tRNA-Pro;gene=trnP-UGG-cp
-Mt	hmmsearch	exon	184264	184337	.	+	.	ID=trnP-UGG-1.t1:e1;Parent=trnP-UGG-1.t1;product=tRNA-Pro
-Mt	hmmsearch	gene	184263	184337	.	+	.	ID=trnP-UGG-14-1;Name=trnP-UGG;product=tRNA-Pro;gene=trnP-UGG
-Mt	hmmsearch	tRNA	184263	184337	.	+	.	ID=trnP-UGG-14-1.t1;Parent=trnP-UGG-14-1;Name=trnP-UGG;product=tRNA-Pro;gene=trnP-UGG
-Mt	hmmsearch	exon	184264	184337	.	+	.	ID=trnP-UGG-14-1.t1:e1;Parent=trnP-UGG-14-1.t1;product=tRNA-Pro
-Mt	hmmsearch	gene	525917	525988	.	-	.	ID=trnN-1;Name=trnN-GUU-cp;product=tRNA-Asn;gene=trnN-GUU-cp;exception=trans-splicing
-Mt	hmmsearch	tRNA	525917	525988	.	-	.	ID=trnN-1.t1;Parent=trnN-1;Name=trnN-GUU-cp;product=tRNA-Asn;gene=trnN-GUU-cp;exception=trans-splicing
-Mt	hmmsearch	gene	556395	556421	.	-	.	ID=trnN-1;Name=trnN-GUU-cp;product=tRNA-Asn;gene=trnN-GUU-cp;exception=trans-splicing
-Mt	hmmsearch	tRNA	556395	556421	.	-	.	ID=trnN-1.t1;Parent=trnN-1;Name=trnN-GUU-cp;product=tRNA-Asn;gene=trnN-GUU-cp;exception=trans-splicing
-Mt	hmmsearch	gene	525924	525953	.	+	.	ID=trnN-1;Name=trnN-GUU-cp;product=tRNA-Asn;gene=trnN-GUU-cp;exception=trans-splicing
-Mt	hmmsearch	tRNA	525924	525953	.	+	.	ID=trnN-1.t1;Parent=trnN-1;Name=trnN-GUU-cp;product=tRNA-Asn;gene=trnN-GUU-cp;exception=trans-splicing
-Mt	hmmsearch	gene	184545	184570	.	+	.	ID=trnN-1;Name=trnN-GUU-cp;product=tRNA-Asn;gene=trnN-GUU-cp;exception=trans-splicing
-Mt	hmmsearch	tRNA	184545	184570	.	+	.	ID=trnN-1.t1;Parent=trnN-1;Name=trnN-GUU-cp;product=tRNA-Asn;gene=trnN-GUU-cp;exception=trans-splicing
-Mt	hmmsearch	exon	525918	525988	.	-	.	ID=trnN-1.t1:e1;Parent=trnN-1.t1;product=tRNA-Asn;exception=trans-splicing
-Mt	hmmsearch	exon	556396	556421	.	-	.	ID=trnN-1.t1:e2;Parent=trnN-1.t1;product=tRNA-Asn;exception=trans-splicing
-Mt	hmmsearch	exon	525925	525953	.	+	.	ID=trnN-1.t1:e3;Parent=trnN-1.t1;product=tRNA-Asn;exception=trans-splicing
-Mt	hmmsearch	exon	184546	184570	.	+	.	ID=trnN-1.t1:e4;Parent=trnN-1.t1;product=tRNA-Asn;exception=trans-splicing
-Mt	hmmsearch	gene	190368	190441	.	-	.	ID=trnK-UUU-1;Name=trnK-UUU;product=tRNA-Lys;gene=trnK-UUU
-Mt	hmmsearch	tRNA	190368	190441	.	-	.	ID=trnK-UUU-1.t1;Parent=trnK-UUU-1;Name=trnK-UUU;product=tRNA-Lys;gene=trnK-UUU
-Mt	hmmsearch	exon	190369	190441	.	-	.	ID=trnK-UUU-1.t1:e1;Parent=trnK-UUU-1.t1;product=tRNA-Lys
-Mt	hmmsearch	gene	240728	240815	.	+	.	ID=trnS-GCU-1;Name=trnS-GCU;product=tRNA-Ser;gene=trnS-GCU
-Mt	hmmsearch	tRNA	240728	240815	.	+	.	ID=trnS-GCU-1.t1;Parent=trnS-GCU-1;Name=trnS-GCU;product=tRNA-Ser;gene=trnS-GCU
-Mt	hmmsearch	exon	240729	240815	.	+	.	ID=trnS-GCU-1.t1:e1;Parent=trnS-GCU-1.t1;product=tRNA-Ser
-Mt	hmmsearch	gene	240728	240815	.	+	.	ID=trnS-UGA-1;Name=trnS-UGA;product=tRNA-Ser;gene=trnS-UGA
-Mt	hmmsearch	tRNA	240728	240815	.	+	.	ID=trnS-UGA-1.t1;Parent=trnS-UGA-1;Name=trnS-UGA;product=tRNA-Ser;gene=trnS-UGA
-Mt	hmmsearch	exon	240729	240815	.	+	.	ID=trnS-UGA-1.t1:e1;Parent=trnS-UGA-1.t1;product=tRNA-Ser
-Mt	hmmsearch	gene	313896	313970	.	+	.	ID=trnM-CAU-1;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU
-Mt	hmmsearch	tRNA	313896	313970	.	+	.	ID=trnM-CAU-1.t1;Parent=trnM-CAU-1;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU
-Mt	hmmsearch	exon	313897	313970	.	+	.	ID=trnM-CAU-1.t1:e1;Parent=trnM-CAU-1.t1;product=tRNA-Met
+Mt	augustus	gene	58863	59219	.	+	.	ID=nad3-1;Name=nad3;product=NADH dehydrogenase subunit 3;gene=nad3
+Mt	augustus	mRNA	58863	59219	.	+	.	ID=nad3-1.t1;Parent=nad3-1;Name=nad3;product=NADH dehydrogenase subunit 3;gene=nad3
+Mt	augustus	exon	58863	59219	.	+	.	ID=nad3-1.t1:e1;Parent=nad3-1.t1;product=NADH dehydrogenase subunit 3
+Mt	augustus	CDS	58863	59219	.	+	0	ID=nad3-1.t1:c1;Parent=nad3-1.t1;product=NADH dehydrogenase subunit 3
+# coding sequence = [ATGTTAGAATTTGCACCTATTTGTATCTATTTAGTGATTAGTCTGCTAGTTTCTTTGATCTTAGTCGGTCTTCCTTTTTTATTTTCTTCTAATAGTTCGACCTATCCAGAAAAATTGTCGGCCTACGAATGTGGTTTCGATCCTTTCGGTGATGCCAGAAGTCGTTTCGATATACGATTTTATCTTGTTTCAATTTTATTTATTATCTTTGATCTGGAAGTAACCTTTTTCTTTCCTTGGGCAGTCTCTCTCAACAAGATTGATCTGTTTGGATTTTGGTCCATGATGGCCTTTTTATTGATTTTGACGATTGGATTTCTCTATGAATGGAAAAGGGGTGCTTTGGATTGGGAGTAA]
+# protein sequence = [MLEFAPICIYLVISLLVSLILVGLPFLFSSNSSTYPEKLSAYECGFDPFGDARSRFDIRFYLVSILFIIFDLEVTFFFPWAVSLNKIDLFGFWSMMAFLLILTIGFLYEWKRGALDWE]
+Mt	augustus	gene	59264	59641	.	+	.	ID=rps12-1;Name=rps12;product=ribosomal protein S12;gene=rps12
+Mt	augustus	mRNA	59264	59641	.	+	.	ID=rps12-1.t1;Parent=rps12-1;Name=rps12;product=ribosomal protein S12;gene=rps12
+Mt	augustus	exon	59264	59641	.	+	.	ID=rps12-1.t1:e1;Parent=rps12-1.t1;product=ribosomal protein S12
+Mt	augustus	CDS	59264	59641	.	+	0	ID=rps12-1.t1:c1;Parent=rps12-1.t1;product=ribosomal protein S12
+# coding sequence = [ATGCCTACATTAAATCAATTGATTCGTCATGGTAGAGAAGAAAAACGGCGCACGGACCGTACTCGAGCTTTGGGTCAATGTCCCCAGAAGCAAGGAGTATGCTTGCGTGTTTCAACGAGAACACCGAAAAAACCTAATTCAGCTCTACGTAAGATAGCCAAAGTACGGTTGAGCAATCGACATGATATATTTGCTTACATTCCGGGCGAAGGTCATAATTTGCAGGAACATTCTATGGTCTTAATAAGAGGAGGTAGAGTGAAAGATTTGCCAGGTGTGAAATTCCATTGTATTCGAGGAGTCAAGGATTTGCTGGGAATTCCGGATCGAAGAAGAGGCAGATCAAAATATGGTGCAGAAAAACCAAAATCGATATGA]
+# protein sequence = [MPTLNQLIRHGREEKRRTDRTRALGQCPQKQGVCLRVSTRTPKKPNSALRKIAKVRLSNRHDIFAYIPGEGHNLQEHSMVLIRGGRVKDLPGVKFHCIRGVKDLLGIPDRRRGRSKYGAEKPKSI]
+Mt	augustus	gene	79260	79748	.	-	.	ID=rpl10-1;Name=rpl10;product=ribosomal protein L10;gene=rpl10
+Mt	augustus	mRNA	79260	79748	.	-	.	ID=rpl10-1.t1;Parent=rpl10-1;Name=rpl10;product=ribosomal protein L10;gene=rpl10
+Mt	augustus	exon	79260	79748	.	-	.	ID=rpl10-1.t1:e1;Parent=rpl10-1.t1;product=ribosomal protein L10
+Mt	augustus	CDS	79260	79748	.	-	0	ID=rpl10-1.t1:c1;Parent=rpl10-1.t1;product=ribosomal protein L10
+# coding sequence = [ATGCCATTCGGAAGAAATCTTCTACAGAGGGAAAGCCTGTATCGAGTAAGTGGAGAGGAAAGATCTCCAGAGATTCTTATCTCATTCCATTCCAGTGGCTCGACCAGTAACCAATGGCGAAAACTAAAAAATCCATGGTTTCCCGGTAGAACCCCATTTCGCCCAAGTTGTTGCGGAACCGGAAAAAAGAAGCGGTTTTTCGCACAGCTTGCTCATAGTGCAGGTCCCACTTGTATATCGTATTTGGCCGAAGAAGCATCGGACAGGTTGGAGTTCTTACCTTCTTGGGACTCCATGGACCAAGATCTGCTTTCATTATATGGGCAATACCGATCTACTTTAGTAGATCATATGGATATAGAAAAAGCTTCTGATTTTGATGAATTGGAAACATCTCTTTTCAATTTCTATTTACCTAGTTCATATCTTTGTTTCGTGTGTTCCCAGGAGGAATTCGATCTCTTCAATCTCGGGATACCACCTAAATAA]
+# protein sequence = [MPFGRNLLQRESLYRVSGEERSPEILISFHSSGSTSNQWRKLKNPWFPGRTPFRPSCCGTGKKKRFFAQLAHSAGPTCISYLAEEASDRLEFLPSWDSMDQDLLSLYGQYRSTLVDHMDIEKASDFDELETSLFNFYLPSSYLCFVCSQEEFDLFNLGIPPK]
+Mt	tRNAscan	gene	98158	98231	.	-	.	ID=trnD-GUC-1;Name=trnD-GUC-cp;product=tRNA-Asp;gene=trnD-GUC-cp
+Mt	tRNAscan	tRNA	98158	98231	.	-	.	ID=trnD-GUC-1.t1;Parent=trnD-GUC-1;Name=trnD-GUC-cp;product=tRNA-Asp;gene=trnD-GUC-cp
+Mt	tRNAscan	exon	98158	98231	.	-	.	ID=trnD-GUC-1.t1:e1;Parent=trnD-GUC-1.t1;product=tRNA-Asp
+Mt	exonerate	gene	101409	110034	.	+	.	ID=nad4-1;Name=nad4;product=NADH dehydrogenase subunit 4;gene=nad4
+Mt	exonerate	mRNA	101409	110034	.	+	.	ID=nad4-1.t1;Parent=nad4-1;Name=nad4;product=NADH dehydrogenase subunit 4;gene=nad4
+Mt	exonerate	exon	101409	101869	.	+	.	ID=nad4-1.t1:e1;Parent=nad4-1.t1;product=NADH dehydrogenase subunit 4
+Mt	exonerate	CDS	101409	101869	.	+	0	ID=nad4-1.t1:c1;Parent=nad4-1.t1;product=NADH dehydrogenase subunit 4
+Mt	exonerate	exon	103296	103810	.	+	.	ID=nad4-1.t1:e2;Parent=nad4-1.t1;product=NADH dehydrogenase subunit 4
+Mt	exonerate	CDS	103296	103810	.	+	1	ID=nad4-1.t1:c2;Parent=nad4-1.t1;product=NADH dehydrogenase subunit 4
+Mt	exonerate	exon	106873	107295	.	+	.	ID=nad4-1.t1:e3;Parent=nad4-1.t1;product=NADH dehydrogenase subunit 4
+Mt	exonerate	CDS	106873	107295	.	+	2	ID=nad4-1.t1:c3;Parent=nad4-1.t1;product=NADH dehydrogenase subunit 4
+Mt	exonerate	exon	109946	110034	.	+	.	ID=nad4-1.t1:e4;Parent=nad4-1.t1;product=NADH dehydrogenase subunit 4
+Mt	exonerate	CDS	109946	110034	.	+	2	ID=nad4-1.t1:c4;Parent=nad4-1.t1;product=NADH dehydrogenase subunit 4
+# coding sequence = [ATGTTAGAACATTTCTGTGAATGCTATTCTGATCTAAGTGGTCCTATTCTGTGTCCCGTGCTAGGAAGCATTACTCCTCTTTTCATTCCAAATTCAAGAATACGACCGATACGATTGATTGGTCTGTGTGCCTCTCTTATTACTTTTTTGTATTCCCCTGTTCCTCGGATACAATTCGATCCTTCTACGGCCAAATCTCAATTTGTGGAAAGCCTTCGATGGCTCCCTTATGAAAACATCAATTTTGATTTGGGTATAGACGGTATCTCTTTATTTTTCGTGATATTGACCACATTTCTGATCCCTATTTGCATTTTAGTGGGTTGGTCTGGTATGAGAAGTTATGGGAAAGAGTATATTACAGCATCTCTAATTCGTGAATTTCTAATGATCGCCGTGTTCCGCATGCTGGATCCTCTACTATTCTATGTTTTTCCCGAAAGCGTGCCAATCCCTATGTTCATTATTATAGGGGTATGGGGTTCGAGACAAAGAAAGATCAAGGCAGCATATCAGTTTTTCCTTTATACTTTACTTGGATCTGTTTTTATGCTATTAGCTATTCTGTTGATTCTTCTCCAAACAGGAACCACCGATTTACAAATATCATTAACCACAGAATTTAGTGAGCGGCGCCAAATCTTTCTATGGATTGCTTCTTTCGCCTCTTTCGCCGTCAAAGTGCCTATGGTACCAGTTCATATTTGGTTACCCGAAGCTCATGTAGAGGCACCTACGGCGGGATCCGTCATCTTGGCAGGAATTCCTTCAAAATTGGGAACCCACGGGTTTTTAAGATTTTCAATACCCATGTTTCCCGAAGCGACACTTTGTTCCACTCCTTTCATTTATACTTTAAGCGCGATTGCTATAATATATACTTCCTTGACCACTTCAAGACAGATCGATCTTAAGAAGATCATTGCTTACTCCTCAGTAGCCCATATGAATCTGGTGACTATTGGTATGTTTAGTCCGAACATACAGGGAATTGGAGGTAGCATTCCACCGATGTTAAGTCATGGACTGGTTTCTTCAGCCCTTTTTCTATGTGTTGGTGTTCTATATGACCGACATAAGACTCGACTTGTTAGATATTACGGAGGTTTAGTGAGCACCATGCCGAATCTCCCTACCATTTTCTTCTCTTTTACTTTGGCCAATATGAGTTCACCTGGTACTAGCAGCTTTATCGGGGAATTTCCCATCTTAGTAGGAGCTTTCCAAAGAAATAGCTTAGTAGCCACATTAGCAGCGCTTGGGATGATTTTAGGCGCGGCGTATTCCCTTTGGCTATATAATCGTGTGGTTTCTGGAAATTTAAAACCCGATTTCCTCCATAAATTCTCCGATTCAAATGGCAGAGAAGTTTCCATATTTATACCTTTTATTTTTGGAGTTGTTCGGATGGGTGTTCACCCCAAAGTGTTCCCGGACCGCATGCATACATCCGTAAGTAACTTAGTGCAACATGGCAAATTTCATTGA]
+# protein sequence = [MLEHFCECYSDLSGPILCPVLGSITPLFIPNSRIRPIRLIGLCASLITFLYSPVPRIQFDPSTAKSQFVESLRWLPYENINFDLGIDGISLFFVILTTFLIPICILVGWSGMRSYGKEYITASLIREFLMIAVFRMLDPLLFYVFPESVPIPMFIIIGVWGSRQRKIKAAYQFFLYTLLGSVFMLLAILLILLQTGTTDLQISLTTEFSERRQIFLWIASFASFAVKVPMVPVHIWLPEAHVEAPTAGSVILAGIPSKLGTHGFLRFSIPMFPEATLCSTPFIYTLSAIAIIYTSLTTSRQIDLKKIIAYSSVAHMNLVTIGMFSPNIQGIGGSIPPMLSHGLVSSALFLCVGVLYDRHKTRLVRYYGGLVSTMPNLPTIFFSFTLANMSSPGTSSFIGEFPILVGAFQRNSLVATLAALGMILGAAYSLWLYNRVVSGNLKPDFLHKFSDSNGREVSIFIPFIFGVVRMGVHPKVFPDRMHTSVSNLVQHGKFH]
+Mt	tRNAscan	gene	114579	114651	.	+	.	ID=trnM-1;Name=trnM-CAU-cp;product=tRNA-Met;gene=trnM-CAU-cp
+Mt	tRNAscan	tRNA	114579	114651	.	+	.	ID=trnM-1.t1;Parent=trnM-1;Name=trnM-CAU-cp;product=tRNA-Met;gene=trnM-CAU-cp
+Mt	tRNAscan	exon	114579	114651	.	+	.	ID=trnM-1.t1:e1;Parent=trnM-1.t1;product=tRNA-Met
+Mt	tRNAscan	gene	119530	119601	.	+	.	ID=trnG-GCC-1;Name=trnG-GCC;product=tRNA-Gly;gene=trnG-GCC
+Mt	tRNAscan	tRNA	119530	119601	.	+	.	ID=trnG-GCC-1.t1;Parent=trnG-GCC-1;Name=trnG-GCC;product=tRNA-Gly;gene=trnG-GCC
+Mt	tRNAscan	exon	119530	119601	.	+	.	ID=trnG-GCC-1.t1:e1;Parent=trnG-GCC-1.t1;product=tRNA-Gly
+Mt	tRNAscan	gene	122983	123054	.	+	.	ID=trnQ-UUG-1;Name=trnQ-UUG;product=tRNA-Gln;gene=trnQ-UUG
+Mt	tRNAscan	tRNA	122983	123054	.	+	.	ID=trnQ-UUG-1.t1;Parent=trnQ-UUG-1;Name=trnQ-UUG;product=tRNA-Gln;gene=trnQ-UUG
+Mt	tRNAscan	exon	122983	123054	.	+	.	ID=trnQ-UUG-1.t1:e1;Parent=trnQ-UUG-1.t1;product=tRNA-Gln
+Mt	exonerate	gene	167066	168834	.	+	.	ID=atp1-1;Name=atp1;product=ATP synthase subunit 1;gene=atp1
+Mt	exonerate	mRNA	167066	168834	.	+	.	ID=atp1-1.t1;Parent=atp1-1;Name=atp1;product=ATP synthase subunit 1;gene=atp1
+Mt	exonerate	exon	167066	168202	.	+	.	ID=atp1-1.t1:e1;Parent=atp1-1.t1;product=ATP synthase subunit 1
+Mt	exonerate	CDS	167066	168202	.	+	0	ID=atp1-1.t1:c1;Parent=atp1-1.t1;product=ATP synthase subunit 1
+Mt	exonerate	exon	168330	168600	.	+	.	ID=atp1-1.t1:e2;Parent=atp1-1.t1;product=ATP synthase subunit 1
+Mt	exonerate	CDS	168330	168600	.	+	0	ID=atp1-1.t1:c2;Parent=atp1-1.t1;product=ATP synthase subunit 1
+Mt	exonerate	exon	168728	168834	.	+	.	ID=atp1-1.t1:e3;Parent=atp1-1.t1;product=ATP synthase subunit 1
+Mt	exonerate	CDS	168728	168834	.	+	2	ID=atp1-1.t1:c3;Parent=atp1-1.t1;product=ATP synthase subunit 1
+# coding sequence = [ATGGAATTCTCTCCCGAACTAACGACTCTATTAGAAAGTAGAATTACCAACTTTTACACGAATTTTCAAGTGGATGAGATCGGTCGAGTGGTCTCAGTTGGAGATGGGATTGCACGTGTTTATGGATTGAACGAGATTCAAGCTGGGGAAATGGTTGAATTTGCCAGCGGTGTGAAAGGAATAGCGTTGAATCTTGAGAATGAGAATGTAGGGATTGTTGTCTTTGGTAGTGATACCGCTATTAAAGAAGGAGATCTTGTCAAGCGCACTGGATCTATTGTGGATGTTCCCGCGGGAAAGGCTATGCTAGGGCGTGTGGTCGACGCGTTGGGAGTACCTATTGATGGAAGAGGGGCTCTAAGCGATCACGAGCGAAGACGTGTCGAAGTGAAAGCCCCAGGGATTATTGAACGTAAATCTGTGCACGAGCCTATGCAAACAGGGTTAAAAGCGGTAGATAGCCTGGTTCCTATAGGCCGTGGTCAACGAGAACTTATAATCGGGGACCGACAAACTGGAAAAACAGCTATTGCTATCGATACCATATTAAACCAAAAGCAAATGAACTCAAGGGCCACCTCTGAGAGTGAGACATTGTATTGTGTCTATGTAGCGATTGGACAGAAACGCTCAACTGTGGCACAATTAGTTCAAATTCTTTCAGAAGCGAATGCTTTGGAATATTCCATTCTTGTAGCAGCCACCGCTTCGGATCCTGCTCCTCTGCAATTTCTGGCCCCATATTCAGGGTGTGCCATGGGGGAATATTTCCGCGATAATGGAATGCACGCATTAATAATCTATGATGATCTTAGTAAACAGGCGGTGGCATATCGACAAATGTCATTATTGTTACGCCGACCCCCAGGCCGTGAGGCTTTCCCAGGCGATGTTTTCTATTTACATTCCCGTCTCTTAGAAAGAGCCGCTAAACGATCGGACCTGACAGGTGCAGGTAGCTTGACCGCCTTACCCGTCATTGAAACACAAGCTGGAGACGTATCGGCTTATATTCCCACCAATGTGATCCCCATTACTGATGGACAAATCTGTTCGGAAACAGAGCTCTTTTATCGCGGAATTAGACCTGCTATTAACGTCGGCTTATCTGTCAGTCGCGTTGGGTCTGCCGCTCAGTTGAAAGCTATGAAACAAGTATGCGGGAGTTCAAAACTCGAATTGGCACAATATCGCGAAGTGGCCGCCCTTGCTCAATTTGGGTCAGACCTTGATGCTGCCACTCAGGCATTACTCAATAGAGGTGCAAGGCTTACAGAAGTACCGAAACAACCACAATATGCACCACTTCCAATTGAAAAACAAATTCTAGTCATTTATGCAGCTGTCAATGGATTCTGTGATCGAATGCCACTAGACAAAATTTCTCAATATGAGAGAGCCATTCCAAGTAGTATAAAACCAGAATTACTACAAGCACTTAAAGGTGGGTTAACTAACGAAAGAAAGATGGAACCAGATGCATTCTTAAAAGAAAGCGCTTTGCCTTACAAATAG]
+# protein sequence = [MEFSPELTTLLESRITNFYTNFQVDEIGRVVSVGDGIARVYGLNEIQAGEMVEFASGVKGIALNLENENVGIVVFGSDTAIKEGDLVKRTGSIVDVPAGKAMLGRVVDALGVPIDGRGALSDHERRRVEVKAPGIIERKSVHEPMQTGLKAVDSLVPIGRGQRELIIGDRQTGKTAIAIDTILNQKQMNSRATSESETLYCVYVAIGQKRSTVAQLVQILSEANALEYSILVAATASDPAPLQFLAPYSGCAMGEYFRDNGMHALIIYDDLSKQAVAYRQMSLLLRRPPGREAFPGDVFYLHSRLLERAAKRSDLTGAGSLTALPVIETQAGDVSAYIPTNVIPITDGQICSETELFYRGIRPAINVGLSVSRVGSAAQLKAMKQVCGSSKLELAQYREVAALAQFGSDLDAATQALLNRGARLTEVPKQPQYAPLPIEKQILVIYAAVNGFCDRMPLDKISQYERAIPSSIKPELLQALKGGLTNERKMEPDAFLKESALPYK]
+Mt	augustus	gene	182935	183507	.	+	.	ID=nad9-1;Name=nad9;product=NADH dehydrogenase subunit 9;gene=nad9
+Mt	augustus	mRNA	182935	183507	.	+	.	ID=nad9-1.t1;Parent=nad9-1;Name=nad9;product=NADH dehydrogenase subunit 9;gene=nad9
+Mt	augustus	exon	182935	183507	.	+	.	ID=nad9-1.t1:e1;Parent=nad9-1.t1;product=NADH dehydrogenase subunit 9
+Mt	augustus	CDS	182935	183507	.	+	0	ID=nad9-1.t1:c1;Parent=nad9-1.t1;product=NADH dehydrogenase subunit 9
+# coding sequence = [ATGGATAACCAATCCATTTTCAAATATAGTTGGGAGACTTTACCCAAGAAATGGGTAAAAAAAATGGAAAGATCGGAACATGGGAATAGATCTGATACCAATACGGACTACCTATTTCAATTGTTGTGCTTTCTTAAATTGCATACCTATACAAGGGTTCAAGTTTCGATCGATATTTGCGGAGTTGATCATCCTTCTCGAAAACGAAGATTTGAAGTGGTCTATAATTTACTGAGTACTCGGTATAACTCACGCATTCGTGTACAAACCAGTGCAGACGAAGTAACACGAATATCTCCGGTAGTCAGTCTATTTCCATCAGCCGGCCGGTGGGAGCGAGAAGTTTGGGATATGTTTGGTGTTTCTTTCATCAATCATCCGGATCTACGCCGTATATCAACAGATTATGGTTTCGAGGGTCATCCATTACGAAAAGACCTTCCTCTGAGTGGATATGTGGAAGTACGCTATGATGATCCAGAGAAACGTGTGGTTTCTGAACCCATTGAGATGACCCAAGAATTTCGCTATTTCGATTTTGCTAGTCCTTGGGAACAGCGTAGCGACGGATAA]
+# protein sequence = [MDNQSIFKYSWETLPKKWVKKMERSEHGNRSDTNTDYLFQLLCFLKLHTYTRVQVSIDICGVDHPSRKRRFEVVYNLLSTRYNSRIRVQTSADEVTRISPVVSLFPSAGRWEREVWDMFGVSFINHPDLRRISTDYGFEGHPLRKDLPLSGYVEVRYDDPEKRVVSEPIEMTQEFRYFDFASPWEQRSDG]
+Mt	tRNAscan	gene	184264	184337	.	+	.	ID=trnP-UGG-1;Name=trnP-UGG-cp;product=tRNA-Pro;gene=trnP-UGG-cp
+Mt	tRNAscan	tRNA	184264	184337	.	+	.	ID=trnP-UGG-1.t1;Parent=trnP-UGG-1;Name=trnP-UGG-cp;product=tRNA-Pro;gene=trnP-UGG-cp
+Mt	tRNAscan	exon	184264	184337	.	+	.	ID=trnP-UGG-1.t1:e1;Parent=trnP-UGG-1.t1;product=tRNA-Pro
+Mt	tRNAscan	gene	184504	184577	.	+	.	ID=trnW-CCA-1;Name=trnW-CCA-cp;product=tRNA-Trp;gene=trnW-CCA-cp
+Mt	tRNAscan	tRNA	184504	184577	.	+	.	ID=trnW-CCA-1.t1;Parent=trnW-CCA-1;Name=trnW-CCA-cp;product=tRNA-Trp;gene=trnW-CCA-cp
+Mt	tRNAscan	exon	184504	184577	.	+	.	ID=trnW-CCA-1.t1:e1;Parent=trnW-CCA-1.t1;product=tRNA-Trp
+Mt	tRNAscan	gene	190369	190441	.	-	.	ID=trnK-UUU-1;Name=trnK-UUU;product=tRNA-Lys;gene=trnK-UUU
+Mt	tRNAscan	tRNA	190369	190441	.	-	.	ID=trnK-UUU-1.t1;Parent=trnK-UUU-1;Name=trnK-UUU;product=tRNA-Lys;gene=trnK-UUU
+Mt	tRNAscan	exon	190369	190441	.	-	.	ID=trnK-UUU-1.t1:e1;Parent=trnK-UUU-1.t1;product=tRNA-Lys
+Mt	augustus	gene	210676	211296	.	+	.	ID=ccmB-1;Name=ccmB;product=cytochrome c biogenesis B;gene=ccmB
+Mt	augustus	mRNA	210676	211296	.	+	.	ID=ccmB-1.t1;Parent=ccmB-1;Name=ccmB;product=cytochrome c biogenesis B;gene=ccmB
+Mt	augustus	exon	210676	211296	.	+	.	ID=ccmB-1.t1:e1;Parent=ccmB-1.t1;product=cytochrome c biogenesis B
+Mt	augustus	CDS	210676	211296	.	+	0	ID=ccmB-1.t1:c1;Parent=ccmB-1.t1;product=cytochrome c biogenesis B
+# coding sequence = [ATGAGACGACTTTTTCTTGAACTATATCATAAACAGATCTTCCCCTCCACACCAATCACGAGTTTTTCTCCATTCCTCTCGTATATCGTCGTAACGCCCTTAATGCTAGGTTTTGAAAAAGACTTTTCATGTCATTCCCATTTAGGTCCGATTCGGATCCCTCCGTTGTTTCCTTTTCCTCCCGCACCTTTTCCTCGAAATGAGAAAGAAGATGGTACACTCGAATTGTATTATTTAAGTGCTTATTGCTTGCCAAAGATCCTACTTCTACAATTGGTAGGTCACCGGGTTATTCAAATAAGTTGTGTTTTCTGTGGTTTTCCCATGTTACAACTTCTGTACCAATTCGGTCGATCCGGAATGGATCGGTTAAACATTCCATTAGGGAGCCTGGTCTTGACTCTTCTGTGTGGTATTCATTCTCGTTCGGCTCTTGGAATCACATCCAGCAGTGGTTGGAACAGCTCGCAAAATCCAACCACTTCACCTACTTTATTGCCCCCAACCCTTTCTCGTACCTCTATTGAAACAGAATGGTTTCATGTTCTTTCATCGATTGGTTATTCCTCTCCGTTCGTATCTCTTTTTCCAATTTCGGTCTCGATTAGTTTACAAGATTGA]
+# protein sequence = [MRRLFLELYHKQIFPSTPITSFSPFLSYIVVTPLMLGFEKDFSCHSHLGPIRIPPLFPFPPAPFPRNEKEDGTLELYYLSAYCLPKILLLQLVGHRVIQISCVFCGFPMLQLLYQFGRSGMDRLNIPLGSLVLTLLCGIHSRSALGITSSSGWNSSQNPTTSPTLLPPTLSRTSIETEWFHVLSSIGYSSPFVSLFPISVSISLQD]
+Mt	augustus	gene	226647	227828	.	-	.	ID=cob-1;Name=cob;product=apocytochrome b;gene=cob
+Mt	augustus	mRNA	226647	227828	.	-	.	ID=cob-1.t1;Parent=cob-1;Name=cob;product=apocytochrome b;gene=cob
+Mt	augustus	exon	226647	227828	.	-	.	ID=cob-1.t1:e1;Parent=cob-1.t1;product=apocytochrome b
+Mt	augustus	CDS	226647	227828	.	-	0	ID=cob-1.t1:c1;Parent=cob-1.t1;product=apocytochrome b
+# coding sequence = [ATGACTATAAGGAACCAACGATTCTCTCTTCTTAAACAACCTATATCCTCCACACTTAATCAGCATTTGATAGATTATCCAACCCCGAGCAATCTTAGTTATTGGTGGGGGTTCGGTCCGTTAGCTGGTATTTGTTTAGTCATTCAGATAGTGACTGGCGTTTTTTTAGCTATGCATTACACACCTCATGTGGATCTAGCTTTCAACAGCGTAGAACACGTTATGAGAGATGTTGAAGGGGGCTGGTTGCTCCGTTATATGCATGCTAATGGGGCAAGTATGTTTCTCATTGTGGTTCACCTTCATCTTTTTCGTGGTCTATATCATGCGAGTTATAGCAGTCCTAGGGAATTTGTTTGGTGTCTCGGAGTTGTAATCTTCCTATTAATGATTGTGACAGCTTTTACAGGATACGTACTCCCTTGGGGTCAGATGAGCTTTTGGGGAGCTACAGTAATTACAAGCTTAGCTAGCGCCCTACCTGTAGTAGGAGATACCATAGTGACTTGGCTTTGGGGTGGTTTCTCCGTGGACAATGCTACCTTAAATCGTTTTTTTAGTCTTCATCATTTACTCCCCTTTATTTTAGTAGGCGCCAGTCTTCTTCATCTGGCCGCATTGCATCAATATGGATCAAATAATCCATTGGGTGTACATTCAGAGATGGATAAAATTTCTTTTTACCCTTATTTTTATGTAAAGGATCTAGTAGGTTGGGTAGCTTTTGCTATCTTTTTTTCCATTTGGATTTTTTATGCTCCTAATGTTTTGGGGCATCCCGACAATTATATACCTGCTAATCCGATGCCCACCCCGCCTCATATTGTGCCGGAATGGTATTTCCTACCGATCCATGCCATTCTTCGTAGTATACCTGACAAATCGGGAGGTGTAGCCGCAATAGCACCAGTTTTTATATGTCTGTTGGCTTTACCTTTTTTTAAAAGTATGTATGTGCGTAGTTCAAGTTTTCGCCCGATTCACCAAGGAATATTTTGGTTGCTTTTGGCGGATTGCTTACTACTAGGTTGGATCGGATGTCAACCTGTGGAGGCACCATTTGTTACTATTGGACAAATTTCTCCTTTTGTTTTCTTCTTGTTCTTTGCCATAACGCCTATTCCGGGACGAGTTGGAAGAGGAATTCCTAATTCTTACACGGATGAGACTGATCACACCTGA]
+# protein sequence = [MTIRNQRFSLLKQPISSTLNQHLIDYPTPSNLSYWWGFGPLAGICLVIQIVTGVFLAMHYTPHVDLAFNSVEHVMRDVEGGWLLRYMHANGASMFLIVVHLHLFRGLYHASYSSPREFVWCLGVVIFLLMIVTAFTGYVLPWGQMSFWGATVITSLASALPVVGDTIVTWLWGGFSVDNATLNRFFSLHHLLPFILVGASLLHLAALHQYGSNNPLGVHSEMDKISFYPYFYVKDLVGWVAFAIFFSIWIFYAPNVLGHPDNYIPANPMPTPPHIVPEWYFLPIHAILRSIPDKSGGVAAIAPVFICLLALPFFKSMYVRSSSFRPIHQGIFWLLLADCLLLGWIGCQPVEAPFVTIGQISPFVFFLFFAITPIPGRVGRGIPNSYTDETDHT]
+Mt	augustus	gene	229261	229526	.	-	.	ID=rps14-1;Name=rps14;product=ribosomal protein S14;gene=rps14
+Mt	augustus	mRNA	229261	229526	.	-	.	ID=rps14-1.t1;Parent=rps14-1;Name=rps14;product=ribosomal protein S14;gene=rps14
+Mt	augustus	exon	229493	229526	.	-	.	ID=rps14-1.t1:e1;Parent=rps14-1.t1;product=ribosomal protein S14
+Mt	augustus	CDS	229493	229526	.	-	0	ID=rps14-1.t1:c1;Parent=rps14-1.t1;product=ribosomal protein S14
+Mt	augustus	exon	229261	229448	.	-	.	ID=rps14-1.t1:e2;Parent=rps14-1.t1;product=ribosomal protein S14
+Mt	augustus	CDS	229261	229448	.	-	2	ID=rps14-1.t1:c2;Parent=rps14-1.t1;product=ribosomal protein S14
+# coding sequence = [ATGTCGGAGAAGCGAAATATACGAGATCACAAACCCTTTTATAAAGATCCCGATCTTCCTAGTGAGATGCGGGACAAACATCGTTATAAGTTGTCCAAGTTGCCAAGAAAGAGTTCCTTTGCACGAGTAAGAAACCGATGTATTTTCACGGGTCGCCCTCGTTCCGTATATGAGTTCTTTCGAATTTCTCGTATCGTTTTTCGGCATCTTGAGGTCCTTTGA]
+# protein sequence = [MSEKRNIRDHKPFYKDPDLPSEMRDKHRYKLSKLPRKSSFARVRNRCIFTGRPRSVYEFFRISRIVFRHLEVL]
+Mt	exonerate	gene	229528	230076	.	-	.	ID=rpl5-1;Name=rpl5;product=ribosomal protein L5;gene=rpl5
+Mt	exonerate	mRNA	229528	230076	.	-	.	ID=rpl5-1.t1;Parent=rpl5-1;Name=rpl5;product=ribosomal protein L5;gene=rpl5
+Mt	exonerate	exon	229528	230076	.	-	.	ID=rpl5-1.t1:e1;Parent=rpl5-1.t1;product=ribosomal protein L5
+Mt	exonerate	CDS	229528	230076	.	-	0	ID=rpl5-1.t1:c1;Parent=rpl5-1.t1;product=ribosomal protein L5
+# coding sequence = [ATGCCACTTCATTTTCATTACGAAGATGTATCACGTCAAGACCCGTTGCTCAAACCAAATCACGCCAACGTTATGGAAGTTCCTGGATCGTGTGAAATAAGAGTAGTACCAAAGGCACCCTATGATTTCATAATCAAAAATGGAAAATTGGCTATGGAGATTCCGCGCGGTCAGAAATTCATACAGACACAAAGGGGTTCGACTGGAAAGTCGTTTCGATCCAATCTGGGGTCTTTTAAAGACAAAGGATATGTTAGTGACCTAGCACGACAAAGCACTCTCCGAGGGCATGGAATGTCTAATTTTTTGGTCAGAATCTCGACAGTAATGTCTCTGTTAGATTCTCCGGTCGAAATACGGGAAAACTCCATTCAATTCTCGATGGAAACGGAGTTTTGCGAATTCTCCCCAGAACTGGAAGATCATTTCGAAATCTTCGAACATATTCGAGGGTTCAATGTGACTATTGTCACTTCGGCCAACACACAAGATGAGACTTTACCACCGTGGAGCGGCTTTTTGCCAAAAGATGAGGGGGAAACTCAGTAA]
+# protein sequence = [MPLHFHYEDVSRQDPLLKPNHANVMEVPGSCEIRVVPKAPYDFIIKNGKLAMEIPRGQKFIQTQRGSTGKSFRSNLGSFKDKGYVSDLARQSTLRGHGMSNFLVRISTVMSLLDSPVEIRENSIQFSMETEFCEFSPELEDHFEIFEHIRGFNVTIVTSANTQDETLPPWSGFLPKDEGETQ]
+Mt	tRNAscan	gene	240729	240815	.	+	.	ID=trnS-UGA-2;Name=trnS-UGA;product=tRNA-Ser;gene=trnS-UGA
+Mt	tRNAscan	tRNA	240729	240815	.	+	.	ID=trnS-UGA-2.t1;Parent=trnS-UGA-2;Name=trnS-UGA;product=tRNA-Ser;gene=trnS-UGA
+Mt	tRNAscan	exon	240729	240815	.	+	.	ID=trnS-UGA-2.t1:e1;Parent=trnS-UGA-2.t1;product=tRNA-Ser
+Mt	augustus	gene	248379	250331	.	+	.	ID=matR-1;Name=matR;product=maturase-related protein;gene=matR
+Mt	augustus	mRNA	248379	250331	.	+	.	ID=matR-1.t1;Parent=matR-1;Name=matR;product=maturase-related protein;gene=matR
+Mt	augustus	exon	248379	250331	.	+	.	ID=matR-1.t1:e1;Parent=matR-1.t1;product=maturase-related protein
+Mt	augustus	CDS	248379	250331	.	+	0	ID=matR-1.t1:c1;Parent=matR-1.t1;product=maturase-related protein
+# coding sequence = [ATGAAAGAGGCGATCAGAATGGTACTCGAATCCATTTACGATCCCGAGTTTCCAGACACATCGCACTTCCGCTCGGGTCGAGGCTGCCACTCGGTCCTAAGACGGATCAAAGAAAAGTGGGGAATCTCTCGCTGGTTTTTAGAATTCGACATCAGGAAGTGTTTTCACACCATCGACCGACATCGACTCATCCCAATCTTTAAGGAAGAGATCGACGATCCCAAGTTCTTTTACCCCATTCAGAAAGTCTTTTCCGCCGGACGACTCGTAGGAGGTGAGAAGGGCCCTTACTCCGTCCCACACAGTGTACTACTATCGGCCCTACCAGGCAACATCTACCTACACAAGCTCGATCAGGAGATAGGGAGGATCCGACAGAAGTACGAAATTCCAATTGTTCAGAGAATAAGATCGGTTCTATTAAGGACAGGTCGTATTGATGACCAAGAAAACTCTGGAGAAGAAGCAAGCTTCAACGCTCCCCAAGACAGCAGAGCCATCATTGTGGGGAGGGTAAAGAGCATCCAACGCAAAGCGGCCTTTCATTCCCTTGTTTCGTCGTGGCACACCCCCCCCACAAGCACCCCCCGGCTCAGGGGGAACCAGAAAACGCCTTTCGTTTTCCCGTCCCTTGCCGCCTTCCTTAACAAGCCCTCGAGCCTCCTTTGCGCCGCCTTCCTCATAGAAGCCGCCGGGTTGACCCCGAAGGCCGAATTCTATGGTAGAGAACGCTGTAATTGGGCCATGAGAGACCTTATTAAGTATTGCAAAAGAAAGGGCCTGCTGATAGAGTTGGGCGGGGAGGCGATACTAGTTATCAGGTCAGAGAGACGCCTGGCCCGTAAGCAGGCCCCCTTAAAAACCCATTACTTAATAAGGATTTGTTACGCGCGATATGCCGACGACTCACTACTGGGAATCGTGGGTGCCGTAGAGCTTATCATAGAAATACAAAAACGTATCGCCCACTTCCTACAATCCGGCCTGAACCTTTGGGTAGGCTCCGCAGGATCAACAACAATAGCTGCACGGAGTACGGTAGAATTCCCCGGTACGGTCATTCGGGAAGTCCCTCCGAGGACGACTCCCATACAATTTTTTCGAGAGCTGGAGAAGCGTCTACGGGTAAAGCACCGTATCCATATAACTGCTTGCCACCTACGCTCCGCCATCCATTCCAAGTTTAGGAACCTAGGTGATAGTATCCCGATCAAACAGCTGACGAAGGGGATGAGCGAAACAGGGAGTCTACTGGACGGGGTTCAACTAGCGGAGACTCTTGGAACAGCTGGAGTAATAAGTCCCCAAGTGAGCGTATTATGGGGGACCGTCAAGCACATCCGGCAAGGATCAAGGGGGATCTCGTTGTTGCATAGCTCAGGTCGGAGCAACGCGCCATCGGGCGTTCAACAGGCAGTCTCACGATCGGGCATGAGTGTCCGGAAGTTGTCATTGTATACTCCCGCGGGTCGGAAGGCGGCGGAGGAAGGAGGAGGACACTGGGCGGGATCTATCAGCAGTGAATTCTCCATACAGATAGAGGCGCCTATCAAAAAGATACTCCGAAGGCTTCGGGATCGAGGTCTCATTAGCCGAAGAAGACCCTGGCCAATCCACGTGGCCTGCTTGACGAACGTCAGCGACGGAGACATCGTAAATTGGTCTGCGGGCATCGCGATAAGTCCTCTGTCCTACTACAGGTGCCGCGACAACCTTTACCAAGTCCGAACGATTGTCGACCACCAGATCCGTTGGTCTGCAATATTCACCCTAGCCCACAAGCACAAATCCTCGGCGCGGAATATAATCCCAAAGTACTCCAAAGACTCAAATATTTTAAATCAAGAAGGTGTTAAGACCCTTGCAAAGTTCCCCAACAGCATAGAGCTTGGAAAGCTCGGACCCGGTCAAGATCCGAACAACAAGGAGCACTCAACTACTAGTCTAGTCTAG]
+# protein sequence = [MKEAIRMVLESIYDPEFPDTSHFRSGRGCHSVLRRIKEKWGISRWFLEFDIRKCFHTIDRHRLIPIFKEEIDDPKFFYPIQKVFSAGRLVGGEKGPYSVPHSVLLSALPGNIYLHKLDQEIGRIRQKYEIPIVQRIRSVLLRTGRIDDQENSGEEASFNAPQDSRAIIVGRVKSIQRKAAFHSLVSSWHTPPTSTPRLRGNQKTPFVFPSLAAFLNKPSSLLCAAFLIEAAGLTPKAEFYGRERCNWAMRDLIKYCKRKGLLIELGGEAILVIRSERRLARKQAPLKTHYLIRICYARYADDSLLGIVGAVELIIEIQKRIAHFLQSGLNLWVGSAGSTTIAARSTVEFPGTVIREVPPRTTPIQFFRELEKRLRVKHRIHITACHLRSAIHSKFRNLGDSIPIKQLTKGMSETGSLLDGVQLAETLGTAGVISPQVSVLWGTVKHIRQGSRGISLLHSSGRSNAPSGVQQAVSRSGMSVRKLSLYTPAGRKAAEEGGGHWAGSISSEFSIQIEAPIKKILRRLRDRGLISRRRPWPIHVACLTNVSDGDIVNWSAGIAISPLSYYRCRDNLYQVRTIVDHQIRWSAIFTLAHKHKSSARNIIPKYSKDSNILNQEGVKTLAKFPNSIELGKLGPGQDPNNKEHSTTSLV]
+Mt	augustus	gene	250606	250908	.	+	.	ID=sdh3-1;Name=sdh3;product=succinate dehydrogenase subunit 3;gene=sdh3
+Mt	augustus	mRNA	250606	250908	.	+	.	ID=sdh3-1.t1;Parent=sdh3-1;Name=sdh3;product=succinate dehydrogenase subunit 3;gene=sdh3
+Mt	augustus	exon	250606	250908	.	+	.	ID=sdh3-1.t1:e1;Parent=sdh3-1.t1;product=succinate dehydrogenase subunit 3
+Mt	augustus	CDS	250606	250908	.	+	0	ID=sdh3-1.t1:c1;Parent=sdh3-1.t1;product=succinate dehydrogenase subunit 3
+# coding sequence = [ATGAATATGCTTCGCCCGTTATCTCCTCATCTTCCTATTTATAAGCCACAGCTCACTTCGACGTTTCCAATTTCCCATAGAATCTCCGGGGCTTTCCTAGCCACTCTGGTTTTCTTTTTTTATCTTCTTTATCTGAAAATAGGTTTGATTTGCTTCACCTATGAGAATTTCTACCAATTCTTCTTTTATTCATCAAAGCTTATCCTAATCTCCGTCGAGATTACTGCCTTAGCCCTTTCCTATCATCTGTATAATGGGGTTCGTCATTTATTGACGGATTTCTCTTTCGAAGAAAAAGATTGA]
+# protein sequence = [MNMLRPLSPHLPIYKPQLTSTFPISHRISGAFLATLVFFFYLLYLKIGLICFTYENFYQFFFYSSKLILISVEITALALSYHLYNGVRHLLTDFSFEEKD]
+Mt	augustus	gene	262130	262531	.	-	.	ID=sdh4-1;Name=sdh4;product=succinate dehydrogenase subunit 4;gene=sdh4
+Mt	augustus	mRNA	262130	262531	.	-	.	ID=sdh4-1.t1;Parent=sdh4-1;Name=sdh4;product=succinate dehydrogenase subunit 4;gene=sdh4
+Mt	augustus	exon	262130	262531	.	-	.	ID=sdh4-1.t1:e1;Parent=sdh4-1.t1;product=succinate dehydrogenase subunit 4
+Mt	augustus	CDS	262130	262531	.	-	0	ID=sdh4-1.t1:c1;Parent=sdh4-1.t1;product=succinate dehydrogenase subunit 4
+# coding sequence = [ATGGTACTGGCATTTTGTAGACGTGGTTCGGTTATTCCTATTTGTCTCTATCTATTGGTGGGGAGGTATATGAAGGAAGGAAAGAGTGGATTGAGGAATGAAAGCTCGAAGACAAAGAGAATCGGGCTTTTCCAAAGAATTACTGCAGCTTTCCCACTCCCTTTGATTATCATATACAAAAAAGTCTCTTCCACTTTCCTACCAAATCTTTCTTTATTTTGGCACATCAATGAAGGGATCGAAGAGATTATGGCAGATCATGTTCACCAAGAAATGACCCGAAATTGGATCTTGGTCTATTTGAGATTGTTCCTTTTAATCGTAATCAAAGATCTTTTCTTGTCTCTCGTTTCTTTTCTAAACAAATTGAAGAACCTAATGGATCGAACTTGGCTGCTATGA]
+# protein sequence = [MVLAFCRRGSVIPICLYLLVGRYMKEGKSGLRNESSKTKRIGLFQRITAAFPLPLIIIYKKVSSTFLPNLSLFWHINEGIEEIMADHVHQEMTRNWILVYLRLFLLIVIKDLFLSLVSFLNKLKNLMDRTWLL]
+Mt	augustus	gene	262459	263256	.	-	.	ID=cox3-1;Name=cox3;product=cytochrome c oxidase subunit 3;gene=cox3
+Mt	augustus	mRNA	262459	263256	.	-	.	ID=cox3-1.t1;Parent=cox3-1;Name=cox3;product=cytochrome c oxidase subunit 3;gene=cox3
+Mt	augustus	exon	262459	263256	.	-	.	ID=cox3-1.t1:e1;Parent=cox3-1.t1;product=cytochrome c oxidase subunit 3
+Mt	augustus	CDS	262459	263256	.	-	0	ID=cox3-1.t1:c1;Parent=cox3-1.t1;product=cytochrome c oxidase subunit 3
+# coding sequence = [ATGATTGAATCTCAGAGGCATTCTTATCATTTGGTAGATCCAAGTCCATGGCCTATTTCGGGTTCACTCGGAGCTTTGGCAACCACCGTAGGAGGTGTGATGTACATGCACTCATTTCAAGGGGGTGCAACACTTCTCAGTTTGGGCCTCATATTTATCCTATATACCATGTTCGTATGGTGGCGCGATGTTCTACGTGAATCCACGTTGGAAGGACATCATACCAAAGTCGTACAATTAGGACTTCGATACGGTTTTATTCTGTTCATCGTATCGGAGGTTATGTTCTTTTTTGCTTTTTTTTGGGCTTTTTTTCATTCTTCTTTGGCACCTACGGTAGAGATCGGAGGTATTTGGCCCCCAAAAGGGATTTGGGTTTTAGATCCTTGGGAAATCCCTTTTCTTAATACCCCTATTCTCCTTTCATCCGGAGCTGCCGTAACTTGGGCTCATCATGCTATACTCGCGGGGAAGGAAAAACGAGCTGTTTATGCTTTAGTAGCTACCGTTTTACTGGCTCTAGTATTCACTGGCTTTCAAGGAATGGAATATTATCAAGCACCCTCCACTATTTCGGATAGTATTTATGGTTCTACCTTTTTCTTAGCAACAGGCTTTCATGGTTTTCATGTGATTATAGGTACTCTTTTCTTGATCATATGTGGTATTCGCCAATATCTTGGTCATCTGACCAAGGAGCATCACGTTGGCTTTGAAGCAGCTGCATGGTACTGGCATTTTGTAGACGTGGTTCGGTTATTCCTATTTGTCTCTATCTATTGGTGGGGAGGTATATGA]
+# protein sequence = [MIESQRHSYHLVDPSPWPISGSLGALATTVGGVMYMHSFQGGATLLSLGLIFILYTMFVWWRDVLRESTLEGHHTKVVQLGLRYGFILFIVSEVMFFFAFFWAFFHSSLAPTVEIGGIWPPKGIWVLDPWEIPFLNTPILLSSGAAVTWAHHAILAGKEKRAVYALVATVLLALVFTGFQGMEYYQAPSTISDSIYGSTFFLATGFHGFHVIIGTLFLIICGIRQYLGHLTKEHHVGFEAAAWYWHFVDVVRLFLFVSIYWWGGI]
+Mt	augustus	gene	264789	265274	.	-	.	ID=atp8-1;Name=atp8;product=ATP synthase subunit 8;gene=atp8
+Mt	augustus	mRNA	264789	265274	.	-	.	ID=atp8-1.t1;Parent=atp8-1;Name=atp8;product=ATP synthase subunit 8;gene=atp8
+Mt	augustus	exon	264789	265274	.	-	.	ID=atp8-1.t1:e1;Parent=atp8-1.t1;product=ATP synthase subunit 8
+Mt	augustus	CDS	264789	265274	.	-	0	ID=atp8-1.t1:c1;Parent=atp8-1.t1;product=ATP synthase subunit 8
+# coding sequence = [ATGCCTCAACTGGATAAATTCACTTATTTTACACAATTCTTCTGGTCATGCCTTTTCCTCTTTACTTTCTATATTCCCATATGCAATGATGGAGATGGAGTACTTGGGATCAGCAGAATTCTAAAACTACGGAACCGACTGGTTTCACATCGGGGGAACAATTATTTGATGCCCCGCAACGACCCCAACCGTTTGGAAGATATCTTGAGAAAAGGTTTTAGCACCGGTGTATCCTATATGTACTCTAGTTTATTCGAAGTATCCCAATGGTGTAACGCCGTCGACTTATTGGGAAAAAGGAGGAAAATCACTTTGATCTCTTGTTTCGGAGAAATAAGTGGCTCACGAGGAATGGAAAGAAGCATATTATATTTGATCTCGAAGTCCTCATATAGCATTTCTTTCAATCCTGGATGGGGGATCCCTTGTAGGAATGACATAATGCTAATCCATGTTCTACACGGCCAAGGAAGAATAAAAAAATGA]
+# protein sequence = [MPQLDKFTYFTQFFWSCLFLFTFYIPICNDGDGVLGISRILKLRNRLVSHRGNNYLMPRNDPNRLEDILRKGFSTGVSYMYSSLFEVSQWCNAVDLLGKRRKITLISCFGEISGSRGMERSILYLISKSSYSISFNPGWGIPCRNDIMLIHVLHGQGRIKK]
+Mt	exonerate	gene	307488	309870	.	+	.	ID=ccmFc-1;Name=ccmFc;product=cytochrome c biogenesis FC;gene=ccmFc
+Mt	exonerate	mRNA	307488	309870	.	+	.	ID=ccmFc-1.t1;Parent=ccmFc-1;Name=ccmFc;product=cytochrome c biogenesis FC;gene=ccmFc
+Mt	exonerate	exon	307488	308251	.	+	.	ID=ccmFc-1.t1:e1;Parent=ccmFc-1.t1;product=cytochrome c biogenesis FC
+Mt	exonerate	CDS	307488	308251	.	+	0	ID=ccmFc-1.t1:c1;Parent=ccmFc-1.t1;product=cytochrome c biogenesis FC
+Mt	exonerate	exon	309189	309870	.	+	.	ID=ccmFc-1.t1:e2;Parent=ccmFc-1.t1;product=cytochrome c biogenesis FC
+Mt	exonerate	CDS	309189	309870	.	+	1	ID=ccmFc-1.t1:c2;Parent=ccmFc-1.t1;product=cytochrome c biogenesis FC
+# coding sequence = [ATGGTCCAACTACATAACTTTTTCTTTTTTATTACTTTTATGGTCGTGCCTCGTGGCACGGCAGCACCCGTACTATTGAAATGGTTCGTCAGTAGAGATGTTCCCACGGGTGCCCCTTCTTCTAATGGTACTCTAATTCCTATTCCTATCCCCTTATTCCCTCTTTTAGTCTATCTACATTCCAGGAAATTCATACGCTCCATGGACGGAGCAAAAAGTAGAGTCTTGGTCAGAGCAAGCCGCCCTATTCTATTACCAGACATAATTGGGAGAAGCTCATCCGAAACTAGAGCTAGAAACGCCTTATTTCGTTTCGTTCCCGTTCTTCATTTCCTTCTTCTCGAATCCAAGGGGGACTTCTCATATTTAGAATCTTTCTGCGGTGTGCTCTGTTTACTATTCTTTCGTACTTTCTTCTTTTTACCACGCGATAGGTCAGCGAAGCGTGAGCGGGCGCGGAGAAGGAAAGGCCAAACACTTCGGCCTAACGGGAATGAGCAACGACGAAATGACAAGAGGAGGTGCTCCGGGCACCCCCAAAGAAGGGTCGAAGAAGGTTTTGGGCCTGTAGCTTTCCCCGTCCCCCCTTCGTCGGGTGGTGCTTGTGTGGAGGGTGTGCCTCCAGAAATCGGGCTTGAAGCTCTCGCCTTACCAACGAGCCGACAGCTGATGGCTGTTGGTCACGACTACTACCAAAAAGCTCCAATGAATATGAATATTTCACATGGAGGAGTGTGCATCTGTATGTTGGGTGTTCTTCTGTCTAACACAAAGAAGATACAGTTCACTCAACGATTGCCTTTGGGTTCCGAACTCCATATGGGGAAGGAGCGTTGTTGTTTGCGAGGTCTCGATCATTTACATGGACCCACTTTTCATTCCATTTGTGGAAATTTGATGATCTATAAACCGTCCCTAACGAACGATCGGCTCATGTTTGAGCATGATGAATCACTTCGCGCCGACCTGTTGCTAATAAACTTTCCGGCCTCATATGAGAATGGAAAACTGGAGCATTTTCTGCATCGGTGGATGAAGAATCGCGAACATAATAATTTCTGGTTGACCATGTTCCCAGAAAAAAGATACTTTCGAGAAACGACGAGCACGACTGAAGTGGCTATACATACAAATCTATTTACGGATCTATATGCTTCGATTGGAACTTCCAGTTCCAGAACAGGAGGCTGGTATACCACCATAATGAAACTTCCTTTTATTTTTTTTATTCGGATAGGATTTATGTTGGCTTCGTCGGGAGGCTCGCGTAGTTTGTTACGTCAGCTCCAAAAGGATAAGTTGCGTTGGAATCGAGAAAGTTCCGTGGAGTTTCATAATTGCATAAAAAGAGTCAAAGTCGTGGCTGCGGCGCGTCGAGGCACTTCTTCGACGGTCCCCGTCCGCCCGAACGAGACAGAATGGGCGGGCACTACTAACCAAGCCTAG]
+# protein sequence = [MVQLHNFFFFITFMVVPRGTAAPVLLKWFVSRDVPTGAPSSNGTLIPIPIPLFPLLVYLHSRKFIRSMDGAKSRVLVRASRPILLPDIIGRSSSETRARNALFRFVPVLHFLLLESKGDFSYLESFCGVLCLLFFRTFFFLPRDRSAKRERARRRKGQTLRPNGNEQRRNDKRRCSGHPQRRVEEGFGPVAFPVPPSSGGACVEGVPPEIGLEALALPTSRQLMAVGHDYYQKAPMNMNISHGGVCICMLGVLLSNTKKIQFTQRLPLGSELHMGKERCCLRGLDHLHGPTFHSICGNLMIYKPSLTNDRLMFEHDESLRADLLLINFPASYENGKLEHFLHRWMKNREHNNFWLTMFPEKRYFRETTSTTEVAIHTNLFTDLYASIGTSSSRTGGWYTTIMKLPFIFFIRIGFMLASSGGSRSLLRQLQKDKLRWNRESSVEFHNCIKRVKVVAAARRGTSSTVPVRPNETEWAGTTNQA]
+Mt	tRNAscan	gene	313897	313977	.	+	.	ID=trnM-CAU-1;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU
+Mt	tRNAscan	tRNA	313897	313977	.	+	.	ID=trnM-CAU-1.t1;Parent=trnM-CAU-1;Name=trnM-CAU;product=tRNA-Met;gene=trnM-CAU
+Mt	tRNAscan	exon	313897	313977	.	+	.	ID=trnM-CAU-1.t1:e1;Parent=trnM-CAU-1.t1;product=tRNA-Met
+Mt	exonerate	gene	317698	318417	.	-	.	ID=mttB-1;Name=mttB;product=transport membrane protein;gene=mttB
+Mt	exonerate	mRNA	317698	318417	.	-	.	ID=mttB-1.t1;Parent=mttB-1;Name=mttB;product=transport membrane protein;gene=mttB
+Mt	exonerate	exon	317698	318417	.	-	.	ID=mttB-1.t1:e1;Parent=mttB-1.t1;product=transport membrane protein
+Mt	exonerate	CDS	317698	318417	.	-	0	ID=mttB-1.t1:c1;Parent=mttB-1.t1;product=transport membrane protein
+# coding sequence = [TTGATCGGTCTTGGTTTGACATGGTTTACGCGTTACTGGTTCCCGGAAGAGTTAATATCTCCATTAACTAAACCCTTTCTTACCCTGCCTTTGGACTCGTATTTTGTTCGTACACAATCAACGGAGGCCCCCCCGACATATGTTGCAACGTCTTCAATAGCATGCTCTTACTTCGTCTTTCCTTTAATAAGTTATCAAATTTGGTGCTTTTTGATCCCCAGTTGCTATGGGGAACAAAGGACGAAATACAATCGATTCCTCCATTTAAGTGGTTCTCGCTTCTCCTTCTTCCTGTTCCTAACTCCTCCCCGGGTAGTTCCCAATGTTTGGCACTTTCCATACTTCGTGGGTGCAACATCAACTAATTCGCTCATGATCAAGTTACAACCTAAGATCTATGACTATATTATGTTAACTGTTCGTATTTCGTTCATTCTATCGGTATGCTCTCAGGTACCTGTAATTGTGATCCGTTTGCCAGAACCAAGGGGTCTTTCTGTGGAAACCTCCACAAACAATCGTCGTTTTTTGATGGTTTTTCCGCTTCTCACAGCTGCTCTTTCCGCACCTCCGGATATCTGGTGCCAAATCGTCGCCCGTTTCCTTATTTCTTTGATAATAGAGTTGGCTATCTTTGTGGCATCGATTGTACAAGTTCGTGAAGAGGGCTGGACGAGTGGAATGAGGGAGAGCGGCTCGATCGACAAAAAACAAGAGTAG]
+# protein sequence = [MIGLGLTWFTRYWFPEELISPLTKPFLTLPLDSYFVRTQSTEAPPTYVATSSIACSYFVFPLISYQIWCFLIPSCYGEQRTKYNRFLHLSGSRFSFFLFLTPPRVVPNVWHFPYFVGATSTNSLMIKLQPKIYDYIMLTVRISFILSVCSQVPVIVIRLPEPRGLSVETSTNNRRFLMVFPLLTAALSAPPDIWCQIVARFLISLIIELAIFVASIVQVREEGWTSGMRESGSIDKKQE]
 Mt	hmmsearch	gene	332076	335173	.	+	.	ID=rrn26-1;Name=rrnL;product=26S ribosomal RNA;gene=rrnL
 Mt	hmmsearch	rRNA	332076	335173	.	+	.	ID=rrn26-1.t1;Parent=rrn26-1;Name=rrnL;product=26S ribosomal RNA;gene=rrnL
 Mt	hmmsearch	exon	332077	335173	.	+	.	ID=rrn26-1.t1:e1;Parent=rrn26-1.t1;product=26S ribosomal RNA
-Mt	hmmsearch	gene	347112	347198	.	+	.	ID=trnI-UAU-1;Name=trnI-UAU;product=tRNA-Ile;gene=trnI-UAU
-Mt	hmmsearch	tRNA	347112	347198	.	+	.	ID=trnI-UAU-1.t1;Parent=trnI-UAU-1;Name=trnI-UAU;product=tRNA-Ile;gene=trnI-UAU
-Mt	hmmsearch	exon	347113	347198	.	+	.	ID=trnI-UAU-1.t1:e1;Parent=trnI-UAU-1.t1;product=tRNA-Ile
-Mt	hmmsearch	gene	524784	524867	.	-	.	ID=trnY-1;Name=trnY-GUA;product=tRNA-Tyr;gene=trnY-GUA;exception=trans-splicing
-Mt	hmmsearch	tRNA	524784	524867	.	-	.	ID=trnY-1.t1;Parent=trnY-1;Name=trnY-GUA;product=tRNA-Tyr;gene=trnY-GUA;exception=trans-splicing
-Mt	hmmsearch	gene	355146	355164	.	-	.	ID=trnY-1;Name=trnY-GUA;product=tRNA-Tyr;gene=trnY-GUA;exception=trans-splicing
-Mt	hmmsearch	tRNA	355146	355164	.	-	.	ID=trnY-1.t1;Parent=trnY-1;Name=trnY-GUA;product=tRNA-Tyr;gene=trnY-GUA;exception=trans-splicing
-Mt	hmmsearch	exon	524785	524867	.	-	.	ID=trnY-1.t1:e1;Parent=trnY-1.t1;product=tRNA-Tyr;exception=trans-splicing
-Mt	hmmsearch	exon	355147	355164	.	-	.	ID=trnY-1.t1:e2;Parent=trnY-1.t1;product=tRNA-Tyr;exception=trans-splicing
-Mt	hmmsearch	gene	425249	425337	.	+	.	ID=trnS-GCU-2;Name=trnS-GCU;product=tRNA-Ser;gene=trnS-GCU
-Mt	hmmsearch	tRNA	425249	425337	.	+	.	ID=trnS-GCU-2.t1;Parent=trnS-GCU-2;Name=trnS-GCU;product=tRNA-Ser;gene=trnS-GCU
-Mt	hmmsearch	exon	425250	425337	.	+	.	ID=trnS-GCU-2.t1:e1;Parent=trnS-GCU-2.t1;product=tRNA-Ser
-Mt	hmmsearch	gene	425249	425334	.	+	.	ID=trnS-GGA-1;Name=trnS-GGA-cp;product=tRNA-Ser;gene=trnS-GGA-cp
-Mt	hmmsearch	tRNA	425249	425334	.	+	.	ID=trnS-GGA-1.t1;Parent=trnS-GGA-1;Name=trnS-GGA-cp;product=tRNA-Ser;gene=trnS-GGA-cp
-Mt	hmmsearch	exon	425250	425334	.	+	.	ID=trnS-GGA-1.t1:e1;Parent=trnS-GGA-1.t1;product=tRNA-Ser
-Mt	hmmsearch	gene	425249	425336	.	+	.	ID=trnS-UGA-2;Name=trnS-UGA;product=tRNA-Ser;gene=trnS-UGA
-Mt	hmmsearch	tRNA	425249	425336	.	+	.	ID=trnS-UGA-2.t1;Parent=trnS-UGA-2;Name=trnS-UGA;product=tRNA-Ser;gene=trnS-UGA
-Mt	hmmsearch	exon	425250	425336	.	+	.	ID=trnS-UGA-2.t1:e1;Parent=trnS-UGA-2.t1;product=tRNA-Ser
-Mt	hmmsearch	gene	425693	425767	.	+	.	ID=trnF-GAA-1;Name=trnF-GAA;product=tRNA-Phe;gene=trnF-GAA
-Mt	hmmsearch	tRNA	425693	425767	.	+	.	ID=trnF-GAA-1.t1;Parent=trnF-GAA-1;Name=trnF-GAA;product=tRNA-Phe;gene=trnF-GAA
-Mt	hmmsearch	exon	425694	425767	.	+	.	ID=trnF-GAA-1.t1:e1;Parent=trnF-GAA-1.t1;product=tRNA-Phe
-Mt	hmmsearch	gene	425981	426056	.	+	.	ID=trnP-1;Name=trnP-UGG;product=tRNA-Pro;gene=trnP-UGG
-Mt	hmmsearch	tRNA	425981	426056	.	+	.	ID=trnP-1.t1;Parent=trnP-1;Name=trnP-UGG;product=tRNA-Pro;gene=trnP-UGG
-Mt	hmmsearch	exon	425982	426056	.	+	.	ID=trnP-1.t1:e1;Parent=trnP-1.t1;product=tRNA-Pro
-Mt	hmmsearch	gene	436503	436577	.	+	.	ID=trnH-1;Name=trnH-GUG-cp;product=tRNA-His;gene=trnH-GUG-cp
-Mt	hmmsearch	tRNA	436503	436577	.	+	.	ID=trnH-1.t1;Parent=trnH-1;Name=trnH-GUG-cp;product=tRNA-His;gene=trnH-GUG-cp
-Mt	hmmsearch	exon	436504	436577	.	+	.	ID=trnH-1.t1:e1;Parent=trnH-1.t1;product=tRNA-His
-Mt	hmmsearch	gene	436510	436575	.	-	.	ID=trnH-2;Name=trnH-GUG-cp;product=tRNA-His;gene=trnH-GUG-cp
-Mt	hmmsearch	tRNA	436510	436575	.	-	.	ID=trnH-2.t1;Parent=trnH-2;Name=trnH-GUG-cp;product=tRNA-His;gene=trnH-GUG-cp
-Mt	hmmsearch	exon	436511	436575	.	-	.	ID=trnH-2.t1:e1;Parent=trnH-2.t1;product=tRNA-His
+Mt	tRNAscan	gene	335544	335617	.	+	.	ID=trnfM-1;Name=trnfM-CAU;product=tRNA-Met;gene=trnfM-CAU
+Mt	tRNAscan	tRNA	335544	335617	.	+	.	ID=trnfM-1.t1;Parent=trnfM-1;Name=trnfM-CAU;product=tRNA-Met;gene=trnfM-CAU
+Mt	tRNAscan	exon	335544	335617	.	+	.	ID=trnfM-1.t1:e1;Parent=trnfM-1.t1;product=tRNA-Met
+Mt	augustus	gene	346374	347126	.	+	.	ID=ccmC-1;Name=ccmC;product=cytochrome c biogenesis C;gene=ccmC
+Mt	augustus	mRNA	346374	347126	.	+	.	ID=ccmC-1.t1;Parent=ccmC-1;Name=ccmC;product=cytochrome c biogenesis C;gene=ccmC
+Mt	augustus	exon	346374	347126	.	+	.	ID=ccmC-1.t1:e1;Parent=ccmC-1.t1;product=cytochrome c biogenesis C
+Mt	augustus	CDS	346374	347126	.	+	0	ID=ccmC-1.t1:c1;Parent=ccmC-1.t1;product=cytochrome c biogenesis C
+# coding sequence = [ATGTCCCTTTCGTTATTACAACCTTCTTTTTTGATGTCAAAGACCAAAAGCTATGCGCAAATTCTCATTGGATCTCGGTTGTTCTTAACAGCGATGGCTATTCATTTAAGTCTTCGGGTAGGACCACTAGATTTTCAACAAGGTGGAAATTCTCGTATTCTGTATGTACATGTTCCTGCGGCTCGGATGAGTATTCTTGTTTATATCGCTACGGCTATAAACACTTTCTTGTTCCTATTAACAAAACATCCCCTTTTTCTTCGCTCTTCCGGAACCGGTATAGAAATGGGTGCTTTTTTTACGTTGTTTACCTTAGTTACTGGGGGGTTTCGGGGAAGACCTATGTGGGGCACCTTTTGGGTGTGGGATGCTCGTTTAACCTCTGTATTCATCTCGTTCCTTATTTACCTGGGTGCACTGTGTTTTCAAAAGCTTCCTGTCGAACCGGCTTCTATTTCAATCCGTGCTGGACCGATCGATATACCAATAATCAAGTCTTCAGTCAACTGGTGGAATACATCGCATCAACCTGGGAGCATTAGCCGATCTGGTACATCAATACATGTTCCTATGCCCATTCCAATCTTGTCTAACTTTGCTAACTCCCCCTTCTCAACCCGTATCTTGTTTGTTCTGGAAACACGTCTTCCTATTCCATCTTTTCTCGAATCTCCTTTAACGGAAGAAATAGAAGCTCGAGAAGGAATACCAAAACCTAGTTCACTCGCTGAGTCTCTAAGCATCCATGGCTGA]
+# protein sequence = [MSLSLLQPSFLMSKTKSYAQILIGSRLFLTAMAIHLSLRVGPLDFQQGGNSRILYVHVPAARMSILVYIATAINTFLFLLTKHPLFLRSSGTGIEMGAFFTLFTLVTGGFRGRPMWGTFWVWDARLTSVFISFLIYLGALCFQKLPVEPASISIRAGPIDIPIIKSSVNWWNTSHQPGSISRSGTSIHVPMPIPILSNFANSPFSTRILFVLETRLPIPSFLESPLTEEIEAREGIPKPSSLAESLSIHG]
+Mt	tRNAscan	gene	347113	347198	.	+	.	ID=trnI-UAU-1;Name=trnI-UAU-cp;product=tRNA-Ile;gene=trnI-UAU-cp
+Mt	tRNAscan	tRNA	347113	347198	.	+	.	ID=trnI-UAU-1.t1;Parent=trnI-UAU-1;Name=trnI-UAU-cp;product=tRNA-Ile;gene=trnI-UAU-cp
+Mt	tRNAscan	exon	347113	347198	.	+	.	ID=trnI-UAU-1.t1:e1;Parent=trnI-UAU-1.t1;product=tRNA-Ile
+Mt	augustus	gene	353340	355073	.	-	.	ID=ccmFn-1;Name=ccmFn;product=cytochrome c biogenesis FN;gene=ccmFn
+Mt	augustus	mRNA	353340	355073	.	-	.	ID=ccmFn-1.t1;Parent=ccmFn-1;Name=ccmFn;product=cytochrome c biogenesis FN;gene=ccmFn
+Mt	augustus	exon	353340	355073	.	-	.	ID=ccmFn-1.t1:e1;Parent=ccmFn-1.t1;product=cytochrome c biogenesis FN
+Mt	augustus	CDS	353340	355073	.	-	0	ID=ccmFn-1.t1:c1;Parent=ccmFn-1.t1;product=cytochrome c biogenesis FN
+# coding sequence = [ATGTCAATATATGAATTGTTTCATTATTCGTTATTTCCGGGTCTTTTCCTTGCATTCACTTACAACAAGAAACAACCACCAGCGTTTGGTGCAGCACCTGCATTTTGGTGCATTCTTCTTTCTTTCCTTGGTCTTTCGTTCCGTCATATTCCTAATAACTTATCCAATTACAACGTATTAACCGCTAATGCACCTTTCTTTTATCAAATCTCAGGGACATGGTCTAATCATGAGGGTAGTATTTTATCATGGTGTCGGATCCCAAATTTTTATGGATTCCTTCTTTGTTACCGGGGTCGACCCCAAAGCCATAATGTCTCAAAACGAGGAGGCCATAGAGAAACTTTTTTCTATTTTTTTGTCTCGAACTTCGTGAAGAACTCCATTCTATCTCTCCCTCGTTACGAACAAAAAAGTGGGGCTGCGCCCCAGTTGTACACTCCCTTCGTTCTACGAACCCTTGTAGATTCTGAACTTCGTTCGCGAAGGAACCGGACTTTTGACGGACCAACCCTTTTTTATGCGCCGCTTTACCCTGAAAGGAAAATGAGCTTTGCTCCTCTGGGCGCTAGGCGCTCCCGTGGTTCGCGAGAAGGAAAAAGGACTCATCCTTTGTTGCATCTGGCACGAGATGATAAAGAGAGAGCTTCGTCTATCGATGAACAGCGGATTGACGGAGCTCTTGGCATTGCTTTGTTTTTCTCTCCTTTCCTATCAGCGAGTTCCGATCCTTTTGTTCGAAATTTCTTCGTTCGTACCGAACCGCTTGCAGAATCAAATCCTGTTCCACAAGATCCTATATCAGCTATACACCCTCCTTGCATTTATGCCGGAGACGTCGCCAGTGCTATGGGCTTTGGCTTATGTAGATCAAAAATGATGAATGGGATTGTGGCACTCCACTCGCCGCCAATGCGGAAGGATGCCGCCGAAAAGAATGGAACGCTGCTTCGCTCTGCTGGATGCGTCGGATCCCGTATAACAAGCGAGCTTCTTACCCTCAAATTCAAACATGTGGGCGCTAAATGCTATCCTGCTCTATTGTTACGTAGCAATAGAAGCCCGCTCATGCTGCTTCGGCGGCGCTTTTTCGCCTTCTCTTCGCTCTGGACAGGAGCGCTAGTGGACACGGGGAGGGAGCAGGCGAAGCGTGTCGTTCGTAATGGAAAGAAAGATACCACTACTTCGCCTCTTTGTTGGACCGCCGGCGCGAACACAGTGGGCTCTGACCAGGACCTGGAACCAATTCGAATTTGGATCTTGACATGTTGGTGGTTTTTAACCGTAGGCATCTTGCCAGGAAGTTGGTGGGCTTATCATGAATTAGGTCGGGGTGGCTGGTGGTTTCGGGATCCCGTAGAAAATGCTTCTTTTATGCCTCGGGTATTAGCCACAGCTCGTATTCATTCAGTAATTCTACCCCTTCTTCATTCTTGGACCTCGTTTCTTAATATTGTGACTCTTCCATGCTGTGTCTCAGGAACCTTTTCAATACGGTCCGGATTGCTAGCTCCCGTTCATAGTTTTGCTACAGATGATACACGAGGAATCTTTTTATGGCGGTTCTTCCTTCTAATGACCGGCATATCTATGATTCTTTTCTCCCAGATGAAGCAGCAGGCATCGGTCCGTAGAACCTATAAAAAAGAGATGGTTGTGGCGCGAAGTACTCTTGTGCACCTACGTCACTCGGCTCGCGCGCAACCCCGCCCCGTTATGTTATGGAAGAATTGA]
+# protein sequence = [MSIYELFHYSLFPGLFLAFTYNKKQPPAFGAAPAFWCILLSFLGLSFRHIPNNLSNYNVLTANAPFFYQISGTWSNHEGSILSWCRIPNFYGFLLCYRGRPQSHNVSKRGGHRETFFYFFVSNFVKNSILSLPRYEQKSGAAPQLYTPFVLRTLVDSELRSRRNRTFDGPTLFYAPLYPERKMSFAPLGARRSRGSREGKRTHPLLHLARDDKERASSIDEQRIDGALGIALFFSPFLSASSDPFVRNFFVRTEPLAESNPVPQDPISAIHPPCIYAGDVASAMGFGLCRSKMMNGIVALHSPPMRKDAAEKNGTLLRSAGCVGSRITSELLTLKFKHVGAKCYPALLLRSNRSPLMLLRRRFFAFSSLWTGALVDTGREQAKRVVRNGKKDTTTSPLCWTAGANTVGSDQDLEPIRIWILTCWWFLTVGILPGSWWAYHELGRGGWWFRDPVENASFMPRVLATARIHSVILPLLHSWTSFLNIVTLPCCVSGTFSIRSGLLAPVHSFATDDTRGIFLWRFFLLMTGISMILFSQMKQQASVRRTYKKEMVVARSTLVHLRHSARAQPRPVMLWKN]
+Mt	augustus	gene	360720	361562	.	-	.	ID=atp6-1;Name=atp6;product=ATP synthase subunit 6;gene=atp6
+Mt	augustus	mRNA	360720	361562	.	-	.	ID=atp6-1.t1;Parent=atp6-1;Name=atp6;product=ATP synthase subunit 6;gene=atp6
+Mt	augustus	exon	360720	361562	.	-	.	ID=atp6-1.t1:e1;Parent=atp6-1.t1;product=ATP synthase subunit 6
+Mt	augustus	CDS	360720	361562	.	-	0	ID=atp6-1.t1:c1;Parent=atp6-1.t1;product=ATP synthase subunit 6
+# coding sequence = [CTGGAGGGAATGTTGAATGATTTAATCGTAAGAGGAGTATATAGTGAATTCTATGAATATGCGGAGTCTATTCTGAATAATATGGTCCCCAGCCCCCTTGAGCAATTTTCGATTGTGCCATTGATTCCTATGAATTTAGGAGATTTGTATTTCTCATTCACAAATTCATCTTTGTTTATGCTGCTAACTCTCAGTTTGGTCCTACTTTTGGTTCATTTTGTTACTCGAGGAGGAAACTTAGTACCAAATGCTTGGCAATCCTTGGTAGAGCTTCTTTATGATTTCGTGCTGAACCTGGTAAACGAACAAATAGGTGGTCTTTCCGGAAATGTGAAACAAAAGTTTTTCCCTTGCATCTTTGTCACTTTTACTTTTTTGTTATTTTGTAATCTTCAGGGTATGATACCTTATAGCTTCACAGTTACAAGTCATTTTCTCATTACTTTGGGTCTCTCATTTTCTATTTTTATTGGCATTACTATAGTGGGATTTCAAAGAAATGGGCTTCATTTTTTAAGCTTCTTATTACCTGCAGGAGTCCCACTGCCGTTAGCGCCCTTTTTAGTACTCCTTGAGCTAATCTCTTATTGTTTTCGCGCATTAAGCTTAGGAATACGTTTATTTGCTAATATGATGGCCGGTCATAGTTTAGTAAAGATTTTAAGTGGGTTCGCTTGGACTATGCTATGTATGAATAATCTTTTCTATTTCATAGGGGATCTTGGTCCTTTATTTATAGTTCTTGCATTAACCGGCCTGGAATTAGGTGTAGCTATATTACAAGCTTATGTTTTTACGATCTTAATCTGTATTTACTTGAATGATGCTATAAATCTCCATTAA]
+# protein sequence = [MEGMLNDLIVRGVYSEFYEYAESILNNMVPSPLEQFSIVPLIPMNLGDLYFSFTNSSLFMLLTLSLVLLLVHFVTRGGNLVPNAWQSLVELLYDFVLNLVNEQIGGLSGNVKQKFFPCIFVTFTFLLFCNLQGMIPYSFTVTSHFLITLGLSFSIFIGITIVGFQRNGLHFLSFLLPAGVPLPLAPFLVLLELISYCFRALSLGIRLFANMMAGHSLVKILSGFAWTMLCMNNLFYFIGDLGPLFIVLALTGLELGVAILQAYVFTILICIYLNDAINLH]
+Mt	augustus	gene	402143	402727	.	-	.	ID=atp4-1;Name=atp4;product=ATP synthase subunit 4;gene=atp4
+Mt	augustus	mRNA	402143	402727	.	-	.	ID=atp4-1.t1;Parent=atp4-1;Name=atp4;product=ATP synthase subunit 4;gene=atp4
+Mt	augustus	exon	402143	402727	.	-	.	ID=atp4-1.t1:e1;Parent=atp4-1.t1;product=ATP synthase subunit 4
+Mt	augustus	CDS	402143	402727	.	-	0	ID=atp4-1.t1:c1;Parent=atp4-1.t1;product=ATP synthase subunit 4
+# coding sequence = [ATGAGATTGAGTTCCACGGCTAGAAAGATGTTATTTGCTGCTATTCCATCTATTTGTGCATTAAGTTCGAAGAAGATCTCAATCTATAATGAAGAAATGATAGTAGCTCGTTGTTTTATAGGCTTTATCATATTCAGTCGTAAGAGTTTAGGTAAGACTTTCAAAGCGACTCTCGACGGGAGAATCCAGGCTATTCAGGAAGAATCGCAGCAATTCCCCAATCCTAACGAAGTAGTTCCTCCGGAATCCAATGAACAACAACGATTACTTAGGATCAGCTTGCGAATTTGTGGCACCGTAGTAGAATCATTACCAATGGCACGCTGTGCGCCTAAGTGCGAAAAGACAGTGCAAGCTTTGTTATGCCGAAACCTAAATGTTAAGTCAGCAACACTTCCAAATGCCACTTCTTCCCGTCGCATCCGTCTTCAGGACGATCTAGTCACAAGGTTTCACTTTTTAGTGCGTGCAAGATTTTCCCCCCGGTGTATATTGAAAGCAGAAATAGTAGAACTCATTCGAGAGGGCTTGGTGGTCTTAAGAATGGTTCGGGTAGGGGGTTGTTCTAAAATAAAATCAAAATGA]
+# protein sequence = [MRLSSTARKMLFAAIPSICALSSKKISIYNEEMIVARCFIGFIIFSRKSLGKTFKATLDGRIQAIQEESQQFPNPNEVVPPESNEQQRLLRISLRICGTVVESLPMARCAPKCEKTVQALLCRNLNVKSATLPNATSSRRIRLQDDLVTRFHFLVRARFSPRCILKAEIVELIREGLVVLRMVRVGGCSKIKSK]
+Mt	augustus	gene	402899	403171	.	-	.	ID=nad4L-1;Name=nad4L;product=NADH dehydrogenase subunit 4L;gene=nad4L
+Mt	augustus	mRNA	402899	403171	.	-	.	ID=nad4L-1.t1;Parent=nad4L-1;Name=nad4L;product=NADH dehydrogenase subunit 4L;gene=nad4L
+Mt	augustus	exon	402899	403171	.	-	.	ID=nad4L-1.t1:e1;Parent=nad4L-1.t1;product=NADH dehydrogenase subunit 4L
+Mt	augustus	CDS	402899	403171	.	-	0	ID=nad4L-1.t1:c1;Parent=nad4L-1.t1;product=NADH dehydrogenase subunit 4L
+# coding sequence = [ATGATTATCTCTATTTTAGGTATTCGGGGAATCCTCCTTAATAGACGAAATATTCCTATTATGTCAATGTCAATTGAATCAATGTTATTAGCTGTGAATTCGAACTTTTTGGTATTTTCAGTTTCTTCGGATGATATGATGGGTCAATCATTTGCTTCATTGGTTCCAACGGTGGCAGCTGCGGAATCTGCTATTGGGTTAGCCATTTTCGTTATTACTTTCCGAGTCCGAGGGACTATTGCTGTAGAATTTATTAATAGCATTCAAGGTTAA]
+# protein sequence = [MIISILGIRGILLNRRNIPIMSMSIESMLLAVNSNFLVFSVSSDDMMGQSFASLVPTVAAAESAIGLAIFVITFRVRGTIAVEFINSIQG]
+Mt	exonerate	gene	459668	459962	.	+	.	ID=nad1-1;Name=nad1;product=NADH dehydrogenase subunit 1;gene=nad1;exception=trans-splicing
+Mt	exonerate	mRNA	459668	459962	.	+	.	ID=nad1-1.t1;Parent=nad1-1;Name=nad1;product=NADH dehydrogenase subunit 1;gene=nad1;exception=trans-splicing
+Mt	exonerate	gene	145416	147134	.	+	.	ID=nad1-1;Name=nad1;product=NADH dehydrogenase subunit 1;gene=nad1;exception=trans-splicing
+Mt	exonerate	mRNA	145416	147134	.	+	.	ID=nad1-1.t1;Parent=nad1-1;Name=nad1;product=NADH dehydrogenase subunit 1;gene=nad1;exception=trans-splicing
+Mt	exonerate	gene	247658	247716	.	+	.	ID=nad1-1;Name=nad1;product=NADH dehydrogenase subunit 1;gene=nad1;exception=trans-splicing
+Mt	exonerate	mRNA	247658	247716	.	+	.	ID=nad1-1.t1;Parent=nad1-1;Name=nad1;product=NADH dehydrogenase subunit 1;gene=nad1;exception=trans-splicing
+Mt	exonerate	gene	412301	412559	.	-	.	ID=nad1-1;Name=nad1;product=NADH dehydrogenase subunit 1;gene=nad1;exception=trans-splicing
+Mt	exonerate	mRNA	412301	412559	.	-	.	ID=nad1-1.t1;Parent=nad1-1;Name=nad1;product=NADH dehydrogenase subunit 1;gene=nad1;exception=trans-splicing
+Mt	exonerate	exon	459668	459962	.	+	.	ID=nad1-1.t1:e1;Parent=nad1-1.t1;product=NADH dehydrogenase subunit 1;exception=trans-splicing
+Mt	exonerate	CDS	459668	459962	.	+	0	ID=nad1-1.t1:c1;Parent=nad1-1.t1;product=NADH dehydrogenase subunit 1;exception=trans-splicing
+Mt	exonerate	exon	145416	145498	.	+	.	ID=nad1-1.t1:e2;Parent=nad1-1.t1;product=NADH dehydrogenase subunit 1;exception=trans-splicing
+Mt	exonerate	CDS	145416	145498	.	+	2	ID=nad1-1.t1:c2;Parent=nad1-1.t1;product=NADH dehydrogenase subunit 1;exception=trans-splicing
+Mt	exonerate	exon	146943	147134	.	+	.	ID=nad1-1.t1:e3;Parent=nad1-1.t1;product=NADH dehydrogenase subunit 1;exception=trans-splicing
+Mt	exonerate	CDS	146943	147134	.	+	0	ID=nad1-1.t1:c3;Parent=nad1-1.t1;product=NADH dehydrogenase subunit 1;exception=trans-splicing
+Mt	exonerate	exon	247658	247716	.	+	.	ID=nad1-1.t1:e4;Parent=nad1-1.t1;product=NADH dehydrogenase subunit 1;exception=trans-splicing
+Mt	exonerate	CDS	247658	247716	.	+	0	ID=nad1-1.t1:c4;Parent=nad1-1.t1;product=NADH dehydrogenase subunit 1;exception=trans-splicing
+Mt	exonerate	exon	412301	412559	.	-	.	ID=nad1-1.t1:e5;Parent=nad1-1.t1;product=NADH dehydrogenase subunit 1;exception=trans-splicing
+Mt	exonerate	CDS	412301	412559	.	-	1	ID=nad1-1.t1:c5;Parent=nad1-1.t1;product=NADH dehydrogenase subunit 1;exception=trans-splicing
+# coding sequence = [ATGGCTTTTGTGCAACGTCGAAAGGGTCCTGATGTTGTGGGATCGTTCGGATTGTTACAACCTCTAGCAGATGGTTCGAAATTGATTCTAAAAGAACCTATTTCACCGAGTAGTGCTAATTTCTCCCTTTTTAGAATGGCTCCAGTGGCTACATTTATGTTAAGTCTGGTCGCTCGGGCCGTTGTACCTTTTGATTATGGTATGGTATTGTCAGATCCGAACATAGGGCTACTTTATTTGTTTGCCATATCTTCGCTAGGTGTTTATGGAATTATTACAGCAGGTCGGTCTAGTAATTCGAAATATGCCTTTCTAGGAGCATTACGATCTGCAGCTCAAATGGTCTCTTATGAAGTCTCTATTGGTCTTATTCTTATTACTGTACTAATATGTGTAGGTCCCCGTAATTCGAGTGAGATTGTCATGGCGCAAAAGCAGATATGGTCTGGTATTCCCTTGTTCCCTGTATTGGTTATGTTCCTCATTTCTCGTCTAGCAGAAACTAATCGAGCTCCGTTTGATCTCCCAGAAGCGGAAGCTGAATCAGTTGCAGGCTATAATGTAGAATATTCTTCAATGGGGTCTGCTCTTTTTTTTTTGGGAGAGTATGCTAATATGATCTTAATGAGTGGTCCATGCACATCGCTCTCTCCAGGAGGTTGGCCGCCTATCCTAGATCTTCCCATTTTCAAGAAGATCCCGGGCTCGATCCGGTTTAGTATCAAGGTGATTCTCTTTCTGTTCCTATATATATGGGTCCGTGCAGCATTTCCACGATATCGTTATGATCAATTAATGGGACTTGGCCGGAAAGTGTTCTTGCCTCTATCATTAGCTCGGGTAGTCCCCGTTTCTGGTGTTTTAGTCACCTTTCAATGGCTCCCTTAA]
+# protein sequence = [MAFVQRRKGPDVVGSFGLLQPLADGSKLILKEPISPSSANFSLFRMAPVATFMLSLVARAVVPFDYGMVLSDPNIGLLYLFAISSLGVYGIITAGRSSNSKYAFLGALRSAAQMVSYEVSIGLILITVLICVGPRNSSEIVMAQKQIWSGIPLFPVLVMFLISRLAETNRAPFDLPEAEAESVAGYNVEYSSMGSALFFLGEYANMILMSGPCTSLSPGGWPPILDLPIFKKIPGSIRFSIKVILFLFLYIWVRAAFPRYRYDQLMGLGRKVFLPLSLARVVPVSGVLVTFQWLP]
+Mt	tRNAscan	gene	425250	425337	.	+	.	ID=trnS-GCU-2;Name=trnS-GCU;product=tRNA-Ser;gene=trnS-GCU
+Mt	tRNAscan	tRNA	425250	425337	.	+	.	ID=trnS-GCU-2.t1;Parent=trnS-GCU-2;Name=trnS-GCU;product=tRNA-Ser;gene=trnS-GCU
+Mt	tRNAscan	exon	425250	425337	.	+	.	ID=trnS-GCU-2.t1:e1;Parent=trnS-GCU-2.t1;product=tRNA-Ser
+Mt	tRNAscan	gene	425694	425767	.	+	.	ID=trnF-GAA-1;Name=trnF-GAA;product=tRNA-Phe;gene=trnF-GAA
+Mt	tRNAscan	tRNA	425694	425767	.	+	.	ID=trnF-GAA-1.t1;Parent=trnF-GAA-1;Name=trnF-GAA;product=tRNA-Phe;gene=trnF-GAA
+Mt	tRNAscan	exon	425694	425767	.	+	.	ID=trnF-GAA-1.t1:e1;Parent=trnF-GAA-1.t1;product=tRNA-Phe
+Mt	tRNAscan	gene	425982	426056	.	+	.	ID=trnP-3;Name=trnP-UGG;product=tRNA-Pro;gene=trnP-UGG
+Mt	tRNAscan	tRNA	425982	426056	.	+	.	ID=trnP-3.t1;Parent=trnP-3;Name=trnP-UGG;product=tRNA-Pro;gene=trnP-UGG
+Mt	tRNAscan	exon	425982	426056	.	+	.	ID=trnP-3.t1:e1;Parent=trnP-3.t1;product=tRNA-Pro
+Mt	tRNAscan	gene	434102	434173	.	-	.	ID=trnE-UUC-1;Name=trnE-UUC;product=tRNA-Glu;gene=trnE-UUC
+Mt	tRNAscan	tRNA	434102	434173	.	-	.	ID=trnE-UUC-1.t1;Parent=trnE-UUC-1;Name=trnE-UUC;product=tRNA-Glu;gene=trnE-UUC
+Mt	tRNAscan	exon	434102	434173	.	-	.	ID=trnE-UUC-1.t1:e1;Parent=trnE-UUC-1.t1;product=tRNA-Glu
+Mt	tRNAscan	gene	436504	436577	.	+	.	ID=trnH-1;Name=trnH-GUG-cp;product=tRNA-His;gene=trnH-GUG-cp
+Mt	tRNAscan	tRNA	436504	436577	.	+	.	ID=trnH-1.t1;Parent=trnH-1;Name=trnH-GUG-cp;product=tRNA-His;gene=trnH-GUG-cp
+Mt	tRNAscan	exon	436504	436577	.	+	.	ID=trnH-1.t1:e1;Parent=trnH-1.t1;product=tRNA-His
+Mt	augustus	gene	440379	441962	.	-	.	ID=cox1-1;Name=cox1;product=cytochrome c oxidase subunit 1;gene=cox1
+Mt	augustus	mRNA	440379	441962	.	-	.	ID=cox1-1.t1;Parent=cox1-1;Name=cox1;product=cytochrome c oxidase subunit 1;gene=cox1
+Mt	augustus	exon	440379	441962	.	-	.	ID=cox1-1.t1:e1;Parent=cox1-1.t1;product=cytochrome c oxidase subunit 1
+Mt	augustus	CDS	440379	441962	.	-	0	ID=cox1-1.t1:c1;Parent=cox1-1.t1;product=cytochrome c oxidase subunit 1
+# coding sequence = [ATGACAAATCAGGTCCGATGGCTGTTCTCCACTAACCACAAGGATATAGGGACTCTCTATTTCATCTTCGGTGCCATTGCAGGAGTGATGGGGACATGCTTCTCAGTACTGATTCGTATGGAATTAGCACGACCCGGCGATCAAATTCTTGGTGGGAATCATCAACTTTATAATGTTTTAATAACGGCTCACGCTTTTTTAATGATCTTTTTTATGGTTATGCCGGCGATGATAGGTGGATCTGGTAATTGGTCTGTTCCGATTCTGATAGGTGCACCTGACATGGCATTTCCGCGATTAAATAATATTTCATTCTGGTTGTTGCCACCAAGTCTCTTGCTCCTATTAAGCTCAGCCTTAGTAGAAGTGGGTAGCGGCACTGGGTGGACGGTCTATCCGCCCTTAAGTGGTATTACCAGCCATTCAGGAGGAGCAGTTGATTCAGCAATTTCTAGTCTTCATCTATCTGGTGTTTCATCCATTTTAGGTTCAATCAATTTTATAACAACTATCTCCAACATGCGTGGACCTGGAATGACTATGCATAGATCACCCCTATTTGTGTGGTCCGTTCTAGTGACAGCATTCCCACTTTTATTATCACTTCCGGTACTGGCAGGGGCAATTACCATGTTATTAACCGATCGAAACTTTAATACAACCTTTTCTGATCCCGCTGGAGGGGGAGACCCCATATTATACCAGCATCTCTTTTGGTTCTTCGGTCATCCAGAGGTGTATATTCCCATTCTGCCTGGATCCGGTATCATAAGTCATATCGTTTCGACTTTTTCGGGAAAACCGGTCTTCGGGTATCTAGGCATGGTTTATGCCATGATCAGTATAGGTGTTCTTGGATTTCTTGTTTGGGCTCATCATATGTTTACTGTGGGCTTAGACGTTGATACCCGTGCCTACTTCACCGCAGCTACCATGATCATAGCAGTCCCCACTGGAATCAAAATCTTTAGTTGGATCGCTACCATGTGGGGGGGTTCGATACAATACAAAACACCCATGTTATTTGCTGTAGGGTTCATCTTTTTGTTCACTATAGGAGGACTCACTGGGATAGTCCCGGCAAATTCTGGGCTAGACATTGCTCTACATGATACTTATTATGTGGTTGCACATTTCCATTATGTACTTTCTATGGGAGCCGTTTTTGCTTTATTTGCAGGATTTCACTATTGGGTGGGTAAAATCTTTGGTCGGACATACCCTGAAACTTTAGGTCAAATCCATTTTTGGATCACTTTTTTCGGGGTGAATCTCACCTTCTTTCCCATGCATTTCTTAGGGCTTTCGGGTATGCCACGTCGCATTCCAGATTATCCAGATGCTTACGCTGGATGGAATGCCCTTAGCAGTTTTGGCTCTTATATATCCGTAGTTGGGATTCGTCGTTTCTTCGTGGTCGTAACAATCACTTCAAGCAGTGGAAATAACAAAAGATGTGCTCCAAGTCCTTGGGCTGTTGAACAGAATCCAACCACACCGGAATGGATGGTACAAAGTCCTCCAGCTTTTCATACTTTTGGAGAACTTCCAGCTATCAAGGAGACGAAAAGCTATGTGAAGTAA]
+# protein sequence = [MTNQVRWLFSTNHKDIGTLYFIFGAIAGVMGTCFSVLIRMELARPGDQILGGNHQLYNVLITAHAFLMIFFMVMPAMIGGSGNWSVPILIGAPDMAFPRLNNISFWLLPPSLLLLLSSALVEVGSGTGWTVYPPLSGITSHSGGAVDSAISSLHLSGVSSILGSINFITTISNMRGPGMTMHRSPLFVWSVLVTAFPLLLSLPVLAGAITMLLTDRNFNTTFSDPAGGGDPILYQHLFWFFGHPEVYIPILPGSGIISHIVSTFSGKPVFGYLGMVYAMISIGVLGFLVWAHHMFTVGLDVDTRAYFTAATMIIAVPTGIKIFSWIATMWGGSIQYKTPMLFAVGFIFLFTIGGLTGIVPANSGLDIALHDTYYVVAHFHYVLSMGAVFALFAGFHYWVGKIFGRTYPETLGQIHFWITFFGVNLTFFPMHFLGLSGMPRRIPDYPDAYAGWNALSSFGSYISVVGIRRFFVVVTITSSSGNNKRCAPSPWAVEQNPTTPEWMVQSPPAFHTFGELPAIKETKSYVK]
+Mt	augustus	gene	453818	454042	.	+	.	ID=atp9-1;Name=atp9;product=ATP synthase subunit 9;gene=atp9
+Mt	augustus	mRNA	453818	454042	.	+	.	ID=atp9-1.t1;Parent=atp9-1;Name=atp9;product=ATP synthase subunit 9;gene=atp9
+Mt	augustus	exon	453818	454042	.	+	.	ID=atp9-1.t1:e1;Parent=atp9-1.t1;product=ATP synthase subunit 9
+Mt	augustus	CDS	453818	454042	.	+	0	ID=atp9-1.t1:c1;Parent=atp9-1.t1;product=ATP synthase subunit 9
+# coding sequence = [ATGTTAGAAGGTGCAAAATTAATGGGTGCCGGAGCTGCTACAATTGCTTTAGCGGGAGCTGCTGTCGGTATTGGAAACGTGTTCAGTTCTTTGATCCATTCCGTGGCGCGAAATCCATCATTGGCTAAACAATTATTTGGTTATGCCATTTTGGGCTTTGCTCTAACCGAAGCTATTGCATTGTTTGCCCTAATGATGGCATTTTTGATCTTATTCGTCTTCTGA]
+# protein sequence = [MLEGAKLMGAGAATIALAGAAVGIGNVFSSLIHSVARNPSLAKQLFGYAILGFALTEAIALFALMMAFLILFVF]
+Mt	exonerate	gene	458380	459559	.	+	.	ID=rps10-1;Name=rps10;product=ribosomal protein S10;gene=rps10
+Mt	exonerate	mRNA	458380	459559	.	+	.	ID=rps10-1.t1;Parent=rps10-1;Name=rps10;product=ribosomal protein S10;gene=rps10
+Mt	exonerate	exon	458380	458568	.	+	.	ID=rps10-1.t1:e1;Parent=rps10-1.t1;product=ribosomal protein S10
+Mt	exonerate	CDS	458380	458568	.	+	0	ID=rps10-1.t1:c1;Parent=rps10-1.t1;product=ribosomal protein S10
+Mt	exonerate	exon	459362	459559	.	+	.	ID=rps10-1.t1:e2;Parent=rps10-1.t1;product=ribosomal protein S10
+Mt	exonerate	CDS	459362	459559	.	+	0	ID=rps10-1.t1:c2;Parent=rps10-1.t1;product=ribosomal protein S10
+# coding sequence = [TTGGGGCTTCCGCCTTACACACGAAAGATTGGATTGCCTGAATCACGAGTCTTATATACTGTGTTACGATCACCTCATATTGATAAAAAGTCCAGAGAACAATTTGAAATGGAAATCAAGAAACAATTTCTGGTCATAAAAACAGAAAGGCATGAATTGCGCAAGAAGTTCTTTCGGTTAAAACGCCGTCGTATATTTGGAGCTCAATATGAAATCCTATTTTCTTGCAAGACCCGTTCGGATAAGGGAAAACTCCAGAGATTGCTTCGAAGTAACGTAAGAGGATTCGATCTTGCACCATCTTCAACTCTTCTCTGGATCCGGAGTTTTTCGAGAAAAGGTCCCATCCTTCAATATCATGATTGGGTCGACCAGGCCAGATCATGA]
+# protein sequence = [MGLPPYTRKIGLPESRVLYTVLRSPHIDKKSREQFEMEIKKQFLVIKTERHELRKKFFRLKRRRIFGAQYEILFSCKTRSDKGKLQRLLRSNVRGFDLAPSSTLLWIRSFSRKGPILQYHDWVDQARS]
 Mt	hmmsearch	gene	476506	479603	.	+	.	ID=rrn26-2;Name=rrnL;product=26S ribosomal RNA;gene=rrnL
 Mt	hmmsearch	rRNA	476506	479603	.	+	.	ID=rrn26-2.t1;Parent=rrn26-2;Name=rrnL;product=26S ribosomal RNA;gene=rrnL
 Mt	hmmsearch	exon	476507	479603	.	+	.	ID=rrn26-2.t1:e1;Parent=rrn26-2.t1;product=26S ribosomal RNA
-Mt	hmmsearch	gene	491542	491628	.	+	.	ID=trnI-UAU-2;Name=trnI-UAU;product=tRNA-Ile;gene=trnI-UAU
-Mt	hmmsearch	tRNA	491542	491628	.	+	.	ID=trnI-UAU-2.t1;Parent=trnI-UAU-2;Name=trnI-UAU;product=tRNA-Ile;gene=trnI-UAU
-Mt	hmmsearch	exon	491543	491628	.	+	.	ID=trnI-UAU-2.t1:e1;Parent=trnI-UAU-2.t1;product=tRNA-Ile
-Mt	hmmsearch	gene	335543	335616	.	+	.	ID=trnfM-1;Name=trnfM-CAU;product=tRNA-Met;gene=trnfM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	335543	335616	.	+	.	ID=trnfM-1.t1;Parent=trnfM-1;Name=trnfM-CAU;product=tRNA-Met;gene=trnfM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	524786	524842	.	-	.	ID=trnfM-1;Name=trnfM-CAU;product=tRNA-Met;gene=trnfM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	524786	524842	.	-	.	ID=trnfM-1.t1;Parent=trnfM-1;Name=trnfM-CAU;product=tRNA-Met;gene=trnfM-CAU;exception=trans-splicing
-Mt	hmmsearch	exon	335544	335616	.	+	.	ID=trnfM-1.t1:e1;Parent=trnfM-1.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	524787	524842	.	-	.	ID=trnfM-1.t1:e2;Parent=trnfM-1.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	gene	479973	480046	.	+	.	ID=trnfM-2;Name=trnfM-CAU;product=tRNA-Met;gene=trnfM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	479973	480046	.	+	.	ID=trnfM-2.t1;Parent=trnfM-2;Name=trnfM-CAU;product=tRNA-Met;gene=trnfM-CAU;exception=trans-splicing
-Mt	hmmsearch	gene	524786	524842	.	-	.	ID=trnfM-2;Name=trnfM-CAU;product=tRNA-Met;gene=trnfM-CAU;exception=trans-splicing
-Mt	hmmsearch	tRNA	524786	524842	.	-	.	ID=trnfM-2.t1;Parent=trnfM-2;Name=trnfM-CAU;product=tRNA-Met;gene=trnfM-CAU;exception=trans-splicing
-Mt	hmmsearch	exon	479974	480046	.	+	.	ID=trnfM-2.t1:e1;Parent=trnfM-2.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	exon	524787	524842	.	-	.	ID=trnfM-2.t1:e2;Parent=trnfM-2.t1;product=tRNA-Met;exception=trans-splicing
-Mt	hmmsearch	gene	528074	528145	.	-	.	ID=trnC-GCA-1;Name=trnC-GCA;product=tRNA-Cys;gene=trnC-GCA
-Mt	hmmsearch	tRNA	528074	528145	.	-	.	ID=trnC-GCA-1.t1;Parent=trnC-GCA-1;Name=trnC-GCA;product=tRNA-Cys;gene=trnC-GCA
-Mt	hmmsearch	exon	528075	528145	.	-	.	ID=trnC-GCA-1.t1:e1;Parent=trnC-GCA-1.t1;product=tRNA-Cys
-Mt	hmmsearch	gene	556353	556426	.	+	.	ID=trnC-1;Name=trnC-GCA;product=tRNA-Cys;gene=trnC-GCA
-Mt	hmmsearch	tRNA	556353	556426	.	+	.	ID=trnC-1.t1;Parent=trnC-1;Name=trnC-GCA;product=tRNA-Cys;gene=trnC-GCA
-Mt	hmmsearch	exon	556354	556426	.	+	.	ID=trnC-1.t1:e1;Parent=trnC-1.t1;product=tRNA-Cys
+Mt	tRNAscan	gene	479974	480047	.	+	.	ID=trnfM-2;Name=trnfM-CAU;product=tRNA-Met;gene=trnfM-CAU
+Mt	tRNAscan	tRNA	479974	480047	.	+	.	ID=trnfM-2.t1;Parent=trnfM-2;Name=trnfM-CAU;product=tRNA-Met;gene=trnfM-CAU
+Mt	tRNAscan	exon	479974	480047	.	+	.	ID=trnfM-2.t1:e1;Parent=trnfM-2.t1;product=tRNA-Met
+Mt	augustus	gene	490804	491556	.	+	.	ID=ccmC-2;Name=ccmC;product=cytochrome c biogenesis C;gene=ccmC
+Mt	augustus	mRNA	490804	491556	.	+	.	ID=ccmC-2.t1;Parent=ccmC-2;Name=ccmC;product=cytochrome c biogenesis C;gene=ccmC
+Mt	augustus	exon	490804	491556	.	+	.	ID=ccmC-2.t1:e1;Parent=ccmC-2.t1;product=cytochrome c biogenesis C
+Mt	augustus	CDS	490804	491556	.	+	0	ID=ccmC-2.t1:c1;Parent=ccmC-2.t1;product=cytochrome c biogenesis C
+# coding sequence = [ATGTCCCTTTCGTTATTACAACCTTCTTTTTTGATGTCAAAGACCAAAAGCTATGCGCAAATTCTCATTGGATCTCGGTTGTTCTTAACAGCGATGGCTATTCATTTAAGTCTTCGGGTAGGACCACTAGATTTTCAACAAGGTGGAAATTCTCGTATTCTGTATGTACATGTTCCTGCGGCTCGGATGAGTATTCTTGTTTATATCGCTACGGCTATAAACACTTTCTTGTTCCTATTAACAAAACATCCCCTTTTTCTTCGCTCTTCCGGAACCGGTATAGAAATGGGTGCTTTTTTTACGTTGTTTACCTTAGTTACTGGGGGGTTTCGGGGAAGACCTATGTGGGGCACCTTTTGGGTGTGGGATGCTCGTTTAACCTCTGTATTCATCTCGTTCCTTATTTACCTGGGTGCACTGTGTTTTCAAAAGCTTCCTGTCGAACCGGCTTCTATTTCAATCCGTGCTGGACCGATCGATATACCAATAATCAAGTCTTCAGTCAACTGGTGGAATACATCGCATCAACCTGGGAGCATTAGCCGATCTGGTACATCAATACATGTTCCTATGCCCATTCCAATCTTGTCTAACTTTGCTAACTCCCCCTTCTCAACCCGTATCTTGTTTGTTCTGGAAACACGTCTTCCTATTCCATCTTTTCTCGAATCTCCTTTAACGGAAGAAATAGAAGCTCGAGAAGGAATACCAAAACCTAGTTCACTCGCTGAGTCTCTAAGCATCCATGGCTGA]
+# protein sequence = [MSLSLLQPSFLMSKTKSYAQILIGSRLFLTAMAIHLSLRVGPLDFQQGGNSRILYVHVPAARMSILVYIATAINTFLFLLTKHPLFLRSSGTGIEMGAFFTLFTLVTGGFRGRPMWGTFWVWDARLTSVFISFLIYLGALCFQKLPVEPASISIRAGPIDIPIIKSSVNWWNTSHQPGSISRSGTSIHVPMPIPILSNFANSPFSTRILFVLETRLPIPSFLESPLTEEIEAREGIPKPSSLAESLSIHG]
+Mt	tRNAscan	gene	491543	491628	.	+	.	ID=trnI-UAU-3;Name=trnI-UAU-cp;product=tRNA-Ile;gene=trnI-UAU-cp
+Mt	tRNAscan	tRNA	491543	491628	.	+	.	ID=trnI-UAU-3.t1;Parent=trnI-UAU-3;Name=trnI-UAU-cp;product=tRNA-Ile;gene=trnI-UAU-cp
+Mt	tRNAscan	exon	491543	491628	.	+	.	ID=trnI-UAU-3.t1:e1;Parent=trnI-UAU-3.t1;product=tRNA-Ile
+Mt	exonerate	gene	498486	499025	.	-	.	ID=rpl16-1;Name=rpl16;product=ribosomal protein L16;gene=rpl16
+Mt	exonerate	mRNA	498486	499025	.	-	.	ID=rpl16-1.t1;Parent=rpl16-1;Name=rpl16;product=ribosomal protein L16;gene=rpl16
+Mt	exonerate	exon	498486	499025	.	-	.	ID=rpl16-1.t1:e1;Parent=rpl16-1.t1;product=ribosomal protein L16
+Mt	exonerate	CDS	498486	499025	.	-	0	ID=rpl16-1.t1:c1;Parent=rpl16-1.t1;product=ribosomal protein L16
+# coding sequence = [ATGTATTTAACCAGAAAATCGATTATGCTCCTGCGGAAGTATCTACTCGTTACGGAATCTCAGGTGTCAAAGTGTGGATTTCGTATAGTAAAAAATAAGGGGTACGTGCTATATCCGAAACGTACGAAATTTAGTAAATATCGTAAAGGCAGATGTAGTAGGGGTTGCAAACCGGACGGTACACAACTTGGTTTTGGAAGATATGGCACTAAAAGTTATAAAGCAGGTCGTCTTTCATATCGAGCCATTGAAGCAGCGCGTCGGGCTATAATCGGACAATTCCATCGTGCTATGAGCGGACAATTCCGAAGAAATGGTAAGATATGGGTAAGAGTTCTCGCGGATCTCCCTATTACCGGGAAACCTACAGAAGTAAGAATGGGAAGAGGAAAAGGAAATCCTACGGGTTGGATTGCTCGTGTGTCCACGGGACAAATCCCATTTGAAATGGATGGTGTGAGTTTGTCAAATGCTCGACAAGCCGCTACATTAGCGGCGCATAAACCATGTTCGTCAACCAAGTTTGTTCAGTGGTCGTAA]
+# protein sequence = [MYLTRKSIMLLRKYLLVTESQVSKCGFRIVKNKGYVLYPKRTKFSKYRKGRCSRGCKPDGTQLGFGRYGTKSYKAGRLSYRAIEAARRAIIGQFHRAMSGQFRRNGKIWVRVLADLPITGKPTEVRMGRGKGNPTGWIARVSTGQIPFEMDGVSLSNARQAATLAAHKPCSSTKFVQWS]
+Mt	augustus	gene	498928	500580	.	-	.	ID=rps3-1;Name=rps3;product=ribosomal protein S3;gene=rps3
+Mt	augustus	mRNA	498928	500580	.	-	.	ID=rps3-1.t1;Parent=rps3-1;Name=rps3;product=ribosomal protein S3;gene=rps3
+Mt	augustus	exon	498928	500580	.	-	.	ID=rps3-1.t1:e1;Parent=rps3-1.t1;product=ribosomal protein S3
+Mt	augustus	CDS	498928	500580	.	-	0	ID=rps3-1.t1:c1;Parent=rps3-1.t1;product=ribosomal protein S3
+# coding sequence = [ATGGAAGCCCCCCAAGAAAGAAGCGGCTCTTCCCACGGCGGAGTCACCATTGACTCTATTTATTATTATGGTAAATCAGTGTATCAAGATGTCAATCTGAGATCTTATTTCGGTTCAATACGTCCACCTACGAGACTCACCTTTGGCTTTCGTCTCGGTAGGTGTATTATTATACATTTTCCAAAAAGAACATTCATTCATTTCTTTCTTCCCCGTCGACCACGACGACGGAAACGACGCAAAAAAACCAGACCCGGAAAGGAGAAGGGCCGGTGGTGGACATTCGGGAAAGTCGGGCCGATCGGGTGTCTTCATTCAAGCGACGATACAGAAGAAGAACGAAACAAAGTGAAAGGCTGGGGGGCAAGGAAAAGAGTCGAGTCGATCAGGCTCGACGACCGGGAGAAGCAAAACGAAATCAGGATTTGGCCGAAAAAAAAGCAACGCTATGGATACCATGACCGACCACCATCGATAAAGAAGAATCTTTCTAAATCACTTCGGGTCAGCGGGGCCTTCAAGCATCCGAAATACGCCGGGGTTGTAAATGACATAGCGTTCCTGATAAAAAATGCCGGCTCCTTCAAAAAAACAAAAACGAAGTTATTCAAGTTCTTTTTTCCAAAGAAGTCCCGCTCCGACGGCCCGACGAGCCATCTACTTAAAAGGACCCTCCCTGCAGTGCGCCCCTCCTTGAATTATTCGGTCATGCAATACTTATTGAATACAAAGAAAAAAATGCATTTCGACCCCGTCGTAGTTCTCAATCATTTCGTGGCACCGGGCGTGGCTGAACTATCTACGATGGGGGGAGCGAATGCACAGGGAAGAAGCTTAGATAAGAGAATACGTTCTCGCATCGCTTTTTTTGTAGAAAGCTTGACCAGCGAGAAAAAGTGTTTGGCCGAATCCAAAAACAAAAAGAAAAAGAGGTTGACCCACTTCATTCGCCAAGCGAATGATCTTCGCTTCGCGGGAACAACAAAAACCACCATCTCGCTCTTTCCTTTCTTCGGTGCTACCTTTTTCTTTCTAAGAGATGGGGTTGGGGTGTATAATAACCTTTTTTTTGAGGATGCCCGGGAACAACTCCTAGGTCAATTAAGGATCAAATGTTGGAACCTCATGGGTAAGGATAAGGTAATGGAATTGATAGAGAAATTCATAAACCTAGGTGGGATAGGAGAATTGATAAAGGGAATAGAGATGATGATAGAGATCATACTGAGAAACAGAAGAATTCCGTACGGGTACAACTCTTATTTAAACGAAGTAAAAAAAATGCGATCTTTGTTGTCTAATAGAACAAACACTAATACCTTAATTGAGTCGGTCAAGATCAAATCTGTTTATCAAAGTGCTTCTCCGATTGCTCAAGACATCTCTTTTCAACTGAGGAACAAAACATTTCGTTCCATTTTTAGTAAAATAGTGAAGAATATTCCATTAGTAATGAATAAAGGGGTTGAGGGGATCCGTATATGTTGTTCAGGTCGATTAAAAGGCGCAGAAATAGCTAGAACGGAATGCGGAAAGTATGGAAAAACATCTCGTAATGTATTTAACCAGAAAATCGATTATGCTCCTGCGGAAGTATCTACTCGTTACGGAATCTCAGGTGTCAAAGTGTGGATTTCGTATAGTAAAAAATAA]
+# protein sequence = [MEAPQERSGSSHGGVTIDSIYYYGKSVYQDVNLRSYFGSIRPPTRLTFGFRLGRCIIIHFPKRTFIHFFLPRRPRRRKRRKKTRPGKEKGRWWTFGKVGPIGCLHSSDDTEEERNKVKGWGARKRVESIRLDDREKQNEIRIWPKKKQRYGYHDRPPSIKKNLSKSLRVSGAFKHPKYAGVVNDIAFLIKNAGSFKKTKTKLFKFFFPKKSRSDGPTSHLLKRTLPAVRPSLNYSVMQYLLNTKKKMHFDPVVVLNHFVAPGVAELSTMGGANAQGRSLDKRIRSRIAFFVESLTSEKKCLAESKNKKKKRLTHFIRQANDLRFAGTTKTTISLFPFFGATFFFLRDGVGVYNNLFFEDAREQLLGQLRIKCWNLMGKDKVMELIEKFINLGGIGELIKGIEMMIEIILRNRRIPYGYNSYLNEVKKMRSLLSNRTNTNTLIESVKIKSVYQSASPIAQDISFQLRNKTFRSIFSKIVKNIPLVMNKGVEGIRICCSGRLKGAEIARTECGKYGKTSRNVFNQKIDYAPAEVSTRYGISGVKVWISYSKK]
+Mt	exonerate	gene	251554	253301	.	+	.	ID=nad2-1;Name=nad2;product=NADH dehydrogenase subunit 2;gene=nad2;exception=trans-splicing
+Mt	exonerate	mRNA	251554	253301	.	+	.	ID=nad2-1.t1;Parent=nad2-1;Name=nad2;product=NADH dehydrogenase subunit 2;gene=nad2;exception=trans-splicing
+Mt	exonerate	gene	519059	524257	.	-	.	ID=nad2-1;Name=nad2;product=NADH dehydrogenase subunit 2;gene=nad2;exception=trans-splicing
+Mt	exonerate	mRNA	519059	524257	.	-	.	ID=nad2-1.t1;Parent=nad2-1;Name=nad2;product=NADH dehydrogenase subunit 2;gene=nad2;exception=trans-splicing
+Mt	exonerate	exon	251554	251706	.	+	.	ID=nad2-1.t1:e1;Parent=nad2-1.t1;product=NADH dehydrogenase subunit 2;exception=trans-splicing
+Mt	exonerate	CDS	251554	251706	.	+	0	ID=nad2-1.t1:c1;Parent=nad2-1.t1;product=NADH dehydrogenase subunit 2;exception=trans-splicing
+Mt	exonerate	exon	252910	253301	.	+	.	ID=nad2-1.t1:e2;Parent=nad2-1.t1;product=NADH dehydrogenase subunit 2;exception=trans-splicing
+Mt	exonerate	CDS	252910	253301	.	+	0	ID=nad2-1.t1:c2;Parent=nad2-1.t1;product=NADH dehydrogenase subunit 2;exception=trans-splicing
+Mt	exonerate	exon	524097	524257	.	-	.	ID=nad2-1.t1:e3;Parent=nad2-1.t1;product=NADH dehydrogenase subunit 2;exception=trans-splicing
+Mt	exonerate	CDS	524097	524257	.	-	1	ID=nad2-1.t1:c3;Parent=nad2-1.t1;product=NADH dehydrogenase subunit 2;exception=trans-splicing
+Mt	exonerate	exon	520732	521304	.	-	.	ID=nad2-1.t1:e4;Parent=nad2-1.t1;product=NADH dehydrogenase subunit 2;exception=trans-splicing
+Mt	exonerate	CDS	520732	521304	.	-	2	ID=nad2-1.t1:c4;Parent=nad2-1.t1;product=NADH dehydrogenase subunit 2;exception=trans-splicing
+Mt	exonerate	exon	519059	519246	.	-	.	ID=nad2-1.t1:e5;Parent=nad2-1.t1;product=NADH dehydrogenase subunit 2;exception=trans-splicing
+Mt	exonerate	CDS	519059	519246	.	-	2	ID=nad2-1.t1:c5;Parent=nad2-1.t1;product=NADH dehydrogenase subunit 2;exception=trans-splicing
+# coding sequence = [ATGTTCAATCTTTTTTTAGCGGTTTCCCCAGAGATCTTTATCATTAATGCAATCTCCATTTTGCTCATTCATGGAGTTGTATTTAGTACCTCTAAGAAATATGATTCTCCGCCGTTAGTCAGTAATGTGGGTTGGCTTGGATTACTTAGTGTTCTAATAACCTTGCTTCTGCTCGCCGCTGGCGCACCTCTCCTAACTATTGCCCATTTATTCTGGAATAATCTTTTTAGGAGGGACAATTTTACATATTTCTGCCAAATCCTTCTATTATTAAGTACGGCTGGTACCATTTCGATGTGTTTCGATTCTTTCGAACAAGAGAGGTTTGATGCTTTTGAATCCATTGTATTAATTCCACTTCCTACTCGCAGTATGCTCTTTATGATCTCGGCTCATGATTCAATTGCCATGTATTTAGCTATTGAGCCTCAAAGTTTATGTTTTTATGTAATCGCAGCATCAAAAAGAAAGTCTGAATTTTCCACGGAAGCCGGCTCGAAATATTTGATCTTAGGTGCATTTCCCTCTGGAATATTATTGTTTGGTTGTTCCATGATCTATGGGTCTACTGGAGCTACCCACTTCGATCAATTAGCCAAGATTTTGACCGGATACGAAATCACTGGTGCTCGATCTAGTGGTATTTTTATGGGGATTCTATCTATCGCTGTAGGATTCCTATTCAAGATCACTGCAGTTCCTTTTCATATGTGGGCACCTGATATCTATGAGGGTTCACCCACCCCGGTTACAGCATTCCTTTCTATTGCGCCTAAAATATCTATTTCTGCTAATATTTCACGTGTTTCTATTTATGGTTCCTATGGAGCTACATTGCAACAAATCTTCTTTTTCTGCAGCATTGCTTCTATGATCTTAGGAGCACTGGCCGCCATGGCCCAAACGAAAGTAAAAAGACCTCTAGCTCATAGTTCAATTGGACATGTAGGTTATATTCGTACTGGTTTCTCATGTGGAACCATAGAAGGAATTCAATCACTACTAATTGGTCTCTTTATTTATGCATTAATGACGATAGATGCATTCGCCATAGTTTCAGCATTACGGCAAACCCGTGTCAAATATATAGCGGATTTGGGCGCTCTAGCCAAAACGAATCCTATTTCGGCTATTACCTTCTCCATTACTATGTTCTCATACGCGGGAATACCCCCGTTAGCCGGCTTTTGTAGCAAATTCTATTTGTTCTTCGCCGCTTTGGGTTGTGGGGCTTACTTCCTAGCCCCAGTGGGAGTAGTGACTAGCGTTATAGGTCGTTTTTATTATATACGCTTAGCGAAAAGAATGTTTTTTGATACACCTAGGACATGGATTCTATATGAACCAATGGATCGTAACAAGTCGTTACTACTAGCAATGACTTCCTCTTTCATTACTTCATTCTTTCTATATCCCTCACCCTTGTTCTCAGTTACTCATCAAATGGCACTCAGTTCATATCTTTAA]
+# protein sequence = [MFNLFLAVSPEIFIINAISILLIHGVVFSTSKKYDSPPLVSNVGWLGLLSVLITLLLLAAGAPLLTIAHLFWNNLFRRDNFTYFCQILLLLSTAGTISMCFDSFEQERFDAFESIVLIPLPTRSMLFMISAHDSIAMYLAIEPQSLCFYVIAASKRKSEFSTEAGSKYLILGAFPSGILLFGCSMIYGSTGATHFDQLAKILTGYEITGARSSGIFMGILSIAVGFLFKITAVPFHMWAPDIYEGSPTPVTAFLSIAPKISISANISRVSIYGSYGATLQQIFFFCSIASMILGALAAMAQTKVKRPLAHSSIGHVGYIRTGFSCGTIEGIQSLLIGLFIYALMTIDAFAIVSALRQTRVKYIADLGALAKTNPISAITFSITMFSYAGIPPLAGFCSKFYLFFAALGCGAYFLAPVGVVTSVIGRFYYIRLAKRMFFDTPRTWILYEPMDRNKSLLLAMTSSFITSFFLYPSPLFSVTHQMALSSYL]
+Mt	tRNAscan	gene	524785	524867	.	-	.	ID=trnY-1;Name=trnY-GUA;product=tRNA-Tyr;gene=trnY-GUA
+Mt	tRNAscan	tRNA	524785	524867	.	-	.	ID=trnY-1.t1;Parent=trnY-1;Name=trnY-GUA;product=tRNA-Tyr;gene=trnY-GUA
+Mt	tRNAscan	exon	524785	524867	.	-	.	ID=trnY-1.t1:e1;Parent=trnY-1.t1;product=tRNA-Tyr
+Mt	tRNAscan	gene	525917	525988	.	-	.	ID=trnN-1;Name=trnN-GUU-cp;product=tRNA-Asn;gene=trnN-GUU-cp
+Mt	tRNAscan	tRNA	525917	525988	.	-	.	ID=trnN-1.t1;Parent=trnN-1;Name=trnN-GUU-cp;product=tRNA-Asn;gene=trnN-GUU-cp
+Mt	tRNAscan	exon	525917	525988	.	-	.	ID=trnN-1.t1:e1;Parent=trnN-1.t1;product=tRNA-Asn
+Mt	tRNAscan	gene	528075	528145	.	-	.	ID=trnC-GCA-1;Name=trnC-GCA;product=tRNA-Cys;gene=trnC-GCA
+Mt	tRNAscan	tRNA	528075	528145	.	-	.	ID=trnC-GCA-1.t1;Parent=trnC-GCA-1;Name=trnC-GCA;product=tRNA-Cys;gene=trnC-GCA
+Mt	tRNAscan	exon	528075	528145	.	-	.	ID=trnC-GCA-1.t1:e1;Parent=trnC-GCA-1.t1;product=tRNA-Cys
+Mt	exonerate	gene	533187	539892	.	+	.	ID=nad7-1;Name=nad7;product=NADH dehydrogenase subunit 7;gene=nad7
+Mt	exonerate	mRNA	533187	539892	.	+	.	ID=nad7-1.t1;Parent=nad7-1;Name=nad7;product=NADH dehydrogenase subunit 7;gene=nad7
+Mt	exonerate	exon	533187	533329	.	+	.	ID=nad7-1.t1:e1;Parent=nad7-1.t1;product=NADH dehydrogenase subunit 7
+Mt	exonerate	CDS	533187	533329	.	+	0	ID=nad7-1.t1:c1;Parent=nad7-1.t1;product=NADH dehydrogenase subunit 7
+Mt	exonerate	exon	534212	534280	.	+	.	ID=nad7-1.t1:e2;Parent=nad7-1.t1;product=NADH dehydrogenase subunit 7
+Mt	exonerate	CDS	534212	534280	.	+	1	ID=nad7-1.t1:c2;Parent=nad7-1.t1;product=NADH dehydrogenase subunit 7
+Mt	exonerate	exon	536079	536545	.	+	.	ID=nad7-1.t1:e3;Parent=nad7-1.t1;product=NADH dehydrogenase subunit 7
+Mt	exonerate	CDS	536079	536545	.	+	1	ID=nad7-1.t1:c3;Parent=nad7-1.t1;product=NADH dehydrogenase subunit 7
+Mt	exonerate	exon	537609	537852	.	+	.	ID=nad7-1.t1:e4;Parent=nad7-1.t1;product=NADH dehydrogenase subunit 7
+Mt	exonerate	CDS	537609	537852	.	+	2	ID=nad7-1.t1:c4;Parent=nad7-1.t1;product=NADH dehydrogenase subunit 7
+Mt	exonerate	exon	539631	539892	.	+	.	ID=nad7-1.t1:e5;Parent=nad7-1.t1;product=NADH dehydrogenase subunit 7
+Mt	exonerate	CDS	539631	539892	.	+	1	ID=nad7-1.t1:c5;Parent=nad7-1.t1;product=NADH dehydrogenase subunit 7
+# coding sequence = [ATGACGACTAGGAACGGGCAAATCAAAAATTTCACTTCGAATTTCGGACCTCAACATCCTGCTGCTCATGGTGTTTCACGATCAGTATTGGAAATGAACGGAGAAGTGGTGGAACGTGCGGAACCACATATTGGATCACTCCATAGAGGGACTGAGAAATTAATAGAGTACAAAACTTATCTTCAAGCTTTACCTTATTCTGATCGTTCAGACTATGTTTCTATGATGGCCCAAGAACACGCTCATTCTTCAGCCGTAGAGAGACTTTTGAATTGCGAGGTACCATTACGAGCTCAATATATACGAGTGTTATTCCGTGAAATAACTCGAATTTCAAATCATTCACTTGCTTTAACTACTCATGCTATGGATGTGGGAGCATCAACTCCGTTCCTGTGGGCTTCTGAGGAGCGGGAGAAATTGTTGGAATTCTATGAAAGAGTCTCGGGAGCCAGGATGCATGCCAGTTTCATACGACCAGGTGGAGTGGCACAAGATCTGCCTATTGGCTTATGTCGAGATATTGATTCCTCCACACAACAATTTGCTTCTCGTATCGACGAATTAGAAGAGATGTCAACCGGCAACCGTATCTGGAAACAACGATTAGTGGATATTGGTACTGTCACTGCACAGCAAGCAAAGGATTGGGGATTCAGTGGTGTAATGTTAAGAGGTCCAGGGGTATGCTGGGATTCGCGAAGAGCAGCACCTTACGATGTTCATGACCAATTGGATCCTGACGTACCAGTAGGTACCAGAGGAGATCGCTATGATCGTTACTGTATCCGTATCGAAGAGATGCGACAAAGTGTTCGGATCATTGTGCAATGTCCTAATCAAATGCCTAGTGGCATGATCAAAGCCGATGATCGTAAGCTATGTCCTCCATCACGATGTCGAATGAAACTATCCATGGAATCCTCAATTCACCATTTCGAACCTTATACAGAAGGTTTTTCCGTACCAGCTCCTTCTACCTATACCGCAGTTGAAGCACCTAAAGGAGAATTTGGTGTCTTTCTGGTCAGTAATGGAAGCAATCGTCCCTACCGTCGTAAAATAAGAGCACCCGGCTCTGCCCATTTACAAGGACTCGATTCTATGTCTAAACATCACATGCCAGCAGATGTGGTCACCATCATAGGTACTCAAGATATTGTGTCTGGAGAGGTGGATAGATAG]
+# protein sequence = [MTTRNGQIKNFTSNFGPQHPAAHGVSRSVLEMNGEVVERAEPHIGSLHRGTEKLIEYKTYLQALPYSDRSDYVSMMAQEHAHSSAVERLLNCEVPLRAQYIRVLFREITRISNHSLALTTHAMDVGASTPFLWASEEREKLLEFYERVSGARMHASFIRPGGVAQDLPIGLCRDIDSSTQQFASRIDELEEMSTGNRIWKQRLVDIGTVTAQQAKDWGFSGVMLRGPGVCWDSRRAAPYDVHDQLDPDVPVGTRGDRYDRYCIRIEEMRQSVRIIVQCPNQMPSGMIKADDRKLCPPSRCRMKLSMESSIHHFEPYTEGFSVPAPSTYTAVEAPKGEFGVFLVSNGSNRPYRRKIRAPGSAHLQGLDSMSKHHMPADVVTIIGTQDIVSGEVDR]
+Mt	exonerate	gene	454550	456846	.	+	.	ID=nad5-1;Name=nad5;product=NADH dehydrogenase subunit 5;gene=nad5;exception=trans-splicing
+Mt	exonerate	mRNA	454550	456846	.	+	.	ID=nad5-1.t1;Parent=nad5-1;Name=nad5;product=NADH dehydrogenase subunit 5;gene=nad5;exception=trans-splicing
+Mt	exonerate	gene	549171	549635	.	-	.	ID=nad5-1;Name=nad5;product=NADH dehydrogenase subunit 5;gene=nad5;exception=trans-splicing
+Mt	exonerate	mRNA	549171	549635	.	-	.	ID=nad5-1.t1;Parent=nad5-1;Name=nad5;product=NADH dehydrogenase subunit 5;gene=nad5;exception=trans-splicing
+Mt	exonerate	exon	454550	454778	.	+	.	ID=nad5-1.t1:e1;Parent=nad5-1.t1;product=NADH dehydrogenase subunit 5;exception=trans-splicing
+Mt	exonerate	CDS	454550	454778	.	+	0	ID=nad5-1.t1:c1;Parent=nad5-1.t1;product=NADH dehydrogenase subunit 5;exception=trans-splicing
+Mt	exonerate	exon	455627	456846	.	+	.	ID=nad5-1.t1:e2;Parent=nad5-1.t1;product=NADH dehydrogenase subunit 5;exception=trans-splicing
+Mt	exonerate	CDS	455627	456846	.	+	2	ID=nad5-1.t1:c2;Parent=nad5-1.t1;product=NADH dehydrogenase subunit 5;exception=trans-splicing
+Mt	exonerate	exon	549171	549635	.	-	.	ID=nad5-1.t1:e3;Parent=nad5-1.t1;product=NADH dehydrogenase subunit 5;exception=trans-splicing
+Mt	exonerate	CDS	549171	549635	.	-	0	ID=nad5-1.t1:c3;Parent=nad5-1.t1;product=NADH dehydrogenase subunit 5;exception=trans-splicing
+# coding sequence = [ATGTATCTACTTATCGTCTTTTTGCCCCTGCTCGGTAGTTCCGTAGCAGGTTTTTTCGGACGTTTTCTAGGATCAGAAGGAACCGCTATAATGACCACTACGTGCGTTTCATTCTCTTCAATCTTATCTTTGATTGCTTTTTATGAAGTCGCACTGGGAGCTAGTGCTTGCTATCTAAGAATTGCTCCATGGATCTCATCGGAAATGTTTGATGCTTCTTGGGGCTTCTTGTTCGATAGCCCGACCGTAGTGATGTTAATTGTGGTTACATCCATAAGTAGTTTGGTCCATCTTTATTCCATTTCATATATGTCTGAGGATCCGCATAGCCCTCGATTTATGTGTTATTTATCCATTCTTACTTTTTTTATGCCAATGTTGGTGACTGGAGATAACTCTCTTCAATTATTCCTGGGATGGGAGGGAGTAGGTCTTGCTTCATATTTGTTAATTCATTTCTGGTTTACACGACTTCAGGCAGATAAAGCAGCTACAAAAGCTATGCCTGTCAATCGAGTAGGTGATTTTGGATTAGCTCCTGGGATTTCGGGTCGTTTTACTCTCTTTCAAACAGTAGACTTTTCAACCATTTTTGCTCGTGCTAGTGCCCCCATAAATTCTTGGATTTCTTGCAATATGAGATTGAATGCCATAACTCTTATTTGTATTTTACTTCTTATTGGTGCTGTTGGGAAATCTGCACAGATAGGATCGCATACTTGGTCACCCGATGCTATGGAGGGTCCCACTCCAGTATCCGCTTCGATTCATGCAGCTACTATGGTAACAGCTGGCGTTTTCATGATAGCAAGGTGCTCCCCTTTATTTGAATACCCACCTACGGCTTTGATTGTTATTACTTCTGCAGGAGCTACGACGTCATTCCTTGCGGCAACCACTGGAATATTACAGAACGATCTAAAGAGGGTCATAGCTTATTCAACTTGCAGTCAATTAGGCTATATGATCTTTGCTTGCGGCATCTCTAACTATTCGGTTAGCGTCTTTCACTTAATGAATCACGCGTTTTTCAAAGCATTACTATTCCTGAGTGCAGGTTCGGTGATTCATGCCATGTCGGATGAGCAAGATATGCGGAAGATGGGGGGGCTTGCCTCCCCCTTCCCTTTTACCTATGCCATGATGCTCATGGGCAGCTTATCTCTAATTGGATTTCCTTTTCTAACTGGATTTTATTCCAAAGATGTGATCTTAGAGCTCGCTTACACTAAGTATACCATCAGTGGGAACTTTGCTTTCTGGTTGGGAAGTGTTTCTGTCCTTTTCACTTCTTATTACTCTTTTCGTTTACTTTTTCTAACATTTCTAGTACCAACAAATTCATTCGGGCGAGACATCTTACGATGTCATGATGCGCCCATTCCTATGGCCATTCCTTTAATACTTCTGGCTCTCGGGAGTCTCTTTGTAGGATACTTGGCCAAAGTGCTATCCAATTTTTGGGCCAATTCCCCCTTCGTACTACCCAAAAATGAGATTCTTGCCGAATCCGAGTTTGCTGCTCCAACCATTACCAAACTAATACCTATTCCGTTTAGTACTTCAGGTGCTTCTGTTGCGTATAATGTAAATCCCGTAGCGGATCAATTCCAACGAGCCTTTCAAACTAGTACTTTTTGTAATCGACTCTATAGCTTCTTCAATAAACGCTGGTTCTTCGATCAAGTTTTGAATGACTTTCTAGTCAGATCGTTCCTGCGTTTCGGATATGAAGTCTCATTCGAAGCTTTAGACAAAGGTGCTATTGAGATATTGGGCCCTTATGGTATCTCGTACACATTCCGACGATTGGCCGAGCGAATAAGTCAACTTCAAAGTGGATTTGTTGTGCGAAGAGTGCGTTATGACCCGTGGCCGCCTGCCTGGTGGGGGTGGCTCCTCCGTTGTGGGTAA]
+# protein sequence = [MYLLIVFLPLLGSSVAGFFGRFLGSEGTAIMTTTCVSFSSILSLIAFYEVALGASACYLRIAPWISSEMFDASWGFLFDSPTVVMLIVVTSISSLVHLYSISYMSEDPHSPRFMCYLSILTFFMPMLVTGDNSLQLFLGWEGVGLASYLLIHFWFTRLQADKAATKAMPVNRVGDFGLAPGISGRFTLFQTVDFSTIFARASAPINSWISCNMRLNAITLICILLLIGAVGKSAQIGSHTWSPDAMEGPTPVSASIHAATMVTAGVFMIARCSPLFEYPPTALIVITSAGATTSFLAATTGILQNDLKRVIAYSTCSQLGYMIFACGISNYSVSVFHLMNHAFFKALLFLSAGSVIHAMSDEQDMRKMGGLASPFPFTYAMMLMGSLSLIGFPFLTGFYSKDVILELAYTKYTISGNFAFWLGSVSVLFTSYYSFRLLFLTFLVPTNSFGRDILRCHDAPIPMAIPLILLALGSLFVGYLAKVLSNFWANSPFVLPKNEILAESEFAAPTITKLIPIPFSTSGASVAYNVNPVADQFQRAFQTSTFCNRLYSFFNKRWFFDQVLNDFLVRSFLRFGYEVSFEALDKGAIEILGPYGISYTFRRLAERISQLQSGFVVRRVRYDPWPPAWWGWLLRCG]
+Mt	tRNAscan	gene	556354	556426	.	+	.	ID=trnC-1;Name=trnC-GCA;product=tRNA-Cys;gene=trnC-GCA
+Mt	tRNAscan	tRNA	556354	556426	.	+	.	ID=trnC-1.t1;Parent=trnC-1;Name=trnC-GCA;product=tRNA-Cys;gene=trnC-GCA
+Mt	tRNAscan	exon	556354	556426	.	+	.	ID=trnC-1.t1:e1;Parent=trnC-1.t1;product=tRNA-Cys
+Mt	exonerate	gene	558788	561519	.	+	.	ID=rpl2-1;Name=rpl2;product=ribosomal protein L2;gene=rpl2
+Mt	exonerate	mRNA	558788	561519	.	+	.	ID=rpl2-1.t1;Parent=rpl2-1;Name=rpl2;product=ribosomal protein L2;gene=rpl2
+Mt	exonerate	exon	558788	559686	.	+	.	ID=rpl2-1.t1:e1;Parent=rpl2-1.t1;product=ribosomal protein L2
+Mt	exonerate	CDS	558788	559686	.	+	0	ID=rpl2-1.t1:c1;Parent=rpl2-1.t1;product=ribosomal protein L2
+Mt	exonerate	exon	561405	561519	.	+	.	ID=rpl2-1.t1:e2;Parent=rpl2-1.t1;product=ribosomal protein L2
+Mt	exonerate	CDS	561405	561519	.	+	1	ID=rpl2-1.t1:c2;Parent=rpl2-1.t1;product=ribosomal protein L2
+# coding sequence = [ATGAGACAAAGCCAAGAGGGGAGAGCACTTAGACAATTCACTTTGAGTACAGGGAAGTCTGCTGGTAGGAATTCCTCAGGGCGTATTACGGTTTTTCACCGAGGGGGTGGATCGAAGCGATTGCAGCGAAGAATTGATCTGAAACGAAGCACTTCGTCTATTGGCATTGTAGAAAGGATAGAATATGACCCTAATCGTTCTTCTCGGATCGCTCCAGTACGATGGATCGAGGGGGTGCAGCTACGCCGCCAGAGGAAATGCAACACGATAGAAGAGTTCGCTCCGCCGCGTAAGATCCTCGAATCTACCACGACCACCATCCGCGGCCTATTTTCGTTCTCTTCCCTGCCCCGGAAGGTGGATCAAAGAAAGGTAGCTTGCTTCTCTCCTGGACTGATGGCGGCTTATGTAGTGGTCGGCCTTCCTACCAGAATGCCTCCGTGGTCGAAGAGCCCCTTTACTAGTAAGGGCGCTGGAAGCAAAAAAACTTGCGCGAAGGACGGCTTCTTCTCTGCCTTCTCCTCTCCAAAGGCCAAGGGAGAGACAGCATCCCTTTCCTTCGGTAGCTCTTGTGGTTTCCCAAGGATAGCGGTAGCTGGGGCAAAGCCCGCTTTCTTCGCTCCGCGAATGAGAGAGAAAGTCAGAGGAAAAAACACGTTCTCTCTTTGCGAGGTCCGAAAGTGGAGAACGCATAGCATTCTCTGGGCACATAGGATCAAACGTAAAGCAGCGCTTTCTTGGCAGAGTTTTTGGCGGCAAGATACTTTAACTTTAAGGCTTGTTGGAGCTGCTGAGCATAACGAATCGAAGCCAAAGATGGATCAAGGTAGCTTGCCTGCCAAGCCGATAGGCGAAAGGCCGAAGGATGGAGCGCGCAAAGTCGATCGTGCACCTGTCGTTTATATAATAGCCAGTCATCCATTAGAAGCAGGCAAAATGGTGATGAATTGCGATTGGTCCAAACCTTCGACCAGCGACTTATTGCGACCCGCCCAGAATGCCCATCCATACTAA]
+# protein sequence = [MRQSQEGRALRQFTLSTGKSAGRNSSGRITVFHRGGGSKRLQRRIDLKRSTSSIGIVERIEYDPNRSSRIAPVRWIEGVQLRRQRKCNTIEEFAPPRKILESTTTTIRGLFSFSSLPRKVDQRKVACFSPGLMAAYVVVGLPTRMPPWSKSPFTSKGAGSKKTCAKDGFFSAFSSPKAKGETASLSFGSSCGFPRIAVAGAKPAFFAPRMREKVRGKNTFSLCEVRKWRTHSILWAHRIKRKAALSWQSFWRQDTLTLRLVGAAEHNESKPKMDQGSLPAKPIGERPKDGARKVDRAPVVYIIASHPLEAGKMVMNCDWSKPSTSDLLRPAQNAHPY]
+Mt	augustus	gene	571668	572288	.	+	.	ID=rps1-1;Name=rps1;product=ribosomal protein S1;gene=rps1
+Mt	augustus	mRNA	571668	572288	.	+	.	ID=rps1-1.t1;Parent=rps1-1;Name=rps1;product=ribosomal protein S1;gene=rps1
+Mt	augustus	exon	571668	572288	.	+	.	ID=rps1-1.t1:e1;Parent=rps1-1.t1;product=ribosomal protein S1
+Mt	augustus	CDS	571668	572288	.	+	0	ID=rps1-1.t1:c1;Parent=rps1-1.t1;product=ribosomal protein S1
+# coding sequence = [ATGATGAGCATCTATTTGAGTCGATCATTTCCAAGATCTAATTCAAGTTTTTTCTTATGTAGTGGAAACGCCTTACAATCTGAAGTTTTACGCTTAAGGGAAGAGATGTTCTTGGTGGATGCAGGACTTGGGACCCCCAGAATTTGTATGCAAGATGAGCTTACAGGAGTGCCAATCAACCGAGCCACCAGGTTTGAGAATAAGGTGGGATCCCTGGATCTAGTGGCCGGTGAATCACTGATCAAAAAGAAGATTTTGGAGAGATTCTTCATCGATCTAGTGGCCGGTGAATCACGGATCAAAGAGCGAGCAGCCGCCAGGTTTAATGATTTGGTGGGATCCACAGATGTAGTGGCTGGTGAACCGCTTCTTCTTCTTCCACGAAGATTCAGACAAAACCGAGCTTGGATGGAACTGAACAAGATTTGGCGAACGAATACAAAGGTCAAAGGCTTTATTATTGAGAAAGTAAAAGGAGGTTATTCAGTAGCCATCGCAGGTTTCATTACTTTTCTTCCATTCCGTCCTCTTAAAATGAAAAGTAAAAGGAAAAGGATATCGAATGATCGATTCACCATTGAAAGCATTAACCCCAAAAGGACGAATATTGTGGTGTTCTAA]
+# protein sequence = [MMSIYLSRSFPRSNSSFFLCSGNALQSEVLRLREEMFLVDAGLGTPRICMQDELTGVPINRATRFENKVGSLDLVAGESLIKKKILERFFIDLVAGESRIKERAAARFNDLVGSTDVVAGEPLLLLPRRFRQNRAWMELNKIWRTNTKVKGFIIEKVKGGYSVAIAGFITFLPFRPLKMKSKRKRISNDRFTIESINPKRTNIVVF]

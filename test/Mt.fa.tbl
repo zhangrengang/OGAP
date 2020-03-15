@@ -1,235 +1,31 @@
 >Feature Mt
-391671	391742	gene
-35601	35629
-		gene	trnH-AUG
-		exception	trans-splicing
-391671	391742	tRNA
-35601	35629
-		product	tRNA-His
-391798	391869	gene
-35601	35629
-		gene	trnH-AUG
-		exception	trans-splicing
-391798	391869	tRNA
-35601	35629
-		product	tRNA-His
-547731	547660	gene
-35601	35629
-		gene	trnH-AUG
-		exception	trans-splicing
-547731	547660	tRNA
-35601	35629
-		product	tRNA-His
-547858	547787	gene
-35601	35629
-		gene	trnH-AUG
-		exception	trans-splicing
-547858	547787	tRNA
-35601	35629
-		product	tRNA-His
-547985	547918	gene
-35601	35629
-		gene	trnH-AUG
-		exception	trans-splicing
-547985	547918	tRNA
-35601	35629
-		product	tRNA-His
-391544	391611	gene
-35601	35629
-		gene	trnH-AUG
-		exception	trans-splicing
-391544	391611	tRNA
-35601	35629
-		product	tRNA-His
-547731	547660	gene
-217579	217625
-35601	35629
-		gene	trnM-CAU
-		exception	trans-splicing
-547731	547660	tRNA
-217579	217625
-35601	35629
-		product	tRNA-Met
-547858	547787	gene
-217579	217625
-35601	35629
-		gene	trnM-CAU
-		exception	trans-splicing
-547858	547787	tRNA
-217579	217625
-35601	35629
-		product	tRNA-Met
-191591	191657	gene
-217579	217625
-35601	35629
-		gene	trnM-CAU
-		exception	trans-splicing
-191591	191657	tRNA
-217579	217625
-35601	35629
-		product	tRNA-Met
-391798	391869	gene
-217579	217625
-35601	35629
-		gene	trnM-CAU
-		exception	trans-splicing
-391798	391869	tRNA
-217579	217625
-35601	35629
-		product	tRNA-Met
-391671	391742	gene
-217579	217625
-35601	35629
-		gene	trnM-CAU
-		exception	trans-splicing
-391671	391742	tRNA
-217579	217625
-35601	35629
-		product	tRNA-Met
-391544	391611	gene
-217579	217625
-35601	35629
-		gene	trnM-CAU
-		exception	trans-splicing
-391544	391611	tRNA
-217579	217625
-35601	35629
-		product	tRNA-Met
-547985	547918	gene
-217579	217625
-35601	35629
-		gene	trnM-CAU
-		exception	trans-splicing
-547985	547918	tRNA
-217579	217625
-35601	35629
-		product	tRNA-Met
-547858	547787	gene
-217579	217625
-35601	35629
-		gene	trnM-CAU
-		exception	trans-splicing
-547858	547787	tRNA
-217579	217625
-35601	35629
-		product	tRNA-Met
-547731	547660	gene
-217579	217625
-35601	35629
-		gene	trnM-CAU
-		exception	trans-splicing
-547731	547660	tRNA
-217579	217625
-35601	35629
-		product	tRNA-Met
-391798	391869	gene
-217579	217625
-35601	35629
-		gene	trnM-CAU
-		exception	trans-splicing
-391798	391869	tRNA
-217579	217625
-35601	35629
-		product	tRNA-Met
-547985	547918	gene
-217579	217625
-35601	35629
-		gene	trnM-CAU
-		exception	trans-splicing
-547985	547918	tRNA
-217579	217625
-35601	35629
-		product	tRNA-Met
-391544	391611	gene
-217579	217625
-35601	35629
-		gene	trnM-CAU
-		exception	trans-splicing
-391544	391611	tRNA
-217579	217625
-35601	35629
-		product	tRNA-Met
-391671	391742	gene
-217579	217625
-35601	35629
-		gene	trnM-CAU
-		exception	trans-splicing
-391671	391742	tRNA
-217579	217625
-35601	35629
-		product	tRNA-Met
-191591	191657	gene
-217579	217625
-35601	35629
-		gene	trnM-CAU
-		exception	trans-splicing
-191591	191657	tRNA
-217579	217625
-35601	35629
-		product	tRNA-Met
-391544	391611	gene
-217579	217625
-35601	35629
-		gene	trnM-CAU
-		exception	trans-splicing
-391544	391611	tRNA
-217579	217625
-35601	35629
-		product	tRNA-Met
-391671	391742	gene
-217579	217625
-35601	35629
-		gene	trnM-CAU
-		exception	trans-splicing
-391671	391742	tRNA
-217579	217625
-35601	35629
-		product	tRNA-Met
-391798	391869	gene
-217579	217625
-35601	35629
-		gene	trnM-CAU
-		exception	trans-splicing
-391798	391869	tRNA
-217579	217625
-35601	35629
-		product	tRNA-Met
-191591	191657	gene
-217579	217625
-35601	35629
-		gene	trnM-CAU
-		exception	trans-splicing
-191591	191657	tRNA
-217579	217625
-35601	35629
-		product	tRNA-Met
-547731	547660	gene
-217579	217625
-35601	35629
-		gene	trnM-CAU
-		exception	trans-splicing
-547731	547660	tRNA
-217579	217625
-35601	35629
-		product	tRNA-Met
-547858	547787	gene
-217579	217625
-35601	35629
-		gene	trnM-CAU
-		exception	trans-splicing
-547858	547787	tRNA
-217579	217625
-35601	35629
-		product	tRNA-Met
-547985	547918	gene
-217579	217625
-35601	35629
-		gene	trnM-CAU
-		exception	trans-splicing
-547985	547918	tRNA
-217579	217625
-35601	35629
-		product	tRNA-Met
+19299	19820	gene
+19851	20212
+20246	20402
+		gene	rps4
+19299	19820	CDS
+19851	20212
+20246	20402
+		product	ribosomal protein S4
+		codon_start	1
+21065	21592	gene
+21720	21809
+		gene	nad6
+21065	21592	CDS
+21720	21809
+		product	NADH dehydrogenase subunit 6
+		codon_start	1
+29224	29923	gene
+31855	31943
+		gene	cox2
+29224	29923	CDS
+31855	31943
+		product	cytochrome c oxidase subunit 2
+		codon_start	1
+35561	35629	gene
+		gene	trnK-CUU
+35561	35629	tRNA
+		product	tRNA-Lys
 56219	58150	gene
 		gene	rrnS
 56219	58150	rRNA
@@ -238,148 +34,195 @@
 		gene	rrn5
 58314	58431	rRNA
 		product	5S ribosomal RNA
-98231	98158	gene
-82939	82968
-		gene	trnD-GUC
-		exception	trans-splicing
-98231	98158	tRNA
-82939	82968
-		product	tRNA-Asp
+58863	59219	gene
+		gene	nad3
+58863	59219	CDS
+		product	NADH dehydrogenase subunit 3
+		codon_start	1
+59264	59641	gene
+		gene	rps12
+59264	59641	CDS
+		product	ribosomal protein S12
+		codon_start	1
+79748	79260	gene
+		gene	rpl10
+79748	79260	CDS
+		product	ribosomal protein L10
+		codon_start	1
 98231	98158	gene
 		gene	trnD-GUC-cp
 98231	98158	tRNA
 		product	tRNA-Asp
-119595	119525	gene
-		gene	trnG-GCC
-119595	119525	tRNA
-		product	tRNA-Gly
+101409	101869	gene
+103296	103810
+106873	107295
+109946	110034
+		gene	nad4
+101409	101869	CDS
+103296	103810
+106873	107295
+109946	110034
+		product	NADH dehydrogenase subunit 4
+		codon_start	1
+114579	114651	gene
+		gene	trnM-CAU-cp
+114579	114651	tRNA
+		product	tRNA-Met
 119530	119601	gene
 		gene	trnG-GCC
 119530	119601	tRNA
 		product	tRNA-Gly
-122987	123049	gene
-		gene	trnS-GCU
-122987	123049	tRNA
-		product	tRNA-Ser
-425255	425326	gene
-425999	426051
-123054	123021
-		gene	trnQ-UUG
-		exception	trans-splicing
-425255	425326	tRNA
-425999	426051
-123054	123021
-		product	tRNA-Gln
 122983	123054	gene
-123054	123021
 		gene	trnQ-UUG
-		exception	trans-splicing
 122983	123054	tRNA
-123054	123021
 		product	tRNA-Gln
-391799	391864	gene
-170957	170986
-		gene	trnK-CUU
-		exception	trans-splicing
-391799	391864	tRNA
-170957	170986
-		product	tRNA-Lys
-391545	391609	gene
-170957	170986
-		gene	trnK-CUU
-		exception	trans-splicing
-391545	391609	tRNA
-170957	170986
-		product	tRNA-Lys
-391672	391737	gene
-170957	170986
-		gene	trnK-CUU
-		exception	trans-splicing
-391672	391737	tRNA
-170957	170986
-		product	tRNA-Lys
-547730	547665	gene
-170957	170986
-		gene	trnK-CUU
-		exception	trans-splicing
-547730	547665	tRNA
-170957	170986
-		product	tRNA-Lys
-547857	547792	gene
-170957	170986
-		gene	trnK-CUU
-		exception	trans-splicing
-547857	547792	tRNA
-170957	170986
-		product	tRNA-Lys
-547984	547920	gene
-170957	170986
-		gene	trnK-CUU
-		exception	trans-splicing
-547984	547920	tRNA
-170957	170986
-		product	tRNA-Lys
+167066	168202	gene
+168330	168600
+168728	168834
+		gene	atp1
+167066	168202	CDS
+168330	168600
+168728	168834
+		product	ATP synthase subunit 1
+		codon_start	1
+182935	183507	gene
+		gene	nad9
+182935	183507	CDS
+		product	NADH dehydrogenase subunit 9
+		codon_start	1
 184264	184337	gene
 		gene	trnP-UGG-cp
 184264	184337	tRNA
 		product	tRNA-Pro
-184264	184337	gene
-		gene	trnP-UGG
-184264	184337	tRNA
-		product	tRNA-Pro
-525988	525918	gene
-556421	556396
-525925	525953
-184546	184570
-		gene	trnN-GUU-cp
-		exception	trans-splicing
-525988	525918	tRNA
-556421	556396
-525925	525953
-184546	184570
-		product	tRNA-Asn
+184504	184577	gene
+		gene	trnW-CCA-cp
+184504	184577	tRNA
+		product	tRNA-Trp
 190441	190369	gene
 		gene	trnK-UUU
 190441	190369	tRNA
 		product	tRNA-Lys
-240729	240815	gene
-		gene	trnS-GCU
-240729	240815	tRNA
-		product	tRNA-Ser
+210676	211296	gene
+		gene	ccmB
+210676	211296	CDS
+		product	cytochrome c biogenesis B
+		codon_start	1
+227828	226647	gene
+		gene	cob
+227828	226647	CDS
+		product	apocytochrome b
+		codon_start	1
+229526	229493	gene
+229448	229261
+		gene	rps14
+229526	229493	CDS
+229448	229261
+		product	ribosomal protein S14
+		codon_start	1
+230076	229528	gene
+		gene	rpl5
+230076	229528	CDS
+		product	ribosomal protein L5
+		codon_start	1
 240729	240815	gene
 		gene	trnS-UGA
 240729	240815	tRNA
 		product	tRNA-Ser
-313897	313970	gene
+248379	250331	gene
+		gene	matR
+248379	250331	CDS
+		product	maturase-related protein
+		codon_start	1
+250606	250908	gene
+		gene	sdh3
+250606	250908	CDS
+		product	succinate dehydrogenase subunit 3
+		codon_start	1
+262531	262130	gene
+		gene	sdh4
+262531	262130	CDS
+		product	succinate dehydrogenase subunit 4
+		codon_start	1
+263256	262459	gene
+		gene	cox3
+263256	262459	CDS
+		product	cytochrome c oxidase subunit 3
+		codon_start	1
+265274	264789	gene
+		gene	atp8
+265274	264789	CDS
+		product	ATP synthase subunit 8
+		codon_start	1
+307488	308251	gene
+309189	309870
+		gene	ccmFc
+307488	308251	CDS
+309189	309870
+		product	cytochrome c biogenesis FC
+		codon_start	1
+313897	313977	gene
 		gene	trnM-CAU
-313897	313970	tRNA
+313897	313977	tRNA
 		product	tRNA-Met
+318417	317698	gene
+		gene	mttB
+318417	317698	CDS
+		product	transport membrane protein
+		codon_start	1
 332077	335173	gene
 		gene	rrnL
 332077	335173	rRNA
 		product	26S ribosomal RNA
+335544	335617	gene
+		gene	trnfM-CAU
+335544	335617	tRNA
+		product	tRNA-Met
+346374	347126	gene
+		gene	ccmC
+346374	347126	CDS
+		product	cytochrome c biogenesis C
+		codon_start	1
 347113	347198	gene
-		gene	trnI-UAU
+		gene	trnI-UAU-cp
 347113	347198	tRNA
 		product	tRNA-Ile
-524867	524785	gene
-355164	355147
-		gene	trnY-GUA
+355073	353340	gene
+		gene	ccmFn
+355073	353340	CDS
+		product	cytochrome c biogenesis FN
+		codon_start	1
+361562	360720	gene
+		gene	atp6
+361562	360720	CDS
+		product	ATP synthase subunit 6
+		codon_start	1
+402727	402143	gene
+		gene	atp4
+402727	402143	CDS
+		product	ATP synthase subunit 4
+		codon_start	1
+403171	402899	gene
+		gene	nad4L
+403171	402899	CDS
+		product	NADH dehydrogenase subunit 4L
+		codon_start	1
+459668	459962	gene
+145416	145498
+146943	147134
+247658	247716
+412559	412301
+		gene	nad1
 		exception	trans-splicing
-524867	524785	tRNA
-355164	355147
-		product	tRNA-Tyr
+459668	459962	CDS
+145416	145498
+146943	147134
+247658	247716
+412559	412301
+		product	NADH dehydrogenase subunit 1
+		codon_start	1
 425250	425337	gene
 		gene	trnS-GCU
 425250	425337	tRNA
-		product	tRNA-Ser
-425250	425334	gene
-		gene	trnS-GGA-cp
-425250	425334	tRNA
-		product	tRNA-Ser
-425250	425336	gene
-		gene	trnS-UGA
-425250	425336	tRNA
 		product	tRNA-Ser
 425694	425767	gene
 		gene	trnF-GAA
@@ -389,41 +232,120 @@
 		gene	trnP-UGG
 425982	426056	tRNA
 		product	tRNA-Pro
+434173	434102	gene
+		gene	trnE-UUC
+434173	434102	tRNA
+		product	tRNA-Glu
 436504	436577	gene
 		gene	trnH-GUG-cp
 436504	436577	tRNA
 		product	tRNA-His
-436575	436511	gene
-		gene	trnH-GUG-cp
-436575	436511	tRNA
-		product	tRNA-His
+441962	440379	gene
+		gene	cox1
+441962	440379	CDS
+		product	cytochrome c oxidase subunit 1
+		codon_start	1
+453818	454042	gene
+		gene	atp9
+453818	454042	CDS
+		product	ATP synthase subunit 9
+		codon_start	1
+458380	458568	gene
+459362	459559
+		gene	rps10
+458380	458568	CDS
+459362	459559
+		product	ribosomal protein S10
+		codon_start	1
 476507	479603	gene
 		gene	rrnL
 476507	479603	rRNA
 		product	26S ribosomal RNA
+479974	480047	gene
+		gene	trnfM-CAU
+479974	480047	tRNA
+		product	tRNA-Met
+490804	491556	gene
+		gene	ccmC
+490804	491556	CDS
+		product	cytochrome c biogenesis C
+		codon_start	1
 491543	491628	gene
-		gene	trnI-UAU
+		gene	trnI-UAU-cp
 491543	491628	tRNA
 		product	tRNA-Ile
-335544	335616	gene
-524842	524787
-		gene	trnfM-CAU
+499025	498486	gene
+		gene	rpl16
+499025	498486	CDS
+		product	ribosomal protein L16
+		codon_start	1
+500580	498928	gene
+		gene	rps3
+500580	498928	CDS
+		product	ribosomal protein S3
+		codon_start	1
+251554	251706	gene
+252910	253301
+524257	524097
+521304	520732
+519246	519059
+		gene	nad2
 		exception	trans-splicing
-335544	335616	tRNA
-524842	524787
-		product	tRNA-Met
-479974	480046	gene
-524842	524787
-		gene	trnfM-CAU
-		exception	trans-splicing
-479974	480046	tRNA
-524842	524787
-		product	tRNA-Met
+251554	251706	CDS
+252910	253301
+524257	524097
+521304	520732
+519246	519059
+		product	NADH dehydrogenase subunit 2
+		codon_start	1
+524867	524785	gene
+		gene	trnY-GUA
+524867	524785	tRNA
+		product	tRNA-Tyr
+525988	525917	gene
+		gene	trnN-GUU-cp
+525988	525917	tRNA
+		product	tRNA-Asn
 528145	528075	gene
 		gene	trnC-GCA
 528145	528075	tRNA
 		product	tRNA-Cys
+533187	533329	gene
+534212	534280
+536079	536545
+537609	537852
+539631	539892
+		gene	nad7
+533187	533329	CDS
+534212	534280
+536079	536545
+537609	537852
+539631	539892
+		product	NADH dehydrogenase subunit 7
+		codon_start	1
+454550	454778	gene
+455627	456846
+549635	549171
+		gene	nad5
+		exception	trans-splicing
+454550	454778	CDS
+455627	456846
+549635	549171
+		product	NADH dehydrogenase subunit 5
+		codon_start	1
 556354	556426	gene
 		gene	trnC-GCA
 556354	556426	tRNA
 		product	tRNA-Cys
+558788	559686	gene
+561405	561519
+		gene	rpl2
+558788	559686	CDS
+561405	561519
+		product	ribosomal protein L2
+		codon_start	1
+571668	572288	gene
+		gene	rps1
+571668	572288	CDS
+		product	ribosomal protein S1
+		codon_start	1

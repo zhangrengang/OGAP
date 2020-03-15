@@ -1,4 +1,4 @@
-LOCUS       Mt                    602121 bp    DNA     circular     14-MAR-2020
+LOCUS       Mt                    602121 bp    DNA     circular     15-MAR-2020
 DEFINITION  Mitochondrion, complete genome.
 ACCESSION   
 VERSION
@@ -13,114 +13,51 @@ REFERENCE   1  (bases 1 to 602121)
 REFERENCE   2  (bases 1 to 602121)
   AUTHORS   Zhang,R.
   TITLE     Direct Submission
-  JOURNAL   Submitted (14-MAR-2020) Bioinformatics, Ori-Gene Co., Ltd.,
+  JOURNAL   Submitted (15-MAR-2020) Bioinformatics, Ori-Gene Co., Ltd.,
             Beijing, China
 FEATURES             Location/Qualifiers
      source          1..602121
                      /organelle="mitochondrion"
                      /mol_type="genomic DNA"
-     gene            join(191591..191657,217579..217625,35601..35629)
-                     /gene="trnM-CAU"
-                     /trans_splicing
-     tRNA            join(191591..191657,217579..217625,35601..35629)
-                     /gene="trnM-CAU"
-                     /product="tRNA-Met"
-     gene            join(391544..391611,35601..35629)
-                     /gene="trnH-AUG"
-                     /trans_splicing
-     gene            join(391544..391611,217579..217625,35601..35629)
-                     /gene="trnM-CAU"
-                     /trans_splicing
-     tRNA            join(391544..391611,35601..35629)
-                     /gene="trnH-AUG"
-                     /product="tRNA-His"
-     tRNA            join(391544..391611,217579..217625,35601..35629)
-                     /gene="trnM-CAU"
-                     /product="tRNA-Met"
-     gene            join(391545..391609,170957..170986)
+     gene            join(19299..19820,19851..20212,20246..20402)
+                     /gene="rps4"
+     CDS             join(19299..19820,19851..20212,20246..20402)
+                     /gene="rps4"
+                     /codon_start=1
+                     /product="ribosomal protein S4"
+                     /translation="MPALRFQTCRLLSGNVRNRELTIIQRRILRRLRKKKRSIKRKIY
+                     PRKNLNSYIQSQTTRKLPLFHGDLPITEMHRGTEQTSYIPFPLNPETRLDVIPVRLHF
+                     RETIPQARQPISHRRVCVNNGMVSITHLRLSHGDIISFQENDARIRGEEIRRSFYIEI
+                     SVEKIIVGKFLDHPMWRRTKTEWFHLLKTKRGCRLLLKDRFLQQLRSSMQEEDLERTK
+                     KFGSEKVCLGSSFAEHNRMKRNFYHFKSLFLSKRRNEKNRNFPTRTRSPIVYSLFSNS
+                     TYCSASPHQFTMKRRRIKRIELPTHYSEVNHRTPKAVVSYGPNIGHIPHDIRLKDPNL
+                     PLRSGNGRSQNI"
+     gene            join(21065..21592,21720..21809)
+                     /gene="nad6"
+     CDS             join(21065..21592,21720..21809)
+                     /gene="nad6"
+                     /codon_start=1
+                     /product="NADH dehydrogenase subunit 6"
+                     /translation="MILSVLSSLALVSGLMVARAKNPVHSVLFPIPVFCDTSGLLLLL
+                     GLDFSAMIFPVVHIGAIAVSFLFVVMMFHIQIAEIHEEVLRYLPVSGIIGLIFWWEMF
+                     FILDNETIPLLPTQRNTTSLRYTVYAGKVRSWTNLETLGNLLYTYYSVWFLVPSLILL
+                     VAMIGAIVLTMHRTTKVKRQDVFRRNAIDFRRTIMRRTTDPLTIY"
+     gene            join(29224..29923,31855..31943)
+                     /gene="cox2"
+     CDS             join(29224..29923,31855..31943)
+                     /gene="cox2"
+                     /codon_start=1
+                     /product="cytochrome c oxidase subunit 2"
+                     /translation="MIVLEWLFLTIAPCDAAEPWQLGSQDAATPMMQGIIDLHHDIFF
+                     FLILILVFVLWILVRALWHFHYQKNPIPQRIVHGTTIEILRTIFPSIIPMFIAIPSFA
+                     LLYSMDEVVVDPAITIKAIGHQWYRTYEYSDYNSSDEQSLTFDSYTIPEDDLELGQSR
+                     LLEVDNRVVVPAKTHLRIIVTSADVPHSWAVPSSGVKCDAVPGRLNQISILVQREGVY
+                     YGQCSEICGTNHAFMPIVVEAVPRKDYGSRVSNQLIPQTRGAGI"
+     gene            35561..35629
                      /gene="trnK-CUU"
-                     /trans_splicing
-     tRNA            join(391545..391609,170957..170986)
-                     /gene="trnK-CUU"
-                     /product="tRNA-Lys"
-     gene            join(391671..391742,35601..35629)
-                     /gene="trnH-AUG"
-                     /trans_splicing
-     gene            join(391671..391742,217579..217625,35601..35629)
-                     /gene="trnM-CAU"
-                     /trans_splicing
-     tRNA            join(391671..391742,35601..35629)
-                     /gene="trnH-AUG"
-                     /product="tRNA-His"
-     tRNA            join(391671..391742,217579..217625,35601..35629)
-                     /gene="trnM-CAU"
-                     /product="tRNA-Met"
-     gene            join(391672..391737,170957..170986)
-                     /gene="trnK-CUU"
-                     /trans_splicing
-     tRNA            join(391672..391737,170957..170986)
+     tRNA            35561..35629
                      /gene="trnK-CUU"
                      /product="tRNA-Lys"
-     gene            join(391798..391869,35601..35629)
-                     /gene="trnH-AUG"
-                     /trans_splicing
-     gene            join(391798..391869,217579..217625,35601..35629)
-                     /gene="trnM-CAU"
-                     /trans_splicing
-     tRNA            join(391798..391869,35601..35629)
-                     /gene="trnH-AUG"
-                     /product="tRNA-His"
-     tRNA            join(391798..391869,217579..217625,35601..35629)
-                     /gene="trnM-CAU"
-                     /product="tRNA-Met"
-     gene            join(391799..391864,170957..170986)
-                     /gene="trnK-CUU"
-                     /trans_splicing
-     tRNA            join(391799..391864,170957..170986)
-                     /gene="trnK-CUU"
-                     /product="tRNA-Lys"
-     gene            join(complement(547918..547985),35601..35629)
-                     /gene="trnH-AUG"
-                     /trans_splicing
-     gene            join(complement(547918..547985),217579..217625,
-                     35601..35629)
-                     /gene="trnM-CAU"
-                     /trans_splicing
-     tRNA            join(complement(547918..547985),35601..35629)
-                     /gene="trnH-AUG"
-                     /product="tRNA-His"
-     tRNA            join(complement(547918..547985),217579..217625,
-                     35601..35629)
-                     /gene="trnM-CAU"
-                     /product="tRNA-Met"
-     gene            join(complement(547787..547858),35601..35629)
-                     /gene="trnH-AUG"
-                     /trans_splicing
-     gene            join(complement(547787..547858),217579..217625,
-                     35601..35629)
-                     /gene="trnM-CAU"
-                     /trans_splicing
-     tRNA            join(complement(547787..547858),35601..35629)
-                     /gene="trnH-AUG"
-                     /product="tRNA-His"
-     tRNA            join(complement(547787..547858),217579..217625,
-                     35601..35629)
-                     /gene="trnM-CAU"
-                     /product="tRNA-Met"
-     gene            join(complement(547660..547731),35601..35629)
-                     /gene="trnH-AUG"
-                     /trans_splicing
-     gene            join(complement(547660..547731),217579..217625,
-                     35601..35629)
-                     /gene="trnM-CAU"
-                     /trans_splicing
-     tRNA            join(complement(547660..547731),35601..35629)
-                     /gene="trnH-AUG"
-                     /product="tRNA-His"
-     tRNA            join(complement(547660..547731),217579..217625,
-                     35601..35629)
-                     /gene="trnM-CAU"
-                     /product="tRNA-Met"
      gene            56219..58150
                      /gene="rrnS"
      rRNA            56219..58150
@@ -131,132 +68,357 @@ FEATURES             Location/Qualifiers
      rRNA            58314..58431
                      /gene="rrn5"
                      /product="5S ribosomal RNA"
-     gene            join(complement(98158..98231),82939..82968)
-                     /gene="trnD-GUC"
-                     /trans_splicing
-     tRNA            join(complement(98158..98231),82939..82968)
-                     /gene="trnD-GUC"
-                     /product="tRNA-Asp"
+     gene            58863..59219
+                     /gene="nad3"
+     CDS             58863..59219
+                     /gene="nad3"
+                     /codon_start=1
+                     /product="NADH dehydrogenase subunit 3"
+                     /translation="MLEFAPICIYLVISLLVSLILVGLPFLFSSNSSTYPEKLSAYEC
+                     GFDPFGDARSRFDIRFYLVSILFIIFDLEVTFFFPWAVSLNKIDLFGFWSMMAFLLIL
+                     TIGFLYEWKRGALDWE"
+     gene            59264..59641
+                     /gene="rps12"
+     CDS             59264..59641
+                     /gene="rps12"
+                     /codon_start=1
+                     /product="ribosomal protein S12"
+                     /translation="MPTLNQLIRHGREEKRRTDRTRALGQCPQKQGVCLRVSTRTPKK
+                     PNSALRKIAKVRLSNRHDIFAYIPGEGHNLQEHSMVLIRGGRVKDLPGVKFHCIRGVK
+                     DLLGIPDRRRGRSKYGAEKPKSI"
+     gene            complement(79260..79748)
+                     /gene="rpl10"
+     CDS             complement(79260..79748)
+                     /gene="rpl10"
+                     /codon_start=1
+                     /product="ribosomal protein L10"
+                     /translation="MPFGRNLLQRESLYRVSGEERSPEILISFHSSGSTSNQWRKLKN
+                     PWFPGRTPFRPSCCGTGKKKRFFAQLAHSAGPTCISYLAEEASDRLEFLPSWDSMDQD
+                     LLSLYGQYRSTLVDHMDIEKASDFDELETSLFNFYLPSSYLCFVCSQEEFDLFNLGIP
+                     PK"
      gene            complement(98158..98231)
                      /gene="trnD-GUC-cp"
      tRNA            complement(98158..98231)
                      /gene="trnD-GUC-cp"
                      /product="tRNA-Asp"
-     gene            complement(119525..119595)
-                     /gene="trnG-GCC"
-     tRNA            complement(119525..119595)
-                     /gene="trnG-GCC"
-                     /product="tRNA-Gly"
+     gene            join(101409..101869,103296..103810,106873..107295,
+                     109946..110034)
+                     /gene="nad4"
+     CDS             join(101409..101869,103296..103810,106873..107295,
+                     109946..110034)
+                     /gene="nad4"
+                     /codon_start=1
+                     /product="NADH dehydrogenase subunit 4"
+                     /translation="MLEHFCECYSDLSGPILCPVLGSITPLFIPNSRIRPIRLIGLCA
+                     SLITFLYSPVPRIQFDPSTAKSQFVESLRWLPYENINFDLGIDGISLFFVILTTFLIP
+                     ICILVGWSGMRSYGKEYITASLIREFLMIAVFRMLDPLLFYVFPESVPIPMFIIIGVW
+                     GSRQRKIKAAYQFFLYTLLGSVFMLLAILLILLQTGTTDLQISLTTEFSERRQIFLWI
+                     ASFASFAVKVPMVPVHIWLPEAHVEAPTAGSVILAGIPSKLGTHGFLRFSIPMFPEAT
+                     LCSTPFIYTLSAIAIIYTSLTTSRQIDLKKIIAYSSVAHMNLVTIGMFSPNIQGIGGS
+                     IPPMLSHGLVSSALFLCVGVLYDRHKTRLVRYYGGLVSTMPNLPTIFFSFTLANMSSP
+                     GTSSFIGEFPILVGAFQRNSLVATLAALGMILGAAYSLWLYNRVVSGNLKPDFLHKFS
+                     DSNGREVSIFIPFIFGVVRMGVHPKVFPDRMHTSVSNLVQHGKFH"
+     gene            114579..114651
+                     /gene="trnM-CAU-cp"
+     tRNA            114579..114651
+                     /gene="trnM-CAU-cp"
+                     /product="tRNA-Met"
      gene            119530..119601
                      /gene="trnG-GCC"
      tRNA            119530..119601
                      /gene="trnG-GCC"
                      /product="tRNA-Gly"
-     gene            join(122983..123054,complement(123021..123054))
+     gene            122983..123054
                      /gene="trnQ-UUG"
-                     /trans_splicing
-     tRNA            join(122983..123054,complement(123021..123054))
-                     /gene="trnQ-UUG"
-                     /product="tRNA-Gln"
-     gene            122987..123049
-                     /gene="trnS-GCU"
-     tRNA            122987..123049
-                     /gene="trnS-GCU"
-                     /product="tRNA-Ser"
-     gene            join(425255..425326,425999..426051,
-                     complement(123021..123054))
-                     /gene="trnQ-UUG"
-                     /trans_splicing
-     tRNA            join(425255..425326,425999..426051,
-                     complement(123021..123054))
+     tRNA            122983..123054
                      /gene="trnQ-UUG"
                      /product="tRNA-Gln"
-     gene            join(complement(547920..547984),170957..170986)
-                     /gene="trnK-CUU"
+     gene            join(459668..459962,145416..145498,146943..147134,
+                     247658..247716,complement(412301..412559))
+                     /gene="nad1"
                      /trans_splicing
-     tRNA            join(complement(547920..547984),170957..170986)
-                     /gene="trnK-CUU"
-                     /product="tRNA-Lys"
-     gene            join(complement(547792..547857),170957..170986)
-                     /gene="trnK-CUU"
-                     /trans_splicing
-     tRNA            join(complement(547792..547857),170957..170986)
-                     /gene="trnK-CUU"
-                     /product="tRNA-Lys"
-     gene            join(complement(547665..547730),170957..170986)
-                     /gene="trnK-CUU"
-                     /trans_splicing
-     tRNA            join(complement(547665..547730),170957..170986)
-                     /gene="trnK-CUU"
-                     /product="tRNA-Lys"
-     gene            184264..184337
-                     /gene="trnP-UGG"
+     CDS             join(459668..459962,145416..145498,146943..147134,
+                     247658..247716,complement(412301..412559))
+                     /gene="nad1"
+                     /codon_start=1
+                     /product="NADH dehydrogenase subunit 1"
+                     /translation="MAFVQRRKGPDVVGSFGLLQPLADGSKLILKEPISPSSANFSLF
+                     RMAPVATFMLSLVARAVVPFDYGMVLSDPNIGLLYLFAISSLGVYGIITAGRSSNSKY
+                     AFLGALRSAAQMVSYEVSIGLILITVLICVGPRNSSEIVMAQKQIWSGIPLFPVLVMF
+                     LISRLAETNRAPFDLPEAEAESVAGYNVEYSSMGSALFFLGEYANMILMSGPCTSLSP
+                     GGWPPILDLPIFKKIPGSIRFSIKVILFLFLYIWVRAAFPRYRYDQLMGLGRKVFLPL
+                     SLARVVPVSGVLVTFQWLP"
+     gene            join(167066..168202,168330..168600,168728..168834)
+                     /gene="atp1"
+     CDS             join(167066..168202,168330..168600,168728..168834)
+                     /gene="atp1"
+                     /codon_start=1
+                     /product="ATP synthase subunit 1"
+                     /translation="MEFSPELTTLLESRITNFYTNFQVDEIGRVVSVGDGIARVYGLN
+                     EIQAGEMVEFASGVKGIALNLENENVGIVVFGSDTAIKEGDLVKRTGSIVDVPAGKAM
+                     LGRVVDALGVPIDGRGALSDHERRRVEVKAPGIIERKSVHEPMQTGLKAVDSLVPIGR
+                     GQRELIIGDRQTGKTAIAIDTILNQKQMNSRATSESETLYCVYVAIGQKRSTVAQLVQ
+                     ILSEANALEYSILVAATASDPAPLQFLAPYSGCAMGEYFRDNGMHALIIYDDLSKQAV
+                     AYRQMSLLLRRPPGREAFPGDVFYLHSRLLERAAKRSDLTGAGSLTALPVIETQAGDV
+                     SAYIPTNVIPITDGQICSETELFYRGIRPAINVGLSVSRVGSAAQLKAMKQVCGSSKL
+                     ELAQYREVAALAQFGSDLDAATQALLNRGARLTEVPKQPQYAPLPIEKQILVIYAAVN
+                     GFCDRMPLDKISQYERAIPSSIKPELLQALKGGLTNERKMEPDAFLKESALPYK"
+     gene            182935..183507
+                     /gene="nad9"
+     CDS             182935..183507
+                     /gene="nad9"
+                     /codon_start=1
+                     /product="NADH dehydrogenase subunit 9"
+                     /translation="MDNQSIFKYSWETLPKKWVKKMERSEHGNRSDTNTDYLFQLLCF
+                     LKLHTYTRVQVSIDICGVDHPSRKRRFEVVYNLLSTRYNSRIRVQTSADEVTRISPVV
+                     SLFPSAGRWEREVWDMFGVSFINHPDLRRISTDYGFEGHPLRKDLPLSGYVEVRYDDP
+                     EKRVVSEPIEMTQEFRYFDFASPWEQRSDG"
      gene            184264..184337
                      /gene="trnP-UGG-cp"
      tRNA            184264..184337
-                     /gene="trnP-UGG"
+                     /gene="trnP-UGG-cp"
                      /product="tRNA-Pro"
-     gene            join(complement(525918..525988),
-                     complement(556396..556421),525925..525953,184546..184570)
-                     /gene="trnN-GUU-cp"
-                     /trans_splicing
-     tRNA            join(complement(525918..525988),
-                     complement(556396..556421),525925..525953,184546..184570)
-                     /gene="trnN-GUU-cp"
-                     /product="tRNA-Asn"
+     gene            184504..184577
+                     /gene="trnW-CCA-cp"
+     tRNA            184504..184577
+                     /gene="trnW-CCA-cp"
+                     /product="tRNA-Trp"
      gene            complement(190369..190441)
                      /gene="trnK-UUU"
      tRNA            complement(190369..190441)
                      /gene="trnK-UUU"
                      /product="tRNA-Lys"
-     gene            240729..240815
-                     /gene="trnS-GCU"
+     gene            210676..211296
+                     /gene="ccmB"
+     CDS             210676..211296
+                     /gene="ccmB"
+                     /codon_start=1
+                     /product="cytochrome c biogenesis B"
+                     /translation="MRRLFLELYHKQIFPSTPITSFSPFLSYIVVTPLMLGFEKDFSC
+                     HSHLGPIRIPPLFPFPPAPFPRNEKEDGTLELYYLSAYCLPKILLLQLVGHRVIQISC
+                     VFCGFPMLQLLYQFGRSGMDRLNIPLGSLVLTLLCGIHSRSALGITSSSGWNSSQNPT
+                     TSPTLLPPTLSRTSIETEWFHVLSSIGYSSPFVSLFPISVSISLQD"
+     gene            complement(226647..227828)
+                     /gene="cob"
+     CDS             complement(226647..227828)
+                     /gene="cob"
+                     /codon_start=1
+                     /product="apocytochrome b"
+                     /translation="MTIRNQRFSLLKQPISSTLNQHLIDYPTPSNLSYWWGFGPLAGI
+                     CLVIQIVTGVFLAMHYTPHVDLAFNSVEHVMRDVEGGWLLRYMHANGASMFLIVVHLH
+                     LFRGLYHASYSSPREFVWCLGVVIFLLMIVTAFTGYVLPWGQMSFWGATVITSLASAL
+                     PVVGDTIVTWLWGGFSVDNATLNRFFSLHHLLPFILVGASLLHLAALHQYGSNNPLGV
+                     HSEMDKISFYPYFYVKDLVGWVAFAIFFSIWIFYAPNVLGHPDNYIPANPMPTPPHIV
+                     PEWYFLPIHAILRSIPDKSGGVAAIAPVFICLLALPFFKSMYVRSSSFRPIHQGIFWL
+                     LLADCLLLGWIGCQPVEAPFVTIGQISPFVFFLFFAITPIPGRVGRGIPNSYTDETDH
+                     T"
+     gene            complement(join(229261..229448,229493..229526))
+                     /gene="rps14"
+     CDS             complement(join(229261..229448,229493..229526))
+                     /gene="rps14"
+                     /codon_start=1
+                     /product="ribosomal protein S14"
+                     /translation="MSEKRNIRDHKPFYKDPDLPSEMRDKHRYKLSKLPRKSSFARVR
+                     NRCIFTGRPRSVYEFFRISRIVFRHLEVL"
+     gene            complement(229528..230076)
+                     /gene="rpl5"
+     CDS             complement(229528..230076)
+                     /gene="rpl5"
+                     /codon_start=1
+                     /product="ribosomal protein L5"
+                     /translation="MPLHFHYEDVSRQDPLLKPNHANVMEVPGSCEIRVVPKAPYDFI
+                     IKNGKLAMEIPRGQKFIQTQRGSTGKSFRSNLGSFKDKGYVSDLARQSTLRGHGMSNF
+                     LVRISTVMSLLDSPVEIRENSIQFSMETEFCEFSPELEDHFEIFEHIRGFNVTIVTSA
+                     NTQDETLPPWSGFLPKDEGETQ"
      gene            240729..240815
                      /gene="trnS-UGA"
      tRNA            240729..240815
-                     /gene="trnS-GCU"
+                     /gene="trnS-UGA"
                      /product="tRNA-Ser"
-     gene            313897..313970
+     gene            248379..250331
+                     /gene="matR"
+     CDS             248379..250331
+                     /gene="matR"
+                     /codon_start=1
+                     /product="maturase-related protein"
+                     /translation="MKEAIRMVLESIYDPEFPDTSHFRSGRGCHSVLRRIKEKWGISR
+                     WFLEFDIRKCFHTIDRHRLIPIFKEEIDDPKFFYPIQKVFSAGRLVGGEKGPYSVPHS
+                     VLLSALPGNIYLHKLDQEIGRIRQKYEIPIVQRIRSVLLRTGRIDDQENSGEEASFNA
+                     PQDSRAIIVGRVKSIQRKAAFHSLVSSWHTPPTSTPRLRGNQKTPFVFPSLAAFLNKP
+                     SSLLCAAFLIEAAGLTPKAEFYGRERCNWAMRDLIKYCKRKGLLIELGGEAILVIRSE
+                     RRLARKQAPLKTHYLIRICYARYADDSLLGIVGAVELIIEIQKRIAHFLQSGLNLWVG
+                     SAGSTTIAARSTVEFPGTVIREVPPRTTPIQFFRELEKRLRVKHRIHITACHLRSAIH
+                     SKFRNLGDSIPIKQLTKGMSETGSLLDGVQLAETLGTAGVISPQVSVLWGTVKHIRQG
+                     SRGISLLHSSGRSNAPSGVQQAVSRSGMSVRKLSLYTPAGRKAAEEGGGHWAGSISSE
+                     FSIQIEAPIKKILRRLRDRGLISRRRPWPIHVACLTNVSDGDIVNWSAGIAISPLSYY
+                     RCRDNLYQVRTIVDHQIRWSAIFTLAHKHKSSARNIIPKYSKDSNILNQEGVKTLAKF
+                     PNSIELGKLGPGQDPNNKEHSTTSLV"
+     gene            250606..250908
+                     /gene="sdh3"
+     CDS             250606..250908
+                     /gene="sdh3"
+                     /codon_start=1
+                     /product="succinate dehydrogenase subunit 3"
+                     /translation="MNMLRPLSPHLPIYKPQLTSTFPISHRISGAFLATLVFFFYLLY
+                     LKIGLICFTYENFYQFFFYSSKLILISVEITALALSYHLYNGVRHLLTDFSFEEKD"
+     gene            join(251554..251706,252910..253301,
+                     complement(524097..524257),complement(520732..521304),
+                     complement(519059..519246))
+                     /gene="nad2"
+                     /trans_splicing
+     CDS             join(251554..251706,252910..253301,
+                     complement(524097..524257),complement(520732..521304),
+                     complement(519059..519246))
+                     /gene="nad2"
+                     /codon_start=1
+                     /product="NADH dehydrogenase subunit 2"
+                     /translation="MFNLFLAVSPEIFIINAISILLIHGVVFSTSKKYDSPPLVSNVG
+                     WLGLLSVLITLLLLAAGAPLLTIAHLFWNNLFRRDNFTYFCQILLLLSTAGTISMCFD
+                     SFEQERFDAFESIVLIPLPTRSMLFMISAHDSIAMYLAIEPQSLCFYVIAASKRKSEF
+                     STEAGSKYLILGAFPSGILLFGCSMIYGSTGATHFDQLAKILTGYEITGARSSGIFMG
+                     ILSIAVGFLFKITAVPFHMWAPDIYEGSPTPVTAFLSIAPKISISANISRVSIYGSYG
+                     ATLQQIFFFCSIASMILGALAAMAQTKVKRPLAHSSIGHVGYIRTGFSCGTIEGIQSL
+                     LIGLFIYALMTIDAFAIVSALRQTRVKYIADLGALAKTNPISAITFSITMFSYAGIPP
+                     LAGFCSKFYLFFAALGCGAYFLAPVGVVTSVIGRFYYIRLAKRMFFDTPRTWILYEPM
+                     DRNKSLLLAMTSSFITSFFLYPSPLFSVTHQMALSSYL"
+     gene            complement(262130..262531)
+                     /gene="sdh4"
+     CDS             complement(262130..262531)
+                     /gene="sdh4"
+                     /codon_start=1
+                     /product="succinate dehydrogenase subunit 4"
+                     /translation="MVLAFCRRGSVIPICLYLLVGRYMKEGKSGLRNESSKTKRIGLF
+                     QRITAAFPLPLIIIYKKVSSTFLPNLSLFWHINEGIEEIMADHVHQEMTRNWILVYLR
+                     LFLLIVIKDLFLSLVSFLNKLKNLMDRTWLL"
+     gene            complement(262459..263256)
+                     /gene="cox3"
+     CDS             complement(262459..263256)
+                     /gene="cox3"
+                     /codon_start=1
+                     /product="cytochrome c oxidase subunit 3"
+                     /translation="MIESQRHSYHLVDPSPWPISGSLGALATTVGGVMYMHSFQGGAT
+                     LLSLGLIFILYTMFVWWRDVLRESTLEGHHTKVVQLGLRYGFILFIVSEVMFFFAFFW
+                     AFFHSSLAPTVEIGGIWPPKGIWVLDPWEIPFLNTPILLSSGAAVTWAHHAILAGKEK
+                     RAVYALVATVLLALVFTGFQGMEYYQAPSTISDSIYGSTFFLATGFHGFHVIIGTLFL
+                     IICGIRQYLGHLTKEHHVGFEAAAWYWHFVDVVRLFLFVSIYWWGGI"
+     gene            complement(264789..265274)
+                     /gene="atp8"
+     CDS             complement(264789..265274)
+                     /gene="atp8"
+                     /codon_start=1
+                     /product="ATP synthase subunit 8"
+                     /translation="MPQLDKFTYFTQFFWSCLFLFTFYIPICNDGDGVLGISRILKLR
+                     NRLVSHRGNNYLMPRNDPNRLEDILRKGFSTGVSYMYSSLFEVSQWCNAVDLLGKRRK
+                     ITLISCFGEISGSRGMERSILYLISKSSYSISFNPGWGIPCRNDIMLIHVLHGQGRIK
+                     K"
+     gene            join(307488..308251,309189..309870)
+                     /gene="ccmFc"
+     CDS             join(307488..308251,309189..309870)
+                     /gene="ccmFc"
+                     /codon_start=1
+                     /product="cytochrome c biogenesis FC"
+                     /translation="MVQLHNFFFFITFMVVPRGTAAPVLLKWFVSRDVPTGAPSSNGT
+                     LIPIPIPLFPLLVYLHSRKFIRSMDGAKSRVLVRASRPILLPDIIGRSSSETRARNAL
+                     FRFVPVLHFLLLESKGDFSYLESFCGVLCLLFFRTFFFLPRDRSAKRERARRRKGQTL
+                     RPNGNEQRRNDKRRCSGHPQRRVEEGFGPVAFPVPPSSGGACVEGVPPEIGLEALALP
+                     TSRQLMAVGHDYYQKAPMNMNISHGGVCICMLGVLLSNTKKIQFTQRLPLGSELHMGK
+                     ERCCLRGLDHLHGPTFHSICGNLMIYKPSLTNDRLMFEHDESLRADLLLINFPASYEN
+                     GKLEHFLHRWMKNREHNNFWLTMFPEKRYFRETTSTTEVAIHTNLFTDLYASIGTSSS
+                     RTGGWYTTIMKLPFIFFIRIGFMLASSGGSRSLLRQLQKDKLRWNRESSVEFHNCIKR
+                     VKVVAAARRGTSSTVPVRPNETEWAGTTNQA"
+     gene            313897..313977
                      /gene="trnM-CAU"
-     tRNA            313897..313970
+     tRNA            313897..313977
                      /gene="trnM-CAU"
                      /product="tRNA-Met"
+     gene            complement(317698..318417)
+                     /gene="mttB"
+     CDS             complement(317698..318417)
+                     /gene="mttB"
+                     /codon_start=1
+                     /product="transport membrane protein"
+                     /translation="MIGLGLTWFTRYWFPEELISPLTKPFLTLPLDSYFVRTQSTEAP
+                     PTYVATSSIACSYFVFPLISYQIWCFLIPSCYGEQRTKYNRFLHLSGSRFSFFLFLTP
+                     PRVVPNVWHFPYFVGATSTNSLMIKLQPKIYDYIMLTVRISFILSVCSQVPVIVIRLP
+                     EPRGLSVETSTNNRRFLMVFPLLTAALSAPPDIWCQIVARFLISLIIELAIFVASIVQ
+                     VREEGWTSGMRESGSIDKKQE"
      gene            332077..335173
                      /gene="rrnL"
      rRNA            332077..335173
                      /gene="rrnL"
                      /product="26S ribosomal RNA"
-     gene            join(335544..335616,complement(524787..524842))
+     gene            335544..335617
                      /gene="trnfM-CAU"
-                     /trans_splicing
-     tRNA            join(335544..335616,complement(524787..524842))
+     tRNA            335544..335617
                      /gene="trnfM-CAU"
                      /product="tRNA-Met"
+     gene            346374..347126
+                     /gene="ccmC"
+     CDS             346374..347126
+                     /gene="ccmC"
+                     /codon_start=1
+                     /product="cytochrome c biogenesis C"
+                     /translation="MSLSLLQPSFLMSKTKSYAQILIGSRLFLTAMAIHLSLRVGPLD
+                     FQQGGNSRILYVHVPAARMSILVYIATAINTFLFLLTKHPLFLRSSGTGIEMGAFFTL
+                     FTLVTGGFRGRPMWGTFWVWDARLTSVFISFLIYLGALCFQKLPVEPASISIRAGPID
+                     IPIIKSSVNWWNTSHQPGSISRSGTSIHVPMPIPILSNFANSPFSTRILFVLETRLPI
+                     PSFLESPLTEEIEAREGIPKPSSLAESLSIHG"
      gene            347113..347198
-                     /gene="trnI-UAU"
+                     /gene="trnI-UAU-cp"
      tRNA            347113..347198
-                     /gene="trnI-UAU"
+                     /gene="trnI-UAU-cp"
                      /product="tRNA-Ile"
-     gene            complement(join(355147..355164,524785..524867))
-                     /gene="trnY-GUA"
-                     /trans_splicing
-     tRNA            complement(join(355147..355164,524785..524867))
-                     /gene="trnY-GUA"
-                     /product="tRNA-Tyr"
+     gene            complement(353340..355073)
+                     /gene="ccmFn"
+     CDS             complement(353340..355073)
+                     /gene="ccmFn"
+                     /codon_start=1
+                     /product="cytochrome c biogenesis FN"
+                     /translation="MSIYELFHYSLFPGLFLAFTYNKKQPPAFGAAPAFWCILLSFLG
+                     LSFRHIPNNLSNYNVLTANAPFFYQISGTWSNHEGSILSWCRIPNFYGFLLCYRGRPQ
+                     SHNVSKRGGHRETFFYFFVSNFVKNSILSLPRYEQKSGAAPQLYTPFVLRTLVDSELR
+                     SRRNRTFDGPTLFYAPLYPERKMSFAPLGARRSRGSREGKRTHPLLHLARDDKERASS
+                     IDEQRIDGALGIALFFSPFLSASSDPFVRNFFVRTEPLAESNPVPQDPISAIHPPCIY
+                     AGDVASAMGFGLCRSKMMNGIVALHSPPMRKDAAEKNGTLLRSAGCVGSRITSELLTL
+                     KFKHVGAKCYPALLLRSNRSPLMLLRRRFFAFSSLWTGALVDTGREQAKRVVRNGKKD
+                     TTTSPLCWTAGANTVGSDQDLEPIRIWILTCWWFLTVGILPGSWWAYHELGRGGWWFR
+                     DPVENASFMPRVLATARIHSVILPLLHSWTSFLNIVTLPCCVSGTFSIRSGLLAPVHS
+                     FATDDTRGIFLWRFFLLMTGISMILFSQMKQQASVRRTYKKEMVVARSTLVHLRHSAR
+                     AQPRPVMLWKN"
+     gene            complement(360720..361562)
+                     /gene="atp6"
+     CDS             complement(360720..361562)
+                     /gene="atp6"
+                     /codon_start=1
+                     /product="ATP synthase subunit 6"
+                     /translation="MEGMLNDLIVRGVYSEFYEYAESILNNMVPSPLEQFSIVPLIPM
+                     NLGDLYFSFTNSSLFMLLTLSLVLLLVHFVTRGGNLVPNAWQSLVELLYDFVLNLVNE
+                     QIGGLSGNVKQKFFPCIFVTFTFLLFCNLQGMIPYSFTVTSHFLITLGLSFSIFIGIT
+                     IVGFQRNGLHFLSFLLPAGVPLPLAPFLVLLELISYCFRALSLGIRLFANMMAGHSLV
+                     KILSGFAWTMLCMNNLFYFIGDLGPLFIVLALTGLELGVAILQAYVFTILICIYLNDA
+                     INLH"
+     gene            complement(402143..402727)
+                     /gene="atp4"
+     CDS             complement(402143..402727)
+                     /gene="atp4"
+                     /codon_start=1
+                     /product="ATP synthase subunit 4"
+                     /translation="MRLSSTARKMLFAAIPSICALSSKKISIYNEEMIVARCFIGFII
+                     FSRKSLGKTFKATLDGRIQAIQEESQQFPNPNEVVPPESNEQQRLLRISLRICGTVVE
+                     SLPMARCAPKCEKTVQALLCRNLNVKSATLPNATSSRRIRLQDDLVTRFHFLVRARFS
+                     PRCILKAEIVELIREGLVVLRMVRVGGCSKIKSK"
+     gene            complement(402899..403171)
+                     /gene="nad4L"
+     CDS             complement(402899..403171)
+                     /gene="nad4L"
+                     /codon_start=1
+                     /product="NADH dehydrogenase subunit 4L"
+                     /translation="MIISILGIRGILLNRRNIPIMSMSIESMLLAVNSNFLVFSVSSD
+                     DMMGQSFASLVPTVAAAESAIGLAIFVITFRVRGTIAVEFINSIQG"
      gene            425250..425337
                      /gene="trnS-GCU"
      tRNA            425250..425337
                      /gene="trnS-GCU"
-                     /product="tRNA-Ser"
-     gene            425250..425336
-                     /gene="trnS-UGA"
-     tRNA            425250..425336
-                     /gene="trnS-UGA"
-                     /product="tRNA-Ser"
-     gene            425250..425334
-                     /gene="trnS-GGA-cp"
-     tRNA            425250..425334
-                     /gene="trnS-GGA-cp"
                      /product="tRNA-Ser"
      gene            425694..425767
                      /gene="trnF-GAA"
@@ -268,42 +430,181 @@ FEATURES             Location/Qualifiers
      tRNA            425982..426056
                      /gene="trnP-UGG"
                      /product="tRNA-Pro"
+     gene            complement(434102..434173)
+                     /gene="trnE-UUC"
+     tRNA            complement(434102..434173)
+                     /gene="trnE-UUC"
+                     /product="tRNA-Glu"
      gene            436504..436577
                      /gene="trnH-GUG-cp"
      tRNA            436504..436577
                      /gene="trnH-GUG-cp"
                      /product="tRNA-His"
-     gene            complement(436511..436575)
-                     /gene="trnH-GUG-cp"
-     tRNA            complement(436511..436575)
-                     /gene="trnH-GUG-cp"
-                     /product="tRNA-His"
+     gene            complement(440379..441962)
+                     /gene="cox1"
+     CDS             complement(440379..441962)
+                     /gene="cox1"
+                     /codon_start=1
+                     /product="cytochrome c oxidase subunit 1"
+                     /translation="MTNQVRWLFSTNHKDIGTLYFIFGAIAGVMGTCFSVLIRMELAR
+                     PGDQILGGNHQLYNVLITAHAFLMIFFMVMPAMIGGSGNWSVPILIGAPDMAFPRLNN
+                     ISFWLLPPSLLLLLSSALVEVGSGTGWTVYPPLSGITSHSGGAVDSAISSLHLSGVSS
+                     ILGSINFITTISNMRGPGMTMHRSPLFVWSVLVTAFPLLLSLPVLAGAITMLLTDRNF
+                     NTTFSDPAGGGDPILYQHLFWFFGHPEVYIPILPGSGIISHIVSTFSGKPVFGYLGMV
+                     YAMISIGVLGFLVWAHHMFTVGLDVDTRAYFTAATMIIAVPTGIKIFSWIATMWGGSI
+                     QYKTPMLFAVGFIFLFTIGGLTGIVPANSGLDIALHDTYYVVAHFHYVLSMGAVFALF
+                     AGFHYWVGKIFGRTYPETLGQIHFWITFFGVNLTFFPMHFLGLSGMPRRIPDYPDAYA
+                     GWNALSSFGSYISVVGIRRFFVVVTITSSSGNNKRCAPSPWAVEQNPTTPEWMVQSPP
+                     AFHTFGELPAIKETKSYVK"
+     gene            453818..454042
+                     /gene="atp9"
+     CDS             453818..454042
+                     /gene="atp9"
+                     /codon_start=1
+                     /product="ATP synthase subunit 9"
+                     /translation="MLEGAKLMGAGAATIALAGAAVGIGNVFSSLIHSVARNPSLAKQ
+                     LFGYAILGFALTEAIALFALMMAFLILFVF"
+     gene            join(454550..454778,455627..456846,
+                     complement(549171..549635))
+                     /gene="nad5"
+                     /trans_splicing
+     CDS             join(454550..454778,455627..456846,
+                     complement(549171..549635))
+                     /gene="nad5"
+                     /codon_start=1
+                     /product="NADH dehydrogenase subunit 5"
+                     /translation="MYLLIVFLPLLGSSVAGFFGRFLGSEGTAIMTTTCVSFSSILSL
+                     IAFYEVALGASACYLRIAPWISSEMFDASWGFLFDSPTVVMLIVVTSISSLVHLYSIS
+                     YMSEDPHSPRFMCYLSILTFFMPMLVTGDNSLQLFLGWEGVGLASYLLIHFWFTRLQA
+                     DKAATKAMPVNRVGDFGLAPGISGRFTLFQTVDFSTIFARASAPINSWISCNMRLNAI
+                     TLICILLLIGAVGKSAQIGSHTWSPDAMEGPTPVSASIHAATMVTAGVFMIARCSPLF
+                     EYPPTALIVITSAGATTSFLAATTGILQNDLKRVIAYSTCSQLGYMIFACGISNYSVS
+                     VFHLMNHAFFKALLFLSAGSVIHAMSDEQDMRKMGGLASPFPFTYAMMLMGSLSLIGF
+                     PFLTGFYSKDVILELAYTKYTISGNFAFWLGSVSVLFTSYYSFRLLFLTFLVPTNSFG
+                     RDILRCHDAPIPMAIPLILLALGSLFVGYLAKVLSNFWANSPFVLPKNEILAESEFAA
+                     PTITKLIPIPFSTSGASVAYNVNPVADQFQRAFQTSTFCNRLYSFFNKRWFFDQVLND
+                     FLVRSFLRFGYEVSFEALDKGAIEILGPYGISYTFRRLAERISQLQSGFVVRRVRYDP
+                     WPPAWWGWLLRCG"
+     gene            join(458380..458568,459362..459559)
+                     /gene="rps10"
+     CDS             join(458380..458568,459362..459559)
+                     /gene="rps10"
+                     /codon_start=1
+                     /product="ribosomal protein S10"
+                     /translation="MGLPPYTRKIGLPESRVLYTVLRSPHIDKKSREQFEMEIKKQFL
+                     VIKTERHELRKKFFRLKRRRIFGAQYEILFSCKTRSDKGKLQRLLRSNVRGFDLAPSS
+                     TLLWIRSFSRKGPILQYHDWVDQARS"
      gene            476507..479603
                      /gene="rrnL"
      rRNA            476507..479603
                      /gene="rrnL"
                      /product="26S ribosomal RNA"
-     gene            join(479974..480046,complement(524787..524842))
+     gene            479974..480047
                      /gene="trnfM-CAU"
-                     /trans_splicing
-     tRNA            join(479974..480046,complement(524787..524842))
+     tRNA            479974..480047
                      /gene="trnfM-CAU"
                      /product="tRNA-Met"
+     gene            490804..491556
+                     /gene="ccmC"
+     CDS             490804..491556
+                     /gene="ccmC"
+                     /codon_start=1
+                     /product="cytochrome c biogenesis C"
+                     /translation="MSLSLLQPSFLMSKTKSYAQILIGSRLFLTAMAIHLSLRVGPLD
+                     FQQGGNSRILYVHVPAARMSILVYIATAINTFLFLLTKHPLFLRSSGTGIEMGAFFTL
+                     FTLVTGGFRGRPMWGTFWVWDARLTSVFISFLIYLGALCFQKLPVEPASISIRAGPID
+                     IPIIKSSVNWWNTSHQPGSISRSGTSIHVPMPIPILSNFANSPFSTRILFVLETRLPI
+                     PSFLESPLTEEIEAREGIPKPSSLAESLSIHG"
      gene            491543..491628
-                     /gene="trnI-UAU"
+                     /gene="trnI-UAU-cp"
      tRNA            491543..491628
-                     /gene="trnI-UAU"
+                     /gene="trnI-UAU-cp"
                      /product="tRNA-Ile"
+     gene            complement(498486..499025)
+                     /gene="rpl16"
+     CDS             complement(498486..499025)
+                     /gene="rpl16"
+                     /codon_start=1
+                     /product="ribosomal protein L16"
+                     /translation="MYLTRKSIMLLRKYLLVTESQVSKCGFRIVKNKGYVLYPKRTKF
+                     SKYRKGRCSRGCKPDGTQLGFGRYGTKSYKAGRLSYRAIEAARRAIIGQFHRAMSGQF
+                     RRNGKIWVRVLADLPITGKPTEVRMGRGKGNPTGWIARVSTGQIPFEMDGVSLSNARQ
+                     AATLAAHKPCSSTKFVQWS"
+     gene            complement(498928..500580)
+                     /gene="rps3"
+     CDS             complement(498928..500580)
+                     /gene="rps3"
+                     /codon_start=1
+                     /product="ribosomal protein S3"
+                     /translation="MEAPQERSGSSHGGVTIDSIYYYGKSVYQDVNLRSYFGSIRPPT
+                     RLTFGFRLGRCIIIHFPKRTFIHFFLPRRPRRRKRRKKTRPGKEKGRWWTFGKVGPIG
+                     CLHSSDDTEEERNKVKGWGARKRVESIRLDDREKQNEIRIWPKKKQRYGYHDRPPSIK
+                     KNLSKSLRVSGAFKHPKYAGVVNDIAFLIKNAGSFKKTKTKLFKFFFPKKSRSDGPTS
+                     HLLKRTLPAVRPSLNYSVMQYLLNTKKKMHFDPVVVLNHFVAPGVAELSTMGGANAQG
+                     RSLDKRIRSRIAFFVESLTSEKKCLAESKNKKKKRLTHFIRQANDLRFAGTTKTTISL
+                     FPFFGATFFFLRDGVGVYNNLFFEDAREQLLGQLRIKCWNLMGKDKVMELIEKFINLG
+                     GIGELIKGIEMMIEIILRNRRIPYGYNSYLNEVKKMRSLLSNRTNTNTLIESVKIKSV
+                     YQSASPIAQDISFQLRNKTFRSIFSKIVKNIPLVMNKGVEGIRICCSGRLKGAEIART
+                     ECGKYGKTSRNVFNQKIDYAPAEVSTRYGISGVKVWISYSKK"
+     gene            complement(524785..524867)
+                     /gene="trnY-GUA"
+     tRNA            complement(524785..524867)
+                     /gene="trnY-GUA"
+                     /product="tRNA-Tyr"
+     gene            complement(525917..525988)
+                     /gene="trnN-GUU-cp"
+     tRNA            complement(525917..525988)
+                     /gene="trnN-GUU-cp"
+                     /product="tRNA-Asn"
      gene            complement(528075..528145)
                      /gene="trnC-GCA"
      tRNA            complement(528075..528145)
                      /gene="trnC-GCA"
                      /product="tRNA-Cys"
+     gene            join(533187..533329,534212..534280,536079..536545,
+                     537609..537852,539631..539892)
+                     /gene="nad7"
+     CDS             join(533187..533329,534212..534280,536079..536545,
+                     537609..537852,539631..539892)
+                     /gene="nad7"
+                     /codon_start=1
+                     /product="NADH dehydrogenase subunit 7"
+                     /translation="MTTRNGQIKNFTSNFGPQHPAAHGVSRSVLEMNGEVVERAEPHI
+                     GSLHRGTEKLIEYKTYLQALPYSDRSDYVSMMAQEHAHSSAVERLLNCEVPLRAQYIR
+                     VLFREITRISNHSLALTTHAMDVGASTPFLWASEEREKLLEFYERVSGARMHASFIRP
+                     GGVAQDLPIGLCRDIDSSTQQFASRIDELEEMSTGNRIWKQRLVDIGTVTAQQAKDWG
+                     FSGVMLRGPGVCWDSRRAAPYDVHDQLDPDVPVGTRGDRYDRYCIRIEEMRQSVRIIV
+                     QCPNQMPSGMIKADDRKLCPPSRCRMKLSMESSIHHFEPYTEGFSVPAPSTYTAVEAP
+                     KGEFGVFLVSNGSNRPYRRKIRAPGSAHLQGLDSMSKHHMPADVVTIIGTQDIVSGEV
+                     DR"
      gene            556354..556426
                      /gene="trnC-GCA"
      tRNA            556354..556426
                      /gene="trnC-GCA"
                      /product="tRNA-Cys"
+     gene            join(558788..559686,561405..561519)
+                     /gene="rpl2"
+     CDS             join(558788..559686,561405..561519)
+                     /gene="rpl2"
+                     /codon_start=1
+                     /product="ribosomal protein L2"
+                     /translation="MRQSQEGRALRQFTLSTGKSAGRNSSGRITVFHRGGGSKRLQRR
+                     IDLKRSTSSIGIVERIEYDPNRSSRIAPVRWIEGVQLRRQRKCNTIEEFAPPRKILES
+                     TTTTIRGLFSFSSLPRKVDQRKVACFSPGLMAAYVVVGLPTRMPPWSKSPFTSKGAGS
+                     KKTCAKDGFFSAFSSPKAKGETASLSFGSSCGFPRIAVAGAKPAFFAPRMREKVRGKN
+                     TFSLCEVRKWRTHSILWAHRIKRKAALSWQSFWRQDTLTLRLVGAAEHNESKPKMDQG
+                     SLPAKPIGERPKDGARKVDRAPVVYIIASHPLEAGKMVMNCDWSKPSTSDLLRPAQNA
+                     HPY"
+     gene            571668..572288
+                     /gene="rps1"
+     CDS             571668..572288
+                     /gene="rps1"
+                     /codon_start=1
+                     /product="ribosomal protein S1"
+                     /translation="MMSIYLSRSFPRSNSSFFLCSGNALQSEVLRLREEMFLVDAGLG
+                     TPRICMQDELTGVPINRATRFENKVGSLDLVAGESLIKKKILERFFIDLVAGESRIKE
+                     RAAARFNDLVGSTDVVAGEPLLLLPRRFRQNRAWMELNKIWRTNTKVKGFIIEKVKGG
+                     YSVAIAGFITFLPFRPLKMKSKRKRISNDRFTIESINPKRTNIVVF"
 BASE COUNT   163055 a 137761 c 138223 g 163082 t
 ORIGIN      
         1 gcagctgtca atggattctg tgatcgaatg ccactagaca aaatttctca atatgagaga

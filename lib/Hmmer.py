@@ -1,6 +1,12 @@
 import sys
 import itertools
+import copy
 import networkx as nx
+try:
+	from math import inf
+except ImportError:
+	inf = float("inf")
+from Gff import GffLine, GtfExons
 from get_record import get_records
 
 class HmmSearch(object):
@@ -15,17 +21,246 @@ class HmmSearch(object):
 				continue
 			if self.hmmfmt == 'domtbl':
 				yield HmmSearchDomHit(line)
+	def get_best_hit(self):
+		best_hit = None
+		for record in self:
+			if best_hit is None:
+				best_hit = record
+			elif record.edit_score > best_hit.edit_score:
+				best_hit = record
+		return best_hit
 	def get_hit_nuclseqs(self, inseq, outseq):
 		nucl_names = []
 		for hit in self:
 			hit.split_name()
 			nucl_names += [hit.nucl_name]
 		get_records(inseq, outseq, nucl_names, type='fasta')
+	def get_gene_structure(self, d_length, min_cov=80, seq_type='prot', flank=1000):
+		graph = HmmStructueGraph()
+		for hit in self:
+			hit.convert_to_nucl_coord(d_length, seq_type=seq_type)
+	#		print >>sys.stderr, hit.nucl_hit
+			graph.add_node(hit)
+		graph.link_nodes()
+	#	for n1, n2 in graph.edges():
+	#		print >>sys.stderr, n1.short, n2.short
+		graph.prune_graph()
+		copies = []
+		for path in graph.linearize_path():
+			if path.hmmcov < min_cov:
+				continue
+			print >>sys.stderr, path, len(path.group_nodes()), path.hmmcov
+			parts = path.get_parts(d_length, flank=flank)
+#			seq = parts.combine_seq()
+			copies += [parts]
+		# filter out too many parts
+		if len(copies) > 0:
+			min_part_number = min(map(len, copies))
+			for parts in copies:
+				if len(parts) > min_part_number:
+					continue
+		#		print >>sys.stderr, min_part_number, parts
+				yield parts		# maybe multi-copy
+
+class HmmPath():
+	def __init__(self, path):
+		self.path = path
+	def __iter__(self):
+		return iter(self.path)
+	def __len__(self):
+		return len(self.path)
+	def __getitem__(self, index):
+		if isinstance(index, int):
+			return self.path[index]
+		else:
+			return self.__class__(path=self.path[index])
+	def __str__(self):
+		return ' -> '.join(['{}:{}-{}({})'.format(p.nucl_name, p.nucl_alnstart, 
+				p.nucl_alnend, p.strand) for p in self.path])
+	def group_nodes(self, max_dist=20000):
+		if len(self) == 1:
+			return [self]
+		groups = [[self[0]]]
+		for node in self[1:]:
+			last_node = groups[-1][-1]
+			if node.strand != last_node.strand or node.nucl_name != last_node.nucl_name:
+				groups += [[node]]
+			else:
+				if node.strand == '-':
+					dist = last_node.nucl_start - node.nucl_start
+				else:	# +
+					dist = node.nucl_start - last_node.nucl_start
+				if 0 < dist < max_dist:
+					groups[-1] += [node]
+				else:
+					groups += [[node]]
+		return [HmmPath(path=group) for group in groups]
+	def get_parts(self, d_length, flank=1000):
+		parts = []	# parts = gene/copy
+		for path in self.group_nodes():		# node = exon
+			first, last = path[0], path[-1]
+			assert first.strand == last.strand and first.nucl_name == last.nucl_name
+			seqid = first.nucl_name
+			strand = first.strand
+			if strand == '-':
+				first, last = last, first
+			start, end = first.nucl_start-1, last.nucl_end
+				
+			start = max(0, start-flank)
+			end = min(d_length[seqid], end+flank)
+			part = SeqPart(seqid, start, end, strand)	# part = continous exons, 0-based
+			part.path = path
+			parts += [part]
+		parts = SeqParts(parts)
+#		seq = parts.combine_seq()
+		return parts
+	@property
+	def hmmcov(self):
+		first, last = self.path[0], self.path[-1]
+		return 1e2* (last.hmmend - first.hmmstart +1) / first.hmm_length
+class SeqParts():
+	def __init__(self, parts):
+		self.parts = parts
+	def __iter__(self):
+		return iter(self.parts)
+	def __len__(self):
+		return len(self.parts)
+	def __str__(self):
+		try:
+			return str(self.id)
+		except AttributeError:
+			return self.to_str()
+	def to_str(self):
+		return ' -> '.join([str(part) for part in self])
+	def combine_seq(self, d_seqs):
+		seqs = []
+		for part in self:
+			seq = part.get_seq(d_seqs)
+			if part.strand == '-':
+				seq = seq.reverse_complement()
+			seqs += [str(seq)]
+		return ''.join(seqs)
+	def write_seq(self, d_seqs, fout):
+		seq = self.combine_seq(d_seqs)
+		try:
+			blocks = [len(part) for part in self]
+		except ValueError:
+			print >> sys.stderr, [str(part) for part in self]
+
+		desc = blocks
+		print >> fout, '>{} {}\n{}'.format(self, desc, seq)
+	@property
+	def coord_map(self):
+		d = {}
+		last_start = 0	# 0-based
+		for part in self:
+			start = last_start
+			end = last_start + len(part)
+			d[part] = (start, end)
+			last_start = end
+		return d 
+	def map_coord(self, exons):
+		new_exons = []
+		d_bins = {}
+		for exon in exons:
+			for part in self:
+				start, end = self.coord_map[part]	# 0-based
+				exon = copy.deepcopy(exon)
+				#exon.id = exon.chrom
+				exon.chrom = part.seqid
+				exon_start, exon_end = exon.start, exon.end
+				if max(exon.start, exon.end) <= start or min(exon.start, exon.end) > end:
+					# ---|----|---  part
+					# --        --  exon	# no overlap
+					continue
+				elif exon.start > start and exon.end <= end: 
+					# |-----|   # part  0-based
+					#   ---     # exon  1-based 
+					if part.strand == '-':
+						exon.start = part.start + end - exon_end +1
+						exon.end = part.start + end - exon_start +1
+						exon.strand = '+' if exon.strand == '-' else '-'
+					else:
+						exon.start = part.start + exon_start - start
+						exon.end = part.start + exon_end - start
+				elif end >= exon.start > start and exon.end > end:
+					# |-----|----	# part
+					#     -----		# exon
+					if part.strand == '-':
+						exon.start = part.end
+						exon.end = part.start + end - exon_start +1
+						exon.strand = '+' if exon.strand == '-' else '-'
+					else:
+						exon.start = part.start + exon_start - start
+						exon.end = part.end
+				elif  exon.start <= start and exon.end > end:
+					# ---|----|---	part
+					#   --------	exon
+					if part.strand == '-':
+						exon.start = part.end
+						exon.end = part.start + 1
+						exon.strand = '+' if exon.strand == '-' else '-'
+					else:
+						exon.start = part.start + 1
+						exon.end = part.end
+				elif exon.start <= start and start < exon.end <= end:
+					# ----|-----|	part	
+					#   ------		exon
+					if part.strand == '-':
+						exon.start = part.start + end - exon_end +1
+						exon.end = part.start + 1
+						exon.strand = '+' if exon.strand == '-' else '-'
+					else:
+						exon.start = part.start + 1
+						exon.end = part.start + exon_end - start
+				else:	# no overlap
+					continue
+				new_exons += [exon]
+				try: d_bins[part] += [exon]
+				except KeyError: d_bins[part] = [exon]
+		new_parts = copy.deepcopy(self)
+		parts = []
+		for part in self:
+			try: exons = GtfExons(d_bins[part])
+			except KeyError: continue
+			seqid, start, end, strand = exons.get_region()
+			parts += [SeqPart(seqid, start, end, strand)]
+		new_parts.parts = parts
+		return GtfExons(new_exons), new_parts
+	def to_exons(self):
+		source, score, frame = 'hmmsearch', '.', '.'
+		type = 'exon'
+		attributes = ''
+		exons = []
+		for part in self:
+			for hit in part.path:
+				chrom, start, end, strand = hit.nucl_name, hit.nucl_start, hit.nucl_end, hit.strand
+				line = [chrom, source, type, start, end, score, strand, frame, attributes]
+				exon = GffLine(line)
+				exons += [exon]
+		return GtfExons(exons)
+
+class SeqPart():
+	def __init__(self, seqid, start, end, strand, seq=None):	# 0-based
+		self.seqid = seqid
+		self.start, self.end, self.strand = start, end, strand
+		self.seq = seq
+	def __str__(self):
+		return '{seqid}:{start}-{end}({strand})'.format(**self.__dict__)
+	def __len__(self):
+		return self.end-self.start
+	def __hash__(self):
+		return hash(self.key)
+	@property
+	def key(self):
+		return (self.seqid, self.start, self.end, self.strand)
+	def get_seq(self, d_seqs):
+		return d_seqs[self.seqid][self.start:self.end]
 
 class HmmSearchDomHit(object):
 	def __init__(self, line):
 		self.line = line.strip().split()
-		self.title = ['tname', 'tacc', 'tlen', 'qname', 'qacc', 'qlen'
+		self.title = ['tname', 'tacc', 'tlen', 'qname', 'qacc', 'qlen',
 					'full_evalue', 'full_score', 'full_bias',
 					'domi', 'domn', 'cevalue', 'ievalue', 'score', 'bias',
 					'hmmstart', 'hmmend',	# 1-based, 1-100
@@ -38,6 +273,8 @@ class HmmSearchDomHit(object):
 					int, int, int, int, int, int,
 					float]
 		self.set_attr()
+		self.hmm_name = self.qname
+		self.hmm_length = self.qlen
 	def set_attr(self):
 		for key, value, type in zip(self.title, self.line, self.ctype):
 			setattr(self, key, type(value))
@@ -48,37 +285,86 @@ class HmmSearchDomHit(object):
 			return True
 		return False
 	@property
+	def edit_score(self):
+		return self.full_score * (1.0*(self.qlen- abs(self.tlen-self.qlen)) / self.qlen)
+	@property
 	def hmmcov(self):
-		return round(1e2*(self.hmmend - self.hmmstart + 1) / self.qlen, 1)
+		return round(1e2*(self.hmmend - self.hmmstart + 1) / self.hmm_length, 1)
 	@property
 	def key(self):
 		return (self.tname, self.qname, self.hmmstart, self.hmmend, self.alnstart, self.alnend)
-	def link_hits(self, other, max_dist=25, min_ovl=-50, min_flank_dist=10):
+	def link_hits(self, other, max_dist=25, min_ovl=-50, min_flank_dist=2):
+		'''--->	 self
+			  --->  other
+		'''
 		left_dist = other.hmmstart - self.hmmstart + 1
-		mid_dist  = self.hmmend - other.hmmstart + 1
+		mid_dist  = other.hmmstart - self.hmmend + 1
 		right_dist = other.hmmend - self.hmmend + 1
 		if min_ovl <= mid_dist <= max_dist:
-			return mid_dist
-			if min(left_dist, right_dist) < min_flank_dist:
+#			if min(left_dist, right_dist) < min_flank_dist:
+			if left_dist < min_flank_dist:
 				return False
+			return mid_dist
 		return False
 			
 	def split_name(self):
 		if not 'nucl_frame' in self.__dict__:
 			self.nucl_name, self.nucl_frame = self.split_translated_id(self.tname)	# t
-	def convert_to_nucl_coord(self, nucl_length):
+	def convert_to_nucl_coord(self, d_length, seq_type='prot'):
 		self.split_name()
-		self.strand, self.nucl_frame = self.parse_frame(self.nucl_frame)
-		if self.strand == '-':
-			self.nucl_alnstart = nucl_length - (self.alnend * 3 + self.frame) + 1
-			self.nucl_envstart = nucl_length - (self.envend * 3 + self.frame) + 1
-			self.nucl_alnend   = nucl_length - ((self.alnstart-1) * 3 + self.frame)
-			self.nucl_envend   = nucl_length - ((self.envstart-1) * 3 + self.frame)
-		else: # +
-			self.nucl_alnstart = (self.alnstart-1) * 3  + self.frame + 1
-			self.nucl_envstart = (self.envstart-1) * 3  + self.frame + 1
-			self.nucl_alnend   = self.alnend * 3 + self.frame
-			self.nucl_envend   = self.envend * 3 + self.frame
+		nucl_length = d_length[self.nucl_name]
+		self.strand, self.frame = self.parse_frame(self.nucl_frame)
+		if seq_type == 'prot':
+			if self.strand == '-':
+				self.nucl_alnstart = nucl_length - (self.alnend * 3 + self.frame) + 1
+				self.nucl_envstart = nucl_length - (self.envend * 3 + self.frame) + 1
+				self.nucl_alnend   = nucl_length - ((self.alnstart-1) * 3 + self.frame)
+				self.nucl_envend   = nucl_length - ((self.envstart-1) * 3 + self.frame)
+			else: # +
+				self.nucl_alnstart = (self.alnstart-1) * 3  + self.frame + 1
+				self.nucl_envstart = (self.envstart-1) * 3  + self.frame + 1
+				self.nucl_alnend   = self.alnend * 3 + self.frame
+				self.nucl_envend   = self.envend * 3 + self.frame
+		else:
+			if self.strand == '-':
+				self.nucl_alnstart = nucl_length - self.alnend + 1
+				self.nucl_envstart = nucl_length - self.envend + 1
+				self.nucl_alnend   = nucl_length - self.alnstart + 1
+				self.nucl_envend   = nucl_length - self.envstart + 1
+			else:
+				self.nucl_alnstart = self.alnstart
+				self.nucl_envstart = self.envstart
+				self.nucl_alnend   = self.alnend
+				self.nucl_envend   = self.envend
+		self.nucl_length = nucl_length
+		self.nucl_start, self.nucl_end = self.nucl_alnstart, self.nucl_alnend
+	@property
+	def nucl_hit(self):
+		return (self.nucl_name, self.nucl_length, self.nucl_alnstart, self.nucl_alnend,
+				self.strand, self.frame, 
+				self.hmm_name, self.hmm_length, self.hmmstart, self.hmmend)
+	@property
+	def short(self):
+		return (self.nucl_alnstart, self.nucl_alnend, self.strand, self.hmmstart, self.hmmend)
+	def __str__(self):
+		return str(self.short)
+	def get_distance(self, other):
+		if self.nucl_name != other.nucl_name:
+			return inf
+		if self.strand == other.strand:
+			if self.strand == '-':  # <-- <--
+				if self.nucl_alnstart > other.nucl_alnstart:  # <--o <--s
+					return self.nucl_alnend - other.nucl_alnstart
+				else:										  # <--s <--o
+					self.nucl_alnstart + self.nucl_length - other.nucl_alnend
+			else:
+				if self.nucl_alnstart < other.nucl_alnstart:  # s--> o-->
+					return other.nucl_alnend - self.nucl_alnstart
+				else:										  # o--> s-->
+					return self.nucl_length - self.nucl_alnend + other.nucl_alnstart
+		else:  # s--> <--o, <--o s-->
+			return inf #self.nucl_length #min(self.nucl_alnstart + other.nucl_alnstart, 
+					#self.nucl_length + other.nucl_length - self.nucl_alnend - other.nucl_alnend)
 	def to_gff(self):
 		line = [self.nucl_name, 'HMMsearch', 'protein_match', 
 				self.nucl_alnstart, self.nucl_alnend, self.score, self.strand, 0,
@@ -93,16 +379,29 @@ class HmmSearchDomHit(object):
 			strand = '-'
 		else:
 			strand = '+'
-		frame = int(string[-1]) -1
+		try:
+			frame = int(string[-1]) -1
+		except ValueError: 
+			frame = '.'
 		return strand, frame
-
-class StructueGraph(nx.DiGraph):
+class DiGraph(nx.DiGraph):
 	def __init__(self):
-		super(SeqGraph, self).__init__()
-	def build_from_hmm_hits(self, hits):
+		super(DiGraph, self).__init__()
+	@property
+	def sources(self):
+		return [ node for node in self.nodes() if not self.predecessors(node)]
+	@property
+	def targets(self):
+		return [ node for node in self.nodes() if not self.successors(node)]
+
+class HmmStructueGraph(DiGraph):
+	def __init__(self):
+		super(HmmStructueGraph, self).__init__()
+	def build_from_hmm_hits(self, hits):	# HmmSearchDomHit
 		for i, hit in enumerate(hits):
 			self.add_node(hit)
-		for hit1, hit2 in itertools.combinations(hits, 2):
+	def link_nodes(self):
+		for hit1, hit2 in itertools.combinations(self.nodes(), 2):
 			dist_12 = hit1.link_hits(hit2)
 			dist_21 = hit2.link_hits(hit1)
 			if not dist_12 is False:
@@ -110,9 +409,76 @@ class StructueGraph(nx.DiGraph):
 			if not dist_21 is False:
 				self.add_edge(hit2, hit1, dist=dist_21)
 	def prune_graph(self):
-		pass
+		# remove bridged edge
+		for node in self.nodes():
+			predecessors = self.predecessors(node)
+			successors = self.successors(node)
+			for predecessor, successor in itertools.product(predecessors, successors):
+				if self.has_edge(predecessor, successor):
+					self.remove_edge(predecessor, successor)
+		# remove distant edge
+		for node in self.nodes():
+			predecessors = set(self.predecessors(node))
+			if len(predecessors) < 2:
+				continue
+			pred_successors = []
+			products = []
+			for predecessor in predecessors:
+				successors = self.successors(predecessor)
+				pred_successors += successors
+				for successor in successors:
+					products += [(predecessor, successor)]
+			pred_successors = set(pred_successors)
+			if len(pred_successors) < 2:
+				continue
+			length = min(len(set(predecessors)), len(set(pred_successors)))
+#			print >>sys.stderr, length
+			combinations = list(ExcludeProduct(products, length))
+			distances = []
+			for combination in combinations:
+				sum_distance = 0
+				for hit1, hit2 in combination:
+					distance = hit1.get_distance(hit2)
+					sum_distance += distance
+				distances += [sum_distance]
+#			print >>sys.stderr, products, distances, combinations
+			min_dist, combination = min(zip(distances, combinations), key=lambda x:x[0])
+			if min_dist == inf:
+				continue
+			for edge in products:
+				if edge in set(combination):
+					continue
+				self.remove_edge(*edge)
+	def linearize_path(self):
+		for source, target in itertools.product(self.sources, self.targets):
+			for path in nx.all_simple_paths(self, source, target):
+				yield HmmPath(path)
+		for node in self.nodes():
+			if not self.predecessors(node) and  not self.successors(node):
+				yield HmmPath([node])
 	def cluster_genes(self):
 		pass
+class ExcludeProduct():
+	def __init__(self, product, cutoff=None):
+		self.product = product
+		self.cutoff = cutoff
+	def __iter__(self):
+		return iter(self._exlude())
+	def _exlude(self):
+		for combinations in itertools.combinations(self.product, self.cutoff):
+			include = False
+			for p1, p2 in itertools.combinations(combinations, 2):
+				if self.is_not_exclude(p1, p2):
+					include = True
+					break
+			if include:
+				continue
+			yield list(combinations)
+	def is_not_exclude(self, p1, p2):
+		for v1, v2 in zip(p1, p2):
+			if v1 == v2:
+				return True
+		return False
 class HmmCluster(object):
 	def __int__(self, hmmout, d_length=None): # only for nucl
 		self.hmmout = hmmout

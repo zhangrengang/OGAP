@@ -1,0 +1,429 @@
+>Feature Mt
+391671	391742	gene
+35601	35629
+		gene	trnH-AUG
+		exception	trans-splicing
+391671	391742	tRNA
+35601	35629
+		product	tRNA-His
+391798	391869	gene
+35601	35629
+		gene	trnH-AUG
+		exception	trans-splicing
+391798	391869	tRNA
+35601	35629
+		product	tRNA-His
+547731	547660	gene
+35601	35629
+		gene	trnH-AUG
+		exception	trans-splicing
+547731	547660	tRNA
+35601	35629
+		product	tRNA-His
+547858	547787	gene
+35601	35629
+		gene	trnH-AUG
+		exception	trans-splicing
+547858	547787	tRNA
+35601	35629
+		product	tRNA-His
+547985	547918	gene
+35601	35629
+		gene	trnH-AUG
+		exception	trans-splicing
+547985	547918	tRNA
+35601	35629
+		product	tRNA-His
+391544	391611	gene
+35601	35629
+		gene	trnH-AUG
+		exception	trans-splicing
+391544	391611	tRNA
+35601	35629
+		product	tRNA-His
+547731	547660	gene
+217579	217625
+35601	35629
+		gene	trnM-CAU
+		exception	trans-splicing
+547731	547660	tRNA
+217579	217625
+35601	35629
+		product	tRNA-Met
+547858	547787	gene
+217579	217625
+35601	35629
+		gene	trnM-CAU
+		exception	trans-splicing
+547858	547787	tRNA
+217579	217625
+35601	35629
+		product	tRNA-Met
+191591	191657	gene
+217579	217625
+35601	35629
+		gene	trnM-CAU
+		exception	trans-splicing
+191591	191657	tRNA
+217579	217625
+35601	35629
+		product	tRNA-Met
+391798	391869	gene
+217579	217625
+35601	35629
+		gene	trnM-CAU
+		exception	trans-splicing
+391798	391869	tRNA
+217579	217625
+35601	35629
+		product	tRNA-Met
+391671	391742	gene
+217579	217625
+35601	35629
+		gene	trnM-CAU
+		exception	trans-splicing
+391671	391742	tRNA
+217579	217625
+35601	35629
+		product	tRNA-Met
+391544	391611	gene
+217579	217625
+35601	35629
+		gene	trnM-CAU
+		exception	trans-splicing
+391544	391611	tRNA
+217579	217625
+35601	35629
+		product	tRNA-Met
+547985	547918	gene
+217579	217625
+35601	35629
+		gene	trnM-CAU
+		exception	trans-splicing
+547985	547918	tRNA
+217579	217625
+35601	35629
+		product	tRNA-Met
+547858	547787	gene
+217579	217625
+35601	35629
+		gene	trnM-CAU
+		exception	trans-splicing
+547858	547787	tRNA
+217579	217625
+35601	35629
+		product	tRNA-Met
+547731	547660	gene
+217579	217625
+35601	35629
+		gene	trnM-CAU
+		exception	trans-splicing
+547731	547660	tRNA
+217579	217625
+35601	35629
+		product	tRNA-Met
+391798	391869	gene
+217579	217625
+35601	35629
+		gene	trnM-CAU
+		exception	trans-splicing
+391798	391869	tRNA
+217579	217625
+35601	35629
+		product	tRNA-Met
+547985	547918	gene
+217579	217625
+35601	35629
+		gene	trnM-CAU
+		exception	trans-splicing
+547985	547918	tRNA
+217579	217625
+35601	35629
+		product	tRNA-Met
+391544	391611	gene
+217579	217625
+35601	35629
+		gene	trnM-CAU
+		exception	trans-splicing
+391544	391611	tRNA
+217579	217625
+35601	35629
+		product	tRNA-Met
+391671	391742	gene
+217579	217625
+35601	35629
+		gene	trnM-CAU
+		exception	trans-splicing
+391671	391742	tRNA
+217579	217625
+35601	35629
+		product	tRNA-Met
+191591	191657	gene
+217579	217625
+35601	35629
+		gene	trnM-CAU
+		exception	trans-splicing
+191591	191657	tRNA
+217579	217625
+35601	35629
+		product	tRNA-Met
+391544	391611	gene
+217579	217625
+35601	35629
+		gene	trnM-CAU
+		exception	trans-splicing
+391544	391611	tRNA
+217579	217625
+35601	35629
+		product	tRNA-Met
+391671	391742	gene
+217579	217625
+35601	35629
+		gene	trnM-CAU
+		exception	trans-splicing
+391671	391742	tRNA
+217579	217625
+35601	35629
+		product	tRNA-Met
+391798	391869	gene
+217579	217625
+35601	35629
+		gene	trnM-CAU
+		exception	trans-splicing
+391798	391869	tRNA
+217579	217625
+35601	35629
+		product	tRNA-Met
+191591	191657	gene
+217579	217625
+35601	35629
+		gene	trnM-CAU
+		exception	trans-splicing
+191591	191657	tRNA
+217579	217625
+35601	35629
+		product	tRNA-Met
+547731	547660	gene
+217579	217625
+35601	35629
+		gene	trnM-CAU
+		exception	trans-splicing
+547731	547660	tRNA
+217579	217625
+35601	35629
+		product	tRNA-Met
+547858	547787	gene
+217579	217625
+35601	35629
+		gene	trnM-CAU
+		exception	trans-splicing
+547858	547787	tRNA
+217579	217625
+35601	35629
+		product	tRNA-Met
+547985	547918	gene
+217579	217625
+35601	35629
+		gene	trnM-CAU
+		exception	trans-splicing
+547985	547918	tRNA
+217579	217625
+35601	35629
+		product	tRNA-Met
+56219	58150	gene
+		gene	rrnS
+56219	58150	rRNA
+		product	18S ribosomal RNA
+58314	58431	gene
+		gene	rrn5
+58314	58431	rRNA
+		product	5S ribosomal RNA
+98231	98158	gene
+82939	82968
+		gene	trnD-GUC
+		exception	trans-splicing
+98231	98158	tRNA
+82939	82968
+		product	tRNA-Asp
+98231	98158	gene
+		gene	trnD-GUC-cp
+98231	98158	tRNA
+		product	tRNA-Asp
+119595	119525	gene
+		gene	trnG-GCC
+119595	119525	tRNA
+		product	tRNA-Gly
+119530	119601	gene
+		gene	trnG-GCC
+119530	119601	tRNA
+		product	tRNA-Gly
+122987	123049	gene
+		gene	trnS-GCU
+122987	123049	tRNA
+		product	tRNA-Ser
+425255	425326	gene
+425999	426051
+123054	123021
+		gene	trnQ-UUG
+		exception	trans-splicing
+425255	425326	tRNA
+425999	426051
+123054	123021
+		product	tRNA-Gln
+122983	123054	gene
+123054	123021
+		gene	trnQ-UUG
+		exception	trans-splicing
+122983	123054	tRNA
+123054	123021
+		product	tRNA-Gln
+391799	391864	gene
+170957	170986
+		gene	trnK-CUU
+		exception	trans-splicing
+391799	391864	tRNA
+170957	170986
+		product	tRNA-Lys
+391545	391609	gene
+170957	170986
+		gene	trnK-CUU
+		exception	trans-splicing
+391545	391609	tRNA
+170957	170986
+		product	tRNA-Lys
+391672	391737	gene
+170957	170986
+		gene	trnK-CUU
+		exception	trans-splicing
+391672	391737	tRNA
+170957	170986
+		product	tRNA-Lys
+547730	547665	gene
+170957	170986
+		gene	trnK-CUU
+		exception	trans-splicing
+547730	547665	tRNA
+170957	170986
+		product	tRNA-Lys
+547857	547792	gene
+170957	170986
+		gene	trnK-CUU
+		exception	trans-splicing
+547857	547792	tRNA
+170957	170986
+		product	tRNA-Lys
+547984	547920	gene
+170957	170986
+		gene	trnK-CUU
+		exception	trans-splicing
+547984	547920	tRNA
+170957	170986
+		product	tRNA-Lys
+184264	184337	gene
+		gene	trnP-UGG-cp
+184264	184337	tRNA
+		product	tRNA-Pro
+184264	184337	gene
+		gene	trnP-UGG
+184264	184337	tRNA
+		product	tRNA-Pro
+525988	525918	gene
+556421	556396
+525925	525953
+184546	184570
+		gene	trnN-GUU-cp
+		exception	trans-splicing
+525988	525918	tRNA
+556421	556396
+525925	525953
+184546	184570
+		product	tRNA-Asn
+190441	190369	gene
+		gene	trnK-UUU
+190441	190369	tRNA
+		product	tRNA-Lys
+240729	240815	gene
+		gene	trnS-GCU
+240729	240815	tRNA
+		product	tRNA-Ser
+240729	240815	gene
+		gene	trnS-UGA
+240729	240815	tRNA
+		product	tRNA-Ser
+313897	313970	gene
+		gene	trnM-CAU
+313897	313970	tRNA
+		product	tRNA-Met
+332077	335173	gene
+		gene	rrnL
+332077	335173	rRNA
+		product	26S ribosomal RNA
+347113	347198	gene
+		gene	trnI-UAU
+347113	347198	tRNA
+		product	tRNA-Ile
+524867	524785	gene
+355164	355147
+		gene	trnY-GUA
+		exception	trans-splicing
+524867	524785	tRNA
+355164	355147
+		product	tRNA-Tyr
+425250	425337	gene
+		gene	trnS-GCU
+425250	425337	tRNA
+		product	tRNA-Ser
+425250	425334	gene
+		gene	trnS-GGA-cp
+425250	425334	tRNA
+		product	tRNA-Ser
+425250	425336	gene
+		gene	trnS-UGA
+425250	425336	tRNA
+		product	tRNA-Ser
+425694	425767	gene
+		gene	trnF-GAA
+425694	425767	tRNA
+		product	tRNA-Phe
+425982	426056	gene
+		gene	trnP-UGG
+425982	426056	tRNA
+		product	tRNA-Pro
+436504	436577	gene
+		gene	trnH-GUG-cp
+436504	436577	tRNA
+		product	tRNA-His
+436575	436511	gene
+		gene	trnH-GUG-cp
+436575	436511	tRNA
+		product	tRNA-His
+476507	479603	gene
+		gene	rrnL
+476507	479603	rRNA
+		product	26S ribosomal RNA
+491543	491628	gene
+		gene	trnI-UAU
+491543	491628	tRNA
+		product	tRNA-Ile
+335544	335616	gene
+524842	524787
+		gene	trnfM-CAU
+		exception	trans-splicing
+335544	335616	tRNA
+524842	524787
+		product	tRNA-Met
+479974	480046	gene
+524842	524787
+		gene	trnfM-CAU
+		exception	trans-splicing
+479974	480046	tRNA
+524842	524787
+		product	tRNA-Met
+528145	528075	gene
+		gene	trnC-GCA
+528145	528075	tRNA
+		product	tRNA-Cys
+556354	556426	gene
+		gene	trnC-GCA
+556354	556426	tRNA
+		product	tRNA-Cys

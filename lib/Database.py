@@ -395,6 +395,9 @@ augustus --species={species} {train_set}.test --translation_table={transl_table}
 				clade.comment = None
 			except TypeError: pass
 		Phylo.write(tree, species_tree, trefmt)
+	@lazyproperty
+	def templete(self):
+		return '{}/{}'.format(self.dbrootdir, 'sqn.template')
 
 class Info(object):
 	def __init__(self, infofile):
@@ -431,7 +434,7 @@ class GeneInfoLine(object):
 		self.title = ['id', 'name', 'product', 'seq_type',
                 	  'exon_number', 'trans_splicing',
                       'gene_count', 'species_count', 
-					  'names', 'product', 'species']
+					  'names', 'products', 'species']
 		self.ctype = [str, str, str, str, int, bool, int, int, str, str, str]
 		self.line = line
 		self.set_attr()

@@ -1,0 +1,235 @@
+{'count': False, 'organ': 'mt', 'list': False, 'taxon': 'commelinids', 'tmpdir': '/dev/shm/tmp', 'custom': None, 'cleanup': False, 'exclude_taxa': None, 'gbfiles': ['/share/home/nature/database/RefSeq/mitochondrion/mitochondrion.1.genomic.gbff.gz', '/share/home/nature/database/RefSeq/mitochondrion/mitochondrion.2.genomic.gbff.gz'], 'check': False, 'dbdir': None}
+2020-03-22 15:38:24,981 -INFO- parsing ['/share/home/nature/database/RefSeq/mitochondrion/mitochondrion.1.genomic.gbff.gz', '/share/home/nature/database/RefSeq/mitochondrion/mitochondrion.2.genomic.gbff.gz']
+2020-03-22 15:38:24,982 -INFO- version: RefSeq 2020-01-09: build 2020-03-22
+loading from /dev/shm/tmp/ogap_db/taxonomy.json.gz
+loading genbank records
+`Leptocephalus sp. 'type II larva' (Smith, 1989)` is not found
+`Himantura gerrardi` is not found
+`Vazella pourtalesi` is not found
+`Palpitomonas bilix Eukaryota.` is not found
+`Eukaryota sp. BB2 Eukaryota.` is not found
+`Ancoracysta twista Eukaryota.` is not found
+`Cyprinus carpio x Megalobrama amblycephala` is not found
+2020-03-22 15:49:21,781 -INFO- 17 records: 2 orders, 2 families, 10 genera, 17 organism
+2020-03-22 15:49:21,781 -INFO- pruning taxa
+2020-03-22 15:49:21,781 -INFO- 17 records: 2 orders, 2 families, 10 genera, 17 organism
+2020-03-22 15:49:21,781 -INFO- building taxonomy tree
+2020-03-22 15:49:21,781 -INFO- run CMD: `ete3 ncbiquery --search 'Cocos nucifera' 'Tripsacum dactyloides' 'Zea mays subsp. parviglumis' 'Triticum aestivum' 'Phoenix dactylifera' 'Zea mays subsp. mays' 'Zea luxurians' 'Oryza rufipogon' 'Oryza sativa Indica Group' 'Saccharum officinarum' 'Triticum timopheevii' 'Eleusine indica' 'Oryza minuta' 'Oryza sativa Japonica Group' 'Aegilops speltoides var. ligustica' 'Zea perennis' 'Sorghum bicolor' --tree >  /dev/shm/tmp/mt-commelinids/species.tree.tmp`
+2020-03-22 15:49:27,467 -INFO- using speceis tree `/dev/shm/tmp/ogap_db/mt-commelinids/species.treefile`
+2020-03-22 15:49:27,467 -INFO- writing protein sequences into /dev/shm/tmp/mt-commelinids/prot
+2020-03-22 15:49:27,752 -INFO- 17 taxa: ['Aegilops speltoides var. ligustica', 'Cocos nucifera', 'Eleusine indica', 'Oryza minuta', 'Oryza rufipogon', 'Oryza sativa Indica Group', 'Oryza sativa Japonica Group', 'Phoenix dactylifera', 'Saccharum officinarum', 'Sorghum bicolor', 'Tripsacum dactyloides', 'Triticum aestivum', 'Triticum timopheevii', 'Zea luxurians', 'Zea mays subsp. mays', 'Zea mays subsp. parviglumis', 'Zea perennis']
+2020-03-22 15:49:27,816 -INFO- get taxon `root;cellular organisms;Eukaryota;Viridiplantae;Streptophyta;Streptophytina;Embryophyta;Tracheophyta;Euphyllophyta;Spermatophyta;Magnoliopsida;Mesangiospermae;Liliopsida;Petrosaviidae;commelinids` from Counter({u'root;cellular organisms;Eukaryota;Viridiplantae;Streptophyta;Streptophytina;Embryophyta;Tracheophyta;Euphyllophyta;Spermatophyta;Magnoliopsida;Mesangiospermae;Liliopsida;Petrosaviidae;commelinids': 17})
+2020-03-22 15:49:27,819 -INFO- get transl_table `1` from Counter({1: 824})
+2020-03-22 15:49:27,819 -INFO- running OrthoFinder to cluster genes
+2020-03-22 15:49:27,819 -INFO- run CMD: `orthofinder.py -f /dev/shm/tmp/mt-commelinids/prot -M msa -T fasttree -t 24  -og`
+2020-03-22 15:50:23,291 -INFO- parsing OrthoFinder orthologs
+2020-03-22 15:50:23,293 -INFO- parsing orthologs group into /dev/shm/tmp/mt-commelinids/alns
+2020-03-22 15:50:23,319 -INFO- using min_count=2 to get gene name
+2020-03-22 15:50:30,041 -INFO- get gene name `atp6` from Counter({'atp6': 12, 'orf183': 4, 'atp6-1': 3})
+2020-03-22 15:50:30,042 -INFO- using gene name `atp6`
+2020-03-22 15:50:31,362 -INFO- get gene name `atp8` from Counter({'atp8': 12, 'orfB': 4, 'atp8-1': 1})
+2020-03-22 15:50:31,363 -INFO- using gene name `atp8`
+2020-03-22 15:50:32,207 -INFO- get gene name `cox2` from Counter({'cox2': 16, 'cox2b': 1})
+2020-03-22 15:50:32,207 -INFO- using gene name `cox2`
+2020-03-22 15:50:32,633 -INFO- get gene name `nad9` from Counter({'nad9': 16, 'nad9-1': 1})
+2020-03-22 15:50:32,634 -INFO- using gene name `nad9`
+2020-03-22 15:50:33,495 -INFO- get gene name `rps2` from Counter({'rps2': 11, 'rps2A': 3, 'rps2B': 3, 'rps2-1': 1})
+2020-03-22 15:50:33,496 -INFO- using gene name `rps2`
+2020-03-22 15:50:33,909 -INFO- get gene name `nad6` from Counter({'nad6': 17})
+2020-03-22 15:50:33,910 -INFO- using gene name `nad6`
+2020-03-22 15:50:34,324 -INFO- get gene name `ccmC` from Counter({'ccmC': 16, 'ccmC-1': 1})
+2020-03-22 15:50:34,324 -INFO- using gene name `ccmC`
+2020-03-22 15:50:34,754 -INFO- get gene name `cox1` from Counter({'cox1': 17})
+2020-03-22 15:50:34,754 -INFO- using gene name `cox1`
+2020-03-22 15:50:35,193 -INFO- get gene name `rps7` from Counter({'rps7': 16, 'rps7-1': 1})
+2020-03-22 15:50:35,193 -INFO- using gene name `rps7`
+2020-03-22 15:50:35,613 -INFO- get gene name `mttB` from Counter({'mttB': 11, 'orfX': 5, 'mttB-1': 1})
+2020-03-22 15:50:35,613 -INFO- using gene name `mttB`
+2020-03-22 15:50:36,478 -INFO- get gene name `rps12` from Counter({'rps12': 16, 'orf127': 1})
+2020-03-22 15:50:36,478 -INFO- using gene name `rps12`
+2020-03-22 15:50:37,297 -INFO- get gene name `cox3` from Counter({'cox3': 16, 'psbA': 1})
+2020-03-22 15:50:37,297 -INFO- using gene name `cox3`
+2020-03-22 15:50:37,716 -INFO- get gene name `atp4` from Counter({'atp4': 13, 'orf25': 4})
+2020-03-22 15:50:37,716 -INFO- using gene name `atp4`
+2020-03-22 15:50:38,570 -INFO- get gene name `atp1` from Counter({'atp1': 13, 'atp1-a1': 1, 'atp1-b': 1, 'atp1-1': 1})
+2020-03-22 15:50:38,570 -INFO- using gene name `atp1`
+2020-03-22 15:50:39,027 -INFO- get gene name `rps3` from Counter({'rps3': 15, 'ccmFn2': 1})
+2020-03-22 15:50:39,027 -INFO- using gene name `rps3`
+2020-03-22 15:50:39,029 -INFO- get gene name `rps13` from Counter({'rps13': 16, 'rp13': 1})
+2020-03-22 15:50:39,029 -INFO- using gene name `rps13`
+2020-03-22 15:50:39,030 -INFO- get gene name `mat-r` from Counter({'mat-r': 9, 'matR': 7, 'mat-r-1': 1})
+2020-03-22 15:50:39,030 -INFO- using gene name `mat-r`
+2020-03-22 15:50:39,031 -INFO- get gene name `rps1` from Counter({'rps1': 16, 'rps1-1': 1})
+2020-03-22 15:50:39,031 -INFO- using gene name `rps1`
+2020-03-22 15:50:39,032 -INFO- get gene name `ccmFN` from Counter({'ccmFN': 8, 'ccmFn': 6, 'ccmFN-1': 1, 'ccmFn1': 1, 'CcmFn': 1})
+2020-03-22 15:50:39,032 -INFO- using gene name `ccmFN`
+2020-03-22 15:50:39,451 -INFO- get gene name `nad3` from Counter({'nad3': 16})
+2020-03-22 15:50:39,451 -INFO- using gene name `nad3`
+2020-03-22 15:50:39,868 -INFO- get gene name `cob` from Counter({'cob': 14, 'cob-1': 1, 'cobA': 1})
+2020-03-22 15:50:39,869 -INFO- using gene name `cob`
+2020-03-22 15:50:40,286 -INFO- get gene name `nad2` from Counter({'nad2': 15})
+2020-03-22 15:50:40,287 -INFO- using gene name `nad2`
+2020-03-22 15:50:40,719 -INFO- get gene name `nad5` from Counter({'nad5': 14, 'ND5': 1})
+2020-03-22 15:50:40,719 -INFO- using gene name `nad5`
+2020-03-22 15:50:40,721 -INFO- get gene name `rps4` from Counter({'rps4': 14, 'rps4-1': 2})
+2020-03-22 15:50:40,721 -INFO- using gene name `rps4`
+2020-03-22 15:50:40,722 -INFO- get gene name `nad4L` from Counter({'nad4L': 16})
+2020-03-22 15:50:40,722 -INFO- using gene name `nad4L`
+2020-03-22 15:50:41,169 -INFO- get gene name `nad4` from Counter({'nad4': 15})
+2020-03-22 15:50:41,169 -INFO- using gene name `nad4`
+2020-03-22 15:50:41,171 -INFO- get gene name `ccmB` from Counter({'ccmB': 15, 'ccmB-1': 1})
+2020-03-22 15:50:41,171 -INFO- using gene name `ccmB`
+2020-03-22 15:50:41,172 -INFO- get gene name `atp9` from Counter({'atp9': 16})
+2020-03-22 15:50:41,172 -INFO- using gene name `atp9`
+2020-03-22 15:50:41,603 -INFO- get gene name `nad1` from Counter({'nad1': 14})
+2020-03-22 15:50:41,603 -INFO- using gene name `nad1`
+2020-03-22 15:50:41,604 -INFO- get gene name `nad7` from Counter({'nad7': 15})
+2020-03-22 15:50:41,604 -INFO- using gene name `nad7`
+2020-03-22 15:50:41,605 -INFO- get gene name `ccmFC` from Counter({'ccmFC': 7, 'ccmFc': 6, 'ccmFC-1': 2})
+2020-03-22 15:50:41,606 -INFO- using gene name `ccmFC`
+2020-03-22 15:50:41,607 -INFO- get gene name `rpl16` from Counter({'rpl16': 14})
+2020-03-22 15:50:41,607 -INFO- using gene name `rpl16`
+2020-03-22 15:50:42,026 -INFO- get gene name `rps19` from Counter({'rps19': 6, 'rps19a': 1, 'rps19-p': 1})
+2020-03-22 15:50:42,027 -INFO- using gene name `rps19`
+2020-03-22 15:50:42,028 -INFO- get gene name `rpl5` from Counter({'rpl5': 9})
+2020-03-22 15:50:42,028 -INFO- using gene name `rpl5`
+2020-03-22 15:50:42,895 -INFO- get gene name `orf173` from Counter({'orf173': 4, 'orf142': 1, 'orf158-a1': 1})
+2020-03-22 15:50:42,895 -INFO- using gene name `orf173`
+2020-03-22 15:50:42,896 -INFO- get gene name `rpl2` from Counter({'rpl2': 6, 'orf247-ct': 1})
+2020-03-22 15:50:42,897 -INFO- using gene name `rpl2`
+2020-03-22 15:50:43,727 -INFO- get gene name `orf490` from Counter({'orf490': 5, 'orf138-a': 1, 'orf117-d': 1})
+2020-03-22 15:50:43,727 -INFO- using gene name `orf490`
+2020-03-22 15:50:44,152 -INFO- get gene name `RNA_pol` from Counter({'RNA_pol': 2, 'orf417': 1, 'orf1159': 1, 'orf193-a1': 1})
+2020-03-22 15:50:44,152 -INFO- using gene name `RNA_pol`
+2020-03-22 15:50:44,153 -INFO- get gene name `orf284` from Counter({'orf284': 3, 'orf256': 2})
+2020-03-22 15:50:44,153 -INFO- using gene name `orf284`
+2020-03-22 15:50:44,573 -INFO- get gene name `orf194` from Counter({'orf194': 4})
+2020-03-22 15:50:44,573 -INFO- using gene name `orf194`
+2020-03-22 15:50:45,010 -INFO- get gene name `orf152a` from Counter({'orf152a': 4})
+2020-03-22 15:50:45,011 -INFO- using gene name `orf152a`
+2020-03-22 15:50:45,449 -INFO- get gene name `orf181` from Counter({'orf181': 4})
+2020-03-22 15:50:45,449 -INFO- using gene name `orf181`
+2020-03-22 15:50:45,883 -INFO- get gene name `orf396` from Counter({'orf396': 2, 'orf423': 1})
+2020-03-22 15:50:45,884 -INFO- using gene name `orf396`
+2020-03-22 15:50:46,307 -INFO- get gene name `orf100` from Counter({'orf100': 2, 'orf99-a1': 1})
+2020-03-22 15:50:46,307 -INFO- using gene name `orf100`
+2020-03-22 15:50:46,308 -INFO- get gene name `orf153` from Counter({'orf153': 4})
+2020-03-22 15:50:46,308 -INFO- using gene name `orf153`
+2020-03-22 15:50:46,309 -INFO- get gene name `orf160` from Counter({'orf160': 4})
+2020-03-22 15:50:46,309 -INFO- using gene name `orf160`
+2020-03-22 15:50:46,310 -INFO- get gene name `orf241` from Counter({'orf241': 4})
+2020-03-22 15:50:46,310 -INFO- using gene name `orf241`
+2020-03-22 15:50:46,311 -INFO- get gene name `orf288` from Counter({'orf288': 2, 'orf179': 1, 'CW-orf307': 1})
+2020-03-22 15:50:46,311 -INFO- using gene name `orf288`
+2020-03-22 15:50:46,738 -INFO- get gene name `ycf68` from Counter({'ycf68': 1, 'orf134-a-ct': 1})
+2020-03-22 15:50:46,739 -INFO- get gene name `orf140-b` from Counter({'orf140-b': 1, 'orf101b': 1, 'orf192': 1})
+2020-03-22 15:50:47,187 -INFO- get gene name `orf734` from Counter({'orf734': 1, 'orf911': 1, 'rpo': 1})
+2020-03-22 15:50:47,188 -INFO- get gene name `orf162` from Counter({'orf162': 3})
+2020-03-22 15:50:47,188 -INFO- using gene name `orf162`
+2020-03-22 15:50:47,188 -INFO- get gene name `orf161` from Counter({'orf161': 3})
+2020-03-22 15:50:47,188 -INFO- using gene name `orf161`
+2020-03-22 15:50:47,189 -INFO- get gene name `orf187` from Counter({'orf187': 3})
+2020-03-22 15:50:47,189 -INFO- using gene name `orf187`
+2020-03-22 15:50:47,189 -INFO- get gene name `orf176` from Counter({'orf176': 3})
+2020-03-22 15:50:47,189 -INFO- using gene name `orf176`
+2020-03-22 15:50:47,190 -INFO- get gene name `orf165` from Counter({'orf165': 3})
+2020-03-22 15:50:47,190 -INFO- using gene name `orf165`
+2020-03-22 15:50:47,190 -INFO- get gene name `orf101-a` from Counter({'orf101-a': 2})
+2020-03-22 15:50:47,190 -INFO- using gene name `orf101-a`
+2020-03-22 15:50:47,190 -INFO- get gene name `orf186` from Counter({'orf186': 1, 'orf115a': 1})
+2020-03-22 15:50:47,191 -INFO- get gene name `orf146-a` from Counter({'orf146-a': 2})
+2020-03-22 15:50:47,191 -INFO- using gene name `orf146-a`
+2020-03-22 15:50:47,191 -INFO- get gene name `rps11` from Counter({'rps11': 2})
+2020-03-22 15:50:47,191 -INFO- using gene name `rps11`
+2020-03-22 15:50:47,191 -INFO- get gene name `rps14a` from Counter({'rps14a': 1, 'rps14': 1})
+2020-03-22 15:50:47,192 -INFO- get gene name `orf111-b` from Counter({'orf111-b': 2})
+2020-03-22 15:50:47,192 -INFO- using gene name `orf111-b`
+2020-03-22 15:50:47,192 -INFO- get gene name `orf224` from Counter({'orf224': 2})
+2020-03-22 15:50:47,192 -INFO- using gene name `orf224`
+2020-03-22 15:50:47,192 -INFO- get gene name `orf152b` from Counter({'orf152b': 2})
+2020-03-22 15:50:47,192 -INFO- using gene name `orf152b`
+2020-03-22 15:50:47,193 -INFO- get gene name `orf248-1` from Counter({'orf248-1': 1, 'orf248': 1})
+2020-03-22 15:50:47,193 -INFO- get gene name `orf191` from Counter({'orf191': 2})
+2020-03-22 15:50:47,193 -INFO- using gene name `orf191`
+2020-03-22 15:50:47,193 -INFO- get gene name `orf147-b` from Counter({'orf147-b': 2})
+2020-03-22 15:50:47,193 -INFO- using gene name `orf147-b`
+2020-03-22 15:50:47,194 -INFO- get gene name `orf101-c` from Counter({'orf101-c': 2})
+2020-03-22 15:50:47,194 -INFO- using gene name `orf101-c`
+2020-03-22 15:50:47,194 -INFO- get gene name `orf186` from Counter({'orf186': 2})
+2020-03-22 15:50:47,194 -INFO- using gene name `orf186`
+2020-03-22 15:50:47,197 -INFO- extrat 63 genes: ['RNA_pol', 'atp1', 'atp4', 'atp6', 'atp8', 'atp9', 'ccmB', 'ccmC', 'ccmFC', 'ccmFN', 'cob', 'cox1', 'cox2', 'cox3', 'mat-r', 'mttB', 'nad1', 'nad2', 'nad3', 'nad4', 'nad4L', 'nad5', 'nad6', 'nad7', 'nad9', 'orf100', 'orf101-a', 'orf101-c', 'orf111-b', 'orf146-a', 'orf147-b', 'orf152a', 'orf152b', 'orf153', 'orf160', 'orf161', 'orf162', 'orf165', 'orf173', 'orf176', 'orf181', 'orf186', 'orf187', 'orf191', 'orf194', 'orf224', 'orf241', 'orf284', 'orf288', 'orf396', 'orf490', 'rpl16', 'rpl2', 'rpl5', 'rps1', 'rps11', 'rps12', 'rps13', 'rps19', 'rps2', 'rps3', 'rps4', 'rps7']
+2020-03-22 15:50:47,197 -INFO- aligning sequences
+2020-03-22 15:59:31,256 -INFO- building hmm profiles
+2020-03-22 16:00:06,224 -INFO- building augustus profiles
+2020-03-22 16:00:44,364 -INFO- training augustus models
+/share/home/yuanqyk/.local/lib/python2.7/site-packages/Bio/SeqIO/InsdcIO.py:687: BiopythonWarning: Increasing length of locus line to allow long name. This will result in fields that are not in usual positions.
+  BiopythonWarning,
+2020-03-22 16:04:06,270 -INFO- writing ('rRNA', 'tRNA') sequences into /dev/shm/tmp/mt-commelinids/rrna
+2020-03-22 16:04:06,404 -INFO- running OrthoFinder to cluster genes
+2020-03-22 16:04:06,404 -INFO- run CMD: `orthofinder.py -f /dev/shm/tmp/mt-commelinids/rrna -M msa -T fasttree -t 24 -S blastn -og`
+2020-03-22 16:04:50,916 -INFO- parsing OrthoFinder orthologs
+2020-03-22 16:04:50,917 -INFO- parsing orthologs group into /dev/shm/tmp/mt-commelinids/alns
+2020-03-22 16:04:50,932 -INFO- using min_count=2 to get gene name
+2020-03-22 16:04:54,064 -INFO- get gene name `rrn5` from Counter({'rrn5': 11, 'rrn5-1': 3, 'Saccharum_officinarum-gene39': 1, 'Cocos_nucifera-gene243': 1, 'Phoenix_dactylifera-gene180': 1})
+2020-03-22 16:04:54,065 -INFO- using gene name `rrn5`
+2020-03-22 16:04:56,845 -INFO- get gene name `rrn18` from Counter({'rrn18': 9, 'rrn18-1': 3, 'rrnS': 1, 'Phoenix_dactylifera-gene179': 1, 'Cocos_nucifera-gene245': 1, 'Saccharum_officinarum-gene37': 1})
+2020-03-22 16:04:56,845 -INFO- using gene name `rrn18`
+2020-03-22 16:04:58,668 -INFO- get gene name `trnfM-CAT` from Counter({'trnfM': 8, 'trnM': 2, 'trnfM-CAT': 2, 'trnfM-1': 2, 'trnM-CAU': 1, 'Phoenix_dactylifera-gene69': 1})
+2020-03-22 16:04:58,668 -INFO- using gene name `trnfM-CAT`
+2020-03-22 16:05:01,424 -INFO- get gene name `trnD-GTC` from Counter({'trnD': 8, 'trnD-1': 5, 'trnD-GTC': 2, 'trnD-a1': 1, 'Phoenix_dactylifera-gene63': 1, 'trnD-GUC': 1})
+2020-03-22 16:05:01,425 -INFO- using gene name `trnD-GTC`
+2020-03-22 16:05:04,165 -INFO- get gene name `rrn26` from Counter({'rrn26': 8, 'rrn26-1': 4, 'Cocos_nucifera-gene23': 1, 'rrnL': 1, 'Saccharum_officinarum-gene88': 1, 'Phoenix_dactylifera-gene68': 1})
+2020-03-22 16:05:04,165 -INFO- using gene name `rrn26`
+2020-03-22 16:05:07,767 -INFO- get gene name `trnM-cp` from Counter({'trnM': 10, 'trnM-cp': 2, 'trnM-a': 2, 'trnM-CAT': 2, 'trnM-b-cp': 1, 'trnM-CAU': 1, 'trnM-a-1': 1})
+2020-03-22 16:05:07,767 -INFO- using gene name `trnM-cp`
+2020-03-22 16:05:10,400 -INFO- get gene name `trnP-TGG` from Counter({'trnP': 5, 'trnP-a-1': 4, 'trnP-TGG': 2, 'trnP-1': 2, 'Phoenix_dactylifera-gene176': 1, 'trnP-a1': 1, 'trnP-a': 1, 'trnP-UGG': 1})
+2020-03-22 16:05:10,400 -INFO- using gene name `trnP-TGG`
+2020-03-22 16:05:12,694 -INFO- get gene name `trnQ-TTG` from Counter({'trnQ': 10, 'trnQ-1': 3, 'trnQ-TTG': 2, 'Phoenix_dactylifera-gene17': 1, 'trnQ-UUG': 1})
+2020-03-22 16:05:12,694 -INFO- using gene name `trnQ-TTG`
+2020-03-22 16:05:14,479 -INFO- get gene name `trnK-TTT` from Counter({'trnK': 7, 'trnK-1': 4, 'trnK-TTT': 2, 'Phoenix_dactylifera-gene94': 1, 'trnK-UUU': 1})
+2020-03-22 16:05:14,479 -INFO- using gene name `trnK-TTT`
+2020-03-22 16:05:15,863 -INFO- get gene name `trnE-TTC` from Counter({'trnE': 8, 'trnE-1': 4, 'trnE-TTC': 2, 'Phoenix_dactylifera-gene55': 1, 'trnE-UUC': 1, 'trnE-a1': 1})
+2020-03-22 16:05:15,863 -INFO- using gene name `trnE-TTC`
+2020-03-22 16:05:16,745 -INFO- get gene name `trnY-GTA` from Counter({'trnY': 8, 'trn-Y': 4, 'trnY-GTA': 2, 'trnY-1': 1, 'Phoenix_dactylifera-gene171': 1, 'trnY-GUA': 1})
+2020-03-22 16:05:16,745 -INFO- using gene name `trnY-GTA`
+2020-03-22 16:05:18,025 -INFO- get gene name `trnI-CAT` from Counter({'trnI': 6, 'trnI-1': 3, 'trnM': 2, 'trnI-CAT': 2, 'trnI-a1': 1, 'trnI-AUA': 1, 'Phoenix_dactylifera-gene62': 1})
+2020-03-22 16:05:18,025 -INFO- using gene name `trnI-CAT`
+2020-03-22 16:05:18,915 -INFO- get gene name `trnF-cp` from Counter({'trnF': 7, 'trnF-cp': 5, 'trnF-GAA': 3, 'trnF-ct': 1})
+2020-03-22 16:05:18,916 -INFO- using gene name `trnF-cp`
+2020-03-22 16:05:19,838 -INFO- get gene name `trnN-cp-1` from Counter({'trnN': 5, 'trnN-cp-1': 3, 'trnN-GTT': 2, 'trnN-cp': 2, 'trnN-GUU': 1, 'trnN-a1-ct': 1})
+2020-03-22 16:05:19,839 -INFO- using gene name `trnN-cp-1`
+2020-03-22 16:05:20,284 -INFO- get gene name `trnS-TGA` from Counter({'trnS-b': 4, 'trnS': 4, 'trnS-b-1': 2, 'Phoenix_dactylifera-gene175': 1, 'trnS-3': 1, 'trnS-1': 1, 'trnS-TGA': 1, 'trnS-UGA': 1})
+2020-03-22 16:05:20,285 -INFO- using gene name `trnS-TGA`
+2020-03-22 16:05:20,726 -INFO- get gene name `trnC-cp` from Counter({'trnC': 6, 'trnC-cp': 5, 'trnC-GCA': 3, 'trnC-ct': 1})
+2020-03-22 16:05:20,726 -INFO- using gene name `trnC-cp`
+2020-03-22 16:05:21,603 -INFO- get gene name `trnH-cp` from Counter({'trnH': 4, 'trnH-cp': 4, 'trnH-GTG': 2, 'trnH-GUG': 1, 'trnH-cp-1': 1, 'trnH-ct': 1})
+2020-03-22 16:05:21,603 -INFO- using gene name `trnH-cp`
+2020-03-22 16:05:21,604 -INFO- get gene name `trnS-GCT` from Counter({'trnS-a': 6, 'trnS-GCT': 2, 'trnS': 2, 'trnS-3': 1, 'trnS-1': 1, 'Phoenix_dactylifera-gene178': 1, 'trnS-GCU': 1})
+2020-03-22 16:05:21,604 -INFO- using gene name `trnS-GCT`
+2020-03-22 16:05:22,914 -INFO- get gene name `trnS-GGA` from Counter({'trnS': 4, 'trnS-GGA': 2, 'trnS-2': 2, 'Phoenix_dactylifera-gene154': 1})
+2020-03-22 16:05:22,914 -INFO- using gene name `trnS-GGA`
+2020-03-22 16:05:23,854 -INFO- get gene name `trnP-b-cp` from Counter({'trnP': 3, 'trnP-b-cp': 3, 'trnP-TGG': 1, 'trnP-b-cp-1': 1, 'Phoenix_dactylifera-gene149': 1, 'trnP-UGG': 1, 'trnM-CAU': 1})
+2020-03-22 16:05:23,854 -INFO- using gene name `trnP-b-cp`
+2020-03-22 16:05:24,303 -INFO- get gene name `trnW-cp` from Counter({'trnW': 7, 'trnW-cp': 1, 'trnW-CCA': 1, 'trnW-cp-1': 1})
+2020-03-22 16:05:24,303 -INFO- using gene name `trnW-cp`
+2020-03-22 16:05:24,756 -INFO- get gene name `trnL-AAC` from Counter({'trnL': 2, 'trnL-a': 1, 'trnI': 1, 'trnL-AAC': 1})
+2020-03-22 16:05:24,756 -INFO- using gene name `trnL-AAC`
+2020-03-22 16:05:24,757 -INFO- get gene name `trnR-TCT` from Counter({'trnR': 3, 'trnR-TCT': 2})
+2020-03-22 16:05:24,757 -INFO- using gene name `trnR-TCT`
+2020-03-22 16:05:24,758 -INFO- get gene name `trnI` from Counter({'trnI': 1, 'trnI-ct': 1, 'trnM': 1, 'Phoenix_dactylifera-gene49': 1})
+2020-03-22 16:05:25,205 -INFO- get gene name `trnI-GAU` from Counter({'trnI-GAU': 1, 'trnI-ct': 1})
+2020-03-22 16:05:25,206 -INFO- get gene name `trnA` from Counter({'trnA': 2})
+2020-03-22 16:05:25,206 -INFO- using gene name `trnA`
+2020-03-22 16:05:25,207 -INFO- get gene name `trnN-GUU` from Counter({'trnN-GUU': 1, 'trnN': 1})
+2020-03-22 16:05:25,207 -INFO- get gene name `trnT-UGU` from Counter({'trnT-UGU': 1, 'Phoenix_dactylifera-gene155': 1})
+2020-03-22 16:05:25,207 -INFO- get gene name `trnR-ACG` from Counter({'trnR-ACG': 1, 'trnR-b-ct': 1})
+2020-03-22 16:05:25,207 -INFO- get gene name `Phoenix_dactylifera-gene107` from Counter({'Phoenix_dactylifera-gene107': 1, 'trnC-GCA': 1})
+2020-03-22 16:05:25,208 -INFO- get gene name `trnK-UUU` from Counter({'trnK-UUU': 1, 'Phoenix_dactylifera-gene67': 1})
+2020-03-22 16:05:25,208 -INFO- get gene name `rrn16-ct` from Counter({'rrn16-ct': 1, 'Cocos_nucifera-gene166': 1})
+2020-03-22 16:05:25,208 -INFO- get gene name `trnF-GAA` from Counter({'trnF-GAA': 1, 'Phoenix_dactylifera-gene177': 1})
+2020-03-22 16:05:25,208 -INFO- get gene name `trnK` from Counter({'trnK': 2})
+2020-03-22 16:05:25,208 -INFO- using gene name `trnK`
+2020-03-22 16:05:25,209 -INFO- get gene name `trnC-GCA` from Counter({'trnL-b': 1, 'trnC-GCA': 1})
+2020-03-22 16:05:25,210 -INFO- extrat 25 genes: ['rrn18', 'rrn26', 'rrn5', 'trnA', 'trnC-cp', 'trnD-GTC', 'trnE-TTC', 'trnF-cp', 'trnH-cp', 'trnI-CAT', 'trnK', 'trnK-TTT', 'trnL-AAC', 'trnM-cp', 'trnN-cp-1', 'trnP-TGG', 'trnP-b-cp', 'trnQ-TTG', 'trnR-TCT', 'trnS-GCT', 'trnS-GGA', 'trnS-TGA', 'trnW-cp', 'trnY-GTA', 'trnfM-CAT']
+2020-03-22 16:05:25,210 -INFO- aligning sequences
+2020-03-22 16:08:54,165 -INFO- building hmm profiles

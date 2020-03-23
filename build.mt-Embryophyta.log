@@ -1,0 +1,1061 @@
+{'count': False, 'organ': 'mt', 'list': False, 'taxon': 'Embryophyta', 'custom': None, 'gbfiles': ['/share/home/nature/database/RefSeq/mitochondrion/mitochondrion.1.genomic.gbff.gz', '/share/home/nature/database/RefSeq/mitochondrion/mitochondrion.2.genomic.gbff.gz'], 'check': False, 'dbdir': None}
+2020-03-20 12:29:24,047 -INFO- parsing ['/share/home/nature/database/RefSeq/mitochondrion/mitochondrion.1.genomic.gbff.gz', '/share/home/nature/database/RefSeq/mitochondrion/mitochondrion.2.genomic.gbff.gz']
+2020-03-20 12:29:24,048 -INFO- version: RefSeq 2020-01-09
+(None, "Leptocephalus sp. 'type II larva' (Smith, 1989)") queried None
+(None, 'Himantura gerrardi') queried None
+(None, 'Vazella pourtalesi') queried None
+(None, 'Palpitomonas bilix Eukaryota.') queried None
+(None, 'Eukaryota sp. BB2 Eukaryota.') queried None
+(None, 'Ancoracysta twista Eukaryota.') queried None
+2020-03-20 13:20:59,777 -INFO- 205 records: 60 orders, 91 families, 156 genera, 205 organism
+2020-03-20 13:20:59,777 -INFO- pruning taxa
+2020-03-20 13:20:59,778 -INFO- total 205 organisms
+2020-03-20 13:20:59,778 -INFO- pruning by genus with > 1 organisms
+2020-03-20 13:20:59,907 -INFO- building taxonomy tree
+2020-03-20 13:20:59,907 -INFO- run CMD: `ete3 ncbiquery --search 'Solanum lycopersicum' 'Orthotrichum stellatum' 'Cannabis sativa' 'Tritomaria quinquedentata' 'Corchorus olitorius' 'Stratiotes aloides' 'Syntrichia filaris' 'Vitis vinifera' 'Triticum timopheevii' 'Butomus umbellatus' 'Treubia lacunosa' 'Senna tora' 'Pleurozia purpurea' 'Leiosporoceros dussii' 'Cucumis sativus' 'Sorghum bicolor' 'Lactuca saligna' 'Gossypium raimondii' 'Climacium americanum' 'Castilleja paramensis' 'Chrysanthemum boreale' 'Carica papaya' 'Salix suchowensis' 'Hesperelaea palmeri' 'Ulota hutchinsiae' 'Eleusine indica' 'Marchantia polymorpha subsp. ruderalis' 'Nicotiana attenuata' 'Cynanchum auriculatum' 'Sphagnum palustre' 'Atrichum angustatum' 'Glycine soja' 'Sanionia uncinata' 'Frisvollia varia' 'Lagerstroemia indica' 'Libidibia coriaria' 'Ammopiptanthus mongolicus' 'Racomitrium lanuginosum' 'Salvia miltiorrhiza' 'Erythranthe guttata' 'Saccharum officinarum' 'Spinacia oleracea' 'Pongamia pinnata' 'Ajuga reptans' 'Silene latifolia' 'Ziziphus jujuba' 'Raphanus sativus' 'Ptychomnion cygnisetum' 'Eriobotrya japonica' 'Chionoloma tenuirostre' 'Cocos nucifera' 'Liriodendron tulipifera' 'Physochlaina orientalis' 'Populus tremula' 'Tripsacum dactyloides' 'Phaeoceros laevis' 'Platycodon grandiflorus' 'Porella platyphylla' 'Ginkgo biloba' 'Brachythecium rivulare' 'Helianthus annuus' 'Arabidopsis thaliana' 'Acacia ligulata' 'Riccia fluitans' 'Tetraphis pellucida' 'Arabis alpina' 'Bombax ceiba' 'Boechera stricta' 'Buxbaumia aphylla' 'Tamarindus indica' 'Dorcoceras hygrometricum' 'Pinus taeda' 'Metzgeria furcata' 'Styphnolobium japonicum' 'Polytrichum commune' 'Sinapis arvensis' 'Asclepias syriaca' 'Phaseolus vulgaris' 'Codonopsis lanceolata' 'Bartramia pomiformis' 'Utricularia reniformis' 'Bucklandiella orthotrichacea' 'Vigna radiata' 'Hibiscus cannabinus' 'Mielichhoferia elongata' 'Welwitschia mirabilis' 'Batis maritima' 'Allium cepa' 'Bupleurum falcatum' 'Niphotrichum ericoides' 'Citrus sinensis' 'Callicladium imponens' 'Nelumbo nucifera' 'Malus domestica' 'Zygodon viridissimus' 'Anthoceros angustus' 'Diplostephium hartwegii' 'Lotus japonicus' 'Dilutineuron laevigatum' 'Morus notabilis' 'Hyoscyamus niger' 'Aneura pinguis' 'Viscum album' 'Brassica nigra' 'Camellia sinensis' 'Nyholmiella gymnostoma' 'Cycas taitungensis' 'Manihot esculenta' 'Spirodela polyrhiza' 'Ptilidium ciliare' 'Stoneobryum bunyaense' 'Ricinus communis' 'Sophora flavescens' 'Tetraplodon fuegianus' 'Leucaena trichandra' 'Psilotum nudum' 'Phlegmariurus squarrosus' 'Schisandra sphenanthera' 'Vaccinium macrocarpon' 'Gymnomitrion concinnatum' 'Capsicum annuum' 'Medicago truncatula' 'Plenogemma phyllantha' 'Zostera marina' 'Prunus avium' 'Haematoxylum brasiletto' 'Ilex pubescens' 'Lewinskya speciosa' 'Cucurbita pepo' 'Rhazya stricta' 'Nepenthes ventricosa x Nepenthes alata' 'Eucalyptus grandis' 'Citrullus lanatus' 'Geranium maderense' 'Spondias tuberosa' 'Beta macrocarpa' 'Ophioglossum californicum' 'Zea mays subsp. mays' 'Phoenix dactylifera' 'Daucus carota subsp. sativus' 'Calypogeia integristipula' 'Haplomitrium hookeri' 'Oryza sativa Indica Group' 'Physcomitrella patens' 'Chenopodium quinoa' 'Solenostoma sphaerocarpum' 'Ipomoea nil' 'Nothoceros aenigmaticus' 'Anomodon rugelii' 'Fossombronia foveolata' 'Codriophorus aciculare' 'Aegilops speltoides var. ligustica' 'Funaria hygrometrica' 'Capsella rubella' 'Nymphaea colorata' 'Dumortiera hirsuta' --tree >  /dev/shm/tmp/mt-Embryophyta/species.tree.tmp`
+2020-03-20 13:21:17,453 -INFO- using speceis tree `/dev/shm/tmp/ogap_db/mt-Embryophyta/species.treefile`
+2020-03-20 13:21:17,453 -INFO- writing protein sequences into /dev/shm/tmp/mt-Embryophyta/prot
+2020-03-20 13:21:24,824 -INFO- 156 taxa: ['Acacia ligulata', 'Aegilops speltoides var. ligustica', 'Ajuga reptans', 'Allium cepa', 'Ammopiptanthus mongolicus', 'Aneura pinguis', 'Anomodon rugelii', 'Anthoceros angustus', 'Arabidopsis thaliana', 'Arabis alpina', 'Asclepias syriaca', 'Atrichum angustatum', 'Bartramia pomiformis', 'Batis maritima', 'Beta macrocarpa', 'Boechera stricta', 'Bombax ceiba', 'Brachythecium rivulare', 'Brassica nigra', 'Bucklandiella orthotrichacea', 'Bupleurum falcatum', 'Butomus umbellatus', 'Buxbaumia aphylla', 'Callicladium imponens', 'Calypogeia integristipula', 'Camellia sinensis', 'Cannabis sativa', 'Capsella rubella', 'Capsicum annuum', 'Carica papaya', 'Castilleja paramensis', 'Chenopodium quinoa', 'Chionoloma tenuirostre', 'Chrysanthemum boreale', 'Citrullus lanatus', 'Citrus sinensis', 'Climacium americanum', 'Cocos nucifera', 'Codonopsis lanceolata', 'Codriophorus aciculare', 'Corchorus olitorius', 'Cucumis sativus', 'Cucurbita pepo', 'Cycas taitungensis', 'Cynanchum auriculatum', 'Daucus carota subsp. sativus', 'Dilutineuron laevigatum', 'Diplostephium hartwegii', 'Dorcoceras hygrometricum', 'Dumortiera hirsuta', 'Eleusine indica', 'Eriobotrya japonica', 'Erythranthe guttata', 'Eucalyptus grandis', 'Fossombronia foveolata', 'Frisvollia varia', 'Funaria hygrometrica', 'Geranium maderense', 'Ginkgo biloba', 'Glycine soja', 'Gossypium raimondii', 'Gymnomitrion concinnatum', 'Haematoxylum brasiletto', 'Haplomitrium hookeri', 'Helianthus annuus', 'Hesperelaea palmeri', 'Hibiscus cannabinus', 'Hyoscyamus niger', 'Ilex pubescens', 'Ipomoea nil', 'Lactuca saligna', 'Lagerstroemia indica', 'Leiosporoceros dussii', 'Leucaena trichandra', 'Lewinskya speciosa', 'Libidibia coriaria', 'Liriodendron tulipifera', 'Lotus japonicus', 'Malus domestica', 'Manihot esculenta', 'Marchantia polymorpha subsp. ruderalis', 'Medicago truncatula', 'Metzgeria furcata', 'Mielichhoferia elongata', 'Morus notabilis', 'Nelumbo nucifera', 'Nepenthes ventricosa x Nepenthes alata', 'Nicotiana attenuata', 'Niphotrichum ericoides', 'Nothoceros aenigmaticus', 'Nyholmiella gymnostoma', 'Nymphaea colorata', 'Ophioglossum californicum', 'Orthotrichum stellatum', 'Oryza sativa Indica Group', 'Phaeoceros laevis', 'Phaseolus vulgaris', 'Phlegmariurus squarrosus', 'Phoenix dactylifera', 'Physcomitrella patens', 'Physochlaina orientalis', 'Pinus taeda', 'Platycodon grandiflorus', 'Plenogemma phyllantha', 'Pleurozia purpurea', 'Polytrichum commune', 'Pongamia pinnata', 'Populus tremula', 'Porella platyphylla', 'Prunus avium', 'Psilotum nudum', 'Ptilidium ciliare', 'Ptychomnion cygnisetum', 'Racomitrium lanuginosum', 'Raphanus sativus', 'Rhazya stricta', 'Riccia fluitans', 'Ricinus communis', 'Saccharum officinarum', 'Salix suchowensis', 'Salvia miltiorrhiza', 'Sanionia uncinata', 'Schisandra sphenanthera', 'Senna tora', 'Silene latifolia', 'Sinapis arvensis', 'Solanum lycopersicum', 'Solenostoma sphaerocarpum', 'Sophora flavescens', 'Sorghum bicolor', 'Sphagnum palustre', 'Spinacia oleracea', 'Spirodela polyrhiza', 'Spondias tuberosa', 'Stoneobryum bunyaense', 'Stratiotes aloides', 'Styphnolobium japonicum', 'Syntrichia filaris', 'Tamarindus indica', 'Tetraphis pellucida', 'Tetraplodon fuegianus', 'Treubia lacunosa', 'Tripsacum dactyloides', 'Triticum timopheevii', 'Tritomaria quinquedentata', 'Ulota hutchinsiae', 'Utricularia reniformis', 'Vaccinium macrocarpon', 'Vigna radiata', 'Viscum album', 'Vitis vinifera', 'Welwitschia mirabilis', 'Zea mays subsp. mays', 'Ziziphus jujuba', 'Zostera marina', 'Zygodon viridissimus']
+2020-03-20 13:21:25,417 -INFO- get taxon `root;cellular organisms;Eukaryota;Viridiplantae;Streptophyta;Streptophytina;Embryophyta` from Counter({u'root;cellular organisms;Eukaryota;Viridiplantae;Streptophyta;Streptophytina;Embryophyta': 205})
+2020-03-20 13:21:25,455 -INFO- get transl_table `1` from Counter({1: 8987})
+2020-03-20 13:21:25,455 -INFO- running OrthoFinder to cluster genes
+2020-03-20 13:21:25,455 -INFO- run CMD: `orthofinder.py -f /dev/shm/tmp/mt-Embryophyta/prot -M msa -T fasttree -t 16  -og`
+2020-03-20 13:48:23,245 -INFO- parsing OrthoFinder orthologs
+2020-03-20 13:48:23,246 -INFO- parsing orthologs group into /dev/shm/tmp/mt-Embryophyta/alns
+2020-03-20 13:48:23,450 -INFO- using min_count=15.6 to get gene name
+2020-03-20 13:48:28,722 -INFO- get gene name `nad5` from Counter({'nad5': 146, 'ND5': 4, 'orf101c': 1, 'Zygodon_viridissimus-gene98': 1, 'orf116b': 1, 'orf288': 1, 'Utricularia_reniformis-gene1000': 1, 'orf199': 1, 'Spondias_tuberosa-gene112': 1, 'orf195': 1, 'nad2': 1, 'NAD5': 1})
+2020-03-20 13:48:28,723 -INFO- get product `NADH dehydrogenase subunit 5` from Counter({'NADH dehydrogenase subunit 5': 149, 'hypothetical protein': 6, 'Nad5': 2, 'NADH dehydrogense subunit 5': 2, 'NADH dehydrogenase subunit 2': 1})
+2020-03-20 13:48:28,724 -INFO- get exon number `5` from Counter({5: 76, 4: 52, 2: 18, 1: 9, 3: 3, 6: 1, 10: 1})
+2020-03-20 13:48:28,724 -INFO- get trans_splicing `True` from Counter({True: 91, False: 69})
+2020-03-20 13:48:31,750 -INFO- get gene name `atp1` from Counter({'atp1': 150, 'ATP1': 3, 'atpA': 2, 'orf226': 1, 'atp1-1': 1, 'atp1-a1': 1, 'Zygodon_viridissimus-gene173': 1, 'atp1-b': 1, 'orf470': 1})
+2020-03-20 13:48:31,750 -INFO- get product `ATPase subunit 1` from Counter({'ATPase subunit 1': 62, 'ATP synthase F1 subunit alpha': 52, 'ATP synthase F1 subunit 1': 14, 'ATP synthase subunit 1': 14, 'Atp1': 9, 'ATP synthase F0 subunit 1': 2, 'ATP1': 2, 'ATPase alpha subunit': 2, 'hypothetical protein': 2, 'ATPase subunit A': 1, 'F1 ATP synthase alpha': 1})
+2020-03-20 13:48:31,752 -INFO- get exon number `1` from Counter({1: 116, 2: 33, 3: 8, 4: 3, 6: 1})
+2020-03-20 13:48:31,752 -INFO- get trans_splicing `False` from Counter({False: 160, True: 1})
+2020-03-20 13:48:34,811 -INFO- get gene name `nad1` from Counter({'nad1': 142, 'orf128': 2, 'ND1': 2, 'Bupleurum_falcatum-gene171': 1, 'Utricularia_reniformis-gene2122': 1, 'Tetraplodon_fuegianus-gene214': 1, 'orf133c': 1, 'amoMp17': 1, 'Bupleurum_falcatum-gene96': 1, 'Zygodon_viridissimus-gene156': 1, 'Utricularia_reniformis-gene3749': 1, 'Utricularia_reniformis-gene4546': 1, 'Spondias_tuberosa-gene76': 1, 'Utricularia_reniformis-gene316': 1, 'Utricularia_reniformis-gene3105': 1, 'orf108c': 1, 'NAD1': 1})
+2020-03-20 13:48:34,811 -INFO- get product `NADH dehydrogenase subunit 1` from Counter({'NADH dehydrogenase subunit 1': 143, 'hypothetical protein': 9, 'Nad1': 3, 'NADH dehydrogense subunit 1': 2, 'orf128': 2, 'orf105b': 1})
+2020-03-20 13:48:34,813 -INFO- get exon number `5` from Counter({5: 84, 3: 31, 1: 29, 4: 12, 6: 2, 2: 1, 7: 1})
+2020-03-20 13:48:34,813 -INFO- get trans_splicing `True` from Counter({True: 90, False: 70})
+2020-03-20 13:48:38,926 -INFO- get gene name `atp6` from Counter({'atp6': 146, 'ATP6': 3, 'Zygodon_viridissimus-gene134': 1, 'ORF387': 1, 'Pleurozia_purpurea-gene71': 1, 'orf115a': 1, 'atp6-1': 1, 'orf183': 1})
+2020-03-20 13:48:38,927 -INFO- get product `ATP synthase F0 subunit 6` from Counter({'ATP synthase F0 subunit 6': 71, 'ATPase subunit 6': 54, 'ATP synthase subunit 6': 15, 'Atp6': 8, 'hypothetical protein': 4, 'ATPase subunit 1': 2, 'ATP synthase F0 subunit a': 1})
+2020-03-20 13:48:38,928 -INFO- get exon number `1` from Counter({1: 118, 2: 31, 3: 6})
+2020-03-20 13:48:38,929 -INFO- get trans_splicing `False` from Counter({False: 155})
+2020-03-20 13:48:41,347 -INFO- get gene name `nad2` from Counter({'nad2': 147, 'ND2': 3, 'orf127d': 2, 'orf134c': 1, 'orf101': 1, 'Bupleurum_falcatum-gene121': 1, 'orf300': 1, 'orf204a': 1, 'NAD2': 1, 'orf155a': 1, 'Zygodon_viridissimus-gene112': 1})
+2020-03-20 13:48:41,348 -INFO- get product `NADH dehydrogenase subunit 2` from Counter({'NADH dehydrogenase subunit 2': 146, 'hypothetical protein': 5, 'Nad2': 3, 'NADH dehydrogense subunit 2': 2, 'NADH dehydrogenase subunit 1': 1, 'orf127d': 1, 'orf155a': 1, 'orf214': 1})
+2020-03-20 13:48:41,350 -INFO- get exon number `5` from Counter({5: 88, 2: 52, 1: 9, 3: 8, 4: 2, 6: 1})
+2020-03-20 13:48:41,350 -INFO- get trans_splicing `True` from Counter({True: 88, False: 72})
+2020-03-20 13:48:43,369 -INFO- get gene name `nad4` from Counter({'nad4': 148, 'nad4a': 2, 'ND4': 2, 'Spondias_tuberosa-gene26': 1, 'orf160': 1, 'orf175': 1, 'nad4b': 1, 'NAD4': 1})
+2020-03-20 13:48:43,370 -INFO- get product `NADH dehydrogenase subunit 4` from Counter({'NADH dehydrogenase subunit 4': 144, 'Nad4': 3, 'NADH dehydrogenase subunit 3': 2, 'NADH dehydrogense subunit 4': 2, 'NADH dehydrogenase subunit 4a': 2, 'hypothetical protein': 2, 'NADH dehydrogenase subunit 4b': 1, 'NADH dehydrogenase subunit 4L': 1})
+2020-03-20 13:48:43,372 -INFO- get exon number `4` from Counter({4: 80, 2: 55, 3: 14, 1: 7, 5: 1})
+2020-03-20 13:48:43,372 -INFO- get trans_splicing `False` from Counter({False: 156, True: 1})
+2020-03-20 13:48:46,398 -INFO- get gene name `atp9` from Counter({'atp9': 145, 'ATP9': 3, 'orf111e': 1, 'atp9-1': 1, 'Zygodon_viridissimus-gene220': 1, 'Aneura_pinguis-gene302': 1})
+2020-03-20 13:48:46,399 -INFO- get product `ATPase subunit 9` from Counter({'ATPase subunit 9': 62, 'ATP synthase F0 subunit 9': 58, 'ATP synthase subunit 9': 15, 'Atp9': 8, 'F0 ATPase subunit 9': 4, 'F0-ATPase subunit 9': 2, 'hypothetical protein': 1, 'ATP synthase F0 subunit c': 1, 'ATP synthase subunit C': 1})
+2020-03-20 13:48:46,401 -INFO- get exon number `1` from Counter({1: 102, 4: 32, 2: 17, 3: 1})
+2020-03-20 13:48:46,401 -INFO- get trans_splicing `False` from Counter({False: 152})
+2020-03-20 13:48:50,402 -INFO- get gene name `ccmFN` from Counter({'ccmFN': 78, 'ccmFn': 60, 'ccmFN1': 6, 'ccmFN2': 6, 'ccmfn': 1, 'ccmFN-1': 1, 'ccmFn2': 1, 'ccmFn1': 1, 'ccmF': 1})
+2020-03-20 13:48:50,403 -INFO- get product `cytochrome c biogenesis FN` from Counter({'cytochrome c biogenesis FN': 62, 'cytochrome c biogenesis factor N': 43, 'cytochrome c maturation protein CcmFN': 7, 'CcmFN': 7, 'cytochrome c biogenesis Fn': 5, 'cytochrome c maturase subunit Fn': 4, 'heme lyase': 3, 'CcmFn': 3, 'cytochrome c biogenesis ccmF': 3, 'cytochrome c biogenesis protein ccmFN': 2, 'cytochrome c maturation protein ccmFN': 1, 'cytochrome c biogenesis protein FN1': 1, 'cytochrome c biogenesis protein FN2': 1, 'cytochrome c maturation Fn': 1, 'cytochrome c biogenesis FN2': 1, 'cytochrome c biogenesis FN1': 1, 'CcmFN2': 1, 'CcmFN1': 1, 'ccmFn': 1, 'cytochrome c biogenesis F': 1, 'CcMFn': 1, 'cytochrome c maturation protein CcmFn': 1, 'cytochrome c maturation subunit FN': 1, 'cytochrome c assembly protein': 1, 'cytochrome c biogenesis protein ccmFN2': 1, 'cytochrome c biogenesis protein ccmFN1': 1})
+2020-03-20 13:48:50,405 -INFO- get exon number `1` from Counter({1: 154, 13: 1})
+2020-03-20 13:48:50,405 -INFO- get trans_splicing `False` from Counter({False: 155})
+2020-03-20 13:48:52,070 -INFO- get gene name `nad9` from Counter({'nad9': 149, 'ND9': 2, 'Zygodon_viridissimus-gene168': 1, 'NAD9': 1, 'nad9-1': 1})
+2020-03-20 13:48:52,071 -INFO- get product `NADH dehydrogenase subunit 9` from Counter({'NADH dehydrogenase subunit 9': 149, 'Nad9': 3, 'NADH dehydrogense subunit 9': 2})
+2020-03-20 13:48:52,073 -INFO- get exon number `1` from Counter({1: 119, 2: 31, 3: 4})
+2020-03-20 13:48:52,073 -INFO- get trans_splicing `False` from Counter({False: 154})
+2020-03-20 13:48:54,815 -INFO- get gene name `atp8` from Counter({'atp8': 141, 'ATP8': 4, 'orf224': 2, 'orfB': 2, 'orf222': 1, 'orf107a': 1, 'ORF216': 1, 'orf217c': 1})
+2020-03-20 13:48:54,816 -INFO- get product `ATPase subunit 8` from Counter({'ATPase subunit 8': 93, 'ATP synthase F0 subunit 8': 28, 'ATP synthase subunit 8': 14, 'Atp8': 9, 'hypothetical protein': 8, 'orf224': 1})
+2020-03-20 13:48:54,817 -INFO- get exon number `1` from Counter({1: 152, 2: 1})
+2020-03-20 13:48:54,817 -INFO- get trans_splicing `False` from Counter({False: 152, True: 1})
+2020-03-20 13:48:55,480 -INFO- get gene name `nad6` from Counter({'nad6': 151, 'ND6': 2, 'NAD6': 1, 'ORF134': 1})
+2020-03-20 13:48:55,481 -INFO- get product `NADH dehydrogenase subunit 6` from Counter({'NADH dehydrogenase subunit 6': 149, 'Nad6': 3, 'NADH dehydrogense subunit 6': 2, 'hypothetical protein PhlaMp13': 1})
+2020-03-20 13:48:55,483 -INFO- get exon number `1` from Counter({1: 150, 2: 4, 3: 1})
+2020-03-20 13:48:55,483 -INFO- get trans_splicing `False` from Counter({False: 155})
+2020-03-20 13:48:56,162 -INFO- get gene name `atp4` from Counter({'atp4': 148, 'ATP4': 3, 'orf25': 2, 'ORF117_2': 1})
+2020-03-20 13:48:56,163 -INFO- get product `ATPase subunit 4` from Counter({'ATPase subunit 4': 105, 'ATP synthase subunit 4': 15, 'ATP synthase F0 subunit b': 15, 'Atp4': 8, 'hypothetical protein': 5, 'ATP synthase F0 subunit 4': 4, 'ATP synthase F0 subunit beta': 2})
+2020-03-20 13:48:56,165 -INFO- get exon number `1` from Counter({1: 152, 2: 2})
+2020-03-20 13:48:56,165 -INFO- get trans_splicing `False` from Counter({False: 154})
+2020-03-20 13:48:57,941 -INFO- get gene name `cox2` from Counter({'cox2': 143, 'COX2': 3, 'cox2-1': 2, 'cox2b': 1, 'Zygodon_viridissimus-gene141': 1, 'orf298': 1, 'orf178b': 1, 'orf317': 1, 'ORF300': 1, 'ORF106_3': 1})
+2020-03-20 13:48:57,942 -INFO- get product `cytochrome c oxidase subunit 2` from Counter({'cytochrome c oxidase subunit 2': 121, 'cytochrome oxidase subunit 2': 17, 'cytochrome c oxidase subunit II': 6, 'hypothetical protein': 4, 'Cox2': 3, 'cox2': 2, 'orf298': 1, 'cytochrome c oxidase subunit 2-1': 1})
+2020-03-20 13:48:57,944 -INFO- get exon number `2` from Counter({2: 60, 1: 33, 3: 30, 4: 29, 5: 2, 6: 1})
+2020-03-20 13:48:57,944 -INFO- get trans_splicing `False` from Counter({False: 150, True: 5})
+2020-03-20 13:48:58,989 -INFO- get gene name `cox3` from Counter({'cox3': 148, 'COX3': 3, 'coxIII': 1, 'psbA': 1})
+2020-03-20 13:48:58,990 -INFO- get product `cytochrome c oxidase subunit 3` from Counter({'cytochrome c oxidase subunit 3': 126, 'cytochrome oxidase subunit 3': 15, 'cytochrome c oxidase subunit III': 7, 'Cox3': 3, 'PSII 32 kDa protein': 1, 'cox3': 1})
+2020-03-20 13:48:58,992 -INFO- get exon number `1` from Counter({1: 102, 2: 36, 3: 15})
+2020-03-20 13:48:58,992 -INFO- get trans_splicing `False` from Counter({False: 152, True: 1})
+2020-03-20 13:49:00,375 -INFO- get gene name `nad3` from Counter({'nad3': 147, 'ND3': 2, 'NAD3': 1})
+2020-03-20 13:49:00,376 -INFO- get product `NADH dehydrogenase subunit 3` from Counter({'NADH dehydrogenase subunit 3': 144, 'Nad3': 4, 'NADH dehydrogense subunit 3': 2})
+2020-03-20 13:49:00,378 -INFO- get exon number `1` from Counter({1: 130, 2: 15, 3: 5})
+2020-03-20 13:49:00,378 -INFO- get trans_splicing `False` from Counter({False: 150})
+2020-03-20 13:49:01,105 -INFO- get gene name `cox1` from Counter({'cox1': 146, 'COX1': 3, 'orf575': 1, 'coxI': 1})
+2020-03-20 13:49:01,106 -INFO- get product `cytochrome c oxidase subunit 1` from Counter({'cytochrome c oxidase subunit 1': 132, 'cytochrome oxidase subunit 1': 10, 'cytochrome c oxidase subunit I': 5, 'Cox1': 1, 'cox1': 1, 'cytochrome c oxidase subunit': 1, 'hypothetical protein': 1})
+2020-03-20 13:49:01,108 -INFO- get exon number `1` from Counter({1: 83, 5: 31, 2: 16, 10: 10, 4: 3, 7: 3, 8: 3, 3: 1, 6: 1})
+2020-03-20 13:49:01,108 -INFO- get trans_splicing `False` from Counter({False: 151})
+2020-03-20 13:49:01,472 -INFO- get gene name `cob` from Counter({'cob': 145, 'CYTB': 2, 'cob-1': 1, 'cob2': 1, 'Zygodon_viridissimus-gene163': 1, 'cobA': 1, 'cytB': 1})
+2020-03-20 13:49:01,473 -INFO- get product `apocytochrome b` from Counter({'apocytochrome b': 100, 'cytochrome b': 51, 'apocytochrome B': 1})
+2020-03-20 13:49:01,475 -INFO- get exon number `1` from Counter({1: 101, 2: 31, 4: 17, 3: 3})
+2020-03-20 13:49:01,475 -INFO- get trans_splicing `False` from Counter({False: 152})
+2020-03-20 13:49:03,495 -INFO- get gene name `ccmFc` from Counter({'ccmFc': 71, 'ccmFC': 67, 'ccmF': 2, 'ccmfc': 2, 'orf294': 1, 'Utricularia_reniformis-gene4441': 1, 'ccmFC2': 1, 'ccmFC1': 1, 'orf298': 1, 'ccmFC-1': 1, 'Zygodon_viridissimus-gene41': 1, 'orf208': 1})
+2020-03-20 13:49:03,496 -INFO- get product `cytochrome c biogenesis FC` from Counter({'cytochrome c biogenesis FC': 64, 'cytochrome c biogenesis factor C': 36, 'cytochrome c maturase subunit Fc': 7, 'cytochrome c biogenesis factor': 7, 'CcmFc': 4, 'hypothetical protein': 4, 'cytochrome c maturation protein CcmFc': 3, 'cytochrome c biogenesis ccmF': 3, 'cytochrome c biogenesis protein ccmFC': 3, 'CcmFC': 3, 'cytochrome c biogenesis F': 3, 'cytochrome c biogenesis Fc': 3, 'heme lyase': 2, 'cytochrome c maturation subunit Fc': 2, 'cytochrome c maturation Fc': 1, 'cytochrome c maturation protein CcmFC': 1, 'ccmFc': 1, 'CcMFc': 1, 'cytochrome c biogenesis protein FC2': 1, 'cytochrome c biogenesis protein FC1': 1})
+2020-03-20 13:49:03,498 -INFO- get exon number `2` from Counter({2: 122, 1: 26, 3: 2})
+2020-03-20 13:49:03,498 -INFO- get trans_splicing `False` from Counter({False: 150})
+2020-03-20 13:49:04,214 -INFO- get gene name `mttB` from Counter({'mttB': 84, 'tatC': 58, 'orfX': 4, 'orf1': 1, 'Raphanus_sativus-gene187': 1, 'Malus_domestica-gene7': 1})
+2020-03-20 13:49:04,214 -INFO- get product `transport membrane protein` from Counter({'transport membrane protein': 48, 'Sec-independent protein translocase protein': 44, 'Sec-Y independent protein translocase component': 12, 'MttB': 12, 'Sec-independent protein translocase': 8, 'hypothetical protein': 5, 'SecY-independent transporter protein': 3, 'SecY-independent membrane transporter protein': 3, 'Sec-Y independent protein translocase component TatC': 2, 'mttB': 2, 'tatC': 2, 'twin arginine translocation': 2, 'Sec independent translocation protein': 1, 'Sec-independent protein translocase component TatC': 1, 'hypothetical protein X': 1, 'membrane transporter protein MttB': 1, 'TatC': 1, 'trimethylamine methyltransferase': 1})
+2020-03-20 13:49:04,216 -INFO- get exon number `1` from Counter({1: 147, 2: 2})
+2020-03-20 13:49:04,216 -INFO- get trans_splicing `False` from Counter({False: 149})
+2020-03-20 13:49:04,988 -INFO- get gene name `ccmC` from Counter({'ccmC': 145, 'orf518': 1, 'ccmC-1': 1, 'ccmc': 1})
+2020-03-20 13:49:04,989 -INFO- get product `cytochrome c biogenesis C` from Counter({'cytochrome c biogenesis C': 115, 'CcmC': 8, 'cytochrome c maturase subunit C': 6, 'cytochrome c biogenesis protein ccmC': 3, 'cytochrome c maturation protein CcmC': 2, 'cytochrome c biogenesis ccmC': 2, 'ABC transporter subunit': 2, 'ABC transporter subunit C': 1, 'cytochrome c maturation C': 1, 'cytochrome c-type biogenesis protein CcmC': 1, 'CcMC': 1, 'ccmC': 1, 'cytochrome c biogensis protein C': 1, 'cytochrome c maturation subunit C': 1, 'cytochrome c biosynthesis': 1, 'cytochrome c biogenesis ccmB': 1, 'hypothetical protein': 1})
+2020-03-20 13:49:04,991 -INFO- get exon number `1` from Counter({1: 148})
+2020-03-20 13:49:04,991 -INFO- get trans_splicing `False` from Counter({False: 148})
+2020-03-20 13:49:05,683 -INFO- get gene name `ccmB` from Counter({'ccmB': 144, 'ccmb': 2, 'ccmB-1': 1})
+2020-03-20 13:49:05,684 -INFO- get product `cytochrome c biogenesis B` from Counter({'cytochrome c biogenesis B': 103, 'cytochrome c maturation protein CcmB': 12, 'cytochrome c maturase subunit B': 8, 'CcmB': 7, 'cytochrome c maturation protein B': 4, 'cytochrome c biogenesis protein ccmB': 3, 'cytochrome c biogenesis ccmB': 3, 'ABC transporter channel subunit': 2, 'cytochrome c-type biogenesis protein CcmB': 1, 'cytochrome c maturation B': 1, 'CcMB': 1, 'cytochrome c maturation subunit B': 1, 'ccmB': 1})
+2020-03-20 13:49:05,686 -INFO- get exon number `1` from Counter({1: 147})
+2020-03-20 13:49:05,686 -INFO- get trans_splicing `False` from Counter({False: 147})
+2020-03-20 13:49:06,360 -INFO- get gene name `nad4L` from Counter({'nad4L': 142, 'nad4l': 2, 'ND4L': 2, 'ndhE': 1, 'Zygodon_viridissimus-gene62': 1, 'NAD4L': 1})
+2020-03-20 13:49:06,361 -INFO- get product `NADH dehydrogenase subunit 4L` from Counter({'NADH dehydrogenase subunit 4L': 143, 'Nad4L': 3, 'NADH dehydrogense subunit 4L': 1, 'NADH dehydrogenase subunit 4l': 1, 'NADH dehydrogense subunit 4': 1})
+2020-03-20 13:49:06,363 -INFO- get exon number `1` from Counter({1: 103, 2: 33, 3: 13})
+2020-03-20 13:49:06,363 -INFO- get trans_splicing `False` from Counter({False: 149})
+2020-03-20 13:49:07,405 -INFO- get gene name `rps12` from Counter({'rps12': 144, 'orf127': 1})
+2020-03-20 13:49:07,406 -INFO- get product `ribosomal protein S12` from Counter({'ribosomal protein S12': 138, 'ribosomal protein small subunit 12': 3, 'ribosomal protein subunit S12': 2, 'ribosomal protein S4': 1, 'hypothetical protein': 1})
+2020-03-20 13:49:07,408 -INFO- get exon number `1` from Counter({1: 145})
+2020-03-20 13:49:07,408 -INFO- get trans_splicing `False` from Counter({False: 145})
+2020-03-20 13:49:09,153 -INFO- get gene name `rps3` from Counter({'rps3': 138, 'rps3-1': 1, 'ORF105': 1, 'ORF135_3': 1, 'ccmFn2': 1, 'orf273': 1, 'ccmFn': 1})
+2020-03-20 13:49:09,154 -INFO- get product `ribosomal protein S3` from Counter({'ribosomal protein S3': 134, 'ribosomal protein small subunit 3': 3, 'hypothetical protein': 3, 'cytochrome c biogenesis FN': 2, 'ribosomal protein subunit S3': 2})
+2020-03-20 13:49:09,156 -INFO- get exon number `2` from Counter({2: 73, 1: 64, 3: 5, 4: 1, 14: 1})
+2020-03-20 13:49:09,156 -INFO- get trans_splicing `False` from Counter({False: 142, True: 2})
+2020-03-20 13:49:09,857 -INFO- get gene name `rps4` from Counter({'rps4': 138, 'rps4-1': 1})
+2020-03-20 13:49:09,858 -INFO- get product `ribosomal protein S4` from Counter({'ribosomal protein S4': 129, 'ribosomal protein subunit S4': 3, 'ribosomal protein small subunit 4': 3, 'Ribosomal protein S4': 2, 'ribosomal protein 4': 1, 'truncated ribosomal protein S4': 1})
+2020-03-20 13:49:09,860 -INFO- get exon number `1` from Counter({1: 139})
+2020-03-20 13:49:09,860 -INFO- get trans_splicing `False` from Counter({False: 139})
+2020-03-20 13:49:11,977 -INFO- get gene name `rpl5` from Counter({'rpl5': 103, 'rpL5': 23, 'rps15': 1, 'Bupleurum_falcatum-gene71': 1, 'rpl15': 1, 'rp15': 1, 'orf193': 1})
+2020-03-20 13:49:11,978 -INFO- get product `ribosomal protein L5` from Counter({'ribosomal protein L5': 119, 'ribosomal protein subunit L5': 6, 'ribosomal protein large subunit 5': 3, 'ribosomal protein L7': 1, 'orf229': 1, 'hypothetical protein': 1})
+2020-03-20 13:49:11,980 -INFO- get exon number `1` from Counter({1: 130, 3: 1})
+2020-03-20 13:49:11,980 -INFO- get trans_splicing `False` from Counter({False: 131})
+2020-03-20 13:49:13,435 -INFO- get gene name `matR` from Counter({'matR': 97, 'rtl': 12, 'mat-r': 5, 'mat-R': 2, 'ORF751': 1, 'mat-rrnSi1065': 1, 'ORF109_5': 1, 'ORF736': 1, 'mat-atp1i1050': 1, 'ORF122': 1, 'mat-cox1i44': 1, 'mat-atp1i989': 1, 'mat-cox1i178': 1, 'mat-r-1': 1, 'ORF339': 1, 'mat-cobi824': 1, 'ORF908': 1, 'mat-cox2i250': 1, 'ORF272': 1, 'mat-Mpo1': 1, 'ORF498': 1, 'Dumortiera_hirsuta-gene194': 1, 'ORF296': 1, 'ltrA': 1, 'ORF594': 1, 'mat-atp9i87': 1})
+2020-03-20 13:49:13,436 -INFO- get product `maturase` from Counter({'maturase': 59, 'maturase-related protein': 19, 'hypothetical protein': 19, 'reverse transcriptase': 13, 'maturase R': 12, 'maturase K': 7, 'MatR': 4, 'matR': 3, 'ltrA': 1, 'maturase protein': 1})
+2020-03-20 13:49:13,438 -INFO- get exon number `1` from Counter({1: 136, 8: 1, 2: 1})
+2020-03-20 13:49:13,438 -INFO- get trans_splicing `False` from Counter({False: 138})
+2020-03-20 13:49:14,821 -INFO- get gene name `nad7` from Counter({'nad7': 128, 'ND7': 2, 'Bupleurum_falcatum-gene48': 1, 'Zygodon_viridissimus-gene191': 1, 'amoMp16': 1, 'orf155b': 1, 'NAD7': 1})
+2020-03-20 13:49:14,822 -INFO- get product `NADH dehydrogenase subunit 7` from Counter({'NADH dehydrogenase subunit 7': 126, 'Nad7': 3, 'NADH dehydrogense subunit 7': 2, 'hypothetical protein': 2, 'NADH dehydrogenase 7': 1, 'orf109': 1})
+2020-03-20 13:49:14,824 -INFO- get exon number `5` from Counter({5: 74, 3: 30, 4: 21, 1: 4, 2: 4, 6: 1, 12: 1})
+2020-03-20 13:49:14,824 -INFO- get trans_splicing `False` from Counter({False: 131, True: 4})
+2020-03-20 13:49:18,282 -INFO- get gene name `rpl2` from Counter({'rpl2': 80, 'rpL2': 23, 'orf138a': 2, 'orf247-ct': 1, 'orf277': 1, 'orf265b': 1, 'orf172': 1, 'amoMp7': 1, 'ORF114_1': 1, 'amoMp28': 1, 'orf309': 1, 'ORF158_1': 1, 'orf293': 1})
+2020-03-20 13:49:18,283 -INFO- get product `ribosomal protein L2` from Counter({'ribosomal protein L2': 102, 'hypothetical protein': 11, 'ribosomal protein large subunit 2': 1, 'orf138a': 1})
+2020-03-20 13:49:18,285 -INFO- get exon number `2` from Counter({2: 60, 1: 55})
+2020-03-20 13:49:18,285 -INFO- get trans_splicing `False` from Counter({False: 113, True: 2})
+2020-03-20 13:49:19,339 -INFO- get gene name `rpl16` from Counter({'rpl16': 96, 'rpL16': 23, 'rpl16-1': 1})
+2020-03-20 13:49:19,340 -INFO- get product `ribosomal protein L16` from Counter({'ribosomal protein L16': 113, 'ribosomal protein large subunit 16': 3, 'ribosomal protein subunit L16': 3, 'ribosomal protein L16-like': 1})
+2020-03-20 13:49:19,341 -INFO- get exon number `1` from Counter({1: 117, 2: 3})
+2020-03-20 13:49:19,342 -INFO- get trans_splicing `False` from Counter({False: 119, True: 1})
+2020-03-20 13:49:20,809 -INFO- get gene name `rps1` from Counter({'rps1': 112, 'orf152a': 1, 'orf206': 1, 'rps1-1': 1})
+2020-03-20 13:49:20,809 -INFO- get product `ribosomal protein S1` from Counter({'ribosomal protein S1': 111, 'ribosomal protein small subunit 1': 2, 'hypothetical protein': 2})
+2020-03-20 13:49:20,811 -INFO- get exon number `1` from Counter({1: 114, 2: 1})
+2020-03-20 13:49:20,811 -INFO- get trans_splicing `False` from Counter({False: 115})
+2020-03-20 13:49:21,521 -INFO- get gene name `rps13` from Counter({'rps13': 117})
+2020-03-20 13:49:21,522 -INFO- get product `ribosomal protein S13` from Counter({'ribosomal protein S13': 111, 'ribosomal protein small subunit 13': 2, 'ribosomal protein subunit S13': 2, 'ribosomal protein L13': 2})
+2020-03-20 13:49:21,524 -INFO- get exon number `1` from Counter({1: 116, 2: 1})
+2020-03-20 13:49:21,524 -INFO- get trans_splicing `False` from Counter({False: 117})
+2020-03-20 13:49:23,219 -INFO- get gene name `rps7` from Counter({'rps7': 107, 'rps7-ct': 1, 'rps7-1': 1, 'Pleurozia_purpurea-gene182': 1})
+2020-03-20 13:49:23,220 -INFO- get product `ribosomal protein S7` from Counter({'ribosomal protein S7': 103, 'ribosomal protein small subunit 7': 3, 'hypothetical protein': 2, 'ribosomal protein subunit S7': 2})
+2020-03-20 13:49:23,222 -INFO- get exon number `1` from Counter({1: 110})
+2020-03-20 13:49:23,222 -INFO- get trans_splicing `False` from Counter({False: 110})
+2020-03-20 13:49:24,647 -INFO- get gene name `rps14` from Counter({'rps14': 102, 'orf120': 1, 'rps14a': 1, 'rps14b': 1})
+2020-03-20 13:49:24,648 -INFO- get product `ribosomal protein S14` from Counter({'ribosomal protein S14': 97, 'ribosomal protein subunit S14': 5, 'ribosomal protein S19': 1, 'ribosomal protein small subunit 14': 1, 'hypothetical protein': 1})
+2020-03-20 13:49:24,649 -INFO- get exon number `1` from Counter({1: 87, 2: 18})
+2020-03-20 13:49:24,649 -INFO- get trans_splicing `False` from Counter({False: 105})
+2020-03-20 13:49:24,652 -INFO- get gene name `sdh4` from Counter({'sdh4': 107, 'orf116': 1})
+2020-03-20 13:49:24,653 -INFO- get product `succinate dehydrogenase subunit 4` from Counter({'succinate dehydrogenase subunit 4': 98, 'succinate dehydrogenase cytochrome subunit 4': 3, 'Sdh4': 3, 'sdh4': 2, 'succinate:cytochrome c oxidoreductase subunit 4': 1, 'hypothetical protein': 1})
+2020-03-20 13:49:24,655 -INFO- get exon number `1` from Counter({1: 108})
+2020-03-20 13:49:24,655 -INFO- get trans_splicing `False` from Counter({False: 108})
+2020-03-20 13:49:25,369 -INFO- get gene name `rpl10` from Counter({'rpl10': 96, 'orf159': 2, 'rpL10': 2, 'ORF187': 2, 'ORF-bryo1': 1, 'Pleurozia_purpurea-gene419': 1, 'Phaeoceros_laevis-gene33': 1})
+2020-03-20 13:49:25,370 -INFO- get product `ribosomal protein L10` from Counter({'ribosomal protein L10': 91, 'hypothetical protein': 8, 'ribosomal protein subunit L10': 4, 'orf159': 1, 'ribosomal protein subunit 10': 1})
+2020-03-20 13:49:25,372 -INFO- get exon number `1` from Counter({1: 104, 3: 1})
+2020-03-20 13:49:25,372 -INFO- get trans_splicing `False` from Counter({False: 105})
+2020-03-20 13:49:28,101 -INFO- get gene name `rps19` from Counter({'rps19': 86, 'rps19-1': 2, 'rps19a': 1, 'rps16': 1})
+2020-03-20 13:49:28,102 -INFO- get product `ribosomal protein S19` from Counter({'ribosomal protein S19': 87, 'ribsomal protein S19': 1, 'ribosomal protein S16': 1, 'hypothetical protein': 1})
+2020-03-20 13:49:28,103 -INFO- get exon number `1` from Counter({1: 90})
+2020-03-20 13:49:28,104 -INFO- get trans_splicing `False` from Counter({False: 90})
+2020-03-20 13:49:29,566 -INFO- get gene name `sdh3` from Counter({'sdh3': 84, 'Zygodon_viridissimus-gene73': 1, 'sdh3-1': 1, 'sdh3a': 1, 'ORF112': 1})
+2020-03-20 13:49:29,567 -INFO- get product `succinate dehydrogenase subunit 3` from Counter({'succinate dehydrogenase subunit 3': 76, 'succinate dehydrogenase cytochrome subunit 3': 4, 'Sdh3': 2, 'sdh3': 2, 'Succinate dehydrogenase 3': 1, 'succinate:cytochrome c oxidoreductase subunit 3': 1, 'succinate dehydrogenase subunit 4': 1, 'hypothetical protein': 1})
+2020-03-20 13:49:29,568 -INFO- get exon number `1` from Counter({1: 55, 2: 33})
+2020-03-20 13:49:29,568 -INFO- get trans_splicing `False` from Counter({False: 88})
+2020-03-20 13:49:30,280 -INFO- get gene name `rps10` from Counter({'rps10': 72})
+2020-03-20 13:49:30,281 -INFO- get product `ribosomal protein S10` from Counter({'ribosomal protein S10': 67, 'ribosomal protein subunit S10': 3, 'ribosomal protein S1': 1, 'ribosomal protein S3': 1})
+2020-03-20 13:49:30,282 -INFO- get exon number `2` from Counter({2: 50, 1: 22})
+2020-03-20 13:49:30,282 -INFO- get trans_splicing `False` from Counter({False: 72})
+2020-03-20 13:49:30,641 -INFO- get gene name `rps2` from Counter({'rps2': 64, 'rps2B': 2, 'rps2A': 2})
+2020-03-20 13:49:30,642 -INFO- get product `ribosomal protein S2` from Counter({'ribosomal protein S2': 66, 'ribosomal protein small subunit 2': 2})
+2020-03-20 13:49:30,643 -INFO- get exon number `1` from Counter({1: 68})
+2020-03-20 13:49:30,643 -INFO- get trans_splicing `False` from Counter({False: 68})
+2020-03-20 13:49:30,646 -INFO- get gene name `rps11` from Counter({'rps11': 62})
+2020-03-20 13:49:30,646 -INFO- get product `ribosomal protein S11` from Counter({'ribosomal protein S11': 62})
+2020-03-20 13:49:30,647 -INFO- get exon number `1` from Counter({1: 61, 3: 1})
+2020-03-20 13:49:30,647 -INFO- get trans_splicing `False` from Counter({False: 62})
+2020-03-20 13:49:30,649 -INFO- get gene name `rpl6` from Counter({'rpl6': 27, 'rpL6': 22})
+2020-03-20 13:49:30,649 -INFO- get product `ribosomal protein L6` from Counter({'ribosomal protein L6': 49})
+2020-03-20 13:49:30,650 -INFO- get exon number `1` from Counter({1: 49})
+2020-03-20 13:49:30,650 -INFO- get trans_splicing `False` from Counter({False: 49})
+2020-03-20 13:49:31,650 -INFO- get gene name `RNA_pol` from Counter({'RNA_pol': 3, 'rpo': 2, 'orf107-d': 1, 'orf348': 1, 'orf224a': 1, 'Utricularia_reniformis-gene1878': 1, 'orf217a': 1, 'Utricularia_reniformis-gene2270': 1, 'orf329a': 1, 'orf417': 1, 'orf193-a1': 1, 'orf104-a': 1, 'orf352': 1, 'Utricularia_reniformis-gene456': 1, 'orf187a': 1, 'Utricularia_reniformis-gene2268': 1, 'orf2': 1, 'orf1159': 1, 'Utricularia_reniformis-gene2266': 1, 'Utricularia_reniformis-gene2264': 1, 'orf670': 1, 'orf108d': 1})
+2020-03-20 13:49:32,753 -INFO- get gene name `dpo` from Counter({'dpo': 3, 'orf102i': 1, 'Utricularia_reniformis-gene1757': 1, 'orf135a': 1, 'orf206': 1, 'Utricularia_reniformis-gene2679': 1, 'orf290': 1, 'orf734': 1, 'Utricularia_reniformis-gene2685': 1, 'Utricularia_reniformis-gene2682': 1, 'orf911': 1, 'orf148': 1, 'Utricularia_reniformis-gene1872': 1, 'orf172': 1, 'Utricularia_reniformis-gene1753': 1, 'orf107d': 1, 'orf202': 1, 'ORF498': 1, 'orf774': 1, 'rpo': 1, 'orf192': 1})
+2020-03-20 13:49:33,829 -INFO- get gene name `orf101b` from Counter({'orf101b': 3, 'orf182a': 2, 'orf176a': 1, 'orf185': 1, 'orf138a': 1, 'ORF127': 1, 'orf122b': 1, 'Utricularia_reniformis-gene3573': 1, 'amoMp12': 1, 'orf58': 1, 'orf145': 1, 'orf140-b': 1, 'ORF215': 1, 'Utricularia_reniformis-gene3575': 1, 'orf192': 1})
+2020-03-20 13:49:33,830 -INFO- get gene name `rps8` from Counter({'rps8': 15})
+2020-03-20 13:49:34,862 -INFO- get gene name `orf227` from Counter({'orf227': 1, 'orf250': 1, 'orf281': 1, 'orf110': 1, 'ORF234': 1, 'orf182b': 1, 'orf264': 1, 'orf115c': 1, 'orf214': 1, 'orf191': 1})
+2020-03-20 13:49:36,192 -INFO- get gene name `orf240` from Counter({'orf240': 1, 'orf99c': 1, 'orf142': 1, 'orf133': 1, 'orf152': 1, 'orf119': 1, 'orf481': 1, 'orf208': 1, 'orf189': 1, 'ORF217': 1, 'orf474': 1, 'orf543': 1})
+2020-03-20 13:49:36,949 -INFO- get gene name `orf268` from Counter({'orf268': 1, 'orf256': 1, 'ORF279': 1, 'ORF332': 1, 'orf270': 1, 'orf271': 1, 'orf288': 1, 'orf873': 1, 'rps4': 1, 'orf317': 1, 'orf99a': 1, 'orf179': 1})
+2020-03-20 13:49:37,629 -INFO- get gene name `orf143b` from Counter({'orf143b': 1, 'amoMp9': 1, 'orf393': 1, 'Utricularia_reniformis-gene857': 1, 'Utricularia_reniformis-gene854': 1, 'Utricularia_reniformis-gene863': 1, 'Utricularia_reniformis-gene860': 1, 'orf204': 1, 'Utricularia_reniformis-gene849': 1, 'orf881': 1})
+2020-03-20 13:49:38,667 -INFO- get gene name `orf138-a` from Counter({'orf138-a': 1, 'orf221': 1, 'orf116b': 1, 'orf119': 1, 'orf117-d': 1, 'orf114b': 1, 'orf152c': 1, 'orf490': 1, 'orf119a': 1, 'orf178': 1})
+2020-03-20 13:49:39,007 -INFO- get gene name `psaA` from Counter({'psaA': 2, 'orf224': 1, 'orf113b': 1, 'orf151': 1, 'orf581': 1, 'orf170': 1, 'amoMp1': 1, 'psaB': 1})
+2020-03-20 13:49:40,350 -INFO- get gene name `ORF533` from Counter({'ORF533': 4, 'ORF807': 3, 'ORF622': 2})
+2020-03-20 13:49:41,100 -INFO- get gene name `Utricularia_reniformis-gene2252` from Counter({'Utricularia_reniformis-gene2252': 1, 'orf281': 1, 'orf279': 1, 'orf126': 1, 'ORF290': 1, 'Utricularia_reniformis-gene4270': 1, 'Utricularia_reniformis-gene1049': 1, 'orf195': 1, 'ORF278': 1})
+2020-03-20 13:49:41,101 -INFO- get gene name `orf115a` from Counter({'orf115a': 3, 'orf185': 2, 'orf186': 1, 'Bupleurum_falcatum-gene54': 1, 'orf125a': 1})
+2020-03-20 13:49:41,465 -INFO- get gene name `ORF154_1` from Counter({'ORF154_1': 1, 'ORF100_1': 1, 'ORF127': 1, 'ORF137': 1, 'ORF312': 1, 'ORF316': 1, 'ORF158_2': 1, 'orf180': 1})
+2020-03-20 13:49:41,799 -INFO- get gene name `orf100b` from Counter({'orf100b': 1, 'orf227-ct': 1, 'ycf2': 1, 'amoMp13': 1, 'amoMp10': 1, 'orf585': 1, 'orf115c': 1})
+2020-03-20 13:49:42,136 -INFO- get gene name `orf100` from Counter({'orf100': 3, 'orf99-a1': 1, 'ORF109_4': 1, 'orf101b': 1})
+2020-03-20 13:49:42,138 -INFO- get gene name `orf101` from Counter({'orf101': 3, 'orf115b': 2, 'orf59': 1, 'Bupleurum_falcatum-gene9': 1})
+2020-03-20 13:49:42,139 -INFO- get gene name `orf3` from Counter({'orf3': 2, 'Utricularia_reniformis-gene1605': 1, 'Bupleurum_falcatum-gene17': 1, 'orf103e': 1, 'orf104': 1, 'orf105-c': 1})
+2020-03-20 13:49:43,170 -INFO- get gene name `nad6-2` from Counter({'nad6-2': 1, 'atp6': 1, 'orf725': 1, 'nad2': 1, 'nad6': 1, 'nad4': 1})
+2020-03-20 13:49:43,171 -INFO- get gene name `rbcL` from Counter({'rbcL': 3, 'orf225': 1, 'orf484': 1, 'rbcl': 1})
+2020-03-20 13:49:43,172 -INFO- get gene name `orf124a` from Counter({'orf124a': 1, 'orf152a': 1, 'Utricularia_reniformis-gene4572': 1, 'amoMp14': 1, 'orf146': 1, 'orf202': 1})
+2020-03-20 13:49:43,847 -INFO- get gene name `orf291` from Counter({'orf291': 1, 'Utricularia_reniformis-gene2643': 1, 'orf134': 1, 'orf127c': 1, 'ORF56': 1})
+2020-03-20 13:49:44,180 -INFO- get gene name `Utricularia_reniformis-gene2890` from Counter({'Utricularia_reniformis-gene2890': 1, 'Utricularia_reniformis-gene2478': 1, 'amoMp15': 1, 'orf105b': 1, 'orf148': 1})
+2020-03-20 13:49:44,182 -INFO- get gene name `orf117a` from Counter({'orf117a': 2, 'Utricularia_reniformis-gene637': 1, 'amoMp25': 1, 'orf110-c': 1})
+2020-03-20 13:49:44,558 -INFO- get gene name `sdh3` from Counter({'sdh3': 2, 'orf241': 1, 'orf142': 1})
+2020-03-20 13:49:44,560 -INFO- get gene name `orf116d` from Counter({'orf116d': 1, 'orf102': 1, 'orf100': 1, 'orf100a': 1, 'Bupleurum_falcatum-gene168': 1})
+2020-03-20 13:49:44,930 -INFO- get gene name `orf135b` from Counter({'orf135b': 1, 'orf333': 1, 'orf135a': 1, 'orf135': 1, 'Utricularia_reniformis-gene688': 1})
+2020-03-20 13:49:45,259 -INFO- get gene name `orf114` from Counter({'orf114': 1, 'Utricularia_reniformis-gene1943': 1, 'orf125c': 1, 'Utricularia_reniformis-gene3110': 1, 'Utricularia_reniformis-gene951': 1})
+2020-03-20 13:49:45,596 -INFO- get gene name `petG` from Counter({'petG': 5})
+2020-03-20 13:49:45,938 -INFO- get gene name `psbA` from Counter({'psbA': 2, 'orf353': 1, 'amoMp3': 1})
+2020-03-20 13:49:45,940 -INFO- get gene name `Utricularia_reniformis-gene4080` from Counter({'Utricularia_reniformis-gene4080': 1, 'rpoB': 1, 'rpob': 1, 'orf165': 1})
+2020-03-20 13:49:45,941 -INFO- get gene name `orf148b` from Counter({'orf148b': 2, 'Bupleurum_falcatum-gene33': 1, 'orf169c': 1})
+2020-03-20 13:49:45,942 -INFO- get gene name `orf102k` from Counter({'orf102k': 1, 'Bupleurum_falcatum-gene177': 1, 'amoMp18': 1, 'Utricularia_reniformis-gene1618': 1})
+2020-03-20 13:49:45,943 -INFO- get gene name `orf121` from Counter({'orf121': 2, 'amoMp21': 1, 'orf99-c': 1})
+2020-03-20 13:49:45,944 -INFO- get gene name `orf111-b` from Counter({'orf111-b': 2, 'orf135': 1, 'amoMp22': 1})
+2020-03-20 13:49:46,340 -INFO- get gene name `orf110b` from Counter({'orf110b': 2, 'Utricularia_reniformis-gene629': 1, 'Utricularia_reniformis-gene627': 1})
+2020-03-20 13:49:46,342 -INFO- get gene name `ORF124` from Counter({'ORF124': 3, 'Utricularia_reniformis-gene1594': 1})
+2020-03-20 13:49:46,343 -INFO- get gene name `ORF101` from Counter({'ORF101': 3, 'ORF127_2': 1})
+2020-03-20 13:49:46,344 -INFO- get gene name `ORF134` from Counter({'ORF134': 3, 'ORF129': 1})
+2020-03-20 13:49:46,345 -INFO- get gene name `orf141` from Counter({'orf141': 2, 'orf135c': 1, 'orf764': 1})
+2020-03-20 13:49:46,681 -INFO- get gene name `orf396` from Counter({'orf396': 2, 'orf261': 1})
+2020-03-20 13:49:46,683 -INFO- get gene name `petL` from Counter({'petL': 4})
+2020-03-20 13:49:47,025 -INFO- get gene name `orf173` from Counter({'orf173': 1, 'orf142': 1, 'orf158-a1': 1})
+2020-03-20 13:49:47,026 -INFO- get gene name `orf256` from Counter({'orf256': 2, 'orf284': 1})
+2020-03-20 13:49:47,027 -INFO- get gene name `rpl23` from Counter({'rpl23': 3})
+2020-03-20 13:49:47,028 -INFO- get gene name `rpl14` from Counter({'rpl14': 3})
+2020-03-20 13:49:47,029 -INFO- get gene name `orf109d` from Counter({'orf109d': 1, 'petA': 1, 'cof': 1})
+2020-03-20 13:49:47,030 -INFO- get gene name `Utricularia_reniformis-gene2748` from Counter({'Utricularia_reniformis-gene2748': 1, 'amoMp5': 1, 'orf675': 1})
+2020-03-20 13:49:47,031 -INFO- get gene name `atpB` from Counter({'atpB': 2, 'orf498': 1})
+2020-03-20 13:49:47,032 -INFO- get gene name `orf105a` from Counter({'orf105a': 1, 'Utricularia_reniformis-gene2696': 1, 'amoMp19': 1})
+2020-03-20 13:49:47,033 -INFO- get gene name `amoMp24` from Counter({'amoMp24': 1, 'orf102': 1, 'Bupleurum_falcatum-gene44': 1})
+2020-03-20 13:49:47,033 -INFO- get gene name `orf42` from Counter({'orf42': 1, 'amoMp27': 1, 'orf103c': 1})
+2020-03-20 13:49:47,397 -INFO- get gene name `orf143` from Counter({'orf143': 1, 'orf100a': 1})
+2020-03-20 13:49:47,398 -INFO- get gene name `ORF230` from Counter({'ORF230': 1, 'orf261': 1, 'orf189': 1})
+2020-03-20 13:49:47,399 -INFO- get gene name `orf122c` from Counter({'orf122c': 2, 'orf102e': 1})
+2020-03-20 13:49:47,400 -INFO- get gene name `orf100a` from Counter({'orf100a': 1, 'orf115c': 1, 'orf115b': 1})
+2020-03-20 13:49:47,401 -INFO- get gene name `orf106` from Counter({'orf106': 1, 'Utricularia_reniformis-gene3331': 1, 'orf106c': 1})
+2020-03-20 13:49:47,402 -INFO- get gene name `orf120` from Counter({'orf120': 1, 'Utricularia_reniformis-gene1620': 1, 'rps14': 1})
+2020-03-20 13:49:47,403 -INFO- get gene name `orf267` from Counter({'orf267': 1, 'orf257': 1, 'ycf1': 1})
+2020-03-20 13:49:47,404 -INFO- get gene name `orf161` from Counter({'orf161': 3})
+2020-03-20 13:49:47,740 -INFO- get gene name `Utricularia_reniformis-gene1572` from Counter({'Utricularia_reniformis-gene1572': 1, 'orf138b': 1})
+2020-03-20 13:49:48,075 -INFO- get gene name `ycf68` from Counter({'ycf68': 1, 'orf134-a-ct': 1})
+2020-03-20 13:49:48,077 -INFO- get gene name `Utricularia_reniformis-gene2915` from Counter({'Utricularia_reniformis-gene2915': 1, 'orf104': 1, 'orf104a': 1})
+2020-03-20 13:49:48,415 -INFO- get gene name `Utricularia_reniformis-gene1946` from Counter({'Utricularia_reniformis-gene1946': 1, 'ORF118': 1, 'Utricularia_reniformis-gene3107': 1})
+2020-03-20 13:49:48,416 -INFO- get gene name `orf473` from Counter({'orf473': 1, 'amoMp2': 1})
+2020-03-20 13:49:48,417 -INFO- get gene name `amoMp6` from Counter({'amoMp6': 1, 'orf337': 1})
+2020-03-20 13:49:48,418 -INFO- get gene name `orf117-c` from Counter({'orf117-c': 1, 'amoMp20': 1})
+2020-03-20 13:49:48,419 -INFO- get gene name `orf108e` from Counter({'orf108e': 1, 'amoMp23': 1})
+2020-03-20 13:49:48,420 -INFO- get gene name `ORF108` from Counter({'ORF108': 2})
+2020-03-20 13:49:48,421 -INFO- get gene name `ORF124_1` from Counter({'ORF124_1': 1, 'ORF247': 1})
+2020-03-20 13:49:48,422 -INFO- get gene name `ORF111_1` from Counter({'ORF111_1': 1, 'ORF134': 1})
+2020-03-20 13:49:48,423 -INFO- get gene name `ORF169` from Counter({'ORF169': 1, 'ORF131_2': 1})
+2020-03-20 13:49:48,423 -INFO- get gene name `Utricularia_reniformis-gene1299` from Counter({'Utricularia_reniformis-gene1299': 1, 'orf113e': 1})
+2020-03-20 13:49:48,424 -INFO- get gene name `orf145d` from Counter({'orf145d': 1, 'orf109a': 1})
+2020-03-20 13:49:48,425 -INFO- get gene name `orf102c` from Counter({'orf102c': 1, 'orf302': 1})
+2020-03-20 13:49:48,426 -INFO- get gene name `orf116a` from Counter({'orf116a': 1, 'orf146': 1})
+2020-03-20 13:49:48,427 -INFO- get gene name `orf124` from Counter({'orf124': 1, 'orf128a': 1})
+2020-03-20 13:49:48,427 -INFO- get gene name `orf125b` from Counter({'orf125b': 1, 'Utricularia_reniformis-gene2043': 1})
+2020-03-20 13:49:48,428 -INFO- get gene name `orf60` from Counter({'orf60': 1, 'orf122a': 1})
+2020-03-20 13:49:48,429 -INFO- get gene name `orf116a` from Counter({'orf116a': 1, 'ORF209': 1})
+2020-03-20 13:49:48,430 -INFO- get gene name `orf131` from Counter({'orf131': 2})
+2020-03-20 13:49:48,431 -INFO- get gene name `orf109a` from Counter({'orf109a': 1, 'orf109': 1})
+2020-03-20 13:49:48,431 -INFO- get gene name `orf115d` from Counter({'orf115d': 2})
+2020-03-20 13:49:48,432 -INFO- get gene name `orf108b` from Counter({'orf108b': 2})
+2020-03-20 13:49:48,433 -INFO- get gene name `orf146` from Counter({'orf146': 1, 'orf106b': 1})
+2020-03-20 13:49:48,434 -INFO- get gene name `orf117` from Counter({'orf117': 2})
+2020-03-20 13:49:48,434 -INFO- get gene name `orf114` from Counter({'orf114': 2})
+2020-03-20 13:49:48,435 -INFO- get gene name `orf173` from Counter({'orf173': 1, 'Bupleurum_falcatum-gene56': 1})
+2020-03-20 13:49:48,436 -INFO- get gene name `orf124` from Counter({'orf124': 2})
+2020-03-20 13:49:48,437 -INFO- get gene name `orf111` from Counter({'orf111': 1, 'orf113a': 1})
+2020-03-20 13:49:48,437 -INFO- get gene name `Utricularia_reniformis-gene4069` from Counter({'Utricularia_reniformis-gene4069': 1, 'orf106a': 1})
+2020-03-20 13:49:48,437 -INFO- get gene name `orf101a` from Counter({'orf101a': 2})
+2020-03-20 13:49:48,438 -INFO- get gene name `orf142` from Counter({'orf142': 1, 'orf108c': 1})
+2020-03-20 13:49:48,438 -INFO- get gene name `orf104` from Counter({'orf104': 2})
+2020-03-20 13:49:48,439 -INFO- get gene name `orf103` from Counter({'orf103': 1, 'Bupleurum_falcatum-gene2': 1})
+2020-03-20 13:49:48,439 -INFO- get gene name `orf136` from Counter({'orf136': 1, 'Bupleurum_falcatum-gene4': 1})
+2020-03-20 13:49:48,440 -INFO- get gene name `Utricularia_reniformis-gene386` from Counter({'Utricularia_reniformis-gene386': 1, 'Bupleurum_falcatum-gene101': 1})
+2020-03-20 13:49:48,440 -INFO- get gene name `Bupleurum_falcatum-gene187` from Counter({'Bupleurum_falcatum-gene187': 1, 'Utricularia_reniformis-gene1611': 1})
+2020-03-20 13:49:48,441 -INFO- get gene name `Utricularia_reniformis-gene4673` from Counter({'Utricularia_reniformis-gene4673': 1, 'orf102h': 1})
+2020-03-20 13:49:48,441 -INFO- get gene name `orf108b` from Counter({'orf108b': 1, 'orf144': 1})
+2020-03-20 13:49:48,442 -INFO- get gene name `orf123b` from Counter({'orf123b': 1, 'orf152': 1})
+2020-03-20 13:49:48,442 -INFO- get gene name `orf147` from Counter({'orf147': 1, 'atpE': 1})
+2020-03-20 13:49:48,442 -INFO- get gene name `orf101-a` from Counter({'orf101-a': 2})
+2020-03-20 13:49:48,443 -INFO- get gene name `orf146-a` from Counter({'orf146-a': 2})
+2020-03-20 13:49:48,443 -INFO- get gene name `rpl33` from Counter({'rpl33': 2})
+2020-03-20 13:49:48,444 -INFO- get gene name `psaJ` from Counter({'psaJ': 2})
+2020-03-20 13:49:48,444 -INFO- get gene name `orf106` from Counter({'orf106': 2})
+2020-03-20 13:49:48,445 -INFO- get gene name `orf49` from Counter({'orf49': 1, 'orf111': 1})
+2020-03-20 13:49:48,445 -INFO- get gene name `ORF354` from Counter({'ORF354': 1, 'Utricularia_reniformis-gene1036': 1})
+2020-03-20 13:49:48,446 -INFO- get gene name `psbM` from Counter({'psbM': 2})
+2020-03-20 13:49:48,446 -INFO- get gene name `orf123` from Counter({'orf123': 1, 'Utricularia_reniformis-gene2037': 1})
+2020-03-20 13:49:48,446 -INFO- get gene name `orf136` from Counter({'orf136': 1, 'ORF176': 1})
+2020-03-20 13:49:48,447 -INFO- get gene name `orf111a` from Counter({'orf111a': 2})
+2020-03-20 13:49:48,447 -INFO- get gene name `orf69` from Counter({'orf69': 1, 'Pleurozia_purpurea-gene85': 1})
+2020-03-20 13:49:48,448 -INFO- get gene name `ORF241` from Counter({'ORF241': 1, 'mat-cox1i1149': 1})
+2020-03-20 13:49:48,448 -INFO- get gene name `ORF259` from Counter({'ORF259': 1, 'mat-cox1i323': 1})
+2020-03-20 13:49:48,449 -INFO- get gene name `ORF103_2` from Counter({'ORF103_2': 2})
+2020-03-20 13:49:48,449 -INFO- get gene name `ORF106` from Counter({'ORF106': 1, 'Pleurozia_purpurea-gene206': 1})
+2020-03-20 13:49:48,450 -INFO- get gene name `orf192` from Counter({'orf192': 2})
+2020-03-20 13:49:48,450 -INFO- get gene name `orf304` from Counter({'orf304': 1, 'Utricularia_reniformis-gene2003': 1})
+2020-03-20 13:49:48,451 -INFO- get gene name `orf129b` from Counter({'orf129b': 1, 'Utricularia_reniformis-gene893': 1})
+2020-03-20 13:49:48,452 -INFO- get gene name `Utricularia_reniformis-gene1731` from Counter({'Utricularia_reniformis-gene1731': 1, 'orf103a': 1})
+2020-03-20 13:49:48,452 -INFO- get gene name `orf275` from Counter({'orf275': 1, 'Utricularia_reniformis-gene533': 1})
+2020-03-20 13:49:48,452 -INFO- get gene name `rpl36` from Counter({'rpl36': 2})
+2020-03-20 13:49:48,833 -INFO- get gene name `Utricularia_reniformis-gene1557` from Counter({'Utricularia_reniformis-gene1557': 1})
+2020-03-20 13:49:48,834 -INFO- get gene name `orf117-a` from Counter({'orf117-a': 1, 'Utricularia_reniformis-gene4712': 1})
+2020-03-20 13:49:48,853 -INFO- extrat 42 genes: ['nad5', 'atp1', 'nad1', 'atp6', 'nad2', 'nad4', 'atp9', 'ccmFN', 'nad9', 'atp8', 'nad6', 'atp4', 'cox2', 'cox3', 'nad3', 'cox1', 'cob', 'ccmFc', 'mttB', 'ccmC', 'ccmB', 'nad4L', 'rps12', 'rps3', 'rps4', 'rpl5', 'matR', 'nad7', 'rpl2', 'rpl16', 'rps1', 'rps13', 'rps7', 'rps14', 'sdh4', 'rpl10', 'rps19', 'sdh3', 'rps10', 'rps2', 'rps11', 'rpl6']
+2020-03-20 13:49:48,853 -INFO- aligning sequences
+2020-03-20 14:11:05,980 -INFO- building hmm profiles
+2020-03-20 14:11:30,638 -INFO- building augustus profiles
+2020-03-20 14:11:58,481 -INFO- training augustus models
+/share/home/yuanqyk/.local/lib/python2.7/site-packages/Bio/SeqIO/InsdcIO.py:687: BiopythonWarning: Increasing length of locus line to allow long name. This will result in fields that are not in usual positions.
+  BiopythonWarning,
+2020-03-20 14:12:01,075 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Embryophyta-nad5 -r)
+randomSplit.pl /dev/shm/tmp/mt-Embryophyta/trng/train-nad5.gb 53
+new_species.pl --species=mt-Embryophyta-nad5
+etraining --species=mt-Embryophyta-nad5 /dev/shm/tmp/mt-Embryophyta/trng/train-nad5.gb.train --translation_table=1
+augustus --species=mt-Embryophyta-nad5 /dev/shm/tmp/mt-Embryophyta/trng/train-nad5.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Embryophyta/trng/train-nad5.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Embryophyta-nad5 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Embryophyta/trng/train-nad5.gb.train && rm -r tmp_opt_mt-Embryophyta-nad5
+#etraining --species=mt-Embryophyta-nad5 /dev/shm/tmp/mt-Embryophyta/trng/train-nad5.gb.train
+#augustus --species=mt-Embryophyta-nad5 /dev/shm/tmp/mt-Embryophyta/trng/train-nad5.gb.test &> /dev/shm/tmp/mt-Embryophyta/trng/train-nad5.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Embryophyta/agst/mt-Embryophyta-nad5.tgz mt-Embryophyta-nad5)
+`
+2020-03-20 14:12:27,052 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Embryophyta-atp1 -r)
+randomSplit.pl /dev/shm/tmp/mt-Embryophyta/trng/train-atp1.gb 53
+new_species.pl --species=mt-Embryophyta-atp1
+etraining --species=mt-Embryophyta-atp1 /dev/shm/tmp/mt-Embryophyta/trng/train-atp1.gb.train --translation_table=1
+augustus --species=mt-Embryophyta-atp1 /dev/shm/tmp/mt-Embryophyta/trng/train-atp1.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Embryophyta/trng/train-atp1.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Embryophyta-atp1 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Embryophyta/trng/train-atp1.gb.train && rm -r tmp_opt_mt-Embryophyta-atp1
+#etraining --species=mt-Embryophyta-atp1 /dev/shm/tmp/mt-Embryophyta/trng/train-atp1.gb.train
+#augustus --species=mt-Embryophyta-atp1 /dev/shm/tmp/mt-Embryophyta/trng/train-atp1.gb.test &> /dev/shm/tmp/mt-Embryophyta/trng/train-atp1.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Embryophyta/agst/mt-Embryophyta-atp1.tgz mt-Embryophyta-atp1)
+`
+2020-03-20 14:12:41,096 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Embryophyta-nad1 -r)
+randomSplit.pl /dev/shm/tmp/mt-Embryophyta/trng/train-nad1.gb 52
+new_species.pl --species=mt-Embryophyta-nad1
+etraining --species=mt-Embryophyta-nad1 /dev/shm/tmp/mt-Embryophyta/trng/train-nad1.gb.train --translation_table=1
+augustus --species=mt-Embryophyta-nad1 /dev/shm/tmp/mt-Embryophyta/trng/train-nad1.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Embryophyta/trng/train-nad1.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Embryophyta-nad1 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Embryophyta/trng/train-nad1.gb.train && rm -r tmp_opt_mt-Embryophyta-nad1
+#etraining --species=mt-Embryophyta-nad1 /dev/shm/tmp/mt-Embryophyta/trng/train-nad1.gb.train
+#augustus --species=mt-Embryophyta-nad1 /dev/shm/tmp/mt-Embryophyta/trng/train-nad1.gb.test &> /dev/shm/tmp/mt-Embryophyta/trng/train-nad1.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Embryophyta/agst/mt-Embryophyta-nad1.tgz mt-Embryophyta-nad1)
+`
+2020-03-20 14:13:03,010 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Embryophyta-atp6 -r)
+randomSplit.pl /dev/shm/tmp/mt-Embryophyta/trng/train-atp6.gb 51
+new_species.pl --species=mt-Embryophyta-atp6
+etraining --species=mt-Embryophyta-atp6 /dev/shm/tmp/mt-Embryophyta/trng/train-atp6.gb.train --translation_table=1
+augustus --species=mt-Embryophyta-atp6 /dev/shm/tmp/mt-Embryophyta/trng/train-atp6.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Embryophyta/trng/train-atp6.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Embryophyta-atp6 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Embryophyta/trng/train-atp6.gb.train && rm -r tmp_opt_mt-Embryophyta-atp6
+#etraining --species=mt-Embryophyta-atp6 /dev/shm/tmp/mt-Embryophyta/trng/train-atp6.gb.train
+#augustus --species=mt-Embryophyta-atp6 /dev/shm/tmp/mt-Embryophyta/trng/train-atp6.gb.test &> /dev/shm/tmp/mt-Embryophyta/trng/train-atp6.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Embryophyta/agst/mt-Embryophyta-atp6.tgz mt-Embryophyta-atp6)
+`
+2020-03-20 14:13:15,604 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Embryophyta-nad2 -r)
+randomSplit.pl /dev/shm/tmp/mt-Embryophyta/trng/train-nad2.gb 53
+new_species.pl --species=mt-Embryophyta-nad2
+etraining --species=mt-Embryophyta-nad2 /dev/shm/tmp/mt-Embryophyta/trng/train-nad2.gb.train --translation_table=1
+augustus --species=mt-Embryophyta-nad2 /dev/shm/tmp/mt-Embryophyta/trng/train-nad2.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Embryophyta/trng/train-nad2.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Embryophyta-nad2 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Embryophyta/trng/train-nad2.gb.train && rm -r tmp_opt_mt-Embryophyta-nad2
+#etraining --species=mt-Embryophyta-nad2 /dev/shm/tmp/mt-Embryophyta/trng/train-nad2.gb.train
+#augustus --species=mt-Embryophyta-nad2 /dev/shm/tmp/mt-Embryophyta/trng/train-nad2.gb.test &> /dev/shm/tmp/mt-Embryophyta/trng/train-nad2.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Embryophyta/agst/mt-Embryophyta-nad2.tgz mt-Embryophyta-nad2)
+`
+2020-03-20 14:13:46,488 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Embryophyta-nad4 -r)
+randomSplit.pl /dev/shm/tmp/mt-Embryophyta/trng/train-nad4.gb 52
+new_species.pl --species=mt-Embryophyta-nad4
+etraining --species=mt-Embryophyta-nad4 /dev/shm/tmp/mt-Embryophyta/trng/train-nad4.gb.train --translation_table=1
+augustus --species=mt-Embryophyta-nad4 /dev/shm/tmp/mt-Embryophyta/trng/train-nad4.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Embryophyta/trng/train-nad4.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Embryophyta-nad4 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Embryophyta/trng/train-nad4.gb.train && rm -r tmp_opt_mt-Embryophyta-nad4
+#etraining --species=mt-Embryophyta-nad4 /dev/shm/tmp/mt-Embryophyta/trng/train-nad4.gb.train
+#augustus --species=mt-Embryophyta-nad4 /dev/shm/tmp/mt-Embryophyta/trng/train-nad4.gb.test &> /dev/shm/tmp/mt-Embryophyta/trng/train-nad4.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Embryophyta/agst/mt-Embryophyta-nad4.tgz mt-Embryophyta-nad4)
+`
+2020-03-20 14:14:09,866 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Embryophyta-atp9 -r)
+randomSplit.pl /dev/shm/tmp/mt-Embryophyta/trng/train-atp9.gb 50
+new_species.pl --species=mt-Embryophyta-atp9
+etraining --species=mt-Embryophyta-atp9 /dev/shm/tmp/mt-Embryophyta/trng/train-atp9.gb.train --translation_table=1
+augustus --species=mt-Embryophyta-atp9 /dev/shm/tmp/mt-Embryophyta/trng/train-atp9.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Embryophyta/trng/train-atp9.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Embryophyta-atp9 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Embryophyta/trng/train-atp9.gb.train && rm -r tmp_opt_mt-Embryophyta-atp9
+#etraining --species=mt-Embryophyta-atp9 /dev/shm/tmp/mt-Embryophyta/trng/train-atp9.gb.train
+#augustus --species=mt-Embryophyta-atp9 /dev/shm/tmp/mt-Embryophyta/trng/train-atp9.gb.test &> /dev/shm/tmp/mt-Embryophyta/trng/train-atp9.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Embryophyta/agst/mt-Embryophyta-atp9.tgz mt-Embryophyta-atp9)
+`
+2020-03-20 14:14:22,499 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Embryophyta-ccmFN -r)
+randomSplit.pl /dev/shm/tmp/mt-Embryophyta/trng/train-ccmFN.gb 50
+new_species.pl --species=mt-Embryophyta-ccmFN
+etraining --species=mt-Embryophyta-ccmFN /dev/shm/tmp/mt-Embryophyta/trng/train-ccmFN.gb.train --translation_table=1
+augustus --species=mt-Embryophyta-ccmFN /dev/shm/tmp/mt-Embryophyta/trng/train-ccmFN.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Embryophyta/trng/train-ccmFN.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Embryophyta-ccmFN --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Embryophyta/trng/train-ccmFN.gb.train && rm -r tmp_opt_mt-Embryophyta-ccmFN
+#etraining --species=mt-Embryophyta-ccmFN /dev/shm/tmp/mt-Embryophyta/trng/train-ccmFN.gb.train
+#augustus --species=mt-Embryophyta-ccmFN /dev/shm/tmp/mt-Embryophyta/trng/train-ccmFN.gb.test &> /dev/shm/tmp/mt-Embryophyta/trng/train-ccmFN.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Embryophyta/agst/mt-Embryophyta-ccmFN.tgz mt-Embryophyta-ccmFN)
+`
+2020-03-20 14:14:36,622 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Embryophyta-nad9 -r)
+randomSplit.pl /dev/shm/tmp/mt-Embryophyta/trng/train-nad9.gb 51
+new_species.pl --species=mt-Embryophyta-nad9
+etraining --species=mt-Embryophyta-nad9 /dev/shm/tmp/mt-Embryophyta/trng/train-nad9.gb.train --translation_table=1
+augustus --species=mt-Embryophyta-nad9 /dev/shm/tmp/mt-Embryophyta/trng/train-nad9.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Embryophyta/trng/train-nad9.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Embryophyta-nad9 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Embryophyta/trng/train-nad9.gb.train && rm -r tmp_opt_mt-Embryophyta-nad9
+#etraining --species=mt-Embryophyta-nad9 /dev/shm/tmp/mt-Embryophyta/trng/train-nad9.gb.train
+#augustus --species=mt-Embryophyta-nad9 /dev/shm/tmp/mt-Embryophyta/trng/train-nad9.gb.test &> /dev/shm/tmp/mt-Embryophyta/trng/train-nad9.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Embryophyta/agst/mt-Embryophyta-nad9.tgz mt-Embryophyta-nad9)
+`
+2020-03-20 14:14:48,693 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Embryophyta-atp8 -r)
+randomSplit.pl /dev/shm/tmp/mt-Embryophyta/trng/train-atp8.gb 51
+new_species.pl --species=mt-Embryophyta-atp8
+etraining --species=mt-Embryophyta-atp8 /dev/shm/tmp/mt-Embryophyta/trng/train-atp8.gb.train --translation_table=1
+augustus --species=mt-Embryophyta-atp8 /dev/shm/tmp/mt-Embryophyta/trng/train-atp8.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Embryophyta/trng/train-atp8.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Embryophyta-atp8 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Embryophyta/trng/train-atp8.gb.train && rm -r tmp_opt_mt-Embryophyta-atp8
+#etraining --species=mt-Embryophyta-atp8 /dev/shm/tmp/mt-Embryophyta/trng/train-atp8.gb.train
+#augustus --species=mt-Embryophyta-atp8 /dev/shm/tmp/mt-Embryophyta/trng/train-atp8.gb.test &> /dev/shm/tmp/mt-Embryophyta/trng/train-atp8.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Embryophyta/agst/mt-Embryophyta-atp8.tgz mt-Embryophyta-atp8)
+`
+2020-03-20 14:14:59,755 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Embryophyta-nad6 -r)
+randomSplit.pl /dev/shm/tmp/mt-Embryophyta/trng/train-nad6.gb 51
+new_species.pl --species=mt-Embryophyta-nad6
+etraining --species=mt-Embryophyta-nad6 /dev/shm/tmp/mt-Embryophyta/trng/train-nad6.gb.train --translation_table=1
+augustus --species=mt-Embryophyta-nad6 /dev/shm/tmp/mt-Embryophyta/trng/train-nad6.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Embryophyta/trng/train-nad6.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Embryophyta-nad6 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Embryophyta/trng/train-nad6.gb.train && rm -r tmp_opt_mt-Embryophyta-nad6
+#etraining --species=mt-Embryophyta-nad6 /dev/shm/tmp/mt-Embryophyta/trng/train-nad6.gb.train
+#augustus --species=mt-Embryophyta-nad6 /dev/shm/tmp/mt-Embryophyta/trng/train-nad6.gb.test &> /dev/shm/tmp/mt-Embryophyta/trng/train-nad6.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Embryophyta/agst/mt-Embryophyta-nad6.tgz mt-Embryophyta-nad6)
+`
+2020-03-20 14:15:10,676 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Embryophyta-atp4 -r)
+randomSplit.pl /dev/shm/tmp/mt-Embryophyta/trng/train-atp4.gb 51
+new_species.pl --species=mt-Embryophyta-atp4
+etraining --species=mt-Embryophyta-atp4 /dev/shm/tmp/mt-Embryophyta/trng/train-atp4.gb.train --translation_table=1
+augustus --species=mt-Embryophyta-atp4 /dev/shm/tmp/mt-Embryophyta/trng/train-atp4.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Embryophyta/trng/train-atp4.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Embryophyta-atp4 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Embryophyta/trng/train-atp4.gb.train && rm -r tmp_opt_mt-Embryophyta-atp4
+#etraining --species=mt-Embryophyta-atp4 /dev/shm/tmp/mt-Embryophyta/trng/train-atp4.gb.train
+#augustus --species=mt-Embryophyta-atp4 /dev/shm/tmp/mt-Embryophyta/trng/train-atp4.gb.test &> /dev/shm/tmp/mt-Embryophyta/trng/train-atp4.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Embryophyta/agst/mt-Embryophyta-atp4.tgz mt-Embryophyta-atp4)
+`
+2020-03-20 14:15:21,509 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Embryophyta-cox2 -r)
+randomSplit.pl /dev/shm/tmp/mt-Embryophyta/trng/train-cox2.gb 51
+new_species.pl --species=mt-Embryophyta-cox2
+etraining --species=mt-Embryophyta-cox2 /dev/shm/tmp/mt-Embryophyta/trng/train-cox2.gb.train --translation_table=1
+augustus --species=mt-Embryophyta-cox2 /dev/shm/tmp/mt-Embryophyta/trng/train-cox2.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Embryophyta/trng/train-cox2.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Embryophyta-cox2 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Embryophyta/trng/train-cox2.gb.train && rm -r tmp_opt_mt-Embryophyta-cox2
+#etraining --species=mt-Embryophyta-cox2 /dev/shm/tmp/mt-Embryophyta/trng/train-cox2.gb.train
+#augustus --species=mt-Embryophyta-cox2 /dev/shm/tmp/mt-Embryophyta/trng/train-cox2.gb.test &> /dev/shm/tmp/mt-Embryophyta/trng/train-cox2.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Embryophyta/agst/mt-Embryophyta-cox2.tgz mt-Embryophyta-cox2)
+`
+2020-03-20 14:15:37,936 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Embryophyta-cox3 -r)
+randomSplit.pl /dev/shm/tmp/mt-Embryophyta/trng/train-cox3.gb 51
+new_species.pl --species=mt-Embryophyta-cox3
+etraining --species=mt-Embryophyta-cox3 /dev/shm/tmp/mt-Embryophyta/trng/train-cox3.gb.train --translation_table=1
+augustus --species=mt-Embryophyta-cox3 /dev/shm/tmp/mt-Embryophyta/trng/train-cox3.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Embryophyta/trng/train-cox3.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Embryophyta-cox3 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Embryophyta/trng/train-cox3.gb.train && rm -r tmp_opt_mt-Embryophyta-cox3
+#etraining --species=mt-Embryophyta-cox3 /dev/shm/tmp/mt-Embryophyta/trng/train-cox3.gb.train
+#augustus --species=mt-Embryophyta-cox3 /dev/shm/tmp/mt-Embryophyta/trng/train-cox3.gb.test &> /dev/shm/tmp/mt-Embryophyta/trng/train-cox3.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Embryophyta/agst/mt-Embryophyta-cox3.tgz mt-Embryophyta-cox3)
+`
+2020-03-20 14:15:50,690 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Embryophyta-nad3 -r)
+randomSplit.pl /dev/shm/tmp/mt-Embryophyta/trng/train-nad3.gb 50
+new_species.pl --species=mt-Embryophyta-nad3
+etraining --species=mt-Embryophyta-nad3 /dev/shm/tmp/mt-Embryophyta/trng/train-nad3.gb.train --translation_table=1
+augustus --species=mt-Embryophyta-nad3 /dev/shm/tmp/mt-Embryophyta/trng/train-nad3.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Embryophyta/trng/train-nad3.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Embryophyta-nad3 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Embryophyta/trng/train-nad3.gb.train && rm -r tmp_opt_mt-Embryophyta-nad3
+#etraining --species=mt-Embryophyta-nad3 /dev/shm/tmp/mt-Embryophyta/trng/train-nad3.gb.train
+#augustus --species=mt-Embryophyta-nad3 /dev/shm/tmp/mt-Embryophyta/trng/train-nad3.gb.test &> /dev/shm/tmp/mt-Embryophyta/trng/train-nad3.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Embryophyta/agst/mt-Embryophyta-nad3.tgz mt-Embryophyta-nad3)
+`
+2020-03-20 14:16:03,162 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Embryophyta-cox1 -r)
+randomSplit.pl /dev/shm/tmp/mt-Embryophyta/trng/train-cox1.gb 49
+new_species.pl --species=mt-Embryophyta-cox1
+etraining --species=mt-Embryophyta-cox1 /dev/shm/tmp/mt-Embryophyta/trng/train-cox1.gb.train --translation_table=1
+augustus --species=mt-Embryophyta-cox1 /dev/shm/tmp/mt-Embryophyta/trng/train-cox1.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Embryophyta/trng/train-cox1.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Embryophyta-cox1 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Embryophyta/trng/train-cox1.gb.train && rm -r tmp_opt_mt-Embryophyta-cox1
+#etraining --species=mt-Embryophyta-cox1 /dev/shm/tmp/mt-Embryophyta/trng/train-cox1.gb.train
+#augustus --species=mt-Embryophyta-cox1 /dev/shm/tmp/mt-Embryophyta/trng/train-cox1.gb.test &> /dev/shm/tmp/mt-Embryophyta/trng/train-cox1.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Embryophyta/agst/mt-Embryophyta-cox1.tgz mt-Embryophyta-cox1)
+`
+2020-03-20 14:16:26,037 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Embryophyta-cob -r)
+randomSplit.pl /dev/shm/tmp/mt-Embryophyta/trng/train-cob.gb 50
+new_species.pl --species=mt-Embryophyta-cob
+etraining --species=mt-Embryophyta-cob /dev/shm/tmp/mt-Embryophyta/trng/train-cob.gb.train --translation_table=1
+augustus --species=mt-Embryophyta-cob /dev/shm/tmp/mt-Embryophyta/trng/train-cob.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Embryophyta/trng/train-cob.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Embryophyta-cob --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Embryophyta/trng/train-cob.gb.train && rm -r tmp_opt_mt-Embryophyta-cob
+#etraining --species=mt-Embryophyta-cob /dev/shm/tmp/mt-Embryophyta/trng/train-cob.gb.train
+#augustus --species=mt-Embryophyta-cob /dev/shm/tmp/mt-Embryophyta/trng/train-cob.gb.test &> /dev/shm/tmp/mt-Embryophyta/trng/train-cob.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Embryophyta/agst/mt-Embryophyta-cob.tgz mt-Embryophyta-cob)
+`
+2020-03-20 14:16:40,574 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Embryophyta-ccmFc -r)
+randomSplit.pl /dev/shm/tmp/mt-Embryophyta/trng/train-ccmFc.gb 50
+new_species.pl --species=mt-Embryophyta-ccmFc
+etraining --species=mt-Embryophyta-ccmFc /dev/shm/tmp/mt-Embryophyta/trng/train-ccmFc.gb.train --translation_table=1
+augustus --species=mt-Embryophyta-ccmFc /dev/shm/tmp/mt-Embryophyta/trng/train-ccmFc.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Embryophyta/trng/train-ccmFc.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Embryophyta-ccmFc --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Embryophyta/trng/train-ccmFc.gb.train && rm -r tmp_opt_mt-Embryophyta-ccmFc
+#etraining --species=mt-Embryophyta-ccmFc /dev/shm/tmp/mt-Embryophyta/trng/train-ccmFc.gb.train
+#augustus --species=mt-Embryophyta-ccmFc /dev/shm/tmp/mt-Embryophyta/trng/train-ccmFc.gb.test &> /dev/shm/tmp/mt-Embryophyta/trng/train-ccmFc.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Embryophyta/agst/mt-Embryophyta-ccmFc.tgz mt-Embryophyta-ccmFc)
+`
+2020-03-20 14:16:54,871 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Embryophyta-mttB -r)
+randomSplit.pl /dev/shm/tmp/mt-Embryophyta/trng/train-mttB.gb 41
+new_species.pl --species=mt-Embryophyta-mttB
+etraining --species=mt-Embryophyta-mttB /dev/shm/tmp/mt-Embryophyta/trng/train-mttB.gb.train --translation_table=1
+augustus --species=mt-Embryophyta-mttB /dev/shm/tmp/mt-Embryophyta/trng/train-mttB.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Embryophyta/trng/train-mttB.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Embryophyta-mttB --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Embryophyta/trng/train-mttB.gb.train && rm -r tmp_opt_mt-Embryophyta-mttB
+#etraining --species=mt-Embryophyta-mttB /dev/shm/tmp/mt-Embryophyta/trng/train-mttB.gb.train
+#augustus --species=mt-Embryophyta-mttB /dev/shm/tmp/mt-Embryophyta/trng/train-mttB.gb.test &> /dev/shm/tmp/mt-Embryophyta/trng/train-mttB.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Embryophyta/agst/mt-Embryophyta-mttB.tgz mt-Embryophyta-mttB)
+`
+2020-03-20 14:17:05,476 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Embryophyta-ccmC -r)
+randomSplit.pl /dev/shm/tmp/mt-Embryophyta/trng/train-ccmC.gb 49
+new_species.pl --species=mt-Embryophyta-ccmC
+etraining --species=mt-Embryophyta-ccmC /dev/shm/tmp/mt-Embryophyta/trng/train-ccmC.gb.train --translation_table=1
+augustus --species=mt-Embryophyta-ccmC /dev/shm/tmp/mt-Embryophyta/trng/train-ccmC.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Embryophyta/trng/train-ccmC.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Embryophyta-ccmC --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Embryophyta/trng/train-ccmC.gb.train && rm -r tmp_opt_mt-Embryophyta-ccmC
+#etraining --species=mt-Embryophyta-ccmC /dev/shm/tmp/mt-Embryophyta/trng/train-ccmC.gb.train
+#augustus --species=mt-Embryophyta-ccmC /dev/shm/tmp/mt-Embryophyta/trng/train-ccmC.gb.test &> /dev/shm/tmp/mt-Embryophyta/trng/train-ccmC.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Embryophyta/agst/mt-Embryophyta-ccmC.tgz mt-Embryophyta-ccmC)
+`
+2020-03-20 14:17:16,742 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Embryophyta-ccmB -r)
+randomSplit.pl /dev/shm/tmp/mt-Embryophyta/trng/train-ccmB.gb 49
+new_species.pl --species=mt-Embryophyta-ccmB
+etraining --species=mt-Embryophyta-ccmB /dev/shm/tmp/mt-Embryophyta/trng/train-ccmB.gb.train --translation_table=1
+augustus --species=mt-Embryophyta-ccmB /dev/shm/tmp/mt-Embryophyta/trng/train-ccmB.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Embryophyta/trng/train-ccmB.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Embryophyta-ccmB --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Embryophyta/trng/train-ccmB.gb.train && rm -r tmp_opt_mt-Embryophyta-ccmB
+#etraining --species=mt-Embryophyta-ccmB /dev/shm/tmp/mt-Embryophyta/trng/train-ccmB.gb.train
+#augustus --species=mt-Embryophyta-ccmB /dev/shm/tmp/mt-Embryophyta/trng/train-ccmB.gb.test &> /dev/shm/tmp/mt-Embryophyta/trng/train-ccmB.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Embryophyta/agst/mt-Embryophyta-ccmB.tgz mt-Embryophyta-ccmB)
+`
+2020-03-20 14:17:27,808 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Embryophyta-nad4L -r)
+randomSplit.pl /dev/shm/tmp/mt-Embryophyta/trng/train-nad4L.gb 48
+new_species.pl --species=mt-Embryophyta-nad4L
+etraining --species=mt-Embryophyta-nad4L /dev/shm/tmp/mt-Embryophyta/trng/train-nad4L.gb.train --translation_table=1
+augustus --species=mt-Embryophyta-nad4L /dev/shm/tmp/mt-Embryophyta/trng/train-nad4L.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Embryophyta/trng/train-nad4L.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Embryophyta-nad4L --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Embryophyta/trng/train-nad4L.gb.train && rm -r tmp_opt_mt-Embryophyta-nad4L
+#etraining --species=mt-Embryophyta-nad4L /dev/shm/tmp/mt-Embryophyta/trng/train-nad4L.gb.train
+#augustus --species=mt-Embryophyta-nad4L /dev/shm/tmp/mt-Embryophyta/trng/train-nad4L.gb.test &> /dev/shm/tmp/mt-Embryophyta/trng/train-nad4L.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Embryophyta/agst/mt-Embryophyta-nad4L.tgz mt-Embryophyta-nad4L)
+`
+2020-03-20 14:17:40,305 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Embryophyta-rps12 -r)
+randomSplit.pl /dev/shm/tmp/mt-Embryophyta/trng/train-rps12.gb 48
+new_species.pl --species=mt-Embryophyta-rps12
+etraining --species=mt-Embryophyta-rps12 /dev/shm/tmp/mt-Embryophyta/trng/train-rps12.gb.train --translation_table=1
+augustus --species=mt-Embryophyta-rps12 /dev/shm/tmp/mt-Embryophyta/trng/train-rps12.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Embryophyta/trng/train-rps12.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Embryophyta-rps12 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Embryophyta/trng/train-rps12.gb.train && rm -r tmp_opt_mt-Embryophyta-rps12
+#etraining --species=mt-Embryophyta-rps12 /dev/shm/tmp/mt-Embryophyta/trng/train-rps12.gb.train
+#augustus --species=mt-Embryophyta-rps12 /dev/shm/tmp/mt-Embryophyta/trng/train-rps12.gb.test &> /dev/shm/tmp/mt-Embryophyta/trng/train-rps12.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Embryophyta/agst/mt-Embryophyta-rps12.tgz mt-Embryophyta-rps12)
+`
+2020-03-20 14:17:50,931 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Embryophyta-rps3 -r)
+randomSplit.pl /dev/shm/tmp/mt-Embryophyta/trng/train-rps3.gb 47
+new_species.pl --species=mt-Embryophyta-rps3
+etraining --species=mt-Embryophyta-rps3 /dev/shm/tmp/mt-Embryophyta/trng/train-rps3.gb.train --translation_table=1
+augustus --species=mt-Embryophyta-rps3 /dev/shm/tmp/mt-Embryophyta/trng/train-rps3.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Embryophyta/trng/train-rps3.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Embryophyta-rps3 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Embryophyta/trng/train-rps3.gb.train && rm -r tmp_opt_mt-Embryophyta-rps3
+#etraining --species=mt-Embryophyta-rps3 /dev/shm/tmp/mt-Embryophyta/trng/train-rps3.gb.train
+#augustus --species=mt-Embryophyta-rps3 /dev/shm/tmp/mt-Embryophyta/trng/train-rps3.gb.test &> /dev/shm/tmp/mt-Embryophyta/trng/train-rps3.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Embryophyta/agst/mt-Embryophyta-rps3.tgz mt-Embryophyta-rps3)
+`
+2020-03-20 14:18:07,050 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Embryophyta-rps4 -r)
+randomSplit.pl /dev/shm/tmp/mt-Embryophyta/trng/train-rps4.gb 46
+new_species.pl --species=mt-Embryophyta-rps4
+etraining --species=mt-Embryophyta-rps4 /dev/shm/tmp/mt-Embryophyta/trng/train-rps4.gb.train --translation_table=1
+augustus --species=mt-Embryophyta-rps4 /dev/shm/tmp/mt-Embryophyta/trng/train-rps4.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Embryophyta/trng/train-rps4.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Embryophyta-rps4 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Embryophyta/trng/train-rps4.gb.train && rm -r tmp_opt_mt-Embryophyta-rps4
+#etraining --species=mt-Embryophyta-rps4 /dev/shm/tmp/mt-Embryophyta/trng/train-rps4.gb.train
+#augustus --species=mt-Embryophyta-rps4 /dev/shm/tmp/mt-Embryophyta/trng/train-rps4.gb.test &> /dev/shm/tmp/mt-Embryophyta/trng/train-rps4.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Embryophyta/agst/mt-Embryophyta-rps4.tgz mt-Embryophyta-rps4)
+`
+2020-03-20 14:18:17,695 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Embryophyta-rpl5 -r)
+randomSplit.pl /dev/shm/tmp/mt-Embryophyta/trng/train-rpl5.gb 43
+new_species.pl --species=mt-Embryophyta-rpl5
+etraining --species=mt-Embryophyta-rpl5 /dev/shm/tmp/mt-Embryophyta/trng/train-rpl5.gb.train --translation_table=1
+augustus --species=mt-Embryophyta-rpl5 /dev/shm/tmp/mt-Embryophyta/trng/train-rpl5.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Embryophyta/trng/train-rpl5.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Embryophyta-rpl5 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Embryophyta/trng/train-rpl5.gb.train && rm -r tmp_opt_mt-Embryophyta-rpl5
+#etraining --species=mt-Embryophyta-rpl5 /dev/shm/tmp/mt-Embryophyta/trng/train-rpl5.gb.train
+#augustus --species=mt-Embryophyta-rpl5 /dev/shm/tmp/mt-Embryophyta/trng/train-rpl5.gb.test &> /dev/shm/tmp/mt-Embryophyta/trng/train-rpl5.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Embryophyta/agst/mt-Embryophyta-rpl5.tgz mt-Embryophyta-rpl5)
+`
+2020-03-20 14:18:27,756 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Embryophyta-matR -r)
+randomSplit.pl /dev/shm/tmp/mt-Embryophyta/trng/train-matR.gb 39
+new_species.pl --species=mt-Embryophyta-matR
+etraining --species=mt-Embryophyta-matR /dev/shm/tmp/mt-Embryophyta/trng/train-matR.gb.train --translation_table=1
+augustus --species=mt-Embryophyta-matR /dev/shm/tmp/mt-Embryophyta/trng/train-matR.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Embryophyta/trng/train-matR.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Embryophyta-matR --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Embryophyta/trng/train-matR.gb.train && rm -r tmp_opt_mt-Embryophyta-matR
+#etraining --species=mt-Embryophyta-matR /dev/shm/tmp/mt-Embryophyta/trng/train-matR.gb.train
+#augustus --species=mt-Embryophyta-matR /dev/shm/tmp/mt-Embryophyta/trng/train-matR.gb.test &> /dev/shm/tmp/mt-Embryophyta/trng/train-matR.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Embryophyta/agst/mt-Embryophyta-matR.tgz mt-Embryophyta-matR)
+`
+2020-03-20 14:18:42,152 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Embryophyta-nad7 -r)
+randomSplit.pl /dev/shm/tmp/mt-Embryophyta/trng/train-nad7.gb 45
+new_species.pl --species=mt-Embryophyta-nad7
+etraining --species=mt-Embryophyta-nad7 /dev/shm/tmp/mt-Embryophyta/trng/train-nad7.gb.train --translation_table=1
+augustus --species=mt-Embryophyta-nad7 /dev/shm/tmp/mt-Embryophyta/trng/train-nad7.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Embryophyta/trng/train-nad7.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Embryophyta-nad7 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Embryophyta/trng/train-nad7.gb.train && rm -r tmp_opt_mt-Embryophyta-nad7
+#etraining --species=mt-Embryophyta-nad7 /dev/shm/tmp/mt-Embryophyta/trng/train-nad7.gb.train
+#augustus --species=mt-Embryophyta-nad7 /dev/shm/tmp/mt-Embryophyta/trng/train-nad7.gb.test &> /dev/shm/tmp/mt-Embryophyta/trng/train-nad7.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Embryophyta/agst/mt-Embryophyta-nad7.tgz mt-Embryophyta-nad7)
+`
+2020-03-20 14:19:02,313 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Embryophyta-rpl2 -r)
+randomSplit.pl /dev/shm/tmp/mt-Embryophyta/trng/train-rpl2.gb 38
+new_species.pl --species=mt-Embryophyta-rpl2
+etraining --species=mt-Embryophyta-rpl2 /dev/shm/tmp/mt-Embryophyta/trng/train-rpl2.gb.train --translation_table=1
+augustus --species=mt-Embryophyta-rpl2 /dev/shm/tmp/mt-Embryophyta/trng/train-rpl2.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Embryophyta/trng/train-rpl2.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Embryophyta-rpl2 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Embryophyta/trng/train-rpl2.gb.train && rm -r tmp_opt_mt-Embryophyta-rpl2
+#etraining --species=mt-Embryophyta-rpl2 /dev/shm/tmp/mt-Embryophyta/trng/train-rpl2.gb.train
+#augustus --species=mt-Embryophyta-rpl2 /dev/shm/tmp/mt-Embryophyta/trng/train-rpl2.gb.test &> /dev/shm/tmp/mt-Embryophyta/trng/train-rpl2.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Embryophyta/agst/mt-Embryophyta-rpl2.tgz mt-Embryophyta-rpl2)
+`
+2020-03-20 14:19:13,364 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Embryophyta-rpl16 -r)
+randomSplit.pl /dev/shm/tmp/mt-Embryophyta/trng/train-rpl16.gb 37
+new_species.pl --species=mt-Embryophyta-rpl16
+etraining --species=mt-Embryophyta-rpl16 /dev/shm/tmp/mt-Embryophyta/trng/train-rpl16.gb.train --translation_table=1
+augustus --species=mt-Embryophyta-rpl16 /dev/shm/tmp/mt-Embryophyta/trng/train-rpl16.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Embryophyta/trng/train-rpl16.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Embryophyta-rpl16 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Embryophyta/trng/train-rpl16.gb.train && rm -r tmp_opt_mt-Embryophyta-rpl16
+#etraining --species=mt-Embryophyta-rpl16 /dev/shm/tmp/mt-Embryophyta/trng/train-rpl16.gb.train
+#augustus --species=mt-Embryophyta-rpl16 /dev/shm/tmp/mt-Embryophyta/trng/train-rpl16.gb.test &> /dev/shm/tmp/mt-Embryophyta/trng/train-rpl16.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Embryophyta/agst/mt-Embryophyta-rpl16.tgz mt-Embryophyta-rpl16)
+`
+2020-03-20 14:19:22,285 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Embryophyta-rps1 -r)
+randomSplit.pl /dev/shm/tmp/mt-Embryophyta/trng/train-rps1.gb 38
+new_species.pl --species=mt-Embryophyta-rps1
+etraining --species=mt-Embryophyta-rps1 /dev/shm/tmp/mt-Embryophyta/trng/train-rps1.gb.train --translation_table=1
+augustus --species=mt-Embryophyta-rps1 /dev/shm/tmp/mt-Embryophyta/trng/train-rps1.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Embryophyta/trng/train-rps1.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Embryophyta-rps1 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Embryophyta/trng/train-rps1.gb.train && rm -r tmp_opt_mt-Embryophyta-rps1
+#etraining --species=mt-Embryophyta-rps1 /dev/shm/tmp/mt-Embryophyta/trng/train-rps1.gb.train
+#augustus --species=mt-Embryophyta-rps1 /dev/shm/tmp/mt-Embryophyta/trng/train-rps1.gb.test &> /dev/shm/tmp/mt-Embryophyta/trng/train-rps1.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Embryophyta/agst/mt-Embryophyta-rps1.tgz mt-Embryophyta-rps1)
+`
+2020-03-20 14:19:31,084 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Embryophyta-rps13 -r)
+randomSplit.pl /dev/shm/tmp/mt-Embryophyta/trng/train-rps13.gb 38
+new_species.pl --species=mt-Embryophyta-rps13
+etraining --species=mt-Embryophyta-rps13 /dev/shm/tmp/mt-Embryophyta/trng/train-rps13.gb.train --translation_table=1
+augustus --species=mt-Embryophyta-rps13 /dev/shm/tmp/mt-Embryophyta/trng/train-rps13.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Embryophyta/trng/train-rps13.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Embryophyta-rps13 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Embryophyta/trng/train-rps13.gb.train && rm -r tmp_opt_mt-Embryophyta-rps13
+#etraining --species=mt-Embryophyta-rps13 /dev/shm/tmp/mt-Embryophyta/trng/train-rps13.gb.train
+#augustus --species=mt-Embryophyta-rps13 /dev/shm/tmp/mt-Embryophyta/trng/train-rps13.gb.test &> /dev/shm/tmp/mt-Embryophyta/trng/train-rps13.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Embryophyta/agst/mt-Embryophyta-rps13.tgz mt-Embryophyta-rps13)
+`
+2020-03-20 14:19:39,621 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Embryophyta-rps7 -r)
+randomSplit.pl /dev/shm/tmp/mt-Embryophyta/trng/train-rps7.gb 36
+new_species.pl --species=mt-Embryophyta-rps7
+etraining --species=mt-Embryophyta-rps7 /dev/shm/tmp/mt-Embryophyta/trng/train-rps7.gb.train --translation_table=1
+augustus --species=mt-Embryophyta-rps7 /dev/shm/tmp/mt-Embryophyta/trng/train-rps7.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Embryophyta/trng/train-rps7.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Embryophyta-rps7 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Embryophyta/trng/train-rps7.gb.train && rm -r tmp_opt_mt-Embryophyta-rps7
+#etraining --species=mt-Embryophyta-rps7 /dev/shm/tmp/mt-Embryophyta/trng/train-rps7.gb.train
+#augustus --species=mt-Embryophyta-rps7 /dev/shm/tmp/mt-Embryophyta/trng/train-rps7.gb.test &> /dev/shm/tmp/mt-Embryophyta/trng/train-rps7.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Embryophyta/agst/mt-Embryophyta-rps7.tgz mt-Embryophyta-rps7)
+`
+2020-03-20 14:19:48,584 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Embryophyta-rps14 -r)
+randomSplit.pl /dev/shm/tmp/mt-Embryophyta/trng/train-rps14.gb 35
+new_species.pl --species=mt-Embryophyta-rps14
+etraining --species=mt-Embryophyta-rps14 /dev/shm/tmp/mt-Embryophyta/trng/train-rps14.gb.train --translation_table=1
+augustus --species=mt-Embryophyta-rps14 /dev/shm/tmp/mt-Embryophyta/trng/train-rps14.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Embryophyta/trng/train-rps14.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Embryophyta-rps14 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Embryophyta/trng/train-rps14.gb.train && rm -r tmp_opt_mt-Embryophyta-rps14
+#etraining --species=mt-Embryophyta-rps14 /dev/shm/tmp/mt-Embryophyta/trng/train-rps14.gb.train
+#augustus --species=mt-Embryophyta-rps14 /dev/shm/tmp/mt-Embryophyta/trng/train-rps14.gb.test &> /dev/shm/tmp/mt-Embryophyta/trng/train-rps14.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Embryophyta/agst/mt-Embryophyta-rps14.tgz mt-Embryophyta-rps14)
+`
+2020-03-20 14:19:57,844 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Embryophyta-sdh4 -r)
+randomSplit.pl /dev/shm/tmp/mt-Embryophyta/trng/train-sdh4.gb 35
+new_species.pl --species=mt-Embryophyta-sdh4
+etraining --species=mt-Embryophyta-sdh4 /dev/shm/tmp/mt-Embryophyta/trng/train-sdh4.gb.train --translation_table=1
+augustus --species=mt-Embryophyta-sdh4 /dev/shm/tmp/mt-Embryophyta/trng/train-sdh4.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Embryophyta/trng/train-sdh4.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Embryophyta-sdh4 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Embryophyta/trng/train-sdh4.gb.train && rm -r tmp_opt_mt-Embryophyta-sdh4
+#etraining --species=mt-Embryophyta-sdh4 /dev/shm/tmp/mt-Embryophyta/trng/train-sdh4.gb.train
+#augustus --species=mt-Embryophyta-sdh4 /dev/shm/tmp/mt-Embryophyta/trng/train-sdh4.gb.test &> /dev/shm/tmp/mt-Embryophyta/trng/train-sdh4.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Embryophyta/agst/mt-Embryophyta-sdh4.tgz mt-Embryophyta-sdh4)
+`
+2020-03-20 14:20:06,552 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Embryophyta-rpl10 -r)
+randomSplit.pl /dev/shm/tmp/mt-Embryophyta/trng/train-rpl10.gb 35
+new_species.pl --species=mt-Embryophyta-rpl10
+etraining --species=mt-Embryophyta-rpl10 /dev/shm/tmp/mt-Embryophyta/trng/train-rpl10.gb.train --translation_table=1
+augustus --species=mt-Embryophyta-rpl10 /dev/shm/tmp/mt-Embryophyta/trng/train-rpl10.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Embryophyta/trng/train-rpl10.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Embryophyta-rpl10 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Embryophyta/trng/train-rpl10.gb.train && rm -r tmp_opt_mt-Embryophyta-rpl10
+#etraining --species=mt-Embryophyta-rpl10 /dev/shm/tmp/mt-Embryophyta/trng/train-rpl10.gb.train
+#augustus --species=mt-Embryophyta-rpl10 /dev/shm/tmp/mt-Embryophyta/trng/train-rpl10.gb.test &> /dev/shm/tmp/mt-Embryophyta/trng/train-rpl10.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Embryophyta/agst/mt-Embryophyta-rpl10.tgz mt-Embryophyta-rpl10)
+`
+2020-03-20 14:20:15,195 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Embryophyta-rps19 -r)
+randomSplit.pl /dev/shm/tmp/mt-Embryophyta/trng/train-rps19.gb 30
+new_species.pl --species=mt-Embryophyta-rps19
+etraining --species=mt-Embryophyta-rps19 /dev/shm/tmp/mt-Embryophyta/trng/train-rps19.gb.train --translation_table=1
+augustus --species=mt-Embryophyta-rps19 /dev/shm/tmp/mt-Embryophyta/trng/train-rps19.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Embryophyta/trng/train-rps19.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Embryophyta-rps19 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Embryophyta/trng/train-rps19.gb.train && rm -r tmp_opt_mt-Embryophyta-rps19
+#etraining --species=mt-Embryophyta-rps19 /dev/shm/tmp/mt-Embryophyta/trng/train-rps19.gb.train
+#augustus --species=mt-Embryophyta-rps19 /dev/shm/tmp/mt-Embryophyta/trng/train-rps19.gb.test &> /dev/shm/tmp/mt-Embryophyta/trng/train-rps19.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Embryophyta/agst/mt-Embryophyta-rps19.tgz mt-Embryophyta-rps19)
+`
+2020-03-20 14:20:23,523 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Embryophyta-sdh3 -r)
+randomSplit.pl /dev/shm/tmp/mt-Embryophyta/trng/train-sdh3.gb 29
+new_species.pl --species=mt-Embryophyta-sdh3
+etraining --species=mt-Embryophyta-sdh3 /dev/shm/tmp/mt-Embryophyta/trng/train-sdh3.gb.train --translation_table=1
+augustus --species=mt-Embryophyta-sdh3 /dev/shm/tmp/mt-Embryophyta/trng/train-sdh3.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Embryophyta/trng/train-sdh3.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Embryophyta-sdh3 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Embryophyta/trng/train-sdh3.gb.train && rm -r tmp_opt_mt-Embryophyta-sdh3
+#etraining --species=mt-Embryophyta-sdh3 /dev/shm/tmp/mt-Embryophyta/trng/train-sdh3.gb.train
+#augustus --species=mt-Embryophyta-sdh3 /dev/shm/tmp/mt-Embryophyta/trng/train-sdh3.gb.test &> /dev/shm/tmp/mt-Embryophyta/trng/train-sdh3.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Embryophyta/agst/mt-Embryophyta-sdh3.tgz mt-Embryophyta-sdh3)
+`
+2020-03-20 14:20:31,964 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Embryophyta-rps10 -r)
+randomSplit.pl /dev/shm/tmp/mt-Embryophyta/trng/train-rps10.gb 23
+new_species.pl --species=mt-Embryophyta-rps10
+etraining --species=mt-Embryophyta-rps10 /dev/shm/tmp/mt-Embryophyta/trng/train-rps10.gb.train --translation_table=1
+augustus --species=mt-Embryophyta-rps10 /dev/shm/tmp/mt-Embryophyta/trng/train-rps10.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Embryophyta/trng/train-rps10.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Embryophyta-rps10 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Embryophyta/trng/train-rps10.gb.train && rm -r tmp_opt_mt-Embryophyta-rps10
+#etraining --species=mt-Embryophyta-rps10 /dev/shm/tmp/mt-Embryophyta/trng/train-rps10.gb.train
+#augustus --species=mt-Embryophyta-rps10 /dev/shm/tmp/mt-Embryophyta/trng/train-rps10.gb.test &> /dev/shm/tmp/mt-Embryophyta/trng/train-rps10.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Embryophyta/agst/mt-Embryophyta-rps10.tgz mt-Embryophyta-rps10)
+`
+2020-03-20 14:20:40,069 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Embryophyta-rps2 -r)
+randomSplit.pl /dev/shm/tmp/mt-Embryophyta/trng/train-rps2.gb 22
+new_species.pl --species=mt-Embryophyta-rps2
+etraining --species=mt-Embryophyta-rps2 /dev/shm/tmp/mt-Embryophyta/trng/train-rps2.gb.train --translation_table=1
+augustus --species=mt-Embryophyta-rps2 /dev/shm/tmp/mt-Embryophyta/trng/train-rps2.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Embryophyta/trng/train-rps2.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Embryophyta-rps2 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Embryophyta/trng/train-rps2.gb.train && rm -r tmp_opt_mt-Embryophyta-rps2
+#etraining --species=mt-Embryophyta-rps2 /dev/shm/tmp/mt-Embryophyta/trng/train-rps2.gb.train
+#augustus --species=mt-Embryophyta-rps2 /dev/shm/tmp/mt-Embryophyta/trng/train-rps2.gb.test &> /dev/shm/tmp/mt-Embryophyta/trng/train-rps2.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Embryophyta/agst/mt-Embryophyta-rps2.tgz mt-Embryophyta-rps2)
+`
+2020-03-20 14:20:47,435 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Embryophyta-rps11 -r)
+randomSplit.pl /dev/shm/tmp/mt-Embryophyta/trng/train-rps11.gb 20
+new_species.pl --species=mt-Embryophyta-rps11
+etraining --species=mt-Embryophyta-rps11 /dev/shm/tmp/mt-Embryophyta/trng/train-rps11.gb.train --translation_table=1
+augustus --species=mt-Embryophyta-rps11 /dev/shm/tmp/mt-Embryophyta/trng/train-rps11.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Embryophyta/trng/train-rps11.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Embryophyta-rps11 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Embryophyta/trng/train-rps11.gb.train && rm -r tmp_opt_mt-Embryophyta-rps11
+#etraining --species=mt-Embryophyta-rps11 /dev/shm/tmp/mt-Embryophyta/trng/train-rps11.gb.train
+#augustus --species=mt-Embryophyta-rps11 /dev/shm/tmp/mt-Embryophyta/trng/train-rps11.gb.test &> /dev/shm/tmp/mt-Embryophyta/trng/train-rps11.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Embryophyta/agst/mt-Embryophyta-rps11.tgz mt-Embryophyta-rps11)
+`
+2020-03-20 14:20:54,344 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Embryophyta-rpl6 -r)
+randomSplit.pl /dev/shm/tmp/mt-Embryophyta/trng/train-rpl6.gb 16
+new_species.pl --species=mt-Embryophyta-rpl6
+etraining --species=mt-Embryophyta-rpl6 /dev/shm/tmp/mt-Embryophyta/trng/train-rpl6.gb.train --translation_table=1
+augustus --species=mt-Embryophyta-rpl6 /dev/shm/tmp/mt-Embryophyta/trng/train-rpl6.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Embryophyta/trng/train-rpl6.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Embryophyta-rpl6 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Embryophyta/trng/train-rpl6.gb.train && rm -r tmp_opt_mt-Embryophyta-rpl6
+#etraining --species=mt-Embryophyta-rpl6 /dev/shm/tmp/mt-Embryophyta/trng/train-rpl6.gb.train
+#augustus --species=mt-Embryophyta-rpl6 /dev/shm/tmp/mt-Embryophyta/trng/train-rpl6.gb.test &> /dev/shm/tmp/mt-Embryophyta/trng/train-rpl6.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Embryophyta/agst/mt-Embryophyta-rpl6.tgz mt-Embryophyta-rpl6)
+`
+2020-03-20 14:20:58,444 -INFO- writing ('rRNA', 'tRNA') sequences into /dev/shm/tmp/mt-Embryophyta/rrna
+2020-03-20 14:20:59,224 -INFO- running OrthoFinder to cluster genes
+2020-03-20 14:20:59,225 -INFO- run CMD: `orthofinder.py -f /dev/shm/tmp/mt-Embryophyta/rrna -M msa -T fasttree -t 16 -S blastn -og`
+2020-03-20 14:47:43,487 -INFO- parsing OrthoFinder orthologs
+2020-03-20 14:47:43,488 -INFO- parsing orthologs group into /dev/shm/tmp/mt-Embryophyta/alns
+2020-03-20 14:47:43,582 -INFO- using min_count=7.8 to get gene name
+2020-03-20 14:47:53,636 -INFO- get gene name `rrn26` from Counter({'rrn26': 105, 'rrnL': 27, 'rnl': 4, 'rrn26-1': 3, 'rRNA26': 2, '26rrn': 2, 'rrn26S': 1, 'Sinapis_arvensis-gene40': 1, 'Cocos_nucifera-gene23': 1, 'Nymphaea_colorata-gene714': 1, 'Chenopodium_quinoa-gene94': 1, '26Srrn': 1, 'rrL': 1, 'Allium_cepa-gene56': 1, 'Raphanus_sativus-gene127': 1, 'Saccharum_officinarum-gene88': 1, 'Phoenix_dactylifera-gene68': 1, 'Lagerstroemia_indica-gene192': 1})
+2020-03-20 14:47:53,637 -INFO- get product `26S ribosomal RNA` from Counter({'26S ribosomal RNA': 109, 'large subunit ribosomal RNA': 36, '26S large subunit ribosomal RNA': 9, '23S ribosomal RNA': 1})
+2020-03-20 14:47:53,639 -INFO- get exon number `1` from Counter({1: 138, 2: 14, 3: 2, 4: 1})
+2020-03-20 14:47:53,639 -INFO- get trans_splicing `False` from Counter({False: 155})
+2020-03-20 14:48:01,534 -INFO- get gene name `rrn18` from Counter({'rrn18': 105, 'rrnS': 28, 'rns': 3, '18rrn': 2, 'rRNA18': 2, 'rrn18-1': 2, 'rrn16-ct': 1, 'rrn18S': 1, 'Nymphaea_colorata-gene737': 1, 'Phoenix_dactylifera-gene179': 1, 'Chenopodium_quinoa-gene87': 1, 'Cocos_nucifera-gene166': 1, '18Srrn': 1, 'Cocos_nucifera-gene245': 1, 'Raphanus_sativus-gene111': 1, 'rrn16': 1, 'Saccharum_officinarum-gene37': 1, 'Sinapis_arvensis-gene222': 1, 'rrS': 1, 'Allium_cepa-gene88': 1, 'Castilleja_paramensis-gene118': 1})
+2020-03-20 14:48:01,536 -INFO- get product `18S ribosomal RNA` from Counter({'18S ribosomal RNA': 111, 'small subunit ribosomal RNA': 33, '18S small subunit ribosomal RNA': 7, '16S ribosomal RNA': 3, '5S ribosomal RNA': 1, 'small ribosomal RNA': 1, 'large subunit ribosomal RNA': 1})
+2020-03-20 14:48:01,537 -INFO- get exon number `1` from Counter({1: 145, 2: 12})
+2020-03-20 14:48:01,537 -INFO- get trans_splicing `False` from Counter({False: 157})
+2020-03-20 14:48:12,736 -INFO- get gene name `trnY-GUA` from Counter({'trnY-GUA': 70, 'trnY-GTA': 35, 'trnY': 21, 'trnY-gua': 7, 'tRNA-Tyr': 3, 'tRNA-Tyr-GUA': 2, 'trnY-1': 1, 'Chenopodium_quinoa-gene5': 1, 'Tetraphis_pellucida-gene191': 1, 'tRNA-Tyr-gua': 1, 'tRNA-Tyr-GTA': 1, 'trn-Y': 1, 'trnY-gta': 1, 'Vaccinium_macrocarpon-gene108': 1, 'Sinapis_arvensis-gene108': 1, 'Syntrichia_filaris-gene81': 1, 'Physcomitrella_patens-gene78': 1, 'Phoenix_dactylifera-gene171': 1})
+2020-03-20 14:48:12,737 -INFO- get product `tRNA-Tyr` from Counter({'tRNA-Tyr': 150})
+2020-03-20 14:48:12,738 -INFO- get exon number `1` from Counter({1: 150})
+2020-03-20 14:48:12,738 -INFO- get trans_splicing `False` from Counter({False: 150})
+2020-03-20 14:48:17,210 -INFO- get gene name `trnE-UUC` from Counter({'trnE-UUC': 73, 'trnE-TTC': 34, 'trnE': 24, 'trnE-uuc': 8, 'tRNA-Glu-UUC': 2, 'Phoenix_dactylifera-gene55': 1, 'tRNA-Glu-uuc': 1, 'Physcomitrella_patens-gene136': 1, 'tRNA-Glu-TTC': 1, 'trnE-CTC': 1, 'Chenopodium_quinoa-gene13': 1, 'tRNA-Glu': 1, 'trnE-1': 1, 'Tetraphis_pellucida-gene254': 1, 'trnE-ttc': 1, 'Syntrichia_filaris-gene136': 1, 'Vaccinium_macrocarpon-gene197': 1, 'Sinapis_arvensis-gene159': 1, 'trnE-a1': 1})
+2020-03-20 14:48:17,211 -INFO- get product `tRNA-Glu` from Counter({'tRNA-Glu': 154, 'tRNA-Gln': 1})
+2020-03-20 14:48:17,213 -INFO- get exon number `1` from Counter({1: 155})
+2020-03-20 14:48:17,213 -INFO- get trans_splicing `False` from Counter({False: 155})
+2020-03-20 14:48:20,515 -INFO- get gene name `trnI-CAU` from Counter({'trnI-CAU': 50, 'trnI': 18, 'trnM-CAU': 16, 'trnI-CAT': 14, 'trnM-CAT': 12, 'trnM': 10, 'trnM-cau': 5, 'trnI-cau': 4, 'trnI-LAU': 1, 'trnI-a1': 1, 'Physcomitrella_patens-gene2': 1, 'Phoenix_dactylifera-gene62': 1, 'tRNA-Ile-CAU': 1, 'Tetraphis_pellucida-gene105': 1, 'Syntrichia_filaris-gene2': 1, 'tRNA-Met-CAU': 1, 'tRNA-Met-CAT': 1, 'tRNA-Ile-cau': 1, 'Sinapis_arvensis-gene212': 1, 'trnI-AUA': 1, 'trnM-CAU2': 1, 'trnM-cat': 1, 'tRNAI-CAT': 1, 'Nepenthes_ventricosa_x_Nepenthes_alata-gene182': 1, 'Chenopodium_quinoa-gene107': 1, 'trnI-UAU': 1, 'trnI-TAT': 1, 'Vaccinium_macrocarpon-gene145': 1, 'trnI-CAT-1': 1})
+2020-03-20 14:48:20,516 -INFO- get product `tRNA-Ile` from Counter({'tRNA-Ile': 94, 'tRNA-Met': 56})
+2020-03-20 14:48:20,518 -INFO- get exon number `1` from Counter({1: 150})
+2020-03-20 14:48:20,518 -INFO- get trans_splicing `False` from Counter({False: 150})
+2020-03-20 14:48:24,999 -INFO- get gene name `trnK-UUU` from Counter({'trnK-UUU': 70, 'trnK-TTT': 33, 'trnK': 21, 'trnK-uuu': 5, 'trnK-1': 3, 'tRNA-Lys': 2, 'tRNA-Lys-UUU': 2, 'Phoenix_dactylifera-gene94': 1, 'Vaccinium_macrocarpon-gene45': 1, 'trnK-ttt': 1, 'tRNA-Lys-TTT': 1, 'Sinapis_arvensis-gene4': 1, 'Tetraphis_pellucida-gene107': 1, 'tRNA-Lys-uuu': 1, 'Chenopodium_quinoa-gene26': 1, 'Syntrichia_filaris-gene4': 1, 'Physcomitrella_patens-gene4': 1})
+2020-03-20 14:48:25,000 -INFO- get product `tRNA-Lys` from Counter({'tRNA-Lys': 137, 'tRNA-Arg': 7, 'tRNA-Thr': 2})
+2020-03-20 14:48:25,002 -INFO- get exon number `1` from Counter({1: 146})
+2020-03-20 14:48:25,003 -INFO- get trans_splicing `False` from Counter({False: 146})
+2020-03-20 14:48:31,488 -INFO- get gene name `rrn5` from Counter({'rrn5': 119, 'rrn5-1': 2, '5rrn': 2, 'rRNA5-a': 1, '5Srrn': 1, 'rRNA5': 1, 'Vaccinium_macrocarpon-gene201': 1, 'Phoenix_dactylifera-gene180': 1, 'Cocos_nucifera-gene243': 1, 'Allium_cepa-gene62': 1, 'Saccharum_officinarum-gene39': 1, 'rrn5S': 1, 'Raphanus_sativus-gene109': 1, 'Sinapis_arvensis-gene224': 1, 'Chenopodium_quinoa-gene89': 1})
+2020-03-20 14:48:31,489 -INFO- get product `5S ribosomal RNA` from Counter({'5S ribosomal RNA': 135})
+2020-03-20 14:48:31,490 -INFO- get exon number `1` from Counter({1: 135})
+2020-03-20 14:48:31,490 -INFO- get trans_splicing `False` from Counter({False: 135})
+2020-03-20 14:48:47,500 -INFO- get gene name `trnfM` from Counter({'trnfM': 20, 'trnfM-CAT': 15, 'trnM-CAT': 12, 'trnM-CAU': 12, 'trnfM-CAU': 12, 'trnM': 9, 'trnfM-1': 4, 'trnfM-cau': 3, 'trnM-cau': 3, 'tRNA-fMet': 2, 'tRNA-fMet-CAU': 2, 'trnM-cat': 2, 'Chenopodium_quinoa-gene175': 1, 'Phoenix_dactylifera-gene69': 1, 'tRNA-fMet-CAT-b1': 1, 'trnM-CAT_4': 1, 'tRNA-fMet-CAT': 1, 'trnfM-3': 1, 'trnfM-2': 1, 'trnM-CAU6': 1, 'tRNA-fMet-cau': 1, 'trnfMet-CAU': 1, 'trnfM-CAT-1': 1, 'Vaccinium_macrocarpon-gene125': 1, 'Sinapis_arvensis-gene44': 1})
+2020-03-20 14:48:47,500 -INFO- get product `tRNA-Met` from Counter({'tRNA-Met': 104, 'tRNA-fMet': 5})
+2020-03-20 14:48:47,502 -INFO- get exon number `1` from Counter({1: 109})
+2020-03-20 14:48:47,503 -INFO- get trans_splicing `False` from Counter({False: 109})
+2020-03-20 14:48:53,307 -INFO- get gene name `trnF-GAA` from Counter({'trnF-GAA': 100, 'trnF': 15, 'trnF-gaa': 6, 'tRNA-Phe-GAA': 4, 'tRNA-Phe': 2, 'trnY': 2, 'Phoenix_dactylifera-gene177': 1, 'trnL-b': 1, 'trnL': 1, 'Physcomitrella_patens-gene42': 1, 'Syntrichia_filaris-gene41': 1, 'Tetraphis_pellucida-gene153': 1, 'tRNA-Phe-gaa': 1, 'Chenopodium_quinoa-gene133': 1, 'trnC-GCA': 1, 'Vaccinium_macrocarpon-gene94': 1})
+2020-03-20 14:48:53,308 -INFO- get product `tRNA-Phe` from Counter({'tRNA-Phe': 134, 'tRNA-Leu': 2, 'tRNA-Tyr': 2, 'tRNA-Cys': 1})
+2020-03-20 14:48:53,310 -INFO- get exon number `1` from Counter({1: 137, 2: 2})
+2020-03-20 14:48:53,311 -INFO- get trans_splicing `False` from Counter({False: 139})
+2020-03-20 14:48:58,947 -INFO- get gene name `trnP-UGG` from Counter({'trnP-UGG': 55, 'trnP-TGG': 33, 'trnP': 23, 'trnP-ugg': 3, 'tRNA-Pro': 2, 'tRNA-Pro-UGG': 2, 'trnP-1': 2, 'trnP-a-1': 1, 'Tetraphis_pellucida-gene208': 1, 'Phoenix_dactylifera-gene176': 1, 'trnP-tgg': 1, 'trnP-a': 1, 'Chenopodium_quinoa-gene135': 1, 'tRNA-Pro-ugg': 1, 'Vaccinium_macrocarpon-gene92': 1, 'trnP-a1': 1, 'trnF-TGG': 1, 'tRNA-Pro-TGG': 1, 'Phoenix_dactylifera-gene108': 1, 'Physcomitrella_patens-gene95': 1, 'Syntrichia_filaris-gene98': 1, 'Sinapis_arvensis-gene157': 1})
+2020-03-20 14:48:58,947 -INFO- get product `tRNA-Pro` from Counter({'tRNA-Pro': 134, 'tRNA-Phe': 1})
+2020-03-20 14:48:58,949 -INFO- get exon number `1` from Counter({1: 135})
+2020-03-20 14:48:58,949 -INFO- get trans_splicing `False` from Counter({False: 135})
+2020-03-20 14:49:00,599 -INFO- get gene name `trnG-GCC` from Counter({'trnG-GCC': 96, 'trnG': 16, 'trnG-gcc': 6, 'tRNA-Gly-GCC': 3, 'tRNA-Gly': 2, 'trnG-GCC-1': 1, 'Physcomitrella_patens-gene132': 1, 'tRNA-Gly-gcc': 1, 'Syntrichia_filaris-gene132': 1, 'Tetraphis_pellucida-gene250': 1, 'Chenopodium_quinoa-gene83': 1, 'Sinapis_arvensis-gene79': 1})
+2020-03-20 14:49:00,600 -INFO- get product `tRNA-Gly` from Counter({'tRNA-Gly': 130})
+2020-03-20 14:49:00,602 -INFO- get exon number `1` from Counter({1: 130})
+2020-03-20 14:49:00,603 -INFO- get trans_splicing `False` from Counter({False: 130})
+2020-03-20 14:49:02,227 -INFO- get gene name `trnS-UGA` from Counter({'trnS-UGA': 60, 'trnS-TGA': 24, 'trnS': 13, 'trnS-uga': 4, 'tRNA-Ser-UGA': 2, 'trnS-b': 2, 'Phoenix_dactylifera-gene175': 1, 'trnS-3': 1, 'trnS-1': 1, 'Syntrichia_filaris-gene66': 1, 'tRNA-Ser-TGA': 1, 'tRNA-Ser': 1, 'trnS-UGU': 1, 'Chenopodium_quinoa-gene22': 1, 'Nepenthes_ventricosa_x_Nepenthes_alata-gene177': 1, 'trnS-TGT': 1, 'Physcomitrella_patens-gene66': 1, 'trnS-b-1': 1, 'Tetraphis_pellucida-gene177': 1, 'tRNA-Ser-uga': 1, 'Sinapis_arvensis-gene138': 1, 'Vaccinium_macrocarpon-gene147': 1})
+2020-03-20 14:49:02,228 -INFO- get product `tRNA-Ser` from Counter({'tRNA-Ser': 121})
+2020-03-20 14:49:02,229 -INFO- get exon number `1` from Counter({1: 121})
+2020-03-20 14:49:02,230 -INFO- get trans_splicing `False` from Counter({False: 121})
+2020-03-20 14:49:05,439 -INFO- get gene name `trnQ-UUG` from Counter({'trnQ-UUG': 40, 'trnQ-TTG': 32, 'trnQ': 21, 'trnQ-uug': 7, 'trnQ-1': 3, 'tRNA-Gln': 3, 'tRNA-Gln-UUG': 2, 'tRNA-Gln-TTG': 2, 'Phoenix_dactylifera-gene17': 1, 'trnQ-ttg': 1, 'Chenopodium_quinoa-gene85': 1, 'Vaccinium_macrocarpon-gene193': 1, 'Sinapis_arvensis-gene187': 1, 'trnQ-TTG-1': 1, 'tRNA-Gln-uug': 1})
+2020-03-20 14:49:05,440 -INFO- get product `tRNA-Gln` from Counter({'tRNA-Gln': 116, 'tRNA-Arg': 1})
+2020-03-20 14:49:05,442 -INFO- get exon number `1` from Counter({1: 117})
+2020-03-20 14:49:05,442 -INFO- get trans_splicing `False` from Counter({False: 117})
+2020-03-20 14:49:12,259 -INFO- get gene name `trnM` from Counter({'trnM': 29, 'trnM-CAT': 27, 'trnM-CAU': 23, 'trnM-CAT-cp': 3, 'trnM-cp': 2, 'tRNA-Met-CAU': 2, 'tRNA-Met-CAT-cp': 1, 'Vaccinium_macrocarpon-gene35': 1, 'trnM-a': 1, 'Vaccinium_macrocarpon-gene181': 1, 'tRNA-met': 1, 'trnM-CAU-cp': 1, 'Sinapis_arvensis-gene192': 1, 'tRNA-Met': 1, 'trnM-CAU4': 1, 'trnM-CAU5': 1, 'Chenopodium_quinoa-gene11': 1, 'trnM-cau': 1, 'trnM-a-1': 1, 'tRNA-Met-cau': 1, 'trnM-cp-CAT': 1, 'trnM-cat': 1})
+2020-03-20 14:49:12,260 -INFO- get product `tRNA-Met` from Counter({'tRNA-Met': 102})
+2020-03-20 14:49:12,261 -INFO- get exon number `1` from Counter({1: 102})
+2020-03-20 14:49:12,262 -INFO- get trans_splicing `False` from Counter({False: 102})
+2020-03-20 14:49:18,999 -INFO- get gene name `trnN` from Counter({'trnN': 25, 'trnN-GTT': 24, 'trnN-GUU': 22, 'trnN-cp': 6, 'trnN-GTT-cp': 3, 'tRNA-Asn': 2, 'tRNA-Asn-GUU': 2, 'trnN-guu': 2, 'trnN-GUU-cp': 2, 'Chenopodium_quinoa-gene7': 1, 'Sinapis_arvensis-gene110': 1, 'trnK-cuu': 1, 'trnN-gtt': 1, 'tRNA-Asn-GTT': 1, 'tRNA-Asn-guu': 1, 'Vaccinium_macrocarpon-gene106': 1, 'trnX-Xxx': 1, 'trnN-a1-ct': 1})
+2020-03-20 14:49:19,000 -INFO- get product `tRNA-Asn` from Counter({'tRNA-Asn': 94, 'tRNA-Asp': 1, 'tRNA-Lys': 1, 'tRNA-OTHER': 1})
+2020-03-20 14:49:19,001 -INFO- get exon number `1` from Counter({1: 97})
+2020-03-20 14:49:19,002 -INFO- get trans_splicing `False` from Counter({False: 97})
+2020-03-20 14:49:22,247 -INFO- get gene name `trnS-GCU` from Counter({'trnS-GCU': 35, 'trnS-GCT': 27, 'trnS': 18, 'trnS-gcu': 5, 'trnS-a': 3, 'tRNA-Ser': 2, 'Sinapis_arvensis-gene173': 1, 'tRNA-Ser-gcu': 1, 'tRNA-Ser-GCT': 1, 'trnS-1': 1, 'Phoenix_dactylifera-gene178': 1, 'trnS-gct': 1, 'Chenopodium_quinoa-gene131': 1, 'trnS-UGA': 1, 'trnF-GCT': 1, 'tRNA-Ser-GCU': 1, 'Vaccinium_macrocarpon-gene96': 1, 'trnS-3': 1})
+2020-03-20 14:49:22,248 -INFO- get product `tRNA-Ser` from Counter({'tRNA-Ser': 102})
+2020-03-20 14:49:22,249 -INFO- get exon number `1` from Counter({1: 86, 2: 16})
+2020-03-20 14:49:22,249 -INFO- get trans_splicing `False` from Counter({False: 102})
+2020-03-20 14:49:26,249 -INFO- get gene name `trnW-CCA` from Counter({'trnW-CCA': 52, 'trnW': 22, 'trnW-cca': 5, 'trnW-cp': 3, 'trnW-CCA-cp': 2, 'tRNA-Trp-CCA': 2, 'tRNA-Trp': 2, 'tRNA-Trp-CCA-cp': 1, 'Vaccinium_macrocarpon-gene40': 1, 'Chenopodium_quinoa-gene168': 1, 'Sinapis_arvensis-gene167': 1, 'trnW-cp-1': 1, 'tRNA-Trp-cca': 1, 'trnW-cp-CCA': 1})
+2020-03-20 14:49:26,249 -INFO- get product `tRNA-Trp` from Counter({'tRNA-Trp': 94, 'tRNA-Tyr': 1})
+2020-03-20 14:49:26,251 -INFO- get exon number `1` from Counter({1: 95})
+2020-03-20 14:49:26,252 -INFO- get trans_splicing `False` from Counter({False: 95})
+2020-03-20 14:49:29,798 -INFO- get gene name `trnH` from Counter({'trnH': 22, 'trnH-GUG': 22, 'trnH-GTG': 22, 'trnH-cp': 4, 'trnH-gug': 4, 'trnH-GTG-cp': 3, 'tRNA-His-GUG': 2, 'tRNA-His': 2, 'trnH-gtg': 1, 'Sinapis_arvensis-gene175': 1, 'tRNA-His-gug': 1, 'trnH-cp-1': 1, 'tRNA-His-GTG-cp': 1, 'trnH-ct': 1, 'Chenopodium_quinoa-gene15': 1, 'Vaccinium_macrocarpon-gene195': 1, 'trnH-GUG-cp': 1})
+2020-03-20 14:49:29,799 -INFO- get product `tRNA-His` from Counter({'tRNA-His': 90})
+2020-03-20 14:49:29,800 -INFO- get exon number `1` from Counter({1: 90})
+2020-03-20 14:49:29,801 -INFO- get trans_splicing `False` from Counter({False: 90})
+2020-03-20 14:49:30,985 -INFO- get gene name `trnC-GCA` from Counter({'trnC-GCA': 48, 'trnC': 21, 'trnC-gca': 6, 'tRNA-Cys-GCA': 3, 'tRNA-Cys': 2, 'trnC-GCA-2': 2, 'Vaccinium_macrocarpon-gene104': 1, 'Chenopodium_quinoa-gene9': 1, 'Sinapis_arvensis-gene155': 1, 'trnC-1': 1, 'tRNA-Cys-gca': 1})
+2020-03-20 14:49:30,987 -INFO- get product `tRNA-Cys` from Counter({'tRNA-Cys': 87})
+2020-03-20 14:49:30,988 -INFO- get exon number `1` from Counter({1: 87})
+2020-03-20 14:49:30,988 -INFO- get trans_splicing `False` from Counter({False: 87})
+2020-03-20 14:49:33,796 -INFO- get gene name `trnD-GUC` from Counter({'trnD-GUC': 23, 'trnD-GTC': 23, 'trnD': 15, 'trnD-guc': 2, 'tRNA-Asp': 2, 'tRNA-Asp-GUC': 2, 'trnD-cp-GTC': 1, 'trnQ-UUG': 1, 'trnD-GTC-cp': 1, 'trnD-GUC-cp': 1, 'tRNA-Asp-guc': 1, 'tRNA-Asp-GTC': 1, 'Sinapis_arvensis-gene2': 1, 'Chenopodium_quinoa-gene44': 1, 'trnD-gtc': 1, 'Vaccinium_macrocarpon-gene183': 1})
+2020-03-20 14:49:33,797 -INFO- get product `tRNA-Asp` from Counter({'tRNA-Asp': 75, 'tRNA-Gln': 1, 'tRNA-Asn': 1})
+2020-03-20 14:49:33,798 -INFO- get exon number `1` from Counter({1: 77})
+2020-03-20 14:49:33,798 -INFO- get trans_splicing `False` from Counter({False: 77})
+2020-03-20 14:49:35,396 -INFO- get gene name `trnD-GUC` from Counter({'trnD-GUC': 48, 'trnD': 9, 'trnD-guc': 6, 'trnD-GTC': 6, 'trnD-1': 2, 'Tetraphis_pellucida-gene59': 1, 'trND-GUC': 1, 'Syntrichia_filaris-gene217': 1, 'Physcomitrella_patens-gene190': 1, 'trnD-a1': 1, 'tRNA-Asp-GUC': 1, 'Phoenix_dactylifera-gene63': 1, 'tRNA-Asp': 1})
+2020-03-20 14:49:35,397 -INFO- get product `tRNA-Asp` from Counter({'tRNA-Asp': 79})
+2020-03-20 14:49:35,398 -INFO- get exon number `1` from Counter({1: 79})
+2020-03-20 14:49:35,398 -INFO- get trans_splicing `False` from Counter({False: 79})
+2020-03-20 14:49:40,389 -INFO- get gene name `trnR-UCU` from Counter({'trnR-UCU': 38, 'trnR-UCG': 5, 'trnR': 2, 'trnR-ucu': 1, 'trnR-ucg': 1, 'Syntrichia_filaris-gene79': 1, 'Tetraphis_pellucida-gene189': 1, 'Physcomitrella_patens-gene76': 1})
+2020-03-20 14:49:40,390 -INFO- get product `tRNA-Arg` from Counter({'tRNA-Arg': 50})
+2020-03-20 14:49:40,391 -INFO- get exon number `1` from Counter({1: 50})
+2020-03-20 14:49:40,391 -INFO- get trans_splicing `False` from Counter({False: 50})
+2020-03-20 14:49:44,246 -INFO- get gene name `trnMf-CAU` from Counter({'trnMf-CAU': 43, 'tRNA-fMet': 1, 'Tetraphis_pellucida-gene216': 1, 'trnM-cau': 1, 'trnMf-cau': 1, 'trnM-cau-f': 1, 'Physcomitrella_patens-gene103': 1, 'Syntrichia_filaris-gene106': 1})
+2020-03-20 14:49:44,246 -INFO- get product `tRNA-Met` from Counter({'tRNA-Met': 47, 'tRNA-fMet': 3})
+2020-03-20 14:49:44,247 -INFO- get exon number `1` from Counter({1: 50})
+2020-03-20 14:49:44,247 -INFO- get trans_splicing `False` from Counter({False: 50})
+2020-03-20 14:49:44,730 -INFO- get gene name `trnW-CCA` from Counter({'trnW-CCA': 45, 'trnW-cca': 3, 'trnW': 3, 'Syntrichia_filaris-gene210': 1, 'Tetraphis_pellucida-gene52': 1, 'Physcomitrella_patens-gene183': 1, 'tRNA-Trp': 1})
+2020-03-20 14:49:44,731 -INFO- get product `tRNA-Trp` from Counter({'tRNA-Trp': 55})
+2020-03-20 14:49:44,732 -INFO- get exon number `1` from Counter({1: 55})
+2020-03-20 14:49:44,732 -INFO- get trans_splicing `False` from Counter({False: 55})
+2020-03-20 14:49:45,147 -INFO- get gene name `trnH-GUG` from Counter({'trnH-GUG': 45, 'trnH-gug': 3, 'trnH': 2, 'trnH-GTG': 1, 'Physcomitrella_patens-gene109': 1, 'Tetraphis_pellucida-gene222': 1, 'Syntrichia_filaris-gene112': 1})
+2020-03-20 14:49:45,148 -INFO- get product `tRNA-His` from Counter({'tRNA-His': 54})
+2020-03-20 14:49:45,149 -INFO- get exon number `1` from Counter({1: 54})
+2020-03-20 14:49:45,149 -INFO- get trans_splicing `False` from Counter({False: 54})
+2020-03-20 14:49:45,152 -INFO- get gene name `trnA-UGC` from Counter({'trnA-UGC': 45, 'trnA-ugc': 3, 'Tetraphis_pellucida-gene61': 1, 'Physcomitrella_patens-gene192': 1, 'trnA': 1, 'Syntrichia_filaris-gene219': 1})
+2020-03-20 14:49:45,153 -INFO- get product `tRNA-Ala` from Counter({'tRNA-Ala': 52})
+2020-03-20 14:49:45,154 -INFO- get exon number `1` from Counter({1: 52})
+2020-03-20 14:49:45,154 -INFO- get trans_splicing `False` from Counter({False: 52})
+2020-03-20 14:49:45,156 -INFO- get gene name `trnL-UAG` from Counter({'trnL-UAG': 44, 'trnL-uag': 3, 'trnL': 2, 'Physcomitrella_patens-gene64': 1, 'Tetraphis_pellucida-gene175': 1, 'Syntrichia_filaris-gene64': 1})
+2020-03-20 14:49:45,157 -INFO- get product `tRNA-Leu` from Counter({'tRNA-Leu': 52})
+2020-03-20 14:49:45,157 -INFO- get exon number `1` from Counter({1: 52})
+2020-03-20 14:49:45,158 -INFO- get trans_splicing `False` from Counter({False: 52})
+2020-03-20 14:49:45,160 -INFO- get gene name `trnC-GCA` from Counter({'trnC-GCA': 45, 'trnC-gca': 3, 'Tetraphis_pellucida-gene151': 1, 'Physcomitrella_patens-gene40': 1, 'Syntrichia_filaris-gene39': 1})
+2020-03-20 14:49:45,160 -INFO- get product `tRNA-Cys` from Counter({'tRNA-Cys': 51})
+2020-03-20 14:49:45,161 -INFO- get exon number `1` from Counter({1: 51})
+2020-03-20 14:49:45,161 -INFO- get trans_splicing `False` from Counter({False: 51})
+2020-03-20 14:49:45,163 -INFO- get gene name `trnM-CAU` from Counter({'trnM-CAU': 44, 'Tetraphis_pellucida-gene212': 1, 'trnMe-cau': 1, 'trnM-cau': 1, 'Syntrichia_filaris-gene102': 1, 'Physcomitrella_patens-gene99': 1, 'trnM-cau-e': 1})
+2020-03-20 14:49:45,164 -INFO- get product `tRNA-Met` from Counter({'tRNA-Met': 50})
+2020-03-20 14:49:45,165 -INFO- get exon number `1` from Counter({1: 50})
+2020-03-20 14:49:45,165 -INFO- get trans_splicing `False` from Counter({False: 50})
+2020-03-20 14:49:45,564 -INFO- get gene name `trnR-ACG` from Counter({'trnR-ACG': 42, 'trnR-acg': 2, 'Physcomitrella_patens-gene134': 1, 'Tetraphis_pellucida-gene252': 1, 'Syntrichia_filaris-gene134': 1, 'trnR': 1})
+2020-03-20 14:49:45,565 -INFO- get product `tRNA-Arg` from Counter({'tRNA-Arg': 48})
+2020-03-20 14:49:45,566 -INFO- get exon number `1` from Counter({1: 48})
+2020-03-20 14:49:45,566 -INFO- get trans_splicing `False` from Counter({False: 48})
+2020-03-20 14:49:47,577 -INFO- get gene name `trnS-GGA` from Counter({'trnS-GGA': 20, 'trnS': 13, 'trnS-2': 2, 'trnS-GGA-cp': 2, 'tRNA-Ser-GGA-cp': 1, 'Phoenix_dactylifera-gene154': 1, 'tRNA-Ser': 1, 'Sinapis_arvensis-gene23': 1, 'Chenopodium_quinoa-gene173': 1, 'trnS-cp-GGA': 1, 'trnS-GCT': 1, 'tRNA-Ser-gga': 1})
+2020-03-20 14:49:47,578 -INFO- get product `tRNA-Ser` from Counter({'tRNA-Ser': 45})
+2020-03-20 14:49:47,578 -INFO- get exon number `1` from Counter({1: 45})
+2020-03-20 14:49:47,578 -INFO- get trans_splicing `False` from Counter({False: 45})
+2020-03-20 14:49:47,581 -INFO- get gene name `trnV-UAC` from Counter({'trnV-UAC': 39, 'trnV-uac': 5, 'Tetraphis_pellucida-gene57': 1, 'Syntrichia_filaris-gene215': 1, 'Physcomitrella_patens-gene188': 1, 'trnV-TAC': 1})
+2020-03-20 14:49:47,581 -INFO- get product `tRNA-Val` from Counter({'tRNA-Val': 48})
+2020-03-20 14:49:47,581 -INFO- get exon number `1` from Counter({1: 48})
+2020-03-20 14:49:47,582 -INFO- get trans_splicing `False` from Counter({False: 48})
+2020-03-20 14:49:47,583 -INFO- get gene name `trnG-UCC` from Counter({'trnG-UCC': 40, 'trnG-ucc': 2, 'tRNA-Gly': 1, 'Physcomitrella_patens-gene68': 1, 'trnG': 1, 'Syntrichia_filaris-gene68': 1, 'Tetraphis_pellucida-gene179': 1})
+2020-03-20 14:49:47,583 -INFO- get product `tRNA-Gly` from Counter({'tRNA-Gly': 47})
+2020-03-20 14:49:47,584 -INFO- get exon number `1` from Counter({1: 47})
+2020-03-20 14:49:47,584 -INFO- get trans_splicing `False` from Counter({False: 47})
+2020-03-20 14:49:50,185 -INFO- get gene name `trnP-TGG` from Counter({'trnP-TGG': 11, 'trnP-UGG': 7, 'trnP': 7, 'trnP-AGG': 2, 'trnW-CCA': 2, 'trnP-TGG-cp': 1, 'tRNA-Pro-ugg': 1, 'trnP-b-cp-1': 1, 'trnP-GGG': 1, 'trnP-UGG2': 1, 'trnL-GAG': 1, 'trnP-cp': 1, 'tRNA-Pro-UGG': 1, 'tRNA-Pro-GGG': 1, 'trnP-b-cp': 1})
+2020-03-20 14:49:50,186 -INFO- get product `tRNA-Pro` from Counter({'tRNA-Pro': 36, 'tRNA-Trp': 2, 'tRNA-Leu': 1})
+2020-03-20 14:49:50,186 -INFO- get exon number `1` from Counter({1: 39})
+2020-03-20 14:49:50,186 -INFO- get trans_splicing `False` from Counter({False: 39})
+2020-03-20 14:49:52,755 -INFO- get gene name `trnL-CAA` from Counter({'trnL-CAA': 7, 'trnI-CAU': 4, 'trnI': 3, 'trnM': 3, 'trnI-UAU': 3, 'trnM-CAT': 2, 'tRNA-Ile': 2, 'tRNA-Met': 1, 'tRNA-Ile-UAU': 1, 'tRNA-Ile-TAT-cp': 1, 'trnL-CAA3': 1, 'trnM-CAU': 1, 'trnI-cp': 1, 'trnI-CAT': 1, 'trnI-ct': 1, 'Phoenix_dactylifera-gene49': 1, 'trnM-cau': 1})
+2020-03-20 14:49:52,758 -INFO- get gene name `trnL-UAA` from Counter({'trnL-UAA': 32, 'trnL': 3, 'trnL-uaa': 1, 'Tetraphis_pellucida-gene226': 1, 'Physcomitrella_patens-gene113': 1, 'Syntrichia_filaris-gene116': 1})
+2020-03-20 14:49:52,758 -INFO- get product `tRNA-Leu` from Counter({'tRNA-Leu': 39})
+2020-03-20 14:49:52,758 -INFO- get exon number `1` from Counter({1: 39})
+2020-03-20 14:49:52,758 -INFO- get trans_splicing `False` from Counter({False: 39})
+2020-03-20 14:49:53,185 -INFO- get gene name `trnL-CAA` from Counter({'trnL-CAA': 33, 'trnL-caa': 1, 'Tetraphis_pellucida-gene224': 1, 'Physcomitrella_patens-gene111': 1, 'Syntrichia_filaris-gene114': 1})
+2020-03-20 14:49:53,185 -INFO- get product `tRNA-Leu` from Counter({'tRNA-Leu': 37})
+2020-03-20 14:49:53,186 -INFO- get exon number `1` from Counter({1: 37})
+2020-03-20 14:49:53,186 -INFO- get trans_splicing `False` from Counter({False: 37})
+2020-03-20 14:49:53,188 -INFO- get gene name `trnT-GGU` from Counter({'trnT-GGU': 31, 'trnT-ggu': 2, 'Syntrichia_filaris-gene221': 1, 'Physcomitrella_patens-gene194': 1, 'Tetraphis_pellucida-gene63': 1})
+2020-03-20 14:49:53,188 -INFO- get product `tRNA-Thr` from Counter({'tRNA-Thr': 36})
+2020-03-20 14:49:53,189 -INFO- get exon number `1` from Counter({1: 36})
+2020-03-20 14:49:53,189 -INFO- get trans_splicing `False` from Counter({False: 36})
+2020-03-20 14:49:53,190 -INFO- get gene name `trnQ-UUG` from Counter({'trnQ-UUG': 28, 'Physcomitrella_patens-gene62': 1, 'Tetraphis_pellucida-gene173': 1, 'Syntrichia_filaris-gene62': 1})
+2020-03-20 14:49:53,190 -INFO- get product `tRNA-Gln` from Counter({'tRNA-Gln': 31})
+2020-03-20 14:49:53,191 -INFO- get exon number `1` from Counter({1: 31})
+2020-03-20 14:49:53,191 -INFO- get trans_splicing `False` from Counter({False: 31})
+2020-03-20 14:49:54,834 -INFO- get gene name `trnF-GAA` from Counter({'trnF-GAA': 11, 'trnF': 5, 'trnF-cp': 2, 'trnL-CAA': 1, 'trnF-ct': 1})
+2020-03-20 14:49:54,834 -INFO- get product `tRNA-Phe` from Counter({'tRNA-Phe': 19, 'tRNA-Leu': 1})
+2020-03-20 14:49:54,835 -INFO- get exon number `1` from Counter({1: 20})
+2020-03-20 14:49:54,835 -INFO- get trans_splicing `False` from Counter({False: 20})
+2020-03-20 14:49:55,267 -INFO- get gene name `trnV-GAC` from Counter({'trnV-GAC': 11, 'trnV': 2, 'tRNA-Val-gac': 1, 'trnV-ct': 1, 'tRNA-Val': 1, 'tRNA-Val-GAC-cp': 1, 'trnV-gac': 1})
+2020-03-20 14:49:55,268 -INFO- get product `tRNA-Val` from Counter({'tRNA-Val': 18})
+2020-03-20 14:49:55,268 -INFO- get exon number `1` from Counter({1: 18})
+2020-03-20 14:49:55,268 -INFO- get trans_splicing `False` from Counter({False: 18})
+2020-03-20 14:49:55,679 -INFO- get gene name `trnC-GCA` from Counter({'trnC-GCA': 7, 'trnC': 3, 'trnC-GCA-1': 2, 'trnC-gca': 1, 'Chenopodium_quinoa-gene177': 1, 'trnC-2': 1, 'tRNA-Cys-gca': 1, 'Phoenix_dactylifera-gene107': 1})
+2020-03-20 14:49:56,092 -INFO- get gene name `trnL-CAA` from Counter({'trnL-CAA': 8, 'trnL': 3, 'trnW-CCA': 1, 'Sinapis_arvensis-gene163': 1, 'Vaccinium_macrocarpon-gene129': 1, 'trnL-cp': 1, 'trnL-c-ct': 1})
+2020-03-20 14:49:56,093 -INFO- get product `tRNA-Leu` from Counter({'tRNA-Leu': 15, 'tRNA-Trp': 1})
+2020-03-20 14:49:56,093 -INFO- get exon number `1` from Counter({1: 16})
+2020-03-20 14:49:56,093 -INFO- get trans_splicing `False` from Counter({False: 16})
+2020-03-20 14:49:56,095 -INFO- get gene name `trnL-UAA` from Counter({'trnL-UAA': 13, 'trnL-uaa': 2})
+2020-03-20 14:49:56,096 -INFO- get product `tRNA-Leu` from Counter({'tRNA-Leu': 15})
+2020-03-20 14:49:56,096 -INFO- get exon number `1` from Counter({1: 15})
+2020-03-20 14:49:56,096 -INFO- get trans_splicing `False` from Counter({False: 15})
+2020-03-20 14:49:56,098 -INFO- get gene name `trnN-GUU` from Counter({'trnN-GUU': 13, 'trnN-guu': 2})
+2020-03-20 14:49:56,098 -INFO- get product `tRNA-Asn` from Counter({'tRNA-Asn': 15})
+2020-03-20 14:49:56,098 -INFO- get exon number `1` from Counter({1: 15})
+2020-03-20 14:49:56,098 -INFO- get trans_splicing `False` from Counter({False: 15})
+2020-03-20 14:49:56,099 -INFO- get gene name `trnP-UGG` from Counter({'trnP-UGG': 12, 'trnP-ugg': 2, 'tRNA-Pro': 1})
+2020-03-20 14:49:56,099 -INFO- get product `tRNA-Pro` from Counter({'tRNA-Pro': 15})
+2020-03-20 14:49:56,100 -INFO- get exon number `1` from Counter({1: 15})
+2020-03-20 14:49:56,100 -INFO- get trans_splicing `False` from Counter({False: 15})
+2020-03-20 14:49:56,101 -INFO- get gene name `rrn5` from Counter({'rrn5': 15})
+2020-03-20 14:49:56,101 -INFO- get product `5S ribosomal RNA` from Counter({'5S ribosomal RNA': 15})
+2020-03-20 14:49:56,101 -INFO- get exon number `1` from Counter({1: 15})
+2020-03-20 14:49:56,101 -INFO- get trans_splicing `False` from Counter({False: 15})
+2020-03-20 14:49:56,102 -INFO- get gene name `trnL-CAA` from Counter({'trnL-CAA': 12, 'trnL-caa': 2, 'tRNA-Leu': 1})
+2020-03-20 14:49:56,102 -INFO- get product `tRNA-Leu` from Counter({'tRNA-Leu': 15})
+2020-03-20 14:49:56,102 -INFO- get exon number `1` from Counter({1: 15})
+2020-03-20 14:49:56,103 -INFO- get trans_splicing `False` from Counter({False: 15})
+2020-03-20 14:49:56,562 -INFO- get gene name `trnR-ACG` from Counter({'trnR-ACG': 7, 'trnR': 2, 'trnR-a': 1, 'trnR-b-ct': 1})
+2020-03-20 14:49:56,563 -INFO- get gene name `trnM-CAU` from Counter({'trnM-CAU': 4, 'trnM-CAT': 2, 'trnM': 1, 'trnfM-cau': 1, 'Phoenix_dactylifera-gene149': 1, 'trnM-CAU3': 1})
+2020-03-20 14:49:56,565 -INFO- get gene name `trnR-TCT` from Counter({'trnR-TCT': 4, 'trnR': 3, 'trnR-UCU': 1, 'tRNA-Arg-UCU': 1})
+2020-03-20 14:49:56,566 -INFO- get gene name `trnC` from Counter({'trnC': 3, 'trnC-GCA': 2, 'trnC-cp': 2, 'trnC-ct': 1})
+2020-03-20 14:49:58,739 -INFO- get gene name `trnM-CAT` from Counter({'trnM-CAT': 1, 'trnM-CAU': 1, 'tRNA-Met-CAT': 1})
+2020-03-20 14:49:59,155 -INFO- get gene name `trnI-GAU` from Counter({'trnI-GAU': 4, 'trnI-ct': 1, 'trnI-gau': 1})
+2020-03-20 14:49:59,559 -INFO- get gene name `trnT-GGT` from Counter({'trnT-GGT': 3, 'trnT-GGT-cp': 1, 'tRNA-Thr-GGU': 1, 'trnT': 1, 'trnT-GGU': 1})
+2020-03-20 14:49:59,561 -INFO- get gene name `trnT` from Counter({'trnT': 2, 'trnT-UGU': 2, 'trnM-CAT': 1, 'trnQ-UUG': 1, 'trnK-TTT': 1})
+2020-03-20 14:49:59,562 -INFO- get gene name `trnT-UGU` from Counter({'trnT-UGU': 3, 'trnT': 1, 'trnT-TGT': 1, 'Phoenix_dactylifera-gene155': 1})
+2020-03-20 14:49:59,563 -INFO- get gene name `trnA` from Counter({'trnA': 2, 'trnA-UGC': 2, 'trnA-ugc': 1})
+2020-03-20 14:49:59,564 -INFO- get gene name `trnY-GTA` from Counter({'trnY-GTA': 2, 'trnY': 1, 'tRNA-Tyr-GUA': 1, 'tRNA-Tyr': 1})
+2020-03-20 14:49:59,565 -INFO- get gene name `trnC-GCA` from Counter({'trnC-GCA': 4, 'trnC-GCA2': 1})
+2020-03-20 14:49:59,965 -INFO- get gene name `trnL` from Counter({'trnL': 2, 'trnL-a': 1, 'trnL-AAC': 1})
+2020-03-20 14:49:59,967 -INFO- get gene name `trnQ-TTG` from Counter({'trnQ-TTG': 2, 'trnQ-UUG2': 1, 'trnQ': 1})
+2020-03-20 14:49:59,968 -INFO- get gene name `trnG-GCC` from Counter({'trnG-GCC': 3, 'trnG': 1})
+2020-03-20 14:49:59,969 -INFO- get gene name `trnS-TGA` from Counter({'trnS-TGA': 2, 'trnS-UGA': 1, 'trnS': 1})
+2020-03-20 14:49:59,970 -INFO- get gene name `tRNA-Glu` from Counter({'tRNA-Glu': 1, 'trnE-TTC': 1, 'trnE-UUC': 1, 'tRNA-Glu-UUC': 1})
+2020-03-20 14:50:00,387 -INFO- get gene name `trnS-GCT` from Counter({'trnS-GCT': 3})
+2020-03-20 14:50:00,389 -INFO- get gene name `trnT-UGU` from Counter({'trnT-UGU': 2, 'trnT-TGT': 1})
+2020-03-20 14:50:00,390 -INFO- get gene name `trnP` from Counter({'trnP': 1, 'trnP-TGG': 1, 'tRNA-Pro-TGG-cp': 1})
+2020-03-20 14:50:00,391 -INFO- get gene name `trnN-GUU` from Counter({'trnN-GUU': 1, 'tRNA-Asn-GUU': 1, 'trnK-UUU': 1})
+2020-03-20 14:50:00,392 -INFO- get gene name `trnE-TTC` from Counter({'trnE-TTC': 1, 'trnE-cp': 1, 'trnE': 1})
+2020-03-20 14:50:00,846 -INFO- get gene name `trnMf-CAU` from Counter({'trnMf-CAU': 2})
+2020-03-20 14:50:00,848 -INFO- get gene name `tRNA-Leu-UAG` from Counter({'tRNA-Leu-UAG': 1, 'trnL-TAG': 1})
+2020-03-20 14:50:00,849 -INFO- get gene name `trnQ-UUG` from Counter({'trnQ-UUG': 1, 'trnQ-uug': 1})
+2020-03-20 14:50:00,850 -INFO- get gene name `trnM-CAU` from Counter({'trnM-CAU': 2})
+2020-03-20 14:50:00,852 -INFO- get gene name `trnN-AUU` from Counter({'trnN-AUU': 1, 'trnK-CTT': 1})
+2020-03-20 14:50:00,853 -INFO- get gene name `trnK-UUU` from Counter({'trnK-UUU': 1, 'Phoenix_dactylifera-gene67': 1})
+2020-03-20 14:50:00,854 -INFO- get gene name `Cocos_nucifera-gene217` from Counter({'Cocos_nucifera-gene217': 1, 'rrn5': 1})
+2020-03-20 14:50:00,855 -INFO- get gene name `Cocos_nucifera-gene219` from Counter({'Cocos_nucifera-gene219': 1, 'rrn26': 1})
+2020-03-20 14:50:00,856 -INFO- get gene name `trnN-GUU` from Counter({'trnN-GUU': 1, 'trnN': 1})
+2020-03-20 14:50:00,857 -INFO- get gene name `trnT-TGT` from Counter({'trnT-TGT': 2})
+2020-03-20 14:50:00,857 -INFO- get gene name `trnD-GUC` from Counter({'trnD-GUC': 1, 'tRNA-Asp-GTC-cp': 1})
+2020-03-20 14:50:00,858 -INFO- get gene name `trnN-GUU` from Counter({'trnN-GUU': 2})
+2020-03-20 14:50:00,859 -INFO- get gene name `trnX` from Counter({'trnX': 2})
+2020-03-20 14:50:00,859 -INFO- get gene name `trnH-ATG` from Counter({'trnH-ATG': 1, 'trnH-AUG': 1})
+2020-03-20 14:50:00,868 -INFO- extrat 46 genes: ['rrn26', 'rrn18', 'trnY-GUA', 'trnE-UUC', 'trnI-CAU', 'trnK-UUU', 'rrn5', 'trnfM', 'trnF-GAA', 'trnP-UGG', 'trnG-GCC', 'trnS-UGA', 'trnQ-UUG', 'trnM', 'trnN', 'trnS-GCU', 'trnW-CCA', 'trnH', 'trnC-GCA', 'trnD-GUC', 'trnD-GUC-20', 'trnR-UCU', 'trnMf-CAU', 'trnW-CCA-23', 'trnH-GUG', 'trnA-UGC', 'trnL-UAG', 'trnC-GCA-27', 'trnM-CAU', 'trnR-ACG', 'trnS-GGA', 'trnV-UAC', 'trnG-UCC', 'trnP-TGG', 'trnL-UAA', 'trnL-CAA', 'trnT-GGU', 'trnQ-UUG-38', 'trnF-GAA-39', 'trnV-GAC', 'trnL-CAA-42', 'trnL-UAA-43', 'trnN-GUU', 'trnP-UGG-45', 'rrn5-46', 'trnL-CAA-47']
+2020-03-20 14:50:00,868 -INFO- aligning sequences
+2020-03-20 15:02:49,407 -INFO- building hmm profiles

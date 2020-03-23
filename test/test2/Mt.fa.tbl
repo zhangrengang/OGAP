@@ -1,0 +1,326 @@
+>Feature Mt
+19299	20402	gene
+		gene	rps4
+19299	20212	CDS
+20246	20402
+		product	ribosomal protein S4
+		codon_start	1
+21065	21809	gene
+		gene	nad6
+21065	21516	CDS
+21644	21809
+		product	NADH dehydrogenase subunit 6
+		codon_start	1
+29224	31943	gene
+		gene	cox2
+29224	29923	CDS
+31855	31943
+		product	cytochrome c oxidase subunit 2
+		codon_start	1
+58313	58431	gene
+		gene	rrn5
+58314	58431	rRNA
+		product	5S ribosomal RNA
+58863	59219	gene
+		gene	nad3
+58863	59219	CDS
+		product	NADH dehydrogenase subunit 3
+		codon_start	1
+59264	59641	gene
+		gene	rps12
+59264	59641	CDS
+		product	ribosomal protein S12
+		codon_start	1
+79748	79260	gene
+		gene	rpl10
+79748	79260	CDS
+		product	ribosomal protein L10
+		codon_start	1
+98231	98158	gene
+		gene	trnD-GUC-cp
+98231	98158	tRNA
+		product	tRNA-Asp
+101409	110034	gene
+		gene	nad4
+101409	101869	CDS
+103296	103810
+106873	107295
+109946	110034
+		product	NADH dehydrogenase subunit 4
+		codon_start	1
+114579	114651	gene
+		gene	trnM-CAU-cp
+114579	114651	tRNA
+		product	tRNA-Met
+119530	119601	gene
+		gene	trnG-GCC
+119530	119601	tRNA
+		product	tRNA-Gly
+122983	123054	gene
+		gene	trnQ-UUG
+122983	123054	tRNA
+		product	tRNA-Gln
+167066	168834	gene
+		gene	atp1
+167066	168202	CDS
+168330	168636
+168758	168834
+		product	ATP synthase subunit 1
+		codon_start	1
+182935	183507	gene
+		gene	nad9
+182935	183507	CDS
+		product	NADH dehydrogenase subunit 9
+		codon_start	1
+184264	184337	gene
+		gene	trnP-UGG
+184264	184337	tRNA
+		product	tRNA-Pro
+184504	184577	gene
+		gene	trnW-CCA-cp
+184504	184577	tRNA
+		product	tRNA-Trp
+190441	190369	gene
+		gene	trnK-UUU
+190441	190369	tRNA
+		product	tRNA-Lys
+210676	211296	gene
+		gene	ccmB
+210676	211296	CDS
+		product	cytochrome c biogenesis B
+		codon_start	1
+227828	226647	gene
+		gene	cob
+227828	226647	CDS
+		product	apocytochrome b
+		codon_start	1
+229526	229261	gene
+		gene	rps14
+229526	229493	CDS
+229448	229261
+		product	ribosomal protein S14
+		codon_start	1
+230076	229528	gene
+		gene	rpl5
+230076	229528	CDS
+		product	ribosomal protein L5
+		codon_start	1
+240729	240815	gene
+		gene	trnS-UGA
+240729	240815	tRNA
+		product	tRNA-Ser
+248379	250331	gene
+		gene	matR
+248379	250331	CDS
+		product	maturase-related protein
+		codon_start	1
+250606	250908	gene
+		gene	sdh3
+250606	250908	CDS
+		product	succinate dehydrogenase subunit 3
+		codon_start	1
+262531	262130	gene
+		gene	sdh4
+262531	262130	CDS
+		product	succinate dehydrogenase subunit 4
+		codon_start	1
+263256	262459	gene
+		gene	cox3
+263256	262459	CDS
+		product	cytochrome c oxidase subunit 3
+		codon_start	1
+265274	264789	gene
+		gene	atp8
+265274	264789	CDS
+		product	ATP synthase subunit 8
+		codon_start	1
+307488	309870	gene
+		gene	ccmFC
+307488	308251	CDS
+309189	309870
+		product	cytochrome c biogenesis FC
+		codon_start	1
+313897	313977	gene
+		gene	trnI-CAU
+313897	313977	tRNA
+		product	tRNA-Ile
+318417	317698	gene
+		gene	mttB
+318417	317698	CDS
+		product	transport membrane protein
+		codon_start	1
+332076	335173	gene
+		gene	rrn26
+332077	335173	rRNA
+		product	26S ribosomal RNA
+335544	335617	gene
+		gene	trnfM-CAU
+335544	335617	tRNA
+		product	tRNA-Met
+346374	347126	gene
+		gene	ccmC
+346374	347126	CDS
+		product	cytochrome c biogenesis C
+		codon_start	1
+347113	347198	gene
+		gene	trnI-UAU-cp
+347113	347198	tRNA
+		product	tRNA-Ile
+355073	353340	gene
+		gene	ccmFN
+355073	353340	CDS
+		product	cytochrome c biogenesis FN
+		codon_start	1
+361562	360720	gene
+		gene	atp6
+361562	360720	CDS
+		product	ATP synthase subunit 6
+		codon_start	1
+402727	402143	gene
+		gene	atp4
+402727	402143	CDS
+		product	ATP synthase subunit 4
+		codon_start	1
+403171	402899	gene
+		gene	nad4L
+403171	402899	CDS
+		product	NADH dehydrogenase subunit 4L
+		codon_start	1
+459668	459962	gene
+145416	147134
+247658	247716
+412559	412301
+		gene	nad1
+		exception	trans-splicing
+459668	459962	CDS
+145416	145498
+146943	147134
+247658	247716
+412559	412301
+		product	NADH dehydrogenase subunit 1
+		codon_start	1
+56218	58150	gene
+416470	416426
+		gene	rrn18
+		exception	trans-splicing
+56219	58150	rRNA
+416470	416427
+		product	18S ribosomal RNA
+425250	425337	gene
+		gene	trnS-GCU
+425250	425337	tRNA
+		product	tRNA-Ser
+425694	425767	gene
+		gene	trnF-GAA
+425694	425767	tRNA
+		product	tRNA-Phe
+425982	426056	gene
+		gene	trnP-UGG
+425982	426056	tRNA
+		product	tRNA-Pro
+434173	434102	gene
+		gene	trnE-UUC
+434173	434102	tRNA
+		product	tRNA-Glu
+436504	436577	gene
+		gene	trnH-GUG-cp
+436504	436577	tRNA
+		product	tRNA-His
+441962	440379	gene
+		gene	cox1
+441962	440379	CDS
+		product	cytochrome c oxidase subunit 1
+		codon_start	1
+453818	454042	gene
+		gene	atp9
+453818	454042	CDS
+		product	ATP synthase subunit 9
+		codon_start	1
+458257	458586	gene
+		gene	rps10
+458257	458586	CDS
+		product	ribosomal protein S10
+		codon_start	1
+476506	479603	gene
+		gene	rrn26
+476507	479603	rRNA
+		product	26S ribosomal RNA
+479974	480047	gene
+		gene	trnfM-CAU
+479974	480047	tRNA
+		product	tRNA-Met
+490804	491556	gene
+		gene	ccmC
+490804	491556	CDS
+		product	cytochrome c biogenesis C
+		codon_start	1
+491543	491628	gene
+		gene	trnI-UAU-cp
+491543	491628	tRNA
+		product	tRNA-Ile
+499025	498486	gene
+		gene	rpl16
+499025	498486	CDS
+		product	ribosomal protein L16
+		codon_start	1
+500580	498928	gene
+		gene	rps3
+500580	498928	CDS
+		product	ribosomal protein S3
+		codon_start	1
+251554	253301	gene
+524257	519059
+		gene	nad2
+		exception	trans-splicing
+251554	251706	CDS
+252910	253301
+524257	524097
+521304	520732
+519246	519059
+		product	NADH dehydrogenase subunit 2
+		codon_start	1
+524867	524785	gene
+		gene	trnY-GUA
+524867	524785	tRNA
+		product	tRNA-Tyr
+525988	525917	gene
+		gene	trnN-GUU-cp
+525988	525917	tRNA
+		product	tRNA-Asn
+528145	528075	gene
+		gene	trnC-GCA
+528145	528075	tRNA
+		product	tRNA-Cys
+533187	539892	gene
+		gene	nad7
+533187	533329	CDS
+534212	534280
+536079	536545
+537609	537852
+539631	539892
+		product	NADH dehydrogenase subunit 7
+		codon_start	1
+454550	456846	gene
+549635	549171
+		gene	nad5
+		exception	trans-splicing
+454550	454778	CDS
+455627	456846
+549635	549171
+		product	NADH dehydrogenase subunit 5
+		codon_start	1
+556354	556426	gene
+		gene	trnC-GCA
+556354	556426	tRNA
+		product	tRNA-Cys
+558788	561519	gene
+		gene	rpl2
+558788	559686	CDS
+561405	561519
+		product	ribosomal protein L2
+		codon_start	1
+571668	572288	gene
+		gene	rps1
+571668	572288	CDS
+		product	ribosomal protein S1
+		codon_start	1

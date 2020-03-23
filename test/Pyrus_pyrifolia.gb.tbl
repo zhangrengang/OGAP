@@ -1,0 +1,318 @@
+>Feature KY563267.1
+6776	8506	gene
+		gene	ccmFn
+6776	8506	CDS
+		product	cytochrome c biogenesis FN
+		codon_start	1
+9937	9866	gene
+		gene	trnE-UUC
+9937	9866	tRNA
+		product	tRNA-Glu
+12367	12440	gene
+		gene	trnH-GUG-cp
+12367	12440	tRNA
+		product	tRNA-His
+25222	25524	gene
+		gene	nad4L
+25222	25524	CDS
+		product	NADH dehydrogenase subunit 4L
+		codon_start	1
+25684	26280	gene
+		gene	atp4
+25684	26280	CDS
+		product	ATP synthase subunit 4
+		codon_start	1
+34121	34873	gene
+		gene	ccmC
+34121	34873	CDS
+		product	cytochrome c biogenesis C
+		codon_start	1
+101929	102157	gene
+103006	104225
+50232	49834
+48904	48755
+		gene	nad5
+		exception	trans-splicing
+101929	102157	CDS
+103006	104225
+50232	49834
+48904	48755
+		product	NADH dehydrogenase subunit 5
+		codon_start	1
+58792	60390	gene
+		gene	cox1
+58792	60390	CDS
+		product	cytochrome c oxidase subunit 1
+		codon_start	1
+61012	61072	gene
+61314	62062
+		gene	mttB
+61012	61072	CDS
+61314	62062
+		product	transport membrane protein
+		codon_start	1
+64100	64019	gene
+		gene	trnM-CAU
+64100	64019	tRNA
+		product	tRNA-Met
+70688	69880	gene
+68972	68417
+		gene	ccmFc
+70688	69880	CDS
+68972	68417
+		product	cytochrome c biogenesis FC
+		codon_start	1
+73882	73265	gene
+		gene	nad6
+73882	73265	CDS
+		product	NADH dehydrogenase subunit 6
+		codon_start	1
+76719	75187	gene
+		gene	atp1
+76719	75187	CDS
+		product	ATP synthase subunit 1
+		codon_start	1
+101473	101721	gene
+		gene	atp9
+101473	101721	CDS
+		product	ATP synthase subunit 9
+		codon_start	1
+108234	108162	gene
+		gene	trnK-UUU
+108234	108162	tRNA
+		product	tRNA-Lys
+109133	109753	gene
+		gene	ccmB
+109133	109753	CDS
+		product	cytochrome c biogenesis B
+		codon_start	1
+129379	128477	gene
+		gene	atp6
+129379	128477	CDS
+		product	ATP synthase subunit 6
+		codon_start	1
+135148	135115	gene
+134577	134072
+		gene	rpl16
+135148	135115	CDS
+134577	134072
+		product	ribosomal protein L16
+		codon_start	1
+143478	143392	gene
+		gene	trnS-UGA
+143478	143392	tRNA
+		product	tRNA-Ser
+160320	160247	gene
+		gene	trnW-CCA-cp
+160320	160247	tRNA
+		product	tRNA-Trp
+161887	161315	gene
+		gene	nad9
+161887	161315	CDS
+		product	NADH dehydrogenase subunit 9
+		codon_start	1
+165611	166099	gene
+		gene	rpl10
+165611	166099	CDS
+		product	ribosomal protein L10
+		codon_start	1
+176013	175898	gene
+		gene	rrn5
+176013	175898	rRNA
+		product	5S ribosomal RNA
+178536	176674	gene
+		gene	rrnS
+178536	176674	rRNA
+		product	18S ribosomal RNA
+189168	189241	gene
+		gene	trnF-GAA
+189168	189241	tRNA
+		product	tRNA-Phe
+189464	189538	gene
+		gene	trnP-UGG
+189464	189538	tRNA
+		product	tRNA-Pro
+190520	190870	gene
+		gene	rps13
+190520	190870	CDS
+		product	ribosomal protein S13
+		codon_start	1
+204652	204722	gene
+		gene	trnC-GCA
+204652	204722	tRNA
+		product	tRNA-Cys
+206773	206844	gene
+		gene	trnN-GUU-cp
+206773	206844	tRNA
+		product	tRNA-Asn
+207775	207857	gene
+		gene	trnY-GUA
+207775	207857	tRNA
+		product	tRNA-Tyr
+217659	217811	gene
+219009	219400
+208375	208535
+210383	210955
+212320	212507
+		gene	nad2
+		exception	trans-splicing
+217659	217811	CDS
+219009	219400
+208375	208535
+210383	210955
+212320	212507
+		product	NADH dehydrogenase subunit 2
+		codon_start	1
+216712	217038	gene
+		gene	sdh3
+216712	217038	CDS
+		product	succinate dehydrogenase subunit 3
+		codon_start	1
+252443	252370	gene
+		gene	trnfM-CAU
+252443	252370	tRNA
+		product	tRNA-Met
+255680	252522	gene
+		gene	rrnL
+255680	252522	rRNA
+		product	26S ribosomal RNA
+264024	264096	gene
+		gene	trnM-CAU-cp
+264024	264096	tRNA
+		product	tRNA-Met
+267658	267729	gene
+		gene	trnG-GCC
+267658	267729	tRNA
+		product	tRNA-Gly
+271086	271157	gene
+		gene	trnQ-UUG
+271086	271157	tRNA
+		product	tRNA-Gln
+20317	20611	gene
+191762	191844
+193293	193504
+273486	273189
+		gene	nad1
+		exception	trans-splicing
+20317	20611	CDS
+191762	191844
+193293	193504
+273486	273189
+		product	NADH dehydrogenase subunit 1
+		codon_start	1
+276202	275586	gene
+275535	274236
+		gene	matR
+276202	275586	CDS
+275535	274236
+		product	maturase-related protein
+		codon_start	1
+289579	289935	gene
+		gene	nad3
+289579	289935	CDS
+		product	NADH dehydrogenase subunit 3
+		codon_start	1
+289984	290361	gene
+		gene	rps12
+289984	290361	CDS
+		product	ribosomal protein S12
+		codon_start	1
+332809	334473	gene
+		gene	rps3
+332809	334473	CDS
+		product	ribosomal protein S3
+		codon_start	1
+335344	335823	gene
+		gene	atp8
+335344	335823	CDS
+		product	ATP synthase subunit 8
+		codon_start	1
+336425	337222	gene
+		gene	cox3
+336425	337222	CDS
+		product	cytochrome c oxidase subunit 3
+		codon_start	1
+337150	337554	gene
+		gene	sdh4
+337150	337554	CDS
+		product	succinate dehydrogenase subunit 4
+		codon_start	1
+345250	345693	gene
+		gene	orf101b
+345250	345693	CDS
+		product	hypothetical protein
+		codon_start	1
+346562	347119	gene
+		gene	rpl5
+346562	347119	CDS
+		product	ribosomal protein L5
+		codon_start	1
+348462	349643	gene
+		gene	cob
+348462	349643	CDS
+		product	apocytochrome b
+		codon_start	1
+375611	374110	gene
+373961	373922
+		gene	atp1
+375611	374110	CDS
+373961	373922
+		product	ATP synthase subunit 1
+		codon_start	1
+381994	381852	gene
+380943	380875
+379578	379112
+378054	377811
+375963	375702
+		gene	nad7
+381994	381852	CDS
+380943	380875
+379578	379112
+378054	377811
+375963	375702
+		product	NADH dehydrogenase subunit 7
+		codon_start	1
+387172	386564	gene
+		gene	rps1
+387172	386564	CDS
+		product	ribosomal protein S1
+		codon_start	1
+388844	387891	gene
+		gene	rps4
+388844	387891	CDS
+		product	ribosomal protein S4
+		codon_start	1
+408663	408203	gene
+406782	406268
+403053	402631
+400262	400174
+		gene	nad4
+408663	408203	CDS
+406782	406268
+403053	402631
+400262	400174
+		product	NADH dehydrogenase subunit 4
+		codon_start	1
+411993	412066	gene
+		gene	trnD-GUC-cp
+411993	412066	tRNA
+		product	tRNA-Asp
+425879	425097	gene
+		gene	cox2
+425879	425097	CDS
+		product	cytochrome c oxidase subunit 2
+		codon_start	1
+441538	440918	gene
+		gene	ccmB
+441538	440918	CDS
+		product	cytochrome c biogenesis B
+		codon_start	1
+442437	442509	gene
+		gene	trnK-UUU
+442437	442509	tRNA
+		product	tRNA-Lys
+449198	448950	gene
+		gene	atp9
+449198	448950	CDS
+		product	ATP synthase subunit 9
+		codon_start	1

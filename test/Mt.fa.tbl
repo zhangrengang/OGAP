@@ -22,10 +22,6 @@
 31855	31943
 		product	cytochrome c oxidase subunit 2
 		codon_start	1
-35561	35629	gene
-		gene	trnK-CUU
-35561	35629	tRNA
-		product	tRNA-Lys
 56219	58150	gene
 		gene	rrnS
 56219	58150	rRNA
@@ -155,7 +151,7 @@
 		codon_start	1
 307488	308251	gene
 309189	309870
-		gene	ccmFc
+		gene	ccmFC
 307488	308251	CDS
 309189	309870
 		product	cytochrome c biogenesis FC
@@ -187,7 +183,7 @@
 347113	347198	tRNA
 		product	tRNA-Ile
 355073	353340	gene
-		gene	ccmFn
+		gene	ccmFN
 355073	353340	CDS
 		product	cytochrome c biogenesis FN
 		codon_start	1

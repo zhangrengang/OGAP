@@ -35,7 +35,8 @@ class HmmSearch(object):
 			hit.split_name()
 			nucl_names += [hit.nucl_name]
 		get_records(inseq, outseq, nucl_names, type='fasta')
-	def get_gene_structure(self, d_length, min_cov=80, seq_type='prot', flank=1000):
+	def get_gene_structure(self, d_length, max_copies=5, 
+			min_cov=80, min_ratio=0.9, seq_type='prot', flank=1000):
 		graph = HmmStructueGraph()
 		for hit in self:
 			hit.convert_to_nucl_coord(d_length, seq_type=seq_type)
@@ -45,19 +46,34 @@ class HmmSearch(object):
 	#	for n1, n2 in graph.edges():
 	#		print >>sys.stderr, n1.short, n2.short
 		graph.prune_graph()
+
+		hmmcovs = []
 		copies = []
 		for path in graph.linearize_path():
-			if path.hmmcov < min_cov:
-				continue
+			hmmcovs += [path.hmmcov]
+			#if path.hmmcov < min_cov:
+			#	continue
 			print >>sys.stderr, path, len(path.group_nodes()), path.hmmcov
 			parts = path.get_parts(d_length, flank=flank)
+		#	print >>sys.stderr, parts
 #			seq = parts.combine_seq()
 			copies += [parts]
 		# filter out too many parts
 		if len(copies) > 0:
-			min_part_number = min(map(len, copies))
-			for parts in copies:
+	#		min_part_number = min(map(len, copies))
+			max_hmmcov = max(hmmcovs)
+			best_copies = [parts for parts, hmmcov in zip(copies, hmmcovs) \
+								if not hmmcov < max_hmmcov*0.99]
+			min_part_number = min(map(len, best_copies))
+
+			i = 0
+			for parts, hmmcov in sorted(zip(copies, hmmcovs), key=lambda x:-x[1]):
 				if len(parts) > min_part_number:
+					continue
+				if hmmcov < max_hmmcov * min_ratio:
+					continue
+				i += 1
+				if i > max_copies:
 					continue
 		#		print >>sys.stderr, min_part_number, parts
 				yield parts		# maybe multi-copy
@@ -77,7 +93,7 @@ class HmmPath():
 	def __str__(self):
 		return ' -> '.join(['{}:{}-{}({})'.format(p.nucl_name, p.nucl_alnstart, 
 				p.nucl_alnend, p.strand) for p in self.path])
-	def group_nodes(self, max_dist=20000):
+	def group_nodes(self, max_dist=20000, min_dist=-200):
 		if len(self) == 1:
 			return [self]
 		groups = [[self[0]]]
@@ -87,10 +103,10 @@ class HmmPath():
 				groups += [[node]]
 			else:
 				if node.strand == '-':
-					dist = last_node.nucl_start - node.nucl_start
+					dist = last_node.nucl_start - node.nucl_end #start
 				else:	# +
-					dist = node.nucl_start - last_node.nucl_start
-				if 0 < dist < max_dist:
+					dist = node.nucl_start - last_node.nucl_end #start
+				if min_dist < dist < max_dist:
 					groups[-1] += [node]
 				else:
 					groups += [[node]]
@@ -227,14 +243,22 @@ class SeqParts():
 			parts += [SeqPart(seqid, start, end, strand)]
 		new_parts.parts = parts
 		return GtfExons(new_exons), new_parts
-	def to_exons(self):
+	def to_exons(self, min_intron=20):
 		source, score, frame = 'hmmsearch', '.', '.'
 		type = 'exon'
 		attributes = ''
 		exons = []
 		for part in self:
-			for hit in part.path:
-				chrom, start, end, strand = hit.nucl_name, hit.nucl_start, hit.nucl_end, hit.strand
+			paths = part.path.group_nodes(max_dist=min_intron)
+			for path in paths:
+				print >>sys.stderr, path
+				first_hit, last_hit = path[0], path[-1]
+				strand = first_hit.strand
+				if strand == '-':
+					start, end = last_hit.nucl_start, first_hit.nucl_end
+				else:
+					start, end = first_hit.nucl_start, last_hit.nucl_end
+				chrom = first_hit.nucl_name
 				line = [chrom, source, type, start, end, score, strand, frame, attributes]
 				exon = GffLine(line)
 				exons += [exon]
@@ -302,9 +326,16 @@ class HmmSearchDomHit(object):
 		right_dist = other.hmmend - self.hmmend + 1
 		if min_ovl <= mid_dist <= max_dist:
 #			if min(left_dist, right_dist) < min_flank_dist:
-			if left_dist < min_flank_dist:
-				return False
-			return mid_dist
+			if left_dist >= min_flank_dist:
+				return mid_dist
+		# rRNA algnment
+		if self.nucl_name == other.nucl_name:
+			left_dist = other.alnstart - self.alnstart + 1
+			mid_dist  = other.alnstart - self.alnend + 1
+			right_dist = other.alnend - self.alnend + 1
+			if min_ovl <= mid_dist <= max_dist:
+				if left_dist >= min_flank_dist:
+					return mid_dist
 		return False
 			
 	def split_name(self):
@@ -356,7 +387,7 @@ class HmmSearchDomHit(object):
 				if self.nucl_alnstart > other.nucl_alnstart:  # <--o <--s
 					return self.nucl_alnend - other.nucl_alnstart
 				else:										  # <--s <--o
-					self.nucl_alnstart + self.nucl_length - other.nucl_alnend
+					return self.nucl_alnstart + self.nucl_length - other.nucl_alnend
 			else:
 				if self.nucl_alnstart < other.nucl_alnstart:  # s--> o-->
 					return other.nucl_alnend - self.nucl_alnstart

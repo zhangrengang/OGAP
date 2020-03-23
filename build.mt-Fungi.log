@@ -1,0 +1,987 @@
+{'count': False, 'organ': 'mt', 'list': False, 'taxon': 'Fungi', 'custom': None, 'gbfiles': ['/share/home/nature/database/RefSeq/mitochondrion/mitochondrion.1.genomic.gbff.gz', '/share/home/nature/database/RefSeq/mitochondrion/mitochondrion.2.genomic.gbff.gz'], 'check': False, 'dbdir': None}
+2020-03-19 18:49:47,213 -INFO- parsing ['/share/home/nature/database/RefSeq/mitochondrion/mitochondrion.1.genomic.gbff.gz', '/share/home/nature/database/RefSeq/mitochondrion/mitochondrion.2.genomic.gbff.gz']
+2020-03-19 18:49:47,214 -INFO- version: RefSeq 2020-01-09
+(None, 'Candida subhashii') queried None
+(None, 'Candida santjacobensis') queried None
+(None, 'Candida sake') queried None
+2020-03-19 18:58:02,448 -INFO- 355 records: 52 orders, 106 families, 184 genera, 351 organism
+2020-03-19 18:58:02,449 -INFO- pruning taxa
+2020-03-19 18:58:02,449 -INFO- total 351 organisms
+2020-03-19 18:58:02,450 -INFO- pruning by genus with > 1 organisms
+2020-03-19 18:58:02,651 -INFO- building taxonomy tree
+2020-03-19 18:58:02,691 -INFO- run CMD: `ete3 ncbiquery --search 'Laccaria amethystina' 'Hanseniaspora uvarum' 'Parastagonospora nodorum SN15' 'Phialocephala subalpina' 'Stemphylium lycopersici' "Marssonina brunnea f. sp. 'multigermtubi'" 'Russula abietina' 'Vanderwaltozyma polyspora' 'Beauveria pseudobassiana' 'Hygrophorus russula' 'Debaryomyces hansenii' 'Arthrinium arundinis' 'Heterobasidion irregulare' 'Schizophyllum commune' 'Tricholoma matsutake' 'Arthrobotrys oligospora' 'Blastosporella zonata' 'Clonostachys rosea' 'Ogataea thermophila' 'Hericium coralloides' 'Ustilago maydis' 'Auricularia polytricha' 'Hypsizygus marmoreus' 'Heterodermia speciosa' 'Cordyceps militaris' 'Nakaseomyces delphensis' 'Fomitopsis palustris' 'Taiwanofungus camphoratus' 'Hypogymnia vittata' 'Wickerhamomyces mucosus' 'Leptogium hirsutum' 'Pseudevernia consocians' 'Lichtheimia hongkongensis' 'Rhynchosporium secalis' 'Candida gigantensis' 'Rhizopogon salebrosus' 'Blastocladiella emersonii' 'Pithomyces chartarum' 'Cladonia leporina' 'Trichophyton mentagrophytes' 'Brettanomyces custersianus' 'Komagataella phaffii CBS 7435' 'Akanthomyces muscarius' 'Podospora anserina' 'Graphis lineola' 'Didymella pinodes' 'Talaromyces marneffei' 'Monoblepharella sp. JEL15' 'Allomyces macrogynus' 'Cantharellus cibarius' 'Starmerella bacillaris' 'Shiraia bambusicola' 'Parasitella parasitica' 'Myochromella boudieri' 'Rhodotorula mucilaginosa' 'Hirsutella thompsonii' 'Madurella mycetomatis' 'Ganoderma meredithae' 'Coccocarpia palmicola' 'Macrolepiota fuliginosa' 'Naumovozyma dairenensis' 'Saccharomycodes ludwigii' 'Dactylella tenuis' 'Bipolaris cookei' 'Pleurotus platypus' 'Trametes hirsuta' 'Phyllopsora corallina' 'Armillaria solidipes' 'Tephrocybe rancida' 'Groenewaldozyma salmanticensis' 'Sclerotinia borealis' 'Parmotrema ultralucens' 'Pichia kluyveri' "Spizellomyces sp. 'palustris'" 'Lactifluus hygrophoroides' 'Glarea lozoyensis' 'Nectria cinnabarina' 'Bryoria tenuis' 'Pseudogymnoascus destructans' 'Pneumocystis carinii' 'Rhizopus oryzae' 'Rhizophydium sp. 136' 'Microbotryum lychnidis-dioicae' 'Tolypocladium inflatum' 'Geotrichum candidum' 'Phlebia radiata' 'Pestalotiopsis fici' 'Yarrowia galli' 'Drechslerella brochopaga' 'Coniothyrium glycines' 'Usnea mutabilis' 'Inonotus obliquus' 'Pyronema omphalodes' 'Barnettozyma californica' 'Ceratocystis fimbriata' '[Candida] norvegica' 'Schizosaccharomyces cryophilus' 'Opegrapha vulgata' 'Tremella fuciformis' 'Annulohypoxylon stygium' 'Fusarium culmorum' 'Chytriomyces confervae' 'Gomphillus americanus' 'Ophiocordyceps sinensis' 'Epidermophyton floccosum' 'Metarhizium anisopliae' 'Volvariella volvacea' 'Rozella allomycis' 'Phakopsora pachyrhizi' 'Turbinellus floccosus' 'Hannaella oryzae' 'Ramalina intermedia' 'Cyberlindnera suaveolens' 'Sugiyamaella lignohabitans' 'Trichoderma asperellum' 'Desarmillaria tabescens' 'Phycomyces blakesleeanus' 'Dactylellina haptotyla' 'Peltigera dolichorrhiza' 'Pertusaria propinqua' 'Sanghuangporus sanghuang' 'Paxillus involutus' 'Morchella importuna' 'Conidiobolus heterosporus' 'Absidia glauca' 'Glomus cerebriforme' 'Puccinia striiformis f. sp. tritici' 'Clavispora lusitaniae' 'Kluyveromyces lactis' 'Zasmidium cellare' 'Ricasolia amplissima' 'Jaminaea angkorensis' 'Orbilia dorsalis' 'Cladophialophora bantiana' 'Lentinula edodes' 'Esteya vermicola' 'Zygosaccharomyces mellis' 'Cryptococcus neoformans var. grubii' 'Sporothrix schenckii' 'Ilyonectria destructans' 'Lecanora cinereofusca' 'Chrysoporthe austroafricana' 'Lyophyllum shimeji' 'Zymoseptoria tritici' 'Paecilomyces penicillatus' 'Parengyodontium album' 'Austropuccinia psidii' 'Epichloe typhina' 'Penicillium roqueforti' 'Moniliophthora perniciosa' 'Amanita brunnescens' 'Lactarius piperatus' 'Phlyctis petraea' 'Meyerozyma guilliermondii' 'Zancudomyces culisetae' 'Imshaugia aleurites' 'Kazachstania servazzii' 'Lachancea thermotolerans' 'Aspergillus pseudoglaucus' 'Malassezia restricta' 'Tilletia walkeri' 'Millerozyma farinosa' 'Colletotrichum lupini' 'Tricholomella constricta' 'Torulaspora delbrueckii' 'Gigaspora rosea' 'Asterophora parasitica' 'Pseudocercospora fijiensis' 'Alectoria fallacina' 'Verticillium nonalfalfae' 'Rhizophagus fasciculatus' 'Harpochytrium sp. JEL105' 'Nannizzia nana' 'Magnusiomyces ingens' 'Paracoccidioides brasiliensis' 'Synchytrium endobioticum' 'Hyaloraphidium curvatum' 'Hypomyces aurantius' 'Flammulina velutipes' 'Microsporum canis' 'Arthroderma uncinatum' 'Saccharomyces paradoxus' 'Acremonium fuci' 'Mortierella verticillata' --tree >  /dev/shm/tmp/mt-Fungi/species.tree.tmp`
+2020-03-19 18:58:11,617 -INFO- using speceis tree `/dev/shm/tmp/ogap_db/mt-Fungi/species.treefile`
+2020-03-19 18:58:11,618 -INFO- writing protein sequences into /dev/shm/tmp/mt-Fungi/prot
+2020-03-19 18:58:12,895 -INFO- 184 taxa: ['Absidia glauca', 'Acremonium fuci', 'Akanthomyces muscarius', 'Alectoria fallacina', 'Allomyces macrogynus', 'Amanita brunnescens', 'Annulohypoxylon stygium', 'Armillaria solidipes', 'Arthrinium arundinis', 'Arthrobotrys oligospora', 'Arthroderma uncinatum', 'Aspergillus pseudoglaucus', 'Asterophora parasitica', 'Auricularia polytricha', 'Austropuccinia psidii', 'Barnettozyma californica', 'Beauveria pseudobassiana', 'Bipolaris cookei', 'Blastocladiella emersonii', 'Blastosporella zonata', 'Brettanomyces custersianus', 'Bryoria tenuis', 'Candida gigantensis', 'Cantharellus cibarius', 'Ceratocystis fimbriata', 'Chrysoporthe austroafricana', 'Chytriomyces confervae', 'Cladonia leporina', 'Cladophialophora bantiana', 'Clavispora lusitaniae', 'Clonostachys rosea', 'Coccocarpia palmicola', 'Colletotrichum lupini', 'Conidiobolus heterosporus', 'Coniothyrium glycines', 'Cordyceps militaris', 'Cryptococcus neoformans var. grubii', 'Cyberlindnera suaveolens', 'Dactylella tenuis', 'Dactylellina haptotyla', 'Debaryomyces hansenii', 'Desarmillaria tabescens', 'Didymella pinodes', 'Drechslerella brochopaga', 'Epichloe typhina', 'Epidermophyton floccosum', 'Esteya vermicola', 'Flammulina velutipes', 'Fomitopsis palustris', 'Fusarium culmorum', 'Ganoderma meredithae', 'Geotrichum candidum', 'Gigaspora rosea', 'Glarea lozoyensis', 'Glomus cerebriforme', 'Gomphillus americanus', 'Graphis lineola', 'Groenewaldozyma salmanticensis', 'Hannaella oryzae', 'Hanseniaspora uvarum', 'Harpochytrium sp. JEL105', 'Hericium coralloides', 'Heterobasidion irregulare', 'Heterodermia speciosa', 'Hirsutella thompsonii', 'Hyaloraphidium curvatum', 'Hygrophorus russula', 'Hypogymnia vittata', 'Hypomyces aurantius', 'Hypsizygus marmoreus', 'Ilyonectria destructans', 'Imshaugia aleurites', 'Inonotus obliquus', 'Jaminaea angkorensis', 'Kazachstania servazzii', 'Kluyveromyces lactis', 'Komagataella phaffii CBS 7435', 'Laccaria amethystina', 'Lachancea thermotolerans', 'Lactarius piperatus', 'Lactifluus hygrophoroides', 'Lecanora cinereofusca', 'Lentinula edodes', 'Leptogium hirsutum', 'Lichtheimia hongkongensis', 'Lyophyllum shimeji', 'Macrolepiota fuliginosa', 'Madurella mycetomatis', 'Magnusiomyces ingens', 'Malassezia restricta', "Marssonina brunnea f. sp. 'multigermtubi'", 'Metarhizium anisopliae', 'Meyerozyma guilliermondii', 'Microbotryum lychnidis-dioicae', 'Microsporum canis', 'Millerozyma farinosa', 'Moniliophthora perniciosa', 'Monoblepharella sp. JEL15', 'Morchella importuna', 'Mortierella verticillata', 'Myochromella boudieri', 'Nakaseomyces delphensis', 'Nannizzia nana', 'Naumovozyma dairenensis', 'Nectria cinnabarina', 'Ogataea thermophila', 'Opegrapha vulgata', 'Ophiocordyceps sinensis', 'Orbilia dorsalis', 'Paecilomyces penicillatus', 'Paracoccidioides brasiliensis', 'Parasitella parasitica', 'Parastagonospora nodorum SN15', 'Parengyodontium album', 'Parmotrema ultralucens', 'Paxillus involutus', 'Peltigera dolichorrhiza', 'Penicillium roqueforti', 'Pertusaria propinqua', 'Pestalotiopsis fici', 'Phakopsora pachyrhizi', 'Phialocephala subalpina', 'Phlebia radiata', 'Phlyctis petraea', 'Phycomyces blakesleeanus', 'Phyllopsora corallina', 'Pichia kluyveri', 'Pithomyces chartarum', 'Pleurotus platypus', 'Pneumocystis carinii', 'Podospora anserina', 'Pseudevernia consocians', 'Pseudocercospora fijiensis', 'Pseudogymnoascus destructans', 'Puccinia striiformis f. sp. tritici', 'Pyronema omphalodes', 'Ramalina intermedia', 'Rhizophagus fasciculatus', 'Rhizophydium sp. 136', 'Rhizopogon salebrosus', 'Rhizopus oryzae', 'Rhodotorula mucilaginosa', 'Rhynchosporium secalis', 'Ricasolia amplissima', 'Rozella allomycis', 'Russula abietina', 'Saccharomyces paradoxus', 'Saccharomycodes ludwigii', 'Sanghuangporus sanghuang', 'Schizophyllum commune', 'Schizosaccharomyces cryophilus', 'Sclerotinia borealis', 'Shiraia bambusicola', "Spizellomyces sp. 'palustris'", 'Sporothrix schenckii', 'Starmerella bacillaris', 'Stemphylium lycopersici', 'Sugiyamaella lignohabitans', 'Synchytrium endobioticum', 'Taiwanofungus camphoratus', 'Talaromyces marneffei', 'Tephrocybe rancida', 'Tilletia walkeri', 'Tolypocladium inflatum', 'Torulaspora delbrueckii', 'Trametes hirsuta', 'Tremella fuciformis', 'Trichoderma asperellum', 'Tricholoma matsutake', 'Tricholomella constricta', 'Trichophyton mentagrophytes', 'Turbinellus floccosus', 'Usnea mutabilis', 'Ustilago maydis', 'Vanderwaltozyma polyspora', 'Verticillium nonalfalfae', 'Volvariella volvacea', 'Wickerhamomyces mucosus', 'Yarrowia galli', 'Zancudomyces culisetae', 'Zasmidium cellare', 'Zygosaccharomyces mellis', 'Zymoseptoria tritici', '[Candida] norvegica']
+2020-03-19 18:58:12,976 -INFO- get taxon `Eukaryota;Fungi` from Counter({'Eukaryota;Fungi': 355})
+2020-03-19 18:58:12,989 -INFO- get transl_table `4` from Counter({4: 4551, 3: 236, 16: 115, 1: 72})
+2020-03-19 18:58:12,989 -INFO- running OrthoFinder to cluster genes
+2020-03-19 18:58:12,989 -INFO- run CMD: `orthofinder.py -f /dev/shm/tmp/mt-Fungi/prot -M msa -T fasttree -t 16  -og`
+2020-03-19 19:22:17,732 -INFO- parsing OrthoFinder orthologs
+2020-03-19 19:22:17,734 -INFO- parsing orthologs group into /dev/shm/tmp/mt-Fungi/alns
+2020-03-19 19:22:17,869 -INFO- using min_count=18.4 to get gene name
+2020-03-19 19:23:37,644 -INFO- get gene name `cob` from Counter({'cob': 28, 'cox1': 15, 'cox1-I2': 8, 'orf327': 8, 'orf296': 7, 'cox1-I1': 7, 'cox1-I3': 7, 'orf329': 7, 'orf295': 6, 'orf349': 6, 'orf331': 5, 'oi3cox1': 5, 'oi5cox1': 5, 'orf301': 5, 'oi1cox1': 5, 'orf359': 4, 'orf360': 4, 'orf319': 4, 'oi2cox1': 4, 'cox1-I4': 4, 'orf203': 4, 'orf238': 4, 'oi1cob': 4, 'orf305': 4, 'orf273': 3, 'orf354': 3, 'orf351': 3, 'orf130': 3, 'orf363': 3, 'orf361': 3, 'orf291': 3, 'orf310': 3, 'orf316': 3, 'orf320': 3, 'orf326': 3, 'orf325': 3, 'intronic-LAGLIDADG': 3, 'orf336': 3, 'orf141': 3, 'orf348': 3, 'orf185': 3, 'orf302': 3, 'orf13': 2, 'orf12': 2, 'orf279': 2, 'orf276': 2, 'orf270': 2, 'orf271': 2, 'orf478': 2, 'orf473': 2, 'orf358': 2, 'orf357': 2, 'orf352': 2, 'orf123': 2, 'oi2nad5': 2, 'orf199': 2, 'orf191': 2, 'orf432': 2, 'orf430': 2, 'orf436': 2, 'orf225': 2, 'orf380': 2, 'orf382': 2, 'orf364': 2, 'orf365': 2, 'orf362': 2, 'orf369': 2, 'orf290': 2, 'hypothetical-protein': 2, 'orf312': 2, 'orf317': 2, 'orf315': 2, 'orf314': 2, 'orf318': 2, 'orf165': 2, 'orf162': 2, 'orf267': 2, 'orf467': 2, 'orf462': 2, 'orf283': 2, 'orf282': 2, 'orf321': 2, 'orf324': 2, 'cytb': 2, 'orf216': 2, 'orf138': 2, 'orf132': 2, 'cob-I2': 2, 'oi8cox1': 2, 'rnl-i2': 2, 'nad4L': 2, 'oi3nad5': 2, 'oi1nad5': 2, 'oi1nad4': 2, 'orf252': 2, 'orf391': 2, 'orf397': 2, 'orf370': 2, 'orf373': 2, 'orf156': 2, 'orf488': 2, 'orf107': 2, 'orf100': 2, 'orf171': 2, 'orf512': 2, 'orf454': 2, 'orf338': 2, 'orf335': 2, 'orf337': 2, 'orf140': 2, 'orf144': 2, 'orf112': 2, 'orf246': 2, 'orf248': 2, 'orf340': 2, 'orf341': 2, 'orf344': 2, 'oi4cox1': 2, 'orf111': 2, 'orf118': 2, 'orf186': 2, 'orf187': 2, 'COX1-i1': 2, 'oi2cob': 2, 'orf286': 2, 'oi3cob': 2, 'rnl-i1': 2, 'orf232': 2, 'orf151': 2, 'orf306': 2, 'oi1cox3': 2, 'orf402': 2, 'orf401': 2, 'Phlebia_radiata-gene891': 1, 'orf10': 1, 'orf19': 1, 'heg29': 1, 'heg28': 1, 'orf278': 1, 'orf274': 1, 'orf275': 1, 'orf101': 1, 'Phlebia_radiata-gene515': 1, 'orf470': 1, 'orf471': 1, 'orf297': 1, 'orf294': 1, 'orf293': 1, 'orf355': 1, 'orf350': 1, 'cox1i2': 1, 'orf108': 1, 'Sclerotinia_borealis-gene345': 1, 'orf388': 1, 'orf284': 1, 'orf211': 1, 'Trametes_hirsuta-gene96': 1, 'orf120': 1, 'orf121': 1, 'orf124': 1, 'orf126': 1, 'orf128': 1, 'Pyronema_omphalodes-gene20': 1, 'Myochromella_boudieri-gene49': 1, 'orf198': 1, 'oi6cox1': 1, 'orf194': 1, 'orf196': 1, 'orf190': 1, 'orf192': 1, 'Phlebia_radiata-gene324': 1, 'Phlebia_radiata-gene328': 1, 'orf131': 1, '0rf119': 1, 'cox1-ai4': 1, 'Blastosporella_zonata-gene280': 1, 'oi1rnl': 1, 'ORF1': 1, 'ORF2': 1, 'nad5i1': 1, 'Phlebia_radiata-gene495': 1, 'orf59': 1, 'orf150': 1, 'orf51': 1, 'Pyronema_omphalodes-gene172': 1, 'orf437': 1, 'orf434': 1, 'orf537': 1, 'iorf213': 1, 'Phlebia_radiata-gene519': 1, 'heg23': 1, 'heg20': 1, 'ip6': 1, 'heg25': 1, 'heg24': 1, 'Sclerotinia_borealis-gene172': 1, 'ip8': 1, 'ip9': 1, 'Sclerotinia_borealis-gene175': 1, 'orf224': 1, 'orf223': 1, 'orf222': 1, 'Coniothyrium_glycines-gene154': 1, 'orf220': 1, 'orf385': 1, 'orf387': 1, 'orf381': 1, 'orf228': 1, 'Blastosporella_zonata-gene206': 1, 'rps3': 1, 'Cladonia_leporina-gene137': 1, 'orf366': 1, 'orf368': 1, 'Blastosporella_zonata-gene28': 1, 'Blastosporella_zonata-gene25': 1, 'Sclerotinia_borealis-gene387': 1, 'heg4': 1, 'heg5': 1, 'heg7': 1, 'heg2': 1, 'heg3': 1, 'Pyronema_omphalodes-gene223': 1, 'heg9': 1, 'orf768': 1, 'oi1_2nad5': 1, 'orf269': 1, 'Myochromella_boudieri-gene91': 1, 'heg1': 1, 'oi2cox3': 1, 'Sclerotinia_borealis-gene313': 1, 'orf166': 1, 'Sclerotinia_borealis-gene310': 1, 'orf169': 1, 'COX1': 1, 'orf410': 1, 'Coniothyrium_glycines-gene4': 1, 'nad5': 1, 'orf313': 1, 'iorf461': 1, 'oi4nad5': 1, 'oi1atp6': 1, 'orf259': 1, 'oi12cox1': 1, 'Pyronema_omphalodes-gene139': 1, 'Pyronema_omphalodes-gene136': 1, 'Pseudocercospora_fijiensis-gene95': 1, 'orf591': 1, 'Pyronema_omphalodes-gene46': 1, 'ORF-1': 1, 'heg16': 1, 'oi4cox3': 1, 'orf268': 1, 'Tephrocybe_rancida-gene135': 1, 'cox1-I5': 1, 'orf261': 1, 'orf260': 1, 'heg15': 1, 'cox1-2': 1, 'orf463': 1, 'Cladonia_leporina-gene25': 1, 'orf328': 1, 'orf280': 1, 'orf322': 1, 'orf323': 1, 'orf288': 1, 'cox1i8': 1, 'cox1i9': 1, 'orf218': 1, 'cox1i1': 1, 'cox1i7': 1, 'cox1i5': 1, 'orf136': 1, 'Sclerotinia_borealis-gene211': 1, 'Sclerotinia_borealis-gene433': 1, 'Pyronema_omphalodes-gene127': 1, 'cob1': 1, 'orf730': 1, 'Coniothyrium_glycines-gene220': 1, 'Myochromella_boudieri-gene59': 1, 'Myochromella_boudieri-gene55': 1, 'Myochromella_boudieri-gene52': 1, 'Sclerotinia_borealis-gene442': 1, 'Sclerotinia_borealis-gene440': 1, 'Phlebia_radiata-gene545': 1, 'orf49': 1, 'orf40': 1, 'orf41': 1, 'orf44': 1, 'orf45': 1, 'orf423': 1, 'orf422': 1, 'Blastosporella_zonata-gene220': 1, 'orf126_2': 1, 'orf441': 1, 'orf34': 1, 'oi3nad2': 1, 'oi3nad1': 1, 'iorf123': 1, 'heg38': 1, 'heg39': 1, 'heg36': 1, 'oi1nad2': 1, 'oi1nad6': 1, 'orf398': 1, 'orf256': 1, 'cox-i1b': 1, 'orf255': 1, 'orf392': 1, 'orf390': 1, 'orf396': 1, 'Blastosporella_zonata-gene210': 1, 'orf493': 1, 'orf375': 1, 'orf377': 1, 'orf372': 1, 'Kazachstania_servazzii-gene89': 1, 'orf378': 1, 'Pertusaria_propinqua-gene21': 1, 'Sclerotinia_borealis-gene398': 1, 'Sclerotinia_borealis-gene391': 1, 'Sclerotinia_borealis-gene394': 1, 'orf676': 1, 'orf102': 1, 'orf103': 1, 'Sclerotinia_borealis-gene125': 1, 'Sclerotinia_borealis-gene323': 1, 'Sclerotinia_borealis-gene320': 1, 'orf109': 1, 'orf346': 1, 'orf173': 1, 'Saccharomyces_paradoxus-gene42': 1, 'orf177': 1, 'orf175': 1, 'orf174': 1, 'orf179': 1, 'Sclerotinia_borealis-gene186': 1, 'orf426': 1, 'orf298': 1, 'Trametes_hirsuta-gene112': 1, 'Tephrocybe_rancida-gene37': 1, 'Blastosporella_zonata-gene263': 1, 'Pyronema_omphalodes-gene120': 1, 'Tephrocybe_rancida-gene33': 1, 'orf383': 1, 'Coccocarpia_palmicola-gene38': 1, 'oi1rns': 1, 'Blastosporella_zonata-gene216': 1, 'iorf239': 1, 'io-cox1-1': 1, 'orf459': 1, 'orf450': 1, 'orf452': 1, 'orf453': 1, 'orf339': 1, 'orf330': 1, 'Sclerotinia_borealis-gene296': 1, 'oi3cox2': 1, 'Coniothyrium_glycines-gene135': 1, 'oi9cox1': 1, 'iorf156': 1, 'orf208': 1, 'orf205': 1, 'orf207': 1, 'orf201': 1, 'orf148': 1, 'orf149': 1, 'oi1_1nad5': 1, 'orf142': 1, 'orf146': 1, 'oirns': 1, 'ai1': 1, 'cox3-I1': 1, 'oirnl': 1, 'oi3cox3': 1, 'oi7nad5': 1, 'Blastosporella_zonata-gene276': 1, 'orf5': 1, 'orf4': 1, 'orf7': 1, 'orf1': 1, 'orf3': 1, 'orf2': 1, 'orf9': 1, 'orf8': 1, 'Pseudocercospora_fijiensis-gene27': 1, 'Phlebia_radiata-gene120': 1, 'orf117': 1, 'heg37': 1, 'Blastosporella_zonata-gene255': 1, 'Pyronema_omphalodes-gene13': 1, 'Tephrocybe_rancida-gene41': 1, 'Pyronema_omphalodes-gene152': 1, 'Blastosporella_zonata-gene259': 1, 'orf415': 1, 'Pyronema_omphalodes-gene159': 1, 'orf411': 1, 'orf412': 1, 'heg30': 1, 'orf263': 1, 'Phlebia_radiata-gene888': 1, 'orf251': 1, 'oi7cox1': 1, 'orf241': 1, 'orf242': 1, 'orf245': 1, 'oi4cob': 1, 'orf480': 1, 'orf486': 1, 'orf485': 1, 'orf563': 1, 'CYTB': 1, 'orf342': 1, 'orf343': 1, 'Sclerotinia_borealis-gene122': 1, 'bi3': 1, 'iorf187': 1, 'orf496': 1, 'oi1nad4L': 1, 'Pyronema_omphalodes-gene17': 1, 'orf116': 1, 'orf113': 1, 'rnl': 1, 'cob-ai1': 1, 'Sclerotinia_borealis-gene336': 1, 'Myochromella_boudieri-gene70': 1, 'Madurella_mycetomatis-gene72': 1, 'Blastosporella_zonata-gene171': 1, 'orf188': 1, 'orf182': 1, 'orf183': 1, 'orf180': 1, 'orf181': 1, 'Phlebia_radiata-gene39': 1, 'Coniothyrium_glycines-gene32': 1, 'oi5cob': 1, 'cox1-I6': 1, 'Pyronema_omphalodes-gene113': 1, 'Sclerotinia_borealis-gene348': 1, 'Trametes_hirsuta-gene108': 1, 'Pyronema_omphalodes-gene117': 1, 'Trametes_hirsuta-gene104': 1, 'Trametes_hirsuta-gene100': 1, 'Phlebia_radiata-gene526': 1, 'orf28': 1, 'orf25': 1, 'orf27': 1, 'orf20': 1, 'Lentinula_edodes-gene116': 1, 'orf444': 1, 'orf528': 1, 'orf442': 1, 'Pyronema_omphalodes-gene188': 1, 'orf440': 1, 'Pyronema_omphalodes-gene185': 1, 'Lentinula_edodes-gene118': 1, 'Lentinula_edodes-gene84': 1, 'Lentinula_edodes-gene86': 1, 'Blastosporella_zonata-gene167': 1, 'Sclerotinia_borealis-gene168': 1, 'heg14': 1, 'heg13': 1, 'heg10': 1, 'heg11': 1, 'heg19': 1, 'orf629': 1, 'rnl-i3': 1, 'rnl-i4': 1, 'orf239': 1, 'orf236': 1, 'orf237': 1, 'orf289': 1, 'orf152': 1, 'orf155': 1, 'orf154': 1, 'Parastagonospora_nodorum_SN15-gene121': 1, 'orf307': 1, 'orf303': 1, 'ix2': 1, 'orf714': 1, 'orf308': 1, 'orf309': 1, 'ix4': 1, 'oi1cox2': 1, 'Sclerotinia_borealis-gene304': 1, 'Sclerotinia_borealis-gene307': 1, 'Sclerotinia_borealis-gene267': 1, 'Sclerotinia_borealis-gene265': 1, 'ip11': 1, 'ip12': 1, 'orf403': 1, 'Coniothyrium_glycines-gene75': 1, 'orf406': 1, 'orf405': 1, 'orf404': 1, 'Pyronema_omphalodes-gene149': 1, 'Sclerotinia_borealis-gene419': 1, 'Pyronema_omphalodes-gene142': 1, 'heg27': 1, 'Pyronema_omphalodes-gene145': 1})
+2020-03-19 19:23:37,647 -INFO- get product `LAGLIDADG endonuclease` from Counter({'LAGLIDADG endonuclease': 282, 'hypothetical protein': 269, 'LAGLIDADG homing endonuclease': 33, 'apocytochrome b': 21, 'LAGLIDADG/HNH endonuclease': 10, 'putative LAGLIDADG endonuclease': 9, 'LAGLIDADG': 7, 'truncated LAGLIDADG endonuclease': 6, 'homing endonuclease': 6, 'endonuclease': 6, 'cytochrome b': 6, 'intron-encoded LAGLIDADG endonuclease family protein': 5, 'LAGLIDADG type homing endonuclease': 5, 'LAGLIDADG endonuclease domain-containing protein': 3, 'maturase': 3, 'GIY-YIG endonuclease': 3, 'orf360': 3, 'intronic ORF': 3, 'orf276': 2, 'orf327': 2, 'NADH dehydrogenase subunit 4L': 2, 'LAGLIDADG type 1 homing endonuclease': 2, 'orf296': 2, 'orf252': 2, 'LAGLIDADG 1 endonuclease': 2, 'orf248': 2, 'orf348': 1, 'orf313': 1, 'orf279': 1, 'intronic ORF at intron 1 of cox1': 1, 'orf271': 1, 'orf471': 1, 'intronic ORF at intron 1 of nad5': 1, 'intronic ORF at intron 1 of nad4': 1, 'orf294': 1, 'orf295': 1, 'orf359': 1, 'orf291': 1, 'orf355': 1, 'COX1 intron 3 ORF': 1, 'endonuclease-like protein': 1, 'cytb-like ORF': 1, 'cox1-I1': 1, 'cox1-I2': 1, 'orf3 protein': 1, 'intron protein 2, putative LAGLIDAGDG endonuclease': 1, 'orf462': 1, 'ntron protein 1, putative LAGLIDAGDG endonuclease': 1, 'orf282': 1, 'orf326': 1, 'intronic ORF at intron 4 of cox1': 1, 'COB-ai1 protein': 1, 'cox-i1b protein': 1, 'LAGLIDADG homing endonuclease-like protein': 1, 'orf138': 1, 'COX1-I4': 1, 'COX1-I6': 1, 'COX1-I1': 1, 'COX1-I2': 1, 'COX1-I3': 1, 'orf337': 1, 'putative LAGLIDAGDG endonuclease': 1, 'intronic ORF at intron 1 of rnl': 1, 'orf528': 1, 'orf441': 1, 'orf117': 1, 'orf203': 1, 'orf430': 1, 'orf436': 1, 'Homing endonuclease': 1, 'putative DNA endonuclease': 1, 'orf307': 1, 'I-AniI': 1, 'orf365': 1, 'orf361': 1, 'intronic ORF at intron 2 of cox1': 1, 'intronic ORF at intron 5 of cox1': 1, 'orf391': 1, 'COX1-ai4 protein': 1, 'orf411': 1, 'orf312': 1, 'orf310': 1, 'orf318': 1, 'orf375': 1, 'orf370': 1, 'orf372': 1, 'LAGLIDADG domain containing endonuclease': 1, 'GIY-YIG/LAGLIDADG': 1, 'intronic ORF at intron 1 of cob': 1, 'orf246': 1, 'orf403': 1, 'ribosomal protein S3': 1})
+2020-03-19 19:23:37,651 -INFO- get exon number `1` from Counter({1: 735, 2: 7, 4: 7, 3: 5, 5: 4, 8: 3, 6: 1})
+2020-03-19 19:23:37,651 -INFO- get trans_splicing `False` from Counter({False: 762})
+2020-03-19 19:25:18,751 -INFO- get gene name `cox2` from Counter({'cox2': 164, 'cob': 105, 'COX2': 8, 'cytb': 5, 'CYTB': 2, 'COB': 2, 'COII': 2, 'Myochromella_boudieri-gene173': 1, 'Tricholomella_constricta-gene84': 1, 'Tephrocybe_rancida-gene132': 1, 'Cytb': 1, 'Tephrocybe_rancida-gene175': 1, 'coxII': 1, 'Blastosporella_zonata-gene284': 1, 'Myochromella_boudieri-gene103': 1, 'Blastosporella_zonata-gene150': 1, 'Tricholomella_constricta-gene100': 1})
+2020-03-19 19:25:18,753 -INFO- get product `cytochrome c oxidase subunit 2` from Counter({'cytochrome c oxidase subunit 2': 117, 'apocytochrome b': 71, 'cytochrome b': 40, 'cytochrome c oxidase subunit II': 24, 'cytochrome oxidase subunit 2': 14, 'cytochrome oxidase subunit II': 11, 'COX2': 3, 'Cox2': 3, 'cob': 2, 'Cox2p': 2, 'cytochrome oxydase c subunit 2': 1, 'mitochondrially encoded cytochrome b': 1, 'Cytb': 1, 'mitochondrially encoded cytochrome c oxidase II': 1, 'putative cytochrome c oxydase, subunit 2': 1, 'cytochrome-c oxidase subunit 2': 1, 'COB': 1, 'cytochrome coxidase subunit II': 1, 'cytchrome b': 1, 'cox2': 1, 'hypothetical protein': 1})
+2020-03-19 19:25:18,756 -INFO- get exon number `1` from Counter({1: 165, 2: 55, 3: 26, 4: 24, 7: 13, 6: 7, 5: 5, 8: 3})
+2020-03-19 19:25:18,756 -INFO- get trans_splicing `False` from Counter({False: 298})
+2020-03-19 19:26:02,826 -INFO- get gene name `orf110` from Counter({'orf110': 3, 'orf261': 3, 'orf328': 3, 'cob-I1': 3, 'orf142': 3, 'orf309': 3, 'orf122': 3, 'orf102': 2, 'orf14': 2, 'orf99': 2, 'orf345': 2, 'orf272': 2, 'orf296': 2, 'orf294': 2, 'cox1': 2, 'orf292': 2, 'oi7cox1': 2, 'orf1': 2, 'orf269': 2, 'orf267': 2, 'orf125': 2, 'orf283': 2, 'orf321': 2, 'orf324': 2, 'orf325': 2, 'oi6cox1': 2, 'orf219': 2, 'orf214': 2, 'orf212': 2, 'orf135': 2, 'orf332': 2, 'cob': 2, 'orf207': 2, 'orf141': 2, 'orf132': 2, 'oi11cox1': 2, 'orf301': 2, 'orf248': 2, 'orf201': 2, 'orf308': 2, 'orf361': 2, 'orf116': 2, 'oi1cox1': 2, 'orf318': 2, 'orf372': 2, 'orf378': 2, 'orf243': 2, 'orf163': 2, 'orf341': 1, 'orf104': 1, 'orf105': 1, 'orf103': 1, 'orf100': 1, 'orf347': 1, 'orf94': 1, 'orf342': 1, 'Phlebia_radiata-gene214': 1, 'orf109': 1, 'cox2i1': 1, 'Parastagonospora_nodorum_SN15-gene54': 1, 'iorf109': 1, 'orf11': 1, 'orf10': 1, 'nad1': 1, 'Sclerotinia_borealis-gene339': 1, 'orf278': 1, 'orf346': 1, 'oi1atp6': 1, 'Coniothyrium_glycines-gene105': 1, 'orf275': 1, 'orf276': 1, 'iorf189': 1, 'atp6': 1, 'orf171': 1, 'Sclerotinia_borealis-gene243': 1, 'Sclerotinia_borealis-gene149': 1, 'orf118': 1, 'orf114': 1, 'orf290': 1, 'rnl': 1, 'orf357': 1, 'orf85': 1, 'orf119': 1, 'orf423': 1, 'Sclerotinia_borealis-gene99': 1, 'Myochromella_boudieri-gene76': 1, 'Coniothyrium_glycines-gene97': 1, 'Phlebia_radiata-gene26': 1, 'Myochromella_boudieri-gene79': 1, 'oi1rrnL': 1, 'orf15': 1, 'orf268': 1, 'Sclerotinia_borealis-gene29': 1, 'Tephrocybe_rancida-gene137': 1, 'orf191': 1, 'orf266': 1, 'iorf170': 1, 'COB-i1': 1, 'orf185': 1, 'orf182': 1, 'cox1-I6': 1, 'Myochromella_boudieri-gene155': 1, 'orf284': 1, 'orf329': 1, 'orf127': 1, 'Sclerotinia_borealis-gene20': 1, 'orf288': 1, 'Pyronema_omphalodes-gene29': 1, 'orf31': 1, 'orf30': 1, 'orf37': 1, 'Phlebia_radiata-gene31': 1, 'orf300': 1, 'orf511': 1, 'Sclerotinia_borealis-gene10': 1, 'Lentinula_edodes-gene102': 1, 'Lentinula_edodes-gene109': 1, 'Coniothyrium_glycines-gene88': 1, 'orf331': 1, 'Phlebia_radiata-gene141': 1, 'orf195': 1, 'Lentinula_edodes-gene92': 1, 'orf139': 1, 'orf303': 1, 'orf137': 1, 'orf136': 1, 'orf334': 1, 'orf131': 1, 'ix3': 1, 'orf336': 1, 'orf21': 1, 'orf22': 1, 'orf23': 1, 'Sclerotinia_borealis-gene48': 1, 'orf297': 1, 'Blastosporella_zonata-gene111': 1, 'oi2cob': 1, 'Pyronema_omphalodes-gene54': 1, 'oi9cox1': 1, 'orf209': 1, 'orf208': 1, 'orf205': 1, 'oi8cox1': 1, 'orf200': 1, 'orf202': 1, 'orf149': 1, 'Phlebia_radiata-gene557': 1, 'orf287': 1, 'orf144': 1, 'orf271': 1, 'heg17': 1, 'COB': 1, 'Blastocladiella_emersonii-gene105': 1, 'orf9': 1, 'Sclerotinia_borealis-gene164': 1, 'orf56': 1, 'orf295': 1, 'orf434': 1, 'Sclerotinia_borealis-gene251': 1, 'Pyronema_omphalodes-gene287': 1, 'orf344': 1, 'orf231': 1, 'Sclerotinia_borealis-gene299': 1, 'oi1cob': 1, 'Sclerotinia_borealis-gene131': 1, 'orf237': 1, 'cox1i11': 1, 'orf107': 1, 'oi1rns': 1, 'intronic-GIY-YIG': 1, 'orf153': 1, 'orf152': 1, 'orf155': 1, 'orf409': 1, 'heg22': 1, 'Sclerotinia_borealis-gene178': 1, 'oi2apt6': 1, 'ip4': 1, 'ip17': 1, 'orf422': 1, 'orf425': 1, 'orf424': 1, 'orf427': 1, 'orf429': 1, 'Sclerotinia_borealis-gene217': 1, 'orf216': 1, 'orf113': 1, 'orf304': 1, 'orf305': 1, 'rps3': 1, 'orf302': 1, 'Phlebia_radiata-gene253': 1, 'ix5': 1, 'orf367': 1, 'orf362': 1, 'orf360': 1, 'heg34': 1, 'orf354': 1, 'oi1nad1': 1, 'heg35': 1, 'heg31': 1, 'heg32': 1, 'orf293': 1, 'orf252': 1, 'orf399': 1, 'orf251': 1, 'Coniothyrium_glycines-gene63': 1, 'orf254': 1, 'orf414': 1, 'orf416': 1, 'orf259': 1, 'heg8': 1, 'orf413': 1, 'Sclerotinia_borealis-gene4': 1, 'Pyronema_omphalodes-gene105': 1, 'orf316': 1, 'orf557': 1, 'Phlebia_radiata-gene104': 1, 'ip16': 1, 'orf376': 1, 'Phlebia_radiata-gene131': 1, 'orf370': 1, 'Hypogymnia_vittata-gene71': 1, 'oi2atp6': 1, 'ip18': 1, 'heg6': 1, 'Sclerotinia_borealis-gene153': 1, 'Sclerotinia_borealis-gene138': 1, 'orf241': 1, 'orf240': 1, 'orf242': 1, 'orf245': 1, 'oi2cox2': 1, 'oi2cox1': 1, 'Phialocephala_subalpina-gene95': 1, 'orf165': 1, 'orf166': 1, 'orf167': 1, 'orf161': 1, 'orf162': 1, 'Myochromella_boudieri-gene188': 1, 'orf563': 1, 'orf169': 1})
+2020-03-19 19:26:46,399 -INFO- get gene name `cob` from Counter({'cob': 17, 'cox1-I5': 3, 'cox1-I4': 3, 'cob-I1': 3, 'orf235': 3, 'CYTB': 3, 'orf240': 3, 'orf176': 2, 'rnl': 2, 'oi4cox2': 2, 'orf266': 2, 'orf125': 2, 'orf282': 2, 'oi2nad5': 2, 'orf191': 2, 'cob-I2': 2, 'orf201': 2, 'orf149': 2, 'orf238': 2, 'orf233': 2, 'orf234': 2, 'orf236': 2, 'orf229': 2, 'orf228': 2, 'orf215': 2, 'orf246': 2, 'orf106': 1, 'orf107': 1, 'orf99': 1, 'cox3-ai1': 1, 'orf101': 1, 'orf90': 1, 'cox2i2': 1, 'orf11': 1, 'orf453': 1, 'Phlebia_radiata-gene55': 1, 'orf19': 1, 'nad5': 1, 'Pyronema_omphalodes-gene209': 1, 'oi1rnl': 1, 'oi4rnl': 1, 'orf270': 1, 'orf272': 1, 'orf273': 1, 'orf171': 1, 'Blastosporella_zonata-gene164': 1, 'orf475': 1, 'Pyronema_omphalodes-gene133': 1, 'orf115': 1, 'orf117': 1, 'orf141': 1, 'orf111': 1, 'hyp15': 1, 'orf118': 1, 'orf299': 1, 'orf216': 1, 'orf197': 1, 'oi4cox1': 1, 'ORF-2': 1, 'iorf195': 1, 'iorf179': 1, 'orf263': 1, 'orf261': 1, 'iorf171': 1, 'cox1-I3': 1, 'orf262': 1, 'orf186': 1, 'Sclerotinia_borealis-gene437': 1, 'Blastosporella_zonata-gene267': 1, 'orf286': 1, 'Phlebia_radiata-gene235': 1, 'Trametes_hirsuta-gene29': 1, 'orf265': 1, 'orf35': 1, '0rf122': 1, 'Phlebia_radiata-gene855': 1, 'oi5cob': 1, 'bi2': 1, 'cytb': 1, 'iorf160': 1, 'COX1-i2': 1, 'Pyronema_omphalodes-gene268': 1, 'orf219': 1, 'orf195': 1, 'orf451': 1, 'orf214': 1, 'orf196': 1, 'orf190': 1, 'Phlebia_radiata-gene536': 1, 'orf339': 1, 'orf139': 1, 'orf138': 1, 'Phlebia_radiata-gene481': 1, 'orf465': 1, 'Pyronema_omphalodes-gene39': 1, 'Phlebia_radiata-gene96': 1, 'orf24': 1, 'orf21': 1, 'orf22': 1, 'Pyronema_omphalodes-gene274': 1, 'Pyronema_omphalodes-gene271': 1, 'Blastosporella_zonata-gene203': 1, 'iorf156': 1, 'Phlebia_radiata-gene193': 1, 'orf209': 1, 'orf208': 1, 'oi3rnl': 1, 'orf204': 1, 'orf200': 1, 'Sclerotinia_borealis-gene208': 1, 'Phlebia_radiata-gene551': 1, 'oi10cox1': 1, 'cox1': 1, 'orf147': 1, 'iorf298': 1, 'Phlebia_radiata-gene532': 1, 'orf55': 1, 'Coniothyrium_glycines-gene146': 1, 'orf127': 1, 'iorf212': 1, 'orf239': 1, 'orf276': 1, 'Phlebia_radiata-gene391': 1, 'orf230': 1, 'orf231': 1, 'orf232': 1, 'orf237': 1, 'oi5cox1': 1, 'orf153': 1, 'orf154': 1, 'orf156': 1, 'ip2': 1, 'ip3': 1, 'iorf131': 1, 'ip1': 1, 'ip7': 1, 'ip5': 1, 'orf41': 1, 'orf227': 1, 'orf225': 1, 'orf224': 1, 'orf221': 1, 'orf9': 1, 'orf8': 1, 'oi2cox2': 1, 'orf544': 1, 'orf309': 1, 'Phlebia_radiata-gene91': 1, 'Phlebia_radiata-gene186': 1, 'Phlebia_radiata-gene541': 1, 'orf369': 1, 'Lentinula_edodes-gene90': 1, 'oi1cox2': 1, 'oi6cob': 1, 'Blastosporella_zonata-gene252': 1, 'orf255': 1, 'oi1nad5': 1, 'hypothetical-protein': 1, 'orf312': 1, 'orf311': 1, 'orf314': 1, 'orf319': 1, 'ip14': 1, 'ip15': 1, 'iorf245': 1, 'orf973': 1, 'Myochromella_boudieri-gene106': 1, 'orf241': 1, 'orf242': 1, 'orf249': 1, 'orf248': 1, 'Blastosporella_zonata-gene249': 1, 'orf7': 1, 'oi4cob': 1, 'orf482': 1, 'orf268': 1, 'orf163': 1, 'orf168': 1, 'orf391': 1, 'Komagataella_phaffii_CBS_7435-gene148': 1})
+2020-03-19 19:26:55,695 -INFO- get gene name `cox1` from Counter({'cox1': 168, 'COX1': 8, 'COI': 2, 'cox1-2': 2, 'ORF1': 1, 'cox1-i4': 1, 'cox1-i5': 1, 'cox1-i1': 1, 'cox1-i3': 1, 'COX1-3': 1, 'cox-i2': 1, 'Coccocarpia_palmicola-gene35': 1, 'io-cox1-2': 1, 'orf512': 1, 'ai5': 1, 'ai4': 1, 'ai7': 1, 'ai3': 1, 'ai2': 1, 'orf318': 1, 'orf332': 1, 'orf299': 1, 'Blastosporella_zonata-gene182': 1, 'Myochromella_boudieri-gene28': 1, 'cox1-ai5': 1, 'cox1-ai2': 1, 'cox1-ai1': 1, 'coxI': 1, 'Tephrocybe_rancida-gene11': 1, 'cox1-i1a': 1, 'Tricholomella_constricta-gene2': 1, 'orf183': 1})
+2020-03-19 19:26:55,696 -INFO- get product `cytochrome c oxidase subunit 1` from Counter({'cytochrome c oxidase subunit 1': 116, 'cytochrome c oxidase subunit I': 26, 'cytochrome oxidase subunit 1': 14, 'cytochrome oxidase subunit I': 11, 'endonuclease': 8, 'COX1': 3, 'hypothetical protein': 3, 'Cox1': 3, 'cytochrome oxidase subunits 1 and 2 polyprotein': 2, 'LAGLIDADG endonuclease': 2, 'GIY-YIG endonuclease': 2, 'Cox1p': 2, 'putative cytochrome c oxydase, subunit 1': 1, 'cox-i2 protein': 1, 'cox-i3 protein': 1, 'cytochrome c oxidase subunit 1 and 2': 1, 'mitochondrially encoded cytochrome c oxidase I': 1, 'LAGLIDADG homing endonuclease-like protein': 1, 'cox1-i1 protein': 1, 'COX1-ai2 protein': 1, 'cox1': 1, 'cox1-i1a protein': 1, 'cox1-i4 protein': 1, 'COX1-ai3 protein': 1, 'putative DNA endonuclease': 1, 'cox1-i5 protein': 1, 'COX1-ai5 protein': 1, 'cytochrome-c oxidase subunit 1': 1})
+2020-03-19 19:26:55,697 -INFO- get exon number `1` from Counter({1: 48, 4: 26, 2: 20, 7: 20, 3: 19, 5: 12, 8: 12, 9: 11, 6: 10, 13: 7, 10: 6, 11: 5, 14: 5, 12: 4, 15: 1, 16: 1, 17: 1})
+2020-03-19 19:26:55,697 -INFO- get trans_splicing `False` from Counter({False: 206, True: 2})
+2020-03-19 19:26:59,112 -INFO- get gene name `atp6` from Counter({'atp6': 165, 'ATP6': 13, 'Tricholomella_constricta-gene93': 1, 'Phlebia_radiata-gene331': 1, 'atp1': 1, 'orf369': 1, 'Asterophora_parasitica-gene88': 1})
+2020-03-19 19:26:59,114 -INFO- get product `ATP synthase F0 subunit 6` from Counter({'ATP synthase F0 subunit 6': 71, 'ATP synthase F0 subunit a': 52, 'ATP synthase subunit 6': 28, 'ATP synthase subunit a': 6, 'ATPase subunit 6': 5, 'Atp6': 3, 'ATP synthase A chain subunit 6': 3, 'Atp6p': 2, 'ATP6': 2, 'ATP Synthase Subunit 6': 1, 'ATP synthase, subunit 6': 1, 'ATP synthase protein 6': 1, 'H(+)-transporting ATPase, F0 subunit 6': 1, 'putative ATP synthase, subunit 6': 1, 'ATP Synthase subunit 6': 1, 'mitochondrially encoded ATP synthase 6': 1, 'atp6': 1, 'LAGLIDADG endonuclease': 1, 'hypothetical protein': 1, 'ATPase complex subunit 6': 1})
+2020-03-19 19:26:59,116 -INFO- get exon number `1` from Counter({1: 154, 2: 18, 3: 9, 4: 2})
+2020-03-19 19:26:59,116 -INFO- get trans_splicing `False` from Counter({False: 183})
+2020-03-19 19:26:59,120 -INFO- get gene name `cox3` from Counter({'cox3': 170, 'COX3': 9, 'COIII': 2, 'coxIII': 1})
+2020-03-19 19:26:59,121 -INFO- get product `cytochrome c oxidase subunit 3` from Counter({'cytochrome c oxidase subunit 3': 117, 'cytochrome c oxidase subunit III': 25, 'cytochrome oxidase subunit 3': 16, 'cytochrome oxidase subunit III': 11, 'Cox3': 3, 'COX3': 3, 'Cox3p': 2, 'Cytochrome c oxidase subunit III': 1, 'putative cytochrome c oxydase, subunit 3': 1, 'mitochondrially encoded cytochrome c oxidase III': 1, 'cytochrome-c oxidase subunit 3': 1, 'cox3': 1})
+2020-03-19 19:26:59,122 -INFO- get exon number `1` from Counter({1: 133, 2: 21, 3: 13, 4: 9, 5: 3, 6: 2, 9: 1})
+2020-03-19 19:26:59,122 -INFO- get trans_splicing `False` from Counter({False: 182})
+2020-03-19 19:27:02,353 -INFO- get gene name `nad3` from Counter({'nad3': 153, 'ND3': 10, 'Tricholomella_constricta-gene30': 1, 'Asterophora_parasitica-gene39': 1, 'Sugiyamaella_lignohabitans-gene52': 1, 'nadh3': 1, 'Pertusaria_propinqua-gene49': 1, 'nd3': 1, 'Madurella_mycetomatis-gene69': 1})
+2020-03-19 19:27:02,354 -INFO- get product `NADH dehydrogenase subunit 3` from Counter({'NADH dehydrogenase subunit 3': 158, 'Nad3': 3, 'NADH-ubiquinone oxidoreductase chain 3': 1, 'Nad3p': 1, 'nad3': 1, 'NADH dehydrogenase, subunit 3': 1, 'NADH:ubiquinone oxidoreductase subunit 3': 1, 'NAD3': 1, 'mitochondrially encoded NADH dehydrogenase 3': 1, 'NADH-ubiquinone oxidoreductase subunit 3': 1, 'ND3': 1})
+2020-03-19 19:27:02,356 -INFO- get exon number `1` from Counter({1: 158, 2: 10, 3: 2})
+2020-03-19 19:27:02,356 -INFO- get trans_splicing `False` from Counter({False: 170})
+2020-03-19 19:27:04,307 -INFO- get gene name `nad1` from Counter({'nad1': 156, 'ND1': 10, 'nadh1': 1, 'orf333': 1, 'Myochromella_boudieri-gene191': 1, 'nd1': 1})
+2020-03-19 19:27:04,308 -INFO- get product `NADH dehydrogenase subunit 1` from Counter({'NADH dehydrogenase subunit 1': 155, 'Nad1': 3, 'NADH-ubiquinone oxidoreductase chain 1': 2, 'NADH-ubiquinone oxidoreductase subunit 1': 2, 'NADH dehydrogenase, subunit 1': 1, 'NADH:ubiquinone oxidoreductase subunit 1': 1, 'Nad1p': 1, 'nad1': 1, 'LAGLIDADG endonuclease': 1, 'mitochondrially encoded NADH dehydrogenase 1': 1, 'ND1': 1, 'NAD1': 1})
+2020-03-19 19:27:04,309 -INFO- get exon number `1` from Counter({1: 105, 2: 40, 3: 14, 4: 7, 5: 3, 6: 1})
+2020-03-19 19:27:04,309 -INFO- get trans_splicing `False` from Counter({False: 170})
+2020-03-19 19:27:11,964 -INFO- get gene name `nad2` from Counter({'nad2': 144, 'ND2': 9, 'orf104': 1, 'nd2': 1, 'orf99': 1, 'Myochromella_boudieri-gene16': 1, 'orf331': 1, 'Tricholomella_constricta-gene27': 1, 'Asterophora_parasitica-gene36': 1, 'Tephrocybe_rancida-gene100': 1, 'orf394': 1, 'Blastosporella_zonata-gene234': 1, 'Pseudocercospora_fijiensis-gene73': 1, 'Pseudocercospora_fijiensis-gene123': 1, 'orf381': 1, 'trnF-GAA': 1, 'nadh2': 1})
+2020-03-19 19:27:11,966 -INFO- get product `NADH dehydrogenase subunit 2` from Counter({'NADH dehydrogenase subunit 2': 149, 'hypothetical protein': 7, 'Nad2': 3, 'NADH-ubiquinone oxidoreductase chain 2': 1, 'Nad2p': 1, 'nad2': 1, 'NADH dehydrogenase, subunit 2': 1, 'NADH:ubiquinone oxidoreductase subunit 2': 1, 'mitochondrially encoded NADH dehydrogenase 2': 1, 'NAD2': 1, 'NADH-ubiquinone oxidoreductase subunit 2': 1, 'ND2': 1})
+2020-03-19 19:27:11,968 -INFO- get exon number `1` from Counter({1: 151, 2: 8, 4: 3, 3: 2, 5: 2, 6: 1, 7: 1})
+2020-03-19 19:27:11,968 -INFO- get trans_splicing `False` from Counter({False: 168})
+2020-03-19 19:27:13,496 -INFO- get gene name `nad4` from Counter({'nad4': 149, 'ND4': 9, 'Tephrocybe_rancida-gene60': 1, 'Tephrocybe_rancida-gene2': 1, 'Tricholomella_constricta-gene124': 1, 'Myochromella_boudieri-gene158': 1, 'nd4': 1, 'Parastagonospora_nodorum_SN15-gene99': 1, 'Sugiyamaella_lignohabitans-gene2': 1, 'nadh4': 1, 'Asterophora_parasitica-gene93': 1, 'Blastosporella_zonata-gene22': 1})
+2020-03-19 19:27:13,497 -INFO- get product `NADH dehydrogenase subunit 4` from Counter({'NADH dehydrogenase subunit 4': 152, 'Nad4': 3, 'NADH-ubiquinone oxidoreductase chain 4': 2, 'NADH:ubiquinone oxidoreductase subunit 4': 2, 'NADH-ubiquinone oxidoreductase subunit 4': 2, 'NADH dehydrogenase subunit 4-like protein': 1, 'Nad4p': 1, 'NADH dehydrogenase, subunit 4': 1, 'NAD4': 1, 'mitochondrially encoded NADH dehydrogenase 4': 1, 'hypothetical protein': 1, 'ND4': 1})
+2020-03-19 19:27:13,499 -INFO- get exon number `1` from Counter({1: 145, 2: 21, 3: 2})
+2020-03-19 19:27:13,499 -INFO- get trans_splicing `False` from Counter({False: 168})
+2020-03-19 19:27:17,529 -INFO- get gene name `nad5` from Counter({'nad5': 144, 'ND5': 8, 'nadh5': 1, 'Sugiyamaella_lignohabitans-gene44': 1, 'nad5-i1': 1, 'Tricholomella_constricta-gene69': 1, 'Myochromella_boudieri-gene152': 1, 'Blastosporella_zonata-gene108': 1, 'nd5': 1, 'Asterophora_parasitica-gene64': 1, 'nad5-i2': 1, 'NAD5-i1': 1, 'orf303': 1, 'orf319': 1, 'orf212': 1, 'Tilletia_walkeri-gene51': 1})
+2020-03-19 19:27:17,530 -INFO- get product `NADH dehydrogenase subunit 5` from Counter({'NADH dehydrogenase subunit 5': 144, 'Nad5': 3, 'NADH-ubiquinone oxidoreductase chain 5': 2, 'NADH:ubiquinone oxidoreductase subunit 5': 2, 'LAGLIDADG endonuclease': 2, 'NADH-ubiquinone oxidoreductase subunit 5': 2, 'endonuclease': 2, 'Nad5p': 1, 'NAHD dehydrogenase subunit 5': 1, 'NADH dehydrogenase, subunit 5': 1, 'mitochondrially encoded NADH dehydrogenase 5': 1, 'LAGLIDADG homing endonuclease': 1, 'NAD5': 1, 'NADH dehydrogenase subunit H dehydrogenase subunit 5': 1, 'ND5': 1, 'hypothetical protein': 1})
+2020-03-19 19:27:17,532 -INFO- get exon number `1` from Counter({1: 81, 2: 34, 3: 25, 4: 10, 5: 6, 6: 4, 8: 3, 7: 2, 10: 1})
+2020-03-19 19:27:17,532 -INFO- get trans_splicing `False` from Counter({False: 165, True: 1})
+2020-03-19 19:27:18,455 -INFO- get gene name `nad4L` from Counter({'nad4L': 151, 'ND4L': 8, 'nad4l': 4, 'nd4L': 1, 'nadh4L': 1})
+2020-03-19 19:27:18,457 -INFO- get product `NADH dehydrogenase subunit 4L` from Counter({'NADH dehydrogenase subunit 4L': 148, 'NADH-ubiquinone oxidoreductase chain 4L': 3, 'NADH-ubiquinone oxidoreductase subunit 4L': 2, 'NADH:ubiquinone oxidoreductase subunit 4L': 2, 'Nad4L': 2, 'Nad4Lp': 1, 'NADH dehydrogenase subunit 4': 1, 'mitochondrially encoded NADH dehydrogenase 4L': 1, 'NADH dehydrogenase, subunit 4L': 1, 'nad4L': 1, 'NAD4L': 1, 'ND4L': 1, 'Nad4l': 1})
+2020-03-19 19:27:18,458 -INFO- get exon number `1` from Counter({1: 151, 2: 14})
+2020-03-19 19:27:18,459 -INFO- get trans_splicing `False` from Counter({False: 165})
+2020-03-19 19:27:24,636 -INFO- get gene name `atp9` from Counter({'atp9': 141, 'ATP9': 14, 'orf123': 1, 'Lichtheimia_hongkongensis-gene6': 1, 'Zymoseptoria_tritici-gene75': 1, 'OLI1': 1, 'orf108': 1, 'Sclerotinia_borealis-gene230': 1, 'atp9a': 1, 'orf204': 1})
+2020-03-19 19:27:24,637 -INFO- get product `ATP synthase F0 subunit c` from Counter({'ATP synthase F0 subunit c': 49, 'ATP synthase F0 subunit 9': 48, 'ATP synthase subunit 9': 35, 'ATPase subunit 9': 5, 'hypothetical protein': 4, 'ATP synthase A chain subunit 9': 3, 'Atp9': 2, 'ATP9': 2, 'Atp9p': 2, 'ATP synthase, subunit 9': 1, 'atp9': 1, 'ATP9 protein': 1, 'mitochondrially encoded ATP synthase 9': 1, 'ATP synthesase subunit 9': 1, 'ATP synthase protein 9': 1, 'F-type H+-transporting ATPase subunit c': 1, 'ATPase complex subunit 9': 1, 'putative ATP synthase, subunit 9': 1, 'truncated ATP synthase subunit 9': 1, 'H(+)-transporting ATPase, F0 subunit 9': 1, 'ATP Synthase Membrane Subunit 9': 1, 'F0 ATP synthase subunit c': 1})
+2020-03-19 19:27:24,638 -INFO- get exon number `1` from Counter({1: 148, 2: 11, 3: 3, 4: 1})
+2020-03-19 19:27:24,638 -INFO- get trans_splicing `False` from Counter({False: 163})
+2020-03-19 19:27:25,859 -INFO- get gene name `atp8` from Counter({'atp8': 151, 'ATP8': 12, 'Drechslerella_brochopaga-gene181': 1})
+2020-03-19 19:27:25,860 -INFO- get product `ATP synthase F0 subunit 8` from Counter({'ATP synthase F0 subunit 8': 109, 'ATP synthase subunit 8': 28, 'ATPase subunit 8': 5, 'Atp8': 3, 'ATP synthase protein 8': 3, 'Atp8p': 2, 'ATP8': 2, 'ATP Synthase Subunit 8': 2, 'ATP synthase A chain subunit 8': 2, 'atp8': 1, 'H(+)-transporting ATPase, F0 subunit 8': 1, 'ATP synthesase subunit 8': 1, 'ATP synthase, subunit 8': 1, 'mitochondrially encoded ATP synthase 8': 1, 'ATPase complex subunit 8': 1, 'putative ATP synthase, subunit 8': 1, 'hypothetical protein': 1})
+2020-03-19 19:27:25,861 -INFO- get exon number `1` from Counter({1: 164})
+2020-03-19 19:27:25,861 -INFO- get trans_splicing `False` from Counter({False: 164})
+2020-03-19 19:27:25,865 -INFO- get gene name `nad6` from Counter({'nad6': 146, 'ND6': 10, 'nadh6': 1, 'Tricholomella_constricta-gene51': 1, 'Myochromella_boudieri-gene120': 1, 'nad-6': 1, 'Asterophora_parasitica-gene124': 1, 'Parastagonospora_nodorum_SN15-gene156': 1, 'nd6': 1})
+2020-03-19 19:27:25,865 -INFO- get product `NADH dehydrogenase subunit 6` from Counter({'NADH dehydrogenase subunit 6': 147, 'Nad6': 3, 'NADH:ubiquinone oxidoreductase subunit 6': 2, 'NADH-ubiquinone oxidoreductase subunit 6': 2, 'subunit 6 of NADH dehydrogenase': 1, 'NADH-ubiquinone oxidoreductase chain 6': 1, 'NADH dehydrogenase, subunit 6': 1, 'mitochondrially encoded NADH dehydrogenase 6': 1, 'nad6': 1, 'NAD(P)H-quinone oxidoreductase subunit 6': 1, 'NAD6': 1, 'Nad6p': 1, 'ND6': 1})
+2020-03-19 19:27:25,866 -INFO- get exon number `1` from Counter({1: 152, 2: 9, 3: 2})
+2020-03-19 19:27:25,866 -INFO- get trans_splicing `False` from Counter({False: 163})
+2020-03-19 19:27:42,952 -INFO- get gene name `dpo` from Counter({'dpo': 16, 'dpol': 6, 'dpoB': 3, 'orf225': 2, 'ORF5': 1, 'ORF7': 1, 'ORF6': 1, 'orf102': 1, 'Rhynchosporium_secalis-gene196': 1, 'orf146': 1, 'orf288': 1, 'orf324': 1, 'orf31': 1, 'orf1407': 1, 'Sclerotinia_borealis-gene65': 1, 'Rhynchosporium_secalis-gene197': 1, 'orf847': 1, 'orf1064': 1, 'orf512': 1, 'orf113': 1, 'Pyronema_omphalodes-gene302': 1, 'orf274': 1, 'orf25': 1, 'orf186': 1, 'orf851': 1, 'orf173': 1, 'Sclerotinia_borealis-gene447': 1, 'Leptogium_hirsutum-gene60': 1, 'orf427': 1, 'orf908': 1, 'Tephrocybe_rancida-gene184': 1, 'orf139': 1, 'orf136': 1, 'orf379': 1, 'orf157': 1, 'orf147': 1, 'orf546': 1, 'orf298': 1, 'Myochromella_boudieri-gene164': 1, 'orf245': 1, 'Myochromella_boudieri-gene167': 1, 'dpo_b2': 1, 'Myochromella_boudieri-gene161': 1, 'orf244': 1, 'orf226': 1, 'orf6': 1, 'orf223': 1, 'orf221': 1, 'orf247': 1, 'orf222': 1, 'orf524': 1, 'orf386': 1, 'orf183': 1, 'orf165': 1, 'orf167': 1, 'orf301': 1, 'orf201': 1, 'orf759': 1, 'orf180': 1, 'orf181': 1})
+2020-03-19 19:27:46,405 -INFO- get gene name `rps3` from Counter({'rps3': 47, 'rps5': 6, 'orf490': 2, 'rps': 1, 'ORF1': 1, 'rpS3': 1, 'Parastagonospora_nodorum_SN15-gene97': 1, 'orf435': 1, 'orf519': 1, 'orf629': 1, 'orf413': 1, 'orf494': 1, 'orf459': 1, 'Shiraia_bambusicola-gene89': 1, 'rms5': 1, 'rp3': 1, 'var1': 1, 'Hypogymnia_vittata-gene55': 1, 'orf635': 1, 'orf409': 1, 'orf444': 1, 'orf1': 1, 'orf508': 1, 'orf448': 1, 'orf540': 1})
+2020-03-19 19:27:46,406 -INFO- get product `ribosomal protein S3` from Counter({'ribosomal protein S3': 40, 'hypothetical protein': 13, 'ribosomal protein S5': 7, 'ribosomal protein subunit 3': 6, 'ribosomal protein S3-like protein': 2, 'small subunit ribosomal protein 3': 2, 'ribosomal protein': 2, 'rps-like protein': 1, 'ribosomal protein S5-like protein': 1, 'mitochondrial ribosomal protein Var1/Rps3': 1, 'ribosomal protein 3': 1, 'putative ribosomal protein S3': 1})
+2020-03-19 19:27:46,407 -INFO- get exon number `1` from Counter({1: 70, 2: 7})
+2020-03-19 19:27:46,407 -INFO- get trans_splicing `False` from Counter({False: 77})
+2020-03-19 19:28:14,093 -INFO- get gene name `cob-I3` from Counter({'cob-I3': 3, 'orf313': 2, 'orf319': 2, 'oi5nad5': 2, 'orf306': 2, 'orf340': 1, 'orf341': 1, 'orf329': 1, 'orf99': 1, 'Myochromella_boudieri-gene176': 1, 'Cladonia_leporina-gene22': 1, 'orf361': 1, 'orf337': 1, 'Pseudocercospora_fijiensis-gene6': 1, 'orf324': 1, 'Coccocarpia_palmicola-gene15': 1, 'Myochromella_boudieri-gene66': 1, 'NAD5-i2': 1, 'Myochromella_boudieri-gene62': 1, 'io-cox1-3': 1, 'Pertusaria_propinqua-gene18': 1, 'bi4': 1, 'orf363': 1, 'orf66': 1, 'Coniothyrium_glycines-gene80': 1, 'orf416': 1, 'orf397': 1, 'orf311': 1, 'Blastosporella_zonata-gene213': 1, 'Coccocarpia_palmicola-gene41': 1, 'intronic-LAGLIDADG': 1, 'orf315': 1, 'orf314': 1, 'orf318': 1, 'cox1i4': 1, 'orf339': 1, 'orf374': 1, 'orf326': 1, 'oi6cox1': 1, 'orf359': 1, 'ip13': 1, 'Sclerotinia_borealis-gene128': 1, 'orf135': 1, 'orf133': 1, 'nad5i2': 1, 'orf697': 1, 'Sclerotinia_borealis-gene119': 1, 'heg26': 1, 'nad5-I1': 1, 'Pertusaria_propinqua-gene20': 1, 'oi4cox1': 1, 'orf121': 1, 'cox1-I4': 1, 'orf248': 1, 'orf401': 1, 'orf380': 1, 'cox1-I1': 1, 'cox1-I2': 1, 'cox1-I3': 1, 'Lentinula_edodes-gene88': 1, 'orf305': 1, 'oi7cox1': 1, 'Pyronema_omphalodes-gene129': 1, 'cox1-I5': 1, 'Pyronema_omphalodes-gene124': 1, 'Blastosporella_zonata-gene153': 1, 'orf330': 1, 'orf202': 1})
+2020-03-19 19:28:25,900 -INFO- get gene name `cob` from Counter({'cob': 17, 'orf787': 2, 'cox1-I1': 2, 'orf779': 2, 'ORF3': 1, 'Starmerella_bacillaris-gene5': 1, 'Myochromella_boudieri-gene179': 1, 'cox1': 1, 'oi2nad2': 1, 'cox1-i1': 1, 'cob-i1': 1, 'orf36': 1, 'orf801': 1, 'orf688': 1, 'orf38': 1, 'orf844': 1, 'Phlebia_radiata-gene860': 1, 'Blastosporella_zonata-gene129': 1, 'orf826': 1, 'orf785': 1, 'cob-ai2': 1, 'orf669': 1, 'orf119': 1, 'orf717': 1, 'orf620': 1, 'orf793': 1, 'orf695': 1, 'orf756': 1, 'orf529': 1, 'orf221': 1, 'Blastosporella_zonata-gene223': 1, 'oi2cox3': 1, 'oi2cox1': 1, 'orf734': 1, 'orf771': 1, 'Pyronema_omphalodes-gene257': 1, 'orf812': 1, 'Blastosporella_zonata-gene157': 1, 'orf777': 1})
+2020-03-19 19:28:25,903 -INFO- get gene name `rps3` from Counter({'rps3': 38, 'orf252': 1, 'orf423': 1, 'Tricholomella_constricta-gene42': 1, 'orf359': 1, 'S3': 1, 'orf_195': 1, 'Tephrocybe_rancida-gene160': 1, 'Blastosporella_zonata-gene228': 1, 'orf597': 1, 'Asterophora_parasitica-gene91': 1, 'Myochromella_boudieri-gene85': 1})
+2020-03-19 19:28:25,904 -INFO- get product `ribosomal protein S3` from Counter({'ribosomal protein S3': 41, 'hypothetical protein': 5, 'small ribosomal protein subunit 3': 1, 'RPS3': 1, 'ribosomal protein subunit 3': 1})
+2020-03-19 19:28:25,904 -INFO- get exon number `1` from Counter({1: 49})
+2020-03-19 19:28:25,905 -INFO- get trans_splicing `False` from Counter({False: 49})
+2020-03-19 19:28:33,485 -INFO- get gene name `orf385` from Counter({'orf385': 2, 'orf285': 1, 'orf365': 1, 'orf127': 1, 'cox1': 1, 'orf147': 1, 'cox2i3': 1, 'heg12': 1, 'orf111': 1, 'Coniothyrium_glycines-gene109': 1, 'orf435': 1, 'orf395': 1, 'oi6cox2': 1, 'orf314': 1, 'orf191': 1, 'orf455': 1, 'oi5cox2': 1, 'orf371': 1, 'orf370': 1, 'orf137': 1, 'orf119': 1, 'orf43': 1, 'Sclerotinia_borealis-gene112': 1, 'oi4cox1': 1, 'orf243': 1, 'orf408': 1, 'Coniothyrium_glycines-gene118': 1, 'orf400': 1, 'Sclerotinia_borealis-gene374': 1, 'Sclerotinia_borealis-gene370': 1, 'Sclerotinia_borealis-gene358': 1, 'ip10': 1, 'orf460': 1, 'Sclerotinia_borealis-gene351': 1})
+2020-03-19 19:28:39,168 -INFO- get gene name `orf247` from Counter({'orf247': 2, 'orf121': 1, 'orf101': 1, 'orf11': 1, 'orf127': 1, 'orf173': 1, 'orf259': 1, 'hypP3': 1, 'hypP1': 1, 'Heterobasidion_irregulare-gene156': 1, 'orf230': 1, 'hyp58': 1, 'orf214': 1, 'Phlebia_radiata-gene355': 1, 'orf115': 1, 'orf292': 1, 'orf139': 1, 'orf137': 1, 'Heterobasidion_irregulare-gene67': 1, 'orf5': 1, 'orf224': 1, 'orf245': 1, 'orf266': 1, 'orf205': 1, 'Trametes_hirsuta-gene116': 1, 'orf200': 1})
+2020-03-19 19:28:39,170 -INFO- get gene name `orf344` from Counter({'orf344': 2, 'orf367': 1, 'orf365': 1, 'orf363': 1, 'orf346': 1, 'orf341': 1, 'Cladonia_leporina-gene28': 1, 'oi10cox1': 1, 'heg33': 1, 'orf398': 1, 'orf411': 1, 'intronic-LAGLIDADG': 1, 'orf769': 1, 'oi6cox1': 1, 'cox1i10': 1, 'orf374': 1, 'orf357': 1, 'orf378': 1, 'Myochromella_boudieri-gene73': 1, 'orf47': 1, 'Coniothyrium_glycines-gene93': 1, 'cox1-I5': 1, 'cox1-I6': 1})
+2020-03-19 19:28:39,967 -INFO- get gene name `rps3` from Counter({'rps3': 13, 'var1': 3, 'VAR1': 3, 'orf342': 1, 'Var1': 1})
+2020-03-19 19:28:49,140 -INFO- get gene name `nad5` from Counter({'nad5': 9, 'nad2': 7, 'nad4': 2, 'cob-1': 1, 'cob': 1})
+2020-03-19 19:28:51,496 -INFO- get gene name `orf108` from Counter({'orf108': 2, 'oi1nad1': 2, 'orf473': 2, 'orf240': 1, 'orf111': 1, 'orf2': 1, 'orf142': 1, 'orf152': 1, 'orf172': 1, 'orf469': 1, 'Sclerotinia_borealis-gene240': 1, 'orf699': 1})
+2020-03-19 19:28:54,474 -INFO- get gene name `orf227` from Counter({'orf227': 1, 'orf115': 1, 'orf104': 1, 'orf251': 1, 'orf151': 1, 'Tephrocybe_rancida-gene106': 1, 'orf342': 1, 'orf145': 1, 'orf171': 1, 'orf202': 1, 'Phlebia_radiata-gene836': 1, 'Heterobasidion_irregulare-gene88': 1, 'orf213': 1, 'Trametes_hirsuta-gene22': 1})
+2020-03-19 19:28:57,028 -INFO- get gene name `orf118` from Counter({'orf118': 1, 'orf929': 1, 'ORF6': 1, 'orf99': 1, 'orf112': 1, 'orf352': 1, 'orf266': 1, 'orf481': 1, 'orf329': 1, 'orf536': 1, 'rpo': 1, 'orf181': 1})
+2020-03-19 19:28:59,909 -INFO- get gene name `orf430` from Counter({'orf430': 1, 'orf376': 1, 'orf418': 1, 'Tricholomella_constricta-gene24': 1, 'orf384': 1, 'orf401': 1, 'orf400': 1, 'Tephrocybe_rancida-gene128': 1, 'orf1014': 1, 'orf180': 1, 'orf190': 1, 'rpo': 1})
+2020-03-19 19:29:04,983 -INFO- get gene name `orf100` from Counter({'orf100': 1, 'orf357': 1, 'orf259': 1, 'Sclerotinia_borealis-gene363': 1, 'oi2nad1': 1, 'Phlebia_radiata-gene397': 1, 'Phlebia_radiata-gene381': 1, 'orf479': 1, 'Phlebia_radiata-gene411': 1, 'orf26': 1, 'orf22': 1})
+2020-03-19 19:29:08,870 -INFO- get gene name `orf107` from Counter({'orf107': 1, 'orf370': 1, 'hyp7': 1, 'orf134': 1, 'orf832': 1, 'orf109': 1, 'orf161': 1, 'Blastosporella_zonata-gene293': 1, 'orf231': 1, 'orf135': 1})
+2020-03-19 19:29:08,872 -INFO- get gene name `cob-I4` from Counter({'cob-I4': 2, 'orf363': 1, 'orf112': 1, 'cob-I2': 1, 'oi7cob': 1, 'heg21': 1, 'Sclerotinia_borealis-gene226': 1})
+2020-03-19 19:29:08,873 -INFO- get gene name `orf148` from Counter({'orf148': 1, 'ORF2': 1, 'orf151': 1, 'Pseudocercospora_fijiensis-gene20': 1, 'orf154': 1, 'orf132': 1, 'orf32': 1, 'Zymoseptoria_tritici-gene107': 1})
+2020-03-19 19:29:09,942 -INFO- get gene name `orf339` from Counter({'orf339': 1, 'orf367': 1, 'Tephrocybe_rancida-gene189': 1, 'Heterobasidion_irregulare-gene90': 1, 'Phlebia_radiata-gene72': 1, 'orf236': 1})
+2020-03-19 19:29:10,763 -INFO- get gene name `NAT2` from Counter({'NAT2': 1, 'NAT1': 1, 'orf219': 1, 'orf217': 1, 'Phialocephala_subalpina-gene151': 1, 'orf202': 1})
+2020-03-19 19:29:10,765 -INFO- get gene name `orf432` from Counter({'orf432': 1, 'orf447': 1, 'oi13cox1': 1, 'orf279': 1, 'orf128': 1, 'orf428': 1})
+2020-03-19 19:29:10,766 -INFO- get gene name `orf366` from Counter({'orf366': 1, 'orf367': 1, 'orf407': 1, 'orf131': 1, 'orf459': 1, 'Sclerotinia_borealis-gene247': 1})
+2020-03-19 19:29:12,460 -INFO- get gene name `orf3` from Counter({'orf3': 1, 'orf322': 1, 'orf330': 1, 'orf266': 1, 'orf128': 1, 'orf308': 1})
+2020-03-19 19:29:13,491 -INFO- get gene name `orf362` from Counter({'orf362': 1, 'hyp14': 1, 'orf320': 1, 'hyp20': 1, 'orf315': 1, 'orf12': 1})
+2020-03-19 19:29:14,365 -INFO- get gene name `orf128` from Counter({'orf128': 1, 'orf150': 1, 'orf156': 1, 'orf142': 1, 'orf188': 1, 'orf202': 1})
+2020-03-19 19:29:15,193 -INFO- get gene name `orf341` from Counter({'orf341': 1, 'orf_1146': 1, 'orf72': 1, 'x4': 1, 'x3': 1})
+2020-03-19 19:29:15,195 -INFO- get gene name `Trametes_hirsuta-gene54` from Counter({'Trametes_hirsuta-gene54': 1, 'Phlebia_radiata-gene359': 1, 'orf140': 1, 'orf436': 1, 'Blastosporella_zonata-gene20': 1})
+2020-03-19 19:29:15,196 -INFO- get gene name `orf275` from Counter({'orf275': 1, 'Heterobasidion_irregulare-gene81': 1, 'orf281': 1, 'orf306': 1, 'orf288': 1})
+2020-03-19 19:29:15,197 -INFO- get gene name `orf296` from Counter({'orf296': 1, 'orf392': 1, 'x5': 1, 'orf402': 1, 'orf194': 1})
+2020-03-19 19:29:18,242 -INFO- get gene name `Tephrocybe_rancida-gene187` from Counter({'Tephrocybe_rancida-gene187': 1, 'orf192': 1, 'orf102': 1, 'orf109': 1})
+2020-03-19 19:29:18,244 -INFO- get gene name `orf120` from Counter({'orf120': 1, 'oi6nad5': 1, 'orf380': 1, 'orf156': 1})
+2020-03-19 19:29:18,245 -INFO- get gene name `atp8` from Counter({'atp8': 4})
+2020-03-19 19:29:19,014 -INFO- get gene name `orf240` from Counter({'orf240': 1, 'Sclerotinia_borealis-gene63': 1, 'orf455': 1, 'Cladonia_leporina-gene31': 1})
+2020-03-19 19:29:19,799 -INFO- get gene name `orf284` from Counter({'orf284': 1, 'orf146': 1, 'orf291': 1})
+2020-03-19 19:29:20,492 -INFO- get gene name `orf388` from Counter({'orf388': 1, 'orf287': 1, 'orf245': 1, 'orf108': 1})
+2020-03-19 19:29:20,494 -INFO- get gene name `orf475` from Counter({'orf475': 1, 'Heterobasidion_irregulare-gene66': 1, 'orf412': 1, 'orf247': 1})
+2020-03-19 19:29:20,495 -INFO- get gene name `orf243` from Counter({'orf243': 1, 'Heterobasidion_irregulare-gene135': 1, 'orf364': 1, 'hyp29': 1})
+2020-03-19 19:29:21,176 -INFO- get gene name `orf450` from Counter({'orf450': 1, 'orf172': 1, 'hypP2': 1, 'orf473': 1})
+2020-03-19 19:29:21,178 -INFO- get gene name `orf546` from Counter({'orf546': 1, 'orf632': 1, 'orf732': 1})
+2020-03-19 19:29:21,179 -INFO- get gene name `orf783` from Counter({'orf783': 1, 'orf139': 1, 'orf1931': 1})
+2020-03-19 19:29:21,179 -INFO- get gene name `ORF_02` from Counter({'ORF_02': 1, 'Rhynchosporium_secalis-gene76': 1, 'orf291': 1})
+2020-03-19 19:29:22,623 -INFO- get gene name `orf415` from Counter({'orf415': 1, 'orf437': 1, 'orf413': 1})
+2020-03-19 19:29:22,624 -INFO- get gene name `orf230` from Counter({'orf230': 1, 'orf231': 1, 'orf278': 1})
+2020-03-19 19:29:22,626 -INFO- get gene name `orf358` from Counter({'orf358': 1, 'orf368': 1, 'orf336': 1})
+2020-03-19 19:29:23,699 -INFO- get gene name `hyp28` from Counter({'hyp28': 1, 'hyp57': 1, 'orf282': 1})
+2020-03-19 19:29:23,701 -INFO- get gene name `orf241` from Counter({'orf241': 1, 'orf311': 1, 'Sclerotinia_borealis-gene376': 1})
+2020-03-19 19:29:24,515 -INFO- get gene name `orf511` from Counter({'orf511': 1, 'orf670': 1, 'orf844': 1})
+2020-03-19 19:29:24,517 -INFO- get gene name `orf238` from Counter({'orf238': 1, 'Pseudocercospora_fijiensis-gene109': 1, 'orf270': 1})
+2020-03-19 19:29:25,354 -INFO- get gene name `Sclerotinia_borealis-gene233` from Counter({'Sclerotinia_borealis-gene233': 1, 'Rhynchosporium_secalis-gene112': 1, 'Sclerotinia_borealis-gene190': 1})
+2020-03-19 19:29:25,356 -INFO- get gene name `rps3` from Counter({'rps3': 2})
+2020-03-19 19:29:25,357 -INFO- get gene name `orf318` from Counter({'orf318': 1, 'hyp1': 1})
+2020-03-19 19:29:25,358 -INFO- get gene name `orf252` from Counter({'orf252': 1, 'orf110': 1})
+2020-03-19 19:29:25,359 -INFO- get gene name `orf590` from Counter({'orf590': 1, 'orf3': 1})
+2020-03-19 19:29:25,360 -INFO- get gene name `nad6` from Counter({'nad6': 2})
+2020-03-19 19:29:25,361 -INFO- get gene name `orf153` from Counter({'orf153': 1, 'orf210': 1})
+2020-03-19 19:29:25,362 -INFO- get gene name `orf284` from Counter({'orf284': 1, 'orf224': 1})
+2020-03-19 19:29:25,363 -INFO- get gene name `orf4` from Counter({'orf4': 1, 'orf270': 1})
+2020-03-19 19:29:25,364 -INFO- get gene name `orf297` from Counter({'orf297': 1, 'hyp11': 1})
+2020-03-19 19:29:25,365 -INFO- get gene name `orf171` from Counter({'orf171': 1, 'orf389': 1})
+2020-03-19 19:29:25,366 -INFO- get gene name `orf159` from Counter({'orf159': 1, 'orf152': 1})
+2020-03-19 19:29:25,367 -INFO- get gene name `orf233` from Counter({'orf233': 1, 'Phlebia_radiata-gene478': 1})
+2020-03-19 19:29:25,368 -INFO- get gene name `orf510` from Counter({'orf510': 1, 'orf138': 1})
+2020-03-19 19:29:25,369 -INFO- get gene name `orf110` from Counter({'orf110': 1, 'orf156': 1})
+2020-03-19 19:29:25,369 -INFO- get gene name `Leptogium_hirsutum-gene50` from Counter({'Leptogium_hirsutum-gene50': 1, 'Pseudocercospora_fijiensis-gene5': 1})
+2020-03-19 19:29:26,155 -INFO- get gene name `orf152` from Counter({'orf152': 1})
+2020-03-19 19:29:26,157 -INFO- get gene name `Phlebia_radiata-gene878` from Counter({'Phlebia_radiata-gene878': 1, 'orf104': 1})
+2020-03-19 19:29:26,157 -INFO- get gene name `Parastagonospora_nodorum_SN15-gene61` from Counter({'Parastagonospora_nodorum_SN15-gene61': 1, 'orf472': 1})
+2020-03-19 19:29:26,958 -INFO- get gene name `orf375` from Counter({'orf375': 1, 'orf377': 1})
+2020-03-19 19:29:26,960 -INFO- get gene name `Rhynchosporium_secalis-gene199` from Counter({'Rhynchosporium_secalis-gene199': 1, 'Pseudocercospora_fijiensis-gene16': 1})
+2020-03-19 19:29:26,961 -INFO- get gene name `Pseudocercospora_fijiensis-gene57` from Counter({'Pseudocercospora_fijiensis-gene57': 1, 'Zymoseptoria_tritici-gene92': 1})
+2020-03-19 19:29:26,975 -INFO- extrat 16 genes: ['cob', 'cox2', 'cox1', 'atp6', 'cox3', 'nad3', 'nad1', 'nad2', 'nad4', 'nad5', 'nad4L', 'atp9', 'atp8', 'nad6', 'rps3', 'rps3-20']
+2020-03-19 19:29:26,975 -INFO- aligning sequences
+2020-03-19 19:43:41,426 -INFO- building hmm profiles
+2020-03-19 19:43:51,830 -INFO- building augustus profiles
+2020-03-19 19:44:04,379 -INFO- training augustus models
+/share/home/yuanqyk/.local/lib/python2.7/site-packages/Bio/SeqIO/InsdcIO.py:687: BiopythonWarning: Increasing length of locus line to allow long name. This will result in fields that are not in usual positions.
+  BiopythonWarning,
+2020-03-19 19:44:06,481 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Fungi-cob -r)
+randomSplit.pl /dev/shm/tmp/mt-Fungi/trng/train-cob.gb 183
+new_species.pl --species=mt-Fungi-cob
+etraining --species=mt-Fungi-cob /dev/shm/tmp/mt-Fungi/trng/train-cob.gb.train --translation_table=4
+augustus --species=mt-Fungi-cob /dev/shm/tmp/mt-Fungi/trng/train-cob.gb.test --translation_table=4 &> /dev/shm/tmp/mt-Fungi/trng/train-cob.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Fungi-cob --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Fungi/trng/train-cob.gb.train && rm -r tmp_opt_mt-Fungi-cob
+#etraining --species=mt-Fungi-cob /dev/shm/tmp/mt-Fungi/trng/train-cob.gb.train
+#augustus --species=mt-Fungi-cob /dev/shm/tmp/mt-Fungi/trng/train-cob.gb.test &> /dev/shm/tmp/mt-Fungi/trng/train-cob.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Fungi/agst/mt-Fungi-cob.tgz mt-Fungi-cob)
+`
+2020-03-19 19:44:42,865 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Fungi-cox2 -r)
+randomSplit.pl /dev/shm/tmp/mt-Fungi/trng/train-cox2.gb 98
+new_species.pl --species=mt-Fungi-cox2
+etraining --species=mt-Fungi-cox2 /dev/shm/tmp/mt-Fungi/trng/train-cox2.gb.train --translation_table=4
+augustus --species=mt-Fungi-cox2 /dev/shm/tmp/mt-Fungi/trng/train-cox2.gb.test --translation_table=4 &> /dev/shm/tmp/mt-Fungi/trng/train-cox2.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Fungi-cox2 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Fungi/trng/train-cox2.gb.train && rm -r tmp_opt_mt-Fungi-cox2
+#etraining --species=mt-Fungi-cox2 /dev/shm/tmp/mt-Fungi/trng/train-cox2.gb.train
+#augustus --species=mt-Fungi-cox2 /dev/shm/tmp/mt-Fungi/trng/train-cox2.gb.test &> /dev/shm/tmp/mt-Fungi/trng/train-cox2.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Fungi/agst/mt-Fungi-cox2.tgz mt-Fungi-cox2)
+`
+2020-03-19 19:45:17,839 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Fungi-cox1 -r)
+randomSplit.pl /dev/shm/tmp/mt-Fungi/trng/train-cox1.gb 69
+new_species.pl --species=mt-Fungi-cox1
+etraining --species=mt-Fungi-cox1 /dev/shm/tmp/mt-Fungi/trng/train-cox1.gb.train --translation_table=4
+augustus --species=mt-Fungi-cox1 /dev/shm/tmp/mt-Fungi/trng/train-cox1.gb.test --translation_table=4 &> /dev/shm/tmp/mt-Fungi/trng/train-cox1.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Fungi-cox1 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Fungi/trng/train-cox1.gb.train && rm -r tmp_opt_mt-Fungi-cox1
+#etraining --species=mt-Fungi-cox1 /dev/shm/tmp/mt-Fungi/trng/train-cox1.gb.train
+#augustus --species=mt-Fungi-cox1 /dev/shm/tmp/mt-Fungi/trng/train-cox1.gb.test &> /dev/shm/tmp/mt-Fungi/trng/train-cox1.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Fungi/agst/mt-Fungi-cox1.tgz mt-Fungi-cox1)
+`
+2020-03-19 19:45:54,878 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Fungi-atp6 -r)
+randomSplit.pl /dev/shm/tmp/mt-Fungi/trng/train-atp6.gb 61
+new_species.pl --species=mt-Fungi-atp6
+etraining --species=mt-Fungi-atp6 /dev/shm/tmp/mt-Fungi/trng/train-atp6.gb.train --translation_table=4
+augustus --species=mt-Fungi-atp6 /dev/shm/tmp/mt-Fungi/trng/train-atp6.gb.test --translation_table=4 &> /dev/shm/tmp/mt-Fungi/trng/train-atp6.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Fungi-atp6 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Fungi/trng/train-atp6.gb.train && rm -r tmp_opt_mt-Fungi-atp6
+#etraining --species=mt-Fungi-atp6 /dev/shm/tmp/mt-Fungi/trng/train-atp6.gb.train
+#augustus --species=mt-Fungi-atp6 /dev/shm/tmp/mt-Fungi/trng/train-atp6.gb.test &> /dev/shm/tmp/mt-Fungi/trng/train-atp6.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Fungi/agst/mt-Fungi-atp6.tgz mt-Fungi-atp6)
+`
+2020-03-19 19:46:09,685 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Fungi-cox3 -r)
+randomSplit.pl /dev/shm/tmp/mt-Fungi/trng/train-cox3.gb 60
+new_species.pl --species=mt-Fungi-cox3
+etraining --species=mt-Fungi-cox3 /dev/shm/tmp/mt-Fungi/trng/train-cox3.gb.train --translation_table=4
+augustus --species=mt-Fungi-cox3 /dev/shm/tmp/mt-Fungi/trng/train-cox3.gb.test --translation_table=4 &> /dev/shm/tmp/mt-Fungi/trng/train-cox3.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Fungi-cox3 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Fungi/trng/train-cox3.gb.train && rm -r tmp_opt_mt-Fungi-cox3
+#etraining --species=mt-Fungi-cox3 /dev/shm/tmp/mt-Fungi/trng/train-cox3.gb.train
+#augustus --species=mt-Fungi-cox3 /dev/shm/tmp/mt-Fungi/trng/train-cox3.gb.test &> /dev/shm/tmp/mt-Fungi/trng/train-cox3.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Fungi/agst/mt-Fungi-cox3.tgz mt-Fungi-cox3)
+`
+2020-03-19 19:46:27,867 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Fungi-nad3 -r)
+randomSplit.pl /dev/shm/tmp/mt-Fungi/trng/train-nad3.gb 56
+new_species.pl --species=mt-Fungi-nad3
+etraining --species=mt-Fungi-nad3 /dev/shm/tmp/mt-Fungi/trng/train-nad3.gb.train --translation_table=4
+augustus --species=mt-Fungi-nad3 /dev/shm/tmp/mt-Fungi/trng/train-nad3.gb.test --translation_table=4 &> /dev/shm/tmp/mt-Fungi/trng/train-nad3.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Fungi-nad3 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Fungi/trng/train-nad3.gb.train && rm -r tmp_opt_mt-Fungi-nad3
+#etraining --species=mt-Fungi-nad3 /dev/shm/tmp/mt-Fungi/trng/train-nad3.gb.train
+#augustus --species=mt-Fungi-nad3 /dev/shm/tmp/mt-Fungi/trng/train-nad3.gb.test &> /dev/shm/tmp/mt-Fungi/trng/train-nad3.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Fungi/agst/mt-Fungi-nad3.tgz mt-Fungi-nad3)
+`
+2020-03-19 19:46:38,950 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Fungi-nad1 -r)
+randomSplit.pl /dev/shm/tmp/mt-Fungi/trng/train-nad1.gb 56
+new_species.pl --species=mt-Fungi-nad1
+etraining --species=mt-Fungi-nad1 /dev/shm/tmp/mt-Fungi/trng/train-nad1.gb.train --translation_table=4
+augustus --species=mt-Fungi-nad1 /dev/shm/tmp/mt-Fungi/trng/train-nad1.gb.test --translation_table=4 &> /dev/shm/tmp/mt-Fungi/trng/train-nad1.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Fungi-nad1 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Fungi/trng/train-nad1.gb.train && rm -r tmp_opt_mt-Fungi-nad1
+#etraining --species=mt-Fungi-nad1 /dev/shm/tmp/mt-Fungi/trng/train-nad1.gb.train
+#augustus --species=mt-Fungi-nad1 /dev/shm/tmp/mt-Fungi/trng/train-nad1.gb.test &> /dev/shm/tmp/mt-Fungi/trng/train-nad1.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Fungi/agst/mt-Fungi-nad1.tgz mt-Fungi-nad1)
+`
+2020-03-19 19:46:54,867 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Fungi-nad2 -r)
+randomSplit.pl /dev/shm/tmp/mt-Fungi/trng/train-nad2.gb 56
+new_species.pl --species=mt-Fungi-nad2
+etraining --species=mt-Fungi-nad2 /dev/shm/tmp/mt-Fungi/trng/train-nad2.gb.train --translation_table=4
+augustus --species=mt-Fungi-nad2 /dev/shm/tmp/mt-Fungi/trng/train-nad2.gb.test --translation_table=4 &> /dev/shm/tmp/mt-Fungi/trng/train-nad2.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Fungi-nad2 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Fungi/trng/train-nad2.gb.train && rm -r tmp_opt_mt-Fungi-nad2
+#etraining --species=mt-Fungi-nad2 /dev/shm/tmp/mt-Fungi/trng/train-nad2.gb.train
+#augustus --species=mt-Fungi-nad2 /dev/shm/tmp/mt-Fungi/trng/train-nad2.gb.test &> /dev/shm/tmp/mt-Fungi/trng/train-nad2.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Fungi/agst/mt-Fungi-nad2.tgz mt-Fungi-nad2)
+`
+2020-03-19 19:47:11,942 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Fungi-nad4 -r)
+randomSplit.pl /dev/shm/tmp/mt-Fungi/trng/train-nad4.gb 56
+new_species.pl --species=mt-Fungi-nad4
+etraining --species=mt-Fungi-nad4 /dev/shm/tmp/mt-Fungi/trng/train-nad4.gb.train --translation_table=4
+augustus --species=mt-Fungi-nad4 /dev/shm/tmp/mt-Fungi/trng/train-nad4.gb.test --translation_table=4 &> /dev/shm/tmp/mt-Fungi/trng/train-nad4.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Fungi-nad4 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Fungi/trng/train-nad4.gb.train && rm -r tmp_opt_mt-Fungi-nad4
+#etraining --species=mt-Fungi-nad4 /dev/shm/tmp/mt-Fungi/trng/train-nad4.gb.train
+#augustus --species=mt-Fungi-nad4 /dev/shm/tmp/mt-Fungi/trng/train-nad4.gb.test &> /dev/shm/tmp/mt-Fungi/trng/train-nad4.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Fungi/agst/mt-Fungi-nad4.tgz mt-Fungi-nad4)
+`
+2020-03-19 19:47:29,048 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Fungi-nad5 -r)
+randomSplit.pl /dev/shm/tmp/mt-Fungi/trng/train-nad5.gb 55
+new_species.pl --species=mt-Fungi-nad5
+etraining --species=mt-Fungi-nad5 /dev/shm/tmp/mt-Fungi/trng/train-nad5.gb.train --translation_table=4
+augustus --species=mt-Fungi-nad5 /dev/shm/tmp/mt-Fungi/trng/train-nad5.gb.test --translation_table=4 &> /dev/shm/tmp/mt-Fungi/trng/train-nad5.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Fungi-nad5 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Fungi/trng/train-nad5.gb.train && rm -r tmp_opt_mt-Fungi-nad5
+#etraining --species=mt-Fungi-nad5 /dev/shm/tmp/mt-Fungi/trng/train-nad5.gb.train
+#augustus --species=mt-Fungi-nad5 /dev/shm/tmp/mt-Fungi/trng/train-nad5.gb.test &> /dev/shm/tmp/mt-Fungi/trng/train-nad5.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Fungi/agst/mt-Fungi-nad5.tgz mt-Fungi-nad5)
+`
+2020-03-19 19:47:50,243 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Fungi-nad4L -r)
+randomSplit.pl /dev/shm/tmp/mt-Fungi/trng/train-nad4L.gb 55
+new_species.pl --species=mt-Fungi-nad4L
+etraining --species=mt-Fungi-nad4L /dev/shm/tmp/mt-Fungi/trng/train-nad4L.gb.train --translation_table=4
+augustus --species=mt-Fungi-nad4L /dev/shm/tmp/mt-Fungi/trng/train-nad4L.gb.test --translation_table=4 &> /dev/shm/tmp/mt-Fungi/trng/train-nad4L.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Fungi-nad4L --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Fungi/trng/train-nad4L.gb.train && rm -r tmp_opt_mt-Fungi-nad4L
+#etraining --species=mt-Fungi-nad4L /dev/shm/tmp/mt-Fungi/trng/train-nad4L.gb.train
+#augustus --species=mt-Fungi-nad4L /dev/shm/tmp/mt-Fungi/trng/train-nad4L.gb.test &> /dev/shm/tmp/mt-Fungi/trng/train-nad4L.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Fungi/agst/mt-Fungi-nad4L.tgz mt-Fungi-nad4L)
+`
+2020-03-19 19:48:02,551 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Fungi-atp9 -r)
+randomSplit.pl /dev/shm/tmp/mt-Fungi/trng/train-atp9.gb 54
+new_species.pl --species=mt-Fungi-atp9
+etraining --species=mt-Fungi-atp9 /dev/shm/tmp/mt-Fungi/trng/train-atp9.gb.train --translation_table=4
+augustus --species=mt-Fungi-atp9 /dev/shm/tmp/mt-Fungi/trng/train-atp9.gb.test --translation_table=4 &> /dev/shm/tmp/mt-Fungi/trng/train-atp9.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Fungi-atp9 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Fungi/trng/train-atp9.gb.train && rm -r tmp_opt_mt-Fungi-atp9
+#etraining --species=mt-Fungi-atp9 /dev/shm/tmp/mt-Fungi/trng/train-atp9.gb.train
+#augustus --species=mt-Fungi-atp9 /dev/shm/tmp/mt-Fungi/trng/train-atp9.gb.test &> /dev/shm/tmp/mt-Fungi/trng/train-atp9.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Fungi/agst/mt-Fungi-atp9.tgz mt-Fungi-atp9)
+`
+2020-03-19 19:48:13,115 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Fungi-atp8 -r)
+randomSplit.pl /dev/shm/tmp/mt-Fungi/trng/train-atp8.gb 54
+new_species.pl --species=mt-Fungi-atp8
+etraining --species=mt-Fungi-atp8 /dev/shm/tmp/mt-Fungi/trng/train-atp8.gb.train --translation_table=4
+augustus --species=mt-Fungi-atp8 /dev/shm/tmp/mt-Fungi/trng/train-atp8.gb.test --translation_table=4 &> /dev/shm/tmp/mt-Fungi/trng/train-atp8.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Fungi-atp8 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Fungi/trng/train-atp8.gb.train && rm -r tmp_opt_mt-Fungi-atp8
+#etraining --species=mt-Fungi-atp8 /dev/shm/tmp/mt-Fungi/trng/train-atp8.gb.train
+#augustus --species=mt-Fungi-atp8 /dev/shm/tmp/mt-Fungi/trng/train-atp8.gb.test &> /dev/shm/tmp/mt-Fungi/trng/train-atp8.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Fungi/agst/mt-Fungi-atp8.tgz mt-Fungi-atp8)
+`
+2020-03-19 19:48:22,917 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Fungi-nad6 -r)
+randomSplit.pl /dev/shm/tmp/mt-Fungi/trng/train-nad6.gb 54
+new_species.pl --species=mt-Fungi-nad6
+etraining --species=mt-Fungi-nad6 /dev/shm/tmp/mt-Fungi/trng/train-nad6.gb.train --translation_table=4
+augustus --species=mt-Fungi-nad6 /dev/shm/tmp/mt-Fungi/trng/train-nad6.gb.test --translation_table=4 &> /dev/shm/tmp/mt-Fungi/trng/train-nad6.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Fungi-nad6 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Fungi/trng/train-nad6.gb.train && rm -r tmp_opt_mt-Fungi-nad6
+#etraining --species=mt-Fungi-nad6 /dev/shm/tmp/mt-Fungi/trng/train-nad6.gb.train
+#augustus --species=mt-Fungi-nad6 /dev/shm/tmp/mt-Fungi/trng/train-nad6.gb.test &> /dev/shm/tmp/mt-Fungi/trng/train-nad6.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Fungi/agst/mt-Fungi-nad6.tgz mt-Fungi-nad6)
+`
+2020-03-19 19:48:35,690 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Fungi-rps3 -r)
+randomSplit.pl /dev/shm/tmp/mt-Fungi/trng/train-rps3.gb 25
+new_species.pl --species=mt-Fungi-rps3
+etraining --species=mt-Fungi-rps3 /dev/shm/tmp/mt-Fungi/trng/train-rps3.gb.train --translation_table=4
+augustus --species=mt-Fungi-rps3 /dev/shm/tmp/mt-Fungi/trng/train-rps3.gb.test --translation_table=4 &> /dev/shm/tmp/mt-Fungi/trng/train-rps3.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Fungi-rps3 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Fungi/trng/train-rps3.gb.train && rm -r tmp_opt_mt-Fungi-rps3
+#etraining --species=mt-Fungi-rps3 /dev/shm/tmp/mt-Fungi/trng/train-rps3.gb.train
+#augustus --species=mt-Fungi-rps3 /dev/shm/tmp/mt-Fungi/trng/train-rps3.gb.test &> /dev/shm/tmp/mt-Fungi/trng/train-rps3.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Fungi/agst/mt-Fungi-rps3.tgz mt-Fungi-rps3)
+`
+2020-03-19 19:48:43,912 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Fungi-rps3-20 -r)
+randomSplit.pl /dev/shm/tmp/mt-Fungi/trng/train-rps3-20.gb 16
+new_species.pl --species=mt-Fungi-rps3-20
+etraining --species=mt-Fungi-rps3-20 /dev/shm/tmp/mt-Fungi/trng/train-rps3-20.gb.train --translation_table=4
+augustus --species=mt-Fungi-rps3-20 /dev/shm/tmp/mt-Fungi/trng/train-rps3-20.gb.test --translation_table=4 &> /dev/shm/tmp/mt-Fungi/trng/train-rps3-20.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Fungi-rps3-20 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Fungi/trng/train-rps3-20.gb.train && rm -r tmp_opt_mt-Fungi-rps3-20
+#etraining --species=mt-Fungi-rps3-20 /dev/shm/tmp/mt-Fungi/trng/train-rps3-20.gb.train
+#augustus --species=mt-Fungi-rps3-20 /dev/shm/tmp/mt-Fungi/trng/train-rps3-20.gb.test &> /dev/shm/tmp/mt-Fungi/trng/train-rps3-20.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Fungi/agst/mt-Fungi-rps3-20.tgz mt-Fungi-rps3-20)
+`
+2020-03-19 19:48:48,321 -INFO- writing ('rRNA', 'tRNA') sequences into /dev/shm/tmp/mt-Fungi/rrna
+2020-03-19 19:48:49,290 -INFO- running OrthoFinder to cluster genes
+2020-03-19 19:48:49,291 -INFO- run CMD: `orthofinder.py -f /dev/shm/tmp/mt-Fungi/rrna -M msa -T fasttree -t 16 -S blastn -og`
+2020-03-19 20:24:54,970 -INFO- parsing OrthoFinder orthologs
+2020-03-19 20:24:54,971 -INFO- parsing orthologs group into /dev/shm/tmp/mt-Fungi/alns
+2020-03-19 20:24:55,069 -INFO- using min_count=9.2 to get gene name
+2020-03-19 20:24:55,989 -INFO- get gene name `rns` from Counter({'rns': 36, 'rrnS': 16, 'rrns': 3, 'SSU': 2, 'Paracoccidioides_brasiliensis-gene53': 1, 'Sporothrix_schenckii-gene122': 1, 'Arthroderma_uncinatum-gene145': 1, 'Ilyonectria_destructans-gene46': 1, 'Epidermophyton_floccosum-gene177': 1, 'Cladophialophora_bantiana-gene46': 1, 'Rhynchosporium_secalis-gene94': 1, 'Beauveria_pseudobassiana-gene115': 1, 'Zymoseptoria_tritici-gene91': 1, 'Madurella_mycetomatis-gene2': 1, 'Phialocephala_subalpina-gene53': 1, 'Morchella_importuna-gene14': 1, 'Parastagonospora_nodorum_SN15-gene148': 1, 'Bryoria_tenuis-gene27': 1, 'srRNA': 1, 'Verticillium_nonalfalfae-gene38': 1, 'Microsporum_canis-gene142': 1, 'Colletotrichum_lupini-gene143': 1, 'Nannizzia_nana-gene142': 1, 'rnS': 1, 'Trichophyton_mentagrophytes-gene129': 1, 'Ophiocordyceps_sinensis-gene305': 1, 'Pseudocercospora_fijiensis-gene89': 1, 'Shiraia_bambusicola-gene163': 1})
+2020-03-19 20:24:55,989 -INFO- get product `small subunit ribosomal RNA` from Counter({'small subunit ribosomal RNA': 66, '12S ribosomal RNA': 7, 'small ribosomal RNA subunit': 2, '16S ribosomal RNA': 2, 's-rRNA': 1, 'mitochondrially encoded 12S RNA': 1, '16S small subunit ribosomal RNA': 1, 'large subunit ribosomal RNA': 1})
+2020-03-19 20:24:55,990 -INFO- get exon number `1` from Counter({1: 68, 2: 10, 3: 1, 4: 1, 6: 1})
+2020-03-19 20:24:55,990 -INFO- get trans_splicing `False` from Counter({False: 81})
+2020-03-19 20:24:56,358 -INFO- get gene name `rnl` from Counter({'rnl': 33, 'rrnL': 18, 'LSU': 3, 'rrnl': 2, 'Paracoccidioides_brasiliensis-gene75': 1, 'Pseudocercospora_fijiensis-gene22': 1, 'Zymoseptoria_tritici-gene115': 1, 'Cladophialophora_bantiana-gene2': 1, 'Ilyonectria_destructans-gene18': 1, 'lrRNA': 1, 'Verticillium_nonalfalfae-gene92': 1, 'Ophiocordyceps_sinensis-gene2': 1, 'Rhynchosporium_secalis-gene121': 1, 'Epidermophyton_floccosum-gene30': 1, 'Phialocephala_subalpina-gene108': 1, 'Arthroderma_uncinatum-gene30': 1, 'Sporothrix_schenckii-gene4': 1, 'Trichophyton_mentagrophytes-gene30': 1, 'Madurella_mycetomatis-gene36': 1, 'Verticillium_nonalfalfae-gene88': 1, 'Shiraia_bambusicola-gene59': 1, 'Microsporum_canis-gene30': 1, 'rnL': 1, 'Colletotrichum_lupini-gene105': 1, 'Nannizzia_nana-gene30': 1, 'Parastagonospora_nodorum_SN15-gene2': 1})
+2020-03-19 20:24:56,359 -INFO- get product `large subunit ribosomal RNA` from Counter({'large subunit ribosomal RNA': 65, '16S ribosomal RNA': 9, '23S ribosomal RNA': 1, 'large ribosomal RNA subunit': 1, '23S large subunit ribosomal RNA': 1, 'l-rRNA': 1})
+2020-03-19 20:24:56,360 -INFO- get exon number `2` from Counter({2: 27, 1: 20, 3: 14, 4: 8, 5: 6, 9: 2, 7: 1})
+2020-03-19 20:24:56,361 -INFO- get trans_splicing `False` from Counter({False: 78})
+2020-03-19 20:24:58,204 -INFO- get gene name `rnl` from Counter({'rnl': 39, 'rrnL': 4, 'Tricholomella_constricta-gene72': 1, 'Malassezia_restricta-gene2': 1, 'Blastosporella_zonata-gene240': 1, 'Tephrocybe_rancida-gene202': 1, 'rrn23': 1, 'Armillaria_solidipes-gene2': 1, 'Asterophora_parasitica-gene67': 1, 'Jaminaea_angkorensis-gene29': 1, 'Trametes_hirsuta-gene27': 1, 'Myochromella_boudieri-gene89': 1, 'Blastocladiella_emersonii-gene122': 1, 'Ustilago_maydis-gene2': 1})
+2020-03-19 20:24:58,205 -INFO- get product `large subunit ribosomal RNA` from Counter({'large subunit ribosomal RNA': 47, '23S ribosomal RNA': 8})
+2020-03-19 20:24:58,206 -INFO- get exon number `1` from Counter({1: 31, 3: 8, 2: 6, 5: 5, 6: 3, 4: 2})
+2020-03-19 20:24:58,206 -INFO- get trans_splicing `False` from Counter({False: 55})
+2020-03-19 20:24:59,333 -INFO- get gene name `trnQ-ttg` from Counter({'trnQ-ttg': 15, 'trnQ-uug': 11, 'trnQ-UUG': 8, 'trnQ': 4, 'Morchella_importuna-gene219': 1, 'trnQ-TTG': 1, 'Verticillium_nonalfalfae-gene70': 1, 'Parastagonospora_nodorum_SN15-gene18': 1, 'Pyronema_omphalodes-gene4': 1, 'Cladophialophora_bantiana-gene32': 1, 'Paracoccidioides_brasiliensis-gene87': 1, 'Sporothrix_schenckii-gene26': 1, 'Shiraia_bambusicola-gene130': 1, 'Zymoseptoria_tritici-gene131': 1, 'Rhynchosporium_secalis-gene132': 1, 'Marssonina_brunnea_f-_sp-__multigermtubi_-gene36': 1, 'Madurella_mycetomatis-gene59': 1, 'trnQ-CAA': 1, 'Phialocephala_subalpina-gene126': 1, 'Metarhizium_anisopliae-gene25': 1})
+2020-03-19 20:24:59,333 -INFO- get product `tRNA-Gln` from Counter({'tRNA-Gln': 53, 'tRNA-Sec': 1})
+2020-03-19 20:24:59,334 -INFO- get exon number `1` from Counter({1: 54})
+2020-03-19 20:24:59,334 -INFO- get trans_splicing `False` from Counter({False: 54})
+2020-03-19 20:25:00,401 -INFO- get gene name `rns` from Counter({'rns': 31, 'Tricholomella_constricta-gene80': 1, 'Trametes_hirsuta-gene6': 1, 'Lentinula_edodes-gene144': 1, 'Myochromella_boudieri-gene99': 1, 'Asterophora_parasitica-gene75': 1, 'rrn16': 1, 'Blastosporella_zonata-gene274': 1, 'Armillaria_solidipes-gene149': 1})
+2020-03-19 20:25:00,401 -INFO- get product `small subunit ribosomal RNA` from Counter({'small subunit ribosomal RNA': 32, '16S ribosomal RNA': 7})
+2020-03-19 20:25:00,402 -INFO- get exon number `1` from Counter({1: 33, 2: 4, 3: 1, 4: 1})
+2020-03-19 20:25:00,402 -INFO- get trans_splicing `False` from Counter({False: 39})
+2020-03-19 20:25:00,802 -INFO- get gene name `trnS-UGA` from Counter({'trnS-UGA': 9, 'trnS-tga': 8, 'trnS-uga': 8, 'trnS': 4, 'Morchella_importuna-gene149': 1, 'Parastagonospora_nodorum_SN15-gene175': 1, 'tRNA2-Ser': 1, 'Metarhizium_anisopliae-gene142': 1, 'Paracoccidioides_brasiliensis-gene73': 1, 'trnS-TGA': 1, 'Ophiocordyceps_sinensis-gene356': 1, 'Shiraia_bambusicola-gene55': 1, 'trnY-aua': 1, 'tRNA-Ser': 1})
+2020-03-19 20:25:00,805 -INFO- get gene name `trnF-gaa` from Counter({'trnF-gaa': 16, 'trnF-GAA': 8, 'trnF': 2, 'Talaromyces_marneffei-gene127': 1, 'Trichophyton_mentagrophytes-gene48': 1, 'Arthroderma_uncinatum-gene48': 1, 'Epidermophyton_floccosum-gene61': 1, 'Paracoccidioides_brasiliensis-gene85': 1, 'trnF-GUU': 1, 'Zymoseptoria_tritici-gene125': 1, 'Rhynchosporium_secalis-gene130': 1, 'Cladophialophora_bantiana-gene28': 1, 'Phialocephala_subalpina-gene122': 1, 'Nannizzia_nana-gene48': 1, 'Microsporum_canis-gene48': 1})
+2020-03-19 20:25:00,805 -INFO- get product `tRNA-Phe` from Counter({'tRNA-Phe': 38})
+2020-03-19 20:25:00,806 -INFO- get exon number `1` from Counter({1: 38})
+2020-03-19 20:25:00,806 -INFO- get trans_splicing `False` from Counter({False: 38})
+2020-03-19 20:25:01,538 -INFO- get gene name `trnM-CAU` from Counter({'trnM-CAU': 8, 'trnM-cat': 7, 'trnM-cau': 6, 'trnM': 3, 'Rhynchosporium_secalis-gene127': 1, 'Morchella_importuna-gene175': 1, 'Zymoseptoria_tritici-gene117': 1, 'Sclerotinia_borealis-gene44': 1, 'trnM-cau-3': 1, 'Phialocephala_subalpina-gene116': 1, 'Shiraia_bambusicola-gene65': 1, 'Pyronema_omphalodes-gene283': 1, 'Parastagonospora_nodorum_SN15-gene8': 1, 'trnI-tat': 1})
+2020-03-19 20:25:09,256 -INFO- get gene name `trnI-gat` from Counter({'trnI-gat': 10, 'trnI': 4, 'trnI1': 1, 'Tephrocybe_rancida-gene123': 1, 'Trametes_hirsuta-gene59': 1, 'Trametes_hirsuta-gene154': 1, 'Blastosporella_zonata-gene175': 1, 'Myochromella_boudieri-gene194': 1, 'trnI-GAU': 1, 'Asterophora_parasitica-gene106': 1})
+2020-03-19 20:25:09,257 -INFO- get product `tRNA-Ile` from Counter({'tRNA-Ile': 22})
+2020-03-19 20:25:09,258 -INFO- get exon number `1` from Counter({1: 22})
+2020-03-19 20:25:09,258 -INFO- get trans_splicing `False` from Counter({False: 22})
+2020-03-19 20:25:09,260 -INFO- get gene name `trnL-taa` from Counter({'trnL-taa': 17, 'trnL': 3, 'trnL-UAA': 3, 'trnL2': 2, 'Trametes_hirsuta-gene68': 1, 'Myochromella_boudieri-gene10': 1, 'trnL-uaa': 1, 'Armillaria_solidipes-gene114': 1, 'Asterophora_parasitica-gene55': 1, 'trnL1': 1, 'Tricholomella_constricta-gene118': 1, 'Heterobasidion_irregulare-gene85': 1, 'Blastosporella_zonata-gene10': 1})
+2020-03-19 20:25:09,261 -INFO- get product `tRNA-Leu` from Counter({'tRNA-Leu': 34})
+2020-03-19 20:25:09,261 -INFO- get exon number `1` from Counter({1: 34})
+2020-03-19 20:25:09,261 -INFO- get trans_splicing `False` from Counter({False: 34})
+2020-03-19 20:25:09,264 -INFO- get gene name `trnY-gta` from Counter({'trnY-gta': 18, 'trnY': 6, 'trnY-GUA': 2, 'Trametes_hirsuta-gene131': 1, 'Blastosporella_zonata-gene124': 1, 'Tricholomella_constricta-gene44': 1, 'Asterophora_parasitica-gene98': 1, 'Heterobasidion_irregulare-gene144': 1, 'Myochromella_boudieri-gene128': 1, 'Tephrocybe_rancida-gene158': 1})
+2020-03-19 20:25:09,264 -INFO- get product `tRNA-Tyr` from Counter({'tRNA-Tyr': 33})
+2020-03-19 20:25:09,264 -INFO- get exon number `1` from Counter({1: 33})
+2020-03-19 20:25:09,265 -INFO- get trans_splicing `False` from Counter({False: 33})
+2020-03-19 20:25:10,712 -INFO- get gene name `trnA-tgc` from Counter({'trnA-tgc': 11, 'trnA-ugc': 3, 'trnA-UGC': 3, 'trnA': 2, 'Parastagonospora_nodorum_SN15-gene12': 1, 'Talaromyces_marneffei-gene125': 1, 'Morchella_importuna-gene185': 1, 'Aspergillus_pseudoglaucus-gene117': 1, 'Rhynchosporium_secalis-gene129': 1, 'Metarhizium_anisopliae-gene17': 1, 'Marssonina_brunnea_f-_sp-__multigermtubi_-gene34': 1, 'trnA-GCA': 1, 'Zymoseptoria_tritici-gene123': 1, 'Shiraia_bambusicola-gene69': 1, 'Phialocephala_subalpina-gene120': 1, 'tRNA-Ala': 1})
+2020-03-19 20:25:10,713 -INFO- get product `tRNA-Ala` from Counter({'tRNA-Ala': 30, 'tRNA-Arg': 1})
+2020-03-19 20:25:10,713 -INFO- get exon number `1` from Counter({1: 31})
+2020-03-19 20:25:10,714 -INFO- get trans_splicing `False` from Counter({False: 31})
+2020-03-19 20:25:10,716 -INFO- get gene name `trnP-UGG` from Counter({'trnP-UGG': 7, 'trnP-ugg': 7, 'trnP-tgg': 5, 'trnP': 3, 'Paracoccidioides_brasiliensis-gene74': 1, 'Aspergillus_pseudoglaucus-gene96': 1, 'Zymoseptoria_tritici-gene113': 1, 'Parastagonospora_nodorum_SN15-gene177': 1, 'Pyronema_omphalodes-gene251': 1, 'Rhynchosporium_secalis-gene120': 1, 'Sclerotinia_borealis-gene470': 1, 'Shiraia_bambusicola-gene57': 1, 'Marssonina_brunnea_f-_sp-__multigermtubi_-gene24': 1, 'Talaromyces_marneffei-gene104': 1})
+2020-03-19 20:25:11,796 -INFO- get gene name `trnT-ugu` from Counter({'trnT-ugu': 10, 'trnT-UGU': 4, 'trnT-tgt': 2, 'Arthroderma_uncinatum-gene34': 1, 'Cladophialophora_bantiana-gene8': 1, 'trnT-UGT': 1, 'Morchella_importuna-gene165': 1, 'Zymoseptoria_tritici-gene79': 1, 'Paracoccidioides_brasiliensis-gene78': 1, 'Aspergillus_pseudoglaucus-gene105': 1, 'trnT-cgu': 1, 'Nannizzia_nana-gene34': 1, 'Microsporum_canis-gene34': 1, 'Trichophyton_mentagrophytes-gene34': 1, 'Talaromyces_marneffei-gene113': 1, 'Epidermophyton_floccosum-gene34': 1})
+2020-03-19 20:25:11,797 -INFO- get product `tRNA-Thr` from Counter({'tRNA-Thr': 29})
+2020-03-19 20:25:11,797 -INFO- get exon number `1` from Counter({1: 29})
+2020-03-19 20:25:11,798 -INFO- get trans_splicing `False` from Counter({False: 29})
+2020-03-19 20:25:12,183 -INFO- get gene name `trnH-gtg` from Counter({'trnH-gtg': 18, 'trnH': 4, 'trnH-GUG': 2, 'Blastosporella_zonata-gene2': 1, 'Tephrocybe_rancida-gene194': 1, 'Tricholomella_constricta-gene55': 1, 'Trametes_hirsuta-gene2': 1, 'Asterophora_parasitica-gene120': 1, 'Heterobasidion_irregulare-gene162': 1, 'Myochromella_boudieri-gene138': 1})
+2020-03-19 20:25:12,184 -INFO- get product `tRNA-His` from Counter({'tRNA-His': 31})
+2020-03-19 20:25:12,185 -INFO- get exon number `1` from Counter({1: 31})
+2020-03-19 20:25:12,185 -INFO- get trans_splicing `False` from Counter({False: 31})
+2020-03-19 20:25:12,187 -INFO- get gene name `trnQ-ttg` from Counter({'trnQ-ttg': 16, 'trnQ': 4, 'trnQ-UUG': 3, 'Trametes_hirsuta-gene127': 1, 'Tephrocybe_rancida-gene46': 1, 'Tricholomella_constricta-gene129': 1, 'Armillaria_solidipes-gene98': 1, 'Myochromella_boudieri-gene24': 1, 'Asterophora_parasitica-gene26': 1, 'Blastosporella_zonata-gene120': 1, 'Heterobasidion_irregulare-gene142': 1})
+2020-03-19 20:25:12,188 -INFO- get product `tRNA-Gln` from Counter({'tRNA-Gln': 31})
+2020-03-19 20:25:12,188 -INFO- get exon number `1` from Counter({1: 31})
+2020-03-19 20:25:12,188 -INFO- get trans_splicing `False` from Counter({False: 31})
+2020-03-19 20:25:12,189 -INFO- get gene name `trnW-tca` from Counter({'trnW-tca': 11, 'trnW-uca': 6, 'trnW': 3, 'trnW-UCA': 2, 'Metarhizium_anisopliae-gene144': 1, 'trn': 1, 'Morchella_importuna-gene143': 1, 'trnY-uca': 1, 'tRNA-Trp': 1, 'Zymoseptoria_tritici-gene106': 1, 'Shiraia_bambusicola-gene49': 1, 'Parastagonospora_nodorum_SN15-gene169': 1, 'Ophiocordyceps_sinensis-gene358': 1})
+2020-03-19 20:25:12,190 -INFO- get product `tRNA-Trp` from Counter({'tRNA-Trp': 29, 'tRNA-OTHER': 1, 'tRNA-Tyr': 1})
+2020-03-19 20:25:12,190 -INFO- get exon number `1` from Counter({1: 31})
+2020-03-19 20:25:12,190 -INFO- get trans_splicing `False` from Counter({False: 31})
+2020-03-19 20:25:12,191 -INFO- get gene name `trnS-tga` from Counter({'trnS-tga': 16, 'trnS': 3, 'trnS-UGA': 2, 'Trametes_hirsuta-gene135': 1, 'Blastosporella_zonata-gene16': 1, 'trnS1': 1, 'trnS2': 1, 'Myochromella_boudieri-gene4': 1, 'Heterobasidion_irregulare-gene134': 1, 'Tephrocybe_rancida-gene7': 1, 'Asterophora_parasitica-gene49': 1, 'Tricholomella_constricta-gene112': 1})
+2020-03-19 20:25:12,192 -INFO- get product `tRNA-Ser` from Counter({'tRNA-Ser': 30})
+2020-03-19 20:25:12,192 -INFO- get exon number `1` from Counter({1: 30})
+2020-03-19 20:25:12,192 -INFO- get trans_splicing `False` from Counter({False: 30})
+2020-03-19 20:25:12,193 -INFO- get gene name `trnM-cat` from Counter({'trnM-cat': 16, 'trnM': 3, 'trnM-CAU': 3, 'Tephrocybe_rancida-gene5': 1, 'Trametes_hirsuta-gene133': 1, 'Blastosporella_zonata-gene18': 1, 'Armillaria_solidipes-gene166': 1, 'trnM3': 1, 'Myochromella_boudieri-gene2': 1, 'Tricholomella_constricta-gene110': 1, 'Asterophora_parasitica-gene96': 1})
+2020-03-19 20:25:12,194 -INFO- get product `tRNA-Met` from Counter({'tRNA-Met': 30})
+2020-03-19 20:25:12,194 -INFO- get exon number `1` from Counter({1: 30})
+2020-03-19 20:25:12,194 -INFO- get trans_splicing `False` from Counter({False: 30})
+2020-03-19 20:25:13,355 -INFO- get gene name `trnA-tgc` from Counter({'trnA-tgc': 17, 'trnA': 4, 'Tricholomella_constricta-gene87': 1, 'Tephrocybe_rancida-gene200': 1, 'Blastosporella_zonata-gene287': 1, 'Myochromella_boudieri-gene109': 1, 'trnA-UGC': 1, 'Heterobasidion_irregulare-gene139': 1, 'Asterophora_parasitica-gene82': 1})
+2020-03-19 20:25:13,355 -INFO- get product `tRNA-Ala` from Counter({'tRNA-Ala': 28})
+2020-03-19 20:25:13,356 -INFO- get exon number `1` from Counter({1: 28})
+2020-03-19 20:25:13,356 -INFO- get trans_splicing `False` from Counter({False: 28})
+2020-03-19 20:25:13,358 -INFO- get gene name `trnY-gta` from Counter({'trnY-gta': 11, 'trnY': 6, 'trnY-gua': 2, 'trnY-GTA': 2, 'Ophiocordyceps_sinensis-gene312': 1, 'Sporothrix_schenckii-gene124': 1, 'tRNA-Tyr': 1, 'Cladophialophora_bantiana-gene52': 1, 'Metarhizium_anisopliae-gene116': 1, 'Shiraia_bambusicola-gene159': 1, 'Akanthomyces_muscarius-gene111': 1, 'Parastagonospora_nodorum_SN15-gene152': 1})
+2020-03-19 20:25:13,358 -INFO- get product `tRNA-Tyr` from Counter({'tRNA-Tyr': 29})
+2020-03-19 20:25:13,359 -INFO- get exon number `1` from Counter({1: 29})
+2020-03-19 20:25:13,359 -INFO- get trans_splicing `False` from Counter({False: 29})
+2020-03-19 20:25:16,860 -INFO- get gene name `trnV-uac` from Counter({'trnV-uac': 8, 'trnV-tac': 4, 'trnV-UAC': 4, 'Madurella_mycetomatis-gene28': 1, 'Zymoseptoria_tritici-gene89': 1, 'Sclerotinia_borealis-gene422': 1, 'Phialocephala_subalpina-gene68': 1, 'trnV-TAC': 1, 'Rhynchosporium_secalis-gene102': 1, 'trnV': 1})
+2020-03-19 20:25:16,863 -INFO- get gene name `trnM-cau` from Counter({'trnM-cau': 7, 'trnM-cat': 5, 'trnM-CAU': 3, 'trnI-CAU': 2, 'trnM': 2, 'Cladophialophora_bantiana-gene56': 1, 'Parastagonospora_nodorum_SN15-gene22': 1, 'Zymoseptoria_tritici-gene2': 1, 'Morchella_importuna-gene388': 1, 'Rhynchosporium_secalis-gene134': 1, 'Sclerotinia_borealis-gene61': 1, 'trnM-CAT': 1, 'Phialocephala_subalpina-gene130': 1, 'Marssonina_brunnea_f-_sp-__multigermtubi_-gene40': 1})
+2020-03-19 20:25:18,143 -INFO- get gene name `trnG-tcc` from Counter({'trnG-tcc': 12, 'trnG': 3, 'trnG-UCC': 2, 'Blastosporella_zonata-gene122': 1, 'Tricholomella_constricta-gene127': 1, 'Tephrocybe_rancida-gene44': 1, 'Trametes_hirsuta-gene145': 1, 'Myochromella_boudieri-gene22': 1, 'Asterophora_parasitica-gene24': 1, 'Heterobasidion_irregulare-gene82': 1, 'trnG1': 1})
+2020-03-19 20:25:18,144 -INFO- get product `tRNA-Gly` from Counter({'tRNA-Gly': 25})
+2020-03-19 20:25:18,145 -INFO- get exon number `1` from Counter({1: 25})
+2020-03-19 20:25:18,145 -INFO- get trans_splicing `False` from Counter({False: 25})
+2020-03-19 20:25:19,338 -INFO- get gene name `trnV-tac` from Counter({'trnV-tac': 12, 'trnV': 3, 'Tricholomella_constricta-gene82': 1, 'Asterophora_parasitica-gene77': 1, 'trnV-UAC': 1, 'Heterobasidion_irregulare-gene48': 1, 'trnV-uac': 1, 'Myochromella_boudieri-gene101': 1, 'Tephrocybe_rancida-gene178': 1, 'Blastosporella_zonata-gene270': 1})
+2020-03-19 20:25:19,339 -INFO- get product `tRNA-Val` from Counter({'tRNA-Val': 23})
+2020-03-19 20:25:19,340 -INFO- get exon number `1` from Counter({1: 23})
+2020-03-19 20:25:19,340 -INFO- get trans_splicing `False` from Counter({False: 23})
+2020-03-19 20:25:19,342 -INFO- get gene name `trnR-tct` from Counter({'trnR-tct': 13, 'trnR1': 2, 'trnR': 2, 'Blastosporella_zonata-gene114': 1, 'trnR-ucu': 1, 'Asterophora_parasitica-gene32': 1, 'Heterobasidion_irregulare-gene102': 1, 'trnR2': 1, 'Myochromella_boudieri-gene123': 1, 'Tricholomella_constricta-gene96': 1, 'Tephrocybe_rancida-gene52': 1})
+2020-03-19 20:25:19,342 -INFO- get product `tRNA-Arg` from Counter({'tRNA-Arg': 25})
+2020-03-19 20:25:19,343 -INFO- get exon number `1` from Counter({1: 25})
+2020-03-19 20:25:19,343 -INFO- get trans_splicing `False` from Counter({False: 25})
+2020-03-19 20:25:19,345 -INFO- get gene name `trnT-tgt` from Counter({'trnT-tgt': 6, 'trnT': 4, 'trnT-ugu': 2, 'trnT-UGU': 2, 'tRNA-Thr': 2, 'trnT-TGT': 2, 'Metarhizium_anisopliae-gene7': 1, 'Verticillium_nonalfalfae-gene86': 1, 'Madurella_mycetomatis-gene41': 1, 'Akanthomyces_muscarius-gene8': 1, 'Annulohypoxylon_stygium-gene63': 1, 'Sporothrix_schenckii-gene8': 1})
+2020-03-19 20:25:20,977 -INFO- get gene name `trnW-cca` from Counter({'trnW-cca': 10, 'trnW-tca': 4, 'trnW-CCA': 2, 'trnW': 2, 'Trametes_hirsuta-gene147': 1, 'Tricholomella_constricta-gene36': 1, 'Heterobasidion_irregulare-gene132': 1, 'Asterophora_parasitica-gene45': 1, 'Heterobasidion_irregulare-gene64': 1})
+2020-03-19 20:25:20,978 -INFO- get product `tRNA-Trp` from Counter({'tRNA-Trp': 22, 'tRNA-Sec': 1})
+2020-03-19 20:25:20,978 -INFO- get exon number `1` from Counter({1: 23})
+2020-03-19 20:25:20,978 -INFO- get trans_splicing `False` from Counter({False: 23})
+2020-03-19 20:25:22,492 -INFO- get gene name `trnN-gtt` from Counter({'trnN-gtt': 7, 'trnN': 3, 'trnN-guu': 3, 'tRNA-Asn': 2, 'Verticillium_nonalfalfae-gene34': 1, 'trnN-AAC': 1, 'Madurella_mycetomatis-gene6': 1, 'trnN-GTT': 1, 'trnR': 1, 'Akanthomyces_muscarius-gene117': 1})
+2020-03-19 20:25:23,958 -INFO- get gene name `trnH-gtg` from Counter({'trnH-gtg': 7, 'trnH-gug': 4, 'trnH': 2, 'Parastagonospora_nodorum_SN15-gene20': 1, 'Shiraia_bambusicola-gene128': 1, 'Pyronema_omphalodes-gene80': 1, 'Rhynchosporium_secalis-gene133': 1, 'trnH-CAC': 1, 'Zymoseptoria_tritici-gene135': 1, 'tRNA-His': 1})
+2020-03-19 20:25:23,960 -INFO- get gene name `trnL-tag` from Counter({'trnL-tag': 13, 'trnL': 2, 'Tricholomella_constricta-gene38': 1, 'Myochromella_boudieri-gene134': 1, 'Asterophora_parasitica-gene47': 1, 'Tephrocybe_rancida-gene142': 1, 'trnL1': 1, 'Blastosporella_zonata-gene146': 1})
+2020-03-19 20:25:23,960 -INFO- get product `tRNA-Leu` from Counter({'tRNA-Leu': 21})
+2020-03-19 20:25:23,961 -INFO- get exon number `1` from Counter({1: 21})
+2020-03-19 20:25:23,961 -INFO- get trans_splicing `False` from Counter({False: 21})
+2020-03-19 20:25:23,963 -INFO- get gene name `trnC-gca` from Counter({'trnC-gca': 9, 'trnC': 4, 'Blastosporella_zonata-gene116': 1, 'Myochromella_boudieri-gene171': 1, 'trnC-GCA': 1, 'Heterobasidion_irregulare-gene101': 1, 'Asterophora_parasitica-gene30': 1, 'Armillaria_solidipes-gene161': 1, 'Tephrocybe_rancida-gene50': 1, 'Tricholomella_constricta-gene98': 1})
+2020-03-19 20:25:24,332 -INFO- get gene name `trnT-tgt` from Counter({'trnT-tgt': 8, 'trnT': 4, 'Tephrocybe_rancida-gene196': 1, 'Tricholomella_constricta-gene91': 1, 'trnT-UGU': 1, 'Blastosporella_zonata-gene4': 1, 'Heterobasidion_irregulare-gene141': 1, 'Asterophora_parasitica-gene86': 1, 'Myochromella_boudieri-gene113': 1})
+2020-03-19 20:25:24,334 -INFO- get gene name `trnY-gta` from Counter({'trnY-gta': 7, 'trnY-gua': 4, 'trnY-GUA': 4, 'Rhynchosporium_secalis-gene95': 1, 'trnS-acu': 1, 'Marssonina_brunnea_f-_sp-__multigermtubi_-gene102': 1, 'trnT5': 1, 'Talaromyces_marneffei-gene70': 1})
+2020-03-19 20:25:24,336 -INFO- get gene name `trnD-gtc` from Counter({'trnD-gtc': 6, 'trnD': 5, 'tRNA-Asp': 2, 'trnD-guc': 2, 'Metarhizium_anisopliae-gene118': 1, 'Verticillium_nonalfalfae-gene19': 1, 'Akanthomyces_muscarius-gene113': 1, 'Sporothrix_schenckii-gene141': 1})
+2020-03-19 20:25:24,337 -INFO- get gene name `trnH-gug` from Counter({'trnH-gug': 7, 'trnH-GUG': 5, 'trnH-gtg': 2, 'trnH': 1, 'trnH-GTG': 1, 'Madurella_mycetomatis-gene61': 1, 'Sclerotinia_borealis-gene59': 1, 'Metarhizium_anisopliae-gene27': 1})
+2020-03-19 20:25:24,338 -INFO- get gene name `trnM-cat` from Counter({'trnM-cat': 11, 'trnM': 1, 'Tricholomella_constricta-gene76': 1, 'Asterophora_parasitica-gene71': 1, 'trnM-CAU': 1, 'trnM2': 1, 'trnM1': 1, 'Heterobasidion_irregulare-gene161': 1, 'Myochromella_boudieri-gene97': 1})
+2020-03-19 20:25:24,338 -INFO- get product `tRNA-Met` from Counter({'tRNA-Met': 19})
+2020-03-19 20:25:24,338 -INFO- get exon number `1` from Counter({1: 19})
+2020-03-19 20:25:24,338 -INFO- get trans_splicing `False` from Counter({False: 19})
+2020-03-19 20:25:24,734 -INFO- get gene name `trnS-GCU` from Counter({'trnS-GCU': 8, 'trnS-gcu': 3, 'trnS-gct': 2, 'Phialocephala_subalpina-gene27': 1, 'Annulohypoxylon_stygium-gene6': 1, 'Marssonina_brunnea_f-_sp-__multigermtubi_-gene20': 1, 'trnS': 1, 'Rhynchosporium_secalis-gene116': 1})
+2020-03-19 20:25:24,736 -INFO- get gene name `trnE-ttc` from Counter({'trnE-ttc': 7, 'trnE': 5, 'trnE-uuc': 3, 'Metarhizium_anisopliae-gene9': 1, 'Akanthomyces_muscarius-gene10': 1, 'Annulohypoxylon_stygium-gene64': 1})
+2020-03-19 20:25:24,737 -INFO- get gene name `trnS-tga` from Counter({'trnS-tga': 4, 'trnS-uga': 3, 'Epidermophyton_floccosum-gene26': 1, 'Trichophyton_mentagrophytes-gene26': 1, 'Sclerotinia_borealis-gene468': 1, 'Arthroderma_uncinatum-gene26': 1, 'Annulohypoxylon_stygium-gene49': 1, 'Rhynchosporium_secalis-gene119': 1, 'Nannizzia_nana-gene26': 1, 'Microsporum_canis-gene26': 1, 'trnS2-tga': 1, 'trnS': 1, 'Pyronema_omphalodes-gene249': 1})
+2020-03-19 20:25:25,950 -INFO- get gene name `trnK-uuu` from Counter({'trnK-uuu': 8, 'trnK-UUU': 4, 'trnK-cuu': 1, 'trnK': 1, 'trnV-cac': 1, 'trnK-ttt': 1})
+2020-03-19 20:25:25,952 -INFO- get gene name `trnD-gtc` from Counter({'trnD-gtc': 8, 'trnD': 2, 'Tricholomella_constricta-gene49': 1, 'Asterophora_parasitica-gene122': 1, 'Trametes_hirsuta-gene149': 1, 'Myochromella_boudieri-gene118': 1, 'Tephrocybe_rancida-gene153': 1, 'Blastosporella_zonata-gene136': 1, 'trnD-GUC': 1})
+2020-03-19 20:25:25,953 -INFO- get gene name `trnL-UAG` from Counter({'trnL-UAG': 5, 'trnL-uag': 3, 'trnL-tag': 2, 'trnL-AAT': 1, 'trnL2-uag': 1, 'trnL1-tag': 1, 'Sclerotinia_borealis-gene55': 1, 'Rhynchosporium_secalis-gene131': 1, 'Zymoseptoria_tritici-gene127': 1, 'Phialocephala_subalpina-gene124': 1})
+2020-03-19 20:25:28,141 -INFO- get gene name `trnR-ccu` from Counter({'trnR-ccu': 3, 'trnR-UCU': 2, 'trnR-ucu': 2, 'Talaromyces_marneffei-gene58': 1, 'Verticillium_nonalfalfae-gene53': 1, 'trnR-CCU': 1, 'trnR': 1, 'Madurella_mycetomatis-gene94': 1})
+2020-03-19 20:25:28,504 -INFO- get gene name `trnG-ucc` from Counter({'trnG-ucc': 7, 'trnG-UCC': 5, 'Zymoseptoria_tritici-gene100': 1, 'Cladophialophora_bantiana-gene60': 1, 'trnG-tcc': 1})
+2020-03-19 20:25:30,355 -INFO- get gene name `trnR-tct` from Counter({'trnR-tct': 3, 'Phialocephala_subalpina-gene36': 1, 'tRNA-Arg': 1, 'trnR-ucu': 1, 'Annulohypoxylon_stygium-gene287': 1, 'Rhynchosporium_secalis-gene75': 1, 'Sclerotinia_borealis-gene452': 1, 'Marssonina_brunnea_f-_sp-__multigermtubi_-gene89': 1, 'trnR-UCU': 1, 'Zymoseptoria_tritici-gene23': 1})
+2020-03-19 20:25:30,357 -INFO- get gene name `trnL-taa` from Counter({'trnL-taa': 4, 'trnL': 2, 'trnL2-taa': 1, 'trnL-UAA': 1, 'Morchella_importuna-gene179': 1, 'trnL-uaa': 1, 'Rhynchosporium_secalis-gene128': 1, 'Cladophialophora_bantiana-gene24': 1, 'Phialocephala_subalpina-gene118': 1, 'Parastagonospora_nodorum_SN15-gene150': 1, 'Shiraia_bambusicola-gene161': 1, 'Marssonina_brunnea_f-_sp-__multigermtubi_-gene32': 1})
+2020-03-19 20:25:30,358 -INFO- get gene name `trnK-ttt` from Counter({'trnK-ttt': 11, 'trnK': 2, 'trnK-UUU': 1, 'Heterobasidion_irregulare-gene143': 1})
+2020-03-19 20:25:30,358 -INFO- get product `tRNA-Lys` from Counter({'tRNA-Lys': 15})
+2020-03-19 20:25:30,359 -INFO- get exon number `1` from Counter({1: 15})
+2020-03-19 20:25:30,359 -INFO- get trans_splicing `False` from Counter({False: 15})
+2020-03-19 20:25:30,360 -INFO- get gene name `trnI-gau` from Counter({'trnI-gau': 8, 'trnI-GAU': 5, 'trnI': 1})
+2020-03-19 20:25:30,362 -INFO- get gene name `trnS-gct` from Counter({'trnS-gct': 7, 'trnS': 2, 'Blastosporella_zonata-gene6': 1, 'Myochromella_boudieri-gene14': 1, 'Tricholomella_constricta-gene122': 1, 'Tephrocybe_rancida-gene9': 1, 'Asterophora_parasitica-gene59': 1})
+2020-03-19 20:25:30,363 -INFO- get gene name `trnS-gct` from Counter({'trnS-gct': 3, 'trnS': 2, 'Trichophyton_mentagrophytes-gene20': 1, 'Arthroderma_uncinatum-gene20': 1, 'Parastagonospora_nodorum_SN15-gene167': 1, 'Microsporum_canis-gene20': 1, 'Nannizzia_nana-gene20': 1, 'Epidermophyton_floccosum-gene20': 1, 'trnS1-gct': 1, 'Shiraia_bambusicola-gene47': 1, 'tRNA-Ser': 1})
+2020-03-19 20:25:30,365 -INFO- get gene name `trnR-tcg` from Counter({'trnR-tcg': 7, 'trnR': 2, 'Tricholomella_constricta-gene40': 1, 'Asterophora_parasitica-gene34': 1, 'Blastosporella_zonata-gene148': 1, 'Heterobasidion_irregulare-gene50': 1, 'trnR-UCG': 1})
+2020-03-19 20:25:30,366 -INFO- get gene name `trnN-gtt` from Counter({'trnN-gtt': 5, 'trnN': 4, 'Blastosporella_zonata-gene12': 1, 'Asterophora_parasitica-gene53': 1, 'Tephrocybe_rancida-gene58': 1, 'Tricholomella_constricta-gene116': 1, 'Myochromella_boudieri-gene8': 1})
+2020-03-19 20:25:30,367 -INFO- get gene name `trnQ-uug` from Counter({'trnQ-uug': 4, 'trnQ-ttg': 4, 'tRNA-Gln': 3, 'trnQ': 2, 'tRNA-gln': 1})
+2020-03-19 20:25:30,368 -INFO- get gene name `trnM-cat` from Counter({'trnM-cat': 6, 'trnM': 3, 'Ophiocordyceps_sinensis-gene37': 1, 'trnM-CAT': 1, 'trnM-cau': 1, 'Metarhizium_anisopliae-gene13': 1, 'trnM1': 1})
+2020-03-19 20:25:32,283 -INFO- get gene name `trnN` from Counter({'trnN': 3, 'trnN-gtt': 3, 'Shiraia_bambusicola-gene157': 1, 'trnN-GUU': 1, 'Phialocephala_subalpina-gene57': 1, 'Zymoseptoria_tritici-gene17': 1, 'Parastagonospora_nodorum_SN15-gene154': 1})
+2020-03-19 20:25:32,285 -INFO- get gene name `trnY-GUA` from Counter({'trnY-GUA': 4, 'trnY-gua': 3, 'trnY': 1, 'Sclerotinia_borealis-gene410': 1, 'tRNA-Tyr': 1, 'Phialocephala_subalpina-gene55': 1, 'trnY-UAC': 1, 'trnY-gta': 1})
+2020-03-19 20:25:32,287 -INFO- get gene name `trnF-gaa` from Counter({'trnF-gaa': 9, 'trnF-GAA': 1, 'Heterobasidion_irregulare-gene140': 1, 'trnF': 1, 'Armillaria_solidipes-gene29': 1})
+2020-03-19 20:25:32,288 -INFO- get gene name `trnE-ttc` from Counter({'trnE-ttc': 5, 'trnE': 3, 'Myochromella_boudieri-gene12': 1, 'Tricholomella_constricta-gene120': 1, 'Blastosporella_zonata-gene8': 1, 'Asterophora_parasitica-gene57': 1, 'Tephrocybe_rancida-gene56': 1})
+2020-03-19 20:25:32,289 -INFO- get gene name `rns` from Counter({'rns': 9, '15S-rRNA': 3, 'srRNA': 1})
+2020-03-19 20:25:32,289 -INFO- get gene name `trnL-uaa` from Counter({'trnL-uaa': 4, 'trnL-taa': 4, 'tRNA-Leu': 3, 'trnL': 1, 'tRNA-leu': 1})
+2020-03-19 20:25:32,290 -INFO- get gene name `rnl` from Counter({'rnl': 8, '21S-rRNA': 3, 'Naumovozyma_dairenensis-gene126': 1, 'lrRNA': 1})
+2020-03-19 20:25:32,654 -INFO- get gene name `rns` from Counter({'rns': 9, 'rrnS': 1, 'rns_b': 1, 'rns_a': 1})
+2020-03-19 20:25:32,656 -INFO- get gene name `trnR-ucu` from Counter({'trnR-ucu': 3, 'trnR-tct': 2, 'Microsporum_canis-gene82': 1, 'Nannizzia_nana-gene82': 1, 'Trichophyton_mentagrophytes-gene81': 1, 'tRNA2-Arg': 1, 'Epidermophyton_floccosum-gene98': 1, 'Arthroderma_uncinatum-gene82': 1, 'Paracoccidioides_brasiliensis-gene91': 1})
+2020-03-19 20:25:33,078 -INFO- get gene name `trnV-tac` from Counter({'trnV-tac': 3, 'trnV': 3, 'trnV-UAC': 2, 'trnV-uac': 1, 'Parastagonospora_nodorum_SN15-gene159': 1, 'Shiraia_bambusicola-gene155': 1})
+2020-03-19 20:25:33,080 -INFO- get gene name `trnM-cau` from Counter({'trnM-cau': 4, 'trnM-cat': 2, 'Zymoseptoria_tritici-gene77': 1, 'trnfM-CAU': 1, 'Rhynchosporium_secalis-gene126': 1, 'Phialocephala_subalpina-gene114': 1, 'Marssonina_brunnea_f-_sp-__multigermtubi_-gene30': 1})
+2020-03-19 20:25:33,081 -INFO- get gene name `trnP-tgg` from Counter({'trnP-tgg': 4, 'trnP': 2, 'Blastosporella_zonata-gene14': 1, 'Asterophora_parasitica-gene51': 1, 'Heterobasidion_irregulare-gene83': 1, 'Tricholomella_constricta-gene114': 1, 'Tephrocybe_rancida-gene54': 1})
+2020-03-19 20:25:34,818 -INFO- get gene name `trnG-ucc` from Counter({'trnG-ucc': 2, 'trnG-UCC': 1, 'Marssonina_brunnea_f-_sp-__multigermtubi_-gene18': 1, 'Phialocephala_subalpina-gene41': 1, 'trnG-tcc': 1, 'Sclerotinia_borealis-gene284': 1, 'Rhynchosporium_secalis-gene115': 1})
+2020-03-19 20:25:34,820 -INFO- get gene name `trnD-guc` from Counter({'trnD-guc': 5, 'trnD-GUC': 3, 'trnD': 1, 'trnD-gtc': 1})
+2020-03-19 20:25:34,821 -INFO- get gene name `trnS-gct` from Counter({'trnS-gct': 6, 'Heterobasidion_irregulare-gene11': 1, 'Armillaria_solidipes-gene176': 1, 'trnS1': 1, 'trnS-GCU': 1})
+2020-03-19 20:25:34,823 -INFO- get gene name `trnL-uaa` from Counter({'trnL-uaa': 3, 'trnL-UAA': 2, 'trnL-UUA': 1, 'trnL-taa': 1, 'trnL-TAA': 1, 'Sporothrix_schenckii-gene16': 1, 'Verticillium_nonalfalfae-gene78': 1})
+2020-03-19 20:25:35,584 -INFO- get gene name `trnN-guu` from Counter({'trnN-guu': 4, 'trnN-gtt': 4, 'Aspergillus_pseudoglaucus-gene33': 1})
+2020-03-19 20:25:35,995 -INFO- get gene name `trnM-cat` from Counter({'trnM-cat': 2, 'trnM': 1, 'Tricholomella_constricta-gene74': 1, 'trnM-CAU': 1, 'Tephrocybe_rancida-gene173': 1, 'Asterophora_parasitica-gene69': 1})
+2020-03-19 20:25:37,118 -INFO- get gene name `trnF` from Counter({'trnF': 2, 'Tricholomella_constricta-gene89': 1, 'trnF-gaa': 1, 'Tephrocybe_rancida-gene198': 1, 'Myochromella_boudieri-gene111': 1, 'Asterophora_parasitica-gene84': 1, 'Blastosporella_zonata-gene289': 1})
+2020-03-19 20:25:37,120 -INFO- get gene name `trnK-ttt` from Counter({'trnK-ttt': 6, 'Metarhizium_anisopliae-gene21': 1, 'trnK': 1, 'trnK-uuu': 1, 'tRNA-Lys': 1})
+2020-03-19 20:25:37,122 -INFO- get gene name `trnY-gta` from Counter({'trnY-gta': 4, 'tRNA-Tyr': 3, 'trnY': 2, 'tRNA-tyr': 1})
+2020-03-19 20:25:37,123 -INFO- get gene name `trnI-gat` from Counter({'trnI-gat': 4, 'tRNA-Ile': 3, 'trnI': 2, 'tRNA-ile': 1})
+2020-03-19 20:25:37,124 -INFO- get gene name `trnS` from Counter({'trnS': 3, 'trnS-gct': 3, 'Metarhizium_anisopliae-gene120': 1, 'Akanthomyces_muscarius-gene115': 1, 'trnS-gcu': 1})
+2020-03-19 20:25:37,546 -INFO- get gene name `trnP-tgg` from Counter({'trnP-tgg': 3, 'trnP': 2, 'trnP-UGG': 1, 'trnP-CCA': 1, 'trnP-ugg': 1})
+2020-03-19 20:25:37,946 -INFO- get gene name `trnR-acg` from Counter({'trnR-acg': 6, 'trnR': 1, 'Metarhizium_anisopliae-gene51': 1})
+2020-03-19 20:25:37,947 -INFO- get gene name `trnE-ttc` from Counter({'trnE-ttc': 4, 'tRNA-Glu': 3, 'trnE': 2})
+2020-03-19 20:25:37,948 -INFO- get gene name `trnK-ttt` from Counter({'trnK-ttt': 4, 'trnK': 2, 'tRNA-Lys': 2, 'tRNA-lys': 1})
+2020-03-19 20:25:37,948 -INFO- get gene name `trnT-tgt` from Counter({'trnT-tgt': 4, 'tRNA-Thr': 2, 'tRNA-thr2': 1, 'trnT': 1, 'trnT2': 1})
+2020-03-19 20:25:37,949 -INFO- get gene name `trnA-ugc` from Counter({'trnA-ugc': 4, 'trnA-UGC': 3, 'trnA': 1})
+2020-03-19 20:25:37,950 -INFO- get gene name `trnH-gtg` from Counter({'trnH-gtg': 4, 'trnH-GUG': 2, 'trnH-gug': 2})
+2020-03-19 20:25:37,950 -INFO- get gene name `Paracoccidioides_brasiliensis-gene88` from Counter({'Paracoccidioides_brasiliensis-gene88': 1, 'Talaromyces_marneffei-gene133': 1, 'Arthroderma_uncinatum-gene54': 1, 'Trichophyton_mentagrophytes-gene54': 1, 'Epidermophyton_floccosum-gene67': 1, 'Nannizzia_nana-gene54': 1, 'Microsporum_canis-gene54': 1, 'trnM-cat': 1})
+2020-03-19 20:25:37,951 -INFO- get gene name `Paracoccidioides_brasiliensis-gene89` from Counter({'Paracoccidioides_brasiliensis-gene89': 1, 'Epidermophyton_floccosum-gene69': 1, 'Talaromyces_marneffei-gene135': 1, 'Arthroderma_uncinatum-gene56': 1, 'Trichophyton_mentagrophytes-gene56': 1, 'Nannizzia_nana-gene56': 1, 'Microsporum_canis-gene56': 1, 'Aspergillus_pseudoglaucus-gene127': 1})
+2020-03-19 20:25:37,952 -INFO- get gene name `Arthroderma_uncinatum-gene84` from Counter({'Arthroderma_uncinatum-gene84': 1, 'Talaromyces_marneffei-gene66': 1, 'Microsporum_canis-gene84': 1, 'Rhynchosporium_secalis-gene96': 1, 'Epidermophyton_floccosum-gene100': 1, 'Nannizzia_nana-gene84': 1, 'Trichophyton_mentagrophytes-gene83': 1, 'Sclerotinia_borealis-gene412': 1})
+2020-03-19 20:25:38,622 -INFO- get gene name `trnF-gaa` from Counter({'trnF-gaa': 3, 'tRNA-Phe': 1, 'Sclerotinia_borealis-gene53': 1, 'Metarhizium_anisopliae-gene19': 1, 'trnF': 1})
+2020-03-19 20:25:38,623 -INFO- get gene name `trnI-gat` from Counter({'trnI-gat': 6, 'trnI': 1, 'Heterobasidion_irregulare-gene106': 1})
+2020-03-19 20:25:39,367 -INFO- get gene name `trnC-gca` from Counter({'trnC-gca': 6, 'Ophiocordyceps_sinensis-gene168': 1})
+2020-03-19 20:25:39,368 -INFO- get gene name `trnA-tgc` from Counter({'trnA-tgc': 4, 'trnA': 2, 'tRNA-Ala': 2})
+2020-03-19 20:25:39,370 -INFO- get gene name `trnS-tga` from Counter({'trnS-tga': 4, 'tRNA-Ser': 2, 'trnS1': 1, 'tRNA-ser2': 1})
+2020-03-19 20:25:39,371 -INFO- get gene name `tRNA-Arg` from Counter({'tRNA-Arg': 3, 'trnR-tct': 3, 'tRNA-arg': 1, 'trnR1': 1})
+2020-03-19 20:25:39,766 -INFO- get gene name `Trichophyton_mentagrophytes-gene24` from Counter({'Trichophyton_mentagrophytes-gene24': 1, 'Nannizzia_nana-gene24': 1, 'Arthroderma_uncinatum-gene24': 1, 'Epidermophyton_floccosum-gene24': 1, 'Microsporum_canis-gene24': 1, 'Sclerotinia_borealis-gene290': 1})
+2020-03-19 20:25:39,768 -INFO- get gene name `Arthroderma_uncinatum-gene36` from Counter({'Arthroderma_uncinatum-gene36': 1, 'trnE-ttc': 1, 'Aspergillus_pseudoglaucus-gene107': 1, 'Trichophyton_mentagrophytes-gene36': 1, 'Nannizzia_nana-gene36': 1, 'Microsporum_canis-gene36': 1, 'Epidermophyton_floccosum-gene36': 1})
+2020-03-19 20:25:39,769 -INFO- get gene name `Trichophyton_mentagrophytes-gene38` from Counter({'Trichophyton_mentagrophytes-gene38': 1, 'trnV-tac': 1, 'Epidermophyton_floccosum-gene38': 1, 'Aspergillus_pseudoglaucus-gene109': 1, 'Microsporum_canis-gene38': 1, 'Talaromyces_marneffei-gene117': 1, 'Nannizzia_nana-gene38': 1})
+2020-03-19 20:25:39,769 -INFO- get gene name `Asterophora_parasitica-gene28` from Counter({'Asterophora_parasitica-gene28': 1, 'Tricholomella_constricta-gene131': 1, 'Blastosporella_zonata-gene118': 1, 'Tephrocybe_rancida-gene48': 1, 'trnK': 1, 'Myochromella_boudieri-gene26': 1, 'trnK-ttt': 1})
+2020-03-19 20:25:39,770 -INFO- get gene name `trnR-tct` from Counter({'trnR-tct': 3, 'trnR': 2, 'Shiraia_bambusicola-gene165': 1, 'Parastagonospora_nodorum_SN15-gene144': 1})
+2020-03-19 20:25:39,771 -INFO- get gene name `trnD-gtc` from Counter({'trnD-gtc': 3, 'trnD': 2, 'Parastagonospora_nodorum_SN15-gene165': 1, 'Shiraia_bambusicola-gene45': 1})
+2020-03-19 20:25:39,772 -INFO- get gene name `trnI-gat` from Counter({'trnI-gat': 3, 'trnI': 2, 'Shiraia_bambusicola-gene51': 1, 'Parastagonospora_nodorum_SN15-gene171': 1})
+2020-03-19 20:25:39,772 -INFO- get gene name `trnR-acg` from Counter({'trnR-acg': 3, 'trnR': 2, 'Parastagonospora_nodorum_SN15-gene173': 1, 'Shiraia_bambusicola-gene53': 1})
+2020-03-19 20:25:39,773 -INFO- get gene name `trnT-tgt` from Counter({'trnT-tgt': 3, 'trnT': 2, 'Shiraia_bambusicola-gene61': 1, 'Parastagonospora_nodorum_SN15-gene4': 1})
+2020-03-19 20:25:39,774 -INFO- get gene name `trnL-tag` from Counter({'trnL-tag': 3, 'trnL': 2, 'Parastagonospora_nodorum_SN15-gene16': 1, 'Shiraia_bambusicola-gene73': 1})
+2020-03-19 20:25:39,774 -INFO- get gene name `trnN-guu` from Counter({'trnN-guu': 4, 'trnN-GUU': 2, 'trnN': 1})
+2020-03-19 20:25:39,775 -INFO- get gene name `trnP-tgg` from Counter({'trnP-tgg': 3, 'trnP-ugg': 2, 'trnP': 1, 'tRNA-Pro': 1})
+2020-03-19 20:25:39,776 -INFO- get gene name `trnL-taa` from Counter({'trnL-taa': 4, 'Metarhizium_anisopliae-gene15': 1, 'tRNA-Leu': 1, 'trnL-uaa': 1})
+2020-03-19 20:25:39,777 -INFO- get gene name `trnI-gat` from Counter({'trnI-gat': 4, 'trnI': 1, 'Metarhizium_anisopliae-gene140': 1, 'Sporothrix_schenckii-gene152': 1})
+2020-03-19 20:25:39,777 -INFO- get gene name `Paracoccidioides_brasiliensis-gene71` from Counter({'Paracoccidioides_brasiliensis-gene71': 1, 'trnS-gcu': 1, 'trnS-uga': 1, 'Zymoseptoria_tritici-gene104': 1, 'trnS1-gct': 1, 'Pyronema_omphalodes-gene243': 1, 'Morchella_importuna-gene135': 1})
+2020-03-19 20:25:39,778 -INFO- get gene name `trnM-cat` from Counter({'trnM-cat': 5, 'trnM-cau': 1, 'Madurella_mycetomatis-gene63': 1})
+2020-03-19 20:25:39,779 -INFO- get gene name `tRNA-Met` from Counter({'tRNA-Met': 2, 'trnM-cat': 2, 'trnM': 2, 'tRNA-met': 1})
+2020-03-19 20:25:39,779 -INFO- get gene name `trnW-tca` from Counter({'trnW-tca': 3, 'trnW': 2, 'tRNA-tr': 1, 'tRNA-Trp': 1})
+2020-03-19 20:25:39,780 -INFO- get gene name `trnG-tcc` from Counter({'trnG-tcc': 2, 'tRNA-Gly': 2, 'trnG': 2, 'tRNA-gly': 1})
+2020-03-19 20:25:39,781 -INFO- get gene name `trnI` from Counter({'trnI': 1, 'Morchella_importuna-gene145': 1, 'tRNA-Ile': 1, 'trnI-gat': 1, 'trnI-gau': 1, 'Pyronema_omphalodes-gene247': 1})
+2020-03-19 20:25:39,781 -INFO- get gene name `trnN-guu` from Counter({'trnN-guu': 4, 'trnN-GUU': 2})
+2020-03-19 20:25:39,782 -INFO- get gene name `trnR-ucg` from Counter({'trnR-ucg': 3, 'trnR-UCG': 2, 'trnR': 1})
+2020-03-19 20:25:39,782 -INFO- get gene name `trnF-gaa` from Counter({'trnF-gaa': 4, 'Ophiocordyceps_sinensis-gene45': 1, 'Annulohypoxylon_stygium-gene69': 1})
+2020-03-19 20:25:40,514 -INFO- get gene name `trnC-GCA` from Counter({'trnC-GCA': 2, 'tRNA-Cys': 1, 'trnC-gca': 1, 'Annulohypoxylon_stygium-gene180': 1})
+2020-03-19 20:25:40,516 -INFO- get gene name `trnM-cat` from Counter({'trnM-cat': 4, 'tRNA-Met': 1, 'trnM-cau': 1})
+2020-03-19 20:25:40,517 -INFO- get gene name `trnR-tct` from Counter({'trnR-tct': 4, 'trnR-ucu': 2})
+2020-03-19 20:25:40,938 -INFO- get gene name `trnR-acg` from Counter({'trnR-acg': 3, 'Arthrobotrys_oligospora-gene320': 1, 'trnL-aag': 1})
+2020-03-19 20:25:40,940 -INFO- get gene name `Arthroderma_uncinatum-gene18` from Counter({'Arthroderma_uncinatum-gene18': 1, 'Trichophyton_mentagrophytes-gene18': 1, 'Epidermophyton_floccosum-gene18': 1, 'Microsporum_canis-gene18': 1, 'Nannizzia_nana-gene18': 1, 'trnD-guc': 1})
+2020-03-19 20:25:40,941 -INFO- get gene name `Trichophyton_mentagrophytes-gene22` from Counter({'Trichophyton_mentagrophytes-gene22': 1, 'Arthroderma_uncinatum-gene22': 1, 'Nannizzia_nana-gene22': 1, 'Microsporum_canis-gene22': 1, 'Epidermophyton_floccosum-gene22': 1, 'trnI-gau': 1})
+2020-03-19 20:25:40,942 -INFO- get gene name `trnG-tcc` from Counter({'trnG-tcc': 3, 'Shiraia_bambusicola-gene43': 1, 'Parastagonospora_nodorum_SN15-gene163': 1, 'trnG': 1})
+2020-03-19 20:25:40,944 -INFO- get gene name `trnE-ttc` from Counter({'trnE-ttc': 2, 'trnE': 2, 'Parastagonospora_nodorum_SN15-gene10': 1, 'Shiraia_bambusicola-gene67': 1})
+2020-03-19 20:25:40,945 -INFO- get gene name `trnF-gaa` from Counter({'trnF-gaa': 3, 'trnF': 2, 'Parastagonospora_nodorum_SN15-gene14': 1})
+2020-03-19 20:25:40,946 -INFO- get gene name `trnC` from Counter({'trnC': 2, 'trnC-gca': 2, 'Parastagonospora_nodorum_SN15-gene65': 1, 'Shiraia_bambusicola-gene84': 1})
+2020-03-19 20:25:40,947 -INFO- get gene name `trnG-tcc` from Counter({'trnG-tcc': 4, 'Ophiocordyceps_sinensis-gene51': 1, 'Metarhizium_anisopliae-gene133': 1})
+2020-03-19 20:25:41,348 -INFO- get gene name `trnS-gct` from Counter({'trnS-gct': 3, 'Trametes_hirsuta-gene137': 1, 'trnS-GCU': 1})
+2020-03-19 20:25:41,349 -INFO- get gene name `trnI-gat` from Counter({'trnI-gat': 2, 'trnI-gau': 2, 'Ophiocordyceps_sinensis-gene349': 1, 'Zymoseptoria_tritici-gene109': 1})
+2020-03-19 20:25:41,351 -INFO- get gene name `tRNA-Asn` from Counter({'tRNA-Asn': 2, 'trnN-gtt': 2, 'tRNA-asn': 1, 'trnN': 1})
+2020-03-19 20:25:41,352 -INFO- get gene name `tRNA-Cys` from Counter({'tRNA-Cys': 2, 'trnC-gca': 2, 'trnC': 1, 'tRNA-cys': 1})
+2020-03-19 20:25:41,353 -INFO- get gene name `trnT-ugu` from Counter({'trnT-ugu': 3, 'Lichtheimia_hongkongensis-gene3': 1, 'trnT-tgt': 1})
+2020-03-19 20:25:41,354 -INFO- get gene name `trnE-uuc` from Counter({'trnE-uuc': 3, 'trnE-ttc': 1, 'Lichtheimia_hongkongensis-gene5': 1})
+2020-03-19 20:25:41,355 -INFO- get gene name `trnL-uaa` from Counter({'trnL-uaa': 3, 'trnL-taa': 1, 'Lichtheimia_hongkongensis-gene40': 1})
+2020-03-19 20:25:41,356 -INFO- get gene name `trnM-cau` from Counter({'trnM-cau': 3, 'trnM-cat': 1, 'Lichtheimia_hongkongensis-gene39': 1})
+2020-03-19 20:25:41,357 -INFO- get gene name `trnD-guc` from Counter({'trnD-guc': 3, 'Lichtheimia_hongkongensis-gene100': 1, 'trnD-gtc': 1})
+2020-03-19 20:25:41,358 -INFO- get gene name `trnI-gau` from Counter({'trnI-gau': 3, 'Lichtheimia_hongkongensis-gene117': 1, 'trnI-gat': 1})
+2020-03-19 20:25:41,359 -INFO- get gene name `trnS-uga` from Counter({'trnS-uga': 3, 'trnS-tga': 1, 'Lichtheimia_hongkongensis-gene116': 1})
+2020-03-19 20:25:41,359 -INFO- get gene name `trnF-gaa` from Counter({'trnF-gaa': 4, 'Lichtheimia_hongkongensis-gene115': 1})
+2020-03-19 20:25:41,360 -INFO- get gene name `trnY-gua` from Counter({'trnY-gua': 3, 'trnY-gta': 1, 'Lichtheimia_hongkongensis-gene37': 1})
+2020-03-19 20:25:41,361 -INFO- get gene name `trnR-ucg` from Counter({'trnR-ucg': 3, 'Lichtheimia_hongkongensis-gene102': 1, 'trnR-tcg': 1})
+2020-03-19 20:25:41,361 -INFO- get gene name `trnS-gcu` from Counter({'trnS-gcu': 3, 'Lichtheimia_hongkongensis-gene105': 1, 'trnS-gct': 1})
+2020-03-19 20:25:41,362 -INFO- get gene name `trnG-ucc` from Counter({'trnG-ucc': 3, 'trnG-tcc': 1, 'Lichtheimia_hongkongensis-gene101': 1})
+2020-03-19 20:25:41,363 -INFO- get gene name `trnR-ucu` from Counter({'trnR-ucu': 3, 'trnR-tct': 1, 'Lichtheimia_hongkongensis-gene98': 1})
+2020-03-19 20:25:41,363 -INFO- get gene name `trnP-ugg` from Counter({'trnP-ugg': 3, 'trnP-tgg': 1, 'Lichtheimia_hongkongensis-gene97': 1})
+2020-03-19 20:25:41,364 -INFO- get gene name `trnA-ugc` from Counter({'trnA-ugc': 3, 'trnA-tgc': 1, 'Lichtheimia_hongkongensis-gene96': 1})
+2020-03-19 20:25:41,364 -INFO- get gene name `rns` from Counter({'rns': 1, 'Ustilago_maydis-gene163': 1, 'Blastocladiella_emersonii-gene69': 1, 'Malassezia_restricta-gene95': 1, 'Jaminaea_angkorensis-gene107': 1})
+2020-03-19 20:25:41,365 -INFO- get gene name `trnR-tcg` from Counter({'trnR-tcg': 4, 'trnR-ucg': 1})
+2020-03-19 20:25:41,366 -INFO- get gene name `trnK-ttt` from Counter({'trnK-ttt': 4, 'trnK-uuu': 1})
+2020-03-19 20:25:41,366 -INFO- get gene name `trnD-gtc` from Counter({'trnD-gtc': 4, 'trnD-guc': 1})
+2020-03-19 20:25:41,366 -INFO- get gene name `trnS-gct` from Counter({'trnS-gct': 4, 'trnS-gcu': 1})
+2020-03-19 20:25:41,367 -INFO- get gene name `trnT-tgt` from Counter({'trnT-tgt': 4, 'trnT-ugu': 1})
+2020-03-19 20:25:41,367 -INFO- get gene name `trnE-ttc` from Counter({'trnE-ttc': 4, 'trnE-uuc': 1})
+2020-03-19 20:25:41,368 -INFO- get gene name `trnA-tgc` from Counter({'trnA-tgc': 4, 'trnA-ugc': 1})
+2020-03-19 20:25:41,368 -INFO- get gene name `Arthroderma_uncinatum-gene14` from Counter({'Arthroderma_uncinatum-gene14': 1, 'Epidermophyton_floccosum-gene14': 1, 'Microsporum_canis-gene14': 1, 'Trichophyton_mentagrophytes-gene14': 1, 'Nannizzia_nana-gene14': 1})
+2020-03-19 20:25:41,369 -INFO- get gene name `Nannizzia_nana-gene16` from Counter({'Nannizzia_nana-gene16': 1, 'Epidermophyton_floccosum-gene16': 1, 'Trichophyton_mentagrophytes-gene16': 1, 'Microsporum_canis-gene16': 1, 'Arthroderma_uncinatum-gene16': 1})
+2020-03-19 20:25:41,369 -INFO- get gene name `Microsporum_canis-gene28` from Counter({'Microsporum_canis-gene28': 1, 'Arthroderma_uncinatum-gene28': 1, 'Trichophyton_mentagrophytes-gene28': 1, 'Nannizzia_nana-gene28': 1, 'Epidermophyton_floccosum-gene28': 1})
+2020-03-19 20:25:41,370 -INFO- get gene name `Epidermophyton_floccosum-gene53` from Counter({'Epidermophyton_floccosum-gene53': 1, 'Arthroderma_uncinatum-gene40': 1, 'Nannizzia_nana-gene40': 1, 'Trichophyton_mentagrophytes-gene40': 1, 'Microsporum_canis-gene40': 1})
+2020-03-19 20:25:41,370 -INFO- get gene name `Arthroderma_uncinatum-gene42` from Counter({'Arthroderma_uncinatum-gene42': 1, 'Nannizzia_nana-gene42': 1, 'Trichophyton_mentagrophytes-gene42': 1, 'Microsporum_canis-gene42': 1, 'Epidermophyton_floccosum-gene55': 1})
+2020-03-19 20:25:41,371 -INFO- get gene name `Nannizzia_nana-gene44` from Counter({'Nannizzia_nana-gene44': 1, 'Arthroderma_uncinatum-gene44': 1, 'Trichophyton_mentagrophytes-gene44': 1, 'Microsporum_canis-gene44': 1, 'Epidermophyton_floccosum-gene57': 1})
+2020-03-19 20:25:41,371 -INFO- get gene name `Epidermophyton_floccosum-gene63` from Counter({'Epidermophyton_floccosum-gene63': 1, 'Arthroderma_uncinatum-gene50': 1, 'Microsporum_canis-gene50': 1, 'Trichophyton_mentagrophytes-gene50': 1, 'Nannizzia_nana-gene50': 1})
+2020-03-19 20:25:41,371 -INFO- get gene name `Arthroderma_uncinatum-gene52` from Counter({'Arthroderma_uncinatum-gene52': 1, 'Trichophyton_mentagrophytes-gene52': 1, 'Nannizzia_nana-gene52': 1, 'Microsporum_canis-gene52': 1, 'Epidermophyton_floccosum-gene65': 1})
+2020-03-19 20:25:41,372 -INFO- get gene name `Microsporum_canis-gene130` from Counter({'Microsporum_canis-gene130': 1, 'Nannizzia_nana-gene130': 1, 'Arthroderma_uncinatum-gene130': 1, 'Trichophyton_mentagrophytes-gene118': 1, 'Epidermophyton_floccosum-gene165': 1})
+2020-03-19 20:25:41,372 -INFO- get gene name `Nannizzia_nana-gene144` from Counter({'Nannizzia_nana-gene144': 1, 'Microsporum_canis-gene144': 1, 'Trichophyton_mentagrophytes-gene131': 1, 'Epidermophyton_floccosum-gene179': 1, 'Arthroderma_uncinatum-gene147': 1})
+2020-03-19 20:25:41,373 -INFO- get gene name `trnK-ttt` from Counter({'trnK-ttt': 3, 'Shiraia_bambusicola-gene153': 1, 'trnK': 1})
+2020-03-19 20:25:41,373 -INFO- get gene name `rns` from Counter({'rns': 3, 'SSU': 1, 'ssu': 1})
+2020-03-19 20:25:41,374 -INFO- get gene name `rnl` from Counter({'rnl': 3, 'lsu': 1, 'LSU': 1})
+2020-03-19 20:25:41,374 -INFO- get gene name `trnM-cat` from Counter({'trnM-cat': 4, 'Metarhizium_anisopliae-gene11': 1})
+2020-03-19 20:25:41,374 -INFO- get gene name `trnV-tac` from Counter({'trnV-tac': 3, 'Ophiocordyceps_sinensis-gene347': 1, 'tRNA-Val': 1})
+2020-03-19 20:25:42,460 -INFO- get gene name `trnE-ttc` from Counter({'trnE-ttc': 2, 'Trametes_hirsuta-gene52': 1})
+2020-03-19 20:25:42,462 -INFO- get gene name `trnT-tgt` from Counter({'trnT-tgt': 2, 'Rhynchosporium_secalis-gene124': 1, 'Marssonina_brunnea_f-_sp-__multigermtubi_-gene26': 1, 'Phialocephala_subalpina-gene110': 1})
+2020-03-19 20:25:42,463 -INFO- get gene name `trnT-tgt` from Counter({'trnT-tgt': 5})
+2020-03-19 20:25:42,464 -INFO- get gene name `trnV-tac` from Counter({'trnV-tac': 2, 'tRNA-val': 1, 'trnV': 1, 'tRNA-Val': 1})
+2020-03-19 20:25:42,465 -INFO- get gene name `tRNA-Asp` from Counter({'tRNA-Asp': 2, 'trnD-gtc': 2, 'trnD': 1})
+2020-03-19 20:25:42,467 -INFO- get gene name `trnL-UAA` from Counter({'trnL-UAA': 2, 'trnL-AAT': 2, 'trnL': 1})
+2020-03-19 20:25:42,821 -INFO- get gene name `Rhynchosporium_secalis-gene74` from Counter({'Rhynchosporium_secalis-gene74': 1, 'Marssonina_brunnea_f-_sp-__multigermtubi_-gene91': 1, 'Morchella_importuna-gene12': 1, 'Phialocephala_subalpina-gene31': 1})
+2020-03-19 20:25:42,823 -INFO- get gene name `trnK-uuu` from Counter({'trnK-uuu': 3, 'Lichtheimia_hongkongensis-gene119': 1})
+2020-03-19 20:25:42,824 -INFO- get gene name `trnC-gca` from Counter({'trnC-gca': 3, 'Lichtheimia_hongkongensis-gene36': 1})
+2020-03-19 20:25:42,825 -INFO- get gene name `trnL-uag` from Counter({'trnL-uag': 2, 'Lichtheimia_hongkongensis-gene99': 1, 'trnL-tag': 1})
+2020-03-19 20:25:42,826 -INFO- get gene name `trnM` from Counter({'trnM': 2, 'Ophiocordyceps_sinensis-gene59': 1, 'Akanthomyces_muscarius-gene30': 1})
+2020-03-19 20:25:42,827 -INFO- get gene name `trnE-uuc` from Counter({'trnE-uuc': 4})
+2020-03-19 20:25:42,828 -INFO- get gene name `trnL-uaa` from Counter({'trnL-uaa': 2, 'trnL-UAA': 1, 'trnL2-taa': 1})
+2020-03-19 20:25:42,829 -INFO- get gene name `trnL-uag` from Counter({'trnL-uag': 1, 'trnL': 1, 'trnL-UGA': 1, 'trnL-UAG': 1})
+2020-03-19 20:25:42,829 -INFO- get gene name `trnM-cat` from Counter({'trnM-cat': 1, 'trnM-AUG': 1, 'Madurella_mycetomatis-gene47': 1, 'trnI-cau': 1})
+2020-03-19 20:25:42,830 -INFO- get gene name `trnW-tca` from Counter({'trnW-tca': 4})
+2020-03-19 20:25:42,831 -INFO- get gene name `trnP-tgg` from Counter({'trnP-tgg': 3, 'trnP-ugg': 1})
+2020-03-19 20:25:42,831 -INFO- get gene name `trnL-taa` from Counter({'trnL-taa': 3, 'trnL-uaa': 1})
+2020-03-19 20:25:42,832 -INFO- get gene name `trnL-tag` from Counter({'trnL-tag': 3, 'trnL-uag': 1})
+2020-03-19 20:25:42,832 -INFO- get gene name `trnN-gtt` from Counter({'trnN-gtt': 4})
+2020-03-19 20:25:42,833 -INFO- get gene name `trnG-ucc` from Counter({'trnG-ucc': 4})
+2020-03-19 20:25:42,834 -INFO- get gene name `trnD-guc` from Counter({'trnD-guc': 4})
+2020-03-19 20:25:42,834 -INFO- get gene name `trnV-uac` from Counter({'trnV-uac': 4})
+2020-03-19 20:25:42,835 -INFO- get gene name `trnM-cau` from Counter({'trnM-cau': 4})
+2020-03-19 20:25:42,836 -INFO- get gene name `trnT-ugu` from Counter({'trnT-ugu': 4})
+2020-03-19 20:25:42,836 -INFO- get gene name `trnE-uuc` from Counter({'trnE-uuc': 4})
+2020-03-19 20:25:42,837 -INFO- get gene name `trnS-uga` from Counter({'trnS-uga': 4})
+2020-03-19 20:25:42,837 -INFO- get gene name `trnA-ugc` from Counter({'trnA-ugc': 4})
+2020-03-19 20:25:42,838 -INFO- get gene name `trnY-gua` from Counter({'trnY-gua': 4})
+2020-03-19 20:25:42,838 -INFO- get gene name `trnN-guu` from Counter({'trnN-guu': 4})
+2020-03-19 20:25:42,839 -INFO- get gene name `trnF-gaa` from Counter({'trnF-gaa': 4})
+2020-03-19 20:25:42,839 -INFO- get gene name `rnl` from Counter({'rnl': 3, 'Komagataella_phaffii_CBS_7435-gene146': 1})
+2020-03-19 20:25:42,840 -INFO- get gene name `trnT-ugu` from Counter({'trnT-ugu': 2, 'tRNA-Thr': 1, 'trnT': 1})
+2020-03-19 20:25:42,840 -INFO- get gene name `trnL-uaa` from Counter({'trnL-uaa': 2, 'tRNA-Leu2': 1, 'trnL2': 1})
+2020-03-19 20:25:42,840 -INFO- get gene name `trnQ-uug` from Counter({'trnQ-uug': 2, 'trnQ': 1, 'tRNA-Gln': 1})
+2020-03-19 20:25:43,568 -INFO- get gene name `trnI-aau` from Counter({'trnI-aau': 1, 'tRNA-Met3': 1, 'trnM-cau': 1, 'trnM3': 1})
+2020-03-19 20:25:43,570 -INFO- get gene name `rns` from Counter({'rns': 3, 'Komagataella_phaffii_CBS_7435-gene92': 1})
+2020-03-19 20:25:43,571 -INFO- get gene name `trnM-cat` from Counter({'trnM-cat': 3, 'trnM2': 1})
+2020-03-19 20:25:43,572 -INFO- get gene name `trnM-cau` from Counter({'trnM-cau': 2, 'tRNA-Met': 1, 'Verticillium_nonalfalfae-gene66': 1})
+2020-03-19 20:25:43,573 -INFO- get gene name `trnS-uga` from Counter({'trnS-uga': 2, 'trnS': 1, 'Debaryomyces_hansenii-gene133': 1})
+2020-03-19 20:25:43,575 -INFO- get gene name `trnA-ugc` from Counter({'trnA-ugc': 2, 'tRNA-Ala': 1, 'Debaryomyces_hansenii-gene3': 1})
+2020-03-19 20:25:43,576 -INFO- get gene name `trnM-cau` from Counter({'trnM-cau': 2, 'Debaryomyces_hansenii-gene140': 1, 'trnM': 1})
+2020-03-19 20:25:43,577 -INFO- get gene name `trnI-gau` from Counter({'trnI-gau': 2, 'trnI': 1, 'Debaryomyces_hansenii-gene67': 1})
+2020-03-19 20:25:43,578 -INFO- get gene name `trnP-ugg` from Counter({'trnP-ugg': 2, 'trnP': 1, 'Debaryomyces_hansenii-gene86': 1})
+2020-03-19 20:25:43,578 -INFO- get gene name `trnS-tga` from Counter({'trnS-tga': 2, 'trnS2-tga': 1, 'Zymoseptoria_tritici-gene111': 1})
+2020-03-19 20:25:43,579 -INFO- get gene name `trnG-tcc` from Counter({'trnG-tcc': 3, 'trnG-ucc': 1})
+2020-03-19 20:25:43,580 -INFO- get gene name `Metarhizium_anisopliae-gene122` from Counter({'Metarhizium_anisopliae-gene122': 1, 'trnN-gtt': 1, 'trnN-GTT': 1, 'Sporothrix_schenckii-gene126': 1})
+2020-03-19 20:25:43,580 -INFO- get gene name `Trichophyton_mentagrophytes-gene46` from Counter({'Trichophyton_mentagrophytes-gene46': 1, 'Microsporum_canis-gene46': 1, 'Epidermophyton_floccosum-gene59': 1, 'Nannizzia_nana-gene46': 1})
+2020-03-19 20:25:43,581 -INFO- get gene name `Nannizzia_nana-gene80` from Counter({'Nannizzia_nana-gene80': 1, 'Epidermophyton_floccosum-gene96': 1, 'Microsporum_canis-gene80': 1, 'Trichophyton_mentagrophytes-gene79': 1})
+2020-03-19 20:25:43,582 -INFO- get gene name `trnR-ucu` from Counter({'trnR-ucu': 1, 'trnR': 1, 'trnR-tct': 1, 'Ophiocordyceps_sinensis-gene255': 1})
+2020-03-19 20:25:43,583 -INFO- get gene name `trnR-UCU` from Counter({'trnR-UCU': 2, 'Trametes_hirsuta-gene50': 1, 'trnR-tct': 1})
+2020-03-19 20:25:43,975 -INFO- get gene name `trnL-taa` from Counter({'trnL-taa': 1, 'Sugiyamaella_lignohabitans-gene34': 1, 'tRNA-Leu': 1})
+2020-03-19 20:25:43,977 -INFO- get gene name `Rhynchosporium_secalis-gene118` from Counter({'Rhynchosporium_secalis-gene118': 1, 'trnI-gat': 1, 'trnI-gau': 1, 'Marssonina_brunnea_f-_sp-__multigermtubi_-gene22': 1})
+2020-03-19 20:25:43,978 -INFO- get gene name `trnL-uag` from Counter({'trnL-uag': 2, 'trnL-UAG': 1, 'Verticillium_nonalfalfae-gene72': 1})
+2020-03-19 20:25:43,978 -INFO- get gene name `trnS-gct` from Counter({'trnS-gct': 3, 'tRNA-Ser': 1})
+2020-03-19 20:25:43,979 -INFO- get gene name `tRNA-Met` from Counter({'tRNA-Met': 1, 'trnM-cat': 1, 'tRNA-met-f': 1, 'trnfM': 1})
+2020-03-19 20:25:43,980 -INFO- get gene name `trnM-cat` from Counter({'trnM-cat': 3, 'tRNA-Met': 1})
+2020-03-19 20:25:43,980 -INFO- get gene name `trnF-gaa` from Counter({'trnF-gaa': 1, 'tRNA-phe': 1, 'tRNA-Phe': 1, 'trnF': 1})
+2020-03-19 20:25:43,981 -INFO- get gene name `trnR-acg` from Counter({'trnR-acg': 3, 'tRNA-Arg2': 1})
+2020-03-19 20:25:43,982 -INFO- get gene name `trnH-gtg` from Counter({'trnH-gtg': 2, 'trnH': 1, 'tRNA-His': 1})
+2020-03-19 20:25:43,982 -INFO- get gene name `trnN-gtt` from Counter({'trnN-gtt': 3, 'Trametes_hirsuta-gene66': 1})
+2020-03-19 20:25:43,983 -INFO- get gene name `trnA` from Counter({'trnA': 2, 'trnA-tgc': 1, 'trnA-ugc': 1})
+2020-03-19 20:25:43,984 -INFO- get gene name `trnQ-uug` from Counter({'trnQ-uug': 2, 'trnQ-ttg': 1, 'Lichtheimia_hongkongensis-gene4': 1})
+2020-03-19 20:25:45,085 -INFO- get gene name `Sclerotinia_borealis-gene282` from Counter({'Sclerotinia_borealis-gene282': 1, 'Sclerotinia_borealis-gene454': 1, 'trnK-UUU': 1, 'Marssonina_brunnea_f-_sp-__multigermtubi_-gene16': 1})
+2020-03-19 20:25:45,087 -INFO- get gene name `tRNA-ser1` from Counter({'tRNA-ser1': 1, 'trnS2': 1, 'tRNA-Ser': 1, 'trnS-gct': 1})
+2020-03-19 20:25:45,088 -INFO- get gene name `trnW-cca` from Counter({'trnW-cca': 2, 'Lichtheimia_hongkongensis-gene118': 1})
+2020-03-19 20:25:45,088 -INFO- get gene name `trnF` from Counter({'trnF': 3})
+2020-03-19 20:25:45,527 -INFO- get gene name `trnR` from Counter({'trnR': 1, 'trnR-TCT': 1})
+2020-03-19 20:25:45,528 -INFO- get gene name `trnM` from Counter({'trnM': 2, 'Akanthomyces_muscarius-gene12': 1})
+2020-03-19 20:25:45,529 -INFO- get gene name `trnK` from Counter({'trnK': 2, 'Akanthomyces_muscarius-gene22': 1})
+2020-03-19 20:25:45,531 -INFO- get gene name `trnQ` from Counter({'trnQ': 1, 'trnL': 1, 'Akanthomyces_muscarius-gene26': 1})
+2020-03-19 20:25:45,532 -INFO- get gene name `trnH` from Counter({'trnH': 2, 'Akanthomyces_muscarius-gene28': 1})
+2020-03-19 20:25:45,533 -INFO- get gene name `trnR` from Counter({'trnR': 2, 'Akanthomyces_muscarius-gene46': 1})
+2020-03-19 20:25:45,534 -INFO- get gene name `trnV` from Counter({'trnV': 2, 'Akanthomyces_muscarius-gene135': 1})
+2020-03-19 20:25:45,535 -INFO- get gene name `trnI` from Counter({'trnI': 2, 'Akanthomyces_muscarius-gene137': 1})
+2020-03-19 20:25:45,536 -INFO- get gene name `trnS` from Counter({'trnS': 2, 'Akanthomyces_muscarius-gene139': 1})
+2020-03-19 20:25:45,537 -INFO- get gene name `trnW` from Counter({'trnW': 2, 'Akanthomyces_muscarius-gene141': 1})
+2020-03-19 20:25:45,537 -INFO- get gene name `trnP` from Counter({'trnP': 2, 'Akanthomyces_muscarius-gene143': 1})
+2020-03-19 20:25:45,538 -INFO- get gene name `trnC-gca` from Counter({'trnC-gca': 2, 'trnC-GCA': 1})
+2020-03-19 20:25:45,539 -INFO- get gene name `trnM-CAU` from Counter({'trnM-CAU': 2, 'trnM-cau': 1})
+2020-03-19 20:25:45,539 -INFO- get gene name `trnN-gtt` from Counter({'trnN-gtt': 2, 'trnN': 1})
+2020-03-19 20:25:46,255 -INFO- get gene name `trnP-UGG` from Counter({'trnP-UGG': 1, 'Armillaria_solidipes-gene25': 1})
+2020-03-19 20:25:46,256 -INFO- get gene name `trnN-GUU` from Counter({'trnN-GUU': 1, 'Armillaria_solidipes-gene27': 1, 'trnN-guu': 1})
+2020-03-19 20:25:46,257 -INFO- get gene name `trnM-CAU` from Counter({'trnM-CAU': 1, 'trnM': 1, 'Armillaria_solidipes-gene116': 1})
+2020-03-19 20:25:46,258 -INFO- get gene name `trnK-UUU` from Counter({'trnK-UUU': 1, 'trnK': 1, 'Armillaria_solidipes-gene120': 1})
+2020-03-19 20:25:46,258 -INFO- get gene name `Armillaria_solidipes-gene157` from Counter({'Armillaria_solidipes-gene157': 1, 'trnL-taa': 1, 'trnL-UAG': 1})
+2020-03-19 20:25:46,259 -INFO- get gene name `trnM-CAT` from Counter({'trnM-CAT': 1, 'trnM-AUG': 1, 'Sporothrix_schenckii-gene30': 1})
+2020-03-19 20:25:46,260 -INFO- get gene name `trnM-CAT` from Counter({'trnM-CAT': 2, 'trnM-AUG': 1})
+2020-03-19 20:25:46,260 -INFO- get gene name `trnR-tct` from Counter({'trnR-tct': 1, 'Aspergillus_pseudoglaucus-gene31': 1, 'trnR-UCU': 1})
+2020-03-19 20:25:46,261 -INFO- get gene name `Talaromyces_marneffei-gene100` from Counter({'Talaromyces_marneffei-gene100': 1, 'trnI-gat': 1, 'Aspergillus_pseudoglaucus-gene92': 1})
+2020-03-19 20:25:46,262 -INFO- get gene name `trnS-tga` from Counter({'trnS-tga': 1, 'Talaromyces_marneffei-gene102': 1, 'Aspergillus_pseudoglaucus-gene94': 1})
+2020-03-19 20:25:46,262 -INFO- get gene name `Aspergillus_pseudoglaucus-gene119` from Counter({'Aspergillus_pseudoglaucus-gene119': 1, 'trnF-gaa': 1, 'trnF-GAA': 1})
+2020-03-19 20:25:46,263 -INFO- get gene name `trnE-ttc` from Counter({'trnE-ttc': 2, 'Heterobasidion_irregulare-gene87': 1})
+2020-03-19 20:25:46,264 -INFO- get gene name `trnS-tga` from Counter({'trnS-tga': 1, 'Puccinia_striiformis_f-_sp-_tritici-gene68': 1, 'Phakopsora_pachyrhizi-gene57': 1})
+2020-03-19 20:25:46,264 -INFO- get gene name `Puccinia_striiformis_f-_sp-_tritici-gene81` from Counter({'Puccinia_striiformis_f-_sp-_tritici-gene81': 1, 'trnM-cat': 1, 'Phakopsora_pachyrhizi-gene75': 1})
+2020-03-19 20:25:46,265 -INFO- get gene name `trnM-cat` from Counter({'trnM-cat': 1, 'Phakopsora_pachyrhizi-gene81': 1, 'Puccinia_striiformis_f-_sp-_tritici-gene86': 1})
+2020-03-19 20:25:46,266 -INFO- get gene name `Phakopsora_pachyrhizi-gene85` from Counter({'Phakopsora_pachyrhizi-gene85': 1, 'trnT-tgt': 1, 'Puccinia_striiformis_f-_sp-_tritici-gene90': 1})
+2020-03-19 20:25:46,266 -INFO- get gene name `Puccinia_striiformis_f-_sp-_tritici-gene97` from Counter({'Puccinia_striiformis_f-_sp-_tritici-gene97': 1, 'trnI-gat': 1, 'Phakopsora_pachyrhizi-gene109': 1})
+2020-03-19 20:25:46,267 -INFO- get gene name `Puccinia_striiformis_f-_sp-_tritici-gene6` from Counter({'Puccinia_striiformis_f-_sp-_tritici-gene6': 1, 'Phakopsora_pachyrhizi-gene137': 1, 'trnN-gtt': 1})
+2020-03-19 20:25:46,267 -INFO- get gene name `Phakopsora_pachyrhizi-gene142` from Counter({'Phakopsora_pachyrhizi-gene142': 1, 'trnR-tct': 1, 'Puccinia_striiformis_f-_sp-_tritici-gene11': 1})
+2020-03-19 20:25:46,268 -INFO- get gene name `trnA-tgc` from Counter({'trnA-tgc': 1, 'Phakopsora_pachyrhizi-gene150': 1, 'Puccinia_striiformis_f-_sp-_tritici-gene18': 1})
+2020-03-19 20:25:46,269 -INFO- get gene name `trnF-gaa` from Counter({'trnF-gaa': 1, 'Phakopsora_pachyrhizi-gene152': 1, 'Puccinia_striiformis_f-_sp-_tritici-gene20': 1})
+2020-03-19 20:25:46,269 -INFO- get gene name `Puccinia_striiformis_f-_sp-_tritici-gene22` from Counter({'Puccinia_striiformis_f-_sp-_tritici-gene22': 1, 'trnY-gta': 1, 'Phakopsora_pachyrhizi-gene154': 1})
+2020-03-19 20:25:46,270 -INFO- get gene name `Puccinia_striiformis_f-_sp-_tritici-gene24` from Counter({'Puccinia_striiformis_f-_sp-_tritici-gene24': 1, 'Phakopsora_pachyrhizi-gene156': 1, 'trnD-gtc': 1})
+2020-03-19 20:25:46,270 -INFO- get gene name `Phakopsora_pachyrhizi-gene168` from Counter({'Phakopsora_pachyrhizi-gene168': 1, 'trnS-gct': 1, 'Puccinia_striiformis_f-_sp-_tritici-gene32': 1})
+2020-03-19 20:25:46,270 -INFO- get gene name `trnP-tgg` from Counter({'trnP-tgg': 1, 'Phakopsora_pachyrhizi-gene5': 1, 'Puccinia_striiformis_f-_sp-_tritici-gene34': 1})
+2020-03-19 20:25:46,271 -INFO- get gene name `trnW-tca` from Counter({'trnW-tca': 1, 'Puccinia_striiformis_f-_sp-_tritici-gene36': 1, 'Phakopsora_pachyrhizi-gene11': 1})
+2020-03-19 20:25:46,271 -INFO- get gene name `Phakopsora_pachyrhizi-gene16` from Counter({'Phakopsora_pachyrhizi-gene16': 1, 'trnK-ttt': 1, 'Puccinia_striiformis_f-_sp-_tritici-gene41': 1})
+2020-03-19 20:25:46,272 -INFO- get gene name `Puccinia_striiformis_f-_sp-_tritici-gene43` from Counter({'Puccinia_striiformis_f-_sp-_tritici-gene43': 1, 'Phakopsora_pachyrhizi-gene18': 1, 'trnL-tag': 1})
+2020-03-19 20:25:46,272 -INFO- get gene name `trnW-uca` from Counter({'trnW-uca': 3})
+2020-03-19 20:25:46,272 -INFO- get gene name `trnK-uuu` from Counter({'trnK-uuu': 3})
+2020-03-19 20:25:46,273 -INFO- get gene name `trnM-cau` from Counter({'trnM-cau': 3})
+2020-03-19 20:25:46,273 -INFO- get gene name `trnI-gau` from Counter({'trnI-gau': 3})
+2020-03-19 20:25:46,274 -INFO- get gene name `trnL` from Counter({'trnL': 2, 'trnL-taa': 1})
+2020-03-19 20:25:46,274 -INFO- get gene name `Blastosporella_zonata-gene144` from Counter({'Blastosporella_zonata-gene144': 1, 'Myochromella_boudieri-gene132': 1, 'Tephrocybe_rancida-gene144': 1})
+2020-03-19 20:25:46,274 -INFO- get gene name `trnM-cau` from Counter({'trnM-cau': 2, 'trnM1': 1})
+2020-03-19 20:25:46,275 -INFO- get gene name `trnM-cau` from Counter({'trnM-cau': 2, 'trnM2': 1})
+2020-03-19 20:25:46,275 -INFO- get gene name `trnE-uuc` from Counter({'trnE-uuc': 2, 'trnE': 1})
+2020-03-19 20:25:46,276 -INFO- get gene name `trnN-guu` from Counter({'trnN-guu': 2, 'trnN': 1})
+2020-03-19 20:25:46,276 -INFO- get gene name `trnK-uuu` from Counter({'trnK-uuu': 1, 'trnK': 1, 'tRNA-Lys': 1})
+2020-03-19 20:25:46,276 -INFO- get gene name `trnR-ucu` from Counter({'trnR-ucu': 2, 'trnR2': 1})
+2020-03-19 20:25:46,277 -INFO- get gene name `trnS-TGA` from Counter({'trnS-TGA': 1, 'trnS-uga': 1, 'trnS2': 1})
+2020-03-19 20:25:46,277 -INFO- get gene name `trnN-gtt` from Counter({'trnN-gtt': 2, 'trnN': 1})
+2020-03-19 20:25:46,665 -INFO- get gene name `trnV-tac` from Counter({'trnV-tac': 1, 'tRNA-Val': 1})
+2020-03-19 20:25:46,667 -INFO- get gene name `trnL-uag` from Counter({'trnL-uag': 3})
+2020-03-19 20:25:46,667 -INFO- get gene name `trnK-uuu` from Counter({'trnK-uuu': 2, 'Debaryomyces_hansenii-gene57': 1})
+2020-03-19 20:25:46,668 -INFO- get gene name `trnD-guc` from Counter({'trnD-guc': 2, 'trnD': 1})
+2020-03-19 20:25:46,669 -INFO- get gene name `trnL-uaa` from Counter({'trnL-uaa': 2, 'Debaryomyces_hansenii-gene94': 1})
+2020-03-19 20:25:46,669 -INFO- get gene name `trnY-gua` from Counter({'trnY-gua': 2, 'Debaryomyces_hansenii-gene93': 1})
+2020-03-19 20:25:46,670 -INFO- get gene name `trnM-cau` from Counter({'trnM-cau': 2, 'Debaryomyces_hansenii-gene91': 1})
+2020-03-19 20:25:46,671 -INFO- get gene name `trnT-ugu` from Counter({'trnT-ugu': 2, 'Debaryomyces_hansenii-gene90': 1})
+2020-03-19 20:25:46,671 -INFO- get gene name `trnE-uuc` from Counter({'trnE-uuc': 2, 'Debaryomyces_hansenii-gene89': 1})
+2020-03-19 20:25:47,106 -INFO- get gene name `Ophiocordyceps_sinensis-gene47` from Counter({'Ophiocordyceps_sinensis-gene47': 1, 'trnK-TTT': 1})
+2020-03-19 20:25:47,108 -INFO- get gene name `trnI-gat` from Counter({'trnI-gat': 3})
+2020-03-19 20:25:47,109 -INFO- get gene name `trnC-gca` from Counter({'trnC-gca': 3})
+2020-03-19 20:25:47,110 -INFO- get gene name `trnQ` from Counter({'trnQ': 1, 'trnQ-uug': 1, 'Debaryomyces_hansenii-gene68': 1})
+2020-03-19 20:25:47,111 -INFO- get gene name `trnL` from Counter({'trnL': 1, 'trnL-uag': 1, 'Debaryomyces_hansenii-gene134': 1})
+2020-03-19 20:25:47,112 -INFO- get gene name `Debaryomyces_hansenii-gene139` from Counter({'Debaryomyces_hansenii-gene139': 1, 'trnM-cau': 1, 'trnM': 1})
+2020-03-19 20:25:47,113 -INFO- get gene name `trnR-tct` from Counter({'trnR-tct': 2, 'Metarhizium_anisopliae-gene99': 1})
+2020-03-19 20:25:47,114 -INFO- get gene name `trnN-gtt` from Counter({'trnN-gtt': 2, 'trnN-GUU': 1})
+2020-03-19 20:25:47,115 -INFO- get gene name `trnG-tcc` from Counter({'trnG-tcc': 1, 'trnG-ucc': 1, 'trnG': 1})
+2020-03-19 20:25:47,116 -INFO- get gene name `trnC-gca` from Counter({'trnC-gca': 2, 'trnC': 1})
+2020-03-19 20:25:47,117 -INFO- get gene name `trnV-tac` from Counter({'trnV-tac': 1, 'trnV-uac': 1, 'trnV': 1})
+2020-03-19 20:25:47,118 -INFO- get gene name `trnE-ttc` from Counter({'trnE-ttc': 2, 'trnE-uuc': 1})
+2020-03-19 20:25:47,118 -INFO- get gene name `trnG-tcc` from Counter({'trnG-tcc': 2, 'trnG-ucc': 1})
+2020-03-19 20:25:47,119 -INFO- get gene name `trnI-gat` from Counter({'trnI-gat': 1, 'trnI-GAU': 1, 'Sclerotinia_borealis-gene466': 1})
+2020-03-19 20:25:47,120 -INFO- get gene name `trnP-tgg` from Counter({'trnP-tgg': 3})
+2020-03-19 20:25:47,803 -INFO- get gene name `trnM-cau-e` from Counter({'trnM-cau-e': 1, 'trnM': 1})
+2020-03-19 20:25:47,805 -INFO- get gene name `trnD` from Counter({'trnD': 1, 'trnD-GUC': 1, 'trnD-gtc': 1})
+2020-03-19 20:25:47,806 -INFO- get gene name `tRNA-Phe` from Counter({'tRNA-Phe': 2, 'trnF': 1})
+2020-03-19 20:25:47,807 -INFO- get gene name `trnV-tac` from Counter({'trnV-tac': 2, 'tRNA-Val': 1})
+2020-03-19 20:25:47,808 -INFO- get gene name `trnD-gtc` from Counter({'trnD-gtc': 3})
+2020-03-19 20:25:47,809 -INFO- get gene name `trnV-tac` from Counter({'trnV-tac': 3})
+2020-03-19 20:25:48,180 -INFO- get gene name `trnG-tcc` from Counter({'trnG-tcc': 2})
+2020-03-19 20:25:48,181 -INFO- get gene name `trnM-cau` from Counter({'trnM-cau': 2, 'Lichtheimia_hongkongensis-gene38': 1})
+2020-03-19 20:25:48,183 -INFO- get gene name `trnN-guu` from Counter({'trnN-guu': 2, 'Lichtheimia_hongkongensis-gene95': 1})
+2020-03-19 20:25:48,184 -INFO- get gene name `trnH-gug` from Counter({'trnH-gug': 2, 'Lichtheimia_hongkongensis-gene103': 1})
+2020-03-19 20:25:48,185 -INFO- get gene name `trnV-tac` from Counter({'trnV-tac': 1, 'trnV-uac': 1, 'Lichtheimia_hongkongensis-gene104': 1})
+2020-03-19 20:25:48,186 -INFO- get gene name `trnM-cat` from Counter({'trnM-cat': 3})
+2020-03-19 20:25:48,574 -INFO- get gene name `Ustilago_maydis-gene181` from Counter({'Ustilago_maydis-gene181': 1, 'Malassezia_restricta-gene71': 1})
+2020-03-19 20:25:48,575 -INFO- get gene name `Phialocephala_subalpina-gene112` from Counter({'Phialocephala_subalpina-gene112': 1, 'Rhynchosporium_secalis-gene125': 1, 'Marssonina_brunnea_f-_sp-__multigermtubi_-gene28': 1})
+2020-03-19 20:25:48,577 -INFO- get gene name `Phialocephala_subalpina-gene128` from Counter({'Phialocephala_subalpina-gene128': 1, 'Marssonina_brunnea_f-_sp-__multigermtubi_-gene38': 1, 'trnH-gtg': 1})
+2020-03-19 20:25:48,578 -INFO- get gene name `Morchella_importuna-gene26` from Counter({'Morchella_importuna-gene26': 1, 'Pyronema_omphalodes-gene195': 1, 'trnN-gtt': 1})
+2020-03-19 20:25:48,578 -INFO- get gene name `trnN-gtt` from Counter({'trnN-gtt': 2, 'tRNA-Asn': 1})
+2020-03-19 20:25:48,579 -INFO- get gene name `trnT-ttag` from Counter({'trnT-ttag': 2, 'trnT1': 1})
+2020-03-19 20:25:49,518 -INFO- get gene name `trnE-ttc` from Counter({'trnE-ttc': 1, 'trnE-uuc': 1})
+2020-03-19 20:25:49,520 -INFO- get gene name `trnY-gua` from Counter({'trnY-gua': 1, 'trnY-gta': 1, 'Zymoseptoria_tritici-gene129': 1})
+2020-03-19 20:25:49,917 -INFO- get gene name `Sugiyamaella_lignohabitans-gene32` from Counter({'Sugiyamaella_lignohabitans-gene32': 1, 'Starmerella_bacillaris-gene163': 1})
+2020-03-19 20:25:50,302 -INFO- get gene name `Tricholomella_constricta-gene103` from Counter({'Tricholomella_constricta-gene103': 1, 'Tricholomella_constricta-gene108': 1})
+2020-03-19 20:25:50,304 -INFO- get gene name `trnM-cat` from Counter({'trnM-cat': 1, 'trnM-cau': 1})
+2020-03-19 20:25:50,305 -INFO- get gene name `trnH-gug` from Counter({'trnH-gug': 1, 'trnH-gtg': 1})
+2020-03-19 20:25:50,306 -INFO- get gene name `trnV-uac` from Counter({'trnV-uac': 2})
+2020-03-19 20:25:50,307 -INFO- get gene name `trnN-guu` from Counter({'trnN-guu': 1, 'trnN-gtt': 1})
+2020-03-19 20:25:50,308 -INFO- get gene name `Akanthomyces_muscarius-gene94` from Counter({'Akanthomyces_muscarius-gene94': 1, 'trnR': 1})
+2020-03-19 20:25:50,309 -INFO- get gene name `Akanthomyces_muscarius-gene130` from Counter({'Akanthomyces_muscarius-gene130': 1, 'trnG': 1})
+2020-03-19 20:25:50,309 -INFO- get gene name `Blastocladiella_emersonii-gene55` from Counter({'Blastocladiella_emersonii-gene55': 1, 'trnY-gua': 1})
+2020-03-19 20:25:50,310 -INFO- get gene name `trnE-uuc` from Counter({'trnE-uuc': 1, 'Blastocladiella_emersonii-gene56': 1})
+2020-03-19 20:25:50,311 -INFO- get gene name `trnR1-ucu` from Counter({'trnR1-ucu': 1, 'Blastocladiella_emersonii-gene58': 1})
+2020-03-19 20:25:50,311 -INFO- get gene name `trnA-ugc` from Counter({'trnA-ugc': 1, 'Blastocladiella_emersonii-gene59': 1})
+2020-03-19 20:25:50,312 -INFO- get gene name `Blastocladiella_emersonii-gene65` from Counter({'Blastocladiella_emersonii-gene65': 1, 'trnS1-uga': 1})
+2020-03-19 20:25:50,313 -INFO- get gene name `trnN-guu` from Counter({'trnN-guu': 1, 'Blastocladiella_emersonii-gene66': 1})
+2020-03-19 20:25:50,313 -INFO- get gene name `Blastocladiella_emersonii-gene67` from Counter({'Blastocladiella_emersonii-gene67': 1, 'trnH-gug': 1})
+2020-03-19 20:25:50,314 -INFO- get gene name `trnI1-gau` from Counter({'trnI1-gau': 1, 'Blastocladiella_emersonii-gene68': 1})
+2020-03-19 20:25:50,314 -INFO- get gene name `Blastocladiella_emersonii-gene73` from Counter({'Blastocladiella_emersonii-gene73': 1, 'trnL1-aag': 1})
+2020-03-19 20:25:50,315 -INFO- get gene name `Blastocladiella_emersonii-gene74` from Counter({'Blastocladiella_emersonii-gene74': 1, 'trnT-ugu': 1})
+2020-03-19 20:25:50,316 -INFO- get gene name `trnM1-cau` from Counter({'trnM1-cau': 1, 'Blastocladiella_emersonii-gene78': 1})
+2020-03-19 20:25:50,316 -INFO- get gene name `Blastocladiella_emersonii-gene83` from Counter({'Blastocladiella_emersonii-gene83': 1, 'trnI2-cau': 1})
+2020-03-19 20:25:50,317 -INFO- get gene name `trnR2-ucg` from Counter({'trnR2-ucg': 1, 'Blastocladiella_emersonii-gene84': 1})
+2020-03-19 20:25:50,318 -INFO- get gene name `trnM2-cau` from Counter({'trnM2-cau': 1, 'Blastocladiella_emersonii-gene94': 1})
+2020-03-19 20:25:50,318 -INFO- get gene name `trnQ` from Counter({'trnQ': 1, 'trnQ-ttg': 1})
+2020-03-19 20:25:50,319 -INFO- get gene name `Annulohypoxylon_stygium-gene73` from Counter({'Annulohypoxylon_stygium-gene73': 1, 'trnM-AUG': 1})
+2020-03-19 20:25:50,319 -INFO- get gene name `trnY-GUA` from Counter({'trnY-GUA': 1, 'Armillaria_solidipes-gene8': 1})
+2020-03-19 20:25:50,319 -INFO- get gene name `Armillaria_solidipes-gene86` from Counter({'Armillaria_solidipes-gene86': 1, 'trnD-GUC': 1})
+2020-03-19 20:25:50,320 -INFO- get gene name `trnW-CCA` from Counter({'trnW-CCA': 1, 'Armillaria_solidipes-gene88': 1})
+2020-03-19 20:25:50,320 -INFO- get gene name `trnI-GAU` from Counter({'trnI-GAU': 1, 'Armillaria_solidipes-gene90': 1})
+2020-03-19 20:25:50,321 -INFO- get gene name `trnR-UCU` from Counter({'trnR-UCU': 1, 'Armillaria_solidipes-gene92': 1})
+2020-03-19 20:25:50,321 -INFO- get gene name `Armillaria_solidipes-gene94` from Counter({'Armillaria_solidipes-gene94': 1, 'trnG-UCC': 1})
+2020-03-19 20:25:50,321 -INFO- get gene name `Armillaria_solidipes-gene96` from Counter({'Armillaria_solidipes-gene96': 1, 'trnT-UGU': 1})
+2020-03-19 20:25:50,322 -INFO- get gene name `Armillaria_solidipes-gene118` from Counter({'Armillaria_solidipes-gene118': 1, 'trnE-UUC': 1})
+2020-03-19 20:25:50,322 -INFO- get gene name `Armillaria_solidipes-gene155` from Counter({'Armillaria_solidipes-gene155': 1, 'trnV-UAC': 1})
+2020-03-19 20:25:50,323 -INFO- get gene name `trnR-UCG` from Counter({'trnR-UCG': 1, 'Armillaria_solidipes-gene159': 1})
+2020-03-19 20:25:50,323 -INFO- get gene name `trnS-UGA` from Counter({'trnS-UGA': 1, 'Armillaria_solidipes-gene168': 1})
+2020-03-19 20:25:50,323 -INFO- get gene name `trnH-GUG` from Counter({'trnH-GUG': 1, 'Armillaria_solidipes-gene170': 1})
+2020-03-19 20:25:50,324 -INFO- get gene name `trnM-CAU` from Counter({'trnM-CAU': 1, 'Armillaria_solidipes-gene172': 1})
+2020-03-19 20:25:50,324 -INFO- get gene name `Armillaria_solidipes-gene174` from Counter({'Armillaria_solidipes-gene174': 1, 'trnA-UGC': 1})
+2020-03-19 20:25:50,324 -INFO- get gene name `trnD-GAC` from Counter({'trnD-GAC': 1, 'trnD-gtc': 1})
+2020-03-19 20:25:50,325 -INFO- get gene name `trnI-gat` from Counter({'trnI-gat': 1, 'trnL-gau': 1})
+2020-03-19 20:25:50,325 -INFO- get gene name `trnV-tac` from Counter({'trnV-tac': 1, 'trnV-uac': 1})
+2020-03-19 20:25:50,326 -INFO- get gene name `trnC-gca` from Counter({'trnC-gca': 1, 'Aspergillus_pseudoglaucus-gene17': 1})
+2020-03-19 20:25:50,326 -INFO- get gene name `Aspergillus_pseudoglaucus-gene82` from Counter({'Aspergillus_pseudoglaucus-gene82': 1, 'trnG-acc': 1})
+2020-03-19 20:25:50,326 -INFO- get gene name `trnS-gct` from Counter({'trnS-gct': 1, 'Aspergillus_pseudoglaucus-gene88': 1})
+2020-03-19 20:25:50,327 -INFO- get gene name `trnW-tca` from Counter({'trnW-tca': 1, 'Aspergillus_pseudoglaucus-gene90': 1})
+2020-03-19 20:25:50,327 -INFO- get gene name `Aspergillus_pseudoglaucus-gene113` from Counter({'Aspergillus_pseudoglaucus-gene113': 1, 'trnM-cat': 1})
+2020-03-19 20:25:50,327 -INFO- get gene name `Aspergillus_pseudoglaucus-gene213` from Counter({'Aspergillus_pseudoglaucus-gene213': 1, 'trnR-acg': 1})
+2020-03-19 20:25:50,328 -INFO- get gene name `trnM-cat` from Counter({'trnM-cat': 2})
+2020-03-19 20:25:50,328 -INFO- get gene name `trnF-gaa` from Counter({'trnF-gaa': 2})
+2020-03-19 20:25:50,329 -INFO- get gene name `trnD-gtc` from Counter({'trnD-gtc': 2})
+2020-03-19 20:25:50,329 -INFO- get gene name `trnC-gca` from Counter({'trnC-gca': 2})
+2020-03-19 20:25:50,329 -INFO- get gene name `trnP-tgg` from Counter({'trnP-tgg': 2})
+2020-03-19 20:25:50,330 -INFO- get gene name `trnG-tcc` from Counter({'trnG-tcc': 1, 'Puccinia_striiformis_f-_sp-_tritici-gene47': 1})
+2020-03-19 20:25:50,330 -INFO- get gene name `trnV-tac` from Counter({'trnV-tac': 1, 'Puccinia_striiformis_f-_sp-_tritici-gene63': 1})
+2020-03-19 20:25:50,331 -INFO- get gene name `Puccinia_striiformis_f-_sp-_tritici-gene79` from Counter({'Puccinia_striiformis_f-_sp-_tritici-gene79': 1, 'trnH-gtg': 1})
+2020-03-19 20:25:50,331 -INFO- get gene name `Puccinia_striiformis_f-_sp-_tritici-gene88` from Counter({'Puccinia_striiformis_f-_sp-_tritici-gene88': 1, 'trnE-ttc': 1})
+2020-03-19 20:25:50,331 -INFO- get gene name `trnQ-ttg` from Counter({'trnQ-ttg': 1, 'Puccinia_striiformis_f-_sp-_tritici-gene92': 1})
+2020-03-19 20:25:50,332 -INFO- get gene name `rns` from Counter({'rns': 1, 'Phakopsora_pachyrhizi-gene106': 1})
+2020-03-19 20:25:50,332 -INFO- get gene name `trnC-gca` from Counter({'trnC-gca': 1, 'Phakopsora_pachyrhizi-gene144': 1})
+2020-03-19 20:25:50,332 -INFO- get gene name `Phakopsora_pachyrhizi-gene2` from Counter({'Phakopsora_pachyrhizi-gene2': 1, 'rnl': 1})
+2020-03-19 20:25:50,333 -INFO- get gene name `Puccinia_striiformis_f-_sp-_tritici-gene45` from Counter({'Puccinia_striiformis_f-_sp-_tritici-gene45': 1, 'trnR-tcg': 1})
+2020-03-19 20:25:50,333 -INFO- get gene name `trnS-acu` from Counter({'trnS-acu': 2})
+2020-03-19 20:25:50,334 -INFO- get gene name `trnP-ugg` from Counter({'trnP-ugg': 2})
+2020-03-19 20:25:50,334 -INFO- get gene name `trnH-gug` from Counter({'trnH-gug': 2})
+2020-03-19 20:25:50,334 -INFO- get gene name `trnM-cau` from Counter({'trnM-cau': 2})
+2020-03-19 20:25:50,335 -INFO- get gene name `trnC-gca` from Counter({'trnC-gca': 2})
+2020-03-19 20:25:50,335 -INFO- get gene name `trnR-ucu` from Counter({'trnR-ucu': 2})
+2020-03-19 20:25:50,335 -INFO- get gene name `trnA` from Counter({'trnA': 2})
+2020-03-19 20:25:50,336 -INFO- get gene name `trnC` from Counter({'trnC': 2})
+2020-03-19 20:25:50,336 -INFO- get gene name `trnR` from Counter({'trnR': 1, 'trnR-cct': 1})
+2020-03-19 20:25:50,337 -INFO- get gene name `trnM-cat` from Counter({'trnM-cat': 1, 'trnM': 1})
+2020-03-19 20:25:50,337 -INFO- get gene name `trnM-cat` from Counter({'trnM-cat': 1, 'trnM': 1})
+2020-03-19 20:25:50,337 -INFO- get gene name `trnL` from Counter({'trnL': 1, 'trnL-tag': 1})
+2020-03-19 20:25:50,338 -INFO- get gene name `trnI` from Counter({'trnI': 1, 'tRNA-Ile': 1})
+2020-03-19 20:25:50,338 -INFO- get gene name `tRNA-Phe` from Counter({'tRNA-Phe': 1, 'trnF': 1})
+2020-03-19 20:25:50,339 -INFO- get gene name `trnY` from Counter({'trnY': 1, 'trnY-gua': 1})
+2020-03-19 20:25:50,339 -INFO- get gene name `trnD-guc` from Counter({'trnD-guc': 1, 'trnD': 1})
+2020-03-19 20:25:50,339 -INFO- get gene name `tRNA-Arg1` from Counter({'tRNA-Arg1': 1, 'trnR1': 1})
+2020-03-19 20:25:50,340 -INFO- get gene name `tRNA-Leu1` from Counter({'tRNA-Leu1': 1, 'trnL1': 1})
+2020-03-19 20:25:50,340 -INFO- get gene name `trnH` from Counter({'trnH': 1, 'Verticillium_nonalfalfae-gene68': 1})
+2020-03-19 20:25:50,340 -INFO- get gene name `trnI-gau` from Counter({'trnI-gau': 1, 'tRNA-Ile': 1})
+2020-03-19 20:25:50,341 -INFO- get gene name `trnP-UGG` from Counter({'trnP-UGG': 1, 'trnP-ugg': 1})
+2020-03-19 20:25:50,341 -INFO- get gene name `trnN-guu` from Counter({'trnN-guu': 1, 'Debaryomyces_hansenii-gene14': 1})
+2020-03-19 20:25:50,342 -INFO- get gene name `trnW-uca` from Counter({'trnW-uca': 2})
+2020-03-19 20:25:50,342 -INFO- get gene name `trnS-gcu` from Counter({'trnS-gcu': 2})
+2020-03-19 20:25:50,342 -INFO- get gene name `trnG-ucc` from Counter({'trnG-ucc': 1, 'Debaryomyces_hansenii-gene88': 1})
+2020-03-19 20:25:50,343 -INFO- get gene name `trnW-uca` from Counter({'trnW-uca': 1, 'trnY-GUA': 1})
+2020-03-19 20:25:50,343 -INFO- get gene name `Verticillium_nonalfalfae-gene23` from Counter({'Verticillium_nonalfalfae-gene23': 1, 'trnL-uuu': 1})
+2020-03-19 20:25:50,343 -INFO- get gene name `trnL-uua` from Counter({'trnL-uua': 1, 'trnL-uaa': 1})
+2020-03-19 20:25:50,344 -INFO- get gene name `trnM-CAT` from Counter({'trnM-CAT': 1, 'Verticillium_nonalfalfae-gene80': 1})
+2020-03-19 20:25:50,344 -INFO- get gene name `trnE-TTC` from Counter({'trnE-TTC': 1, 'Verticillium_nonalfalfae-gene84': 1})
+2020-03-19 20:25:50,345 -INFO- get gene name `trnG-TCC` from Counter({'trnG-TCC': 1, 'trnG-tcc': 1})
+2020-03-19 20:25:50,345 -INFO- get gene name `trnM-cau` from Counter({'trnM-cau': 2})
+2020-03-19 20:25:50,345 -INFO- get gene name `trnS-acu` from Counter({'trnS-acu': 2})
+2020-03-19 20:25:50,346 -INFO- get gene name `trnR-ucu` from Counter({'trnR-ucu': 2})
+2020-03-19 20:25:50,346 -INFO- get gene name `trnV-tac` from Counter({'trnV-tac': 1, 'trnV-uac': 1})
+2020-03-19 20:25:50,347 -INFO- get gene name `trnR` from Counter({'trnR': 1, 'Debaryomyces_hansenii-gene53': 1})
+2020-03-19 20:25:50,347 -INFO- get gene name `Debaryomyces_hansenii-gene55` from Counter({'Debaryomyces_hansenii-gene55': 1, 'trnW': 1})
+2020-03-19 20:25:50,348 -INFO- get gene name `trnF-gaa` from Counter({'trnF-gaa': 1, 'Debaryomyces_hansenii-gene56': 1})
+2020-03-19 20:25:50,348 -INFO- get gene name `trnR-acg` from Counter({'trnR-acg': 1, 'Debaryomyces_hansenii-gene71': 1})
+2020-03-19 20:25:50,348 -INFO- get gene name `trnL` from Counter({'trnL': 1, 'trnL-aag': 1})
+2020-03-19 20:25:50,349 -INFO- get gene name `tRNA2-Met` from Counter({'tRNA2-Met': 1, 'trnM-cat': 1})
+2020-03-19 20:25:50,349 -INFO- get gene name `Metarhizium_anisopliae-gene76` from Counter({'Metarhizium_anisopliae-gene76': 1, 'trnC-gca': 1})
+2020-03-19 20:25:50,349 -INFO- get gene name `trnK-TTT` from Counter({'trnK-TTT': 1, 'Sporothrix_schenckii-gene139': 1})
+2020-03-19 20:25:50,350 -INFO- get gene name `trnE-TTC` from Counter({'trnE-TTC': 1, 'Sporothrix_schenckii-gene10': 1})
+2020-03-19 20:25:50,350 -INFO- get gene name `trnM-cat` from Counter({'trnM-cat': 2})
+2020-03-19 20:25:50,351 -INFO- get gene name `trnW-cca` from Counter({'trnW-cca': 2})
+2020-03-19 20:25:50,351 -INFO- get gene name `Trametes_hirsuta-gene8` from Counter({'Trametes_hirsuta-gene8': 1, 'trnV-UAC': 1})
+2020-03-19 20:25:50,351 -INFO- get gene name `Trametes_hirsuta-gene10` from Counter({'Trametes_hirsuta-gene10': 1, 'trnL-UAG': 1})
+2020-03-19 20:25:50,352 -INFO- get gene name `trnP-UGG` from Counter({'trnP-UGG': 1, 'Trametes_hirsuta-gene64': 1})
+2020-03-19 20:25:50,352 -INFO- get gene name `trnA-UGC` from Counter({'trnA-UGC': 1, 'Trametes_hirsuta-gene121': 1})
+2020-03-19 20:25:50,353 -INFO- get gene name `trnF-GAA` from Counter({'trnF-GAA': 1, 'Trametes_hirsuta-gene123': 1})
+2020-03-19 20:25:50,353 -INFO- get gene name `Trametes_hirsuta-gene125` from Counter({'Trametes_hirsuta-gene125': 1, 'trnT-UGU': 1})
+2020-03-19 20:25:50,353 -INFO- get gene name `LSU` from Counter({'LSU': 1, 'rnl': 1})
+2020-03-19 20:25:50,354 -INFO- get gene name `tRNA-Thr` from Counter({'tRNA-Thr': 1, 'trnT-tgt': 1})
+2020-03-19 20:25:50,354 -INFO- get gene name `trnV-tac` from Counter({'trnV-tac': 1, 'tRNA-Val': 1})
+2020-03-19 20:25:50,354 -INFO- get gene name `trnP-tgg` from Counter({'trnP-tgg': 1, 'tRNA-Pro': 1})
+2020-03-19 20:25:50,355 -INFO- get gene name `trnF-gaa` from Counter({'trnF-gaa': 1, 'tRNA-Phe': 1})
+2020-03-19 20:25:50,355 -INFO- get gene name `SSU` from Counter({'SSU': 1, 'rns': 1})
+2020-03-19 20:25:50,355 -INFO- get gene name `trnA-tgc` from Counter({'trnA-tgc': 1, 'tRNA-Ala': 1})
+2020-03-19 20:25:50,356 -INFO- get gene name `tRNA-His` from Counter({'tRNA-His': 1, 'trnH-gtg': 1})
+2020-03-19 20:25:50,356 -INFO- get gene name `tRNA-Asn` from Counter({'tRNA-Asn': 1, 'trnN-gtt': 1})
+2020-03-19 20:25:50,357 -INFO- get gene name `trnW-tca` from Counter({'trnW-tca': 1, 'tRNA-Trp': 1})
+2020-03-19 20:25:50,357 -INFO- get gene name `trnI-gat` from Counter({'trnI-gat': 1, 'tRNA-Ile': 1})
+2020-03-19 20:25:50,357 -INFO- get gene name `trnS-tga` from Counter({'trnS-tga': 1, 'tRNA-Ser': 1})
+2020-03-19 20:25:50,358 -INFO- get gene name `tRNA-Glu` from Counter({'tRNA-Glu': 1, 'trnE-ttc': 1})
+2020-03-19 20:25:50,358 -INFO- get gene name `tRNA-Met` from Counter({'tRNA-Met': 1, 'trnM-cat': 1})
+2020-03-19 20:25:50,358 -INFO- get gene name `tRNA-Met` from Counter({'tRNA-Met': 1, 'trnM-cat': 1})
+2020-03-19 20:25:50,359 -INFO- get gene name `trnQ-ttg` from Counter({'trnQ-ttg': 1, 'tRNA-Gln': 1})
+2020-03-19 20:25:50,359 -INFO- get gene name `tRNA-Arg` from Counter({'tRNA-Arg': 1, 'trnR-tct': 1})
+2020-03-19 20:25:50,360 -INFO- get gene name `trnG-tcc` from Counter({'trnG-tcc': 1, 'tRNA-Gly': 1})
+2020-03-19 20:25:50,360 -INFO- get gene name `trnP-ugg` from Counter({'trnP-ugg': 1, 'trnP-tgg': 1})
+2020-03-19 20:25:50,360 -INFO- get gene name `trnS-gct` from Counter({'trnS-gct': 1, 'trnS-gcu': 1})
+2020-03-19 20:25:50,361 -INFO- get gene name `trnT-ugu` from Counter({'trnT-ugu': 1, 'trnT-tgt': 1})
+2020-03-19 20:25:50,361 -INFO- get gene name `trnK-ttt` from Counter({'trnK-ttt': 2})
+2020-03-19 20:25:50,361 -INFO- get gene name `trnD-guc` from Counter({'trnD-guc': 1, 'trnD-gtc': 1})
+2020-03-19 20:25:50,362 -INFO- get gene name `trnP-ugg` from Counter({'trnP-ugg': 1, 'trnP-tgg': 1})
+2020-03-19 20:25:50,362 -INFO- get gene name `trnV-tac` from Counter({'trnV-tac': 1, 'trnV-uac': 1})
+2020-03-19 20:25:50,362 -INFO- get gene name `trnM-cat` from Counter({'trnM-cat': 1, 'trnM_2-cau': 1})
+2020-03-19 20:25:50,363 -INFO- get gene name `trnL-taa` from Counter({'trnL-taa': 1, 'trnL-uaa': 1})
+2020-03-19 20:25:50,363 -INFO- get gene name `trnC-gca` from Counter({'trnC-gca': 2})
+2020-03-19 20:25:50,364 -INFO- get gene name `trnQ-ttg` from Counter({'trnQ-ttg': 2})
+2020-03-19 20:25:50,364 -INFO- get gene name `trnY-gua` from Counter({'trnY-gua': 1, 'trnY-gta': 1})
+2020-03-19 20:25:50,364 -INFO- get gene name `trnR_2-ucg` from Counter({'trnR_2-ucg': 1, 'trnR-tcg': 1})
+2020-03-19 20:25:50,365 -INFO- get gene name `trnF-gaa` from Counter({'trnF-gaa': 2})
+2020-03-19 20:25:50,365 -INFO- get gene name `trnN-guu` from Counter({'trnN-guu': 1, 'trnN-gtt': 1})
+2020-03-19 20:25:50,365 -INFO- get gene name `trnS-tga` from Counter({'trnS-tga': 1, 'trnS-uga': 1})
+2020-03-19 20:25:50,366 -INFO- get gene name `trnL-tag` from Counter({'trnL-tag': 2})
+2020-03-19 20:25:50,366 -INFO- get gene name `trnM-cat` from Counter({'trnM-cat': 1, 'trnM-cau': 1})
+2020-03-19 20:25:50,366 -INFO- get gene name `trnW-cca` from Counter({'trnW-cca': 2})
+2020-03-19 20:25:50,367 -INFO- get gene name `trnR-acg` from Counter({'trnR-acg': 2})
+2020-03-19 20:25:50,367 -INFO- get gene name `trnS-uga` from Counter({'trnS-uga': 2})
+2020-03-19 20:25:50,368 -INFO- get gene name `trnA-UGC` from Counter({'trnA-UGC': 1, 'trnA-ugc': 1})
+2020-03-19 20:25:50,368 -INFO- get gene name `trnQ-uug` from Counter({'trnQ-uug': 2})
+2020-03-19 20:25:50,368 -INFO- get gene name `rnl` from Counter({'rnl': 2})
+2020-03-19 20:25:50,369 -INFO- get gene name `trnL-tag` from Counter({'trnL-tag': 2})
+2020-03-19 20:25:50,369 -INFO- get gene name `trnT-tgt` from Counter({'trnT-tgt': 2})
+2020-03-19 20:25:50,369 -INFO- get gene name `trnE-ttc` from Counter({'trnE-ttc': 2})
+2020-03-19 20:25:50,370 -INFO- get gene name `trnV-tac` from Counter({'trnV-tac': 2})
+2020-03-19 20:25:50,370 -INFO- get gene name `rnl` from Counter({'rnl': 2})
+2020-03-19 20:25:50,371 -INFO- get gene name `rns_b` from Counter({'rns_b': 2})
+2020-03-19 20:25:50,371 -INFO- get gene name `rns_a` from Counter({'rns_a': 2})
+2020-03-19 20:25:50,371 -INFO- get gene name `trnW-cca` from Counter({'trnW-cca': 2})
+2020-03-19 20:25:50,372 -INFO- get gene name `trnQ-uug` from Counter({'trnQ-uug': 2})
+2020-03-19 20:25:50,372 -INFO- get gene name `trnY-gua` from Counter({'trnY-gua': 2})
+2020-03-19 20:25:50,372 -INFO- get gene name `trnM-cat` from Counter({'trnM-cat': 1, 'Heterobasidion_irregulare-gene133': 1})
+2020-03-19 20:25:50,373 -INFO- get gene name `Talaromyces_marneffei-gene131` from Counter({'Talaromyces_marneffei-gene131': 1, 'trnQ-ttg': 1})
+2020-03-19 20:25:50,373 -INFO- get gene name `tRNA-His` from Counter({'tRNA-His': 1, 'trnH-gtg': 1})
+2020-03-19 20:25:50,374 -INFO- get gene name `trnR-tct` from Counter({'trnR-tct': 2})
+2020-03-19 20:25:50,374 -INFO- get gene name `trnP-UGG` from Counter({'trnP-UGG': 1, 'trnP-tgg': 1})
+2020-03-19 20:25:50,374 -INFO- get gene name `trnF-gaa` from Counter({'trnF-gaa': 1, 'trnF-GAA': 1})
+2020-03-19 20:25:50,375 -INFO- get gene name `trnK-UUU` from Counter({'trnK-UUU': 1, 'trnK-ttt': 1})
+2020-03-19 20:25:50,375 -INFO- get gene name `tRNA-Ser` from Counter({'tRNA-Ser': 1, 'trnS-gct': 1})
+2020-03-19 20:25:50,375 -INFO- get gene name `tRNA-His` from Counter({'tRNA-His': 1, 'tRNA-his': 1})
+2020-03-19 20:25:50,376 -INFO- get gene name `trnP-ugg` from Counter({'trnP-ugg': 1, 'tRNA-Pro': 1})
+2020-03-19 20:25:50,376 -INFO- get gene name `trnD-guc` from Counter({'trnD-guc': 1, 'trnD-gtc': 1})
+2020-03-19 20:25:50,377 -INFO- get gene name `trnC-gca` from Counter({'trnC-gca': 2})
+2020-03-19 20:25:50,377 -INFO- get gene name `trnP-tgg` from Counter({'trnP-tgg': 2})
+2020-03-19 20:25:50,377 -INFO- get gene name `trnP` from Counter({'trnP': 2})
+2020-03-19 20:25:50,378 -INFO- get gene name `trnW` from Counter({'trnW': 2})
+2020-03-19 20:25:50,378 -INFO- get gene name `Madurella_mycetomatis-gene4` from Counter({'Madurella_mycetomatis-gene4': 1, 'trnY-gua': 1})
+2020-03-19 20:25:50,378 -INFO- get gene name `Madurella_mycetomatis-gene23` from Counter({'Madurella_mycetomatis-gene23': 1, 'trnW-UCA': 1})
+2020-03-19 20:25:50,379 -INFO- get gene name `Madurella_mycetomatis-gene30` from Counter({'Madurella_mycetomatis-gene30': 1, 'trnI-gat': 1})
+2020-03-19 20:25:50,379 -INFO- get gene name `Madurella_mycetomatis-gene51` from Counter({'Madurella_mycetomatis-gene51': 1, 'trnL-uaa': 1})
+2020-03-19 20:25:50,380 -INFO- get gene name `trnF-gaa` from Counter({'trnF-gaa': 1, 'Madurella_mycetomatis-gene55': 1})
+2020-03-19 20:25:50,380 -INFO- get gene name `trnC-gca` from Counter({'trnC-gca': 1, 'Madurella_mycetomatis-gene131': 1})
+2020-03-19 20:25:50,380 -INFO- get gene name `trnN-guu` from Counter({'trnN-guu': 1, 'tRNA-Asn': 1})
+2020-03-19 20:25:50,381 -INFO- get gene name `trnN-gtt` from Counter({'trnN-gtt': 2})
+2020-03-19 20:25:50,381 -INFO- get gene name `rns` from Counter({'rns': 1, 'rrnS': 1})
+2020-03-19 20:25:50,381 -INFO- get gene name `trnS-tga` from Counter({'trnS-tga': 2})
+2020-03-19 20:25:50,382 -INFO- get gene name `trnL-taa` from Counter({'trnL-taa': 2})
+2020-03-19 20:25:50,382 -INFO- get gene name `Morchella_importuna-gene169` from Counter({'Morchella_importuna-gene169': 1, 'Pyronema_omphalodes-gene279': 1})
+2020-03-19 20:25:50,383 -INFO- get gene name `trnP-tgg` from Counter({'trnP-tgg': 1, 'tRNA-pro': 1})
+2020-03-19 20:25:50,383 -INFO- get gene name `trnD` from Counter({'trnD': 1, 'trnD-gtc': 1})
+2020-03-19 20:25:50,383 -INFO- get gene name `trnF-gaa` from Counter({'trnF-gaa': 2})
+2020-03-19 20:25:50,384 -INFO- get gene name `tRNA-Glu` from Counter({'tRNA-Glu': 1, 'Ophiocordyceps_sinensis-gene33': 1})
+2020-03-19 20:25:50,384 -INFO- get gene name `Paracoccidioides_brasiliensis-gene80` from Counter({'Paracoccidioides_brasiliensis-gene80': 1, 'trnV-uac': 1})
+2020-03-19 20:25:50,384 -INFO- get gene name `Talaromyces_marneffei-gene88` from Counter({'Talaromyces_marneffei-gene88': 1, 'trnK-ttt': 1})
+2020-03-19 20:25:50,385 -INFO- get gene name `trnW-tca` from Counter({'trnW-tca': 1, 'Sporothrix_schenckii-gene145': 1})
+2020-03-19 20:25:50,385 -INFO- get gene name `Phakopsora_pachyrhizi-gene31` from Counter({'Phakopsora_pachyrhizi-gene31': 1, 'Puccinia_striiformis_f-_sp-_tritici-gene55': 1})
+2020-03-19 20:25:50,386 -INFO- get gene name `trnM-cau` from Counter({'trnM-cau': 1, 'Shiraia_bambusicola-gene63': 1})
+2020-03-19 20:25:50,386 -INFO- get gene name `trnA-ugc` from Counter({'trnA-ugc': 2})
+2020-03-19 20:25:50,386 -INFO- get gene name `trnL-uag` from Counter({'trnL-uag': 1, 'trnL-tag': 1})
+2020-03-19 20:25:50,387 -INFO- get gene name `trnR-CCU` from Counter({'trnR-CCU': 1, 'trnR-cct': 1})
+2020-03-19 20:25:50,387 -INFO- get gene name `trnK-uuu` from Counter({'trnK-uuu': 1, 'trnK-ttt': 1})
+2020-03-19 20:25:50,387 -INFO- get gene name `Tilletia_walkeri-gene12` from Counter({'Tilletia_walkeri-gene12': 1, 'rps3': 1})
+2020-03-19 20:25:50,388 -INFO- get gene name `Tilletia_walkeri-gene46` from Counter({'Tilletia_walkeri-gene46': 1, 'Ustilago_maydis-gene165': 1})
+2020-03-19 20:25:50,388 -INFO- get gene name `Tilletia_walkeri-gene74` from Counter({'Tilletia_walkeri-gene74': 1, 'Ustilago_maydis-gene137': 1})
+2020-03-19 20:25:50,389 -INFO- get gene name `Tilletia_walkeri-gene118` from Counter({'Tilletia_walkeri-gene118': 1, 'Ustilago_maydis-gene118': 1})
+2020-03-19 20:25:50,389 -INFO- get gene name `trnC-gca` from Counter({'trnC-gca': 2})
+2020-03-19 20:25:50,389 -INFO- get gene name `trnC-gca` from Counter({'trnC-gca': 1, 'Zymoseptoria_tritici-gene21': 1})
+2020-03-19 20:25:50,398 -INFO- extrat 25 genes: ['rns', 'rnl', 'rnl-2', 'trnQ-ttg', 'rns-4', 'trnF-gaa', 'trnI-gat', 'trnL-taa', 'trnY-gta', 'trnA-tgc', 'trnT-ugu', 'trnH-gtg', 'trnQ-ttg-15', 'trnW-tca', 'trnS-tga', 'trnM-cat', 'trnA-tgc-19', 'trnY-gta-20', 'trnG-tcc', 'trnV-tac', 'trnR-tct', 'trnW-cca', 'trnL-tag', 'trnM-cat-36', 'trnK-ttt']
+2020-03-19 20:25:50,398 -INFO- aligning sequences
+2020-03-19 20:36:04,819 -INFO- building hmm profiles

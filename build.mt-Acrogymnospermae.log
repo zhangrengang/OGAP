@@ -1,0 +1,154 @@
+{'count': False, 'organ': 'mt', 'list': False, 'taxon': 'Acrogymnospermae', 'tmpdir': '/dev/shm/tmp', 'custom': None, 'cleanup': False, 'exclude_taxa': None, 'gbfiles': ['/share/home/nature/database/RefSeq/mitochondrion/mitochondrion.1.genomic.gbff.gz', '/share/home/nature/database/RefSeq/mitochondrion/mitochondrion.2.genomic.gbff.gz'], 'check': False, 'dbdir': None}
+2020-03-22 12:09:31,477 -INFO- parsing ['/share/home/nature/database/RefSeq/mitochondrion/mitochondrion.1.genomic.gbff.gz', '/share/home/nature/database/RefSeq/mitochondrion/mitochondrion.2.genomic.gbff.gz']
+2020-03-22 12:09:31,484 -INFO- version: RefSeq 2020-01-09: build 2020-03-22
+loading from /dev/shm/tmp/ogap_db/taxonomy.json.gz
+loading genbank records
+`Leptocephalus sp. 'type II larva' (Smith, 1989)` is not found
+`Himantura gerrardi` is not found
+`Vazella pourtalesi` is not found
+`Palpitomonas bilix Eukaryota.` is not found
+`Eukaryota sp. BB2 Eukaryota.` is not found
+`Ancoracysta twista Eukaryota.` is not found
+`Cyprinus carpio x Megalobrama amblycephala` is not found
+2020-03-22 12:24:18,626 -INFO- 4 records: 4 orders, 4 families, 4 genera, 4 organism
+2020-03-22 12:24:31,048 -INFO- pruning taxa
+2020-03-22 12:24:31,048 -INFO- 4 records: 4 orders, 4 families, 4 genera, 4 organism
+2020-03-22 12:24:31,048 -INFO- building taxonomy tree
+2020-03-22 12:24:31,049 -INFO- run CMD: `ete3 ncbiquery --search 'Ginkgo biloba' 'Pinus taeda' 'Cycas taitungensis' 'Welwitschia mirabilis' --tree >  /dev/shm/tmp/mt-Acrogymnospermae/species.tree.tmp`
+2020-03-22 12:24:49,458 -INFO- using speceis tree `/dev/shm/tmp/ogap_db/mt-Acrogymnospermae/species.treefile`
+2020-03-22 12:24:49,459 -INFO- writing protein sequences into /dev/shm/tmp/mt-Acrogymnospermae/prot
+2020-03-22 12:24:49,519 -INFO- 4 taxa: ['Cycas taitungensis', 'Ginkgo biloba', 'Pinus taeda', 'Welwitschia mirabilis']
+2020-03-22 12:24:49,548 -INFO- get taxon `root;cellular organisms;Eukaryota;Viridiplantae;Streptophyta;Streptophytina;Embryophyta;Tracheophyta;Euphyllophyta;Spermatophyta;Acrogymnospermae` from Counter({u'root;cellular organisms;Eukaryota;Viridiplantae;Streptophyta;Streptophytina;Embryophyta;Tracheophyta;Euphyllophyta;Spermatophyta;Acrogymnospermae': 4})
+2020-03-22 12:24:49,549 -INFO- get transl_table `1` from Counter({1: 147})
+2020-03-22 12:24:49,549 -INFO- running OrthoFinder to cluster genes
+2020-03-22 12:24:49,549 -INFO- run CMD: `orthofinder.py -f /dev/shm/tmp/mt-Acrogymnospermae/prot -M msa -T fasttree -t 24  -og`
+2020-03-22 12:26:02,777 -INFO- parsing OrthoFinder orthologs
+2020-03-22 12:26:02,778 -INFO- parsing orthologs group into /dev/shm/tmp/mt-Acrogymnospermae/alns
+2020-03-22 12:26:02,785 -INFO- using min_count=2 to get gene name
+2020-03-22 12:26:02,786 -INFO- get gene name `nad5` from Counter({'nad5': 2, 'ND5': 1, 'NAD5': 1})
+2020-03-22 12:26:02,786 -INFO- using gene name `nad5`
+2020-03-22 12:26:02,786 -INFO- get gene name `nad2` from Counter({'nad2': 2, 'NAD2': 1, 'ND2': 1})
+2020-03-22 12:26:02,787 -INFO- using gene name `nad2`
+2020-03-22 12:26:02,787 -INFO- get gene name `atp1` from Counter({'atp1': 3, 'ATP1': 1})
+2020-03-22 12:26:02,787 -INFO- using gene name `atp1`
+2020-03-22 12:26:02,787 -INFO- get gene name `rps12` from Counter({'rps12': 4})
+2020-03-22 12:26:02,787 -INFO- using gene name `rps12`
+2020-03-22 12:26:02,788 -INFO- get gene name `nad3` from Counter({'nad3': 3, 'NAD3': 1})
+2020-03-22 12:26:02,788 -INFO- using gene name `nad3`
+2020-03-22 12:26:02,788 -INFO- get gene name `nad4L` from Counter({'nad4L': 3, 'NAD4L': 1})
+2020-03-22 12:26:02,788 -INFO- using gene name `nad4L`
+2020-03-22 12:26:02,789 -INFO- get gene name `atp6` from Counter({'atp6': 3, 'ATP6': 1})
+2020-03-22 12:26:02,789 -INFO- using gene name `atp6`
+2020-03-22 12:26:02,789 -INFO- get gene name `cox3` from Counter({'cox3': 3, 'COX3': 1})
+2020-03-22 12:26:02,789 -INFO- using gene name `cox3`
+2020-03-22 12:26:02,789 -INFO- get gene name `cob` from Counter({'cob': 4})
+2020-03-22 12:26:02,789 -INFO- using gene name `cob`
+2020-03-22 12:26:02,790 -INFO- get gene name `nad7` from Counter({'nad7': 3, 'NAD7': 1})
+2020-03-22 12:26:02,790 -INFO- using gene name `nad7`
+2020-03-22 12:26:02,790 -INFO- get gene name `ccmFN` from Counter({'ccmFN': 3, 'ccmFn': 1})
+2020-03-22 12:26:02,790 -INFO- using gene name `ccmFN`
+2020-03-22 12:26:02,791 -INFO- get gene name `nad9` from Counter({'nad9': 3, 'NAD9': 1})
+2020-03-22 12:26:02,791 -INFO- using gene name `nad9`
+2020-03-22 12:26:02,791 -INFO- get gene name `cox1` from Counter({'cox1': 3, 'COX1': 1})
+2020-03-22 12:26:02,791 -INFO- using gene name `cox1`
+2020-03-22 12:26:02,792 -INFO- get gene name `nad4` from Counter({'nad4': 3, 'NAD4': 1})
+2020-03-22 12:26:02,792 -INFO- using gene name `nad4`
+2020-03-22 12:26:02,792 -INFO- get gene name `ccmB` from Counter({'ccmB': 4})
+2020-03-22 12:26:02,792 -INFO- using gene name `ccmB`
+2020-03-22 12:26:02,792 -INFO- get gene name `rps3` from Counter({'rps3': 4})
+2020-03-22 12:26:02,792 -INFO- using gene name `rps3`
+2020-03-22 12:26:02,793 -INFO- get gene name `nad6` from Counter({'nad6': 3, 'NAD6': 1})
+2020-03-22 12:26:02,793 -INFO- using gene name `nad6`
+2020-03-22 12:26:02,793 -INFO- get gene name `ccmFC` from Counter({'ccmFC': 3, 'ccmFc': 1})
+2020-03-22 12:26:02,793 -INFO- using gene name `ccmFC`
+2020-03-22 12:26:02,794 -INFO- get gene name `ccmC` from Counter({'ccmC': 4})
+2020-03-22 12:26:02,794 -INFO- using gene name `ccmC`
+2020-03-22 12:26:02,794 -INFO- get gene name `nad1` from Counter({'nad1': 3, 'NAD1': 1})
+2020-03-22 12:26:02,794 -INFO- using gene name `nad1`
+2020-03-22 12:26:02,794 -INFO- get gene name `atp9` from Counter({'atp9': 3, 'ATP9': 1})
+2020-03-22 12:26:02,795 -INFO- using gene name `atp9`
+2020-03-22 12:26:02,795 -INFO- get gene name `atp4` from Counter({'atp4': 3, 'ATP4': 1})
+2020-03-22 12:26:02,795 -INFO- using gene name `atp4`
+2020-03-22 12:26:02,795 -INFO- get gene name `cox2` from Counter({'cox2': 3, 'COX2': 1})
+2020-03-22 12:26:02,795 -INFO- using gene name `cox2`
+2020-03-22 12:26:02,796 -INFO- get gene name `atp8` from Counter({'atp8': 3, 'ATP8': 1})
+2020-03-22 12:26:02,796 -INFO- using gene name `atp8`
+2020-03-22 12:26:02,796 -INFO- get gene name `matR` from Counter({'matR': 4})
+2020-03-22 12:26:02,796 -INFO- using gene name `matR`
+2020-03-22 12:26:02,796 -INFO- get gene name `rps4` from Counter({'rps4': 4})
+2020-03-22 12:26:02,797 -INFO- using gene name `rps4`
+2020-03-22 12:26:02,797 -INFO- get gene name `mttB` from Counter({'mttB': 4})
+2020-03-22 12:26:02,797 -INFO- using gene name `mttB`
+2020-03-22 12:26:02,797 -INFO- get gene name `rpl5` from Counter({'rpl5': 3})
+2020-03-22 12:26:02,797 -INFO- using gene name `rpl5`
+2020-03-22 12:26:02,798 -INFO- get gene name `rps14` from Counter({'rps14': 3})
+2020-03-22 12:26:02,798 -INFO- using gene name `rps14`
+2020-03-22 12:26:02,798 -INFO- get gene name `rps1` from Counter({'rps1': 3})
+2020-03-22 12:26:02,798 -INFO- using gene name `rps1`
+2020-03-22 12:26:02,798 -INFO- get gene name `rps10` from Counter({'rps10': 3})
+2020-03-22 12:26:02,799 -INFO- using gene name `rps10`
+2020-03-22 12:26:02,799 -INFO- get gene name `rps2` from Counter({'rps2': 3})
+2020-03-22 12:26:02,799 -INFO- using gene name `rps2`
+2020-03-22 12:26:02,799 -INFO- get gene name `rpl2` from Counter({'rpl2': 3})
+2020-03-22 12:26:02,799 -INFO- using gene name `rpl2`
+2020-03-22 12:26:02,800 -INFO- get gene name `rps19` from Counter({'rps19': 3})
+2020-03-22 12:26:02,800 -INFO- using gene name `rps19`
+2020-03-22 12:26:02,800 -INFO- get gene name `rpl16` from Counter({'rpl16': 3})
+2020-03-22 12:26:02,800 -INFO- using gene name `rpl16`
+2020-03-22 12:26:02,800 -INFO- get gene name `rps11` from Counter({'rps11': 3})
+2020-03-22 12:26:02,800 -INFO- using gene name `rps11`
+2020-03-22 12:26:02,801 -INFO- get gene name `sdh3` from Counter({'sdh3': 3})
+2020-03-22 12:26:02,801 -INFO- using gene name `sdh3`
+2020-03-22 12:26:02,801 -INFO- get gene name `rps13` from Counter({'rps13': 3})
+2020-03-22 12:26:02,801 -INFO- using gene name `rps13`
+2020-03-22 12:26:02,802 -INFO- get gene name `rps7` from Counter({'rps7': 3})
+2020-03-22 12:26:02,802 -INFO- using gene name `rps7`
+2020-03-22 12:26:02,802 -INFO- get gene name `sdh4` from Counter({'sdh4': 2})
+2020-03-22 12:26:02,802 -INFO- using gene name `sdh4`
+2020-03-22 12:26:02,803 -INFO- extrat 40 genes: ['atp1', 'atp4', 'atp6', 'atp8', 'atp9', 'ccmB', 'ccmC', 'ccmFC', 'ccmFN', 'cob', 'cox1', 'cox2', 'cox3', 'matR', 'mttB', 'nad1', 'nad2', 'nad3', 'nad4', 'nad4L', 'nad5', 'nad6', 'nad7', 'nad9', 'rpl16', 'rpl2', 'rpl5', 'rps1', 'rps10', 'rps11', 'rps12', 'rps13', 'rps14', 'rps19', 'rps2', 'rps3', 'rps4', 'rps7', 'sdh3', 'sdh4']
+2020-03-22 12:26:02,803 -INFO- aligning sequences
+2020-03-22 13:00:05,430 -INFO- building hmm profiles
+2020-03-22 13:01:03,622 -INFO- building augustus profiles
+2020-03-22 13:03:21,115 -INFO- training augustus models
+/share/home/yuanqyk/.local/lib/python2.7/site-packages/Bio/SeqIO/InsdcIO.py:687: BiopythonWarning: Increasing length of locus line to allow long name. This will result in fields that are not in usual positions.
+  BiopythonWarning,
+2020-03-22 13:11:15,044 -INFO- writing ('rRNA', 'tRNA') sequences into /dev/shm/tmp/mt-Acrogymnospermae/rrna
+2020-03-22 13:11:15,082 -INFO- running OrthoFinder to cluster genes
+2020-03-22 13:11:15,082 -INFO- run CMD: `orthofinder.py -f /dev/shm/tmp/mt-Acrogymnospermae/rrna -M msa -T fasttree -t 24 -S blastn -og`
+2020-03-22 13:12:25,717 -INFO- parsing OrthoFinder orthologs
+2020-03-22 13:12:25,718 -INFO- parsing orthologs group into /dev/shm/tmp/mt-Acrogymnospermae/alns
+2020-03-22 13:12:25,723 -INFO- using min_count=2 to get gene name
+2020-03-22 13:12:28,862 -INFO- get gene name `trnM-CAT` from Counter({'trnM-CAT': 1, 'trnM': 1, 'trnfM': 1})
+2020-03-22 13:12:30,249 -INFO- get gene name `rrn26` from Counter({'rrn26': 4})
+2020-03-22 13:12:30,249 -INFO- using gene name `rrn26`
+2020-03-22 13:12:31,631 -INFO- get gene name `trnF` from Counter({'trnF': 2, 'trnL': 1})
+2020-03-22 13:12:31,631 -INFO- using gene name `trnF`
+2020-03-22 13:12:31,632 -INFO- get gene name `rrn18` from Counter({'rrn18': 4})
+2020-03-22 13:12:31,633 -INFO- using gene name `rrn18`
+2020-03-22 13:12:31,634 -INFO- get gene name `trnE-UUC` from Counter({'trnE': 2, 'trnE-UUC': 1, 'trnE-CTC': 1})
+2020-03-22 13:12:31,634 -INFO- get gene name `trnQ-TTG` from Counter({'trnQ': 2, 'trnQ-TTG': 1, 'trnQ-UUG': 1})
+2020-03-22 13:12:31,635 -INFO- get gene name `trnM-CAT` from Counter({'trnI': 1, 'trnM-CAT': 1, 'trnM': 1, 'trnI-CAU': 1})
+2020-03-22 13:12:31,635 -INFO- get gene name `trnD-GUC` from Counter({'trnD': 2, 'trnD-GUC': 1, 'trnD-GTC': 1})
+2020-03-22 13:12:32,950 -INFO- get gene name `trnW` from Counter({'trnW': 2})
+2020-03-22 13:12:32,950 -INFO- using gene name `trnW`
+2020-03-22 13:12:32,951 -INFO- get gene name `trnY-GUA` from Counter({'trnY': 2, 'trnY-GUA': 1})
+2020-03-22 13:12:32,951 -INFO- get gene name `trnL` from Counter({'trnL': 2})
+2020-03-22 13:12:32,951 -INFO- using gene name `trnL`
+2020-03-22 13:12:32,952 -INFO- get gene name `trnK` from Counter({'trnK': 2})
+2020-03-22 13:12:32,952 -INFO- using gene name `trnK`
+2020-03-22 13:12:32,953 -INFO- get gene name `rrn5` from Counter({'rrn5': 2})
+2020-03-22 13:12:32,953 -INFO- using gene name `rrn5`
+2020-03-22 13:12:32,953 -INFO- get gene name `trnS` from Counter({'trnS': 2})
+2020-03-22 13:12:32,953 -INFO- using gene name `trnS`
+2020-03-22 13:12:32,954 -INFO- get gene name `trnL` from Counter({'trnL': 2})
+2020-03-22 13:12:32,954 -INFO- using gene name `trnL`
+2020-03-22 13:12:32,955 -INFO- get gene name `trnM` from Counter({'trnM': 2})
+2020-03-22 13:12:32,955 -INFO- using gene name `trnM`
+2020-03-22 13:12:32,955 -INFO- get gene name `trnS` from Counter({'trnS': 2})
+2020-03-22 13:12:32,955 -INFO- using gene name `trnS`
+2020-03-22 13:12:32,956 -INFO- get gene name `trnC` from Counter({'trnC': 2})
+2020-03-22 13:12:32,956 -INFO- using gene name `trnC`
+2020-03-22 13:12:32,957 -INFO- get gene name `trnH-GTG` from Counter({'trnH': 1, 'trnH-GTG': 1})
+2020-03-22 13:12:32,957 -INFO- extrat 12 genes: ['rrn18', 'rrn26', 'rrn5', 'trnC', 'trnF', 'trnK', 'trnL', 'trnL-14', 'trnM', 'trnS', 'trnS-16', 'trnW']
+2020-03-22 13:12:32,958 -INFO- aligning sequences
+2020-03-22 13:18:13,331 -INFO- building hmm profiles

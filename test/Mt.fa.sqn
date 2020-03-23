@@ -35,7 +35,7 @@ Seq-submit ::= {
         std {
           year 2020 ,
           month 3 ,
-          day 15 } } ,
+          day 17 } } ,
     subtype new ,
     tool "tbl2asn 24.3 - LINUX UNIX" } ,
   data
@@ -91,7 +91,7 @@ Seq-submit ::= {
                 label
                   str "day" ,
                 data
-                  int 15 } ,
+                  int 17 } ,
               {
                 label
                   str "year" ,
@@ -101,7 +101,7 @@ Seq-submit ::= {
             std {
               year 2020 ,
               month 3 ,
-              day 15 } } ,
+              day 17 } } ,
         seq-set {
           seq {
             id {
@@ -4052,34 +4052,6 @@ C180800'H } ,
                     {
                       data
                         gene {
-                          locus "trnK-CUU" } ,
-                      location
-                        int {
-                          from 35560 ,
-                          to 35628 ,
-                          strand plus ,
-                          id
-                            local
-                              str "Mt" } } ,
-                    {
-                      data
-                        rna {
-                          type tRNA ,
-                          ext
-                            tRNA {
-                              aa
-                                ncbieaa 75 } } ,
-                      location
-                        int {
-                          from 35560 ,
-                          to 35628 ,
-                          strand plus ,
-                          id
-                            local
-                              str "Mt" } } ,
-                    {
-                      data
-                        gene {
                           locus "rrnS" } ,
                       location
                         int {
@@ -4581,7 +4553,7 @@ C180800'H } ,
                     {
                       data
                         gene {
-                          locus "ccmFc" } ,
+                          locus "ccmFC" } ,
                       location
                         mix {
                           int {
@@ -4735,7 +4707,7 @@ C180800'H } ,
                     {
                       data
                         gene {
-                          locus "ccmFn" } ,
+                          locus "ccmFN" } ,
                       location
                         int {
                           from 353339 ,

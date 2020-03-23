@@ -1,0 +1,947 @@
+{'count': False, 'organ': 'mt', 'list': False, 'taxon': 'Liliopsida', 'custom': None, 'gbfiles': ['/share/home/nature/database/RefSeq/mitochondrion/mitochondrion.1.genomic.gbff.gz', '/share/home/nature/database/RefSeq/mitochondrion/mitochondrion.2.genomic.gbff.gz'], 'check': False, 'dbdir': None}
+2020-03-20 11:28:54,588 -INFO- parsing ['/share/home/nature/database/RefSeq/mitochondrion/mitochondrion.1.genomic.gbff.gz', '/share/home/nature/database/RefSeq/mitochondrion/mitochondrion.2.genomic.gbff.gz']
+2020-03-20 11:28:54,589 -INFO- version: RefSeq 2020-01-09
+2020-03-20 11:35:36,499 -INFO- 22 records: 4 orders, 7 families, 15 genera, 22 organism
+2020-03-20 11:35:36,499 -INFO- pruning taxa
+2020-03-20 11:35:36,499 -INFO- total 22 organisms
+2020-03-20 11:35:36,499 -INFO- building taxonomy tree
+2020-03-20 11:35:36,499 -INFO- run CMD: `ete3 ncbiquery --search 'Zea mays subsp. parviglumis' 'Phoenix dactylifera' 'Stratiotes aloides' 'Allium cepa' 'Triticum timopheevii' 'Oryza minuta' 'Butomus umbellatus' 'Zea perennis' 'Cocos nucifera' 'Triticum aestivum' 'Oryza sativa Indica Group' 'Oryza sativa Japonica Group' 'Tripsacum dactyloides' 'Zea mays subsp. mays' 'Spirodela polyrhiza' 'Oryza rufipogon' 'Eleusine indica' 'Sorghum bicolor' 'Zea luxurians' 'Saccharum officinarum' 'Zostera marina' 'Aegilops speltoides var. ligustica' --tree >  /dev/shm/tmp/mt-Liliopsida/species.tree.tmp`
+2020-03-20 11:35:42,107 -INFO- using speceis tree `/dev/shm/tmp/ogap_db/mt-Liliopsida/species.treefile`
+2020-03-20 11:35:42,107 -INFO- writing protein sequences into /dev/shm/tmp/mt-Liliopsida/prot
+2020-03-20 11:35:42,350 -INFO- 22 taxa: ['Aegilops speltoides var. ligustica', 'Allium cepa', 'Butomus umbellatus', 'Cocos nucifera', 'Eleusine indica', 'Oryza minuta', 'Oryza rufipogon', 'Oryza sativa Indica Group', 'Oryza sativa Japonica Group', 'Phoenix dactylifera', 'Saccharum officinarum', 'Sorghum bicolor', 'Spirodela polyrhiza', 'Stratiotes aloides', 'Tripsacum dactyloides', 'Triticum aestivum', 'Triticum timopheevii', 'Zea luxurians', 'Zea mays subsp. mays', 'Zea mays subsp. parviglumis', 'Zea perennis', 'Zostera marina']
+2020-03-20 11:35:42,417 -INFO- get taxon `Eukaryota;Viridiplantae;Streptophyta;Embryophyta;Tracheophyta;Spermatophyta;Magnoliophyta;Liliopsida` from Counter({'Eukaryota;Viridiplantae;Streptophyta;Embryophyta;Tracheophyta;Spermatophyta;Magnoliophyta;Liliopsida': 20, 'Eukaryota;Viridiplantae;Streptophyta;Embryophyta;Tracheophyta;Spermatophyta;Magnoliopsida;Liliopsida': 2})
+2020-03-20 11:35:42,420 -INFO- get transl_table `1` from Counter({1: 968})
+2020-03-20 11:35:42,421 -INFO- running OrthoFinder to cluster genes
+2020-03-20 11:35:42,421 -INFO- run CMD: `orthofinder.py -f /dev/shm/tmp/mt-Liliopsida/prot -M msa -T fasttree -t 16  -og`
+2020-03-20 11:36:39,339 -INFO- parsing OrthoFinder orthologs
+2020-03-20 11:36:39,341 -INFO- parsing orthologs group into /dev/shm/tmp/mt-Liliopsida/alns
+2020-03-20 11:36:39,367 -INFO- using min_count=3 to get gene name
+2020-03-20 11:36:41,104 -INFO- get gene name `atp6` from Counter({'atp6': 16, 'orf183': 4, 'atp6-1': 3})
+2020-03-20 11:36:41,105 -INFO- get product `ATPase subunit 6` from Counter({'ATPase subunit 6': 8, 'ATP synthase F0 subunit 6': 6, 'hypothetical protein': 3, 'ATP synthase subunit 6': 2, 'ATPase subunit 1': 2, 'atp6-1': 1, 'orf183': 1})
+2020-03-20 11:36:41,105 -INFO- get exon number `1` from Counter({1: 23})
+2020-03-20 11:36:41,105 -INFO- get trans_splicing `False` from Counter({False: 23})
+2020-03-20 11:36:41,745 -INFO- get gene name `ccmC` from Counter({'ccmC': 21, 'ccmC-1': 1})
+2020-03-20 11:36:41,746 -INFO- get product `cytochrome c biogenesis C` from Counter({'cytochrome c biogenesis C': 18, 'cytochrome c biogenesis protein ccmC': 2, 'ccmC': 1, 'CcmC': 1})
+2020-03-20 11:36:41,746 -INFO- get exon number `1` from Counter({1: 22})
+2020-03-20 11:36:41,746 -INFO- get trans_splicing `False` from Counter({False: 22})
+2020-03-20 11:36:42,702 -INFO- get gene name `atp8` from Counter({'atp8': 17, 'orfB': 4, 'atp8-1': 1})
+2020-03-20 11:36:42,703 -INFO- get product `ATPase subunit 8` from Counter({'ATPase subunit 8': 13, 'ATP synthase subunit 8': 2, 'ATP synthase F0 subunit 8': 2, 'hypothetical protein': 2, 'Atp8': 1, 'ORFB protein': 1, 'atp8-1': 1})
+2020-03-20 11:36:42,703 -INFO- get exon number `1` from Counter({1: 21, 2: 1})
+2020-03-20 11:36:42,704 -INFO- get trans_splicing `False` from Counter({False: 21, True: 1})
+2020-03-20 11:36:43,337 -INFO- get gene name `cox2` from Counter({'cox2': 21, 'cox2b': 1})
+2020-03-20 11:36:43,338 -INFO- get product `cytochrome c oxidase subunit 2` from Counter({'cytochrome c oxidase subunit 2': 16, 'cytochrome oxidase subunit 2': 4, 'Cox2': 1, 'cox2': 1})
+2020-03-20 11:36:43,338 -INFO- get exon number `2` from Counter({2: 19, 1: 2, 3: 1})
+2020-03-20 11:36:43,338 -INFO- get trans_splicing `False` from Counter({False: 21, True: 1})
+2020-03-20 11:36:43,663 -INFO- get gene name `nad9` from Counter({'nad9': 21, 'nad9-1': 1})
+2020-03-20 11:36:43,664 -INFO- get product `NADH dehydrogenase subunit 9` from Counter({'NADH dehydrogenase subunit 9': 20, 'Nad9': 1, 'nad9': 1})
+2020-03-20 11:36:43,664 -INFO- get exon number `1` from Counter({1: 22})
+2020-03-20 11:36:43,664 -INFO- get trans_splicing `False` from Counter({False: 22})
+2020-03-20 11:36:43,986 -INFO- get gene name `nad6` from Counter({'nad6': 22})
+2020-03-20 11:36:43,987 -INFO- get product `NADH dehydrogenase subunit 6` from Counter({'NADH dehydrogenase subunit 6': 20, 'nad6': 1, 'Nad6': 1})
+2020-03-20 11:36:43,987 -INFO- get exon number `1` from Counter({1: 22})
+2020-03-20 11:36:43,987 -INFO- get trans_splicing `False` from Counter({False: 22})
+2020-03-20 11:36:44,349 -INFO- get gene name `ccmFn` from Counter({'ccmFn': 10, 'ccmFN': 8, 'ccmFN-1': 1, 'ccmFN2': 1, 'ccmFN1': 1, 'ccmFn1': 1, 'CcmFn': 1})
+2020-03-20 11:36:44,350 -INFO- get product `cytochrome c biogenesis FN` from Counter({'cytochrome c biogenesis FN': 11, 'cytochrome c biogenesis Fn': 5, 'cytochrome c biogenesis protein ccmFN': 2, 'CcmFN': 1, 'CcmFN2': 1, 'CcmFN1': 1, 'CcmFn': 1, 'ccmFN': 1})
+2020-03-20 11:36:44,350 -INFO- get exon number `1` from Counter({1: 23})
+2020-03-20 11:36:44,350 -INFO- get trans_splicing `False` from Counter({False: 23})
+2020-03-20 11:36:44,684 -INFO- get gene name `mttB` from Counter({'mttB': 16, 'orfX': 5, 'mttB-1': 1})
+2020-03-20 11:36:44,685 -INFO- get product `transport membrane protein` from Counter({'transport membrane protein': 10, 'MttB': 5, 'hypothetical protein': 4, 'mttB': 2, 'hypothetical protein X': 1})
+2020-03-20 11:36:44,685 -INFO- get exon number `1` from Counter({1: 22})
+2020-03-20 11:36:44,685 -INFO- get trans_splicing `False` from Counter({False: 22})
+2020-03-20 11:36:45,340 -INFO- get gene name `cox3` from Counter({'cox3': 21, 'psbA': 1})
+2020-03-20 11:36:45,340 -INFO- get product `cytochrome c oxidase subunit 3` from Counter({'cytochrome c oxidase subunit 3': 15, 'cytochrome oxidase subunit 3': 4, 'PSII 32 kDa protein': 1, 'cox3': 1, 'Cox3': 1})
+2020-03-20 11:36:45,341 -INFO- get exon number `1` from Counter({1: 21, 2: 1})
+2020-03-20 11:36:45,341 -INFO- get trans_splicing `False` from Counter({False: 21, True: 1})
+2020-03-20 11:36:45,646 -INFO- get gene name `atp4` from Counter({'atp4': 18, 'orf25': 4})
+2020-03-20 11:36:45,646 -INFO- get product `ATPase subunit 4` from Counter({'ATPase subunit 4': 13, 'hypothetical protein': 3, 'ATP synthase subunit 4': 2, 'atp4': 1, 'ATP synthase F0 subunit 4': 1, 'Atp4': 1, 'possible ATP synthase F0 subunit b': 1})
+2020-03-20 11:36:45,647 -INFO- get exon number `1` from Counter({1: 22})
+2020-03-20 11:36:45,647 -INFO- get trans_splicing `False` from Counter({False: 22})
+2020-03-20 11:36:46,282 -INFO- get gene name `atp1` from Counter({'atp1': 18, 'atp1-a1': 1, 'atp1-b': 1, 'atp1-1': 1})
+2020-03-20 11:36:46,283 -INFO- get product `ATPase subunit 1` from Counter({'ATPase subunit 1': 11, 'ATP synthase F0 subunit 1': 4, 'ATP synthase F1 subunit 1': 2, 'ATP synthase subunit 1': 2, 'Atp1': 1, 'atp1': 1})
+2020-03-20 11:36:46,283 -INFO- get exon number `1` from Counter({1: 21})
+2020-03-20 11:36:46,283 -INFO- get trans_splicing `False` from Counter({False: 21})
+2020-03-20 11:36:46,284 -INFO- get gene name `matR` from Counter({'matR': 12, 'mat-r': 9, 'mat-r-1': 1})
+2020-03-20 11:36:46,284 -INFO- get product `maturase` from Counter({'maturase': 16, 'maturase-related protein': 4, 'maturase R': 1, 'matR': 1})
+2020-03-20 11:36:46,285 -INFO- get exon number `1` from Counter({1: 22})
+2020-03-20 11:36:46,285 -INFO- get trans_splicing `False` from Counter({False: 22})
+2020-03-20 11:36:46,608 -INFO- get gene name `cox1` from Counter({'cox1': 21})
+2020-03-20 11:36:46,609 -INFO- get product `cytochrome c oxidase subunit 1` from Counter({'cytochrome c oxidase subunit 1': 15, 'cytochrome oxidase subunit 1': 4, 'cox1': 1, 'cytochrome c oxidase subunit1': 1})
+2020-03-20 11:36:46,609 -INFO- get exon number `1` from Counter({1: 21})
+2020-03-20 11:36:46,609 -INFO- get trans_splicing `False` from Counter({False: 21})
+2020-03-20 11:36:46,943 -INFO- get gene name `nad3` from Counter({'nad3': 21})
+2020-03-20 11:36:46,943 -INFO- get product `NADH dehydrogenase subunit 3` from Counter({'NADH dehydrogenase subunit 3': 19, 'Nad3': 1, 'nad3': 1})
+2020-03-20 11:36:46,944 -INFO- get exon number `1` from Counter({1: 21})
+2020-03-20 11:36:46,944 -INFO- get trans_splicing `False` from Counter({False: 21})
+2020-03-20 11:36:47,589 -INFO- get gene name `rps12` from Counter({'rps12': 20, 'orf127': 1})
+2020-03-20 11:36:47,589 -INFO- get product `ribosomal protein S12` from Counter({'ribosomal protein S12': 16, 'ribosomal protein small subunit 12': 3, 'rps12': 1, 'hypothetical protein': 1})
+2020-03-20 11:36:47,590 -INFO- get exon number `1` from Counter({1: 21})
+2020-03-20 11:36:47,590 -INFO- get trans_splicing `False` from Counter({False: 21})
+2020-03-20 11:36:47,914 -INFO- get gene name `cob` from Counter({'cob': 19, 'cob-1': 1, 'cobA': 1})
+2020-03-20 11:36:47,915 -INFO- get product `apocytochrome b` from Counter({'apocytochrome b': 19, 'cytochrome b': 1, 'cob': 1})
+2020-03-20 11:36:47,915 -INFO- get exon number `1` from Counter({1: 21})
+2020-03-20 11:36:47,915 -INFO- get trans_splicing `False` from Counter({False: 21})
+2020-03-20 11:36:48,240 -INFO- get gene name `nad2` from Counter({'nad2': 20})
+2020-03-20 11:36:48,240 -INFO- get product `NADH dehydrogenase subunit 2` from Counter({'NADH dehydrogenase subunit 2': 18, 'Nad2': 1, 'nad2': 1})
+2020-03-20 11:36:48,241 -INFO- get exon number `5` from Counter({5: 19, 2: 1})
+2020-03-20 11:36:48,241 -INFO- get trans_splicing `True` from Counter({True: 19, False: 1})
+2020-03-20 11:36:48,600 -INFO- get gene name `nad5` from Counter({'nad5': 19, 'ND5': 1})
+2020-03-20 11:36:48,601 -INFO- get product `NADH dehydrogenase subunit 5` from Counter({'NADH dehydrogenase subunit 5': 18, 'nad5': 1, 'Nad5': 1})
+2020-03-20 11:36:48,601 -INFO- get exon number `5` from Counter({5: 17, 4: 2, 3: 1})
+2020-03-20 11:36:48,602 -INFO- get trans_splicing `True` from Counter({True: 19, False: 1})
+2020-03-20 11:36:48,602 -INFO- get gene name `nad4L` from Counter({'nad4L': 21})
+2020-03-20 11:36:48,603 -INFO- get product `NADH dehydrogenase subunit 4L` from Counter({'NADH dehydrogenase subunit 4L': 19, 'Nad4L': 1, 'nad4L': 1})
+2020-03-20 11:36:48,603 -INFO- get exon number `1` from Counter({1: 21})
+2020-03-20 11:36:48,603 -INFO- get trans_splicing `False` from Counter({False: 21})
+2020-03-20 11:36:48,930 -INFO- get gene name `nad4` from Counter({'nad4': 20})
+2020-03-20 11:36:48,931 -INFO- get product `NADH dehydrogenase subunit 4` from Counter({'NADH dehydrogenase subunit 4': 16, 'NADH dehydrogenase subunit 3': 2, 'nad4': 1, 'Nad4': 1})
+2020-03-20 11:36:48,931 -INFO- get exon number `4` from Counter({4: 19, 1: 1})
+2020-03-20 11:36:48,931 -INFO- get trans_splicing `False` from Counter({False: 20})
+2020-03-20 11:36:49,249 -INFO- get gene name `rps7` from Counter({'rps7': 19, 'rps7-1': 1})
+2020-03-20 11:36:49,249 -INFO- get product `ribosomal protein S7` from Counter({'ribosomal protein S7': 13, 'hypothetical protein': 3, 'ribosomal protein small subunit 7': 3, 'rps7': 1})
+2020-03-20 11:36:49,250 -INFO- get exon number `1` from Counter({1: 20})
+2020-03-20 11:36:49,250 -INFO- get trans_splicing `False` from Counter({False: 20})
+2020-03-20 11:36:49,250 -INFO- get gene name `ccmB` from Counter({'ccmB': 20, 'ccmB-1': 1})
+2020-03-20 11:36:49,251 -INFO- get product `cytochrome c biogenesis B` from Counter({'cytochrome c biogenesis B': 13, 'cytochrome c maturation protein CcmB': 4, 'cytochrome c biogenesis protein ccmB': 2, 'ccmB': 1, 'CcmB': 1})
+2020-03-20 11:36:49,251 -INFO- get exon number `1` from Counter({1: 21})
+2020-03-20 11:36:49,251 -INFO- get trans_splicing `False` from Counter({False: 21})
+2020-03-20 11:36:49,252 -INFO- get gene name `atp9` from Counter({'atp9': 21})
+2020-03-20 11:36:49,252 -INFO- get product `ATPase subunit 9` from Counter({'ATPase subunit 9': 10, 'ATP synthase F0 subunit 9': 7, 'ATP synthase subunit 9': 2, 'Atp9': 1, 'atp9': 1})
+2020-03-20 11:36:49,252 -INFO- get exon number `1` from Counter({1: 21})
+2020-03-20 11:36:49,253 -INFO- get trans_splicing `False` from Counter({False: 21})
+2020-03-20 11:36:49,570 -INFO- get gene name `rps3` from Counter({'rps3': 18, 'ccmFn2': 1})
+2020-03-20 11:36:49,571 -INFO- get product `ribosomal protein S3` from Counter({'ribosomal protein S3': 14, 'ribosomal protein small subunit 3': 3, 'cytochrome c biogenesis FN': 1, 'rps3': 1})
+2020-03-20 11:36:49,571 -INFO- get exon number `2` from Counter({2: 15, 1: 3, 4: 1})
+2020-03-20 11:36:49,571 -INFO- get trans_splicing `False` from Counter({False: 18, True: 1})
+2020-03-20 11:36:49,886 -INFO- get gene name `nad1` from Counter({'nad1': 19})
+2020-03-20 11:36:49,886 -INFO- get product `NADH dehydrogenase subunit 1` from Counter({'NADH dehydrogenase subunit 1': 17, 'Nad1': 1, 'nad1': 1})
+2020-03-20 11:36:49,887 -INFO- get exon number `5` from Counter({5: 17, 4: 2})
+2020-03-20 11:36:49,887 -INFO- get trans_splicing `True` from Counter({True: 19})
+2020-03-20 11:36:49,888 -INFO- get gene name `nad7` from Counter({'nad7': 20})
+2020-03-20 11:36:49,888 -INFO- get product `NADH dehydrogenase subunit 7` from Counter({'NADH dehydrogenase subunit 7': 18, 'nad7': 1, 'Nad7': 1})
+2020-03-20 11:36:49,888 -INFO- get exon number `5` from Counter({5: 18, 4: 2})
+2020-03-20 11:36:49,888 -INFO- get trans_splicing `False` from Counter({False: 20})
+2020-03-20 11:36:49,888 -INFO- get gene name `rps1` from Counter({'rps1': 19, 'rps1-1': 1})
+2020-03-20 11:36:49,889 -INFO- get product `ribosomal protein S1` from Counter({'ribosomal protein S1': 16, 'ribosomal protein small subunit 1': 3, 'rps1': 1})
+2020-03-20 11:36:49,889 -INFO- get exon number `1` from Counter({1: 20})
+2020-03-20 11:36:49,889 -INFO- get trans_splicing `False` from Counter({False: 20})
+2020-03-20 11:36:49,889 -INFO- get gene name `ccmFc` from Counter({'ccmFc': 11, 'ccmFC': 7, 'ccmFC-1': 2})
+2020-03-20 11:36:49,889 -INFO- get product `cytochrome c biogenesis FC` from Counter({'cytochrome c biogenesis FC': 12, 'cytochrome c biogenesis Fc': 3, 'cytochrome c biogenesis protein ccmFC': 2, 'CcmFc': 1, 'cytochrome c biogenesis FC-1': 1, 'ccmFC': 1})
+2020-03-20 11:36:49,890 -INFO- get exon number `2` from Counter({2: 19, 1: 1})
+2020-03-20 11:36:49,890 -INFO- get trans_splicing `False` from Counter({False: 20})
+2020-03-20 11:36:50,527 -INFO- get gene name `rps2` from Counter({'rps2': 12, 'rps2A': 3, 'rps2B': 3, 'rps2-1': 1})
+2020-03-20 11:36:50,528 -INFO- get product `ribosomal protein S2` from Counter({'ribosomal protein S2': 15, 'ribosomal protein small subunit 2': 3, 'rps2': 1})
+2020-03-20 11:36:50,528 -INFO- get exon number `1` from Counter({1: 18, 2: 1})
+2020-03-20 11:36:50,528 -INFO- get trans_splicing `False` from Counter({False: 19})
+2020-03-20 11:36:50,529 -INFO- get gene name `rps13` from Counter({'rps13': 17, 'rp13': 1})
+2020-03-20 11:36:50,529 -INFO- get product `ribosomal protein S13` from Counter({'ribosomal protein S13': 13, 'ribosomal protein small subunit 13': 3, 'rp13': 1, 'ribosomal protein L13': 1})
+2020-03-20 11:36:50,530 -INFO- get exon number `1` from Counter({1: 18})
+2020-03-20 11:36:50,530 -INFO- get trans_splicing `False` from Counter({False: 18})
+2020-03-20 11:36:50,530 -INFO- get gene name `rps4` from Counter({'rps4': 15, 'rps4-1': 2})
+2020-03-20 11:36:50,530 -INFO- get product `ribosomal protein S4` from Counter({'ribosomal protein S4': 13, 'ribosomal protein small subunit 4': 3, 'rps4': 1})
+2020-03-20 11:36:50,531 -INFO- get exon number `1` from Counter({1: 17})
+2020-03-20 11:36:50,531 -INFO- get trans_splicing `False` from Counter({False: 17})
+2020-03-20 11:36:50,531 -INFO- get gene name `rpl16` from Counter({'rpl16': 15})
+2020-03-20 11:36:50,532 -INFO- get product `ribosomal protein L16` from Counter({'ribosomal protein L16': 11, 'ribosomal protein large subunit 16': 2, 'ribosomal protein L16-like': 1, 'rpl16': 1})
+2020-03-20 11:36:50,532 -INFO- get exon number `1` from Counter({1: 15})
+2020-03-20 11:36:50,532 -INFO- get trans_splicing `False` from Counter({False: 15})
+2020-03-20 11:36:50,851 -INFO- get gene name `rps19` from Counter({'rps19': 6, 'rps19a': 1, 'rps19-p': 1})
+2020-03-20 11:36:50,852 -INFO- get product `ribosomal protein S19` from Counter({'ribosomal protein S19': 6, 'ribosomal protein small subunit 1': 1, 'rps19-p': 1})
+2020-03-20 11:36:50,852 -INFO- get exon number `1` from Counter({1: 8})
+2020-03-20 11:36:50,852 -INFO- get trans_splicing `False` from Counter({False: 8})
+2020-03-20 11:36:50,853 -INFO- get gene name `rpl5` from Counter({'rpl5': 10})
+2020-03-20 11:36:50,853 -INFO- get product `ribosomal protein L5` from Counter({'ribosomal protein L5': 4, 'ribosomal protein large subunit 5': 3, 'ribosomal protein L7': 2, 'rpl5': 1})
+2020-03-20 11:36:50,853 -INFO- get exon number `1` from Counter({1: 10})
+2020-03-20 11:36:50,853 -INFO- get trans_splicing `False` from Counter({False: 10})
+2020-03-20 11:36:51,501 -INFO- get gene name `orf173` from Counter({'orf173': 4, 'orf142': 1, 'orf158-a1': 1})
+2020-03-20 11:36:51,502 -INFO- get product `hypothetical protein` from Counter({'hypothetical protein': 5, 'orf142': 1})
+2020-03-20 11:36:51,502 -INFO- get exon number `1` from Counter({1: 6})
+2020-03-20 11:36:51,502 -INFO- get trans_splicing `False` from Counter({False: 6})
+2020-03-20 11:36:51,503 -INFO- get gene name `rpl2` from Counter({'rpl2': 6, 'orf247-ct': 1})
+2020-03-20 11:36:51,503 -INFO- get product `ribosomal protein L2` from Counter({'ribosomal protein L2': 5, 'hypothetical protein': 1, 'ribosomal protein large subunit 2': 1})
+2020-03-20 11:36:51,503 -INFO- get exon number `2` from Counter({2: 5, 1: 2})
+2020-03-20 11:36:51,504 -INFO- get trans_splicing `False` from Counter({False: 7})
+2020-03-20 11:36:52,136 -INFO- get gene name `orf490` from Counter({'orf490': 5, 'orf138-a': 1, 'orf117-d': 1})
+2020-03-20 11:36:52,136 -INFO- get product `hypothetical protein` from Counter({'hypothetical protein': 6, 'orf490': 1})
+2020-03-20 11:36:52,137 -INFO- get exon number `1` from Counter({1: 7})
+2020-03-20 11:36:52,137 -INFO- get trans_splicing `False` from Counter({False: 7})
+2020-03-20 11:36:52,501 -INFO- get gene name `RNA_pol` from Counter({'RNA_pol': 2, 'orf417': 1, 'orf1159': 1, 'orf193-a1': 1})
+2020-03-20 11:36:52,501 -INFO- get gene name `orf284` from Counter({'orf284': 3, 'orf256': 2})
+2020-03-20 11:36:52,501 -INFO- get product `hypothetical protein` from Counter({'hypothetical protein': 4, 'ORF256': 1})
+2020-03-20 11:36:52,502 -INFO- get exon number `1` from Counter({1: 5})
+2020-03-20 11:36:52,502 -INFO- get trans_splicing `False` from Counter({False: 5})
+2020-03-20 11:36:52,823 -INFO- get gene name `orf194` from Counter({'orf194': 4})
+2020-03-20 11:36:52,824 -INFO- get product `hypothetical protein` from Counter({'hypothetical protein': 4})
+2020-03-20 11:36:52,824 -INFO- get exon number `1` from Counter({1: 4})
+2020-03-20 11:36:52,824 -INFO- get trans_splicing `False` from Counter({False: 4})
+2020-03-20 11:36:53,155 -INFO- get gene name `orf152a` from Counter({'orf152a': 4})
+2020-03-20 11:36:53,156 -INFO- get product `hypothetical protein` from Counter({'hypothetical protein': 4})
+2020-03-20 11:36:53,156 -INFO- get exon number `1` from Counter({1: 4})
+2020-03-20 11:36:53,156 -INFO- get trans_splicing `False` from Counter({False: 4})
+2020-03-20 11:36:53,483 -INFO- get gene name `orf181` from Counter({'orf181': 4})
+2020-03-20 11:36:53,483 -INFO- get product `hypothetical protein` from Counter({'hypothetical protein': 3, 'orf181': 1})
+2020-03-20 11:36:53,483 -INFO- get exon number `1` from Counter({1: 4})
+2020-03-20 11:36:53,483 -INFO- get trans_splicing `False` from Counter({False: 4})
+2020-03-20 11:36:53,795 -INFO- get gene name `orf396` from Counter({'orf396': 2, 'orf423': 1})
+2020-03-20 11:36:54,115 -INFO- get gene name `orf100` from Counter({'orf100': 2, 'orf99-a1': 1})
+2020-03-20 11:36:54,115 -INFO- get gene name `orf153` from Counter({'orf153': 4})
+2020-03-20 11:36:54,116 -INFO- get product `hypothetical protein` from Counter({'hypothetical protein': 4})
+2020-03-20 11:36:54,116 -INFO- get exon number `1` from Counter({1: 4})
+2020-03-20 11:36:54,116 -INFO- get trans_splicing `False` from Counter({False: 4})
+2020-03-20 11:36:54,116 -INFO- get gene name `orf160` from Counter({'orf160': 4})
+2020-03-20 11:36:54,117 -INFO- get product `hypothetical protein` from Counter({'hypothetical protein': 4})
+2020-03-20 11:36:54,117 -INFO- get exon number `1` from Counter({1: 4})
+2020-03-20 11:36:54,117 -INFO- get trans_splicing `False` from Counter({False: 4})
+2020-03-20 11:36:54,117 -INFO- get gene name `orf241` from Counter({'orf241': 4})
+2020-03-20 11:36:54,118 -INFO- get product `hypothetical protein` from Counter({'hypothetical protein': 4})
+2020-03-20 11:36:54,118 -INFO- get exon number `1` from Counter({1: 4})
+2020-03-20 11:36:54,118 -INFO- get trans_splicing `False` from Counter({False: 4})
+2020-03-20 11:36:54,118 -INFO- get gene name `orf288` from Counter({'orf288': 2, 'orf179': 1, 'CW-orf307': 1})
+2020-03-20 11:36:54,435 -INFO- get gene name `ycf68` from Counter({'ycf68': 1, 'orf134-a-ct': 1})
+2020-03-20 11:36:54,435 -INFO- get gene name `orf140-b` from Counter({'orf140-b': 1, 'orf101b': 1, 'orf192': 1})
+2020-03-20 11:36:54,763 -INFO- get gene name `orf734` from Counter({'orf734': 1, 'orf911': 1, 'rpo': 1})
+2020-03-20 11:36:54,764 -INFO- get gene name `rpl10` from Counter({'rpl10': 2, 'orf159': 1})
+2020-03-20 11:36:54,764 -INFO- get gene name `orf162` from Counter({'orf162': 3})
+2020-03-20 11:36:54,764 -INFO- get product `hypothetical protein` from Counter({'hypothetical protein': 3})
+2020-03-20 11:36:54,764 -INFO- get exon number `1` from Counter({1: 3})
+2020-03-20 11:36:54,765 -INFO- get trans_splicing `False` from Counter({False: 3})
+2020-03-20 11:36:54,765 -INFO- get gene name `orf161` from Counter({'orf161': 3})
+2020-03-20 11:36:54,765 -INFO- get product `hypothetical protein` from Counter({'hypothetical protein': 2, 'orf161': 1})
+2020-03-20 11:36:54,765 -INFO- get exon number `1` from Counter({1: 3})
+2020-03-20 11:36:54,765 -INFO- get trans_splicing `False` from Counter({False: 3})
+2020-03-20 11:36:54,766 -INFO- get gene name `orf187` from Counter({'orf187': 3})
+2020-03-20 11:36:54,766 -INFO- get product `hypothetical protein` from Counter({'hypothetical protein': 2, 'Nuclear-like sequence': 1})
+2020-03-20 11:36:54,766 -INFO- get exon number `1` from Counter({1: 3})
+2020-03-20 11:36:54,766 -INFO- get trans_splicing `False` from Counter({False: 3})
+2020-03-20 11:36:54,767 -INFO- get gene name `orf176` from Counter({'orf176': 3})
+2020-03-20 11:36:54,767 -INFO- get product `hypothetical protein` from Counter({'hypothetical protein': 3})
+2020-03-20 11:36:54,767 -INFO- get exon number `1` from Counter({1: 3})
+2020-03-20 11:36:54,767 -INFO- get trans_splicing `False` from Counter({False: 3})
+2020-03-20 11:36:54,768 -INFO- get gene name `orf165` from Counter({'orf165': 3})
+2020-03-20 11:36:54,768 -INFO- get product `hypothetical protein` from Counter({'hypothetical protein': 2, 'orf165': 1})
+2020-03-20 11:36:54,768 -INFO- get exon number `1` from Counter({1: 3})
+2020-03-20 11:36:54,768 -INFO- get trans_splicing `False` from Counter({False: 3})
+2020-03-20 11:36:55,086 -INFO- get gene name `orf725` from Counter({'orf725': 1, 'atp6': 1})
+2020-03-20 11:36:55,086 -INFO- get gene name `orf101-a` from Counter({'orf101-a': 2})
+2020-03-20 11:36:55,087 -INFO- get gene name `orf186` from Counter({'orf186': 1, 'orf115a': 1})
+2020-03-20 11:36:55,087 -INFO- get gene name `orf146-a` from Counter({'orf146-a': 2})
+2020-03-20 11:36:55,087 -INFO- get gene name `rps11` from Counter({'rps11': 2})
+2020-03-20 11:36:55,088 -INFO- get gene name `sdh4` from Counter({'sdh4': 2})
+2020-03-20 11:36:55,088 -INFO- get gene name `rps14a` from Counter({'rps14a': 1, 'rps14': 1})
+2020-03-20 11:36:55,088 -INFO- get gene name `orf111-b` from Counter({'orf111-b': 2})
+2020-03-20 11:36:55,088 -INFO- get gene name `orf224` from Counter({'orf224': 2})
+2020-03-20 11:36:55,088 -INFO- get gene name `orf152b` from Counter({'orf152b': 2})
+2020-03-20 11:36:55,088 -INFO- get gene name `orf248-1` from Counter({'orf248-1': 1, 'orf248': 1})
+2020-03-20 11:36:55,088 -INFO- get gene name `orf191` from Counter({'orf191': 2})
+2020-03-20 11:36:55,089 -INFO- get gene name `orf147-b` from Counter({'orf147-b': 2})
+2020-03-20 11:36:55,089 -INFO- get gene name `orf101-c` from Counter({'orf101-c': 2})
+2020-03-20 11:36:55,089 -INFO- get gene name `orf186` from Counter({'orf186': 2})
+2020-03-20 11:36:55,091 -INFO- extrat 49 genes: ['atp6', 'ccmC', 'atp8', 'cox2', 'nad9', 'nad6', 'ccmFn', 'mttB', 'cox3', 'atp4', 'atp1', 'matR', 'cox1', 'nad3', 'rps12', 'cob', 'nad2', 'nad5', 'nad4L', 'nad4', 'rps7', 'ccmB', 'atp9', 'rps3', 'nad1', 'nad7', 'rps1', 'ccmFc', 'rps2', 'rps13', 'rps4', 'rpl16', 'rps19', 'rpl5', 'orf173', 'rpl2', 'orf490', 'orf284', 'orf194', 'orf152a', 'orf181', 'orf153', 'orf160', 'orf241', 'orf162', 'orf161', 'orf187', 'orf176', 'orf165']
+2020-03-20 11:36:55,091 -INFO- aligning sequences
+2020-03-20 11:44:19,801 -INFO- building hmm profiles
+2020-03-20 11:44:43,757 -INFO- building augustus profiles
+2020-03-20 11:45:09,510 -INFO- training augustus models
+/share/home/yuanqyk/.local/lib/python2.7/site-packages/Bio/SeqIO/InsdcIO.py:687: BiopythonWarning: Increasing length of locus line to allow long name. This will result in fields that are not in usual positions.
+  BiopythonWarning,
+2020-03-20 11:45:10,053 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-atp6 -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-atp6.gb 7
+new_species.pl --species=mt-Liliopsida-atp6
+etraining --species=mt-Liliopsida-atp6 /dev/shm/tmp/mt-Liliopsida/trng/train-atp6.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-atp6 /dev/shm/tmp/mt-Liliopsida/trng/train-atp6.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-atp6.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-atp6 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-atp6.gb.train && rm -r tmp_opt_mt-Liliopsida-atp6
+#etraining --species=mt-Liliopsida-atp6 /dev/shm/tmp/mt-Liliopsida/trng/train-atp6.gb.train
+#augustus --species=mt-Liliopsida-atp6 /dev/shm/tmp/mt-Liliopsida/trng/train-atp6.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-atp6.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-atp6.tgz mt-Liliopsida-atp6)
+`
+2020-03-20 11:45:14,144 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-ccmC -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-ccmC.gb 7
+new_species.pl --species=mt-Liliopsida-ccmC
+etraining --species=mt-Liliopsida-ccmC /dev/shm/tmp/mt-Liliopsida/trng/train-ccmC.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-ccmC /dev/shm/tmp/mt-Liliopsida/trng/train-ccmC.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-ccmC.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-ccmC --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-ccmC.gb.train && rm -r tmp_opt_mt-Liliopsida-ccmC
+#etraining --species=mt-Liliopsida-ccmC /dev/shm/tmp/mt-Liliopsida/trng/train-ccmC.gb.train
+#augustus --species=mt-Liliopsida-ccmC /dev/shm/tmp/mt-Liliopsida/trng/train-ccmC.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-ccmC.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-ccmC.tgz mt-Liliopsida-ccmC)
+`
+2020-03-20 11:45:17,532 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-atp8 -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-atp8.gb 7
+new_species.pl --species=mt-Liliopsida-atp8
+etraining --species=mt-Liliopsida-atp8 /dev/shm/tmp/mt-Liliopsida/trng/train-atp8.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-atp8 /dev/shm/tmp/mt-Liliopsida/trng/train-atp8.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-atp8.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-atp8 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-atp8.gb.train && rm -r tmp_opt_mt-Liliopsida-atp8
+#etraining --species=mt-Liliopsida-atp8 /dev/shm/tmp/mt-Liliopsida/trng/train-atp8.gb.train
+#augustus --species=mt-Liliopsida-atp8 /dev/shm/tmp/mt-Liliopsida/trng/train-atp8.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-atp8.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-atp8.tgz mt-Liliopsida-atp8)
+`
+2020-03-20 11:45:20,834 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-cox2 -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-cox2.gb 7
+new_species.pl --species=mt-Liliopsida-cox2
+etraining --species=mt-Liliopsida-cox2 /dev/shm/tmp/mt-Liliopsida/trng/train-cox2.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-cox2 /dev/shm/tmp/mt-Liliopsida/trng/train-cox2.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-cox2.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-cox2 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-cox2.gb.train && rm -r tmp_opt_mt-Liliopsida-cox2
+#etraining --species=mt-Liliopsida-cox2 /dev/shm/tmp/mt-Liliopsida/trng/train-cox2.gb.train
+#augustus --species=mt-Liliopsida-cox2 /dev/shm/tmp/mt-Liliopsida/trng/train-cox2.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-cox2.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-cox2.tgz mt-Liliopsida-cox2)
+`
+2020-03-20 11:45:24,726 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-nad9 -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-nad9.gb 7
+new_species.pl --species=mt-Liliopsida-nad9
+etraining --species=mt-Liliopsida-nad9 /dev/shm/tmp/mt-Liliopsida/trng/train-nad9.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-nad9 /dev/shm/tmp/mt-Liliopsida/trng/train-nad9.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-nad9.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-nad9 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-nad9.gb.train && rm -r tmp_opt_mt-Liliopsida-nad9
+#etraining --species=mt-Liliopsida-nad9 /dev/shm/tmp/mt-Liliopsida/trng/train-nad9.gb.train
+#augustus --species=mt-Liliopsida-nad9 /dev/shm/tmp/mt-Liliopsida/trng/train-nad9.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-nad9.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-nad9.tgz mt-Liliopsida-nad9)
+`
+2020-03-20 11:45:28,063 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-nad6 -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-nad6.gb 7
+new_species.pl --species=mt-Liliopsida-nad6
+etraining --species=mt-Liliopsida-nad6 /dev/shm/tmp/mt-Liliopsida/trng/train-nad6.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-nad6 /dev/shm/tmp/mt-Liliopsida/trng/train-nad6.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-nad6.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-nad6 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-nad6.gb.train && rm -r tmp_opt_mt-Liliopsida-nad6
+#etraining --species=mt-Liliopsida-nad6 /dev/shm/tmp/mt-Liliopsida/trng/train-nad6.gb.train
+#augustus --species=mt-Liliopsida-nad6 /dev/shm/tmp/mt-Liliopsida/trng/train-nad6.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-nad6.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-nad6.tgz mt-Liliopsida-nad6)
+`
+2020-03-20 11:45:31,514 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-ccmFn -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-ccmFn.gb 7
+new_species.pl --species=mt-Liliopsida-ccmFn
+etraining --species=mt-Liliopsida-ccmFn /dev/shm/tmp/mt-Liliopsida/trng/train-ccmFn.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-ccmFn /dev/shm/tmp/mt-Liliopsida/trng/train-ccmFn.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-ccmFn.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-ccmFn --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-ccmFn.gb.train && rm -r tmp_opt_mt-Liliopsida-ccmFn
+#etraining --species=mt-Liliopsida-ccmFn /dev/shm/tmp/mt-Liliopsida/trng/train-ccmFn.gb.train
+#augustus --species=mt-Liliopsida-ccmFn /dev/shm/tmp/mt-Liliopsida/trng/train-ccmFn.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-ccmFn.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-ccmFn.tgz mt-Liliopsida-ccmFn)
+`
+2020-03-20 11:45:35,270 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-mttB -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-mttB.gb 7
+new_species.pl --species=mt-Liliopsida-mttB
+etraining --species=mt-Liliopsida-mttB /dev/shm/tmp/mt-Liliopsida/trng/train-mttB.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-mttB /dev/shm/tmp/mt-Liliopsida/trng/train-mttB.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-mttB.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-mttB --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-mttB.gb.train && rm -r tmp_opt_mt-Liliopsida-mttB
+#etraining --species=mt-Liliopsida-mttB /dev/shm/tmp/mt-Liliopsida/trng/train-mttB.gb.train
+#augustus --species=mt-Liliopsida-mttB /dev/shm/tmp/mt-Liliopsida/trng/train-mttB.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-mttB.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-mttB.tgz mt-Liliopsida-mttB)
+`
+2020-03-20 11:45:38,792 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-cox3 -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-cox3.gb 7
+new_species.pl --species=mt-Liliopsida-cox3
+etraining --species=mt-Liliopsida-cox3 /dev/shm/tmp/mt-Liliopsida/trng/train-cox3.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-cox3 /dev/shm/tmp/mt-Liliopsida/trng/train-cox3.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-cox3.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-cox3 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-cox3.gb.train && rm -r tmp_opt_mt-Liliopsida-cox3
+#etraining --species=mt-Liliopsida-cox3 /dev/shm/tmp/mt-Liliopsida/trng/train-cox3.gb.train
+#augustus --species=mt-Liliopsida-cox3 /dev/shm/tmp/mt-Liliopsida/trng/train-cox3.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-cox3.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-cox3.tgz mt-Liliopsida-cox3)
+`
+2020-03-20 11:45:42,209 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-atp4 -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-atp4.gb 7
+new_species.pl --species=mt-Liliopsida-atp4
+etraining --species=mt-Liliopsida-atp4 /dev/shm/tmp/mt-Liliopsida/trng/train-atp4.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-atp4 /dev/shm/tmp/mt-Liliopsida/trng/train-atp4.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-atp4.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-atp4 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-atp4.gb.train && rm -r tmp_opt_mt-Liliopsida-atp4
+#etraining --species=mt-Liliopsida-atp4 /dev/shm/tmp/mt-Liliopsida/trng/train-atp4.gb.train
+#augustus --species=mt-Liliopsida-atp4 /dev/shm/tmp/mt-Liliopsida/trng/train-atp4.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-atp4.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-atp4.tgz mt-Liliopsida-atp4)
+`
+2020-03-20 11:45:45,567 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-atp1 -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-atp1.gb 7
+new_species.pl --species=mt-Liliopsida-atp1
+etraining --species=mt-Liliopsida-atp1 /dev/shm/tmp/mt-Liliopsida/trng/train-atp1.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-atp1 /dev/shm/tmp/mt-Liliopsida/trng/train-atp1.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-atp1.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-atp1 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-atp1.gb.train && rm -r tmp_opt_mt-Liliopsida-atp1
+#etraining --species=mt-Liliopsida-atp1 /dev/shm/tmp/mt-Liliopsida/trng/train-atp1.gb.train
+#augustus --species=mt-Liliopsida-atp1 /dev/shm/tmp/mt-Liliopsida/trng/train-atp1.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-atp1.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-atp1.tgz mt-Liliopsida-atp1)
+`
+2020-03-20 11:45:49,110 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-matR -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-matR.gb 3
+new_species.pl --species=mt-Liliopsida-matR
+etraining --species=mt-Liliopsida-matR /dev/shm/tmp/mt-Liliopsida/trng/train-matR.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-matR /dev/shm/tmp/mt-Liliopsida/trng/train-matR.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-matR.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-matR --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-matR.gb.train && rm -r tmp_opt_mt-Liliopsida-matR
+#etraining --species=mt-Liliopsida-matR /dev/shm/tmp/mt-Liliopsida/trng/train-matR.gb.train
+#augustus --species=mt-Liliopsida-matR /dev/shm/tmp/mt-Liliopsida/trng/train-matR.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-matR.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-matR.tgz mt-Liliopsida-matR)
+`
+2020-03-20 11:45:52,319 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-cox1 -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-cox1.gb 7
+new_species.pl --species=mt-Liliopsida-cox1
+etraining --species=mt-Liliopsida-cox1 /dev/shm/tmp/mt-Liliopsida/trng/train-cox1.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-cox1 /dev/shm/tmp/mt-Liliopsida/trng/train-cox1.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-cox1.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-cox1 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-cox1.gb.train && rm -r tmp_opt_mt-Liliopsida-cox1
+#etraining --species=mt-Liliopsida-cox1 /dev/shm/tmp/mt-Liliopsida/trng/train-cox1.gb.train
+#augustus --species=mt-Liliopsida-cox1 /dev/shm/tmp/mt-Liliopsida/trng/train-cox1.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-cox1.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-cox1.tgz mt-Liliopsida-cox1)
+`
+2020-03-20 11:45:55,989 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-nad3 -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-nad3.gb 7
+new_species.pl --species=mt-Liliopsida-nad3
+etraining --species=mt-Liliopsida-nad3 /dev/shm/tmp/mt-Liliopsida/trng/train-nad3.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-nad3 /dev/shm/tmp/mt-Liliopsida/trng/train-nad3.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-nad3.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-nad3 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-nad3.gb.train && rm -r tmp_opt_mt-Liliopsida-nad3
+#etraining --species=mt-Liliopsida-nad3 /dev/shm/tmp/mt-Liliopsida/trng/train-nad3.gb.train
+#augustus --species=mt-Liliopsida-nad3 /dev/shm/tmp/mt-Liliopsida/trng/train-nad3.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-nad3.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-nad3.tgz mt-Liliopsida-nad3)
+`
+2020-03-20 11:45:59,381 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-rps12 -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-rps12.gb 7
+new_species.pl --species=mt-Liliopsida-rps12
+etraining --species=mt-Liliopsida-rps12 /dev/shm/tmp/mt-Liliopsida/trng/train-rps12.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-rps12 /dev/shm/tmp/mt-Liliopsida/trng/train-rps12.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-rps12.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-rps12 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-rps12.gb.train && rm -r tmp_opt_mt-Liliopsida-rps12
+#etraining --species=mt-Liliopsida-rps12 /dev/shm/tmp/mt-Liliopsida/trng/train-rps12.gb.train
+#augustus --species=mt-Liliopsida-rps12 /dev/shm/tmp/mt-Liliopsida/trng/train-rps12.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-rps12.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-rps12.tgz mt-Liliopsida-rps12)
+`
+2020-03-20 11:46:02,771 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-cob -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-cob.gb 6
+new_species.pl --species=mt-Liliopsida-cob
+etraining --species=mt-Liliopsida-cob /dev/shm/tmp/mt-Liliopsida/trng/train-cob.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-cob /dev/shm/tmp/mt-Liliopsida/trng/train-cob.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-cob.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-cob --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-cob.gb.train && rm -r tmp_opt_mt-Liliopsida-cob
+#etraining --species=mt-Liliopsida-cob /dev/shm/tmp/mt-Liliopsida/trng/train-cob.gb.train
+#augustus --species=mt-Liliopsida-cob /dev/shm/tmp/mt-Liliopsida/trng/train-cob.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-cob.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-cob.tgz mt-Liliopsida-cob)
+`
+2020-03-20 11:46:06,156 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-nad2 -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-nad2.gb 6
+new_species.pl --species=mt-Liliopsida-nad2
+etraining --species=mt-Liliopsida-nad2 /dev/shm/tmp/mt-Liliopsida/trng/train-nad2.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-nad2 /dev/shm/tmp/mt-Liliopsida/trng/train-nad2.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-nad2.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-nad2 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-nad2.gb.train && rm -r tmp_opt_mt-Liliopsida-nad2
+#etraining --species=mt-Liliopsida-nad2 /dev/shm/tmp/mt-Liliopsida/trng/train-nad2.gb.train
+#augustus --species=mt-Liliopsida-nad2 /dev/shm/tmp/mt-Liliopsida/trng/train-nad2.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-nad2.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-nad2.tgz mt-Liliopsida-nad2)
+`
+2020-03-20 11:46:11,523 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-nad5 -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-nad5.gb 6
+new_species.pl --species=mt-Liliopsida-nad5
+etraining --species=mt-Liliopsida-nad5 /dev/shm/tmp/mt-Liliopsida/trng/train-nad5.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-nad5 /dev/shm/tmp/mt-Liliopsida/trng/train-nad5.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-nad5.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-nad5 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-nad5.gb.train && rm -r tmp_opt_mt-Liliopsida-nad5
+#etraining --species=mt-Liliopsida-nad5 /dev/shm/tmp/mt-Liliopsida/trng/train-nad5.gb.train
+#augustus --species=mt-Liliopsida-nad5 /dev/shm/tmp/mt-Liliopsida/trng/train-nad5.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-nad5.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-nad5.tgz mt-Liliopsida-nad5)
+`
+2020-03-20 11:46:16,887 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-nad4L -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-nad4L.gb 6
+new_species.pl --species=mt-Liliopsida-nad4L
+etraining --species=mt-Liliopsida-nad4L /dev/shm/tmp/mt-Liliopsida/trng/train-nad4L.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-nad4L /dev/shm/tmp/mt-Liliopsida/trng/train-nad4L.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-nad4L.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-nad4L --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-nad4L.gb.train && rm -r tmp_opt_mt-Liliopsida-nad4L
+#etraining --species=mt-Liliopsida-nad4L /dev/shm/tmp/mt-Liliopsida/trng/train-nad4L.gb.train
+#augustus --species=mt-Liliopsida-nad4L /dev/shm/tmp/mt-Liliopsida/trng/train-nad4L.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-nad4L.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-nad4L.tgz mt-Liliopsida-nad4L)
+`
+2020-03-20 11:46:20,127 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-nad4 -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-nad4.gb 6
+new_species.pl --species=mt-Liliopsida-nad4
+etraining --species=mt-Liliopsida-nad4 /dev/shm/tmp/mt-Liliopsida/trng/train-nad4.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-nad4 /dev/shm/tmp/mt-Liliopsida/trng/train-nad4.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-nad4.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-nad4 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-nad4.gb.train && rm -r tmp_opt_mt-Liliopsida-nad4
+#etraining --species=mt-Liliopsida-nad4 /dev/shm/tmp/mt-Liliopsida/trng/train-nad4.gb.train
+#augustus --species=mt-Liliopsida-nad4 /dev/shm/tmp/mt-Liliopsida/trng/train-nad4.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-nad4.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-nad4.tgz mt-Liliopsida-nad4)
+`
+2020-03-20 11:46:25,421 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-rps7 -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-rps7.gb 6
+new_species.pl --species=mt-Liliopsida-rps7
+etraining --species=mt-Liliopsida-rps7 /dev/shm/tmp/mt-Liliopsida/trng/train-rps7.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-rps7 /dev/shm/tmp/mt-Liliopsida/trng/train-rps7.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-rps7.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-rps7 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-rps7.gb.train && rm -r tmp_opt_mt-Liliopsida-rps7
+#etraining --species=mt-Liliopsida-rps7 /dev/shm/tmp/mt-Liliopsida/trng/train-rps7.gb.train
+#augustus --species=mt-Liliopsida-rps7 /dev/shm/tmp/mt-Liliopsida/trng/train-rps7.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-rps7.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-rps7.tgz mt-Liliopsida-rps7)
+`
+2020-03-20 11:46:28,510 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-ccmB -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-ccmB.gb 7
+new_species.pl --species=mt-Liliopsida-ccmB
+etraining --species=mt-Liliopsida-ccmB /dev/shm/tmp/mt-Liliopsida/trng/train-ccmB.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-ccmB /dev/shm/tmp/mt-Liliopsida/trng/train-ccmB.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-ccmB.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-ccmB --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-ccmB.gb.train && rm -r tmp_opt_mt-Liliopsida-ccmB
+#etraining --species=mt-Liliopsida-ccmB /dev/shm/tmp/mt-Liliopsida/trng/train-ccmB.gb.train
+#augustus --species=mt-Liliopsida-ccmB /dev/shm/tmp/mt-Liliopsida/trng/train-ccmB.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-ccmB.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-ccmB.tgz mt-Liliopsida-ccmB)
+`
+2020-03-20 11:46:31,821 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-atp9 -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-atp9.gb 6
+new_species.pl --species=mt-Liliopsida-atp9
+etraining --species=mt-Liliopsida-atp9 /dev/shm/tmp/mt-Liliopsida/trng/train-atp9.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-atp9 /dev/shm/tmp/mt-Liliopsida/trng/train-atp9.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-atp9.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-atp9 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-atp9.gb.train && rm -r tmp_opt_mt-Liliopsida-atp9
+#etraining --species=mt-Liliopsida-atp9 /dev/shm/tmp/mt-Liliopsida/trng/train-atp9.gb.train
+#augustus --species=mt-Liliopsida-atp9 /dev/shm/tmp/mt-Liliopsida/trng/train-atp9.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-atp9.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-atp9.tgz mt-Liliopsida-atp9)
+`
+2020-03-20 11:46:35,241 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-rps3 -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-rps3.gb 6
+new_species.pl --species=mt-Liliopsida-rps3
+etraining --species=mt-Liliopsida-rps3 /dev/shm/tmp/mt-Liliopsida/trng/train-rps3.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-rps3 /dev/shm/tmp/mt-Liliopsida/trng/train-rps3.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-rps3.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-rps3 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-rps3.gb.train && rm -r tmp_opt_mt-Liliopsida-rps3
+#etraining --species=mt-Liliopsida-rps3 /dev/shm/tmp/mt-Liliopsida/trng/train-rps3.gb.train
+#augustus --species=mt-Liliopsida-rps3 /dev/shm/tmp/mt-Liliopsida/trng/train-rps3.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-rps3.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-rps3.tgz mt-Liliopsida-rps3)
+`
+2020-03-20 11:46:39,110 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-nad1 -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-nad1.gb 5
+new_species.pl --species=mt-Liliopsida-nad1
+etraining --species=mt-Liliopsida-nad1 /dev/shm/tmp/mt-Liliopsida/trng/train-nad1.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-nad1 /dev/shm/tmp/mt-Liliopsida/trng/train-nad1.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-nad1.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-nad1 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-nad1.gb.train && rm -r tmp_opt_mt-Liliopsida-nad1
+#etraining --species=mt-Liliopsida-nad1 /dev/shm/tmp/mt-Liliopsida/trng/train-nad1.gb.train
+#augustus --species=mt-Liliopsida-nad1 /dev/shm/tmp/mt-Liliopsida/trng/train-nad1.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-nad1.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-nad1.tgz mt-Liliopsida-nad1)
+`
+2020-03-20 11:46:43,842 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-nad7 -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-nad7.gb 6
+new_species.pl --species=mt-Liliopsida-nad7
+etraining --species=mt-Liliopsida-nad7 /dev/shm/tmp/mt-Liliopsida/trng/train-nad7.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-nad7 /dev/shm/tmp/mt-Liliopsida/trng/train-nad7.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-nad7.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-nad7 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-nad7.gb.train && rm -r tmp_opt_mt-Liliopsida-nad7
+#etraining --species=mt-Liliopsida-nad7 /dev/shm/tmp/mt-Liliopsida/trng/train-nad7.gb.train
+#augustus --species=mt-Liliopsida-nad7 /dev/shm/tmp/mt-Liliopsida/trng/train-nad7.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-nad7.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-nad7.tgz mt-Liliopsida-nad7)
+`
+2020-03-20 11:46:48,427 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-rps1 -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-rps1.gb 6
+new_species.pl --species=mt-Liliopsida-rps1
+etraining --species=mt-Liliopsida-rps1 /dev/shm/tmp/mt-Liliopsida/trng/train-rps1.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-rps1 /dev/shm/tmp/mt-Liliopsida/trng/train-rps1.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-rps1.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-rps1 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-rps1.gb.train && rm -r tmp_opt_mt-Liliopsida-rps1
+#etraining --species=mt-Liliopsida-rps1 /dev/shm/tmp/mt-Liliopsida/trng/train-rps1.gb.train
+#augustus --species=mt-Liliopsida-rps1 /dev/shm/tmp/mt-Liliopsida/trng/train-rps1.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-rps1.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-rps1.tgz mt-Liliopsida-rps1)
+`
+2020-03-20 11:46:51,631 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-ccmFc -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-ccmFc.gb 6
+new_species.pl --species=mt-Liliopsida-ccmFc
+etraining --species=mt-Liliopsida-ccmFc /dev/shm/tmp/mt-Liliopsida/trng/train-ccmFc.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-ccmFc /dev/shm/tmp/mt-Liliopsida/trng/train-ccmFc.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-ccmFc.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-ccmFc --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-ccmFc.gb.train && rm -r tmp_opt_mt-Liliopsida-ccmFc
+#etraining --species=mt-Liliopsida-ccmFc /dev/shm/tmp/mt-Liliopsida/trng/train-ccmFc.gb.train
+#augustus --species=mt-Liliopsida-ccmFc /dev/shm/tmp/mt-Liliopsida/trng/train-ccmFc.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-ccmFc.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-ccmFc.tgz mt-Liliopsida-ccmFc)
+`
+2020-03-20 11:46:55,159 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-rps2 -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-rps2.gb 6
+new_species.pl --species=mt-Liliopsida-rps2
+etraining --species=mt-Liliopsida-rps2 /dev/shm/tmp/mt-Liliopsida/trng/train-rps2.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-rps2 /dev/shm/tmp/mt-Liliopsida/trng/train-rps2.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-rps2.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-rps2 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-rps2.gb.train && rm -r tmp_opt_mt-Liliopsida-rps2
+#etraining --species=mt-Liliopsida-rps2 /dev/shm/tmp/mt-Liliopsida/trng/train-rps2.gb.train
+#augustus --species=mt-Liliopsida-rps2 /dev/shm/tmp/mt-Liliopsida/trng/train-rps2.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-rps2.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-rps2.tgz mt-Liliopsida-rps2)
+`
+2020-03-20 11:46:58,585 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-rps13 -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-rps13.gb 6
+new_species.pl --species=mt-Liliopsida-rps13
+etraining --species=mt-Liliopsida-rps13 /dev/shm/tmp/mt-Liliopsida/trng/train-rps13.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-rps13 /dev/shm/tmp/mt-Liliopsida/trng/train-rps13.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-rps13.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-rps13 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-rps13.gb.train && rm -r tmp_opt_mt-Liliopsida-rps13
+#etraining --species=mt-Liliopsida-rps13 /dev/shm/tmp/mt-Liliopsida/trng/train-rps13.gb.train
+#augustus --species=mt-Liliopsida-rps13 /dev/shm/tmp/mt-Liliopsida/trng/train-rps13.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-rps13.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-rps13.tgz mt-Liliopsida-rps13)
+`
+2020-03-20 11:47:01,626 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-rps4 -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-rps4.gb 5
+new_species.pl --species=mt-Liliopsida-rps4
+etraining --species=mt-Liliopsida-rps4 /dev/shm/tmp/mt-Liliopsida/trng/train-rps4.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-rps4 /dev/shm/tmp/mt-Liliopsida/trng/train-rps4.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-rps4.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-rps4 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-rps4.gb.train && rm -r tmp_opt_mt-Liliopsida-rps4
+#etraining --species=mt-Liliopsida-rps4 /dev/shm/tmp/mt-Liliopsida/trng/train-rps4.gb.train
+#augustus --species=mt-Liliopsida-rps4 /dev/shm/tmp/mt-Liliopsida/trng/train-rps4.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-rps4.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-rps4.tgz mt-Liliopsida-rps4)
+`
+2020-03-20 11:47:04,783 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-rpl16 -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-rpl16.gb 5
+new_species.pl --species=mt-Liliopsida-rpl16
+etraining --species=mt-Liliopsida-rpl16 /dev/shm/tmp/mt-Liliopsida/trng/train-rpl16.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-rpl16 /dev/shm/tmp/mt-Liliopsida/trng/train-rpl16.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-rpl16.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-rpl16 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-rpl16.gb.train && rm -r tmp_opt_mt-Liliopsida-rpl16
+#etraining --species=mt-Liliopsida-rpl16 /dev/shm/tmp/mt-Liliopsida/trng/train-rpl16.gb.train
+#augustus --species=mt-Liliopsida-rpl16 /dev/shm/tmp/mt-Liliopsida/trng/train-rpl16.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-rpl16.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-rpl16.tgz mt-Liliopsida-rpl16)
+`
+2020-03-20 11:47:07,928 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-rps19 -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-rps19.gb 2
+new_species.pl --species=mt-Liliopsida-rps19
+etraining --species=mt-Liliopsida-rps19 /dev/shm/tmp/mt-Liliopsida/trng/train-rps19.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-rps19 /dev/shm/tmp/mt-Liliopsida/trng/train-rps19.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-rps19.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-rps19 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-rps19.gb.train && rm -r tmp_opt_mt-Liliopsida-rps19
+#etraining --species=mt-Liliopsida-rps19 /dev/shm/tmp/mt-Liliopsida/trng/train-rps19.gb.train
+#augustus --species=mt-Liliopsida-rps19 /dev/shm/tmp/mt-Liliopsida/trng/train-rps19.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-rps19.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-rps19.tgz mt-Liliopsida-rps19)
+`
+2020-03-20 11:47:10,672 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-rpl5 -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-rpl5.gb 3
+new_species.pl --species=mt-Liliopsida-rpl5
+etraining --species=mt-Liliopsida-rpl5 /dev/shm/tmp/mt-Liliopsida/trng/train-rpl5.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-rpl5 /dev/shm/tmp/mt-Liliopsida/trng/train-rpl5.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-rpl5.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-rpl5 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-rpl5.gb.train && rm -r tmp_opt_mt-Liliopsida-rpl5
+#etraining --species=mt-Liliopsida-rpl5 /dev/shm/tmp/mt-Liliopsida/trng/train-rpl5.gb.train
+#augustus --species=mt-Liliopsida-rpl5 /dev/shm/tmp/mt-Liliopsida/trng/train-rpl5.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-rpl5.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-rpl5.tgz mt-Liliopsida-rpl5)
+`
+2020-03-20 11:47:13,552 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-orf173 -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-orf173.gb 2
+new_species.pl --species=mt-Liliopsida-orf173
+etraining --species=mt-Liliopsida-orf173 /dev/shm/tmp/mt-Liliopsida/trng/train-orf173.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-orf173 /dev/shm/tmp/mt-Liliopsida/trng/train-orf173.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-orf173.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-orf173 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-orf173.gb.train && rm -r tmp_opt_mt-Liliopsida-orf173
+#etraining --species=mt-Liliopsida-orf173 /dev/shm/tmp/mt-Liliopsida/trng/train-orf173.gb.train
+#augustus --species=mt-Liliopsida-orf173 /dev/shm/tmp/mt-Liliopsida/trng/train-orf173.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-orf173.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-orf173.tgz mt-Liliopsida-orf173)
+`
+2020-03-20 11:47:16,500 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-rpl2 -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-rpl2.gb 2
+new_species.pl --species=mt-Liliopsida-rpl2
+etraining --species=mt-Liliopsida-rpl2 /dev/shm/tmp/mt-Liliopsida/trng/train-rpl2.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-rpl2 /dev/shm/tmp/mt-Liliopsida/trng/train-rpl2.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-rpl2.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-rpl2 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-rpl2.gb.train && rm -r tmp_opt_mt-Liliopsida-rpl2
+#etraining --species=mt-Liliopsida-rpl2 /dev/shm/tmp/mt-Liliopsida/trng/train-rpl2.gb.train
+#augustus --species=mt-Liliopsida-rpl2 /dev/shm/tmp/mt-Liliopsida/trng/train-rpl2.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-rpl2.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-rpl2.tgz mt-Liliopsida-rpl2)
+`
+2020-03-20 11:47:19,436 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-orf490 -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-orf490.gb 2
+new_species.pl --species=mt-Liliopsida-orf490
+etraining --species=mt-Liliopsida-orf490 /dev/shm/tmp/mt-Liliopsida/trng/train-orf490.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-orf490 /dev/shm/tmp/mt-Liliopsida/trng/train-orf490.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-orf490.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-orf490 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-orf490.gb.train && rm -r tmp_opt_mt-Liliopsida-orf490
+#etraining --species=mt-Liliopsida-orf490 /dev/shm/tmp/mt-Liliopsida/trng/train-orf490.gb.train
+#augustus --species=mt-Liliopsida-orf490 /dev/shm/tmp/mt-Liliopsida/trng/train-orf490.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-orf490.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-orf490.tgz mt-Liliopsida-orf490)
+`
+2020-03-20 11:47:22,350 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-orf284 -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-orf284.gb 1
+new_species.pl --species=mt-Liliopsida-orf284
+etraining --species=mt-Liliopsida-orf284 /dev/shm/tmp/mt-Liliopsida/trng/train-orf284.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-orf284 /dev/shm/tmp/mt-Liliopsida/trng/train-orf284.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-orf284.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-orf284 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-orf284.gb.train && rm -r tmp_opt_mt-Liliopsida-orf284
+#etraining --species=mt-Liliopsida-orf284 /dev/shm/tmp/mt-Liliopsida/trng/train-orf284.gb.train
+#augustus --species=mt-Liliopsida-orf284 /dev/shm/tmp/mt-Liliopsida/trng/train-orf284.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-orf284.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-orf284.tgz mt-Liliopsida-orf284)
+`
+2020-03-20 11:47:24,997 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-orf194 -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-orf194.gb 1
+new_species.pl --species=mt-Liliopsida-orf194
+etraining --species=mt-Liliopsida-orf194 /dev/shm/tmp/mt-Liliopsida/trng/train-orf194.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-orf194 /dev/shm/tmp/mt-Liliopsida/trng/train-orf194.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-orf194.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-orf194 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-orf194.gb.train && rm -r tmp_opt_mt-Liliopsida-orf194
+#etraining --species=mt-Liliopsida-orf194 /dev/shm/tmp/mt-Liliopsida/trng/train-orf194.gb.train
+#augustus --species=mt-Liliopsida-orf194 /dev/shm/tmp/mt-Liliopsida/trng/train-orf194.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-orf194.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-orf194.tgz mt-Liliopsida-orf194)
+`
+2020-03-20 11:47:28,155 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-orf152a -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-orf152a.gb 1
+new_species.pl --species=mt-Liliopsida-orf152a
+etraining --species=mt-Liliopsida-orf152a /dev/shm/tmp/mt-Liliopsida/trng/train-orf152a.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-orf152a /dev/shm/tmp/mt-Liliopsida/trng/train-orf152a.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-orf152a.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-orf152a --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-orf152a.gb.train && rm -r tmp_opt_mt-Liliopsida-orf152a
+#etraining --species=mt-Liliopsida-orf152a /dev/shm/tmp/mt-Liliopsida/trng/train-orf152a.gb.train
+#augustus --species=mt-Liliopsida-orf152a /dev/shm/tmp/mt-Liliopsida/trng/train-orf152a.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-orf152a.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-orf152a.tgz mt-Liliopsida-orf152a)
+`
+2020-03-20 11:47:30,747 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-orf181 -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-orf181.gb 1
+new_species.pl --species=mt-Liliopsida-orf181
+etraining --species=mt-Liliopsida-orf181 /dev/shm/tmp/mt-Liliopsida/trng/train-orf181.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-orf181 /dev/shm/tmp/mt-Liliopsida/trng/train-orf181.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-orf181.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-orf181 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-orf181.gb.train && rm -r tmp_opt_mt-Liliopsida-orf181
+#etraining --species=mt-Liliopsida-orf181 /dev/shm/tmp/mt-Liliopsida/trng/train-orf181.gb.train
+#augustus --species=mt-Liliopsida-orf181 /dev/shm/tmp/mt-Liliopsida/trng/train-orf181.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-orf181.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-orf181.tgz mt-Liliopsida-orf181)
+`
+2020-03-20 11:47:33,631 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-orf153 -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-orf153.gb 1
+new_species.pl --species=mt-Liliopsida-orf153
+etraining --species=mt-Liliopsida-orf153 /dev/shm/tmp/mt-Liliopsida/trng/train-orf153.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-orf153 /dev/shm/tmp/mt-Liliopsida/trng/train-orf153.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-orf153.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-orf153 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-orf153.gb.train && rm -r tmp_opt_mt-Liliopsida-orf153
+#etraining --species=mt-Liliopsida-orf153 /dev/shm/tmp/mt-Liliopsida/trng/train-orf153.gb.train
+#augustus --species=mt-Liliopsida-orf153 /dev/shm/tmp/mt-Liliopsida/trng/train-orf153.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-orf153.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-orf153.tgz mt-Liliopsida-orf153)
+`
+2020-03-20 11:47:36,259 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-orf160 -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-orf160.gb 1
+new_species.pl --species=mt-Liliopsida-orf160
+etraining --species=mt-Liliopsida-orf160 /dev/shm/tmp/mt-Liliopsida/trng/train-orf160.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-orf160 /dev/shm/tmp/mt-Liliopsida/trng/train-orf160.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-orf160.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-orf160 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-orf160.gb.train && rm -r tmp_opt_mt-Liliopsida-orf160
+#etraining --species=mt-Liliopsida-orf160 /dev/shm/tmp/mt-Liliopsida/trng/train-orf160.gb.train
+#augustus --species=mt-Liliopsida-orf160 /dev/shm/tmp/mt-Liliopsida/trng/train-orf160.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-orf160.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-orf160.tgz mt-Liliopsida-orf160)
+`
+2020-03-20 11:47:39,026 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-orf241 -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-orf241.gb 1
+new_species.pl --species=mt-Liliopsida-orf241
+etraining --species=mt-Liliopsida-orf241 /dev/shm/tmp/mt-Liliopsida/trng/train-orf241.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-orf241 /dev/shm/tmp/mt-Liliopsida/trng/train-orf241.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-orf241.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-orf241 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-orf241.gb.train && rm -r tmp_opt_mt-Liliopsida-orf241
+#etraining --species=mt-Liliopsida-orf241 /dev/shm/tmp/mt-Liliopsida/trng/train-orf241.gb.train
+#augustus --species=mt-Liliopsida-orf241 /dev/shm/tmp/mt-Liliopsida/trng/train-orf241.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-orf241.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-orf241.tgz mt-Liliopsida-orf241)
+`
+2020-03-20 11:47:41,566 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-orf162 -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-orf162.gb 1
+new_species.pl --species=mt-Liliopsida-orf162
+etraining --species=mt-Liliopsida-orf162 /dev/shm/tmp/mt-Liliopsida/trng/train-orf162.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-orf162 /dev/shm/tmp/mt-Liliopsida/trng/train-orf162.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-orf162.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-orf162 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-orf162.gb.train && rm -r tmp_opt_mt-Liliopsida-orf162
+#etraining --species=mt-Liliopsida-orf162 /dev/shm/tmp/mt-Liliopsida/trng/train-orf162.gb.train
+#augustus --species=mt-Liliopsida-orf162 /dev/shm/tmp/mt-Liliopsida/trng/train-orf162.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-orf162.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-orf162.tgz mt-Liliopsida-orf162)
+`
+2020-03-20 11:47:44,554 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-orf161 -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-orf161.gb 1
+new_species.pl --species=mt-Liliopsida-orf161
+etraining --species=mt-Liliopsida-orf161 /dev/shm/tmp/mt-Liliopsida/trng/train-orf161.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-orf161 /dev/shm/tmp/mt-Liliopsida/trng/train-orf161.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-orf161.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-orf161 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-orf161.gb.train && rm -r tmp_opt_mt-Liliopsida-orf161
+#etraining --species=mt-Liliopsida-orf161 /dev/shm/tmp/mt-Liliopsida/trng/train-orf161.gb.train
+#augustus --species=mt-Liliopsida-orf161 /dev/shm/tmp/mt-Liliopsida/trng/train-orf161.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-orf161.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-orf161.tgz mt-Liliopsida-orf161)
+`
+2020-03-20 11:47:47,194 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-orf187 -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-orf187.gb 1
+new_species.pl --species=mt-Liliopsida-orf187
+etraining --species=mt-Liliopsida-orf187 /dev/shm/tmp/mt-Liliopsida/trng/train-orf187.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-orf187 /dev/shm/tmp/mt-Liliopsida/trng/train-orf187.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-orf187.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-orf187 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-orf187.gb.train && rm -r tmp_opt_mt-Liliopsida-orf187
+#etraining --species=mt-Liliopsida-orf187 /dev/shm/tmp/mt-Liliopsida/trng/train-orf187.gb.train
+#augustus --species=mt-Liliopsida-orf187 /dev/shm/tmp/mt-Liliopsida/trng/train-orf187.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-orf187.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-orf187.tgz mt-Liliopsida-orf187)
+`
+2020-03-20 11:47:49,885 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-orf176 -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-orf176.gb 1
+new_species.pl --species=mt-Liliopsida-orf176
+etraining --species=mt-Liliopsida-orf176 /dev/shm/tmp/mt-Liliopsida/trng/train-orf176.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-orf176 /dev/shm/tmp/mt-Liliopsida/trng/train-orf176.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-orf176.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-orf176 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-orf176.gb.train && rm -r tmp_opt_mt-Liliopsida-orf176
+#etraining --species=mt-Liliopsida-orf176 /dev/shm/tmp/mt-Liliopsida/trng/train-orf176.gb.train
+#augustus --species=mt-Liliopsida-orf176 /dev/shm/tmp/mt-Liliopsida/trng/train-orf176.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-orf176.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-orf176.tgz mt-Liliopsida-orf176)
+`
+2020-03-20 11:47:52,500 -INFO- run CMD: `# train
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && rm mt-Liliopsida-orf165 -r)
+randomSplit.pl /dev/shm/tmp/mt-Liliopsida/trng/train-orf165.gb 1
+new_species.pl --species=mt-Liliopsida-orf165
+etraining --species=mt-Liliopsida-orf165 /dev/shm/tmp/mt-Liliopsida/trng/train-orf165.gb.train --translation_table=1
+augustus --species=mt-Liliopsida-orf165 /dev/shm/tmp/mt-Liliopsida/trng/train-orf165.gb.test --translation_table=1 &> /dev/shm/tmp/mt-Liliopsida/trng/train-orf165.gb.train_test1.out
+# optimize
+#optimize_augustus.pl --species=mt-Liliopsida-orf165 --cpus=16 --kfold=8 --rounds=5 /dev/shm/tmp/mt-Liliopsida/trng/train-orf165.gb.train && rm -r tmp_opt_mt-Liliopsida-orf165
+#etraining --species=mt-Liliopsida-orf165 /dev/shm/tmp/mt-Liliopsida/trng/train-orf165.gb.train
+#augustus --species=mt-Liliopsida-orf165 /dev/shm/tmp/mt-Liliopsida/trng/train-orf165.gb.test &> /dev/shm/tmp/mt-Liliopsida/trng/train-orf165.gb.train_test2.out
+(cd /share/home/app/bin/augustus-3.3.1/config/species/ && tar cvzf /dev/shm/tmp/ogap_db/mt-Liliopsida/agst/mt-Liliopsida-orf165.tgz mt-Liliopsida-orf165)
+`
+2020-03-20 11:47:55,018 -INFO- writing ('rRNA', 'tRNA') sequences into /dev/shm/tmp/mt-Liliopsida/rrna
+2020-03-20 11:47:55,168 -INFO- running OrthoFinder to cluster genes
+2020-03-20 11:47:55,168 -INFO- run CMD: `orthofinder.py -f /dev/shm/tmp/mt-Liliopsida/rrna -M msa -T fasttree -t 16 -S blastn -og`
+2020-03-20 11:48:53,769 -INFO- parsing OrthoFinder orthologs
+2020-03-20 11:48:53,770 -INFO- parsing orthologs group into /dev/shm/tmp/mt-Liliopsida/alns
+2020-03-20 11:48:53,788 -INFO- using min_count=3 to get gene name
+2020-03-20 11:48:56,348 -INFO- get gene name `rrn5` from Counter({'rrn5': 15, 'rrn5-1': 3, 'Cocos_nucifera-gene243': 1, 'Allium_cepa-gene62': 1, 'Saccharum_officinarum-gene39': 1, 'Phoenix_dactylifera-gene180': 1})
+2020-03-20 11:48:56,348 -INFO- get product `5S ribosomal RNA` from Counter({'5S ribosomal RNA': 22})
+2020-03-20 11:48:56,349 -INFO- get exon number `1` from Counter({1: 22})
+2020-03-20 11:48:56,349 -INFO- get trans_splicing `False` from Counter({False: 22})
+2020-03-20 11:48:58,546 -INFO- get gene name `rrn18` from Counter({'rrn18': 13, 'rrn18-1': 3, 'rrnS': 1, 'Phoenix_dactylifera-gene179': 1, 'Cocos_nucifera-gene245': 1, 'Saccharum_officinarum-gene37': 1, 'Allium_cepa-gene88': 1})
+2020-03-20 11:48:58,546 -INFO- get product `18S ribosomal RNA` from Counter({'18S ribosomal RNA': 19, 'small subunit ribosomal RNA': 2})
+2020-03-20 11:48:58,547 -INFO- get exon number `1` from Counter({1: 21})
+2020-03-20 11:48:58,547 -INFO- get trans_splicing `False` from Counter({False: 21})
+2020-03-20 11:48:59,986 -INFO- get gene name `trnfM` from Counter({'trnfM': 8, 'trnfM-CAT': 3, 'trnM': 2, 'trnfM-1': 2, 'trnM-cau': 2, 'trnM-CAU': 1, 'trnfM-cau': 1, 'Phoenix_dactylifera-gene69': 1})
+2020-03-20 11:48:59,987 -INFO- get product `tRNA-Met` from Counter({'tRNA-Met': 20})
+2020-03-20 11:48:59,987 -INFO- get exon number `1` from Counter({1: 20})
+2020-03-20 11:48:59,988 -INFO- get trans_splicing `False` from Counter({False: 20})
+2020-03-20 11:49:02,156 -INFO- get gene name `trnQ` from Counter({'trnQ': 10, 'trnQ-TTG': 3, 'trnQ-uug': 3, 'trnQ-1': 3, 'trnQ-UUG': 2, 'Phoenix_dactylifera-gene17': 1})
+2020-03-20 11:49:02,156 -INFO- get product `tRNA-Gln` from Counter({'tRNA-Gln': 21, 'tRNA-Glu': 1})
+2020-03-20 11:49:02,156 -INFO- get exon number `1` from Counter({1: 22})
+2020-03-20 11:49:02,157 -INFO- get trans_splicing `False` from Counter({False: 22})
+2020-03-20 11:49:04,406 -INFO- get gene name `rrn26` from Counter({'rrn26': 12, 'rrn26-1': 4, 'Cocos_nucifera-gene23': 1, 'rrnL': 1, 'Allium_cepa-gene56': 1, 'Saccharum_officinarum-gene88': 1, 'Phoenix_dactylifera-gene68': 1})
+2020-03-20 11:49:04,407 -INFO- get product `26S ribosomal RNA` from Counter({'26S ribosomal RNA': 19, 'large subunit ribosomal RNA': 2})
+2020-03-20 11:49:04,407 -INFO- get exon number `1` from Counter({1: 21})
+2020-03-20 11:49:04,407 -INFO- get trans_splicing `False` from Counter({False: 21})
+2020-03-20 11:49:06,597 -INFO- get gene name `trnD` from Counter({'trnD': 8, 'trnD-1': 5, 'trnD-guc': 3, 'trnD-GTC': 3, 'trnD-GUC': 1, 'Phoenix_dactylifera-gene63': 1, 'trnD-a1': 1})
+2020-03-20 11:49:06,597 -INFO- get product `tRNA-Asp` from Counter({'tRNA-Asp': 21, 'tRNA-Asn': 1})
+2020-03-20 11:49:06,598 -INFO- get exon number `1` from Counter({1: 22})
+2020-03-20 11:49:06,598 -INFO- get trans_splicing `False` from Counter({False: 22})
+2020-03-20 11:49:08,478 -INFO- get gene name `trnE` from Counter({'trnE': 8, 'trnE-1': 4, 'trnE-TTC': 3, 'trnE-uuc': 3, 'trnE-UUC': 2, 'Phoenix_dactylifera-gene55': 1, 'trnE-a1': 1})
+2020-03-20 11:49:08,478 -INFO- get product `tRNA-Glu` from Counter({'tRNA-Glu': 20, 'tRNA-Gln': 2})
+2020-03-20 11:49:08,479 -INFO- get exon number `1` from Counter({1: 22})
+2020-03-20 11:49:08,479 -INFO- get trans_splicing `False` from Counter({False: 22})
+2020-03-20 11:49:11,367 -INFO- get gene name `trnM` from Counter({'trnM': 10, 'trnM-CAT': 3, 'trnM-cp': 2, 'trnM-a': 2, 'trnM-b-cp': 1, 'trnM-CAU': 1, 'trnM-a-1': 1})
+2020-03-20 11:49:11,368 -INFO- get product `tRNA-Met` from Counter({'tRNA-Met': 20})
+2020-03-20 11:49:11,368 -INFO- get exon number `1` from Counter({1: 20})
+2020-03-20 11:49:11,368 -INFO- get trans_splicing `False` from Counter({False: 20})
+2020-03-20 11:49:12,437 -INFO- get gene name `trnI` from Counter({'trnI': 6, 'trnI-1': 3, 'trnM-cau': 3, 'trnI-CAT': 3, 'trnM': 2, 'trnI-a1': 1, 'trnI-AUA': 1, 'trnM-CAU': 1, 'Phoenix_dactylifera-gene62': 1})
+2020-03-20 11:49:12,437 -INFO- get product `tRNA-Ile` from Counter({'tRNA-Ile': 13, 'tRNA-Met': 8})
+2020-03-20 11:49:12,438 -INFO- get exon number `1` from Counter({1: 21})
+2020-03-20 11:49:12,438 -INFO- get trans_splicing `False` from Counter({False: 21})
+2020-03-20 11:49:14,584 -INFO- get gene name `trnP` from Counter({'trnP': 5, 'trnP-a-1': 4, 'trnP-TGG': 3, 'trnP-1': 2, 'Phoenix_dactylifera-gene176': 1, 'trnP-a1': 1, 'trnP-a': 1, 'trnP-UGG': 1})
+2020-03-20 11:49:14,584 -INFO- get product `tRNA-Pro` from Counter({'tRNA-Pro': 18})
+2020-03-20 11:49:14,585 -INFO- get exon number `1` from Counter({1: 18})
+2020-03-20 11:49:14,585 -INFO- get trans_splicing `False` from Counter({False: 18})
+2020-03-20 11:49:15,354 -INFO- get gene name `trnY` from Counter({'trnY': 8, 'trn-Y': 4, 'trnY-GTA': 3, 'trnY-GUA': 2, 'trnY-gua': 2, 'trnY-1': 1, 'Phoenix_dactylifera-gene171': 1})
+2020-03-20 11:49:15,354 -INFO- get product `tRNA-Tyr` from Counter({'tRNA-Tyr': 21})
+2020-03-20 11:49:15,355 -INFO- get exon number `1` from Counter({1: 21})
+2020-03-20 11:49:15,355 -INFO- get trans_splicing `False` from Counter({False: 21})
+2020-03-20 11:49:16,766 -INFO- get gene name `trnK` from Counter({'trnK': 7, 'trnK-1': 4, 'trnK-TTT': 3, 'trnK-UUU': 2, 'Phoenix_dactylifera-gene94': 1})
+2020-03-20 11:49:16,767 -INFO- get product `tRNA-Lys` from Counter({'tRNA-Lys': 17})
+2020-03-20 11:49:16,767 -INFO- get exon number `1` from Counter({1: 17})
+2020-03-20 11:49:16,767 -INFO- get trans_splicing `False` from Counter({False: 17})
+2020-03-20 11:49:17,815 -INFO- get gene name `trnH` from Counter({'trnH': 4, 'trnH-cp': 4, 'trnH-GTG': 3, 'trnH-gug': 2, 'trnH-cp-1': 1, 'trnH-ct': 1, 'trnH-GUG': 1})
+2020-03-20 11:49:17,815 -INFO- get product `tRNA-His` from Counter({'tRNA-His': 16})
+2020-03-20 11:49:17,816 -INFO- get exon number `1` from Counter({1: 16})
+2020-03-20 11:49:17,816 -INFO- get trans_splicing `False` from Counter({False: 16})
+2020-03-20 11:49:18,525 -INFO- get gene name `trnS-b` from Counter({'trnS-b': 4, 'trnS': 4, 'trnS-b-1': 2, 'trnS-TGA': 2, 'Phoenix_dactylifera-gene175': 1, 'trnS-3': 1, 'trnS-1': 1, 'trnS-UGA': 1})
+2020-03-20 11:49:18,525 -INFO- get product `tRNA-Ser` from Counter({'tRNA-Ser': 16})
+2020-03-20 11:49:18,526 -INFO- get exon number `1` from Counter({1: 16})
+2020-03-20 11:49:18,526 -INFO- get trans_splicing `False` from Counter({False: 16})
+2020-03-20 11:49:19,304 -INFO- get gene name `trnF` from Counter({'trnF': 7, 'trnF-cp': 5, 'trnF-GAA': 3, 'trnF-ct': 1})
+2020-03-20 11:49:19,305 -INFO- get product `tRNA-Phe` from Counter({'tRNA-Phe': 16})
+2020-03-20 11:49:19,305 -INFO- get exon number `1` from Counter({1: 16})
+2020-03-20 11:49:19,305 -INFO- get trans_splicing `False` from Counter({False: 16})
+2020-03-20 11:49:20,026 -INFO- get gene name `trnN` from Counter({'trnN': 5, 'trnN-GTT': 3, 'trnN-cp-1': 3, 'trnN-cp': 2, 'trnN-GUU': 1, 'trnN-a1-ct': 1})
+2020-03-20 11:49:20,027 -INFO- get product `tRNA-Asn` from Counter({'tRNA-Asn': 14, 'tRNA-Asp': 1})
+2020-03-20 11:49:20,027 -INFO- get exon number `1` from Counter({1: 15})
+2020-03-20 11:49:20,027 -INFO- get trans_splicing `False` from Counter({False: 15})
+2020-03-20 11:49:20,386 -INFO- get gene name `trnC` from Counter({'trnC': 6, 'trnC-cp': 5, 'trnC-GCA': 3, 'trnC-ct': 1})
+2020-03-20 11:49:20,386 -INFO- get product `tRNA-Cys` from Counter({'tRNA-Cys': 15})
+2020-03-20 11:49:20,387 -INFO- get exon number `1` from Counter({1: 15})
+2020-03-20 11:49:20,387 -INFO- get trans_splicing `False` from Counter({False: 15})
+2020-03-20 11:49:20,747 -INFO- get gene name `trnW` from Counter({'trnW': 7, 'trnW-CCA': 3, 'trnW-cca': 2, 'trnW-cp': 1, 'trnW-cp-1': 1})
+2020-03-20 11:49:20,747 -INFO- get product `tRNA-Trp` from Counter({'tRNA-Trp': 13, 'tRNA-Tyr': 1})
+2020-03-20 11:49:20,748 -INFO- get exon number `1` from Counter({1: 14})
+2020-03-20 11:49:20,748 -INFO- get trans_splicing `False` from Counter({False: 14})
+2020-03-20 11:49:20,749 -INFO- get gene name `trnS-a` from Counter({'trnS-a': 6, 'trnS-GCT': 2, 'trnS': 2, 'trnS-3': 1, 'trnS-1': 1, 'trnF-GCT': 1, 'Phoenix_dactylifera-gene178': 1, 'trnS-GCU': 1})
+2020-03-20 11:49:20,749 -INFO- get product `tRNA-Ser` from Counter({'tRNA-Ser': 15})
+2020-03-20 11:49:20,749 -INFO- get exon number `1` from Counter({1: 15})
+2020-03-20 11:49:20,749 -INFO- get trans_splicing `False` from Counter({False: 15})
+2020-03-20 11:49:21,829 -INFO- get gene name `trnS` from Counter({'trnS': 4, 'trnS-GGA': 3, 'trnS-2': 2, 'Phoenix_dactylifera-gene154': 1})
+2020-03-20 11:49:21,829 -INFO- get product `tRNA-Ser` from Counter({'tRNA-Ser': 10})
+2020-03-20 11:49:21,830 -INFO- get exon number `1` from Counter({1: 10})
+2020-03-20 11:49:21,830 -INFO- get trans_splicing `False` from Counter({False: 10})
+2020-03-20 11:49:22,188 -INFO- get gene name `trnP` from Counter({'trnP': 3, 'trnP-b-cp': 3, 'trnP-UGG': 1, 'trnP-b-cp-1': 1, 'trnP-TGG': 1})
+2020-03-20 11:49:22,189 -INFO- get product `tRNA-Pro` from Counter({'tRNA-Pro': 9})
+2020-03-20 11:49:22,189 -INFO- get exon number `1` from Counter({1: 9})
+2020-03-20 11:49:22,189 -INFO- get trans_splicing `False` from Counter({False: 9})
+2020-03-20 11:49:22,547 -INFO- get gene name `trnL` from Counter({'trnL': 2, 'trnL-a': 1, 'trnI': 1, 'trnL-AAC': 1})
+2020-03-20 11:49:22,547 -INFO- get gene name `trnR` from Counter({'trnR': 3, 'trnR-TCT': 2})
+2020-03-20 11:49:22,548 -INFO- get product `tRNA-Arg` from Counter({'tRNA-Arg': 5})
+2020-03-20 11:49:22,548 -INFO- get exon number `1` from Counter({1: 5})
+2020-03-20 11:49:22,548 -INFO- get trans_splicing `False` from Counter({False: 5})
+2020-03-20 11:49:22,548 -INFO- get gene name `trnM-CAU` from Counter({'trnM-CAU': 2, 'trnfM-cau': 1, 'Phoenix_dactylifera-gene149': 1})
+2020-03-20 11:49:22,548 -INFO- get gene name `trnC-gca` from Counter({'trnC-gca': 3, 'trnC-GCA': 1})
+2020-03-20 11:49:22,548 -INFO- get product `tRNA-Cys` from Counter({'tRNA-Cys': 4})
+2020-03-20 11:49:22,549 -INFO- get exon number `1` from Counter({1: 4})
+2020-03-20 11:49:22,549 -INFO- get trans_splicing `False` from Counter({False: 4})
+2020-03-20 11:49:22,979 -INFO- get gene name `trnI-gau` from Counter({'trnI-gau': 1, 'trnI-ct': 1, 'trnI-GAU': 1})
+2020-03-20 11:49:22,980 -INFO- get gene name `trnI` from Counter({'trnI': 1, 'trnI-ct': 1, 'trnM': 1, 'Phoenix_dactylifera-gene49': 1})
+2020-03-20 11:49:22,980 -INFO- get gene name `trnA` from Counter({'trnA': 2, 'trnA-ugc': 1})
+2020-03-20 11:49:22,980 -INFO- get gene name `rrn16-ct` from Counter({'rrn16-ct': 1, 'Cocos_nucifera-gene166': 1, 'rrn16': 1})
+2020-03-20 11:49:22,981 -INFO- get gene name `trnF-GAA` from Counter({'trnF-GAA': 2, 'Phoenix_dactylifera-gene177': 1})
+2020-03-20 11:49:22,981 -INFO- get gene name `trnN-GUU` from Counter({'trnN-GUU': 1, 'trnN': 1})
+2020-03-20 11:49:22,981 -INFO- get gene name `trnT-UGU` from Counter({'trnT-UGU': 1, 'Phoenix_dactylifera-gene155': 1})
+2020-03-20 11:49:22,982 -INFO- get gene name `trnR-ACG` from Counter({'trnR-ACG': 1, 'trnR-b-ct': 1})
+2020-03-20 11:49:22,982 -INFO- get gene name `Phoenix_dactylifera-gene107` from Counter({'Phoenix_dactylifera-gene107': 1, 'trnC-GCA': 1})
+2020-03-20 11:49:22,982 -INFO- get gene name `trnK-UUU` from Counter({'trnK-UUU': 1, 'Phoenix_dactylifera-gene67': 1})
+2020-03-20 11:49:22,982 -INFO- get gene name `trnK` from Counter({'trnK': 2})
+2020-03-20 11:49:22,982 -INFO- get gene name `trnL-b` from Counter({'trnL-b': 1, 'trnC-GCA': 1})
+2020-03-20 11:49:22,985 -INFO- extrat 23 genes: ['rrn5', 'rrn18', 'trnfM', 'trnQ', 'rrn26', 'trnD', 'trnE', 'trnM', 'trnI', 'trnP', 'trnY', 'trnK', 'trnH', 'trnS-b', 'trnF', 'trnN', 'trnC', 'trnW', 'trnS-a', 'trnS', 'trnP-20', 'trnR', 'trnC-gca']
+2020-03-20 11:49:22,985 -INFO- aligning sequences
+2020-03-20 11:53:00,156 -INFO- building hmm profiles

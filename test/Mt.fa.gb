@@ -1,4 +1,4 @@
-LOCUS       Mt                    602121 bp    DNA     circular     15-MAR-2020
+LOCUS       Mt                    602121 bp    DNA     circular     17-MAR-2020
 DEFINITION  Mitochondrion, complete genome.
 ACCESSION   
 VERSION
@@ -13,7 +13,7 @@ REFERENCE   1  (bases 1 to 602121)
 REFERENCE   2  (bases 1 to 602121)
   AUTHORS   Zhang,R.
   TITLE     Direct Submission
-  JOURNAL   Submitted (15-MAR-2020) Bioinformatics, Ori-Gene Co., Ltd.,
+  JOURNAL   Submitted (17-MAR-2020) Bioinformatics, Ori-Gene Co., Ltd.,
             Beijing, China
 FEATURES             Location/Qualifiers
      source          1..602121
@@ -53,11 +53,6 @@ FEATURES             Location/Qualifiers
                      LLYSMDEVVVDPAITIKAIGHQWYRTYEYSDYNSSDEQSLTFDSYTIPEDDLELGQSR
                      LLEVDNRVVVPAKTHLRIIVTSADVPHSWAVPSSGVKCDAVPGRLNQISILVQREGVY
                      YGQCSEICGTNHAFMPIVVEAVPRKDYGSRVSNQLIPQTRGAGI"
-     gene            35561..35629
-                     /gene="trnK-CUU"
-     tRNA            35561..35629
-                     /gene="trnK-CUU"
-                     /product="tRNA-Lys"
      gene            56219..58150
                      /gene="rrnS"
      rRNA            56219..58150
@@ -312,9 +307,9 @@ FEATURES             Location/Qualifiers
                      ITLISCFGEISGSRGMERSILYLISKSSYSISFNPGWGIPCRNDIMLIHVLHGQGRIK
                      K"
      gene            join(307488..308251,309189..309870)
-                     /gene="ccmFc"
+                     /gene="ccmFC"
      CDS             join(307488..308251,309189..309870)
-                     /gene="ccmFc"
+                     /gene="ccmFC"
                      /codon_start=1
                      /product="cytochrome c biogenesis FC"
                      /translation="MVQLHNFFFFITFMVVPRGTAAPVLLKWFVSRDVPTGAPSSNGT
@@ -369,9 +364,9 @@ FEATURES             Location/Qualifiers
                      /gene="trnI-UAU-cp"
                      /product="tRNA-Ile"
      gene            complement(353340..355073)
-                     /gene="ccmFn"
+                     /gene="ccmFN"
      CDS             complement(353340..355073)
-                     /gene="ccmFn"
+                     /gene="ccmFN"
                      /codon_start=1
                      /product="cytochrome c biogenesis FN"
                      /translation="MSIYELFHYSLFPGLFLAFTYNKKQPPAFGAAPAFWCILLSFLG

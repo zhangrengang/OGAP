@@ -6,10 +6,11 @@ import glob
 import argparse
 from collections import Counter, OrderedDict
 from Bio import SeqIO
+from Bio import Phylo
 from Bio.SeqFeature import SeqFeature, FeatureLocation
 from lazy_property import LazyWritableProperty as lazyproperty
 
-from Genbank import GenbankParser
+from Genbank import GenbankParser, format_taxon
 from OrthoFinder import OrthoFinder, OrthoMCLGroupRecord
 from RunCmdsMP import logger, run_cmd, run_job
 from small_tools import mkdirs, rmdirs
@@ -17,11 +18,15 @@ from small_tools import mkdirs, rmdirs
 AUGUSTUS_CONFIG_PATH=os.environ['AUGUSTUS_CONFIG_PATH']
 
 class Database():
-	def __init__(self, organ, taxon=None, dbrootdir=None,
+	def __init__(self, organ=None, taxon=None, dbrootdir=None,
 				gbfiles=None, custom=None, version=None,
 				include_orf=False,
 				tmpdir='/dev/shm/tmp', 
-				ncpu=16,
+				ncpu=24,
+				upper_limit=500,
+				lower_limit=2,
+				exclude_taxa=None,
+				cleanup=True,
 				**kargs):
 		if dbrootdir is None:
 			dbrootdir = self.get_dbdir()
@@ -29,9 +34,9 @@ class Database():
 			if taxon is None:
 				ogtype = '{}-custom'.format(organ, )	# db name and prefix
 			else:
-				ogtype = '{}-{}'.format(organ, taxon)  # e.g. 'mt-Lamiales'
+				ogtype = '{}-{}'.format(organ, format_taxon(taxon))  # e.g. 'mt-Lamiales'
 		else:
-			ogtype = '{}-{}'.format(organ, custom)
+			ogtype = '{}-{}'.format(organ, format_taxon(custom))
 		self.ogtype = ogtype
 		self.organ = organ
 		self.dbrootdir = dbrootdir
@@ -40,7 +45,15 @@ class Database():
 		self.gbfiles = gbfiles
 		self.version = version
 		self.include_orf = include_orf
+		self.exclude_taxa = exclude_taxa
+		self.cleanup = cleanup
+		if self.exclude_taxa is not None:
+			ogtype += '_ex_{}'.format(
+					format_taxon( 
+						'_'.join(self.exclude_taxa)))
 
+		self.upper_limit = upper_limit
+		self.lower_limit = lower_limit
 		# folders
 		dbdir = '{}/{}'.format(dbrootdir, ogtype)
 		tmpdir = '{}/{}'.format(tmpdir, ogtype)
@@ -60,9 +73,40 @@ class Database():
 		self.vesion_file = '{}/version'.format(self.dbdir)
 		self.cds_file = '{}/cds.info'.format(self.dbdir)
 		self.rna_file = '{}/rna.info'.format(self.dbdir)
-		self.species_file = '{}/species.info'.format(self.dbdir)
+		self.species_file = '{}/genome.info'.format(self.dbdir)
 		self.taxonomy_file = '{}/taxonomy.info'.format(self.dbdir)
+		self.name_mapping = '{}/{}.name_mapping'.format(self.dbrootdir, self.organ, )
+		self.taxonomy_dbfile = '{}/taxonomy.json.gz'.format(self.dbrootdir)
+
+	def listdb(self):
+		for db in self.getdb():
+			print >> sys.stdout, db.organ, db.taxon
+	def getdb(self):
+		for name in sorted(os.listdir(self.dbrootdir)):
+			filename = os.path.join(self.dbrootdir, name)
+			if os.path.isdir(filename):
+				organ, taxon = name.split('-')[:2]
+				yield Database(organ=organ, taxon=taxon)
+	def select_db(self, organism):
+		lineage = self.get_taxonomy(organism)
+		dbs = []
+		for db in self.getdb():
+			if not db.organ == self.organ:
+				continue
+			try: db.index = lineage.index(db.taxon)
+			except ValueError: continue
+			dbs += [db]
+		return max(dbs, key=lambda x: x.index)
+	
+	def get_taxonomy(self, organism):
+		cmd = 'ete3 ncbiquery --search "{}" --info'.format(organism)
+		stdout, stderr, status = run_cmd(cmd, log=True)
+		for info in Ete3TaxonomyInfo(stdout):
+			return info.named_lineage
+			
 	def checkdb(self):
+		# dbdir
+		logger.info('using database `{}` in `{}`'.format(self.ogtype, self.dbdir))
 		# version
 		self.version = open(self.vesion_file).read().strip()
 		logger.info('database version: `{}`'.format(self.version))
@@ -79,29 +123,162 @@ class Database():
 		self.rna_info = GeneInfo(self.rna_file)
 		self.cds_genes = self.cds_info.genes
 		self.rna_genes = self.rna_info.genes
+		self.name_info = NameInfo(self.name_mapping)
+		name_dict = self.name_info.dict
+		# update unified gene name and product
+		for gene in self.cds_genes + self.rna_genes:
+			name, product = gene.name, gene.product
+			key = NameInfo.convert_name(name)
+			if not name.startswith('orf') and key not in name_dict:
+				logger.warn('{} is not found in name mapping'.format(name))
+				continue
+			mapped_gene = name_dict[key]
+			mapped_name, mapped_product = mapped_gene.name, mapped_gene.product
+			if name != mapped_name:
+				logger.info('mapping gene name {} -> {}'.format(name, mapped_name))
+			if product != mapped_product:
+				logger.info('mapping gene product {} -> {}'.format(product, mapped_product))
+			gene.name, gene.product = mapped_name, mapped_product
+		
 		logger.info('{} CDS, {} RNA'.format(len(self.cds_genes), len(self.rna_genes)))
 		self.cds_hmmfiles = [self.get_hmmfile(gene) for gene in self.cds_genes]
 		self.rna_hmmfiles = [self.get_hmmfile(gene) for gene in self.rna_genes]
 		self.cds_pflfiles = [self.get_pflfile(gene) for gene in self.cds_genes]
-		self.check_exists(*(self.cds_hmmfiles+self.rna_hmmfiles+self.cds_pflfiles))
 		self.augustus_species = [self.get_augustus_species(gene) for gene in self.cds_genes]
-		
+		# untar
+		self.untgz_dirs(self.seqdir, self.hmmdir, self.pfldir, self.tnddir)
+		self.check_exists(*(self.cds_hmmfiles+self.rna_hmmfiles+self.cds_pflfiles))
+
 	def check_exists(self, *files):
 		for file in files:
 			if not os.path.exists(file):
 				logger.warn('{} do not exists'.format(file))
+	def prune_by_rank(self, records, rank, topn):
+		d_records = {}  # by rank
+		for record in records:
+			taxon = getattr(record, rank)
+			if taxon is None:
+				continue
+			try: d_records[taxon] += [record]
+			except KeyError: d_records[taxon] = [record]
+		reserved_records = []
+		for taxon, bin_records in d_records.items():
+			bin_records = sorted(bin_records, key=lambda x:-x.name_count)
+			reserved_records += bin_records[:topn]
+		return reserved_records
+		
+	def prune(self, records):
+		organisms = {record.organism for record in records}
+		norganisms = len(organisms)
+		#logger.info('total {} organisms'.format(norganisms))
+		if norganisms <= self.upper_limit:
+			return records
+		elif norganisms <= self.lower_limit:
+			logger.error('too less records to build database')
+		# prune by genus evenly
+		rank = 'genus'
+		genera = {record.genus for record in records}
+		ngenera = len(genera)
+		if ngenera <= self.upper_limit:
+			n_per_genus = int(round(1.0*self.upper_limit / ngenera, 0))
+			logger.info('pruning by {} with > {} organisms'.format(rank, n_per_genus))
+			return self.prune_by_rank(records, rank, n_per_genus)
+		else:
+			records = self.prune_by_rank(records, rank, 1)
+		
+		# prune by family evenly
+		rank = 'family'
+		families = {record.family for record in records if record.family is not None}
+		nfamily = len(families)
+		if nfamily <= self.upper_limit:
+			n_per_family = int(round(1.0*self.upper_limit / nfamily, 0))
+			logger.info('pruning by {} with > {} organisms'.format(rank, n_per_family))
+			d_records = {}  # by family
+			return self.prune_by_rank(records, rank, n_per_family)
+		else:
+			records = self.prune_by_rank(records, rank, 1)
+		
+		# prune by order evenly, regardless of upper limit
+		rank = 'order'
+		orders = {record.order for record in records if record.order is not None}
+		norder = len(orders)
+		n_per_order = int(round(1.0*self.upper_limit / norder, 0))
+		if n_per_order < 1:
+			n_per_order = 1
+		logger.info('pruning by {} with > {} organisms'.format(rank, n_per_order))
+		return self.prune_by_rank(records, rank, n_per_order)
+	
+	def get_species_tree(self, taxa):
+		tmptree = '{}/species.tree.tmp'.format(self.tmpdir)
+		self.get_tree(taxa, tmptree)
+		species_tree = '{}/species.treefile'.format(self.dbdir)
+		self.convert_tree(tmptree, species_tree)
+		return species_tree
+		
+	def count_taxa(self):
+		gb = GenbankParser(self.gbfiles)
+		records = [record.prune() for record in gb.filter_by_taxon(taxon=self.taxon)]
+		self.count_rank(records)
+	
+	def count_rank(self, records):
+		organisms = {record.organism for record in records}
+		norganisms = len(organisms)
+		genera = {record.genus for record in records}
+		ngenera = len(genera)
+		families = {record.family for record in records if record.family is not None}
+		nfamily = len(families)
+		orders = {record.order for record in records if record.order is not None}
+		norder = len(orders)
+		info = '{} records: {} orders, {} families, {} genera, {} organism'.format(
+				len(records), norder, nfamily, ngenera, norganisms)
+		logger.info(info)
+		return len(records)
+		
+	def tgz_dirs(self, *dirs):
+		ckp = ''
+		cmd = 'cd {dirname} && tar czf {basename}.tgz {basename} --remove-files'
+		self.tar_dirs(cmd, ckp, *dirs)
+	def untgz_dirs(self, *dirs):
+		ckp = '{basename}'
+		cmd = 'cd {dirname} && tar xzf {basename}.tgz'
+		self.tar_dirs(cmd, ckp, *dirs)
+	def tar_dirs(self, cmd, ckp, *dirs):
+		for _dir in dirs:
+			_dir = _dir.rstrip('/')
+			dirname, basename = os.path.dirname(_dir), os.path.basename(_dir)
+			_ckp = ckp.format(basename=basename)
+			if not os.path.exists(_ckp):
+				_cmd = cmd.format(dirname=dirname, basename=basename)
+				run_cmd(_cmd)
 	def makedb(self):
 		rmdirs(self.pepdir, self.rnadir)  # for OrthoFinder
-		mkdirs(self.dbdir, self.pepdir, self.rnadir, self.alndir, \
-				self.msadir, self.hmmdir, self.pfldir, self.trndir, self.tnddir)
+		mkdirs(self.pepdir, self.rnadir, self.alndir, self.msadir, self.trndir) 
+		mkdirs(self.seqdir, self.hmmdir, self.pfldir, self.tnddir)
 		logger.info('parsing {}'.format(self.gbfiles))
 		gb = GenbankParser(self.gbfiles)
 		if self.version is None:
 			version = time.strftime("%Y-%m-%d", time.gmtime(os.path.getmtime(self.gbfiles[0])))
-			self.version = 'RefSeq {}'.format(version)
+			today = time.strftime("%Y-%m-%d", time.gmtime(time.time()))
+			self.version = 'RefSeq {}: build {}'.format(version, today)
+			logger.info('version: {}'.format(self.version))
 			with open(self.vesion_file, 'w') as fout:
 				print >>fout, self.version
 		ofbin = 'orthofinder.py'
+		# read into MEM
+		records = list(gb.filter_by_taxon(taxon=self.taxon, 
+							exclude=self.exclude_taxa,
+							taxonomy_dbfile=self.taxonomy_dbfile))
+		# count
+		self.count_rank(records)
+		# prune
+		logger.info('pruning taxa')
+		records = self.prune(records)
+		self.count_rank(records)
+
+		taxa = [record.organism for record in records]
+		logger.info('building taxonomy tree')
+		sp_tree = self.get_species_tree(set(taxa))
+		logger.info('using speceis tree `{}`'.format(sp_tree))
 		for feat_type, seqdir, prefix, of_opts, build_pfl, min_ratio, cdhit, out_info in zip(
 				['protein', ('rRNA','tRNA')],
 				[self.pepdir, self.rnadir],
@@ -115,29 +292,35 @@ class Database():
 			self.cdhit = cdhit
 			logger.info('writing {} sequences into {}'.format(feat_type, seqdir))
 			mkdirs(seqdir)
-			records = list(gb.filter_by_taxon(taxon=self.taxon))	# read into MEM
+			
 			features = gb.write_seqs_by_taxon(seqdir, feat_type=feat_type, records=records, taxon=self.taxon)
-			gb.ntaxa = len(set(gb.taxa))	# some taxa have >1 records
+			ntaxa = len(set(taxa))	# some taxa have >1 records
 			if out_info:
-				logger.info('{} taxa: {}'.format(gb.ntaxa, sorted(set(gb.taxa))))
+				logger.info('{} taxa: {}'.format(ntaxa, sorted(set(taxa))))
+				# species_info
 				with open(self.species_file, 'w') as fout:
 					SpeciesInfoLine().write(fout)
-					for taxon, acc, taxonomy in sorted(zip(gb.taxa, gb.accs, gb.taxonomy)):
-						taxonomy = ';'.join(taxonomy)
-						line = [acc, taxon, taxonomy]
+					for rc in sorted(records, key=lambda x: x.organism):
+						taxonomy = ';'.join(rc.taxonomy)
+						line = [rc.id, rc.organism, rc.name_count, rc.cds_count, rc.trn_count, 
+								rc.rrn_count, rc.length, rc.GC, taxonomy]
 						SpeciesInfoLine(line).write(fout)
-				taxa = [';'.join(tax) for tax in gb.tax]
-				taxon, taxon_count = self.get_most_common(taxa)
+				# taxonomy_info
+				taxonomy = [';'.join(tax) for tax in gb.tax]
+				taxon, taxon_count = self.get_most_common(taxonomy)
 				logger.info('get taxon `{}` from {}'.format(taxon, taxon_count))
 				tables = [feat.transl_table for feat in features]
 				transl_table, table_count = self.get_most_common(tables)
-				logger.info('get transl_table `{}` from {}'.format(table, table_count))
-				line = [self.ogtype, transl_table, taxon]
+				logger.info('get transl_table `{}` from {}'.format(transl_table, table_count))
+				line = [self.organ, self.ogtype, transl_table, taxon]
 				with open(self.taxonomy_file, 'w') as fout:
 					TaxonomyInfoLine().write(fout)
 					TaxonomyInfoLine(line).write(fout)
 
 			logger.info('running OrthoFinder to cluster genes')
+		#	if sp_tree is not None:
+		#		of_opts += ' -s {}'.format(sp_tree)
+			of_opts += ' -og'
 			cmd = '{} -f {} -M msa -T fasttree -t {} {}'.format(ofbin, seqdir, self.ncpu, of_opts)
 			run_cmd(cmd, log=True)
 
@@ -145,22 +328,26 @@ class Database():
 			orfdir = glob.glob('{}/OrthoFinder/*/'.format(seqdir))[0]
 			orf = OrthoFinder(orfdir)
 			logger.info('parsing orthologs group into {}'.format(self.alndir))
-			min_count = gb.ntaxa * min_ratio
-			self.min_count = 3 if min_count < 3 else min_count
+			min_count = ntaxa * min_ratio
+			self.min_count = max(self.lower_limit, min_count)
 			info_file = prefix + '.raw'
 
 			# parse orthologs, bin sequences by orthologs
 			with open(info_file, 'w') as fout:
 				gene_names, seqfiles, groups = \
 						self.parse_orthologs(orf, features, self.alndir, fout) # names
+			self.check_unique(seqfiles)
 			if not os.path.exists(prefix):
 				os.rename(info_file, prefix)
-			logger.info('extrat {} genes: {}'.format(len(gene_names), gene_names))		# gene id
+			logger.info('extrat {} genes: {}'.format(
+					len(gene_names), sorted(gene_names)))	# gene id
 
 			logger.info('aligning sequences')
 			self.alnfiles = self.align_seqs(gene_names, seqfiles, outdir=self.msadir)
+			self.check_unique(self.alnfiles)
 			logger.info('building hmm profiles')
 			self.hmmfiles = self.hmmbuild_alns(gene_names, self.alnfiles, outdir=self.hmmdir)
+			self.check_unique(self.hmmfiles)
 			if build_pfl:
 				logger.info('building augustus profiles')
 				self.pflfiles = self.msa2prfl(gene_names, self.alnfiles, outdir=self.pfldir)
@@ -174,7 +361,14 @@ class Database():
 						gene_number = self.get_augustus_training_set(records, training_features, fout)
 					sepcies = '{}-{}'.format(self.ogtype, gene_name)
 					self.train_augustus(train_set=train_db, species=sepcies, outdir=self.tnddir,
-						gene_number=gene_number, ncpu=self.ncpu, transl_table=table)
+						gene_number=gene_number, ncpu=self.ncpu, transl_table=transl_table)
+		# tar
+		self.tgz_dirs(self.seqdir, self.msadir, self.hmmdir, self.pfldir, self.tnddir)
+		if self.cleanup:
+			rmdirs(self.tmpdir)
+	def check_unique(self, files):
+		if len(files) != len(set(files)):
+			logger.error('{}..are not unique'.format(files[0]))
 
 	def parse_orthologs(self, orf, features, outdir, fout):
 		d_seqs = {feat.id: feat.seq for feat in features}
@@ -189,16 +383,19 @@ class Database():
 		d_genes = {}
 		lines = []
 		gene_names, outseqs, groups = [], [], []
-		for i, group in enumerate(orf.get_orthologs_cluster()):		# group by feat.id
+#		for i, group in enumerate(orf.get_orthologs_cluster()):		# group by feat.id
+		for i, group in enumerate(orf.get_orthogroups()):
 			gene_name, name_count = self.get_gene_name(group, d_names,)
 			tmpfix = '{}/{}.para'.format(outdir, gene_name)
 			group = self.filter_paralogs(group, d_seqs, tmpfix)
 			# name
 			gene_name, name_count = self.get_gene_name(group, d_names,)
+			gene_name = NameInfo.get_trn_name(gene_name, name_count)
 			logger.info('get gene name `{}` from {}'.format(gene_name, name_count))
-			max_count = name_count[gene_name]
+			max_count = max(name_count.values()) #name_count[gene_name]
 			if max_count < self.min_count:
 				continue
+			logger.info('using gene name `{}`'.format(gene_name))
 			gene_id = gene_name
 			if gene_id in d_genes:   # for duplicated gene names
 				gene_id = '{}-{}'.format(gene_name, i)
@@ -206,9 +403,13 @@ class Database():
 
 			# product
 			product, product_count = self.get_gene_name(group, d_products)
-			logger.info('get product `{}` from {}'.format(product, product_count))
+#			logger.info('get product `{}` from {}'.format(product, product_count))
+			top_products = product_count.most_common(25)
+			top_products = ','.join(['{}:{}'.format(name, count) \
+							for name, count in top_products])
 			top_names = name_count.most_common(25)
-			top_names = ','.join(['{}:{}'.format(name, count) for name, count in top_names])
+			top_names = ','.join(['{}:{}'.format(name, count) \
+							for name, count in top_names if len(name)<18])
 			# count
 			gene_count = len(group)
 			species = [gene.split('|')[0] for gene in group]
@@ -219,19 +420,21 @@ class Database():
 			# exon number and trans_splicing
 			nexon, nexon_count = self.get_gene_name(group, d_nexon)
 			trans_splicing, ts_count = self.get_gene_name(group, d_trans_splicing)
-			logger.info('get exon number `{}` from {}'.format(nexon, nexon_count))
-			logger.info('get trans_splicing `{}` from {}'.format(trans_splicing, ts_count))
+#			logger.info('get exon number `{}` from {}'.format(nexon, nexon_count))
+#			logger.info('get trans_splicing `{}` from {}'.format(trans_splicing, ts_count))
 
 			# type
 			seqtype, _ = self.get_gene_name(group, d_types)
 			# write info
 			line = [gene_id, gene_name, product, seqtype, 
 					nexon, trans_splicing,
-					gene_count, species_count, top_names, species]
+					gene_count, species_count, top_names, 
+					top_products, species]
 			lines += [line]
 			# write sequences
-			outseq = self.get_seqfile(gene_name)
-			self.write_orthologs(gene_name, group, d_seqs, outseq)	# by group
+			outseq = self.get_seqfile(gene_id)
+		#	print >>sys.stderr, gene_id, gene_name, group, outseq
+			self.write_orthologs(group, d_seqs, outseq)	# by group
 			outseqs += [outseq]
 			gene_names += [gene_id]
 			groups += [group]
@@ -260,7 +463,7 @@ augustus --species={species} {train_set}.test --translation_table={transl_table}
 			species=species, ncpu=ncpu, kfold=kfold,
 			outdir=outdir, spdir=spdir,
 			transl_table=transl_table)
-		run_cmd(cmd, log=True)
+		run_cmd(cmd, log=False)
 		
 	def get_augustus_training_set(self, records, training_features, fout, flank=1000):
 		'''get small DNA'''
@@ -302,7 +505,7 @@ augustus --species={species} {train_set}.test --translation_table={transl_table}
 	def get_seqfile(self, gene):
 		return '{}/{}.fa'.format(self.seqdir, gene)
 	def get_alnfile(self, gene):
-		return '{}/{}.aln'.format(self.alndir, gene)
+		return '{}/{}.aln'.format(self.msadir, gene)
 	def get_hmmfile(self, gene):
 		return '{}/{}.hmm'.format(self.hmmdir, gene)
 	def get_pflfile(self, gene):
@@ -316,12 +519,12 @@ augustus --species={species} {train_set}.test --translation_table={transl_table}
 			pass
 		elif os.path.exists(species_tgz):
 			cmd = 'cd {spdir} && tar xzf {tgz}'.format(spdir=spdir, tgz=species_tgz)
-			run_cmd(cmd, log=True)
+			run_cmd(cmd, log=False)
 		return species
 	def align_seqs(self, gene_names, seqfiles, outdir):
 		alnfiles = []
 		for gene_name, seqfile in zip(gene_names, seqfiles):
-			outaln = self.get_alnfile(outdir, gene_name)
+			outaln = self.get_alnfile(gene_name)
 #			#cmd = 'mafft --auto {} > {}'.format(seqfile, outaln)
 			cmd = 'mafft --auto {} | prepareAlign | mafft --auto - > {}'.format(seqfile, outaln)
 			run_cmd(cmd)
@@ -330,7 +533,7 @@ augustus --species={species} {train_set}.test --translation_table={transl_table}
 	def hmmbuild_alns(self, gene_names, alnfiles, outdir):
 		hmmfiles = []
 		for gene_name, alnfile in zip(gene_names, alnfiles):
-			outhmm = self.get_hmmfile(outdir, gene_name)
+			outhmm = self.get_hmmfile(gene_name)
 			cmd = 'hmmbuild -n {} {} {}'.format(gene_name, outhmm, alnfile)
 			run_cmd(cmd)
 			hmmfiles += [outhmm]
@@ -338,12 +541,12 @@ augustus --species={species} {train_set}.test --translation_table={transl_table}
 	def msa2prfl(self, gene_names, alnfiles, outdir):
 		prflfiles = []
 		for gene_name, alnfile in zip(gene_names, alnfiles):
-			outprfl = self.get_prflfile(outdir, gene_name)
+			outprfl = self.get_pflfile(gene_name)
 			cmd = 'msa2prfl.pl {} --setname={} > {}'.format(alnfile, gene_name, outprfl)
 			run_cmd(cmd)
 			prflfiles += [outprfl]
 		return prflfiles
-	def write_orthologs(self, gene_name, group, d_seqs, outseq):
+	def write_orthologs(self, group, d_seqs, outseq):
 		with open(outseq, 'w') as fout:
 			for gene in sorted(group):
 				print >>fout, '>{}\n{}'.format(gene, d_seqs[gene])
@@ -390,10 +593,21 @@ augustus --species={species} {train_set}.test --translation_table={transl_table}
 		for clade in tree.get_terminals() + tree.get_nonterminals():
 			try:
 				name = re.compile(r':name=(.*?) \- \d+:rank').search(clade.comment).groups()[0]
-				name = name.replace(' ', '_')
+				#name = name.replace(' ', '_')
+				name = format_taxon(name)
 				clade.name = name
 				clade.comment = None
-			except TypeError: pass
+				clade.confidence = None
+				clade.branch_length = 0.1
+			except TypeError:
+				#tree.root_with_outgroup(clade)
+				pass
+	#	depths = [(clade, depth) for clade, depth in tree.depths().items() if depth > 0]	# clade.clades
+	#	clade = min(depths, key=lambda x:x[1])[0]
+	#	tree.root_with_outgroup(clade)
+	#	print >>sys.stderr, 'rooted by {}'.format(clade)
+#		tree.root_at_midpoint()
+		#tree.rooted = True
 		Phylo.write(tree, species_tree, trefmt)
 	@lazyproperty
 	def templete(self):
@@ -401,11 +615,11 @@ augustus --species={species} {train_set}.test --translation_table={transl_table}
 
 class Info(object):
 	def __init__(self, infofile):
-		self.infofile = infofile
+		self.infofile = open(infofile)
 	def __iter__(self):
 		return self._parse()
 	def _parse(self):
-		for line in open(self.infofile):
+		for line in self.infofile:
 			if line.startswith('#'):
 				continue
 			line = re.compile(r'\t+').split((line.strip()))
@@ -418,21 +632,25 @@ class Info(object):
 
 class GeneInfo(Info):
 	def __init__(self, infofile, include_orf=False):
-		self.infofile = infofile
+		super(GeneInfo, self).__init__(infofile)
 		self.include_orf = include_orf
 	def _parse_line(self, line):
 		return GeneInfoLine(line)
 	@lazyproperty
 	def genes(self):
 		if self.include_orf:
+			for gene in self.dict.values():
+				if gene.name.lower().startswith('orf'):
+					gene.product = 'hypothetical protein'
 			return self.dict.values()
 		else:
-			return [line for line in self.dict.values() if not (
-				line.name.startswith('orf') or line.product == 'hypothetical protein')]
+			return [gene for gene in self.dict.values() if not (
+						gene.name.lower().startswith('orf') \
+						or gene.product == 'hypothetical protein')]
 class GeneInfoLine(object):
 	def __init__(self, line=None):
 		self.title = ['id', 'name', 'product', 'seq_type',
-                	  'exon_number', 'trans_splicing',
+                	  'exon_count', 'trans_splicing',
                       'gene_count', 'species_count', 
 					  'names', 'products', 'species']
 		self.ctype = [str, str, str, str, int, bool, int, int, str, str, str]
@@ -445,13 +663,13 @@ class GeneInfoLine(object):
 	def __str__(self):
 		return self.id
 	def write(self, fout):
-		if line is None:
+		if self.line is None:
 			print >>fout, '#' + '\t'.join(self.title)
 		else:
 			print >>fout, '\t'.join(map(str, self.line))
 class SpeciesInfo(Info):
 	def __init__(self, infofile):
-		self.infofile = infofile
+		super(SpeciesInfo, self).__init__(infofile)
 	def _parse_line(self, line):
 		return SpeciesInfoLine(line)
 	@lazyproperty
@@ -463,13 +681,95 @@ class SpeciesInfo(Info):
 
 class SpeciesInfoLine(GeneInfoLine):
 	def __init__(self, line=None):
-		self.title = ['id', 'organism', 'taxonomy']
+		self.title = ['id', 'organism', 'name_count', 'cds_count', 'trn_count', 'rrn_count', 'length', 'GC', 'taxonomy']
 		self.ctype = [str, str, str]
 		self.line = line
 		self.set_attr()
+		
+class NameInfo(Info):
+	def __init__(self, infofile):
+		super(NameInfo, self).__init__(infofile)
+	def _parse_line(self, line):
+		return NameInfoLine(line)
+	@property
+	def dict(self):
+		d = {}
+		for info in self:
+			for name in [info.name] + info.alias:
+				d[self.__class__.convert_name(name)] = info
+				# tRNA U=T
+				if re.compile(r'(trn|tRNA)', re.I).match(name):
+					anti_codon = re.compile(r'\-([ATUCG]{3})', re.I).search(name)
+					if not anti_codon:
+						continue
+					anti_codon = anti_codon.groups()[0]
+					if 'T' in set(anti_codon):
+						new_codon = anti_codon.replace('T', 'U')
+					elif 'U' in set(anti_codon):
+						new_codon = anti_codon.replace('U', 'T')
+					elif 't' in set(anti_codon):
+						new_codon = anti_codon.replace('t', 'u')
+					elif 'u' in set(anti_codon):
+						new_codon = anti_codon.replace('u', 't')
+					else:
+						continue
+					name = name.replace(anti_codon, new_codon)
+					d[self.__class__.convert_name(name)] = info
+		return d
+
+	@classmethod
+	def convert_name(cls, name):
+		if re.compile(r'(trn|tRNA)', re.I).match(name):
+			lower = r'(^[a-z]+)(.*)([atucg]{3}$)'	 # trnT-ugu	fungi, animal
+			upper = r'(^[a-z]+)(.*)([ATUCG]{3}$)'	 # trnT-UGU	plant
+			if re.compile(lower).match(name):
+				prefix, midfix, suffix = re.compile(lower).match(name).groups()
+			elif re.compile(upper).match(name):
+				prefix, midfix, suffix = re.compile(upper).match(name).groups()
+			try:
+				return prefix + midfix.lower() + suffix
+			except NameError: pass
+
+		lower = r'(^[a-z]+)(.*)$'
+		upper = r'(^[A-Z]+)(.*)$'
+		if re.compile(lower).match(name):
+			prefix, suffix = re.compile(lower).match(name).groups()
+		elif re.compile(upper).match(name):
+			prefix, suffix = re.compile(upper).match(name).groups()
+		else:
+			return name 
+		return prefix + suffix.lower()
+	@classmethod
+	def get_trn_name(cls, raw_name, name_count):
+		name_count = [name for name,_ in sorted(name_count.items(), key=lambda x:-x[1])]
+		if re.compile(r'(trn|tRNA)', re.I).match(raw_name):
+			upper = r'^([a-z]+)(.*)([ATUCG]{3}).*(\-cp)$'
+			for name in name_count:
+				if re.compile(upper, re.I).match(name):
+					return name
+			for name in name_count:
+				if re.compile(r'(\-cp)', re.I).search(name):
+					return name
+			upper = r'^([a-z]+)(.*)([ATUCG]{3})$'
+			for name in name_count:
+				if re.compile(upper, re.I).match(name):
+					return name
+		return raw_name
+
+class NameInfoLine(GeneInfoLine):
+	def __init__(self, line=None):
+		self.title = ['name', 'product', '_alias']
+		self.ctype = [str, str, str]
+		self.line = line
+		self.set_attr()
+		try:
+			self.alias = self._alias.split(',')
+		except AttributeError:
+			self.alias = []
+
 class TaxonomyInfo(Info):
 	def __init__(self, infofile):
-		self.infofile = infofile
+		super(TaxonomyInfo, self).__init__(infofile)
 	def _parse_line(self, line):
 		return TaxonomyInfoLine(line)
 	@lazyproperty
@@ -477,10 +777,29 @@ class TaxonomyInfo(Info):
 		return [line for line in self][0].transl_table
 class TaxonomyInfoLine(GeneInfoLine):
 	def __init__(self, line=None):
-		self.title = ['id', 'transl_table', 'taxonomy']
-		self.ctype = [str, int, str]
+		self.title = ['id', 'db', 'transl_table', 'taxonomy']
+		self.ctype = [str, str, int, str]
 		self.line = line
 		self.set_attr()
+		
+class Ete3TaxonomyInfo(Info):
+	def __init__(self, infolines):
+		self.infofile = infolines.split('\n')
+	def _parse_line(self, line):
+		return Ete3TaxonomyInfoLine(line)
+		
+class Ete3TaxonomyInfoLine(GeneInfoLine):
+	def __init__(self, line=None):
+		self.title = ['taxid', 'sci_name', 'rank', '_named_lineage', '_taxid_lineage']
+		self.ctype = [int, str, str, str, str]
+		self.line = line
+		self.set_attr()
+	@lazyproperty
+	def named_lineage(self):
+		return self._named_lineage.split(',')
+	@lazyproperty
+	def taxid_lineage(self):
+		map(int, self._taxid_lineage.split(','))
 
 def main():
 	'''example:
@@ -490,17 +809,25 @@ def main():
 '''
 	args = makeArgparse()
 	print >>sys.stderr, args.__dict__
-	db = DataBase(**args.__dict__)
+	db = Database(**args.__dict__)
 	if args.check:
 		db.checkdb()
+	elif args.list:
+		db.listdb()
+	elif args.count:
+		db.count_taxa()
 	else:
 		db.makedb()
 
 def makeArgparse():
 	parser = argparse.ArgumentParser( \
 		formatter_class=argparse.RawDescriptionHelpFormatter)
+	parser.add_argument('-list', action='store_true', default=False,
+						help="list database")
 	parser.add_argument('-check', action='store_true', default=False,
 						help="check database")
+	parser.add_argument('-count', action='store_true', default=False,
+						help="count taxa")
 	parser.add_argument('-gbfiles', type=str, nargs='+', default=None, 
 						help="genbank files")
 	parser.add_argument('-organ', type=str, choices=['mt', 'pt'], default='mt',
@@ -508,10 +835,19 @@ def makeArgparse():
 	parser.add_argument('-dbdir', type=str, default=None,
 						help="directory to output [default=auto]")
 	parser.add_argument('-taxon', type=str, default=None,
-						help="taxon to filter out, such as Embryophyta [default=%(default)s]")
+						help="taxon to select, such as Embryophyta [default=%(default)s]")
 	parser.add_argument('-custom', type=str, default=None,
 						help="use custom mark instead taxon [default=%(default)s]")
+	parser.add_argument('-exclude_taxa', type=str, default=None,
+						help="exclude taxa seperated by comma, for example: 'Himantura,Vazella' [default=%(default)s]")
+	parser.add_argument('-tmpdir', type=str, default='/dev/shm/tmp',
+						help="tmpdir")
+	parser.add_argument('-cleanup', action='store_true', default=False,
+						help="clean up")
+	
 	args = parser.parse_args()
+	if args.exclude_taxa is not None:
+		args.exclude_taxa = set(args.exclude_taxa.split(','))
 	return args
 
 if __name__ == '__main__':

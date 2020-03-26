@@ -6,6 +6,7 @@ try:
 	from math import inf
 except ImportError:
 	inf = float("inf")
+from lazy_property import LazyWritableProperty as lazyproperty
 from Gff import GffLine, GtfExons
 from get_record import get_records
 
@@ -21,12 +22,14 @@ class HmmSearch(object):
 				continue
 			if self.hmmfmt == 'domtbl':
 				yield HmmSearchDomHit(line)
-	def get_best_hit(self):
+	def get_best_hit(self, score=False):
 		best_hit = None
 		for record in self:
 			if best_hit is None:
 				best_hit = record
-			elif record.edit_score > best_hit.edit_score:
+			elif not score and record.edit_score > best_hit.edit_score:
+				best_hit = record
+			elif score and record.score > best_hit.score:
 				best_hit = record
 		return best_hit
 	def get_hit_nuclseqs(self, inseq, outseq):
@@ -35,7 +38,7 @@ class HmmSearch(object):
 			hit.split_name()
 			nucl_names += [hit.nucl_name]
 		get_records(inseq, outseq, nucl_names, type='fasta')
-	def get_gene_structure(self, d_length, max_copies=5, 
+	def get_gene_structure(self, d_length, max_copies=4, min_part=1,
 			min_cov=80, min_ratio=0.9, seq_type='prot', flank=1000):
 		graph = HmmStructueGraph()
 		for hit in self:
@@ -68,7 +71,7 @@ class HmmSearch(object):
 
 			i = 0
 			for parts, hmmcov in sorted(zip(copies, hmmcovs), key=lambda x:-x[1]):
-				if len(parts) > min_part_number:
+				if len(parts) > min_part_number+min_part:
 					continue
 				if hmmcov < max_hmmcov * min_ratio:
 					continue
@@ -165,7 +168,49 @@ class SeqParts():
 
 		desc = blocks
 		print >> fout, '>{} {}\n{}'.format(self, desc, seq)
-	@property
+	def merge(self):
+		starts  = [part.start  for part in self]
+		ends    = [part.end    for part in self]
+		strands = [part.strand for part in self]
+		chroms  = [part.seqid  for part in self]
+		assert len(set(chroms)) == 1
+		assert len(set(strands)) == 1
+		chrom  = chroms[0]
+		strand = strands[0]
+		start  = min(starts + ends)
+		end    = max(starts + ends)
+		return SeqPart(chrom, start, end, strand)
+
+	def link_part(self, max_dist=10000):
+		# "--> -->" -> "----->"
+		parts = list(self)
+		if len(parts) < 2:
+			return self
+		groups = [[parts[0]]]
+		for part in parts[1:]:
+			last_part = groups[-1][-1]
+			dist = max_dist
+			if last_part.seqid == part.seqid and last_part.strand == part.strand:
+				if last_part.strand == '-':
+					dist = last_part.start - part.end
+				else:
+					dist = part.start - last_part.end
+			if 0 < dist < max_dist:
+				groups[-1] += [part]
+			else:
+				groups += [[part]]
+		new_parts = []
+		for group in groups:
+			if len(group) == 1:
+				new_parts += group
+				continue
+			part = SeqParts(group).merge()
+			new_parts += [part]
+		seqparts = copy.deepcopy(self)
+		seqparts.parts = new_parts
+		return seqparts
+
+	@lazyproperty
 	def coord_map(self):
 		d = {}
 		last_start = 0	# 0-based
@@ -178,10 +223,12 @@ class SeqParts():
 	def map_coord(self, exons):
 		new_exons = []
 		d_bins = {}
-		for exon in exons:
+#		print >>sys.stderr, ' -> '.join(['{chrom}:{start}-{end}({strand})'.format(**exon.__dict__) \
+ #                               for exon in exons])
+		for old_exon in exons:
 			for part in self:
 				start, end = self.coord_map[part]	# 0-based
-				exon = copy.deepcopy(exon)
+				exon = copy.deepcopy(old_exon)
 				#exon.id = exon.chrom
 				exon.chrom = part.seqid
 				exon_start, exon_end = exon.start, exon.end
@@ -234,6 +281,7 @@ class SeqParts():
 				new_exons += [exon]
 				try: d_bins[part] += [exon]
 				except KeyError: d_bins[part] = [exon]
+				#print >>sys.stderr, part, exon
 		new_parts = copy.deepcopy(self)
 		parts = []
 		for part in self:
@@ -251,7 +299,7 @@ class SeqParts():
 		for part in self:
 			paths = part.path.group_nodes(max_dist=min_intron)
 			for path in paths:
-				print >>sys.stderr, path
+			#	print >>sys.stderr, path
 				first_hit, last_hit = path[0], path[-1]
 				strand = first_hit.strand
 				if strand == '-':
@@ -317,7 +365,7 @@ class HmmSearchDomHit(object):
 	@property
 	def key(self):
 		return (self.tname, self.qname, self.hmmstart, self.hmmend, self.alnstart, self.alnend)
-	def link_hits(self, other, max_dist=25, min_ovl=-50, min_flank_dist=2):
+	def link_hits(self, other, max_dist=60, min_ovl=-60, min_flank_dist=2):
 		'''--->	 self
 			  --->  other
 		'''
@@ -333,7 +381,7 @@ class HmmSearchDomHit(object):
 			left_dist = other.alnstart - self.alnstart + 1
 			mid_dist  = other.alnstart - self.alnend + 1
 			right_dist = other.alnend - self.alnend + 1
-			if min_ovl <= mid_dist <= max_dist:
+			if min_ovl*3 <= mid_dist <= max_dist*3:
 				if left_dist >= min_flank_dist:
 					return mid_dist
 		return False

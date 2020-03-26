@@ -1,4 +1,4 @@
-LOCUS       NC_001284.2           366924 bp    DNA     circular PLN 23-MAR-2020
+LOCUS       NC_001284.2           366924 bp    DNA     circular PLN 25-MAR-2020
 DEFINITION  Arabidopsis thaliana mitochondrion, complete genome.
 ACCESSION   
 VERSION
@@ -15,7 +15,7 @@ REFERENCE   1  (bases 1 to 366924)
 REFERENCE   2  (bases 1 to 366924)
   AUTHORS   Zhang,R.
   TITLE     Direct Submission
-  JOURNAL   Submitted (23-MAR-2020) Bioinformatics, Ori-Gene Co., Ltd.,
+  JOURNAL   Submitted (25-MAR-2020) Bioinformatics, Ori-Gene Co., Ltd.,
             Beijing, China
 FEATURES             Location/Qualifiers
      source          1..366924
@@ -41,8 +41,7 @@ FEATURES             Location/Qualifiers
                      RDPVENASFMPRVLATARIHSVILPLLHSWTSFLNIVTFPCCVSGTFSIRSGLLAPVH
                      SFATDDTRGIFLWWFFLLMTGISMILFYQMKQQASVRRTYKKEMVVARSTLVHLRHSA
                      RAQPRPVMLWKN"
-     gene            complement(join(327890..328077,329734..330306,
-                     332945..333105,79740..80131,81112..81264))
+     gene            complement(join(327890..333105,79740..81264))
                      /gene="nad2"
                      /trans_splicing
      CDS             complement(join(327890..328077,329734..330306,
@@ -59,13 +58,7 @@ FEATURES             Location/Qualifiers
                      LIGIFIYALMTMDAFAIVSALRQTRVKYIADLGALAKTNPISAITFSITMFSYAGIPP
                      LAGFCSKFYLFFAALGCGAYFLAPVGVVTSVIGRFYYIRLVKRMFFDTPRTWILYEPM
                      DRNKSLLLAMTSFFITSSLLYPSPLFSVTHQMALSSYL"
-     gene            complement(8933..12102)
-                     /gene="rrn26"
-     rRNA            complement(8933..12102)
-                     /gene="rrn26"
-                     /product="26S ribosomal RNA"
-     gene            complement(join(20571..20717,21692..22090,140721..141940,
-                     142770..142998))
+     gene            complement(join(20571..22090,140721..142998))
                      /gene="nad5"
                      /trans_splicing
      CDS             complement(join(20571..20717,21692..22090,140721..141940,
@@ -105,7 +98,7 @@ FEATURES             Location/Qualifiers
                      SKYRKGRCSRGCKPDGTKLGFGRYGTKSCKAGRLSYRAIEAARRAIIGHFHRAMSGQF
                      RRNGKIWVRVFADLPITGKPTEVRMGRGKGNPTGWIARVSTGQIPFEMDGVSLANARQ
                      AATLAAHKPCSSTKFVQWS"
-     gene            complement(join(25482..27078,28660..28733))
+     gene            complement(25482..28733)
                      /gene="rps3"
      CDS             complement(join(25482..27078,28660..28733))
                      /gene="rps3"
@@ -136,7 +129,7 @@ FEATURES             Location/Qualifiers
                      HSHLGPIRIPPLFPFPPAPFPRNEKEDGTLELYYLSTYCLPKILLLQLVGHRVIQISR
                      VFCGFPMLQLSYQFGRSGMDRLNIPLGSLVLTLLCGIHSRSALGITSSSGWNSSQNPT
                      TSPTLLPLTVSRTSIETEWFHVLSSIGYSSLFVSLFPISVSISLQD"
-     gene            complement(join(40502..40584,41929..42628))
+     gene            complement(40502..42628)
                      /gene="cox2"
      CDS             complement(join(40502..40584,41929..42628))
                      /gene="cox2"
@@ -147,6 +140,11 @@ FEATURES             Location/Qualifiers
                      LLYSMDEVVVDPAITIKAIGHQWYRTYEYSDYNSSDEQSLTFDSYMIPEEDLELGQSR
                      LLEVDNRVVVPAKTHLRIIVTSADVPHSWAVPSSGVKCDAVPGRLNQISILVQREGVY
                      YGQCSEICGTNHAFTPIVVEAVPRKDYGSRVSNQLIPQTGEA"
+     gene            46951..47019
+                     /gene="trnF-GAA"
+     tRNA            46951..47019
+                     /gene="trnF-GAA"
+                     /product="tRNA-Phe"
      gene            complement(52715..53611)
                      /gene="ccmFC"
      CDS             complement(52715..53611)
@@ -174,7 +172,7 @@ FEATURES             Location/Qualifiers
                      IIKNGKLAMEIPRGQKFIQTQRGSTGKSFRSNPFLGSNKDKGYVSDLARQSTLRGHGM
                      SNFSVRISTVMSLLDFPVEIRKNSIQFSMETEFCEFSPELEDHFEIFEHIRGFNVTII
                      TSANTQDETLPLWSGFLQKDEGETQ"
-     gene            join(58273..58296,58345..58590)
+     gene            58273..58590
                      /gene="rps14"
      CDS             join(58273..58296,58345..58590)
                      /gene="rps14"
@@ -229,11 +227,6 @@ FEATURES             Location/Qualifiers
                      QLRSSMQEEDLERTKKFGSEKVCLGSSFAEHKRMKRNLLKSLFLSKRRKDKNLNLPTR
                      TISPIVYNSSLSLYSNSTYCFASPHKLTMKRRIKRIELPTHYSEVNHRTPKAVVSYGP
                      NIGHIPHDIRLKDPNLPLRSRNGRGQNI"
-     gene            complement(93351..93419)
-                     /gene="trnfM-CAU"
-     tRNA            complement(93351..93419)
-                     /gene="trnfM-CAU"
-                     /product="tRNA-Met"
      gene            103827..103914
                      /gene="trnS-GCU"
      tRNA            103827..103914
@@ -259,7 +252,7 @@ FEATURES             Location/Qualifiers
      tRNA            106797..106879
                      /gene="trnY-GUA"
                      /product="tRNA-Tyr"
-     gene            join(111750..111793,111824..112907)
+     gene            111750..112907
                      /gene="atp6"
      CDS             join(111750..111793,111824..112907)
                      /gene="atp6"
@@ -278,10 +271,10 @@ FEATURES             Location/Qualifiers
                      /gene="trnS-UGA"
                      /product="tRNA-Ser"
      gene            complement(127014..127094)
-                     /gene="trnM-CAU"
+                     /gene="trnI-CAU"
      tRNA            complement(127014..127094)
-                     /gene="trnM-CAU"
-                     /product="tRNA-Met"
+                     /gene="trnI-CAU"
+                     /product="tRNA-Ile"
      gene            129909..130385
                      /gene="atp8"
      CDS             129909..130385
@@ -291,8 +284,7 @@ FEATURES             Location/Qualifiers
                      /translation="MPQLDKFTYFSQFFWLCLFFFTFYIFICNDGDGVLGISRILKLR
                      NQLLSHRGKTIRSKDPNSLEDLLRKGFSTGVSYMYASLFEVSQWCKAVDLLGKRRKIT
                      LISCFGEISGSRGMERNILYNISKSSPSNTGRWITCRNCRNDIMLIHVVHGQGSIK"
-     gene            join(132071..132213,133177..133245,134309..134775,
-                     135829..136072,137892..138153)
+     gene            132071..138153
                      /gene="nad7"
      CDS             join(132071..132213,133177..133245,134309..134775,
                      135829..136072,137892..138153)
@@ -307,8 +299,8 @@ FEATURES             Location/Qualifiers
                      QCLNQMPSGMIKADDRKLCPPSRCRMKLSMESSIHHFELYTEGFSVPASSTYTAVEAP
                      KGEFGVFLVSNGSNRPYRRKIRAPGSAHSQGLDSMSKHHMPADVVTIIGTQDIVFGEV
                      DR"
-     gene            complement(join(143219..143477,146990..147048,
-                     287917..288108,289003..289085,318006..318300))
+     gene            complement(join(143219..147048,287917..289085,
+                     318006..318300))
                      /gene="nad1"
                      /trans_splicing
      CDS             complement(join(143219..143477,146990..147048,
@@ -340,7 +332,7 @@ FEATURES             Location/Qualifiers
                      GSISSEFPIKIEAPIKKILRRLRDRGIISRRRPWPIHVACLTNVSDEDIVNWSAGIAI
                      SPLSYYRCRDNLYQVRTIVDHQIRWSAIFTLAHKHKSSAPNIILKYSKDSNIVNQEGG
                      KILAEFPNSIELGKLGPGQDLNKKEHSTTSLV"
-     gene            join(154744..155588,155622..155663,157216..157345)
+     gene            join(154744..155663,157216..157345)
                      /gene="rpl2"
                      /trans_splicing
      CDS             join(154744..155588,155622..155663,157216..157345)
@@ -366,7 +358,7 @@ FEATURES             Location/Qualifiers
                      YDHIMLTVRISFIPSVCSQVPVIVICLPEPRGLSLETFTNNRRFLMVFPLLTAALSTP
                      PDIWCQIVARFLISLIIELAIFVASIVQVREEGWTSGMRESGSIEKKNKSSPPPRTWQ
                      SNYQ"
-     gene            join(161693..162153,163625..164217,167221..167660)
+     gene            161693..167660
                      /gene="nad4"
      CDS             join(161693..162153,163625..164217,167221..167660)
                      /gene="nad4"
@@ -381,6 +373,11 @@ FEATURES             Location/Qualifiers
                      LSYGHTRPKHVCRACDPSNIQGIGGSILPMLSHGLVPSALFLCVGVLYDRHKTRLVRY
                      YGGLVSTMPNLSTIFFSFTLANMSSPGTSSFIGEFLILVGAFQRNSLVATLAALGMIL
                      GAAYSLWLYNRVVSGNLKPDFLHKFSDSNGREVSIFIPFLVGGATVR"
+     gene            181116..181184
+                     /gene="trnF-GAA"
+     tRNA            181116..181184
+                     /gene="trnF-GAA"
+                     /product="tRNA-Phe"
      gene            complement(188084..188662)
                      /gene="atp4"
      CDS             complement(188084..188662)
@@ -501,6 +498,19 @@ FEATURES             Location/Qualifiers
      tRNA            complement(296688..296774)
                      /gene="trnS-UGA"
                      /product="tRNA-Ser"
+     gene            complement(296820..297869)
+                     /gene="atp6"
+     CDS             complement(296820..297869)
+                     /gene="atp6"
+                     /codon_start=1
+                     /product="ATP synthase subunit 6"
+                     /translation="MERLTRLNHFLVNMRWDFYEGVIQAGYIRNLQRELDHTPAELLG
+                     SKLDLIFFRESLNLSTYVNNWYMQNLGVPGPVNFIEKYHDACFSNYMKLMEIPSPLDQ
+                     FEIVPLIPMHIGNFYFSFTNPSLFMLLTLSFFLLLIHFVTKKGGGNLVPNAWQSLVEL
+                     LYDFVLNLVKEQIGGLSGNVKQMFFPCILVTFLFLLFCNLQGMIPYSFTVTSHFLITL
+                     ALSFSIFIGITIVGFQRHGLHFFSFLLPAGVPLPLAPFLVLLELISYCFRALSLGIRL
+                     FANMMAGHSLVKILSGFAWTMLCMNDIFYFIGALGPLFIVLALTGLELGVAILQAYVF
+                     TILICIYLNDAINLH"
      gene            complement(302166..303689)
                      /gene="atp1"
      CDS             complement(302166..303689)
@@ -551,16 +561,6 @@ FEATURES             Location/Qualifiers
      tRNA            complement(359666..359739)
                      /gene="trnH-GUG-cp"
                      /product="tRNA-His"
-     gene            complement(361062..361179)
-                     /gene="rrn5"
-     rRNA            complement(361062..361179)
-                     /gene="rrn5"
-                     /product="5S ribosomal RNA"
-     gene            complement(361350..363284)
-                     /gene="rrn18"
-     rRNA            complement(361350..363284)
-                     /gene="rrn18"
-                     /product="18S ribosomal RNA"
 BASE COUNT   102464 a  82661 c  81609 g 100190 t
 ORIGIN      
         1 ggatccgttc gaaacaggtt agcctactat aatataagga ttggattcta ataagttcga

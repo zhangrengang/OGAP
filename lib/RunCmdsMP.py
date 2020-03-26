@@ -18,7 +18,7 @@ except ImportError as e:
 try: 
 	import drmaa    # for grid
 	from tempfile import NamedTemporaryFile
-except ImportError as e:
+except Exception as e:
 	logger.warn('{} && grid computing is not available'.format(e))
 
 __version__ = '1.0'

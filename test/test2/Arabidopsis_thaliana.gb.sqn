@@ -35,7 +35,7 @@ Seq-submit ::= {
         std {
           year 2020 ,
           month 3 ,
-          day 23 } } ,
+          day 25 } } ,
     subtype new ,
     tool "tbl2asn 24.3 - LINUX UNIX" } ,
   data
@@ -103,7 +103,7 @@ Seq-submit ::= {
                 label
                   str "day" ,
                 data
-                  int 23 } ,
+                  int 25 } ,
               {
                 label
                   str "year" ,
@@ -113,7 +113,7 @@ Seq-submit ::= {
             std {
               year 2020 ,
               month 3 ,
-              day 23 } } ,
+              day 25 } } ,
         seq-set {
           seq {
             id {
@@ -2489,60 +2489,20 @@ FC3F4D4C4A20E4D3DF36483A010168F'H } ,
                     {
                       data
                         gene {
-                          locus "rrn26" } ,
-                      location
-                        int {
-                          from 8932 ,
-                          to 12101 ,
-                          strand minus ,
-                          id
-                            local
-                              str "NC_001284.2" } } ,
-                    {
-                      data
-                        rna {
-                          type rRNA ,
-                          ext
-                            name "26S ribosomal RNA" } ,
-                      location
-                        int {
-                          from 8932 ,
-                          to 12101 ,
-                          strand minus ,
-                          id
-                            local
-                              str "NC_001284.2" } } ,
-                    {
-                      data
-                        gene {
                           locus "nad5" } ,
                       except TRUE ,
                       location
                         mix {
                           int {
-                            from 142769 ,
+                            from 140720 ,
                             to 142997 ,
                             strand minus ,
                             id
                               local
                                 str "NC_001284.2" } ,
                           int {
-                            from 140720 ,
-                            to 141939 ,
-                            strand minus ,
-                            id
-                              local
-                                str "NC_001284.2" } ,
-                          int {
-                            from 21691 ,
-                            to 22089 ,
-                            strand minus ,
-                            id
-                              local
-                                str "NC_001284.2" } ,
-                          int {
                             from 20570 ,
-                            to 20716 ,
+                            to 22089 ,
                             strand minus ,
                             id
                               local
@@ -2577,21 +2537,13 @@ FC3F4D4C4A20E4D3DF36483A010168F'H } ,
                         gene {
                           locus "rps3" } ,
                       location
-                        mix {
-                          int {
-                            from 28659 ,
-                            to 28732 ,
-                            strand minus ,
-                            id
-                              local
-                                str "NC_001284.2" } ,
-                          int {
-                            from 25481 ,
-                            to 27077 ,
-                            strand minus ,
-                            id
-                              local
-                                str "NC_001284.2" } } } ,
+                        int {
+                          from 25481 ,
+                          to 28732 ,
+                          strand minus ,
+                          id
+                            local
+                              str "NC_001284.2" } } ,
                     {
                       data
                         gene {
@@ -2637,21 +2589,41 @@ FC3F4D4C4A20E4D3DF36483A010168F'H } ,
                         gene {
                           locus "cox2" } ,
                       location
-                        mix {
-                          int {
-                            from 41928 ,
-                            to 42627 ,
-                            strand minus ,
-                            id
-                              local
-                                str "NC_001284.2" } ,
-                          int {
-                            from 40501 ,
-                            to 40583 ,
-                            strand minus ,
-                            id
-                              local
-                                str "NC_001284.2" } } } ,
+                        int {
+                          from 40501 ,
+                          to 42627 ,
+                          strand minus ,
+                          id
+                            local
+                              str "NC_001284.2" } } ,
+                    {
+                      data
+                        gene {
+                          locus "trnF-GAA" } ,
+                      location
+                        int {
+                          from 46950 ,
+                          to 47018 ,
+                          strand plus ,
+                          id
+                            local
+                              str "NC_001284.2" } } ,
+                    {
+                      data
+                        rna {
+                          type tRNA ,
+                          ext
+                            tRNA {
+                              aa
+                                ncbieaa 70 } } ,
+                      location
+                        int {
+                          from 46950 ,
+                          to 47018 ,
+                          strand plus ,
+                          id
+                            local
+                              str "NC_001284.2" } } ,
                     {
                       data
                         gene {
@@ -2709,21 +2681,13 @@ FC3F4D4C4A20E4D3DF36483A010168F'H } ,
                         gene {
                           locus "rps14" } ,
                       location
-                        mix {
-                          int {
-                            from 58272 ,
-                            to 58295 ,
-                            strand plus ,
-                            id
-                              local
-                                str "NC_001284.2" } ,
-                          int {
-                            from 58344 ,
-                            to 58589 ,
-                            strand plus ,
-                            id
-                              local
-                                str "NC_001284.2" } } } ,
+                        int {
+                          from 58272 ,
+                          to 58589 ,
+                          strand plus ,
+                          id
+                            local
+                              str "NC_001284.2" } } ,
                     {
                       data
                         gene {
@@ -2812,34 +2776,6 @@ FC3F4D4C4A20E4D3DF36483A010168F'H } ,
                         int {
                           from 82027 ,
                           to 83115 ,
-                          strand minus ,
-                          id
-                            local
-                              str "NC_001284.2" } } ,
-                    {
-                      data
-                        gene {
-                          locus "trnfM-CAU" } ,
-                      location
-                        int {
-                          from 93350 ,
-                          to 93418 ,
-                          strand minus ,
-                          id
-                            local
-                              str "NC_001284.2" } } ,
-                    {
-                      data
-                        rna {
-                          type tRNA ,
-                          ext
-                            tRNA {
-                              aa
-                                ncbieaa 77 } } ,
-                      location
-                        int {
-                          from 93350 ,
-                          to 93418 ,
                           strand minus ,
                           id
                             local
@@ -2989,21 +2925,13 @@ FC3F4D4C4A20E4D3DF36483A010168F'H } ,
                         gene {
                           locus "atp6" } ,
                       location
-                        mix {
-                          int {
-                            from 111749 ,
-                            to 111792 ,
-                            strand plus ,
-                            id
-                              local
-                                str "NC_001284.2" } ,
-                          int {
-                            from 111823 ,
-                            to 112906 ,
-                            strand plus ,
-                            id
-                              local
-                                str "NC_001284.2" } } } ,
+                        int {
+                          from 111749 ,
+                          to 112906 ,
+                          strand plus ,
+                          id
+                            local
+                              str "NC_001284.2" } } ,
                     {
                       data
                         gene {
@@ -3035,7 +2963,7 @@ FC3F4D4C4A20E4D3DF36483A010168F'H } ,
                     {
                       data
                         gene {
-                          locus "trnM-CAU" } ,
+                          locus "trnI-CAU" } ,
                       location
                         int {
                           from 127013 ,
@@ -3051,7 +2979,7 @@ FC3F4D4C4A20E4D3DF36483A010168F'H } ,
                           ext
                             tRNA {
                               aa
-                                ncbieaa 77 } } ,
+                                ncbieaa 73 } } ,
                       location
                         int {
                           from 127013 ,
@@ -3077,42 +3005,13 @@ FC3F4D4C4A20E4D3DF36483A010168F'H } ,
                         gene {
                           locus "nad7" } ,
                       location
-                        mix {
-                          int {
-                            from 132070 ,
-                            to 132212 ,
-                            strand plus ,
-                            id
-                              local
-                                str "NC_001284.2" } ,
-                          int {
-                            from 133176 ,
-                            to 133244 ,
-                            strand plus ,
-                            id
-                              local
-                                str "NC_001284.2" } ,
-                          int {
-                            from 134308 ,
-                            to 134774 ,
-                            strand plus ,
-                            id
-                              local
-                                str "NC_001284.2" } ,
-                          int {
-                            from 135828 ,
-                            to 136071 ,
-                            strand plus ,
-                            id
-                              local
-                                str "NC_001284.2" } ,
-                          int {
-                            from 137891 ,
-                            to 138152 ,
-                            strand plus ,
-                            id
-                              local
-                                str "NC_001284.2" } } } ,
+                        int {
+                          from 132070 ,
+                          to 138152 ,
+                          strand plus ,
+                          id
+                            local
+                              str "NC_001284.2" } } ,
                     {
                       data
                         gene {
@@ -3128,29 +3027,15 @@ FC3F4D4C4A20E4D3DF36483A010168F'H } ,
                               local
                                 str "NC_001284.2" } ,
                           int {
-                            from 289002 ,
+                            from 287916 ,
                             to 289084 ,
                             strand minus ,
                             id
                               local
                                 str "NC_001284.2" } ,
                           int {
-                            from 287916 ,
-                            to 288107 ,
-                            strand minus ,
-                            id
-                              local
-                                str "NC_001284.2" } ,
-                          int {
-                            from 146989 ,
-                            to 147047 ,
-                            strand minus ,
-                            id
-                              local
-                                str "NC_001284.2" } ,
-                          int {
                             from 143218 ,
-                            to 143476 ,
+                            to 147047 ,
                             strand minus ,
                             id
                               local
@@ -3177,13 +3062,6 @@ FC3F4D4C4A20E4D3DF36483A010168F'H } ,
                         mix {
                           int {
                             from 154743 ,
-                            to 155587 ,
-                            strand plus ,
-                            id
-                              local
-                                str "NC_001284.2" } ,
-                          int {
-                            from 155621 ,
                             to 155662 ,
                             strand plus ,
                             id
@@ -3214,28 +3092,41 @@ FC3F4D4C4A20E4D3DF36483A010168F'H } ,
                         gene {
                           locus "nad4" } ,
                       location
-                        mix {
-                          int {
-                            from 161692 ,
-                            to 162152 ,
-                            strand plus ,
-                            id
-                              local
-                                str "NC_001284.2" } ,
-                          int {
-                            from 163624 ,
-                            to 164216 ,
-                            strand plus ,
-                            id
-                              local
-                                str "NC_001284.2" } ,
-                          int {
-                            from 167220 ,
-                            to 167659 ,
-                            strand plus ,
-                            id
-                              local
-                                str "NC_001284.2" } } } ,
+                        int {
+                          from 161692 ,
+                          to 167659 ,
+                          strand plus ,
+                          id
+                            local
+                              str "NC_001284.2" } } ,
+                    {
+                      data
+                        gene {
+                          locus "trnF-GAA" } ,
+                      location
+                        int {
+                          from 181115 ,
+                          to 181183 ,
+                          strand plus ,
+                          id
+                            local
+                              str "NC_001284.2" } } ,
+                    {
+                      data
+                        rna {
+                          type tRNA ,
+                          ext
+                            tRNA {
+                              aa
+                                ncbieaa 70 } } ,
+                      location
+                        int {
+                          from 181115 ,
+                          to 181183 ,
+                          strand plus ,
+                          id
+                            local
+                              str "NC_001284.2" } } ,
                     {
                       data
                         gene {
@@ -3565,6 +3456,18 @@ FC3F4D4C4A20E4D3DF36483A010168F'H } ,
                     {
                       data
                         gene {
+                          locus "atp6" } ,
+                      location
+                        int {
+                          from 296819 ,
+                          to 297868 ,
+                          strand minus ,
+                          id
+                            local
+                              str "NC_001284.2" } } ,
+                    {
+                      data
+                        gene {
                           locus "atp1" } ,
                       location
                         int {
@@ -3594,36 +3497,15 @@ FC3F4D4C4A20E4D3DF36483A010168F'H } ,
                       location
                         mix {
                           int {
-                            from 81111 ,
+                            from 79739 ,
                             to 81263 ,
                             strand minus ,
                             id
                               local
                                 str "NC_001284.2" } ,
                           int {
-                            from 79739 ,
-                            to 80130 ,
-                            strand minus ,
-                            id
-                              local
-                                str "NC_001284.2" } ,
-                          int {
-                            from 332944 ,
-                            to 333104 ,
-                            strand minus ,
-                            id
-                              local
-                                str "NC_001284.2" } ,
-                          int {
-                            from 329733 ,
-                            to 330305 ,
-                            strand minus ,
-                            id
-                              local
-                                str "NC_001284.2" } ,
-                          int {
                             from 327889 ,
-                            to 328076 ,
+                            to 333104 ,
                             strand minus ,
                             id
                               local
@@ -3693,58 +3575,6 @@ FC3F4D4C4A20E4D3DF36483A010168F'H } ,
                         int {
                           from 359665 ,
                           to 359738 ,
-                          strand minus ,
-                          id
-                            local
-                              str "NC_001284.2" } } ,
-                    {
-                      data
-                        gene {
-                          locus "rrn5" } ,
-                      location
-                        int {
-                          from 361061 ,
-                          to 361178 ,
-                          strand minus ,
-                          id
-                            local
-                              str "NC_001284.2" } } ,
-                    {
-                      data
-                        rna {
-                          type rRNA ,
-                          ext
-                            name "5S ribosomal RNA" } ,
-                      location
-                        int {
-                          from 361061 ,
-                          to 361178 ,
-                          strand minus ,
-                          id
-                            local
-                              str "NC_001284.2" } } ,
-                    {
-                      data
-                        gene {
-                          locus "rrn18" } ,
-                      location
-                        int {
-                          from 361349 ,
-                          to 363283 ,
-                          strand minus ,
-                          id
-                            local
-                              str "NC_001284.2" } } ,
-                    {
-                      data
-                        rna {
-                          type rRNA ,
-                          ext
-                            name "18S ribosomal RNA" } ,
-                      location
-                        int {
-                          from 361349 ,
-                          to 363283 ,
                           strand minus ,
                           id
                             local
@@ -4815,6 +4645,42 @@ ALTEAIALFAPMMAFLILFVF" } ,
               local
                 str "NC_001284.2_31" } ,
             descr {
+              title "ATP synthase subunit 6 (mitochondrion) [Arabidopsis
+ thaliana]" ,
+              molinfo {
+                biomol peptide ,
+                tech concept-trans } } ,
+            inst {
+              repr raw ,
+              mol aa ,
+              length 349 ,
+              seq-data
+                ncbieaa "MERLTRLNHFLVNMRWDFYEGVIQAGYIRNLQRELDHTPAELLGSKLDLIFFR
+ESLNLSTYVNNWYMQNLGVPGPVNFIEKYHDACFSNYMKLMEIPSPLDQFEIVPLIPMHIGNFYFSFTNPSLFMLLTL
+SFFLLLIHFVTKKGGGNLVPNAWQSLVELLYDFVLNLVKEQIGGLSGNVKQMFFPCILVTFLFLLFCNLQGMIPYSFT
+VTSHFLITLALSFSIFIGITIVGFQRHGLHFFSFLLPAGVPLPLAPFLVLLELISYCFRALSLGIRLFANMMAGHSLV
+KILSGFAWTMLCMNDIFYFIGALGPLFIVLALTGLELGVAILQAYVFTILICIYLNDAINLH" } ,
+            annot {
+              {
+                data
+                  ftable {
+                    {
+                      data
+                        prot {
+                          name {
+                            "ATP synthase subunit 6" } } ,
+                      location
+                        int {
+                          from 0 ,
+                          to 348 ,
+                          id
+                            local
+                              str "NC_001284.2_31" } } } } } } ,
+          seq {
+            id {
+              local
+                str "NC_001284.2_32" } ,
+            descr {
               title "ATP synthase subunit 1 (mitochondrion) [Arabidopsis
  thaliana]" ,
               molinfo {
@@ -4847,11 +4713,11 @@ QILVIYAAVNGFCDRMPLDRISQYEKAIPNSVKPELLQALKGGLTNERKMEPDAFLKERALALI" } ,
                           to 506 ,
                           id
                             local
-                              str "NC_001284.2_31" } } } } } } ,
+                              str "NC_001284.2_32" } } } } } } ,
           seq {
             id {
               local
-                str "NC_001284.2_32" } ,
+                str "NC_001284.2_33" } ,
             descr {
               title "ribosomal protein S7 (mitochondrion) [Arabidopsis
  thaliana]" ,
@@ -4881,11 +4747,11 @@ LHGLASTNRSFAHFRWW" } ,
                           to 147 ,
                           id
                             local
-                              str "NC_001284.2_32" } } } } } } ,
+                              str "NC_001284.2_33" } } } } } } ,
           seq {
             id {
               local
-                str "NC_001284.2_33" } ,
+                str "NC_001284.2_34" } ,
             descr {
               title "NADH dehydrogenase subunit 2 (mitochondrion) [Arabidopsis
  thaliana]" ,
@@ -4919,11 +4785,11 @@ WILYEPMDRNKSLLLAMTSFFITSSLLYPSPLFSVTHQMALSSYL" } ,
                           to 487 ,
                           id
                             local
-                              str "NC_001284.2_33" } } } } } } ,
+                              str "NC_001284.2_34" } } } } } } ,
           seq {
             id {
               local
-                str "NC_001284.2_34" } ,
+                str "NC_001284.2_35" } ,
             descr {
               title "cytochrome c oxidase subunit 1 (mitochondrion)
  [Arabidopsis thaliana]" ,
@@ -4958,7 +4824,7 @@ TKSYVK" } ,
                           to 526 ,
                           id
                             local
-                              str "NC_001284.2_34" } } } } } } } ,
+                              str "NC_001284.2_35" } } } } } } } ,
         annot {
           {
             data
@@ -5665,6 +5531,24 @@ TKSYVK" } ,
                         str "NC_001284.2_31" ,
                   location
                     int {
+                      from 296819 ,
+                      to 297868 ,
+                      strand minus ,
+                      id
+                        local
+                          str "NC_001284.2" } } ,
+                {
+                  data
+                    cdregion {
+                      frame one ,
+                      code {
+                        id 1 } } ,
+                  product
+                    whole
+                      local
+                        str "NC_001284.2_32" ,
+                  location
+                    int {
                       from 302165 ,
                       to 303688 ,
                       strand minus ,
@@ -5680,7 +5564,7 @@ TKSYVK" } ,
                   product
                     whole
                       local
-                        str "NC_001284.2_32" ,
+                        str "NC_001284.2_33" ,
                   location
                     int {
                       from 314626 ,
@@ -5698,7 +5582,7 @@ TKSYVK" } ,
                   product
                     whole
                       local
-                        str "NC_001284.2_33" ,
+                        str "NC_001284.2_34" ,
                   location
                     mix {
                       int {
@@ -5745,7 +5629,7 @@ TKSYVK" } ,
                   product
                     whole
                       local
-                        str "NC_001284.2_34" ,
+                        str "NC_001284.2_35" ,
                   location
                     int {
                       from 349829 ,

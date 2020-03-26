@@ -85,7 +85,10 @@ class Database():
 		for name in sorted(os.listdir(self.dbrootdir)):
 			filename = os.path.join(self.dbrootdir, name)
 			if os.path.isdir(filename):
-				organ, taxon = name.split('-')[:2]
+				try:
+					organ, taxon = name.split('-')[:2]
+				except ValueError:
+					continue
 				yield Database(organ=organ, taxon=taxon)
 	def select_db(self, organism):
 		lineage = self.get_taxonomy(organism)
@@ -285,7 +288,7 @@ class Database():
 				[self.cds_file, self.rna_file],
 				['', '-S blastn'],
 				[True, False],
-				[0.1, 0.05],
+				[0.08, 0.04],
 				['cd-hit', 'cd-hit-est'],
 				[True, False],
 				):

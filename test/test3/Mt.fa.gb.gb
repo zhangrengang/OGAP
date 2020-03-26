@@ -1,4 +1,4 @@
-LOCUS       Mt                    602121 bp    DNA     circular     23-MAR-2020
+LOCUS       Mt                    602121 bp    DNA     circular     25-MAR-2020
 DEFINITION  Sapindus mukorossi mitochondrion, complete genome.
 ACCESSION   
 VERSION
@@ -13,13 +13,43 @@ REFERENCE   1  (bases 1 to 602121)
 REFERENCE   2  (bases 1 to 602121)
   AUTHORS   Zhang,R.
   TITLE     Direct Submission
-  JOURNAL   Submitted (23-MAR-2020) Bioinformatics, Ori-Gene Co., Ltd.,
+  JOURNAL   Submitted (25-MAR-2020) Bioinformatics, Ori-Gene Co., Ltd.,
             Beijing, China
 FEATURES             Location/Qualifiers
      source          1..602121
                      /organism="Sapindus mukorossi"
                      /organelle="mitochondrion"
                      /mol_type="genomic DNA"
+     repeat_region   1..128
+                     /note="DR100-1"
+                     /rpt_type=dispersed
+     repeat_region   7023..7034
+                     /note="SR34-1"
+                     /rpt_type=tandem
+     repeat_region   7550..7598
+                     /note="TR38-1"
+                     /rpt_type=tandem
+     repeat_region   9810..9821
+                     /note="SR33-1"
+                     /rpt_type=tandem
+     repeat_region   10116..10166
+                     /note="DR17-1"
+                     /rpt_type=dispersed
+     repeat_region   10182..10247
+                     /note="DR118-1"
+                     /rpt_type=dispersed
+     repeat_region   12109..12118
+                     /note="SR27-1"
+                     /rpt_type=tandem
+     repeat_region   13453..13462
+                     /note="SR20-1"
+                     /rpt_type=tandem
+     repeat_region   14514..14523
+                     /note="SR6-1"
+                     /rpt_type=tandem
+     repeat_region   18532..18563
+                     /note="TR22-1"
+                     /rpt_type=tandem
      gene            19299..20402
                      /gene="rps4"
      CDS             join(19299..20212,20246..20402)
@@ -33,6 +63,17 @@ FEATURES             Location/Qualifiers
                      MQEEDLERTKKFGSEKVCLGSSFAEHNRMKRNFYHFKSLFLSKRRNEKNRNFPTRTRS
                      PIVYSLFSNSTYCSASPHQFTMKRRRIKRIELPTHYSEVNHRTPKAVVSYGPNIGHIP
                      HDIRLKDPNLPLRSGNGRSQNI"
+     repeat_region   19801..19848
+                     /gene="rps4"
+                     /note="TR30-1"
+                     /rpt_type=tandem
+     repeat_region   20223..20237
+                     /gene="rps4"
+                     /note="SR32-1"
+                     /rpt_type=tandem
+     repeat_region   20906..20971
+                     /note="DR78-1"
+                     /rpt_type=dispersed
      gene            21065..21809
                      /gene="nad6"
      CDS             join(21065..21516,21644..21809)
@@ -43,6 +84,27 @@ FEATURES             Location/Qualifiers
                      GLDFSAMIFPVVHIGAIAVSFLFVVMMFHIQIAEIHEEVLRYLPVSGIIGLIFWWEMF
                      FILDNETIPLLPTQRNTTSLRYTVYAGKVRSWTNLETLGNLLYTYYSVWFLVPSLILL
                      VAMIGAIVLTMHRTTKVKRQDVFRRNAIDFRRTIMRRTTDPLTIY"
+     repeat_region   21477..21978
+                     /note="DR37-1"
+                     /rpt_type=dispersed
+     repeat_region   22098..22109
+                     /note="SR12-1"
+                     /rpt_type=tandem
+     repeat_region   25713..25724
+                     /note="SR16-1"
+                     /rpt_type=tandem
+     repeat_region   25915..25924
+                     /note="SR20-2"
+                     /rpt_type=tandem
+     repeat_region   28730..28781
+                     /note="DR27-1"
+                     /rpt_type=dispersed
+     repeat_region   28853..28864
+                     /note="SR23-1"
+                     /rpt_type=tandem
+     repeat_region   29022..29085
+                     /note="DR109-1"
+                     /rpt_type=dispersed
      gene            29224..31943
                      /gene="cox2"
      CDS             join(29224..29923,31855..31943)
@@ -54,17 +116,65 @@ FEATURES             Location/Qualifiers
                      LLYSMDEVVVDPAITIKAIGHQWYRTYEYSDYNSSDEQSLTFDSYTIPEDDLELGQSR
                      LLEVDNRVVVPAKTHLRIIVTSADVPHSWAVPSSGVKCDAVPGRLNQISILVQREGVY
                      YGQCSEICGTNHAFMPIVVEAVPRKDYGSRVSNQLIPQTRGAGI"
+     repeat_region   31384..31395
+                     /gene="cox2"
+                     /note="SR25-1"
+                     /rpt_type=tandem
+     repeat_region   31498..31556
+                     /gene="cox2"
+                     /note="DR66-1"
+                     /rpt_type=dispersed
+     repeat_region   31843..31908
+                     /gene="cox2"
+                     /note="DR20-1"
+                     /rpt_type=dispersed
+     repeat_region   33220..33229
+                     /note="SR6-2"
+                     /rpt_type=tandem
+     repeat_region   34903..34914
+                     /note="SR12-2"
+                     /rpt_type=tandem
+     repeat_region   38651..38662
+                     /note="SR11-1"
+                     /rpt_type=tandem
+     repeat_region   39355..39395
+                     /note="TR16-1"
+                     /rpt_type=tandem
+     repeat_region   45954..45968
+                     /note="SR65-1"
+                     /rpt_type=tandem
+     repeat_region   46516..46530
+                     /note="SR55-1"
+                     /rpt_type=tandem
+     repeat_region   47051..47435
+                     /note="TR23-1"
+                     /rpt_type=tandem
+     repeat_region   47346..47473
+                     /note="DR93-2"
+                     /rpt_type=dispersed
+     repeat_region   48896..48905
+                     /note="SR20-3"
+                     /rpt_type=tandem
+     repeat_region   55841..55856
+                     /note="SR29-1"
+                     /rpt_type=tandem
      gene            join(56218..58150,complement(416426..416470))
                      /gene="rrn18"
                      /trans_splicing
      rRNA            join(56219..58150,complement(416427..416470))
                      /gene="rrn18"
                      /product="18S ribosomal RNA"
+     repeat_region   58213..58224
+                     /note="SR43-1"
+                     /rpt_type=tandem
      gene            58313..58431
                      /gene="rrn5"
      rRNA            58314..58431
                      /gene="rrn5"
                      /product="5S ribosomal RNA"
+     repeat_region   58548..58951
+                     /note="DR86-1"
+                     /rpt_type=dispersed
      gene            58863..59219
                      /gene="nad3"
      CDS             58863..59219
@@ -83,6 +193,18 @@ FEATURES             Location/Qualifiers
                      /translation="MPTLNQLIRHGREEKRRTDRTRALGQCPQKQGVCLRVSTRTPKK
                      PNSALRKIAKVRLSNRHDIFAYIPGEGHNLQEHSMVLIRGGRVKDLPGVKFHCIRGVK
                      DLLGIPDRRRGRSKYGAEKPKSI"
+     repeat_region   61864..61923
+                     /note="TR52-1"
+                     /rpt_type=tandem
+     repeat_region   65341..65397
+                     /note="TR59-1"
+                     /rpt_type=tandem
+     repeat_region   77978..77989
+                     /note="SR56-1"
+                     /rpt_type=tandem
+     repeat_region   78858..78872
+                     /note="SR59-1"
+                     /rpt_type=tandem
      gene            complement(79260..79748)
                      /gene="rpl10"
      CDS             complement(79260..79748)
@@ -93,11 +215,38 @@ FEATURES             Location/Qualifiers
                      PWFPGRTPFRPSCCGTGKKKRFFAQLAHSAGPTCISYLAEEASDRLEFLPSWDSMDQD
                      LLSLYGQYRSTLVDHMDIEKASDFDELETSLFNFYLPSSYLCFVCSQEEFDLFNLGIP
                      PK"
+     repeat_region   79743..79844
+                     /note="DR96-1"
+                     /rpt_type=dispersed
+     repeat_region   82888..82899
+                     /note="SR26-1"
+                     /rpt_type=tandem
+     repeat_region   85193..85202
+                     /note="SR38-1"
+                     /rpt_type=tandem
+     repeat_region   86167..86178
+                     /note="SR12-3"
+                     /rpt_type=tandem
+     repeat_region   88789..88838
+                     /note="TR50-1"
+                     /rpt_type=tandem
+     repeat_region   91647..91658
+                     /note="SR2-1"
+                     /rpt_type=tandem
+     repeat_region   94096..94137
+                     /note="TR49-1"
+                     /rpt_type=tandem
+     repeat_region   94161..94172
+                     /note="SR32-2"
+                     /rpt_type=tandem
      gene            complement(98158..98231)
                      /gene="trnD-GUC-cp"
      tRNA            complement(98158..98231)
                      /gene="trnD-GUC-cp"
                      /product="tRNA-Asp"
+     repeat_region   100810..100819
+                     /note="SR6-3"
+                     /rpt_type=tandem
      gene            101409..110034
                      /gene="nad4"
      CDS             join(101409..101869,103296..103810,106873..107295,
@@ -114,21 +263,112 @@ FEATURES             Location/Qualifiers
                      IPPMLSHGLVSSALFLCVGVLYDRHKTRLVRYYGGLVSTMPNLPTIFFSFTLANMSSP
                      GTSSFIGEFPILVGAFQRNSLVATLAALGMILGAAYSLWLYNRVVSGNLKPDFLHKFS
                      DSNGREVSIFIPFIFGVVRMGVHPKVFPDRMHTSVSNLVQHGKFH"
+     repeat_region   101785..101843
+                     /gene="nad4"
+                     /note="DR38-1"
+                     /rpt_type=dispersed
+     repeat_region   102474..102483
+                     /gene="nad4"
+                     /note="SR27-2"
+                     /rpt_type=tandem
+     repeat_region   102600..102614
+                     /gene="nad4"
+                     /note="SR24-1"
+                     /rpt_type=tandem
+     repeat_region   102801..102810
+                     /gene="nad4"
+                     /note="SR20-4"
+                     /rpt_type=tandem
+     repeat_region   109995..110055
+                     /note="DR48-1"
+                     /rpt_type=dispersed
+     repeat_region   110090..110154
+                     /note="DR70-1"
+                     /rpt_type=dispersed
      gene            114579..114651
                      /gene="trnM-CAU-cp"
      tRNA            114579..114651
                      /gene="trnM-CAU-cp"
                      /product="tRNA-Met"
+     repeat_region   114872..114881
+                     /note="SR20-5"
+                     /rpt_type=tandem
+     repeat_region   116143..116154
+                     /note="SR12-4"
+                     /rpt_type=tandem
+     repeat_region   116346..116355
+                     /note="SR6-4"
+                     /rpt_type=tandem
+     repeat_region   116475..116484
+                     /note="SR6-5"
+                     /rpt_type=tandem
      gene            119530..119601
                      /gene="trnG-GCC"
      tRNA            119530..119601
                      /gene="trnG-GCC"
                      /product="tRNA-Gly"
+     repeat_region   122088..122099
+                     /note="SR47-1"
+                     /rpt_type=tandem
+     repeat_region   122405..122414
+                     /note="SR6-6"
+                     /rpt_type=tandem
      gene            122983..123054
                      /gene="trnQ-UUG"
      tRNA            122983..123054
                      /gene="trnQ-UUG"
                      /product="tRNA-Gln"
+     repeat_region   124356..124615
+                     /note="TR61-1"
+                     /rpt_type=tandem
+     repeat_region   124357..124858
+                     /note="DR37-2"
+                     /rpt_type=dispersed
+     repeat_region   124605..124863
+                     /note="TR19-2"
+                     /rpt_type=tandem
+     repeat_region   128251..128310
+                     /note="DR64-1"
+                     /rpt_type=dispersed
+     repeat_region   129910..129921
+                     /note="SR28-1"
+                     /rpt_type=tandem
+     repeat_region   129945..129956
+                     /note="SR53-1"
+                     /rpt_type=tandem
+     repeat_region   130337..130346
+                     /note="SR6-7"
+                     /rpt_type=tandem
+     repeat_region   134047..134058
+                     /note="SR21-1"
+                     /rpt_type=tandem
+     repeat_region   142501..142515
+                     /note="SR3-1"
+                     /rpt_type=tandem
+     repeat_region   143719..143786
+                     /note="DR7-1"
+                     /rpt_type=dispersed
+     repeat_region   143741..143799
+                     /note="DR85-1"
+                     /rpt_type=dispersed
+     repeat_region   143832..144262
+                     /note="DR62-1"
+                     /rpt_type=dispersed
+     repeat_region   144241..144283
+                     /note="TR1-1"
+                     /rpt_type=tandem
+     repeat_region   144520..144531
+                     /note="SR41-1"
+                     /rpt_type=tandem
+     repeat_region   144636..144712
+                     /note="DR36-1"
+                     /rpt_type=dispersed
+     repeat_region   144669..144754
+                     /note="DR111-1"
+                     /rpt_type=dispersed
+     repeat_region   144690..144758
+                     /note="DR54-1"
+                     /rpt_type=dispersed
      gene            join(459668..459962,145416..147134,247658..247716,
                      complement(412301..412559))
                      /gene="nad1"
@@ -144,6 +384,34 @@ FEATURES             Location/Qualifiers
                      LISRLAETNRAPFDLPEAEAESVAGYNVEYSSMGSALFFLGEYANMILMSGPCTSLSP
                      GGWPPILDLPIFKKIPGSIRFSIKVILFLFLYIWVRAAFPRYRYDQLMGLGRKVFLPL
                      SLARVVPVSGVLVTFQWLP"
+     repeat_region   146881..146931
+                     /gene="nad1"
+                     /note="DR6-1"
+                     /rpt_type=dispersed
+     repeat_region   148174..148223
+                     /note="DR98-1"
+                     /rpt_type=dispersed
+     repeat_region   148225..148236
+                     /note="SR19-1"
+                     /rpt_type=tandem
+     repeat_region   152654..152728
+                     /note="DR117-1"
+                     /rpt_type=dispersed
+     repeat_region   155262..155297
+                     /note="TR68-1"
+                     /rpt_type=tandem
+     repeat_region   157306..157317
+                     /note="SR45-1"
+                     /rpt_type=tandem
+     repeat_region   158570..158584
+                     /note="SR31-1"
+                     /rpt_type=tandem
+     repeat_region   160242..160251
+                     /note="SR20-6"
+                     /rpt_type=tandem
+     repeat_region   161420..168657
+                     /note="DR75-1"
+                     /rpt_type=dispersed
      gene            167066..168834
                      /gene="atp1"
      CDS             join(167066..168202,168330..168636,168758..168834)
@@ -159,6 +427,49 @@ FEATURES             Location/Qualifiers
                      SAYIPTNVIPITDGQICSETELFYRGIRPAINVGLSVSRVGSAAQLKAMKQVCGSSKL
                      ELAQYREVAALAQFGSDLDAATQALLNRGARLTEVPKQPQYAPLPIEKQILVIYAAVN
                      GFCDRMPLDKISQYERAIPSSIKPELLQALKVKGGLTNERKMEPDAFLKESALPYK"
+     repeat_region   168531..168784
+                     /gene="atp1"
+                     /note="TR25-1"
+                     /rpt_type=tandem
+     repeat_region   168825..168874
+                     /note="DR23-2"
+                     /rpt_type=dispersed
+     repeat_region   169307..169562
+                     /note="TR9-1"
+                     /rpt_type=tandem
+     repeat_region   169309..169911
+                     /note="DR50-1"
+                     /rpt_type=dispersed
+     repeat_region   171935..171949
+                     /note="SR63-1"
+                     /rpt_type=tandem
+     repeat_region   172548..172559
+                     /note="SR39-1"
+                     /rpt_type=tandem
+     repeat_region   174181..174192
+                     /note="SR32-3"
+                     /rpt_type=tandem
+     repeat_region   175681..175736
+                     /note="DR76-1"
+                     /rpt_type=dispersed
+     repeat_region   177240..177280
+                     /note="TR3-1"
+                     /rpt_type=tandem
+     repeat_region   179701..179710
+                     /note="SR36-1"
+                     /rpt_type=tandem
+     repeat_region   180207..180218
+                     /note="SR60-1"
+                     /rpt_type=tandem
+     repeat_region   180557..180588
+                     /note="TR43-1"
+                     /rpt_type=tandem
+     repeat_region   180831..180845
+                     /note="SR42-1"
+                     /rpt_type=tandem
+     repeat_region   182791..182901
+                     /note="DR112-1"
+                     /rpt_type=dispersed
      gene            182935..183507
                      /gene="nad9"
      CDS             182935..183507
@@ -169,6 +480,9 @@ FEATURES             Location/Qualifiers
                      LKLHTYTRVQVSIDICGVDHPSRKRRFEVVYNLLSTRYNSRIRVQTSADEVTRISPVV
                      SLFPSAGRWEREVWDMFGVSFINHPDLRRISTDYGFEGHPLRKDLPLSGYVEVRYDDP
                      EKRVVSEPIEMTQEFRYFDFASPWEQRSDG"
+     repeat_region   184102..184113
+                     /note="SR53-2"
+                     /rpt_type=tandem
      gene            184264..184337
                      /gene="trnP-UGG"
      tRNA            184264..184337
@@ -179,11 +493,74 @@ FEATURES             Location/Qualifiers
      tRNA            184504..184577
                      /gene="trnW-CCA-cp"
                      /product="tRNA-Trp"
+     repeat_region   186549..186560
+                     /note="SR62-1"
+                     /rpt_type=tandem
+     repeat_region   189296..189307
+                     /note="SR30-1"
+                     /rpt_type=tandem
+     repeat_region   189737..189748
+                     /note="SR57-1"
+                     /rpt_type=tandem
      gene            complement(190369..190441)
                      /gene="trnK-UUU"
      tRNA            complement(190369..190441)
                      /gene="trnK-UUU"
                      /product="tRNA-Lys"
+     repeat_region   196892..196945
+                     /note="TR8-1"
+                     /rpt_type=tandem
+     repeat_region   200122..200171
+                     /note="DR43-1"
+                     /rpt_type=dispersed
+     repeat_region   200265..200325
+                     /note="DR48-2"
+                     /rpt_type=dispersed
+     repeat_region   200358..200416
+                     /note="DR38-2"
+                     /rpt_type=dispersed
+     repeat_region   200956..201015
+                     /note="DR32-1"
+                     /rpt_type=dispersed
+     repeat_region   201118..201172
+                     /note="DR71-1"
+                     /rpt_type=dispersed
+     repeat_region   201267..201319
+                     /note="DR52-1"
+                     /rpt_type=dispersed
+     repeat_region   201351..201419
+                     /note="DR110-1"
+                     /rpt_type=dispersed
+     repeat_region   201938..202074
+                     /note="DR13-1"
+                     /rpt_type=dispersed
+     repeat_region   203336..203401
+                     /note="DR20-2"
+                     /rpt_type=dispersed
+     repeat_region   204427..204438
+                     /note="SR8-1"
+                     /rpt_type=tandem
+     repeat_region   205845..205872
+                     /note="TR27-1"
+                     /rpt_type=tandem
+     repeat_region   206776..206787
+                     /note="SR16-2"
+                     /rpt_type=tandem
+     repeat_region   207509..207518
+                     /note="SR20-7"
+                     /rpt_type=tandem
+     repeat_region   209620..209670
+                     /note="DR103-1"
+                     /rpt_type=dispersed
+     repeat_region   209871..209947
+                     /note="DR36-2"
+                     /rpt_type=dispersed
+     repeat_region   209904..209989
+                     /note="DR111-2"
+                     /rpt_type=dispersed
+     repeat_region   209925..209993
+                     /note="DR54-2"
+                     /rpt_type=dispersed
      gene            210676..211296
                      /gene="ccmB"
      CDS             210676..211296
@@ -194,6 +571,27 @@ FEATURES             Location/Qualifiers
                      HSHLGPIRIPPLFPFPPAPFPRNEKEDGTLELYYLSAYCLPKILLLQLVGHRVIQISC
                      VFCGFPMLQLLYQFGRSGMDRLNIPLGSLVLTLLCGIHSRSALGITSSSGWNSSQNPT
                      TSPTLLPPTLSRTSIETEWFHVLSSIGYSSPFVSLFPISVSISLQD"
+     repeat_region   212499..212510
+                     /note="SR39-2"
+                     /rpt_type=tandem
+     repeat_region   216618..216675
+                     /note="TR26-1"
+                     /rpt_type=tandem
+     repeat_region   217133..217263
+                     /note="DR59-2"
+                     /rpt_type=dispersed
+     repeat_region   218886..218895
+                     /note="SR20-8"
+                     /rpt_type=tandem
+     repeat_region   219773..219804
+                     /note="TR69-1"
+                     /rpt_type=tandem
+     repeat_region   221294..221363
+                     /note="TR71-1"
+                     /rpt_type=tandem
+     repeat_region   224393..224402
+                     /note="SR6-8"
+                     /rpt_type=tandem
      gene            complement(226647..227828)
                      /gene="cob"
      CDS             complement(226647..227828)
@@ -208,6 +606,9 @@ FEATURES             Location/Qualifiers
                      PEWYFLPIHAILRSIPDKSGGVAAIAPVFICLLALPFFKSMYVRSSSFRPIHQGIFWL
                      LLADCLLLGWIGCQPVEAPFVTIGQISPFVFFLFFAITPIPGRVGRGIPNSYTDETDH
                      T"
+     repeat_region   228635..228888
+                     /note="TR12-1"
+                     /rpt_type=tandem
      gene            complement(229261..229526)
                      /gene="rps14"
      CDS             complement(join(229261..229448,229493..229526))
@@ -226,11 +627,33 @@ FEATURES             Location/Qualifiers
                      IKNGKLAMEIPRGQKFIQTQRGSTGKSFRSNLGSFKDKGYVSDLARQSTLRGHGMSNF
                      LVRISTVMSLLDSPVEIRENSIQFSMETEFCEFSPELEDHFEIFEHIRGFNVTIVTSA
                      NTQDETLPPWSGFLPKDEGETQ"
+     repeat_region   230071..230172
+                     /note="DR96-2"
+                     /rpt_type=dispersed
+     repeat_region   232389..232400
+                     /note="SR32-4"
+                     /rpt_type=tandem
+     repeat_region   234808..234859
+                     /note="DR27-2"
+                     /rpt_type=dispersed
+     repeat_region   239469..239478
+                     /note="SR20-9"
+                     /rpt_type=tandem
      gene            240729..240815
                      /gene="trnS-UGA"
      tRNA            240729..240815
                      /gene="trnS-UGA"
                      /product="tRNA-Ser"
+     repeat_region   245259..245268
+                     /note="SR20-10"
+                     /rpt_type=tandem
+     repeat_region   247032..247043
+                     /note="SR14-1"
+                     /rpt_type=tandem
+     repeat_region   247677..247686
+                     /gene="nad1"
+                     /note="SR6-9"
+                     /rpt_type=tandem
      gene            248379..250331
                      /gene="matR"
      CDS             248379..250331
@@ -249,6 +672,18 @@ FEATURES             Location/Qualifiers
                      FSIQIEAPIKKILRRLRDRGLISRRRPWPIHVACLTNVSDGDIVNWSAGIAISPLSYY
                      RCRDNLYQVRTIVDHQIRWSAIFTLAHKHKSSARNIIPKYSKDSNILNQEGVKTLAKF
                      PNSIELGKLGPGQDPNNKEHSTTSLV"
+     repeat_region   250318..250332
+                     /note="SR50-1"
+                     /rpt_type=tandem
+     repeat_region   250437..250500
+                     /note="DR109-2"
+                     /rpt_type=dispersed
+     repeat_region   250464..250574
+                     /note="DR112-2"
+                     /rpt_type=dispersed
+     repeat_region   250593..250642
+                     /note="DR43-2"
+                     /rpt_type=dispersed
      gene            250606..250908
                      /gene="sdh3"
      CDS             250606..250908
@@ -275,6 +710,46 @@ FEATURES             Location/Qualifiers
                      LIGLFIYALMTIDAFAIVSALRQTRVKYIADLGALAKTNPISAITFSITMFSYAGIPP
                      LAGFCSKFYLFFAALGCGAYFLAPVGVVTSVIGRFYYIRLAKRMFFDTPRTWILYEPM
                      DRNKSLLLAMTSSFITSFFLYPSPLFSVTHQMALSSYL"
+     repeat_region   251647..251706
+                     /gene="nad2"
+                     /note="DR32-2"
+                     /rpt_type=dispersed
+     repeat_region   252845..252895
+                     /gene="nad2"
+                     /note="DR6-2"
+                     /rpt_type=dispersed
+     repeat_region   253012..253066
+                     /gene="nad2"
+                     /note="DR71-2"
+                     /rpt_type=dispersed
+     repeat_region   253170..253222
+                     /gene="nad2"
+                     /note="DR52-2"
+                     /rpt_type=dispersed
+     repeat_region   253254..253322
+                     /note="DR110-2"
+                     /rpt_type=dispersed
+     repeat_region   253909..254045
+                     /note="DR13-2"
+                     /rpt_type=dispersed
+     repeat_region   255503..255514
+                     /note="SR1-1"
+                     /rpt_type=tandem
+     repeat_region   256864..256873
+                     /note="SR20-11"
+                     /rpt_type=tandem
+     repeat_region   257120..257129
+                     /note="SR27-3"
+                     /rpt_type=tandem
+     repeat_region   258814..258823
+                     /note="SR6-10"
+                     /rpt_type=tandem
+     repeat_region   260448..260457
+                     /note="SR38-2"
+                     /rpt_type=tandem
+     repeat_region   262114..262168
+                     /note="DR87-1"
+                     /rpt_type=dispersed
      gene            complement(262130..262531)
                      /gene="sdh4"
      CDS             complement(262130..262531)
@@ -295,6 +770,15 @@ FEATURES             Location/Qualifiers
                      AFFHSSLAPTVEIGGIWPPKGIWVLDPWEIPFLNTPILLSSGAAVTWAHHAILAGKEK
                      RAVYALVATVLLALVFTGFQGMEYYQAPSTISDSIYGSTFFLATGFHGFHVIIGTLFL
                      IICGIRQYLGHLTKEHHVGFEAAAWYWHFVDVVRLFLFVSIYWWGGI"
+     repeat_region   262813..262862
+                     /note="DR44-1"
+                     /rpt_type=dispersed
+     repeat_region   263247..263747
+                     /note="DR115-1"
+                     /rpt_type=dispersed
+     repeat_region   264308..264357
+                     /note="DR44-2"
+                     /rpt_type=dispersed
      gene            complement(264789..265274)
                      /gene="atp8"
      CDS             complement(264789..265274)
@@ -305,6 +789,63 @@ FEATURES             Location/Qualifiers
                      NRLVSHRGNNYLMPRNDPNRLEDILRKGFSTGVSYMYSSLFEVSQWCNAVDLLGKRRK
                      ITLISCFGEISGSRGMERSILYLISKSSYSISFNPGWGIPCRNDIMLIHVLHGQGRIK
                      K"
+     repeat_region   265209..265315
+                     /note="DR28-1"
+                     /rpt_type=dispersed
+     repeat_region   265976..266378
+                     /note="DR86-2"
+                     /rpt_type=dispersed
+     repeat_region   266439..266450
+                     /note="SR48-1"
+                     /rpt_type=tandem
+     repeat_region   277742..277751
+                     /note="SR4-1"
+                     /rpt_type=tandem
+     repeat_region   278401..278410
+                     /note="SR4-2"
+                     /rpt_type=tandem
+     repeat_region   280629..280640
+                     /note="SR12-5"
+                     /rpt_type=tandem
+     repeat_region   282868..282879
+                     /note="SR67-1"
+                     /rpt_type=tandem
+     repeat_region   287299..287361
+                     /note="TR74-1"
+                     /rpt_type=tandem
+     repeat_region   288255..288264
+                     /note="SR6-11"
+                     /rpt_type=tandem
+     repeat_region   289723..289774
+                     /note="DR107-1"
+                     /rpt_type=dispersed
+     repeat_region   290874..290885
+                     /note="SR25-2"
+                     /rpt_type=tandem
+     repeat_region   293821..293832
+                     /note="SR8-2"
+                     /rpt_type=tandem
+     repeat_region   294954..294963
+                     /note="SR20-12"
+                     /rpt_type=tandem
+     repeat_region   295741..295996
+                     /note="TR58-1"
+                     /rpt_type=tandem
+     repeat_region   295743..296220
+                     /note="DR46-1"
+                     /rpt_type=dispersed
+     repeat_region   296441..296481
+                     /note="TR21-1"
+                     /rpt_type=tandem
+     repeat_region   297229..297240
+                     /note="SR8-3"
+                     /rpt_type=tandem
+     repeat_region   298090..298101
+                     /note="SR25-3"
+                     /rpt_type=tandem
+     repeat_region   298909..298918
+                     /note="SR20-13"
+                     /rpt_type=tandem
      gene            307488..309870
                      /gene="ccmFC"
      CDS             join(307488..308251,309189..309870)
@@ -320,11 +861,23 @@ FEATURES             Location/Qualifiers
                      GKLEHFLHRWMKNREHNNFWLTMFPEKRYFRETTSTTEVAIHTNLFTDLYASIGTSSS
                      RTGGWYTTIMKLPFIFFIRIGFMLASSGGSRSLLRQLQKDKLRWNRESSVEFHNCIKR
                      VKVVAAARRGTSSTVPVRPNETEWAGTTNQA"
+     repeat_region   313559..313570
+                     /note="SR12-6"
+                     /rpt_type=tandem
      gene            313897..313977
                      /gene="trnI-CAU"
      tRNA            313897..313977
                      /gene="trnI-CAU"
                      /product="tRNA-Ile"
+     repeat_region   317157..317166
+                     /note="SR6-12"
+                     /rpt_type=tandem
+     repeat_region   317231..317241
+                     /note="SR6-13"
+                     /rpt_type=tandem
+     repeat_region   317394..317403
+                     /note="SR4-3"
+                     /rpt_type=tandem
      gene            complement(317698..318417)
                      /gene="mttB"
      CDS             complement(317698..318417)
@@ -336,6 +889,24 @@ FEATURES             Location/Qualifiers
                      PRVVPNVWHFPYFVGATSTNSLMIKLQPKIYDYIMLTVRISFILSVCSQVPVIVIRLP
                      EPRGLSVETSTNNRRFLMVFPLLTAALSAPPDIWCQIVARFLISLIIELAIFVASIVQ
                      VREEGWTSGMRESGSIDKKQE"
+     repeat_region   317779..317864
+                     /note="DR94-1"
+                     /rpt_type=dispersed
+     repeat_region   317825..317876
+                     /note="DR30-1"
+                     /rpt_type=dispersed
+     repeat_region   318483..318492
+                     /note="SR41-2"
+                     /rpt_type=tandem
+     repeat_region   322419..322453
+                     /note="TR36-1"
+                     /rpt_type=tandem
+     repeat_region   324404..324441
+                     /note="TR75-1"
+                     /rpt_type=tandem
+     repeat_region   325931..348147
+                     /note="DR3-1"
+                     /rpt_type=dispersed
      gene            332076..335173
                      /gene="rrn26"
      rRNA            332077..335173
@@ -362,6 +933,9 @@ FEATURES             Location/Qualifiers
      tRNA            347113..347198
                      /gene="trnI-UAU-cp"
                      /product="tRNA-Ile"
+     repeat_region   348911..348922
+                     /note="SR10-1"
+                     /rpt_type=tandem
      gene            complement(353340..355073)
                      /gene="ccmFN"
      CDS             complement(353340..355073)
@@ -379,6 +953,9 @@ FEATURES             Location/Qualifiers
                      DPVENASFMPRVLATARIHSVILPLLHSWTSFLNIVTLPCCVSGTFSIRSGLLAPVHS
                      FATDDTRGIFLWRFFLLMTGISMILFSQMKQQASVRRTYKKEMVVARSTLVHLRHSAR
                      AQPRPVMLWKN"
+     repeat_region   357046..357057
+                     /note="SR16-3"
+                     /rpt_type=tandem
      gene            complement(360720..361562)
                      /gene="atp6"
      CDS             complement(360720..361562)
@@ -391,6 +968,69 @@ FEATURES             Location/Qualifiers
                      IVGFQRNGLHFLSFLLPAGVPLPLAPFLVLLELISYCFRALSLGIRLFANMMAGHSLV
                      KILSGFAWTMLCMNNLFYFIGDLGPLFIVLALTGLELGVAILQAYVFTILICIYLNDA
                      INLH"
+     repeat_region   366549..366802
+                     /note="TR79-1"
+                     /rpt_type=tandem
+     repeat_region   373255..373269
+                     /note="SR40-1"
+                     /rpt_type=tandem
+     repeat_region   374450..374556
+                     /note="DR28-2"
+                     /rpt_type=dispersed
+     repeat_region   375028..375082
+                     /note="DR87-2"
+                     /rpt_type=dispersed
+     repeat_region   376434..376445
+                     /note="SR44-1"
+                     /rpt_type=tandem
+     repeat_region   381150..381204
+                     /note="TR70-1"
+                     /rpt_type=tandem
+     repeat_region   383337..383348
+                     /note="SR16-4"
+                     /rpt_type=tandem
+     repeat_region   383793..383824
+                     /note="TR11-1"
+                     /rpt_type=tandem
+     repeat_region   384665..384675
+                     /note="SR6-15"
+                     /rpt_type=tandem
+     repeat_region   387829..387840
+                     /note="SR16-5"
+                     /rpt_type=tandem
+     repeat_region   388171..390474
+                     /note="DR25-2"
+                     /rpt_type=dispersed
+     repeat_region   390874..390945
+                     /note="TR34-1"
+                     /rpt_type=tandem
+     repeat_region   391299..391350
+                     /note="DR30-2"
+                     /rpt_type=dispersed
+     repeat_region   391311..391396
+                     /note="DR94-2"
+                     /rpt_type=dispersed
+     repeat_region   391475..391888
+                     /note="DR72-1"
+                     /rpt_type=dispersed
+     repeat_region   391891..391917
+                     /note="TR54-1"
+                     /rpt_type=tandem
+     repeat_region   394739..394750
+                     /note="SR22-1"
+                     /rpt_type=tandem
+     repeat_region   397746..397797
+                     /note="DR104-1"
+                     /rpt_type=dispersed
+     repeat_region   397825..397834
+                     /note="SR36-2"
+                     /rpt_type=tandem
+     repeat_region   398668..398677
+                     /note="SR6-16"
+                     /rpt_type=tandem
+     repeat_region   399213..399222
+                     /note="SR20-15"
+                     /rpt_type=tandem
      gene            complement(402143..402727)
                      /gene="atp4"
      CDS             complement(402143..402727)
@@ -409,11 +1049,53 @@ FEATURES             Location/Qualifiers
                      /product="NADH dehydrogenase subunit 4L"
                      /translation="MIISILGIRGILLNRRNIPIMSMSIESMLLAVNSNFLVFSVSSD
                      DMMGQSFASLVPTVAAAESAIGLAIFVITFRVRGTIAVEFINSIQG"
+     repeat_region   407304..407335
+                     /note="TR14-1"
+                     /rpt_type=tandem
+     repeat_region   411032..411153
+                     /note="TR77-1"
+                     /rpt_type=tandem
+     repeat_region   412740..412749
+                     /note="SR4-4"
+                     /rpt_type=tandem
+     repeat_region   413081..413217
+                     /note="DR34-1"
+                     /rpt_type=dispersed
+     repeat_region   413260..413271
+                     /note="SR4-5"
+                     /rpt_type=tandem
+     repeat_region   414272..414322
+                     /note="DR17-2"
+                     /rpt_type=dispersed
+     repeat_region   414338..414403
+                     /note="DR118-2"
+                     /rpt_type=dispersed
+     repeat_region   416006..416015
+                     /note="SR20-16"
+                     /rpt_type=tandem
+     repeat_region   417391..417402
+                     /note="SR21-2"
+                     /rpt_type=tandem
+     repeat_region   423200..423211
+                     /note="SR54-1"
+                     /rpt_type=tandem
+     repeat_region   424565..424574
+                     /note="SR6-17"
+                     /rpt_type=tandem
+     repeat_region   424744..424755
+                     /note="SR5-1"
+                     /rpt_type=tandem
+     repeat_region   425248..425303
+                     /note="DR76-2"
+                     /rpt_type=dispersed
      gene            425250..425337
                      /gene="trnS-GCU"
      tRNA            425250..425337
                      /gene="trnS-GCU"
                      /product="tRNA-Ser"
+     repeat_region   425585..425618
+                     /note="TR53-1"
+                     /rpt_type=tandem
      gene            425694..425767
                      /gene="trnF-GAA"
      tRNA            425694..425767
@@ -424,16 +1106,55 @@ FEATURES             Location/Qualifiers
      tRNA            425982..426056
                      /gene="trnP-UGG"
                      /product="tRNA-Pro"
+     repeat_region   426828..427081
+                     /note="TR67-1"
+                     /rpt_type=tandem
+     repeat_region   427024..427277
+                     /note="TR44-1"
+                     /rpt_type=tandem
+     repeat_region   427319..427330
+                     /note="SR46-1"
+                     /rpt_type=tandem
+     repeat_region   431958..431969
+                     /note="SR18-1"
+                     /rpt_type=tandem
      gene            complement(434102..434173)
                      /gene="trnE-UUC"
      tRNA            complement(434102..434173)
                      /gene="trnE-UUC"
                      /product="tRNA-Glu"
+     repeat_region   434441..434450
+                     /note="SR6-18"
+                     /rpt_type=tandem
+     repeat_region   434876..434887
+                     /note="SR2-2"
+                     /rpt_type=tandem
+     repeat_region   435262..435271
+                     /note="SR27-4"
+                     /rpt_type=tandem
+     repeat_region   435561..435572
+                     /note="SR11-2"
+                     /rpt_type=tandem
+     repeat_region   435699..435710
+                     /note="SR26-2"
+                     /rpt_type=tandem
+     repeat_region   436150..436200
+                     /note="DR98-2"
+                     /rpt_type=dispersed
      gene            436504..436577
                      /gene="trnH-GUG-cp"
      tRNA            436504..436577
                      /gene="trnH-GUG-cp"
                      /product="tRNA-His"
+     repeat_region   436789..436823
+                     /note="TR73-1"
+                     /rpt_type=tandem
+     repeat_region   437500..437758
+                     /note="TR46-1"
+                     /rpt_type=tandem
+     repeat_region   437705..437960
+                     /note="TR18-1"
+                     /rpt_type=tandem
      gene            complement(440379..441962)
                      /gene="cox1"
      CDS             complement(440379..441962)
@@ -450,6 +1171,30 @@ FEATURES             Location/Qualifiers
                      AGFHYWVGKIFGRTYPETLGQIHFWITFFGVNLTFFPMHFLGLSGMPRRIPDYPDAYA
                      GWNALSSFGSYISVVGIRRFFVVVTITSSSGNNKRCAPSPWAVEQNPTTPEWMVQSPP
                      AFHTFGELPAIKETKSYVK"
+     repeat_region   447865..447939
+                     /note="DR117-2"
+                     /rpt_type=dispersed
+     repeat_region   448979..448990
+                     /note="SR5-2"
+                     /rpt_type=tandem
+     repeat_region   449172..449205
+                     /note="TR41-1"
+                     /rpt_type=tandem
+     repeat_region   449413..449424
+                     /note="SR64-1"
+                     /rpt_type=tandem
+     repeat_region   449854..449865
+                     /note="SR17-1"
+                     /rpt_type=tandem
+     repeat_region   450037..450046
+                     /note="SR6-19"
+                     /rpt_type=tandem
+     repeat_region   451094..451127
+                     /note="TR28-1"
+                     /rpt_type=tandem
+     repeat_region   453700..453715
+                     /note="SR11-3"
+                     /rpt_type=tandem
      gene            453818..454042
                      /gene="atp9"
      CDS             453818..454042
@@ -458,6 +1203,12 @@ FEATURES             Location/Qualifiers
                      /product="ATP synthase subunit 9"
                      /translation="MLEGAKLMGAGAATIALAGAAVGIGNVFSSLIHSVARNPSLAKQ
                      LFGYAILGFALTEAIALFALMMAFLILFVF"
+     repeat_region   454029..454631
+                     /note="DR50-2"
+                     /rpt_type=dispersed
+     repeat_region   454378..454632
+                     /note="TR42-2"
+                     /rpt_type=tandem
      gene            join(454550..456846,complement(549171..549635))
                      /gene="nad5"
                      /trans_splicing
@@ -478,6 +1229,17 @@ FEATURES             Location/Qualifiers
                      PTITKLIPIPFSTSGASVAYNVNPVADQFQRAFQTSTFCNRLYSFFNKRWFFDQVLND
                      FLVRSFLRFGYEVSFEALDKGAIEILGPYGISYTFRRLAERISQLQSGFVVRRVRYDP
                      WPPAWWGWLLRCG"
+     repeat_region   454601..454652
+                     /gene="nad5"
+                     /note="DR103-2"
+                     /rpt_type=dispersed
+     repeat_region   455185..455246
+                     /gene="nad5"
+                     /note="DR67-1"
+                     /rpt_type=dispersed
+     repeat_region   457497..457508
+                     /note="SR49-1"
+                     /rpt_type=tandem
      gene            458257..458586
                      /gene="rps10"
      CDS             458257..458586
@@ -487,6 +1249,18 @@ FEATURES             Location/Qualifiers
                      /translation="MLLINRTGRGVSQKERPPKVTTTKIRIVIRSFDHPFLENLFLGL
                      PPYTRKIGLPESRVLYTVLRSPHIDKKSREQFEMEIKKQFLVIKTERHELRKKFFRLK
                      RRATRRT"
+     repeat_region   459321..459330
+                     /note="SR27-5"
+                     /rpt_type=tandem
+     repeat_region   462885..462944
+                     /note="DR64-2"
+                     /rpt_type=dispersed
+     repeat_region   465761..465772
+                     /note="SR52-1"
+                     /rpt_type=tandem
+     repeat_region   470361..492577
+                     /note="DR3-2"
+                     /rpt_type=dispersed
      gene            476506..479603
                      /gene="rrn26"
      rRNA            476507..479603
@@ -513,6 +1287,12 @@ FEATURES             Location/Qualifiers
      tRNA            491543..491628
                      /gene="trnI-UAU-cp"
                      /product="tRNA-Ile"
+     repeat_region   497441..497492
+                     /note="DR104-2"
+                     /rpt_type=dispersed
+     repeat_region   498374..498383
+                     /note="SR6-21"
+                     /rpt_type=tandem
      gene            complement(498486..499025)
                      /gene="rpl16"
      CDS             complement(498486..499025)
@@ -539,6 +1319,78 @@ FEATURES             Location/Qualifiers
                      GIGELIKGIEMMIEIILRNRRIPYGYNSYLNEVKKMRSLLSNRTNTNTLIESVKIKSV
                      YQSASPIAQDISFQLRNKTFRSIFSKIVKNIPLVMNKGVEGIRICCSGRLKGAEIART
                      ECGKYGKTSRNVFNQKIDYAPAEVSTRYGISGVKVWISYSKK"
+     repeat_region   500379..500390
+                     /note="SR15-1"
+                     /rpt_type=tandem
+     repeat_region   501164..501188
+                     /note="TR29-1"
+                     /rpt_type=tandem
+     repeat_region   501669..501730
+                     /note="DR67-2"
+                     /rpt_type=dispersed
+     repeat_region   502181..502190
+                     /note="SR6-22"
+                     /rpt_type=tandem
+     repeat_region   502239..502669
+                     /note="DR62-2"
+                     /rpt_type=dispersed
+     repeat_region   503682..503693
+                     /note="SR53-3"
+                     /rpt_type=tandem
+     repeat_region   504833..504879
+                     /note="TR40-1"
+                     /rpt_type=tandem
+     repeat_region   507727..507738
+                     /note="SR33-2"
+                     /rpt_type=tandem
+     repeat_region   507749..507758
+                     /note="SR4-6"
+                     /rpt_type=tandem
+     repeat_region   511180..511435
+                     /note="TR56-1"
+                     /rpt_type=tandem
+     repeat_region   511181..511681
+                     /note="DR115-2"
+                     /rpt_type=dispersed
+     repeat_region   514168..514177
+                     /note="SR36-3"
+                     /rpt_type=tandem
+     repeat_region   516358..516369
+                     /note="SR22-2"
+                     /rpt_type=tandem
+     repeat_region   518469..518501
+                     /note="TR65-1"
+                     /rpt_type=tandem
+     repeat_region   518941..518955
+                     /note="SR13-1"
+                     /rpt_type=tandem
+     repeat_region   521882..521896
+                     /gene="nad2"
+                     /note="SR6-23"
+                     /rpt_type=tandem
+     repeat_region   521949..521963
+                     /gene="nad2"
+                     /note="SR35-1"
+                     /rpt_type=tandem
+     repeat_region   522352..522366
+                     /gene="nad2"
+                     /note="SR58-1"
+                     /rpt_type=tandem
+     repeat_region   522838..523310
+                     /gene="nad2"
+                     /note="DR35-1"
+                     /rpt_type=dispersed
+     repeat_region   523057..523311
+                     /gene="nad2"
+                     /note="TR60-1"
+                     /rpt_type=tandem
+     repeat_region   523635..523645
+                     /gene="nad2"
+                     /note="SR6-24"
+                     /rpt_type=tandem
+     repeat_region   524695..524707
+                     /note="SR6-25"
+                     /rpt_type=tandem
      gene            complement(524785..524867)
                      /gene="trnY-GUA"
      tRNA            complement(524785..524867)
@@ -554,6 +1406,18 @@ FEATURES             Location/Qualifiers
      tRNA            complement(528075..528145)
                      /gene="trnC-GCA"
                      /product="tRNA-Cys"
+     repeat_region   530043..530052
+                     /note="SR6-26"
+                     /rpt_type=tandem
+     repeat_region   530911..530922
+                     /note="SR11-4"
+                     /rpt_type=tandem
+     repeat_region   531230..531241
+                     /note="SR51-1"
+                     /rpt_type=tandem
+     repeat_region   531571..531582
+                     /note="SR61-1"
+                     /rpt_type=tandem
      gene            533187..539892
                      /gene="nad7"
      CDS             join(533187..533329,534212..534280,536079..536545,
@@ -569,11 +1433,60 @@ FEATURES             Location/Qualifiers
                      QCPNQMPSGMIKADDRKLCPPSRCRMKLSMESSIHHFEPYTEGFSVPAPSTYTAVEAP
                      KGEFGVFLVSNGSNRPYRRKIRAPGSAHLQGLDSMSKHHMPADVVTIIGTQDIVSGEV
                      DR"
+     repeat_region   535372..535844
+                     /gene="nad7"
+                     /note="DR35-2"
+                     /rpt_type=dispersed
+     repeat_region   535591..535845
+                     /gene="nad7"
+                     /note="TR13-2"
+                     /rpt_type=tandem
+     repeat_region   538484..538542
+                     /gene="nad7"
+                     /note="DR66-2"
+                     /rpt_type=dispersed
+     repeat_region   538761..538798
+                     /gene="nad7"
+                     /note="TR7-1"
+                     /rpt_type=tandem
+     repeat_region   542682..542693
+                     /note="SR9-1"
+                     /rpt_type=tandem
+     repeat_region   545582..545593
+                     /note="SR17-2"
+                     /rpt_type=tandem
+     repeat_region   546528..546593
+                     /note="DR78-2"
+                     /rpt_type=dispersed
+     repeat_region   547640..548021
+                     /note="TR39-1"
+                     /rpt_type=tandem
+     repeat_region   547641..548054
+                     /note="DR72-2"
+                     /rpt_type=dispersed
+     repeat_region   548924..548987
+                     /note="DR70-2"
+                     /rpt_type=dispersed
+     repeat_region   550169..550180
+                     /note="SR27-6"
+                     /rpt_type=tandem
+     repeat_region   551906..552042
+                     /note="DR34-2"
+                     /rpt_type=dispersed
+     repeat_region   552035..552080
+                     /note="TR62-1"
+                     /rpt_type=tandem
      gene            556354..556426
                      /gene="trnC-GCA"
      tRNA            556354..556426
                      /gene="trnC-GCA"
                      /product="tRNA-Cys"
+     repeat_region   558520..558531
+                     /note="SR7-1"
+                     /rpt_type=tandem
+     repeat_region   558702..558751
+                     /note="DR16-3"
+                     /rpt_type=dispersed
      gene            558788..561519
                      /gene="rpl2"
      CDS             join(558788..559686,561405..561519)
@@ -587,6 +1500,10 @@ FEATURES             Location/Qualifiers
                      TFSLCEVRKWRTHSILWAHRIKRKAALSWQSFWRQDTLTLRLVGAAEHNESKPKMDQG
                      SLPAKPIGERPKDGARKVDRAPVVYIIASHPLEAGKMVMNCDWSKPSTSDLLRPAQNA
                      HPY"
+     repeat_region   560380..560391
+                     /gene="rpl2"
+                     /note="SR37-1"
+                     /rpt_type=tandem
      gene            571668..572288
                      /gene="rps1"
      CDS             571668..572288
@@ -597,6 +1514,37 @@ FEATURES             Location/Qualifiers
                      TPRICMQDELTGVPINRATRFENKVGSLDLVAGESLIKKKILERFFIDLVAGESRIKE
                      RAAARFNDLVGSTDVVAGEPLLLLPRRFRQNRAWMELNKIWRTNTKVKGFIIEKVKGG
                      YSVAIAGFITFLPFRPLKMKSKRKRISNDRFTIESINPKRTNIVVF"
+     repeat_region   572034..572045
+                     /gene="rps1"
+                     /note="SR8-4"
+                     /rpt_type=tandem
+     repeat_region   572340..572349
+                     /note="SR6-27"
+                     /rpt_type=tandem
+     repeat_region   572900..572911
+                     /note="SR66-1"
+                     /rpt_type=tandem
+     repeat_region   576952..576961
+                     /note="SR4-7"
+                     /rpt_type=tandem
+     repeat_region   583706..583960
+                     /note="TR10-1"
+                     /rpt_type=tandem
+     repeat_region   583707..584198
+                     /note="DR19-3"
+                     /rpt_type=dispersed
+     repeat_region   585461..585489
+                     /note="TR76-1"
+                     /rpt_type=tandem
+     repeat_region   585805..586283
+                     /note="DR46-2"
+                     /rpt_type=dispersed
+     repeat_region   594883..595137
+                     /note="TR64-1"
+                     /rpt_type=tandem
+     repeat_region   594884..602121
+                     /note="DR75-2"
+                     /rpt_type=dispersed
 BASE COUNT   163055 a 137761 c 138223 g 163082 t
 ORIGIN      
         1 gcagctgtca atggattctg tgatcgaatg ccactagaca aaatttctca atatgagaga

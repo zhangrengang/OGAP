@@ -1,12 +1,6 @@
 >Feature NC_001284.2
-12102	8933	gene
-		gene	rrn26
-12102	8933	rRNA
-		product	26S ribosomal RNA
-142998	142770	gene
-141940	140721
-22090	21692
-20717	20571
+142998	140721	gene
+22090	20571
 		gene	nad5
 		exception	trans-splicing
 142998	142770	CDS
@@ -25,8 +19,7 @@
 25615	25076	CDS
 		product	ribosomal protein L16
 		codon_start	1
-28733	28660	gene
-27078	25482
+28733	25482	gene
 		gene	rps3
 28733	28660	CDS
 27078	25482
@@ -41,13 +34,16 @@
 30463	31083	CDS
 		product	cytochrome c biogenesis B
 		codon_start	1
-42628	41929	gene
-40584	40502
+42628	40502	gene
 		gene	cox2
 42628	41929	CDS
 40584	40502
 		product	cytochrome c oxidase subunit 2
 		codon_start	1
+46951	47019	gene
+		gene	trnF-GAA
+46951	47019	tRNA
+		product	tRNA-Phe
 53611	52715	gene
 		gene	ccmFC
 53611	52715	CDS
@@ -62,8 +58,7 @@
 57774	58331	CDS
 		product	ribosomal protein L5
 		codon_start	1
-58273	58296	gene
-58345	58590
+58273	58590	gene
 		gene	rps14
 58273	58296	CDS
 58345	58590
@@ -92,10 +87,6 @@
 83116	82028	CDS
 		product	ribosomal protein S4
 		codon_start	1
-93419	93351	gene
-		gene	trnfM-CAU
-93419	93351	tRNA
-		product	tRNA-Met
 103827	103914	gene
 		gene	trnS-GCU
 103827	103914	tRNA
@@ -116,8 +107,7 @@
 		gene	trnY-GUA
 106797	106879	tRNA
 		product	tRNA-Tyr
-111750	111793	gene
-111824	112907
+111750	112907	gene
 		gene	atp6
 111750	111793	CDS
 111824	112907
@@ -128,19 +118,15 @@
 112953	113039	tRNA
 		product	tRNA-Ser
 127094	127014	gene
-		gene	trnM-CAU
+		gene	trnI-CAU
 127094	127014	tRNA
-		product	tRNA-Met
+		product	tRNA-Ile
 129909	130385	gene
 		gene	atp8
 129909	130385	CDS
 		product	ATP synthase subunit 8
 		codon_start	1
-132071	132213	gene
-133177	133245
-134309	134775
-135829	136072
-137892	138153
+132071	138153	gene
 		gene	nad7
 132071	132213	CDS
 133177	133245
@@ -150,10 +136,8 @@
 		product	NADH dehydrogenase subunit 7
 		codon_start	1
 318300	318006	gene
-289085	289003
-288108	287917
-147048	146990
-143477	143219
+289085	287917
+147048	143219
 		gene	nad1
 		exception	trans-splicing
 318300	318006	CDS
@@ -168,8 +152,7 @@
 146264	144294	CDS
 		product	maturase-related protein
 		codon_start	1
-154744	155588	gene
-155622	155663
+154744	155663	gene
 157216	157345
 		gene	rpl2
 		exception	trans-splicing
@@ -183,15 +166,17 @@
 157509	158351	CDS
 		product	transport membrane protein
 		codon_start	1
-161693	162153	gene
-163625	164217
-167221	167660
+161693	167660	gene
 		gene	nad4
 161693	162153	CDS
 163625	164217
 167221	167660
 		product	NADH dehydrogenase subunit 4
 		codon_start	1
+181116	181184	gene
+		gene	trnF-GAA
+181116	181184	tRNA
+		product	tRNA-Phe
 188662	188084	gene
 		gene	atp4
 188662	188084	CDS
@@ -273,6 +258,11 @@
 		gene	trnS-UGA
 296774	296688	tRNA
 		product	tRNA-Ser
+297869	296820	gene
+		gene	atp6
+297869	296820	CDS
+		product	ATP synthase subunit 6
+		codon_start	1
 303689	302166	gene
 		gene	atp1
 303689	302166	CDS
@@ -283,11 +273,8 @@
 314627	315073	CDS
 		product	ribosomal protein S7
 		codon_start	1
-81264	81112	gene
-80131	79740
-333105	332945
-330306	329734
-328077	327890
+81264	79740	gene
+333105	327890
 		gene	nad2
 		exception	trans-splicing
 81264	81112	CDS
@@ -310,11 +297,3 @@
 		gene	trnH-GUG-cp
 359739	359666	tRNA
 		product	tRNA-His
-361179	361062	gene
-		gene	rrn5
-361179	361062	rRNA
-		product	5S ribosomal RNA
-363284	361350	gene
-		gene	rrn18
-363284	361350	rRNA
-		product	18S ribosomal RNA

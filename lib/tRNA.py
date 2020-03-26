@@ -59,7 +59,7 @@ class tRNAscanRecord():
 			return AA[self.type]
 		except KeyError:
 			print >>sys.stderr, 'Unknown tRNA product: {}, ignored'.format(self.type)
-			return 'X'
+			return 'XX'
 	@property
 	def name(self):
 		return 'trn{}-{}'.format(self.aa, self.anti_codon)
@@ -157,7 +157,7 @@ class tRNAscanRecord():
 		type = 'exon'
 		attributes = ''
 		for start, end in regions:
-			line = [self.target, source, type, start, end, self.score, 
+			line = [self.target, source, type, start, end, round(self.score,1), 
 					self.strand, frame, attributes]
 			line = GffLine(line)
 			exons += [line]

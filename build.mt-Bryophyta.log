@@ -1,0 +1,184 @@
+{'count': False, 'organ': 'mt', 'list': False, 'taxon': 'Bryophyta', 'tmpdir': '/dev/shm/tmp', 'custom': None, 'cleanup': False, 'exclude_taxa': None, 'gbfiles': ['/share/home/nature/database/RefSeq/mitochondrion/mitochondrion.1.genomic.gbff.gz', '/share/home/nature/database/RefSeq/mitochondrion/mitochondrion.2.genomic.gbff.gz'], 'check': False, 'dbdir': None}
+2020-03-24 02:40:56,128 -INFO- parsing ['/share/home/nature/database/RefSeq/mitochondrion/mitochondrion.1.genomic.gbff.gz', '/share/home/nature/database/RefSeq/mitochondrion/mitochondrion.2.genomic.gbff.gz']
+2020-03-24 02:40:56,129 -INFO- version: RefSeq 2020-01-09: build 2020-03-23
+loading from /dev/shm/tmp/ogap_db/taxonomy.json.gz
+loading genbank records
+`Leptocephalus sp. 'type II larva' (Smith, 1989)` is not found
+`Himantura gerrardi` is not found
+`Vazella pourtalesi` is not found
+`Palpitomonas bilix Eukaryota.` is not found
+`Eukaryota sp. BB2 Eukaryota.` is not found
+`Ancoracysta twista Eukaryota.` is not found
+`Cyprinus carpio x Megalobrama amblycephala` is not found
+2020-03-24 02:51:29,775 -INFO- 41 records: 13 orders, 17 families, 31 genera, 41 organism
+2020-03-24 02:51:29,775 -INFO- pruning taxa
+2020-03-24 02:51:29,776 -INFO- 41 records: 13 orders, 17 families, 31 genera, 41 organism
+2020-03-24 02:51:29,776 -INFO- building taxonomy tree
+2020-03-24 02:51:29,776 -INFO- run CMD: `ete3 ncbiquery --search 'Orthotrichum stellatum' 'Nyholmiella obtusifolia' 'Mielichhoferia elongata' 'Ptychomnion cygnisetum' 'Syntrichia filaris' 'Niphotrichum ericoides' 'Lewinskya speciosa' 'Callicladium imponens' 'Zygodon viridissimus' 'Ulota crispa' 'Dilutineuron laevigatum' 'Niphotrichum elongatum' 'Brachythecium rivulare' 'Climacium americanum' 'Sphagnum palustre' 'Orthotrichum bicolor' 'Racomitrium emersum' 'Anomodon attenuatus' 'Plenogemma phyllantha' 'Nyholmiella gymnostoma' 'Orthotrichum diaphanum' 'Ulota hutchinsiae' 'Orthotrichum callistomum' 'Stoneobryum bunyaense' 'Buxbaumia aphylla' 'Bucklandiella orthotrichacea' 'Sanionia uncinata' 'Frisvollia varia' 'Physcomitrella patens' 'Stoneobryum mirum' 'Tetraplodon fuegianus' 'Anomodon rugelii' 'Atrichum angustatum' 'Codriophorus aciculare' 'Racomitrium lanuginosum' 'Polytrichum commune' 'Tetraphis pellucida' 'Chionoloma tenuirostre' 'Orthotrichum macrocephalum' 'Funaria hygrometrica' 'Bartramia pomiformis' --tree >  /dev/shm/tmp/mt-Bryophyta/species.tree.tmp`
+2020-03-24 02:51:36,593 -INFO- using speceis tree `/dev/shm/tmp/ogap_db/mt-Bryophyta/species.treefile`
+2020-03-24 02:51:36,593 -INFO- writing protein sequences into /dev/shm/tmp/mt-Bryophyta/prot
+2020-03-24 02:51:37,067 -INFO- 41 taxa: ['Anomodon attenuatus', 'Anomodon rugelii', 'Atrichum angustatum', 'Bartramia pomiformis', 'Brachythecium rivulare', 'Bucklandiella orthotrichacea', 'Buxbaumia aphylla', 'Callicladium imponens', 'Chionoloma tenuirostre', 'Climacium americanum', 'Codriophorus aciculare', 'Dilutineuron laevigatum', 'Frisvollia varia', 'Funaria hygrometrica', 'Lewinskya speciosa', 'Mielichhoferia elongata', 'Niphotrichum elongatum', 'Niphotrichum ericoides', 'Nyholmiella gymnostoma', 'Nyholmiella obtusifolia', 'Orthotrichum bicolor', 'Orthotrichum callistomum', 'Orthotrichum diaphanum', 'Orthotrichum macrocephalum', 'Orthotrichum stellatum', 'Physcomitrella patens', 'Plenogemma phyllantha', 'Polytrichum commune', 'Ptychomnion cygnisetum', 'Racomitrium emersum', 'Racomitrium lanuginosum', 'Sanionia uncinata', 'Sphagnum palustre', 'Stoneobryum bunyaense', 'Stoneobryum mirum', 'Syntrichia filaris', 'Tetraphis pellucida', 'Tetraplodon fuegianus', 'Ulota crispa', 'Ulota hutchinsiae', 'Zygodon viridissimus']
+2020-03-24 02:51:37,099 -INFO- get taxon `root;cellular organisms;Eukaryota;Viridiplantae;Streptophyta;Streptophytina;Embryophyta;Bryophyta` from Counter({u'root;cellular organisms;Eukaryota;Viridiplantae;Streptophyta;Streptophytina;Embryophyta;Bryophyta': 41})
+2020-03-24 02:51:37,104 -INFO- get transl_table `1` from Counter({1: 1646})
+2020-03-24 02:51:37,105 -INFO- running OrthoFinder to cluster genes
+2020-03-24 02:51:37,105 -INFO- run CMD: `orthofinder.py -f /dev/shm/tmp/mt-Bryophyta/prot -M msa -T fasttree -t 24  -og`
+2020-03-24 02:53:14,918 -INFO- parsing OrthoFinder orthologs
+2020-03-24 02:53:14,919 -INFO- parsing orthologs group into /dev/shm/tmp/mt-Bryophyta/alns
+2020-03-24 02:53:14,968 -INFO- using min_count=3.28 to get gene name
+2020-03-24 02:53:14,969 -INFO- get gene name `cox1` from Counter({'cox1': 40, 'COX1': 1})
+2020-03-24 02:53:14,969 -INFO- using gene name `cox1`
+2020-03-24 02:53:14,970 -INFO- get gene name `atp4` from Counter({'atp4': 40, 'ATP4': 1})
+2020-03-24 02:53:14,970 -INFO- using gene name `atp4`
+2020-03-24 02:53:14,971 -INFO- get gene name `atp8` from Counter({'atp8': 40, 'ATP8': 1})
+2020-03-24 02:53:14,971 -INFO- using gene name `atp8`
+2020-03-24 02:53:14,972 -INFO- get gene name `rps1` from Counter({'rps1': 41})
+2020-03-24 02:53:14,972 -INFO- using gene name `rps1`
+2020-03-24 02:53:14,973 -INFO- get gene name `rps2` from Counter({'rps2': 41})
+2020-03-24 02:53:14,973 -INFO- using gene name `rps2`
+2020-03-24 02:53:14,973 -INFO- get gene name `ccmB` from Counter({'ccmB': 40, 'ccmb': 1})
+2020-03-24 02:53:14,974 -INFO- using gene name `ccmB`
+2020-03-24 02:53:14,974 -INFO- get gene name `ccmC` from Counter({'ccmC': 41})
+2020-03-24 02:53:14,974 -INFO- using gene name `ccmC`
+2020-03-24 02:53:14,975 -INFO- get gene name `ccmFN` from Counter({'ccmFN': 41})
+2020-03-24 02:53:14,975 -INFO- using gene name `ccmFN`
+2020-03-24 02:53:14,976 -INFO- get gene name `ccmFC` from Counter({'ccmFC': 37, 'ccmF': 3, 'Zygodon_viridissimus-gene41': 1})
+2020-03-24 02:53:14,976 -INFO- using gene name `ccmFC`
+2020-03-24 02:53:14,977 -INFO- get gene name `tatC` from Counter({'tatC': 41})
+2020-03-24 02:53:14,977 -INFO- using gene name `tatC`
+2020-03-24 02:53:14,978 -INFO- get gene name `nad4L` from Counter({'nad4L': 39, 'ND4L': 1, 'Zygodon_viridissimus-gene62': 1})
+2020-03-24 02:53:14,978 -INFO- using gene name `nad4L`
+2020-03-24 02:53:14,979 -INFO- get gene name `sdh4` from Counter({'sdh4': 41})
+2020-03-24 02:53:14,979 -INFO- using gene name `sdh4`
+2020-03-24 02:53:14,980 -INFO- get gene name `sdh3` from Counter({'sdh3': 40, 'Zygodon_viridissimus-gene73': 1})
+2020-03-24 02:53:14,980 -INFO- using gene name `sdh3`
+2020-03-24 02:53:14,980 -INFO- get gene name `nad5` from Counter({'nad5': 39, 'Zygodon_viridissimus-gene98': 1, 'ND5': 1})
+2020-03-24 02:53:14,980 -INFO- using gene name `nad5`
+2020-03-24 02:53:14,981 -INFO- get gene name `nad4` from Counter({'nad4': 40, 'ND4': 1})
+2020-03-24 02:53:14,981 -INFO- using gene name `nad4`
+2020-03-24 02:53:14,982 -INFO- get gene name `nad2` from Counter({'nad2': 39, 'ND2': 1, 'Zygodon_viridissimus-gene112': 1})
+2020-03-24 02:53:14,982 -INFO- using gene name `nad2`
+2020-03-24 02:53:14,983 -INFO- get gene name `rps12` from Counter({'rps12': 41})
+2020-03-24 02:53:14,983 -INFO- using gene name `rps12`
+2020-03-24 02:53:14,984 -INFO- get gene name `rps7` from Counter({'rps7': 41})
+2020-03-24 02:53:14,984 -INFO- using gene name `rps7`
+2020-03-24 02:53:14,985 -INFO- get gene name `atp6` from Counter({'atp6': 39, 'Zygodon_viridissimus-gene134': 1, 'ATP6': 1})
+2020-03-24 02:53:14,985 -INFO- using gene name `atp6`
+2020-03-24 02:53:14,985 -INFO- get gene name `nad6` from Counter({'nad6': 40, 'ND6': 1})
+2020-03-24 02:53:14,986 -INFO- using gene name `nad6`
+2020-03-24 02:53:14,986 -INFO- get gene name `cox2` from Counter({'cox2': 39, 'COX2': 1, 'Zygodon_viridissimus-gene141': 1})
+2020-03-24 02:53:14,986 -INFO- using gene name `cox2`
+2020-03-24 02:53:14,987 -INFO- get gene name `cox3` from Counter({'cox3': 40, 'COX3': 1})
+2020-03-24 02:53:14,987 -INFO- using gene name `cox3`
+2020-03-24 02:53:14,988 -INFO- get gene name `nad1` from Counter({'nad1': 38, 'ND1': 1, 'Tetraplodon_fuegianus-gene214': 1, 'Zygodon_viridissimus-gene156': 1})
+2020-03-24 02:53:14,988 -INFO- using gene name `nad1`
+2020-03-24 02:53:14,989 -INFO- get gene name `cob` from Counter({'cob': 39, 'CYTB': 1, 'Zygodon_viridissimus-gene163': 1})
+2020-03-24 02:53:14,989 -INFO- using gene name `cob`
+2020-03-24 02:53:14,990 -INFO- get gene name `nad9` from Counter({'nad9': 39, 'ND9': 1, 'Zygodon_viridissimus-gene168': 1})
+2020-03-24 02:53:14,990 -INFO- using gene name `nad9`
+2020-03-24 02:53:14,991 -INFO- get gene name `atp1` from Counter({'atp1': 39, 'ATP1': 1, 'Zygodon_viridissimus-gene173': 1})
+2020-03-24 02:53:14,991 -INFO- using gene name `atp1`
+2020-03-24 02:53:14,991 -INFO- get gene name `nad3` from Counter({'nad3': 40, 'ND3': 1})
+2020-03-24 02:53:14,991 -INFO- using gene name `nad3`
+2020-03-24 02:53:14,992 -INFO- get gene name `rpL2` from Counter({'rpL2': 29, 'rpl2': 12})
+2020-03-24 02:53:14,992 -INFO- using gene name `rpL2`
+2020-03-24 02:53:14,993 -INFO- get gene name `rps19` from Counter({'rps19': 41})
+2020-03-24 02:53:14,993 -INFO- using gene name `rps19`
+2020-03-24 02:53:14,994 -INFO- get gene name `rpL5` from Counter({'rpL5': 29, 'rpl5': 11, 'rpl15': 1})
+2020-03-24 02:53:14,994 -INFO- using gene name `rpL5`
+2020-03-24 02:53:14,995 -INFO- get gene name `rps14` from Counter({'rps14': 41})
+2020-03-24 02:53:14,995 -INFO- using gene name `rps14`
+2020-03-24 02:53:14,996 -INFO- get gene name `rpL6` from Counter({'rpL6': 29, 'rpl6': 12})
+2020-03-24 02:53:14,996 -INFO- using gene name `rpL6`
+2020-03-24 02:53:14,996 -INFO- get gene name `rps13` from Counter({'rps13': 41})
+2020-03-24 02:53:14,996 -INFO- using gene name `rps13`
+2020-03-24 02:53:14,997 -INFO- get gene name `rps11` from Counter({'rps11': 41})
+2020-03-24 02:53:14,997 -INFO- using gene name `rps11`
+2020-03-24 02:53:14,998 -INFO- get gene name `atp9` from Counter({'atp9': 39, 'Zygodon_viridissimus-gene220': 1, 'ATP9': 1})
+2020-03-24 02:53:14,998 -INFO- using gene name `atp9`
+2020-03-24 02:53:14,999 -INFO- get gene name `rps4` from Counter({'rps4': 40})
+2020-03-24 02:53:14,999 -INFO- using gene name `rps4`
+2020-03-24 02:53:15,000 -INFO- get gene name `rpl10` from Counter({'rpl10': 37, 'ORF187': 3})
+2020-03-24 02:53:15,000 -INFO- using gene name `rpl10`
+2020-03-24 02:53:15,000 -INFO- get gene name `rps3` from Counter({'rps3': 40})
+2020-03-24 02:53:15,001 -INFO- using gene name `rps3`
+2020-03-24 02:53:15,001 -INFO- get gene name `nad7` from Counter({'nad7': 36, 'ND7': 1, 'Zygodon_viridissimus-gene191': 1})
+2020-03-24 02:53:15,001 -INFO- using gene name `nad7`
+2020-03-24 02:53:15,002 -INFO- get gene name `rpL16` from Counter({'rpL16': 29, 'rpl16': 4})
+2020-03-24 02:53:15,002 -INFO- using gene name `rpL16`
+2020-03-24 02:53:15,003 -INFO- get gene name `ORF807` from Counter({'ORF807': 3, 'ORF622': 2})
+2020-03-24 02:53:15,003 -INFO- get gene name `ORF533` from Counter({'ORF533': 4})
+2020-03-24 02:53:15,003 -INFO- using gene name `ORF533`
+2020-03-24 02:53:15,003 -INFO- get gene name `ORF124` from Counter({'ORF124': 3})
+2020-03-24 02:53:15,004 -INFO- get gene name `ORF101` from Counter({'ORF101': 3})
+2020-03-24 02:53:15,004 -INFO- get gene name `ORF134` from Counter({'ORF134': 3})
+2020-03-24 02:53:15,004 -INFO- get gene name `ORF108` from Counter({'ORF108': 2})
+2020-03-24 02:53:15,005 -INFO- extrat 41 genes: ['ORF533', 'atp1', 'atp4', 'atp6', 'atp8', 'atp9', 'ccmB', 'ccmC', 'ccmFC', 'ccmFN', 'cob', 'cox1', 'cox2', 'cox3', 'nad1', 'nad2', 'nad3', 'nad4', 'nad4L', 'nad5', 'nad6', 'nad7', 'nad9', 'rpL16', 'rpL2', 'rpL5', 'rpL6', 'rpl10', 'rps1', 'rps11', 'rps12', 'rps13', 'rps14', 'rps19', 'rps2', 'rps3', 'rps4', 'rps7', 'sdh3', 'sdh4', 'tatC']
+2020-03-24 02:53:15,005 -INFO- aligning sequences
+2020-03-24 02:59:45,661 -INFO- building hmm profiles
+2020-03-24 03:00:11,563 -INFO- building augustus profiles
+2020-03-24 03:00:36,714 -INFO- training augustus models
+/share/home/yuanqyk/.local/lib/python2.7/site-packages/Bio/SeqIO/InsdcIO.py:687: BiopythonWarning: Increasing length of locus line to allow long name. This will result in fields that are not in usual positions.
+  BiopythonWarning,
+2020-03-24 03:03:43,294 -INFO- writing ('rRNA', 'tRNA') sequences into /dev/shm/tmp/mt-Bryophyta/rrna
+2020-03-24 03:03:43,541 -INFO- running OrthoFinder to cluster genes
+2020-03-24 03:03:43,541 -INFO- run CMD: `orthofinder.py -f /dev/shm/tmp/mt-Bryophyta/rrna -M msa -T fasttree -t 24 -S blastn -og`
+2020-03-24 03:05:56,632 -INFO- parsing OrthoFinder orthologs
+2020-03-24 03:05:56,633 -INFO- parsing orthologs group into /dev/shm/tmp/mt-Bryophyta/alns
+2020-03-24 03:05:56,670 -INFO- using min_count=2 to get gene name
+2020-03-24 03:05:56,672 -INFO- get gene name `trnI-CAU` from Counter({'trnI-CAU': 37, 'Tetraphis_pellucida-gene105': 1, 'trnI-cau': 1, 'Syntrichia_filaris-gene2': 1, 'Physcomitrella_patens-gene2': 1})
+2020-03-24 03:05:56,672 -INFO- using gene name `trnI-CAU`
+2020-03-24 03:05:56,673 -INFO- get gene name `trnK-UUU` from Counter({'trnK-UUU': 38, 'Physcomitrella_patens-gene4': 1, 'Tetraphis_pellucida-gene107': 1, 'Syntrichia_filaris-gene4': 1})
+2020-03-24 03:05:56,673 -INFO- using gene name `trnK-UUU`
+2020-03-24 03:05:56,674 -INFO- get gene name `trnC-GCA` from Counter({'trnC-GCA': 38, 'Tetraphis_pellucida-gene151': 1, 'Physcomitrella_patens-gene40': 1, 'Syntrichia_filaris-gene39': 1})
+2020-03-24 03:05:56,674 -INFO- using gene name `trnC-GCA`
+2020-03-24 03:05:56,675 -INFO- get gene name `trnF-GAA` from Counter({'trnF-GAA': 38, 'Tetraphis_pellucida-gene153': 1, 'Physcomitrella_patens-gene42': 1, 'Syntrichia_filaris-gene41': 1})
+2020-03-24 03:05:56,675 -INFO- using gene name `trnF-GAA`
+2020-03-24 03:05:56,676 -INFO- get gene name `trnQ-UUG` from Counter({'trnQ-UUG': 38, 'Physcomitrella_patens-gene62': 1, 'Tetraphis_pellucida-gene173': 1, 'Syntrichia_filaris-gene62': 1})
+2020-03-24 03:05:56,676 -INFO- using gene name `trnQ-UUG`
+2020-03-24 03:05:56,677 -INFO- get gene name `trnL-UAG` from Counter({'trnL-UAG': 38, 'Syntrichia_filaris-gene64': 1, 'Tetraphis_pellucida-gene175': 1, 'Physcomitrella_patens-gene64': 1})
+2020-03-24 03:05:56,677 -INFO- using gene name `trnL-UAG`
+2020-03-24 03:05:56,678 -INFO- get gene name `trnS-UGA` from Counter({'trnS-UGA': 38, 'Tetraphis_pellucida-gene177': 1, 'Syntrichia_filaris-gene66': 1, 'Physcomitrella_patens-gene66': 1})
+2020-03-24 03:05:56,678 -INFO- using gene name `trnS-UGA`
+2020-03-24 03:05:56,679 -INFO- get gene name `trnG-UCC` from Counter({'trnG-UCC': 38, 'Physcomitrella_patens-gene68': 1, 'Syntrichia_filaris-gene68': 1, 'Tetraphis_pellucida-gene179': 1})
+2020-03-24 03:05:56,679 -INFO- using gene name `trnG-UCC`
+2020-03-24 03:05:56,679 -INFO- get gene name `trnR-UCU` from Counter({'trnR-UCU': 38, 'Tetraphis_pellucida-gene189': 1, 'Syntrichia_filaris-gene79': 1, 'Physcomitrella_patens-gene76': 1})
+2020-03-24 03:05:56,680 -INFO- using gene name `trnR-UCU`
+2020-03-24 03:05:56,680 -INFO- get gene name `trnY-GUA` from Counter({'trnY-GUA': 38, 'Syntrichia_filaris-gene81': 1, 'Tetraphis_pellucida-gene191': 1, 'Physcomitrella_patens-gene78': 1})
+2020-03-24 03:05:56,681 -INFO- using gene name `trnY-GUA`
+2020-03-24 03:05:56,681 -INFO- get gene name `trnP-UGG` from Counter({'trnP-UGG': 38, 'Tetraphis_pellucida-gene208': 1, 'Physcomitrella_patens-gene95': 1, 'Syntrichia_filaris-gene98': 1})
+2020-03-24 03:05:56,682 -INFO- using gene name `trnP-UGG`
+2020-03-24 03:05:56,682 -INFO- get gene name `rrn18` from Counter({'rrn18': 41})
+2020-03-24 03:05:56,682 -INFO- using gene name `rrn18`
+2020-03-24 03:05:56,683 -INFO- get gene name `trnM-CAU` from Counter({'trnM-CAU': 38, 'Syntrichia_filaris-gene102': 1, 'Physcomitrella_patens-gene99': 1, 'Tetraphis_pellucida-gene212': 1})
+2020-03-24 03:05:56,683 -INFO- using gene name `trnM-CAU`
+2020-03-24 03:05:56,684 -INFO- get gene name `rrn5` from Counter({'rrn5': 41})
+2020-03-24 03:05:56,684 -INFO- using gene name `rrn5`
+2020-03-24 03:05:56,685 -INFO- get gene name `trnMf-CAU` from Counter({'trnMf-CAU': 37, 'trnfM-cau': 1, 'Tetraphis_pellucida-gene216': 1, 'Physcomitrella_patens-gene103': 1, 'Syntrichia_filaris-gene106': 1})
+2020-03-24 03:05:56,685 -INFO- using gene name `trnMf-CAU`
+2020-03-24 03:05:56,686 -INFO- get gene name `rrn26` from Counter({'rrn26': 41})
+2020-03-24 03:05:56,686 -INFO- using gene name `rrn26`
+2020-03-24 03:05:56,687 -INFO- get gene name `trnH-GUG` from Counter({'trnH-GUG': 38, 'Physcomitrella_patens-gene109': 1, 'Syntrichia_filaris-gene112': 1, 'Tetraphis_pellucida-gene222': 1})
+2020-03-24 03:05:56,687 -INFO- using gene name `trnH-GUG`
+2020-03-24 03:05:56,688 -INFO- get gene name `trnL-CAA` from Counter({'trnL-CAA': 37, 'Tetraphis_pellucida-gene224': 1, 'trnL': 1, 'Physcomitrella_patens-gene111': 1, 'Syntrichia_filaris-gene114': 1})
+2020-03-24 03:05:56,688 -INFO- using gene name `trnL-CAA`
+2020-03-24 03:05:56,689 -INFO- get gene name `trnL-UAA` from Counter({'trnL-UAA': 38, 'Physcomitrella_patens-gene113': 1, 'Syntrichia_filaris-gene116': 1, 'Tetraphis_pellucida-gene226': 1})
+2020-03-24 03:05:56,689 -INFO- using gene name `trnL-UAA`
+2020-03-24 03:05:56,690 -INFO- get gene name `trnG-GCC` from Counter({'trnG-GCC': 38, 'Syntrichia_filaris-gene132': 1, 'Tetraphis_pellucida-gene250': 1, 'Physcomitrella_patens-gene132': 1})
+2020-03-24 03:05:56,690 -INFO- using gene name `trnG-GCC`
+2020-03-24 03:05:56,691 -INFO- get gene name `trnR-ACG` from Counter({'trnR-ACG': 38, 'Tetraphis_pellucida-gene252': 1, 'Physcomitrella_patens-gene134': 1, 'Syntrichia_filaris-gene134': 1})
+2020-03-24 03:05:56,691 -INFO- using gene name `trnR-ACG`
+2020-03-24 03:05:56,692 -INFO- get gene name `trnE-UUC` from Counter({'trnE-UUC': 38, 'Syntrichia_filaris-gene136': 1, 'Tetraphis_pellucida-gene254': 1, 'Physcomitrella_patens-gene136': 1})
+2020-03-24 03:05:56,692 -INFO- using gene name `trnE-UUC`
+2020-03-24 03:05:56,693 -INFO- get gene name `trnW-CCA` from Counter({'trnW-CCA': 38, 'Syntrichia_filaris-gene210': 1, 'Physcomitrella_patens-gene183': 1, 'Tetraphis_pellucida-gene52': 1})
+2020-03-24 03:05:56,693 -INFO- using gene name `trnW-CCA`
+2020-03-24 03:05:56,694 -INFO- get gene name `trnV-UAC` from Counter({'trnV-UAC': 34, 'trnV-uac': 4, 'Physcomitrella_patens-gene188': 1, 'Tetraphis_pellucida-gene57': 1, 'Syntrichia_filaris-gene215': 1})
+2020-03-24 03:05:56,694 -INFO- using gene name `trnV-UAC`
+2020-03-24 03:05:56,695 -INFO- get gene name `trnD-GUC` from Counter({'trnD-GUC': 37, 'trND-GUC': 1, 'Tetraphis_pellucida-gene59': 1, 'Syntrichia_filaris-gene217': 1, 'Physcomitrella_patens-gene190': 1})
+2020-03-24 03:05:56,695 -INFO- using gene name `trnD-GUC`
+2020-03-24 03:05:56,696 -INFO- get gene name `trnA-UGC` from Counter({'trnA-UGC': 38, 'Syntrichia_filaris-gene219': 1, 'Physcomitrella_patens-gene192': 1, 'Tetraphis_pellucida-gene61': 1})
+2020-03-24 03:05:56,696 -INFO- using gene name `trnA-UGC`
+2020-03-24 03:05:56,697 -INFO- get gene name `trnT-GGU` from Counter({'trnT-GGU': 38, 'Syntrichia_filaris-gene221': 1, 'Physcomitrella_patens-gene194': 1, 'Tetraphis_pellucida-gene63': 1})
+2020-03-24 03:05:56,697 -INFO- using gene name `trnT-GGU`
+2020-03-24 03:05:56,698 -INFO- extrat 27 genes: ['rrn18', 'rrn26', 'rrn5', 'trnA-UGC', 'trnC-GCA', 'trnD-GUC', 'trnE-UUC', 'trnF-GAA', 'trnG-GCC', 'trnG-UCC', 'trnH-GUG', 'trnI-CAU', 'trnK-UUU', 'trnL-CAA', 'trnL-UAA', 'trnL-UAG', 'trnM-CAU', 'trnMf-CAU', 'trnP-UGG', 'trnQ-UUG', 'trnR-ACG', 'trnR-UCU', 'trnS-UGA', 'trnT-GGU', 'trnV-UAC', 'trnW-CCA', 'trnY-GUA']
+2020-03-24 03:05:56,698 -INFO- aligning sequences
+2020-03-24 03:10:28,253 -INFO- building hmm profiles

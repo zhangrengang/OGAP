@@ -410,7 +410,7 @@ class GffExons(object):
 		trans_splicing = False
 		if len(gene_copy) > 1:
 			trans_splicing = True
-		chrom, start, end, strand = self.get_region()
+		chrom, start0, end0, strand0 = self.get_region()
 		
 		attributes0 = OrderedDict()
 		for k, v in zip(('ID', 'Parent', 'Name', 'product',
@@ -447,7 +447,8 @@ class GffExons(object):
 			line.__dict__.update(**exon.__dict__)
 			attributes.update(ID='{}:{}{}'.format(rna_id, exon.type[0].lower(), i+1))
 			line.attributes = attributes
-			line.__dict__.update(source=source, score=score)
+			
+			line.__dict__.update(source=source) #, score=score)
 			#print >>sys.stderr, line.attributes
 			if exon.type != 'exon':
 				type = 'exon'
@@ -458,9 +459,9 @@ class GffExons(object):
 			lines += [line]
 		record = GffExons(lines)
 		record.chrom = chrom
-		record.start = start
-		record.end = end
-		record.strand = strand
+		record.start = start0
+		record.end = end0
+		record.strand = strand0
 		record.gene = record.name = gene_name
 		record.id = gene.id
 		record.product = product
@@ -469,7 +470,26 @@ class GffExons(object):
 		record.rna_type = rna_type
 		record.trans_splicing = trans_splicing
 		return record
-	def to_tbl(self, fout, chrom=None, gene=True, transl_table=1, rna_type=None):
+	def to_tbl(self, fout, chrom=None, feat_type='gene', transl_table=1, rna_type=None):
+		if self.rna_type == 'repeat':
+			exon = self[0]
+			start, end = exon.start, exon.end
+			line = [start, end]		# 1-based
+			line += ['repeat_region']
+			line = map(str, line)
+			print >>fout, '\t'.join(line)
+			try:
+				line = ['', '', 'note', exon.id]
+				print >>fout, '\t'.join(line)
+			except AttributeError:
+				pass
+			try:
+				line = ['', '', 'rpt_type', exon.attributes['rpt_type']]
+				print >>fout, '\t'.join(line)
+			except AttributeError:
+				pass
+			return None
+		# if feat_type == 'gene': # otherwise repeat etc.
 		if rna_type is None:
 			rna_type = 'CDS' if self.rna_type == 'mRNA' else self.rna_type
 		if rna_type == 'CDS':
@@ -478,27 +498,27 @@ class GffExons(object):
 			exons = self.filter('exon')
 		if chrom is not None:
 			exons.exons = [exon for exon in exons if exon.chrom == chrom]
-		if gene:	# otherwise repeat etc.
-			genes = self.filter('gene')
-			for i, exon in enumerate(genes):
-				start, end = exon.start, exon.end
-				start, end = (end, start) if exon.strand == '-' else (start, end)
-				line = [start, end]		# 1-based
-				if i == 0:
-					line += ['gene']
-				line = map(str, line)
+		genes = self.filter('gene')
+		for i, exon in enumerate(genes):
+			start, end = exon.start, exon.end
+			start, end = (end, start) if exon.strand == '-' else (start, end)
+			line = [start, end]		# 1-based
+			if i == 0:
+				line += ['gene']
+			line = map(str, line)
+			print >>fout, '\t'.join(line)
+		try:
+			line = ['', '', 'gene', self.gene]
+			print >>fout, '\t'.join(line)
+		except AttributeError:
+			pass
+		try:
+			if self.trans_splicing:
+				line = ['', '', 'exception', 'trans-splicing']
 				print >>fout, '\t'.join(line)
-			try:
-				line = ['', '', 'gene', self.gene]
-				print >>fout, '\t'.join(line)
-			except AttributeError:
-				pass
-			try:
-				if self.trans_splicing:
-					line = ['', '', 'exception', 'trans-splicing']
-					print >>fout, '\t'.join(line)
-			except AttributeError:	# no gene name
-				pass
+		except AttributeError:	# no gene name
+			pass
+
 		for i, exon in enumerate(exons):
 			start, end = exon.start, exon.end
 			start, end = (end, start) if exon.strand == '-' else (start, end)
@@ -800,6 +820,19 @@ class ExonerateGffGenes(GffGenes):	# each alignment
 				exons.to_augustus_gtf(fout, index=i)
 			hits += [exons]
 		return hits
+	def to_exons(self, d_seqs=None, fout=None):
+		hits = []
+		for i, record in enumerate(self):
+			exons = [line for line in record.lines if line.type == 'exon']
+			exons = ExonerateGtfExons(exons)
+			exons.id = str(i)
+			if fout is not None:
+				seq = d_seqs[record.chrom]
+				exons.seq = exons.extract_seq(seq)
+				print >>fout, '>{}\n{}'.format(exons.id, exons.seq)
+			hits += [exons]
+		return hits
+	
 	def fit_structure(self, record, seq, **kargs):
 		#print >>sys.stderr, record.score
 		exons = [line for line in record.lines if line.type == 'exon']

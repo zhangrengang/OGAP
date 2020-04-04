@@ -4,6 +4,7 @@ import time
 import shutil
 import glob
 import argparse
+import numpy as np
 from collections import Counter, OrderedDict
 from Bio import SeqIO
 from Bio import Phylo
@@ -12,6 +13,7 @@ from lazy_property import LazyWritableProperty as lazyproperty
 
 from Genbank import GenbankParser, format_taxon
 from OrthoFinder import OrthoFinder, OrthoMCLGroupRecord
+from tRNA import tRNAscanRecord
 from RunCmdsMP import logger, run_cmd, run_job
 from small_tools import mkdirs, rmdirs
 
@@ -551,8 +553,25 @@ augustus --species={species} {train_set}.test --translation_table={transl_table}
 		return prflfiles
 	def write_orthologs(self, group, d_seqs, outseq):
 		with open(outseq, 'w') as fout:
-			for gene in sorted(group):
-				print >>fout, '>{}\n{}'.format(gene, d_seqs[gene])
+			genes = sorted(group)
+			seqs = [d_seqs[gene] for gene in genes]
+			for gene, seq in self.remove_abnormal_length(genes, seqs):
+				print >>fout, '>{}\n{}'.format(gene, seq)
+	def remove_abnormal_length(self, genes, seqs):
+		lengths = [len(seq) for seq in seqs]
+		q1 = np.percentile(lengths, 25)
+		q3 = np.percentile(lengths, 75)
+		iqr = q3 - q1
+		iqr = max(3, iqr)
+		lower = q1 - iqr*8 - 10
+		upper = q3 + iqr*8 + 10
+		for gene, seq in zip(genes, seqs):
+			length = len(seq)
+			if length < lower or length > upper:
+				print >> sys.stderr, '   remove gene {} with length {} out of [{}, {}]'.format(
+						gene, length, lower, upper)
+				continue
+			yield gene, seq
 	def filter_paralogs(self, genes, d_seqs, tmpfix):
 		'''for paralogs, cluster for respective ones'''
 		group = OrthoMCLGroupRecord(genes=genes)
@@ -746,17 +765,57 @@ class NameInfo(Info):
 	def get_trn_name(cls, raw_name, name_count):
 		name_count = [name for name,_ in sorted(name_count.items(), key=lambda x:-x[1])]
 		if re.compile(r'(trn|tRNA)', re.I).match(raw_name):
-			upper = r'^([a-z]+)(.*)([ATUCG]{3}).*(\-cp)$'
+			trn = tRNAscanRecord()
 			for name in name_count:
-				if re.compile(upper, re.I).match(name):
-					return name
+				if not re.compile(r'(trn|tRNA)', re.I).match(name):
+					continue
+				if trn.is_cp(name):	# cp firstly
+					try:
+						return trn.update_name(name)
+					except AttributeError:
+						# codon not find
+						try:
+							for name2 in name_count:
+								if not re.compile(r'(trn|tRNA)', re.I).match(name):
+									continue
+								anti_codon = trn.get_codon(name2)
+								if anti_codon is None:
+									continue
+								return trn.update_name(name, anti_codon=anti_codon)
+							else: # codon not find
+								return '{}{}-cp'.format(trn.get_prefix(name), trn.get_aa(name))
+						except AttributeError: # no aa
+							return raw_name
 			for name in name_count:
-				if re.compile(r'(\-cp)', re.I).search(name):
-					return name
-			upper = r'^([a-z]+)(.*)([ATUCG]{3})$'
-			for name in name_count:
-				if re.compile(upper, re.I).match(name):
-					return name
+				if not re.compile(r'(trn|tRNA)', re.I).match(name):
+					continue
+				try:
+					return trn.update_name(name)
+				except AttributeError:
+					# codon not find
+					try:
+						for name2 in name_count:
+							if not re.compile(r'(trn|tRNA)', re.I).match(name2):
+								continue
+							anti_codon = trn.get_codon(name2)
+							if anti_codon is None:
+									continue
+							return trn.update_name(name, anti_codon=anti_codon)
+						else: # codon not find
+							return '{}{}'.format(trn.get_prefix(name), trn.get_aa(name))
+					except AttributeError: # no aa
+						return raw_name
+			# upper = r'^([a-z]+)(.*)([ATUCG]{3}).*(\-cp)$'
+			# for name in name_count:
+				# if re.compile(upper, re.I).match(name):
+					# return name
+			# for name in name_count:
+				# if re.compile(r'(\-cp)', re.I).search(name):
+					# return name
+			# upper = r'^([a-z]+)(.*)([ATUCG]{3})$'
+			# for name in name_count:
+				# if re.compile(upper, re.I).match(name):
+					# return name
 		return raw_name
 
 class NameInfoLine(GeneInfoLine):

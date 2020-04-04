@@ -1,0 +1,5 @@
+#id	organism	name_count	cds_count	trn_count	rrn_count	length	GC	taxonomy
+NC_010303.1	Cycas taitungensis	68	39	26	3	414903	46.9	root;cellular organisms;Eukaryota;Viridiplantae;Streptophyta;Streptophytina;Embryophyta;Tracheophyta;Euphyllophyta;Spermatophyta;Acrogymnospermae;Cycadopsida;Cycadidae;Cycadales;Cycadaceae;Cycas;Cycas taitungensis
+NC_027976.1	Ginkgo biloba	66	40	23	3	346544	50.4	root;cellular organisms;Eukaryota;Viridiplantae;Streptophyta;Streptophytina;Embryophyta;Tracheophyta;Euphyllophyta;Spermatophyta;Acrogymnospermae;Ginkgoopsida;Ginkgoidae;Ginkgoales;Ginkgoaceae;Ginkgo;Ginkgo biloba
+NC_039746.1	Pinus taeda	83	39	38	6	1191054	46.7	root;cellular organisms;Eukaryota;Viridiplantae;Streptophyta;Streptophytina;Embryophyta;Tracheophyta;Euphyllophyta;Spermatophyta;Acrogymnospermae;Pinopsida;Pinidae;Pinales;Pinaceae;Pinus;Pinus;Pinus taeda
+NC_029130.1	Welwitschia mirabilis	40	29	8	3	978846	53.0	root;cellular organisms;Eukaryota;Viridiplantae;Streptophyta;Streptophytina;Embryophyta;Tracheophyta;Euphyllophyta;Spermatophyta;Acrogymnospermae;Gnetopsida;Gnetidae;Welwitschiales;Welwitschiaceae;Welwitschia;Welwitschia mirabilis

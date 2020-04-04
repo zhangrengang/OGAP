@@ -24,6 +24,7 @@ class HmmSearch(object):
 				yield HmmSearchDomHit(line)
 	def get_best_hit(self, score=False):
 		best_hit = None
+		d_cov = {}
 		for record in self:
 			if best_hit is None:
 				best_hit = record
@@ -31,6 +32,10 @@ class HmmSearch(object):
 				best_hit = record
 			elif score and record.score > best_hit.score:
 				best_hit = record
+			try: d_cov[record.tname] += record.hmmcov
+			except KeyError: d_cov[record.tname] = record.hmmcov
+		if best_hit is not None:
+			best_hit.cov = d_cov[best_hit.tname]
 		return best_hit
 	def get_hit_nuclseqs(self, inseq, outseq):
 		nucl_names = []
@@ -39,9 +44,12 @@ class HmmSearch(object):
 			nucl_names += [hit.nucl_name]
 		get_records(inseq, outseq, nucl_names, type='fasta')
 	def get_gene_structure(self, d_length, max_copies=4, min_part=1,
+			min_hmmcov=0,
 			min_cov=80, min_ratio=0.9, seq_type='prot', flank=1000):
 		graph = HmmStructueGraph()
 		for hit in self:
+			if hit.hmmcov < min_hmmcov:
+				continue
 			hit.convert_to_nucl_coord(d_length, seq_type=seq_type)
 	#		print >>sys.stderr, hit.nucl_hit
 			graph.add_node(hit)
@@ -65,6 +73,7 @@ class HmmSearch(object):
 		if len(copies) > 0:
 	#		min_part_number = min(map(len, copies))
 			max_hmmcov = max(hmmcovs)
+			cov_cutoff = max_hmmcov * min_ratio
 			best_copies = [parts for parts, hmmcov in zip(copies, hmmcovs) \
 								if not hmmcov < max_hmmcov*0.99]
 			min_part_number = min(map(len, best_copies))
@@ -73,10 +82,10 @@ class HmmSearch(object):
 			for parts, hmmcov in sorted(zip(copies, hmmcovs), key=lambda x:-x[1]):
 				if len(parts) > min_part_number+min_part:
 					continue
-				if hmmcov < max_hmmcov * min_ratio:
+				if hmmcov < cov_cutoff:
 					continue
 				i += 1
-				if i > max_copies:
+				if i > max_copies and hmmcov < max_hmmcov*0.99:
 					continue
 		#		print >>sys.stderr, min_part_number, parts
 				yield parts		# maybe multi-copy

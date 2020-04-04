@@ -157,7 +157,7 @@ class RepeatSegemnt:
 	def has_overlap(self, other):
 		if not self.chrom == other.chrom:
 			return False
-		return max(0, min(self.end, other.end) - max(self.start, other.end))
+		return max(0, min(self.end, other.end) - max(self.start, other.start))
 	def contains(self, other):
 		if not self.chrom == other.chrom:
 			return False

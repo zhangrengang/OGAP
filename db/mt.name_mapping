@@ -1,0 +1,149 @@
+# name	product						alias	# case-insensitive
+atp1	ATP synthase subunit 1		atpA
+atp4	ATP synthase subunit 4	
+atp6	ATP synthase subunit 6	
+atp8	ATP synthase subunit 8	
+atp9	ATP synthase subunit 9	
+ccmB	cytochrome c biogenesis B	
+ccmC	cytochrome c biogenesis C	
+ccmFC	cytochrome c biogenesis FC	
+ccmFN	cytochrome c biogenesis FN	
+ccmFN1	cytochrome c biogenesis FN1	
+ccmFN2	cytochrome c biogenesis FN2	
+cob		apocytochrome b	
+cox1	cytochrome c oxidase subunit 1	
+cox2	cytochrome c oxidase subunit 2	
+cox3	cytochrome c oxidase subunit 3	
+matR	maturase-related protein	mat-r
+mttB	transport membrane protein	tatC,orfX
+nad1	NADH dehydrogenase subunit 1	
+nad2	NADH dehydrogenase subunit 2	
+nad3	NADH dehydrogenase subunit 3	
+nad4	NADH dehydrogenase subunit 4	
+nad4L	NADH dehydrogenase subunit 4L	
+nad5	NADH dehydrogenase subunit 5	
+nad6	NADH dehydrogenase subunit 6	
+nad7	NADH dehydrogenase subunit 7	
+nad9	NADH dehydrogenase subunit 9	
+nad11	NADH dehydrogenase subunit 11
+rpl2	ribosomal protein L2	
+rpl5	ribosomal protein L5	
+rpl6	ribosomal protein L6	
+rpl10	ribosomal protein L10
+rpl14	ribosomal protein L14	
+rpl16	ribosomal protein L16
+rpl31	ribosomal protein L31	
+rps1	ribosomal protein S1	
+rps2	ribosomal protein S2	
+rps3	ribosomal protein S3	
+rps4	ribosomal protein S4	
+rps7	ribosomal protein S7	
+rps8	ribosomal protein S8
+rps10	ribosomal protein S10	
+rps11	ribosomal protein S11	
+rps12	ribosomal protein S12	
+rps13	ribosomal protein S13	
+rps14	ribosomal protein S14	
+rps19	ribosomal protein S19	
+sdh3	succinate dehydrogenase subunit 3	
+sdh4	succinate dehydrogenase subunit 4	
+# plant
+rrn18	18S ribosomal RNA	rrn18,18rrn,rrn18S
+rrn26	26S ribosomal RNA	rrn26,26rrn,rrn26S
+rrn5	5S ribosomal RNA	5rrn,rrn5S
+trnA-UGC	tRNA-Ala	tRNA-Ala-UGC
+trnC-GCA	tRNA-Cys	tRNA-Cys-GCA
+trnC-GCA-cp	tRNA-Cys	tRNA-Cys-GCA-cp
+trnD-GUC	tRNA-Asp	tRNA-Asp-GCA
+trnD-GUC-cp	tRNA-Asp	tRNA-Asp-GTC-cp
+trnE-UUC	tRNA-Glu	tRNA-Glu-TTC
+trnF-GAA	tRNA-Phe	tRNA-Phe-GAA
+trnF-GAA-cp	tRNA-Phe	tRNA-Phe-GAA-cp
+trnG-GCC	tRNA-Gly	tRNA-Gly-GCC
+trnG-UCC	tRNA-Gly	tRNA-Gly-UCC
+trnH-AUG	tRNA-His	tRNA-His-ATG
+trnH-GUG	tRNA-His	tRNA-His-GTG
+trnH-GUG-cp	tRNA-His	tRNA-His-GUG-cp
+trnI-CAU	tRNA-Ile	tRNA-Ile-CAT
+trnI-GAU	tRNA-Ile	tRNA-Ile-GAT
+trnI-UAU-cp	tRNA-Ile	tRNA-Ile-UAU-cp
+trnK-CUU	tRNA-Lys	tRNA-Lys-CUU
+trnK-UUU	tRNA-Lys	tRNA-Lys-UUU
+trnL-CAA	tRNA-Leu	tRNA-Leu-CAA
+trnL-CAA-cp	tRNA-Leu	tRNA-Leu-CAA-cp
+trnL-UAA	tRNA-Leu	tRNA-Leu-TAA
+trnL-UAG	tRNA-Leu	tRNA-Leu-TAG
+trnM-CAU	tRNA-Met	tRNA-Met-CAT
+trnM-CAU-cp	tRNA-Met	tRNA-Met-CAU-cp
+trnfM-CAU	tRNA-Met	trnMf-CAU,tRNA-fMet-CAU
+trnN-GUU	tRNA-Asn	tRNA-Asn-GTT
+trnN-GUU-cp	tRNA-Asn	tRNA-Asn-GTT-cp
+trnP-UGG	tRNA-Pro	tRNA-Pro-TGG
+trnP-UGG-cp	tRNA-Pro	tRNA-Pro-TGG-cp
+trnQ-UUG	tRNA-Gln	tRNA-Gln-TTG
+trnR-ACG	tRNA-Arg	tRNA-Arg-ACG
+trnR-UCG	tRNA-Arg	tRNA-Arg-TCG
+trnR-UCU	tRNA-Arg	tRNA-Arg-TCT
+trnR-UCU-cp	tRNA-Arg	tRNA-Arg-TCT-cp
+trnS-GCU	tRNA-Ser	tRNA-Ser-GCT
+trnS-GGA	tRNA-Ser	tRNA-Ser-GGA
+trnS-GGA-cp	tRNA-Ser	tRNA-Ser-GGA-cp
+trnS-UGA	tRNA-Ser	tRNA-Ser-UGA
+trnT-GGU	tRNA-Thr	tRNA-Thr-GGT
+trnT-UGU	tRNA-Thr	tRNA-Thr-TGT
+trnV-UAC	tRNA-Val	tRNA-Val-TAC
+trnV-UAC-cp	tRNA-Val	tRNA-Val-TAC-cp
+trnV-GAC	tRNA-Val	tRNA-Val-GAC
+trnV-GAC-cp	tRNA-Val	tRNA-Val-GAC-cp
+trnW-CCA	tRNA-Trp	tRNA-Trp-CCA
+trnW-CCA-cp	tRNA-Trp	tRNA-Trp-CCA-cp
+trnY-GUA	tRNA-Tyr	tRNA-Tyr-GUA
+# animal
+ATP6	ATP synthase F0 subunit 6
+ATP8	ATP synthase F0 subunit 8
+COX1	cytochrome c oxidase subunit 1
+COX2	cytochrome c oxidase subunit 2
+COX3	cytochrome c oxidase subunit 3
+CYTB	cytochrome b
+ND1		NADH dehydrogenase subunit 1
+ND2		NADH dehydrogenase subunit 2
+ND3		NADH dehydrogenase subunit 3
+ND4		NADH dehydrogenase subunit 4
+ND4		NADH dehydrogenase subunit 4
+ND4L	NADH dehydrogenase subunit 4L
+ND5		NADH dehydrogenase subunit 5
+ND5		NADH dehydrogenase subunit 5
+ND6		NADH dehydrogenase subunit 6
+rrn12	12S ribosomal RNA	12S-rRNA
+rrn16	16S ribosomal RNA	16S-rRNA
+trnN-guu	tRNA-Asn
+trnP-ugg	tRNA-Pro
+trnR-tcg	tRNA-Arg
+trnL1-uag	tRNA-Leu
+trnL2-uaa	tRNA-Leu
+# fungi 
+rnl		large subunit ribosomal RNA
+rns		small subunit ribosomal RNA
+trnA-ugc	tRNA-Ala
+trnF-gaa	tRNA-Phe
+trnG-ucc	tRNA-Gly
+trnH-gug	tRNA-His
+trnI-gau	tRNA-Ile
+trnK-uuu	tRNA-Lys
+trnL-uaa	tRNA-Leu
+trnL-uag	tRNA-Leu
+trnM-cau	tRNA-Met
+trnQ-uug	tRNA-Gln
+trnR-ucu	tRNA-Arg
+trnS-uga	tRNA-Ser
+trnT-ugu	tRNA-Thr
+trnV-uac	tRNA-Val
+trnW-cca	tRNA-Trp
+trnW-uca	tRNA-Trp
+trnY-gua	tRNA-Tyr
+# Sar
+trnC-gca	tRNA-Cys
+trnD-guc	tRNA-Asp
+trnE-uuc	tRNA-Glu
+trnG-gcc	tRNA-Gly
+trnL-caa	tRNA-Leu

@@ -40,7 +40,7 @@ class GffLine(object):
 		line = map(str, line)
 		return '\t'.join(line)
 	def key(self):
-		return (self.chrom, self.source, self.type, self.start, self.end)
+		return (self.chrom, self.source, self.type, self.start, self.end, self.strand)
 	@lazyproperty
 	def attributes(self):
 		if isinstance(self.raw_attributes, OrderedDict):
@@ -105,6 +105,11 @@ class GffLine(object):
 	@property
 	def region(self):
 		return Region(chrom=self.chrom, start=self.start, end=self.end)
+	def has_overlap(self, other):
+		if not self.chrom == other.chrom:
+			return False
+		return max(0, min(self.end, other.end) - max(self.start, other.start))
+
 
 
 
@@ -360,6 +365,16 @@ class GffExons(object):
 			return self.exons[index]
 		else:
 			return self.__class__(path=self.exons[index])
+	def __hash__(self):
+		return hash(str(self))
+	def overlaps(self, other):
+		self_genes = self.filter('gene')
+		other_genes = other.filter('gene')
+		has_overlaps = [self_gene.has_overlap(other_gene) \
+					for self_gene, other_gene in zip(self_genes, other_genes)]
+		if len(has_overlaps) == 0:
+			return False
+		return all(has_overlaps)
 
 	@property
 	def total_length(self):
@@ -454,7 +469,7 @@ class GffExons(object):
 				type = 'exon'
 				exon_line = copy.deepcopy(line)
 				exon_line.attributes.update(ID='{}:{}{}'.format(rna_id, type[0], i+1))
-				exon_line.__dict__.update(type=type, frame=frame)
+				exon_line.__dict__.update(type=type, frame=frame, score=score)
 				lines += [exon_line]
 			lines += [line]
 		record = GffExons(lines)
@@ -470,7 +485,8 @@ class GffExons(object):
 		record.rna_type = rna_type
 		record.trans_splicing = trans_splicing
 		return record
-	def to_tbl(self, fout, chrom=None, feat_type='gene', transl_table=1, rna_type=None):
+	def to_tbl(self, fout, chrom=None, feat_type='gene', 
+			transl_table=1, rna_type=None, locus_tag=None):
 		if self.rna_type == 'repeat':
 			exon = self[0]
 			start, end = exon.start, exon.end
@@ -490,6 +506,7 @@ class GffExons(object):
 				pass
 			return None
 		# if feat_type == 'gene': # otherwise repeat etc.
+		# gene
 		if rna_type is None:
 			rna_type = 'CDS' if self.rna_type == 'mRNA' else self.rna_type
 		if rna_type == 'CDS':
@@ -518,7 +535,36 @@ class GffExons(object):
 				print >>fout, '\t'.join(line)
 		except AttributeError:	# no gene name
 			pass
-
+		if locus_tag is not None:
+			line = ['', '', 'locus_tag', locus_tag]
+			print >>fout, '\t'.join(line)
+		# shared lines
+		lines = []
+		try:
+			product = self.product
+		except AttributeError:  # no product
+			if rna_type == 'CDS':
+				product = 'hypothetical protein'
+			else:
+				product = rna_type
+		lines += [ ['', '', 'product', product] ]
+		if locus_tag is not None:
+			lines += [ ['', '', 'transcript_id', self.rna_id] ]
+			if rna_type == 'CDS':
+				lines += [ ['', '', 'protein_id', self.rna_id+':cds'] ]
+		# mRNA
+		if locus_tag is not None and rna_type == 'CDS':
+			for i, exon in enumerate(exons):
+				start, end = exon.start, exon.end
+				start, end = (end, start) if exon.strand == '-' else (start, end)
+				line = [start, end]
+				if i == 0:
+					line += ['mRNA']
+				line = map(str, line)
+				print >>fout, '\t'.join(line)
+			for line in lines:
+				print >>fout, '\t'.join(line)
+		# CDS		
 		for i, exon in enumerate(exons):
 			start, end = exon.start, exon.end
 			start, end = (end, start) if exon.strand == '-' else (start, end)
@@ -530,15 +576,8 @@ class GffExons(object):
 					codon_start = exon.frame + 1
 			line = map(str, line)
 			print >>fout, '\t'.join(line)
-		try:
-			product = self.product
-		except AttributeError:	# no product
-			if rna_type == 'CDS':
-				product = 'hypothetical protein'
-			else:
-				product = rna_type
-		line = ['', '', 'product', product]
-		print >>fout, '\t'.join(line)
+		for line in lines:
+			print >>fout, '\t'.join(line)
 		if rna_type == 'CDS' and transl_table != 1:
 			line = ['', '', 'transl_table', transl_table]
 			line = map(str, line)
@@ -753,6 +792,7 @@ class ExonerateGtfExons(GtfExons):
 			cds = copy.deepcopy(exon)
 			cds.type = 'CDS'
 			cds.source = source
+			cds.score = self.score
 			cds.gene_id = gene_id
 			cds.transcript_id = transcript_id
 			cds.attributes['score'] = self.score
@@ -823,7 +863,11 @@ class ExonerateGffGenes(GffGenes):	# each alignment
 	def to_exons(self, d_seqs=None, fout=None):
 		hits = []
 		for i, record in enumerate(self):
-			exons = [line for line in record.lines if line.type == 'exon']
+			exons = []
+			for line in record.lines:
+				if line.type == 'exon':
+					line.score = record.score
+					exons += [line]
 			exons = ExonerateGtfExons(exons)
 			exons.id = str(i)
 			if fout is not None:

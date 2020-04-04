@@ -2,14 +2,15 @@ import sys, os
 import copy
 import argparse
 from collections import OrderedDict
-from itertools import izip
+from itertools import izip, combinations
 from Bio import SeqIO
 
 from lib.Database import Database
 from lib.Hmmer import HmmSearch
 from lib.tRNA import tRNAscan, tRNAscanStructs
 from lib.Gff import ExonerateGffGenes, AugustusGtfGenes
-from lib.Repeat import RepeatPipeline
+from lib.Psl import PslParser
+from lib.Repeat import RepeatPipeline, addRepeatArgs
 from lib.RunCmdsMP import run_cmd, run_job, logger
 from lib.translate_seq import six_frame_translate
 from lib.small_tools import mkdirs, rmdirs
@@ -25,27 +26,19 @@ def makeArgparse():
 	parser.add_argument('-organ', type=str, choices=['mt', 'pt'], default=None,
 					help="organelle type: mt (mitochondrion) or pt (plastid) [default=%(default)s]")
 	parser.add_argument('-mt', action="store_true", default=False,
-					help="organelle type: mt (mitochondrion) [default=%(default)s]")
+					help="equal to '-organ mt' [default=%(default)s]")
 	parser.add_argument('-pt', action="store_true", default=False,
-					help="organelle type: pt (plastid) [default=%(default)s]")
+					help="equal to '-organ pt' [default=%(default)s]")
 	parser.add_argument('-taxon', type=str, default=None, 
-					help="taxon to filter out, such as Embryophyta [default=auto by -organism]")
+					help="taxon to use as reference, such as rosids [default=auto by -organism]")
 	parser.add_argument("-tmpdir", action="store",
 					default='/dev/shm/tmp', type=str,
 					help="temporary directory [default=%(default)s]")
 	parser.add_argument('-cleanup', action="store_true", default=False,
-					help='clean up temporary directory')
-	parser.add_argument("-prefix", action="store",
-					default=None, type=str,
-					help="output prefix [default='genome']")
-	parser.add_argument("-outdir", action="store",
-					default='.', type=str,
-					help="output directory [default=%(default)s]")
+					help='clean up temporary directory [default=%(default)s]')
 					
 	parser.add_argument('-seqfmt', type=str, choices=['fasta', 'genbank'], default=None,
 					help="genome seqence format [default=auto]")
-	parser.add_argument('-orf', '-include_orf', action="store_true", default=False,
-					help="include orf in gene predictione [default=%(default)s]")
 	parser.add_argument("-est", action="store",type=str,
 					help="EST sequences for evidence in fasta format")
 
@@ -56,20 +49,43 @@ def makeArgparse():
 	parser.add_argument('-partial', action="store_true", default=False,
 					help="completeness to be included in sqn [default=complete]")
 	
+	group_out = parser.add_argument_group('output',)
+	group_out.add_argument("-outdir", action="store",
+					default='.', type=str,
+					help="output directory [default=%(default)s]")
+	group_out.add_argument("-prefix", action="store",
+					default=None, type=str,
+					help="output prefix [default=%(default)s]")
 	# parser.add_argument('-min_cds_cov', type=float, default=80,
 					# help="min coverage to filter candidate coding genes [default=%(default)s]")
 	# parser.add_argument('-min_rrn_cov', type=float, default=90,
 					# help="min coverage to filter candidate rRNA genes [default=%(default)s]")
 	# parser.add_argument('-min_trn_cov', type=float, default=50,
 					# help="min coverage to filter candidate tRNA genes [default=%(default)s]")
-	parser.add_argument('-score_cutoff', type=float, default=0.85,
-					help="min score to output [default=%(default)s]")
-	parser.add_argument('-trn_struct', action="store_true", default=False,
+	group_out.add_argument('-min_cov', type=float, default=25,
+					 help="min coverage to filter out final gene set [default=%(default)s]")
+	group_out.add_argument('-min_score', type=float, default=15,
+					 help="min score to filter out final gene set [default=%(default)s]")
+#	parser.add_argument('-score_cutoff', type=float, default=0.85,
+#					help="min score ratio of the highest of multi-copy gene to output [default=%(default)s]")
+	group_out.add_argument('-min_cds_score', type=float, default=0.85,
+					help="min score ratio to filter coding genes [default=%(default)s]")
+	group_out.add_argument('-min_rrn_score', type=float, default=0.95,
+					help="min score ratio to filter rRNA genes [default=%(default)s]")
+	group_out.add_argument('-min_trn_score', type=float, default=0.8,
+					help="min score ratio to filter tRNA genes [default=%(default)s]")
+	group_out.add_argument('-orf', '-include_orf', action="store_true", default=False,
+					help="include orf in gene prediction [default=%(default)s]")
+	group_out.add_argument('-trn_struct', action="store_true", default=False,
 					help="output tRNA structure [default=%(default)s]")
-	parser.add_argument('-drawgenemap', action="store_true", default=True,
+	group_out.add_argument('-drawgenemap', action="store_true", default=True,
 					help="draw gene map [default=%(default)s]")
-	parser.add_argument('-repeat', action="store_true", default=False,
+
+	group_rep = parser.add_argument_group('repeat', )
+	group_rep.add_argument('-repeat', action="store_true", default=False,
 					help="output repeats [default=%(default)s]")
+	addRepeatArgs(group_rep)
+
 	args = parser.parse_args()
 	if args.organism is not None:
 		args.organism = args.organism.replace('_', ' ')
@@ -94,11 +110,16 @@ class Pipeline():
 				linear=False, 
 				partial=False,
 				include_orf=False,
-				min_cds_cov=80,
-				min_rrn_cov=90,
-				min_trn_cov=50,
-				score_cutoff=0.85,
-				cov_cutoff=0.75,
+				min_cds_cov=80,		# obsoleted
+				min_rrn_cov=90,		# obsoleted
+				min_trn_cov=50,		# obsoleted
+				cov_cutoff=0.75,	# filter candidate (> highest * cov_cutoff)
+				#score_cutoff=0.85,	# filter final set (> highest * score_cutoff) to filter out multi-copy
+				min_cds_score=0.85,		# score_cutoff for cds
+				min_rrn_score=0.95,		# score_cutoff for rrn
+				min_trn_score=0.80,		# score_cutoff for trn
+				min_score=20, # filter final set (> hard_score_cutoff) to filter out single copy
+				min_cov=50,			# filter final set (> min_cov%) to filter out single copy
 				trn_opts=' -O',
 				trn_struct=False,
 				drawgenemap=True,
@@ -110,7 +131,7 @@ class Pipeline():
 		self.genome = os.path.realpath(genome)
 		self.organ = organ
 		self.taxon = taxon
-		self.outdir = outdir
+		self.outdir = os.path.realpath(outdir)
 		self.est = est
 		self.organism = organism
 		self.linear = linear
@@ -147,8 +168,12 @@ class Pipeline():
 		self.min_cds_cov = min_cds_cov
 		self.min_rrn_cov = min_rrn_cov
 		self.min_trn_cov = min_trn_cov
-		self.score_cutoff = score_cutoff
+		
 		self.cov_cutoff = cov_cutoff
+		#self.score_cutoff = score_cutoff
+		self.score_cutoff = {'mRNA':min_cds_score, 'rRNA':min_rrn_score, 'tRNA':min_trn_score}
+		self.min_score = min_score
+		self.min_cov = min_cov
 
 		if taxon is None and self.organism is not None:
 			taxon = Database(organ=organ).select_db(self.organism).taxon
@@ -171,7 +196,7 @@ class Pipeline():
 		#self.estoutdir = '{}/estout'.format(self.tmpdir)
 		#self.exnoutdir = '{}/exnout'.format(self.tmpdir)
 		self.agtoutdir = '{}/augustus'.format(self.tmpdir)
-		self.trndir = '{}/{}.trna'.format('.', self.prefix)
+		self.trndir = '{}/{}.trna'.format(self.outdir, self.prefix)
 
 	def run(self):
 		# draw map
@@ -218,11 +243,16 @@ class Pipeline():
 		records = self.remove_duplicates(records)
 		# remove low quality of the same gene
 		logger.info('removing duplicated genes with lower score: {} * highest score'.format(self.score_cutoff))
-		records = self.remove_lowqual(records, cutoff=self.score_cutoff)
+		records = self.remove_lowqual(records, cutoff=self.score_cutoff, 
+					hard_cutoff=self.min_score, min_cov=self.min_cov)
 		
 		# out fasta of gene, sorted by score
 		self.to_fasta(records)
+		# tRNA structure
+		if self.trn_struct:
+			self.plot_struct(self.trndir, records)
 		
+		# repeat	
 		if self.repeat:
 			rep = RepeatPipeline(genome=self.fsa, tmpdir=self.tmpdir, prefix=self.prefix, **self.kargs)
 			records += rep.run()
@@ -241,9 +271,6 @@ class Pipeline():
 			self.draw_map()
 			if self.seqfmt == 'genbank':
 				self.compare_map()
-		# tRNA structure
-		if self.trn_struct:
-			self.plot_struct(self.trndir, records)
 	
 		# summary
 		self.summary_records(records)
@@ -268,21 +295,24 @@ class Pipeline():
 				print >> fout, '{seq}\n{struct}'.format(
 					seq=record.struct.rna_seq, struct=record.struct.rna_struct)
 			struct_file = os.path.realpath(struct_file)
+			outfig = '{}/{}.pdf'.format(trndir, id)
+			# cmd = 'cd {dir} && cat {struct_file} | \
+					# RNAplot --pre "{start} {end} 8 GREEN omark" && mv rna.ps {id}.ps'.format(
+					# dir=trndir, struct_file=struct_file, 
+					# start=record.struct.codon_start, end=record.struct.codon_end,
+					# id=id)
 			cmd = 'cd {dir} && cat {struct_file} | \
-					RNAplot --pre "{start} {end} 8 GREEN omark" && mv rna.ps {id}.ps'.format(
-					dir=trndir, struct_file=struct_file, 
+					RNAplot --pre "{start} {end} 8 GREEN omark" && ps2pdf rna.ps {outfig}'.format(
+					dir=self.tmpdir, struct_file=struct_file, 
 					start=record.struct.codon_start, end=record.struct.codon_end,
-					id=id)
+					outfig=outfig)
 			run_cmd(cmd, log=True)
 
-	def remove_lowqual(self, records, cutoff=0.9, hard_cutoff=20):
+	def remove_lowqual(self, records, cutoff={}, hard_cutoff=20, min_cov=50):
 		'''remove duplicates with same name and low qual'''
 		d_group = OrderedDict()
 		for record in records:
 			key = record.name		# id or name?
-			if record.score < hard_cutoff:
-				print >>sys.stderr, key, 'too low score: {}'.format(record.score)
-				continue
 			try: d_group[key] += [record]	# duplicates from homologous gene
 			except KeyError: d_group[key] = [record]
 		better_records = []
@@ -291,16 +321,37 @@ class Pipeline():
 			if count == 1:	# unique
 				better_records += records
 				continue
-			# remove that with more parts
-			min_npart = min([record.npart for record in records])
-			records = [record for record in records if record.npart <= min_npart]
+			
 			# remove that with low score
-			highest_score = max([record.score for record in records])
-			good_cutoff = highest_score * cutoff
+			highest_record = max(records, key=lambda x:x.score)
+			highest_score = highest_record.score
+			good_cutoff = highest_score * cutoff[highest_record.rna_type]
 			better_record = [record for record in records if record.score >= good_cutoff]
+			#print >>sys.stderr, key, count, '->', len(better_record)
+			# remove that high qual but with more parts
+			top_record = [record for record in records if record.score >= highest_score*0.96]
+			min_npart = min([record.npart for record in top_record])
+			better_record = [record for record in better_record if record.npart <= min_npart]
+			
+			# remove overlap
+			if len(better_record) >1:
+				better_record = self.remove_overlaps(better_record)
+			
 			print >>sys.stderr, key, count, '->', len(better_record)
 			better_records += better_record
-		return better_records
+		
+		
+		filtered_records = []
+		for record in better_records:
+			if record.score < hard_cutoff:
+				print >>sys.stderr, record, record.name, 'removed with too low score: {}'.format(record.score)
+				continue
+			if record.cov < min_cov:
+				print >>sys.stderr, record, record.name, 'removed with too low coverage: {}'.format(record.cov)
+				continue
+			filtered_records += [record]
+		return filtered_records
+	
 	def remove_duplicates(self, records):
 		'''remove duplicates with same coordinate'''
 		keys = set([])
@@ -324,6 +375,20 @@ class Pipeline():
 			unique_records += [best_record]
 		return unique_records
 		
+	def remove_overlaps(self, records):
+		while True:
+			records = sorted(records, key=lambda x: (x.start, -x.end))
+			overalped_records = []
+			for rc1, rc2 in combinations(records, 2):
+				#print >>sys.stderr, 'remove_overlaps'
+				if rc1.overlaps(rc2):
+					overalped_record = min(records, key=lambda x:x.score)
+					print >>sys.stderr, overalped_record, overalped_record.name, 'removed with overlap'
+					overalped_records += [overalped_record]
+			if len(overalped_records) == 0:
+				break
+			records = set(records) - set(overalped_records)
+		return records
 	def score_record(self, record):
 		rnafa = self.get_filename(self.hmmoutdir, record.gene_id, 'fasta')
 		with open(rnafa, 'w') as fout:
@@ -337,9 +402,12 @@ class Pipeline():
 		hmm_best = HmmSearch(domtblout).get_best_hit()
 		try:
 			record.score = round(hmm_best.edit_score, 1)
+			record.cov = round(hmm_best.cov, 1)
 		except AttributeError:
 			record.score = 0
+			record.cov = 0
 		record[0].score = record.score
+		record[0].attributes.update(cov=record.cov)
 		return record
 		
 	def summary_records(self, records):
@@ -366,34 +434,35 @@ class Pipeline():
 		records = []
 		#trn_records = []
 		for gene in self.db.rna_genes:
-			print >>sys.stderr, '\n   >>', gene
-#			if not gene.seq_type == 'rRNA':
-#				continue
+			print >>sys.stderr, '\n   >> {}: {}'.format(gene, gene.name)
 			hmmfile = self.db.get_hmmfile(gene)
 			domtblout = self.get_domtblout(gene, src='g')
 			self.hmmsearch(hmmfile, na_seq, domtblout)
 			if gene.seq_type == 'rRNA':
 				structs = HmmSearch(domtblout).get_gene_structure(d_length, 
-								min_ratio=self.cov_cutoff,
+								min_ratio=self.cov_cutoff, min_hmmcov=5, min_part=2,
 								min_cov=self.min_rrn_cov, seq_type='nucl', flank=2000)
 				for i, parts in enumerate(structs):
 					parts.id = '{}-{}'.format(gene, i+1)
+					print >> sys.stderr, 'old', parts.to_str()
 					genefa = self.get_filename(self.agtoutdir, parts, 'fa')
 					with open(genefa, 'w') as fout:
 						parts.write_seq(self.seqs, fout)
 					#self.exonerate_gene_est(genefa, gene, parts)
-					best_exons = self.exonerate_est2genome(genefa, gene, parts)
+					best_exons = self.exonerate_est2genome(genefa, gene, parts, minintron=500)
 					if best_exons is None:
 						continue
 					rrn, new_parts = parts.map_coord(best_exons)	# GffExons
 					new_parts = new_parts.link_part()
+					print >> sys.stderr, 'new', new_parts.to_str()
 					#rrn = rrn.link_exons(minintron=200)
-					new_parts.source = 'exonerate'
+					new_parts.source = 'blat'
 					record = rrn.extend_gene(gene, new_parts, rna_type=gene.seq_type)
-					#parts.source = 'hmmsearch'
-					#exons = parts.to_exons()
-					#exons.write(sys.stderr)
-					#record = exons.extend_gene(gene, parts, rna_type=gene.seq_type)
+					# new_parts = parts
+					# parts.source = 'hmmsearch'
+					# exons = parts.to_exons()
+					# #exons.write(sys.stderr)
+					# record = exons.extend_gene(gene, parts, rna_type=gene.seq_type)
 					print >> sys.stderr, ''
 					rna_seq = record.extract_seq(self.seqs[record.chrom])
 					record.rna_seq = rna_seq
@@ -402,12 +471,14 @@ class Pipeline():
 					record.write(sys.stderr)
 					records += [record]
 			elif gene.seq_type == 'tRNA':
+				#continue
 				structs = HmmSearch(domtblout).get_gene_structure(d_length,
-								min_ratio=self.cov_cutoff, min_part=2,
+								min_ratio=self.cov_cutoff, min_hmmcov=5, min_part=2,
 							    min_cov=self.min_trn_cov, seq_type='nucl', flank=200)
 				c = 0
 				for i, parts in enumerate(structs):
 					parts.id = '{}-{}'.format(gene, i+1)
+					print >> sys.stderr, 'old', parts.to_str()
 					genefa = self.get_filename(self.hmmoutdir, parts, 'fa')
 					with open(genefa, 'w') as fout:
 						parts.write_seq(self.seqs, fout)
@@ -420,6 +491,7 @@ class Pipeline():
 						c += 1
 						trna, new_parts = parts.map_coord(trn.to_exons())
 						new_parts = new_parts.link_part()
+						print >> sys.stderr, 'new', new_parts.to_str()
 						new_parts.source = 'tRNAscan'
 						rename = trn.update_name(gene.name)
 						new_gene = copy.deepcopy(gene)
@@ -438,6 +510,7 @@ class Pipeline():
 					#	trn_records += [record]
 						records += [record]
 		#records += self.remove_duplicates(trn_records)
+			#break
 		return records
 
 
@@ -450,13 +523,13 @@ class Pipeline():
 		# hmmsearch
 		records = []
 		for gene in self.db.cds_genes:
-			print >>sys.stderr, '\n   >>', gene
+			print >>sys.stderr, '\n   >> {}: {}'.format(gene, gene.name)
 			hmmfile = self.db.get_hmmfile(gene)
 			domtblout = self.get_domtblout(gene, src='g')
 			self.hmmsearch(hmmfile, aa_seq, domtblout)
 			structs = HmmSearch(domtblout).get_gene_structure(d_length,
 							min_ratio=self.cov_cutoff,
-							min_cov=self.min_cds_cov, seq_type='prot', flank=2000)
+							min_cov=self.min_cds_cov, seq_type='prot', flank=5000)
 			for i, parts in enumerate(structs):
 				parts.id = '{}-{}'.format(gene, i+1)	# parts is a copy
 				genefa = self.get_filename(self.agtoutdir, parts, 'fa')
@@ -476,10 +549,10 @@ class Pipeline():
 			#	print >> sys.stderr, source
 			#	best_gtf.write(sys.stderr)	# GffRecord -> AugustusGtfLine -> Gtf
 			#	print >> sys.stderr, ''
-			#	print >> sys.stderr, 'old', parts.to_str()
+				print >> sys.stderr, 'old', parts.to_str()
 				cds, new_parts = parts.map_coord(best_gtf.to_exons().filter('CDS'))	# GffExons
 				new_parts = new_parts.link_part()
-			#	print >> sys.stderr, 'new', new_parts.to_str()
+				print >> sys.stderr, 'new', new_parts.to_str()
 			#	print >> sys.stderr, parts.to_str()
 				new_parts.source = source
 			#	cds.write(sys.stderr)
@@ -497,6 +570,7 @@ class Pipeline():
 				record.npart = len(new_parts)
 				record.write(sys.stderr)
 				records += [record]
+			#break
 			#print >>sys.stderr, '\n'
 		return records
 		
@@ -519,21 +593,23 @@ class Pipeline():
 				est_exn_gff = self.get_exnfile(copy, 'e')
 				ExonerateGffGenes(est_exn_gff).to_hints(fout, src='E', pri=4)
 		return exn_gff
-	def exonerate_est2genome(self, reference, gene, copy=None):
+	def exonerate_est2genome(self, reference, gene, copy=None, minintron=500):
 		if copy is None:
 			copy = gene
 		seqfile = self.db.get_seqfile(gene)
 		exn_gff = self.get_exnfile(copy, 'e')
-		self.exonerate(seqfile, reference, exn_gff,		# est
-				model='est2genome', bestn=5, percent=70, 
-				maxintron=10000,
-				minintron=200,
-				showtargetgff='T')
+		# self.exonerate(seqfile, reference, exn_gff,		# est
+				# model='est2genome', bestn=5, percent=70, 
+				# maxintron=10000,
+				# minintron=200,
+				# showtargetgff='T')
+		self.blat(seqfile, reference, exn_gff, maxIntron=10000)
+		
 		outfa = exn_gff + '.fa'
 		gene_seqs = self.get_seqs(reference)
 		with open(outfa, 'w') as fout:
-			ex_exons = ExonerateGffGenes(exn_gff).to_exons(gene_seqs, fout)
-		
+			# ex_exons = ExonerateGffGenes(exn_gff).to_exons(gene_seqs, fout)
+			ex_exons = PslParser(exn_gff).to_exons(minintron=minintron, d_seqs=gene_seqs, fout=fout)
 		hmmfile = self.db.get_hmmfile(gene)
 		domtblout = outfa + '.domtbl'
 		self.hmmsearch(hmmfile, outfa, domtblout)
@@ -704,6 +780,15 @@ class Pipeline():
 		cmd = ' '.join(cmd)
 		run_cmd(cmd, log=True)
 		return cmd
+	def blat(self, database, query, output, **kargs):
+		cmd = ['blat {} {} {}'.format(database, query, output)]
+		for key, value in kargs.items():
+			if value is not None:
+				cmd += ['-{key}={value}'.format(key=key, value=value)]
+		cmd = ' '.join(cmd)
+		run_cmd(cmd, log=True)
+		return cmd
+		
 	def trnascan(self, queryfile, output, opts='-O'):
 		cmd = ['tRNAscan-SE {}'.format(queryfile)]
 		cmd += [opts]
@@ -756,8 +841,8 @@ class Pipeline():
 			try: d_count[id] += 1
 			except KeyError: d_count[id] = 1
 			
-			desc = 'gene={};id={};product={};exons={};score={}'.format(record.name, 
-						record.rna_id, record.product, record, record.score)
+			desc = 'gene={};id={};product={};exons={};score={};cov={}'.format(record.name, 
+						record.rna_id, record.product, record, record.score, record.cov)
 			try:
 				print >> f_cds, '>{} {}\n{}'.format(xid, desc, record.cds_seq)
 			except AttributeError: pass
@@ -802,13 +887,18 @@ class Pipeline():
 		return fsa
 
 	def to_sqn(self, records):
+		g,s = self.organism.split()[:2]
+		prefix = g[:2] + s[:3]
+		prefix = prefix.upper()
 		# to tbl
 		tbl = '{}/{}.tbl'.format(self.outdir, self.prefix)
 		fout = open(tbl, 'w')
 		for seqid in self.seqs.keys():
 			print >>fout, '>Feature {}'.format(seqid)
-			for record in records:
-				record.to_tbl(fout, seqid, transl_table=self.transl_table)
+			for i, record in enumerate(records):
+				locus_tag = '{}_{:0>6d}'.format(prefix, i)
+				record.to_tbl(fout, seqid, transl_table=self.transl_table, 
+						locus_tag=locus_tag)
 		fout.close()
 		# fsa + tbl -> sqn -> genbank
 		sqn = '{}/{}.sqn'.format(self.outdir, self.prefix)
@@ -836,7 +926,7 @@ class Pipeline():
 		gb = self.genome
 		outfig_ref = '{}/{}_ref.pdf'.format(self.tmpdir, prefix)
 		self._draw_map(gb, outfig_ref, opts=opts)
-		gb = '{}/{}.gb'.format('.', self.prefix)
+		gb = '{}/{}.gb'.format(self.outdir, self.prefix)
 		outfig_cmp = '{}/{}_cmp.pdf'.format(self.tmpdir, prefix)
 		self._draw_map(gb, outfig_cmp, opts=opts)
 		acc = '/'.join(self.seqs.keys()).replace('_', '\_')
@@ -860,7 +950,9 @@ class Pipeline():
 		texfile = '{}/{}.merge.tex'.format(self.tmpdir, self.prefix)
 		with open(texfile, 'w') as f:
 			print >>f, tex
-		cmd = 'pdflatex ' + texfile
+		basename = os.path.splitext(os.path.basename(texfile))[0]
+		cmd = 'cd {} && pdflatex {} && rm {basename}.aux {basename}.log'.format(
+				self.outdir, texfile, basename=basename)
 		run_cmd(cmd, log=True)
 	
 	def _check_database(self):

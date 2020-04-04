@@ -1,0 +1,185 @@
+#id	organism	name_count	cds_count	trn_count	rrn_count	length	GC	taxonomy
+NC_036158.1	Absidia glauca	40	28	24	2	63080	28.2	Eukaryota;Fungi;Mucoromycota;Mucoromycotina;Mucorales;Cunninghamellaceae;Absidia
+NC_029851.1	Acremonium fuci	45	15	28	2	24565	28.8	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Sordariomycetes;Hypocreomycetidae;Hypocreales;Hypocreales incertae sedis;Acremonium
+NC_004514.1	Akanthomyces muscarius	17	15	25	2	24499	27.1	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Sordariomycetes;Hypocreomycetidae;Hypocreales;Cordycipitaceae;Akanthomyces
+NC_037233.1	Alectoria fallacina	44	13	29	2	75417	31.8	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Lecanoromycetes;OSLEUM clade;Lecanoromycetidae;Lecanorales;Lecanorineae;Parmeliaceae;Alectoria
+NC_001715.1	Allomyces macrogynus	42	25	25	2	57473	39.5	Eukaryota;Fungi;Blastocladiomycota;Blastocladiomycetes;Blastocladiales;Blastocladiaceae;Allomyces
+NC_045197.1	Amanita brunnescens	45	23	28	2	62533	23.6	Eukaryota;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Agaricomycetes;Agaricomycetidae;Agaricales;Amanitaceae;Amanita
+NC_023117.1	Annulohypoxylon stygium	57	56	26	2	133782	29.9	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Sordariomycetes;Xylariomycetidae;Xylariales;Hypoxylaceae;Annulohypoxylon
+NC_042231.1	Armillaria solidipes	49	49	26	2	122167	29.2	Eukaryota;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Agaricomycetes;Agaricomycetidae;Agaricales;Physalacriaceae;Armillaria
+NC_035508.1	Arthrinium arundinis	38	20	23	2	48975	29.4	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Sordariomycetes;Xylariomycetidae;Xylariales;Apiosporaceae;Arthrinium
+NC_041246.1	Arthrobotrys oligospora	40	56	24	2	160613	25.0	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Orbiliomycetes;Orbiliales;Orbiliaceae;Arthrobotrys
+NC_012828.1	Arthroderma uncinatum	15	15	25	2	28530	23.5	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Eurotiomycetes;Eurotiomycetidae;Onygenales;Arthrodermataceae;Arthroderma
+NC_041427.1	Aspergillus pseudoglaucus	16	30	26	2	53882	27.8	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Eurotiomycetes;Eurotiomycetidae;Eurotiales;Aspergillaceae;Aspergillus
+NC_039439.1	Asterophora parasitica	8	15	26	2	43328	31.7	Eukaryota;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Agaricomycetes;Agaricomycetidae;Agaricales;Lyophyllaceae;Asterophora
+NC_044133.1	Auricularia polytricha	40	29	25	1	76297	21.5	Eukaryota;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Agaricomycetes;Auriculariales;Auriculariaceae;Auricularia
+NC_044121.1	Austropuccinia psidii	39	45	23	2	93299	37.4	Eukaryota;Fungi;Dikarya;Basidiomycota;Pucciniomycotina;Pucciniomycetes;Pucciniales;Sphaerophragmiaceae;Austropuccinia
+NC_022159.1	Barnettozyma californica	50	25	24	2	48471	19.2	Eukaryota;Fungi;Dikarya;Ascomycota;Saccharomycotina;Saccharomycetes;Saccharomycetales;Phaffomycetaceae;Barnettozyma
+NC_022708.1	Beauveria pseudobassiana	42	15	25	3	28006	27.5	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Sordariomycetes;Hypocreomycetidae;Hypocreales;Cordycipitaceae;Beauveria
+NC_036417.1	Bipolaris cookei	44	66	30	2	135790	30.1	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Dothideomycetes;Pleosporomycetidae;Pleosporales;Pleosporineae;Pleosporaceae;Bipolaris
+NC_011360.1	Blastocladiella emersonii	16	17	26	2	36503	35.1	Eukaryota;Fungi;Blastocladiomycota;Blastocladiomycetes;Blastocladiales;Blastocladiaceae;Blastocladiella
+NC_039440.1	Blastosporella zonata	12	56	31	4	200401	34.8	Eukaryota;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Agaricomycetes;Agaricomycetidae;Agaricales;Tricholomataceae;Blastosporella
+NC_013145.2	Brettanomyces custersianus	47	19	25	2	30058	21.0	Eukaryota;Fungi;Dikarya;Ascomycota;Saccharomycotina;Saccharomycetes;Saccharomycetales;Pichiaceae;Brettanomyces
+NC_034786.1	Bryoria tenuis	29	12	17	2	84295	30.2	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Lecanoromycetes;OSLEUM clade;Lecanoromycetidae;Lecanorales;Lecanorineae;Parmeliaceae;Bryoria
+NC_022174.1	Candida gigantensis	50	27	32	2	55125	52.1	Eukaryota;Fungi;Dikarya;Ascomycota;Saccharomycotina;Saccharomycetes;Saccharomycetales;Debaryomycetaceae;Candida/Lodderomyces clade;Candida
+NC_020368.1	Cantharellus cibarius	44	33	26	2	58656	26.8	Eukaryota;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Agaricomycetes;Cantharellales;Cantharellaceae;Cantharellus
+NC_044963.1	Ceratocystis fimbriata	86	52	31	2	103403	26.9	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Sordariomycetes;Hypocreomycetidae;Microascales;Ceratocystidaceae;Ceratocystis
+NC_030522.1	Chrysoporthe austroafricana	47	94	28	2	190834	30.3	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Sordariomycetes;Sordariomycetidae;Diaporthales;Cryphonectriaceae;Cryphonectria-Endothia species complex;Chrysoporthe
+NC_042880.1	Chytriomyces confervae	24	18	7	2	225604	42.3	Eukaryota;Fungi;Fungi incertae sedis;Chytridiomycota;Chytridiomycetes;Chytridiales;Chytriomycetaceae;Chytriomyces
+NC_039662.1	Cladonia leporina	45	21	28	2	50045	29.1	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Lecanoromycetes;OSLEUM clade;Lecanoromycetidae;Lecanorales;Lecanorineae;Cladoniaceae;Cladonia
+NC_030600.1	Cladophialophora bantiana	15	16	22	2	26821	24.5	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Eurotiomycetes;Chaetothyriomycetidae;Chaetothyriales;Herpotrichiellaceae;Cladophialophora
+NC_022161.1	Clavispora lusitaniae	42	18	25	2	24896	26.8	Eukaryota;Fungi;Dikarya;Ascomycota;Saccharomycotina;Saccharomycetes;Saccharomycetales;Metschnikowiaceae;Clavispora
+NC_036667.1	Clonostachys rosea	42	15	25	2	40921	27.9	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Sordariomycetes;Hypocreomycetidae;Hypocreales;Bionectriaceae;Clonostachys
+NC_034332.1	Coccocarpia palmicola	35	16	21	2	73992	25.3	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Lecanoromycetes;OSLEUM clade;Lecanoromycetidae;Peltigerales;Collematineae;Coccocarpiaceae;Coccocarpia
+NC_029213.1	Colletotrichum lupini	44	15	29	2	36554	29.9	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Sordariomycetes;Hypocreomycetidae;Glomerellales;Glomerellaceae;Colletotrichum
+NC_040967.1	Conidiobolus heterosporus	42	37	26	2	53364	29.1	Eukaryota;Fungi;Fungi incertae sedis;Zoopagomycota;Entomophthoromycotina;Entomophthoromycetes;Entomophthorales;Ancylistaceae;Conidiobolus
+NC_040008.1	Coniothyrium glycines	45	35	30	2	98533	29.0	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Dothideomycetes;Pleosporomycetidae;Pleosporales;Pleosporineae;Coniothyriaceae;Coniothyrium
+NC_022834.1	Cordyceps militaris	43	15	26	2	33277	26.8	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Sordariomycetes;Hypocreomycetidae;Hypocreales;Cordycipitaceae;Cordyceps
+NC_004336.1	Cryptococcus neoformans var. grubii	38	16	20	2	24874	35.0	Eukaryota;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Tremellomycetes;Tremellales;Cryptococcaceae;Cryptococcus;Cryptococcus neoformans species complex
+NC_022167.1	Cyberlindnera suaveolens	55	29	25	2	51521	20.5	Eukaryota;Fungi;Dikarya;Ascomycota;Saccharomycotina;Saccharomycetes;Saccharomycetales;Phaffomycetaceae;Cyberlindnera
+NC_042947.1	Dactylella tenuis	42	74	24	2	186056	26.2	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Orbiliomycetes;Orbiliales;Orbiliaceae;Dactylella
+NC_041555.1	Dactylellina haptotyla	43	19	26	1	146101	22.9	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Orbiliomycetes;Orbiliales;Orbiliaceae;Dactylellina
+NC_010166.1	Debaryomyces hansenii	16	18	25	2	29462	27.0	Eukaryota;Fungi;Dikarya;Ascomycota;Saccharomycotina;Saccharomycetes;Saccharomycetales;Debaryomycetaceae;Debaryomyces
+NC_042769.1	Desarmillaria tabescens	43	15	26	2	93439	29.3	Eukaryota;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Agaricomycetes;Agaricomycetidae;Agaricales;Agaricales incertae sedis;Desarmillaria
+NC_029396.1	Didymella pinodes	36	11	23	2	55973	29.5	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Dothideomycetes;Pleosporomycetidae;Pleosporales;Pleosporineae;Didymellaceae;Didymella
+NC_041248.1	Drechslerella brochopaga	38	79	22	2	193195	26.2	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Orbiliomycetes;Orbiliales;Orbiliaceae;Drechslerella
+NC_032063.1	Epichloe typhina	39	56	25	0	84630	27.0	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Sordariomycetes;Hypocreomycetidae;Hypocreales;Clavicipitaceae;Epichloe
+NC_007394.1	Epidermophyton floccosum	19	24	25	2	30910	23.4	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Eurotiomycetes;Eurotiomycetidae;Onygenales;Arthrodermataceae;Epidermophyton
+NC_035254.1	Esteya vermicola	40	14	24	2	46507	24.9	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Sordariomycetes;Sordariomycetidae;Ophiostomatales;Ophiostomataceae;Esteya
+NC_021373.1	Flammulina velutipes	51	31	26	2	88508	16.5	Eukaryota;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Agaricomycetes;Agaricomycetidae;Agaricales;Physalacriaceae;Flammulina
+NC_034349.1	Fomitopsis palustris	44	33	26	2	63479	24.0	Eukaryota;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Agaricomycetes;Polyporales;Fomitopsis
+NC_026993.1	Fusarium culmorum	84	60	28	2	103844	31.7	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Sordariomycetes;Hypocreomycetidae;Hypocreales;Nectriaceae;Fusarium
+NC_026782.1	Ganoderma meredithae	64	33	29	2	78447	26.1	Eukaryota;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Agaricomycetes;Polyporales;Polyporaceae;Ganoderma
+NC_025768.1	Geotrichum candidum	37	15	21	2	29008	27.6	Eukaryota;Fungi;Dikarya;Ascomycota;Saccharomycotina;Saccharomycetes;Saccharomycetales;Dipodascaceae;Geotrichum
+NC_016985.1	Gigaspora rosea	42	22	25	3	97350	44.8	Eukaryota;Fungi;Mucoromycota;Glomeromycotina;Glomeromycetes;Diversisporales;Gigasporaceae;Gigaspora
+NC_031375.1	Glarea lozoyensis	52	22	33	2	45501	29.8	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Leotiomycetes;Helotiales;Helotiaceae;Glarea
+NC_022144.1	Glomus cerebriforme	43	20	25	2	59633	46.7	Eukaryota;Fungi;Mucoromycota;Glomeromycotina;Glomeromycetes;Glomerales;Glomeraceae;Glomus
+NC_034790.1	Gomphillus americanus	41	13	26	2	28370	28.4	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Lecanoromycetes;OSLEUM clade;Ostropomycetidae;Ostropales;Graphidaceae;Gomphilloideae;Gomphillus
+NC_035824.1	Graphis lineola	33	12	19	2	24945	29.5	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Lecanoromycetes;OSLEUM clade;Ostropomycetidae;Ostropales;Graphidaceae;Graphidoideae;Graphideae;Graphis
+NC_014613.1	Groenewaldozyma salmanticensis	43	16	25	2	27812	20.2	Eukaryota;Fungi;Dikarya;Ascomycota;Saccharomycotina;Saccharomycetes;Saccharomycetales;Trichomonascaceae;Groenewaldozyma
+NC_039747.1	Hannaella oryzae	41	17	23	2	26444	39.0	Eukaryota;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Tremellomycetes;Tremellales;Bulleribasidiaceae;Hannaella
+NC_007780.1	Hanseniaspora uvarum	8	8	23	2	18844	29.3	Eukaryota;Fungi;Dikarya;Ascomycota;Saccharomycotina;Saccharomycetes;Saccharomycetales;Saccharomycodaceae;Hanseniaspora
+NC_004623.1	Harpochytrium sp. JEL105	25	14	8	3	24169	36.2	Eukaryota;Fungi;Chytridiomycota;Monoblepharidomycetes;Monoblepharidales;Harpochytriaceae;Harpochytrium
+NC_033903.1	Hericium coralloides	42	35	26	2	72961	18.0	Eukaryota;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Agaricomycetes;Russulales;Hericiaceae;Hericium
+NC_024555.1	Heterobasidion irregulare	17	28	26	2	114193	22.8	Eukaryota;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Agaricomycetes;Russulales;Bondarzewiaceae;Heterobasidion;Heterobasidion annosum species complex
+NC_040159.1	Heterodermia speciosa	55	29	24	2	75318	29.1	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Lecanoromycetes;OSLEUM clade;Lecanoromycetidae;Caliciales;Physciaceae;Heterodermia
+NC_040165.1	Hirsutella thompsonii	43	30	27	2	62509	29.8	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Sordariomycetes;Hypocreomycetidae;Hypocreales;Ophiocordycipitaceae;Hirsutella
+NC_003048.1	Hyaloraphidium curvatum	24	18	7	3	29593	43.2	Eukaryota;Fungi;Chytridiomycota;Monoblepharidomycetes;Monoblepharidales;Monoblepharidales incertae sedis;Hyaloraphidium
+NC_039589.1	Hygrophorus russula	43	22	26	2	55769	19.1	Eukaryota;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Agaricomycetes;Agaricomycetidae;Agaricales;Hygrophoraceae;Hygrophorus
+NC_035730.1	Hypogymnia vittata	41	16	25	2	38888	30.7	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Lecanoromycetes;OSLEUM clade;Lecanoromycetidae;Lecanorales;Lecanorineae;Parmeliaceae;Hypogymnia
+NC_030206.1	Hypomyces aurantius	43	44	25	2	71638	28.3	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Sordariomycetes;Hypocreomycetidae;Hypocreales;Hypocreaceae;Hypomyces
+NC_042219.1	Hypsizygus marmoreus	44	27	27	2	102752	31.9	Eukaryota;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Agaricomycetes;Agaricomycetidae;Agaricales;Lyophyllaceae;Hypsizygus
+NC_030340.1	Ilyonectria destructans	44	15	29	2	42895	28.2	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Sordariomycetes;Hypocreomycetidae;Hypocreales;Nectriaceae;Ilyonectria
+NC_035550.1	Imshaugia aleurites	38	14	22	2	32029	30.5	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Lecanoromycetes;OSLEUM clade;Lecanoromycetidae;Lecanorales;Lecanorineae;Parmeliaceae;Imshaugia
+NC_044740.1	Inonotus obliquus	47	58	30	2	119110	25.0	Eukaryota;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Agaricomycetes;Hymenochaetales;Hymenochaetaceae;Inonotus
+NC_023248.1	Jaminaea angkorensis	15	18	22	2	29999	32.2	Eukaryota;Fungi;Dikarya;Basidiomycota;Ustilaginomycotina;Exobasidiomycetes;Microstromatales;Microstromatales incertae sedis;Jaminaea
+NC_004918.1	Kazachstania servazzii	37	12	23	2	30782	22.5	Eukaryota;Fungi;Dikarya;Ascomycota;Saccharomycotina;Saccharomycetes;Saccharomycetales;Saccharomycetaceae;Kazachstania
+NC_006077.1	Kluyveromyces lactis	33	9	22	2	40291	26.1	Eukaryota;Fungi;Dikarya;Ascomycota;Saccharomycotina;Saccharomycetes;Saccharomycetales;Saccharomycetaceae;Kluyveromyces
+NC_015384.1	Komagataella phaffii CBS 7435	40	16	25	2	35683	22.0	Eukaryota;Fungi;Dikarya;Ascomycota;Saccharomycotina;Saccharomycetes;Saccharomycetales;Phaffomycetaceae;Komagataella
+NC_042772.1	Laccaria amethystina	42	23	25	2	65156	23.4	Eukaryota;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Agaricomycetes;Agaricomycetidae;Agaricales;Tricholomataceae;Laccaria
+NC_006626.1	Lachancea thermotolerans	38	11	24	3	23584	24.9	Eukaryota;Fungi;Dikarya;Ascomycota;Saccharomycotina;Saccharomycetes;Saccharomycetales;Saccharomycetaceae;Lachancea
+NC_038056.1	Lactarius piperatus	43	33	26	2	60843	21.2	Eukaryota;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Agaricomycetes;Russulales;Russulaceae;Lactarius
+NC_038206.1	Lactifluus hygrophoroides	41	27	24	2	48541	21.0	Eukaryota;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Agaricomycetes;Russulales;Russulaceae;Lactifluus
+NC_042184.1	Lecanora cinereofusca	41	14	25	2	32357	31.2	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Lecanoromycetes;OSLEUM clade;Lecanoromycetidae;Lecanorales;Lecanorineae;Lecanoraceae;Lecanora
+NC_018365.1	Lentinula edodes	44	27	26	1	121394	30.7	Eukaryota;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Agaricomycetes;Agaricomycetidae;Agaricales;Omphalotaceae;Lentinula
+NC_034928.1	Leptogium hirsutum	38	18	21	2	120920	24.8	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Lecanoromycetes;OSLEUM clade;Lecanoromycetidae;Peltigerales;Collematineae;Collemataceae;Leptogium
+NC_024200.1	Lichtheimia hongkongensis	15	15	25	2	31830	34.1	Eukaryota;Fungi;Mucoromycota;Mucoromycotina;Mucorales;Lichtheimiaceae;Lichtheimia
+NC_038224.1	Lyophyllum shimeji	43	30	26	2	73678	27.9	Eukaryota;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Agaricomycetes;Agaricomycetidae;Agaricales;Lyophyllaceae;Lyophyllum
+NC_045202.1	Macrolepiota fuliginosa	41	26	24	2	59025	36.3	Eukaryota;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Agaricomycetes;Agaricomycetidae;Agaricales;Agaricaceae;Macrolepiota
+NC_018359.1	Madurella mycetomatis	22	24	26	2	45590	26.9	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Sordariomycetes;Sordariomycetidae;Sordariales;Sordariales incertae sedis;Madurella
+NC_024093.1	Magnusiomyces ingens	42	22	25	2	37684	20.3	Eukaryota;Fungi;Dikarya;Ascomycota;Saccharomycotina;Saccharomycetes;Saccharomycetales;Dipodascaceae;Magnusiomyces
+NC_039455.1	Malassezia restricta	16	16	24	2	38720	31.4	Eukaryota;Fungi;Dikarya;Basidiomycota;Ustilaginomycotina;Malasseziomycetes;Malasseziales;Malasseziaceae;Malassezia
+NC_015991.1	Marssonina brunnea f. sp. 'multigermtubi'	11	11	21	0	70379	29.3	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Leotiomycetes;Helotiales;Dermateaceae;Marssonina
+NC_008068.1	Metarhizium anisopliae	17	15	24	2	24673	28.4	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Sordariomycetes;Hypocreomycetidae;Hypocreales;Clavicipitaceae;Metarhizium
+NC_022154.1	Meyerozyma guilliermondii	47	20	25	2	31070	24.6	Eukaryota;Fungi;Dikarya;Ascomycota;Saccharomycotina;Saccharomycetes;Saccharomycetales;Debaryomycetaceae;Meyerozyma
+NC_020353.1	Microbotryum lychnidis-dioicae	49	51	31	1	107808	33.8	Eukaryota;Fungi;Dikarya;Basidiomycota;Pucciniomycotina;Microbotryomycetes;Microbotryales;Microbotryaceae;Microbotryum
+NC_012832.1	Microsporum canis	15	15	25	2	23943	24.1	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Eurotiomycetes;Eurotiomycetidae;Onygenales;Arthrodermataceae;Microsporum
+NC_013255.1	Millerozyma farinosa	52	25	25	2	39107	23.0	Eukaryota;Fungi;Dikarya;Ascomycota;Saccharomycotina;Saccharomycetes;Saccharomycetales;Debaryomycetaceae;Millerozyma
+NC_005927.1	Moniliophthora perniciosa	116	89	26	2	109103	31.9	Eukaryota;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Agaricomycetes;Agaricomycetidae;Agaricales;Marasmiaceae;Moniliophthora
+NC_004624.1	Monoblepharella sp. JEL15	26	26	9	3	60432	39.3	Eukaryota;Fungi;Chytridiomycota;Monoblepharidomycetes;Monoblepharidales;Monoblepharidaceae;Monoblepharella
+NC_045397.1	Morchella importuna	18	158	31	2	272238	39.9	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Pezizomycetes;Pezizales;Morchellaceae;Morchella
+NC_006838.1	Mortierella verticillata	45	25	26	2	58745	27.9	Eukaryota;Fungi;Mucoromycota;Mortierellomycotina;Mortierellales;Mortierellaceae;Mortierella
+NC_039441.1	Myochromella boudieri	6	34	27	2	99774	27.9	Eukaryota;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Agaricomycetes;Agaricomycetidae;Agaricales;Lyophyllaceae;Myochromella
+NC_012619.1	Nakaseomyces delphensis	33	8	23	2	37016	15.9	Eukaryota;Fungi;Dikarya;Ascomycota;Saccharomycotina;Saccharomycetes;Saccharomycetales;Saccharomycetaceae;Nakaseomyces
+NC_012830.1	Nannizzia nana	15	15	25	2	24105	24.5	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Eurotiomycetes;Eurotiomycetidae;Onygenales;Arthrodermataceae;Nannizzia
+NC_036377.1	Naumovozyma dairenensis	32	14	23	2	46425	15.8	Eukaryota;Fungi;Dikarya;Ascomycota;Saccharomycotina;Saccharomycetes;Saccharomycetales;Saccharomycetaceae;Naumovozyma
+NC_030252.1	Nectria cinnabarina	42	15	25	2	69895	28.7	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Sordariomycetes;Hypocreomycetidae;Hypocreales;Nectriaceae;Nectria
+NC_022151.1	Ogataea thermophila	51	25	25	2	53262	19.6	Eukaryota;Fungi;Dikarya;Ascomycota;Saccharomycotina;Saccharomycetes;Saccharomycetales;Pichiaceae;Ogataea
+NC_035825.1	Opegrapha vulgata	39	19	18	2	38937	30.8	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Arthoniomycetes;Arthoniales;Opegraphaceae;Opegrapha
+NC_034659.1	Ophiocordyceps sinensis	15	88	27	2	157539	30.2	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Sordariomycetes;Hypocreomycetidae;Hypocreales;Ophiocordycipitaceae;Ophiocordyceps
+NC_041448.1	Orbilia dorsalis	44	21	25	2	191042	25.2	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Orbiliomycetes;Orbiliales;Orbiliaceae;Orbilia
+NC_043850.1	Paecilomyces penicillatus	41	17	24	2	27480	27.5	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Sordariomycetes;Hypocreomycetidae;Hypocreales;Clavicipitaceae;Paecilomyces
+NC_007935.1	Paracoccidioides brasiliensis	17	17	25	2	71335	21.0	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Eurotiomycetes;Eurotiomycetidae;Onygenales;Onygenales incertae sedis;Paracoccidioides
+NC_024944.1	Parasitella parasitica	42	42	26	2	83361	30.9	Eukaryota;Fungi;Mucoromycota;Mucoromycotina;Mucorales;Mucorineae;Mucoraceae;Parasitella
+NC_009746.1	Parastagonospora nodorum SN15	9	19	27	2	49761	29.4	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Dothideomycetes;Pleosporomycetidae;Pleosporales;Pleosporineae;Phaeosphaeriaceae;Parastagonospora
+NC_032302.1	Parengyodontium album	41	17	24	2	28081	25.9	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Sordariomycetes;Hypocreomycetidae;Hypocreales;Cordycipitaceae;Parengyodontium
+NC_040007.1	Parmotrema ultralucens	42	14	26	2	79456	30.5	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Lecanoromycetes;OSLEUM clade;Lecanoromycetidae;Lecanorales;Lecanorineae;Parmeliaceae;Parmotrema
+NC_045203.1	Paxillus involutus	42	19	25	2	39109	21.8	Eukaryota;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Agaricomycetes;Agaricomycetidae;Boletales;Paxilineae;Paxillaceae;Paxillus
+NC_031804.1	Peltigera dolichorrhiza	47	18	26	2	51156	26.8	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Lecanoromycetes;OSLEUM clade;Lecanoromycetidae;Peltigerales;Peltigerineae;Peltigeraceae;Peltigera
+NC_027416.1	Penicillium roqueforti	44	19	27	1	29908	25.4	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Eurotiomycetes;Eurotiomycetidae;Eurotiales;Aspergillaceae;Penicillium
+NC_039355.1	Pertusaria propinqua	45	19	29	2	79765	25.7	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Lecanoromycetes;OSLEUM clade;Ostropomycetidae;Pertusariales;Pertusariaceae;Pertusaria
+NC_031828.1	Pestalotiopsis fici	48	44	32	2	69529	28.4	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Sordariomycetes;Xylariomycetidae;Xylariales;Sporocadaceae;Pestalotiopsis
+NC_014344.1	Phakopsora pachyrhizi	15	15	24	2	31825	34.6	Eukaryota;Fungi;Dikarya;Basidiomycota;Pucciniomycotina;Pucciniomycetes;Pucciniales;Phakopsoraceae;Phakopsora
+NC_015789.1	Phialocephala subalpina	19	21	28	2	43742	27.9	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Leotiomycetes;Helotiales;Helotiales incertae sedis;Phialocephala;Phialocephala fortinii species complex
+NC_020148.1	Phlebia radiata	47	126	28	2	156348	31.2	Eukaryota;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Agaricomycetes;Polyporales;Meruliaceae;Phlebia
+NC_042413.1	Phlyctis petraea	41	15	24	2	49698	26.3	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Lecanoromycetes;OSLEUM clade;Lecanoromycetidae;Lecanoromycetidae incertae sedis;Phlyctidaceae;Phlyctis
+NC_027730.1	Phycomyces blakesleeanus	41	31	24	2	62082	37.9	Eukaryota;Fungi;Mucoromycota;Mucoromycotina;Mucorales;Phycomycetaceae;Phycomyces
+NC_034779.1	Phyllopsora corallina	38	13	23	2	39591	28.4	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Lecanoromycetes;OSLEUM clade;Lecanoromycetidae;Lecanorales;Lecanorineae;Ramalinaceae;Phyllopsora
+NC_022158.1	Pichia kluyveri	51	26	26	2	43128	22.4	Eukaryota;Fungi;Dikarya;Ascomycota;Saccharomycotina;Saccharomycetes;Saccharomycetales;Pichiaceae;Pichia
+NC_035636.1	Pithomyces chartarum	40	37	26	2	68926	28.6	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Dothideomycetes;Pleosporomycetidae;Pleosporales;Astrosphaeriellaceae;Pithomyces
+NC_036999.1	Pleurotus platypus	44	34	24	3	73807	26.8	Eukaryota;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Agaricomycetes;Agaricomycetidae;Agaricales;Pleurotaceae;Pleurotus
+NC_013660.2	Pneumocystis carinii	17	17	25	2	26119	29.8	Eukaryota;Fungi;Dikarya;Ascomycota;Taphrinomycotina;Pneumocystidomycetes;Pneumocystidaceae;Pneumocystis
+NC_001329.3	Podospora anserina	43	52	27	2	100314	30.1	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Sordariomycetes;Sordariomycetidae;Sordariales;Chaetomiaceae;Podospora
+NC_039163.1	Pseudevernia consocians	41	14	25	2	76322	30.9	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Lecanoromycetes;OSLEUM clade;Lecanoromycetidae;Lecanorales;Lecanorineae;Parmeliaceae;Pseudevernia
+NC_044132.1	Pseudocercospora fijiensis	52	28	38	2	74089	26.0	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Dothideomycetes;Dothideomycetidae;Capnodiales;Mycosphaerellaceae;Pseudocercospora
+NC_033907.1	Pseudogymnoascus destructans	45	15	29	2	32181	28.5	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Leotiomycetes;Leotiomycetes incertae sedis;Pseudeurotiaceae;Pseudogymnoascus
+NC_039655.1	Puccinia striiformis f. sp. tritici	14	14	24	0	101521	31.4	Eukaryota;Fungi;Dikarya;Basidiomycota;Pucciniomycotina;Pucciniomycetes;Pucciniales;Pucciniaceae;Puccinia
+NC_029745.1	Pyronema omphalodes	17	48	26	2	191189	43.0	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Pezizomycetes;Pezizales;Pyronemataceae;Pyronema
+NC_044483.1	Ramalina intermedia	42	15	25	2	30678	30.3	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Lecanoromycetes;OSLEUM clade;Lecanoromycetidae;Lecanorales;Lecanorineae;Ramalinaceae;Ramalina
+NC_029185.1	Rhizophagus fasciculatus	50	30	25	2	72251	37.1	Eukaryota;Fungi;Mucoromycota;Glomeromycotina;Glomeromycetes;Glomerales;Glomeraceae;Rhizophagus
+NC_003053.1	Rhizophydium sp. 136	23	37	7	2	68834	23.0	Eukaryota;Fungi;Chytridiomycota;Chytridiomycetes;Rhizophydiales;Rhizophydiaceae;Rhizophydium
+NC_042698.1	Rhizopogon salebrosus	42	34	25	2	66704	21.4	Eukaryota;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Agaricomycetes;Agaricomycetidae;Boletales;Suillineae;Rhizopogonaceae;Rhizopogon
+NC_006836.1	Rhizopus oryzae	42	24	24	2	54178	26.2	Eukaryota;Fungi;Mucoromycota;Mucoromycotina;Mucorales;Mucorineae;Rhizopodaceae;Rhizopus
+NC_036340.1	Rhodotorula mucilaginosa	41	31	23	2	47023	40.4	Eukaryota;Fungi;Dikarya;Basidiomycota;Pucciniomycotina;Microbotryomycetes;Sporidiobolales;Sporidiobolaceae;Rhodotorula
+NC_023128.1	Rhynchosporium secalis	38	47	30	2	68729	29.3	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Leotiomycetes;Helotiales;Helotiales incertae sedis;Rhynchosporium
+NC_035826.1	Ricasolia amplissima	48	16	29	2	82333	29.8	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Lecanoromycetes;OSLEUM clade;Lecanoromycetidae;Peltigerales;Peltigerineae;Lobariaceae;Ricasolia
+NC_021611.1	Rozella allomycis	10	8	4	2	12055	14.5	Eukaryota;Fungi;Cryptomycota;Rozella
+NC_037774.1	Russula abietina	44	45	27	2	67683	21.5	Eukaryota;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Agaricomycetes;Russulales;Russulaceae;Russula
+NC_018044.1	Saccharomyces paradoxus	35	14	24	2	71355	14.1	Eukaryota;Fungi;Dikarya;Ascomycota;Saccharomycotina;Saccharomycetes;Saccharomycetales;Saccharomycetaceae;Saccharomyces
+NC_037703.1	Saccharomycodes ludwigii	35	12	24	2	66725	8.4	Eukaryota;Fungi;Dikarya;Ascomycota;Saccharomycotina;Saccharomycetes;Saccharomycetales;Saccharomycodaceae;Saccharomycodes
+NC_039931.1	Sanghuangporus sanghuang	43	14	27	2	112060	23.2	Eukaryota;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Agaricomycetes;Hymenochaetales;Hymenochaetaceae;Sanghuangporus
+NC_003049.1	Schizophyllum commune	44	20	27	2	49704	21.9	Eukaryota;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Agaricomycetes;Agaricomycetidae;Agaricales;Schizophyllaceae;Schizophyllum
+NC_040930.1	Schizosaccharomyces cryophilus	40	12	24	2	32669	30.4	Eukaryota;Fungi;Dikarya;Ascomycota;Taphrinomycotina;Schizosaccharomycetes;Schizosaccharomycetales;Schizosaccharomycetaceae;Schizosaccharomyces
+NC_025200.1	Sclerotinia borealis	18	95	31	2	203051	32.0	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Leotiomycetes;Helotiales;Sclerotiniaceae;Sclerotinia
+NC_026869.1	Shiraia bambusicola	14	17	31	2	39030	25.2	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Dothideomycetes;Pleosporomycetidae;Pleosporales;Pleosporales incertae sedis;Shiraia
+NC_042879.1	Spizellomyces sp. 'palustris'	39	41	12	2	126474	29.9	Eukaryota;Fungi;Fungi incertae sedis;Chytridiomycota;Chytridiomycetes;Spizellomycetales;Spizellomycetaceae;Spizellomyces
+NC_015923.1	Sporothrix schenckii	17	17	26	2	27125	25.1	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Sordariomycetes;Sordariomycetidae;Ophiostomatales;Ophiostomataceae;Sporothrix
+NC_005972.1	Starmerella bacillaris	16	15	25	2	23114	21.3	Eukaryota;Fungi;Dikarya;Ascomycota;Saccharomycotina;Saccharomycetes;Saccharomycetales;Saccharomycetales incertae sedis;Starmerella
+NC_036039.1	Stemphylium lycopersici	42	37	28	2	75911	29.6	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Dothideomycetes;Pleosporomycetidae;Pleosporales;Pleosporineae;Pleosporaceae;Stemphylium
+NC_031346.1	Sugiyamaella lignohabitans	3	7	40	0	43869	21.3	Eukaryota;Fungi;Dikarya;Ascomycota;Saccharomycotina;Saccharomycetes;Saccharomycetales;Trichomonascaceae;Sugiyamaella
+NC_042370.1	Synchytrium endobioticum	26	19	5	2	72775	49.5	Eukaryota;Fungi;Fungi incertae sedis;Chytridiomycota;Chytridiomycetes;Synchytriales;Synchytriaceae;Synchytrium
+NC_042771.1	Taiwanofungus camphoratus	45	57	27	2	114922	26.0	Eukaryota;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Agaricomycetes;Polyporales;Polyporales incertae sedis;Taiwanofungus
+NC_005256.1	Talaromyces marneffei	17	25	28	2	35438	24.6	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Eurotiomycetes;Eurotiomycetidae;Eurotiales;Trichocomaceae;Talaromyces
+NC_039442.1	Tephrocybe rancida	15	36	34	4	126794	38.3	Eukaryota;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Agaricomycetes;Agaricomycetidae;Agaricales;Lyophyllaceae;Tephrocybe
+NC_010651.1	Tilletia walkeri	13	14	24	0	59352	28.8	Eukaryota;Fungi;Dikarya;Basidiomycota;Ustilaginomycotina;Exobasidiomycetes;Tilletiales;Tilletiaceae;Tilletia
+NC_036382.1	Tolypocladium inflatum	41	15	25	2	25328	27.8	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Sordariomycetes;Hypocreomycetidae;Hypocreales;Ophiocordycipitaceae;Tolypocladium
+NC_027433.1	Torulaspora delbrueckii	35	8	24	2	28793	25.3	Eukaryota;Fungi;Dikarya;Ascomycota;Saccharomycotina;Saccharomycetes;Saccharomycetales;Saccharomycetaceae;Torulaspora
+NC_037239.1	Trametes hirsuta	15	24	26	2	59039	24.1	Eukaryota;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Agaricomycetes;Polyporales;Polyporaceae;Trametes
+NC_036422.1	Tremella fuciformis	41	20	23	2	35058	37.6	Eukaryota;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Tremellomycetes;Tremellales;Tremellaceae;Tremella
+NC_037075.1	Trichoderma asperellum	40	17	25	1	29999	27.8	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Sordariomycetes;Hypocreomycetidae;Hypocreales;Hypocreaceae;Trichoderma
+NC_028135.1	Tricholoma matsutake	50	24	28	2	76037	20.7	Eukaryota;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Agaricomycetes;Agaricomycetidae;Agaricales;Tricholomataceae;Tricholoma
+NC_039443.1	Tricholomella constricta	5	16	27	2	65087	25.3	Eukaryota;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Agaricomycetes;Agaricomycetidae;Agaricales;Lyophyllaceae;Tricholomella
+NC_012826.1	Trichophyton mentagrophytes	15	15	25	2	24297	24.0	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Eurotiomycetes;Eurotiomycetidae;Onygenales;Arthrodermataceae;Trichophyton
+NC_045218.1	Turbinellus floccosus	41	16	24	2	62846	28.1	Eukaryota;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Agaricomycetes;Phallomycetidae;Gomphales;Gomphaceae;Turbinellus
+NC_039633.1	Usnea mutabilis	45	16	27	2	61314	41.3	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Lecanoromycetes;OSLEUM clade;Lecanoromycetidae;Lecanorales;Lecanorineae;Parmeliaceae;Usnea
+NC_008368.1	Ustilago maydis	16	26	23	2	56814	31.2	Eukaryota;Fungi;Dikarya;Basidiomycota;Ustilaginomycotina;Ustilaginomycetes;Ustilaginales;Ustilaginaceae;Ustilago
+NC_009638.1	Vanderwaltozyma polyspora	31	9	23	0	21684	15.2	Eukaryota;Fungi;Dikarya;Ascomycota;Saccharomycotina;Saccharomycetes;Saccharomycetales;Saccharomycetaceae;Vanderwaltozyma
+NC_029238.1	Verticillium nonalfalfae	15	15	26	3	26139	26.9	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Sordariomycetes;Hypocreomycetidae;Glomerellales;Plectosphaerellaceae;Verticillium
+NC_044971.1	Volvariella volvacea	42	32	26	2	65668	38.5	Eukaryota;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Agaricomycetes;Agaricomycetidae;Agaricales;Pluteaceae;Volvariella
+NC_022171.1	Wickerhamomyces mucosus	54	26	25	2	46416	17.5	Eukaryota;Fungi;Dikarya;Ascomycota;Saccharomycotina;Saccharomycetes;Saccharomycetales;Phaffomycetaceae;Wickerhamomyces
+NC_016116.1	Yarrowia galli	50	24	27	2	48508	22.8	Eukaryota;Fungi;Dikarya;Ascomycota;Saccharomycotina;Saccharomycetes;Saccharomycetales;Dipodascaceae;Yarrowia
+NC_006837.1	Zancudomyces culisetae	45	31	27	2	58654	18.5	Eukaryota;Fungi;Fungi incertae sedis;Zoopagomycota;Kickxellomycotina;Harpellomycetes;Harpellales;Legeriomycetaceae;Zancudomyces
+NC_030334.1	Zasmidium cellare	41	15	25	2	23743	27.8	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Dothideomycetes;Dothideomycetidae;Capnodiales;Mycosphaerellaceae;Zasmidium
+NC_036374.1	Zygosaccharomyces mellis	34	14	24	2	24335	20.3	Eukaryota;Fungi;Dikarya;Ascomycota;Saccharomycotina;Saccharomycetes;Saccharomycetales;Saccharomycetaceae;Zygosaccharomyces
+NC_010222.1	Zymoseptoria tritici	14	22	27	2	43964	31.9	Eukaryota;Fungi;Dikarya;Ascomycota;Pezizomycotina;Dothideomycetes;Dothideomycetidae;Capnodiales;Mycosphaerellaceae;Zymoseptoria
+NC_022175.1	[Candida] norvegica	48	21	24	2	42180	17.6	Eukaryota;Fungi;Dikarya;Ascomycota;Saccharomycotina;Saccharomycetes;Saccharomycetales;Phaffomycetaceae;Barnettozyma;Barnettozyma/Candida clade

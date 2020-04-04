@@ -1,0 +1,58 @@
+Submit-block ::= {
+  contact {
+    contact {
+      name
+        name {
+          last "Zhang" ,
+          first "Rengang" ,
+          initials "R." } ,
+      affil
+        std {
+          affil "Ori-Gene Co., Ltd." ,
+          div "Bioinformatics" ,
+          city "Beijing" ,
+          country "China" ,
+          email "zhangrengang@ori-gene.cn" ,
+          phone "+8613260152782" } } } ,
+  cit {
+    authors {
+      names
+        std {
+          {
+            name
+              name {
+                last "Zhang" ,
+                first "Rengang" ,
+                initials "R." } } } ,
+      affil
+        std {
+          affil "Ori-Gene Co., Ltd." ,
+          div "Bioinformatics" ,
+          city "Beijing" ,
+          country "China" } } ,
+    date
+      std {
+        year 2019 ,
+        month 5 ,
+        day 6 } } ,
+  subtype new }
+Seqdesc ::= pub {
+  pub {
+    gen {
+      cit "unpublished" ,
+      authors {
+        names
+          std {
+            {
+              name
+                name {
+                  last "Zhang" ,
+                  first "Rengang" ,
+                  initials "R." } } } ,
+        affil
+          std {
+            affil "Ori-Gene Co., Ltd." ,
+            div "Bioinformatics" ,
+            city "Beijing" ,
+            country "China" } } ,
+      title "unpulished" } } }

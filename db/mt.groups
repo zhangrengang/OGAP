@@ -1,0 +1,12 @@
+#repex	group
+^atp	ATP synthase
+^ccm	cytochrome c biogenesis
+^cob	complex III (ubichinol cytochrome c reductase)
+^cox	complex IV (cytochrome c oxidase)
+^mat	maturases
+^nad	complex I (NADH dehydrogenase)
+^sdh	complex II (succinate dehydrogenase)
+^rps	ribosomal proteins (SSU)
+^rpl	ribosomal proteins (LSU)
+^rrn	ribosomal RNAs
+^trn	transfer RNAs

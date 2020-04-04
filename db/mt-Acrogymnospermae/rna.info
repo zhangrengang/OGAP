@@ -1,0 +1,17 @@
+#id	name	product	seq_type	exon_count	trans_splicing	gene_count	species_count	names	products	species
+rrn18	rrn18	18S ribosomal RNA	rRNA	1	False	4	4	rrn18:4	18S ribosomal RNA:4	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1,Welwitschia_mirabilis:1
+rrn26	rrn26	26S ribosomal RNA	rRNA	1	False	4	4	rrn26:4	26S ribosomal RNA:4	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1,Welwitschia_mirabilis:1
+rrn5	rrn5	5S ribosomal RNA	rRNA	1	False	2	2	rrn5:2	5S ribosomal RNA:2	Cycas_taitungensis:1,Ginkgo_biloba:1
+trnC	trnC	tRNA-Cys	tRNA	1	False	2	2	trnC:2	tRNA-Cys:2	Cycas_taitungensis:1,Ginkgo_biloba:1
+trnD-GUC	trnD-GUC	tRNA-Asp	tRNA	1	False	4	4	trnD:2,trnD-GUC:1,trnD-GTC:1	tRNA-Asp:4	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1,Welwitschia_mirabilis:1
+trnE-UUC	trnE-UUC	tRNA-Glu	tRNA	1	False	4	4	trnE:2,trnE-UUC:1,trnE-CTC:1	tRNA-Glu:4	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1,Welwitschia_mirabilis:1
+trnF	trnF	tRNA-Phe	tRNA	1	False	3	2	trnF:2,trnL:1	tRNA-Phe:2,tRNA-Leu:1	Cycas_taitungensis:1,Ginkgo_biloba:2
+trnK	trnK	tRNA-Lys	tRNA	1	False	2	2	trnK:2	tRNA-Lys:2	Cycas_taitungensis:1,Ginkgo_biloba:1
+trnL	trnL	tRNA-Leu	tRNA	1	False	2	2	trnL:2	tRNA-Leu:2	Cycas_taitungensis:1,Ginkgo_biloba:1
+trnL-14	trnL	tRNA-Leu	tRNA	1	False	2	2	trnL:2	tRNA-Leu:2	Cycas_taitungensis:1,Ginkgo_biloba:1
+trnM	trnM	tRNA-Met	tRNA	1	False	2	2	trnM:2	tRNA-Met:2	Cycas_taitungensis:1,Ginkgo_biloba:1
+trnQ-TTG	trnQ-TTG	tRNA-Gln	tRNA	1	False	4	4	trnQ:2,trnQ-TTG:1,trnQ-UUG:1	tRNA-Gln:4	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1,Welwitschia_mirabilis:1
+trnS	trnS	tRNA-Ser	tRNA	1	False	2	2	trnS:2	tRNA-Ser:2	Cycas_taitungensis:1,Ginkgo_biloba:1
+trnS-16	trnS	tRNA-Ser	tRNA	1	False	2	2	trnS:2	tRNA-Ser:2	Cycas_taitungensis:1,Ginkgo_biloba:1
+trnW	trnW	tRNA-Trp	tRNA	1	False	2	2	trnW:2	tRNA-Trp:2	Cycas_taitungensis:1,Ginkgo_biloba:1
+trnY-GUA	trnY-GUA	tRNA-Tyr	tRNA	1	False	3	3	trnY:2,trnY-GUA:1	tRNA-Tyr:3	Cycas_taitungensis:1,Ginkgo_biloba:1,Welwitschia_mirabilis:1

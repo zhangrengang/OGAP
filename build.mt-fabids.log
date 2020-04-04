@@ -1,6 +1,6 @@
 {'count': False, 'organ': 'mt', 'list': False, 'taxon': 'fabids', 'tmpdir': '/dev/shm/tmp', 'custom': None, 'cleanup': False, 'exclude_taxa': None, 'gbfiles': ['/share/home/nature/database/RefSeq/mitochondrion/mitochondrion.1.genomic.gbff.gz', '/share/home/nature/database/RefSeq/mitochondrion/mitochondrion.2.genomic.gbff.gz'], 'check': False, 'dbdir': None}
-2020-03-23 11:13:53,013 -INFO- parsing ['/share/home/nature/database/RefSeq/mitochondrion/mitochondrion.1.genomic.gbff.gz', '/share/home/nature/database/RefSeq/mitochondrion/mitochondrion.2.genomic.gbff.gz']
-2020-03-23 11:13:53,014 -INFO- version: RefSeq 2020-01-09: build 2020-03-23
+2020-03-27 18:49:36,982 -INFO- parsing ['/share/home/nature/database/RefSeq/mitochondrion/mitochondrion.1.genomic.gbff.gz', '/share/home/nature/database/RefSeq/mitochondrion/mitochondrion.2.genomic.gbff.gz']
+2020-03-27 18:49:36,982 -INFO- version: RefSeq 2020-01-09: build 2020-03-27
 loading from /dev/shm/tmp/ogap_db/taxonomy.json.gz
 loading genbank records
 `Leptocephalus sp. 'type II larva' (Smith, 1989)` is not found
@@ -10,244 +10,290 @@ loading genbank records
 `Eukaryota sp. BB2 Eukaryota.` is not found
 `Ancoracysta twista Eukaryota.` is not found
 `Cyprinus carpio x Megalobrama amblycephala` is not found
-2020-03-23 11:25:21,533 -INFO- 35 records: 4 orders, 8 families, 28 genera, 35 organism
-2020-03-23 11:25:21,533 -INFO- pruning taxa
-2020-03-23 11:25:21,533 -INFO- 35 records: 4 orders, 8 families, 28 genera, 35 organism
-2020-03-23 11:25:21,533 -INFO- building taxonomy tree
-2020-03-23 11:25:21,533 -INFO- run CMD: `ete3 ncbiquery --search 'Populus tremula x Populus alba' 'Prunus avium' 'Ziziphus jujuba' 'Senna tora' 'Cannabis sativa' 'Populus davidiana' 'Salix purpurea' 'Vigna radiata' 'Eriobotrya japonica' 'Pongamia pinnata' 'Populus alba' 'Cucurbita pepo' 'Acacia ligulata' 'Citrullus lanatus' 'Lotus japonicus' 'Morus notabilis' 'Senna occidentalis' 'Phaseolus vulgaris' 'Sophora flavescens' 'Malus domestica' 'Salix suchowensis' 'Manihot esculenta' 'Glycine max' 'Glycine soja' 'Tamarindus indica' 'Ricinus communis' 'Cucumis sativus' 'Libidibia coriaria' 'Ammopiptanthus mongolicus' 'Vigna angularis' 'Leucaena trichandra' 'Styphnolobium japonicum' 'Haematoxylum brasiletto' 'Populus tremula' 'Medicago truncatula' --tree >  /dev/shm/tmp/mt-fabids/species.tree.tmp`
-2020-03-23 11:25:27,324 -INFO- using speceis tree `/dev/shm/tmp/ogap_db/mt-fabids/species.treefile`
-2020-03-23 11:25:27,324 -INFO- writing protein sequences into /dev/shm/tmp/mt-fabids/prot
-2020-03-23 11:25:27,770 -INFO- 35 taxa: ['Acacia ligulata', 'Ammopiptanthus mongolicus', 'Cannabis sativa', 'Citrullus lanatus', 'Cucumis sativus', 'Cucurbita pepo', 'Eriobotrya japonica', 'Glycine max', 'Glycine soja', 'Haematoxylum brasiletto', 'Leucaena trichandra', 'Libidibia coriaria', 'Lotus japonicus', 'Malus domestica', 'Manihot esculenta', 'Medicago truncatula', 'Morus notabilis', 'Phaseolus vulgaris', 'Pongamia pinnata', 'Populus alba', 'Populus davidiana', 'Populus tremula', 'Populus tremula x Populus alba', 'Prunus avium', 'Ricinus communis', 'Salix purpurea', 'Salix suchowensis', 'Senna occidentalis', 'Senna tora', 'Sophora flavescens', 'Styphnolobium japonicum', 'Tamarindus indica', 'Vigna angularis', 'Vigna radiata', 'Ziziphus jujuba']
-2020-03-23 11:25:27,896 -INFO- get taxon `root;cellular organisms;Eukaryota;Viridiplantae;Streptophyta;Streptophytina;Embryophyta;Tracheophyta;Euphyllophyta;Spermatophyta;Magnoliopsida;Mesangiospermae;eudicotyledons;Gunneridae;Pentapetalae;rosids;fabids` from Counter({u'root;cellular organisms;Eukaryota;Viridiplantae;Streptophyta;Streptophytina;Embryophyta;Tracheophyta;Euphyllophyta;Spermatophyta;Magnoliopsida;Mesangiospermae;eudicotyledons;Gunneridae;Pentapetalae;rosids;fabids': 35})
-2020-03-23 11:25:27,901 -INFO- get transl_table `1` from Counter({1: 1408})
-2020-03-23 11:25:27,901 -INFO- running OrthoFinder to cluster genes
-2020-03-23 11:25:27,901 -INFO- run CMD: `orthofinder.py -f /dev/shm/tmp/mt-fabids/prot -M msa -T fasttree -t 24  -og`
-2020-03-23 11:26:45,110 -INFO- parsing OrthoFinder orthologs
-2020-03-23 11:26:45,112 -INFO- parsing orthologs group into /dev/shm/tmp/mt-fabids/alns
-2020-03-23 11:26:45,154 -INFO- using min_count=3.5 to get gene name
-2020-03-23 11:26:51,324 -INFO- get gene name `atp1` from Counter({'atp1': 34, 'atpA': 2, 'atp1-1': 1})
-2020-03-23 11:26:51,324 -INFO- using gene name `atp1`
-2020-03-23 11:26:52,364 -INFO- get gene name `nad2` from Counter({'nad2': 36, 'orf127d': 1, 'orf101': 1})
-2020-03-23 11:26:52,364 -INFO- using gene name `nad2`
-2020-03-23 11:26:53,198 -INFO- get gene name `nad4` from Counter({'nad4': 36, 'nad4a': 1})
-2020-03-23 11:26:53,199 -INFO- using gene name `nad4`
-2020-03-23 11:26:54,487 -INFO- get gene name `atp6` from Counter({'atp6': 33, 'atp6-1': 1})
-2020-03-23 11:26:54,488 -INFO- using gene name `atp6`
-2020-03-23 11:26:55,405 -INFO- get gene name `nad9` from Counter({'nad9': 35})
-2020-03-23 11:26:55,406 -INFO- using gene name `nad9`
-2020-03-23 11:26:56,280 -INFO- get gene name `nad7` from Counter({'nad7': 35, 'amoMp16': 1})
-2020-03-23 11:26:56,281 -INFO- using gene name `nad7`
-2020-03-23 11:26:57,590 -INFO- get gene name `atp9` from Counter({'atp9': 33, 'atp9-1': 1})
-2020-03-23 11:26:57,590 -INFO- using gene name `atp9`
-2020-03-23 11:26:58,979 -INFO- get gene name `nad5` from Counter({'nad5': 33})
-2020-03-23 11:26:58,979 -INFO- using gene name `nad5`
-2020-03-23 11:26:59,409 -INFO- get gene name `ccmFn` from Counter({'ccmFn': 30, 'ccmFN': 3, 'ccmfn': 1, 'ccbFn': 1})
-2020-03-23 11:26:59,409 -INFO- using gene name `ccmFn`
-2020-03-23 11:27:00,273 -INFO- get gene name `ccmFc` from Counter({'ccmFc': 29, 'ccmFC': 3, 'ccmfc': 2, 'orf298': 1})
-2020-03-23 11:27:00,273 -INFO- using gene name `ccmFc`
-2020-03-23 11:27:00,715 -INFO- get gene name `atp4` from Counter({'atp4': 35})
-2020-03-23 11:27:00,715 -INFO- using gene name `atp4`
-2020-03-23 11:27:01,591 -INFO- get gene name `atp8` from Counter({'atp8': 34, 'Populus_davidiana-gene135': 1, 'Populus_alba-gene140': 1})
-2020-03-23 11:27:01,591 -INFO- using gene name `atp8`
-2020-03-23 11:27:02,029 -INFO- get gene name `rps12` from Counter({'rps12': 34})
-2020-03-23 11:27:02,030 -INFO- using gene name `rps12`
-2020-03-23 11:27:02,939 -INFO- get gene name `nad3` from Counter({'nad3': 33})
-2020-03-23 11:27:02,939 -INFO- using gene name `nad3`
-2020-03-23 11:27:02,941 -INFO- get gene name `ccmB` from Counter({'ccmB': 33, 'ccbB': 1, 'ccmb': 1})
-2020-03-23 11:27:02,941 -INFO- using gene name `ccmB`
-2020-03-23 11:27:02,943 -INFO- get gene name `matR` from Counter({'matR': 35})
-2020-03-23 11:27:02,943 -INFO- using gene name `matR`
-2020-03-23 11:27:02,944 -INFO- get gene name `nad6` from Counter({'nad6': 35})
-2020-03-23 11:27:02,944 -INFO- using gene name `nad6`
-2020-03-23 11:27:02,946 -INFO- get gene name `ccmC` from Counter({'ccmC': 33, 'ccbC': 1, 'ccmc': 1})
-2020-03-23 11:27:02,946 -INFO- using gene name `ccmC`
-2020-03-23 11:27:03,376 -INFO- get gene name `cox3` from Counter({'cox3': 34})
-2020-03-23 11:27:03,377 -INFO- using gene name `cox3`
-2020-03-23 11:27:03,378 -INFO- get gene name `cox1` from Counter({'cox1': 34})
-2020-03-23 11:27:03,378 -INFO- using gene name `cox1`
-2020-03-23 11:27:04,250 -INFO- get gene name `nad1` from Counter({'nad1': 32, 'amoMp17': 1})
-2020-03-23 11:27:04,250 -INFO- using gene name `nad1`
-2020-03-23 11:27:04,252 -INFO- get gene name `cob` from Counter({'cob': 34})
-2020-03-23 11:27:04,252 -INFO- using gene name `cob`
-2020-03-23 11:27:05,119 -INFO- get gene name `nad4L` from Counter({'nad4L': 30, 'nad4L-1': 1})
-2020-03-23 11:27:05,119 -INFO- using gene name `nad4L`
-2020-03-23 11:27:05,121 -INFO- get gene name `rps3` from Counter({'rps3': 33})
-2020-03-23 11:27:05,121 -INFO- using gene name `rps3`
-2020-03-23 11:27:05,558 -INFO- get gene name `rps4` from Counter({'rps4': 31})
-2020-03-23 11:27:05,559 -INFO- using gene name `rps4`
-2020-03-23 11:27:06,470 -INFO- get gene name `rps1` from Counter({'rps1': 29, 'orf206': 1})
-2020-03-23 11:27:06,470 -INFO- using gene name `rps1`
-2020-03-23 11:27:06,472 -INFO- get gene name `mttB` from Counter({'mttB': 29, 'tatC': 1, 'Malus_domestica-gene7': 1})
-2020-03-23 11:27:06,472 -INFO- using gene name `mttB`
-2020-03-23 11:27:06,960 -INFO- get gene name `cox2` from Counter({'cox2': 30, 'ORF300': 1})
-2020-03-23 11:27:06,960 -INFO- using gene name `cox2`
-2020-03-23 11:27:07,409 -INFO- get gene name `rpl5` from Counter({'rpl5': 26, 'rp15': 2})
-2020-03-23 11:27:07,409 -INFO- using gene name `rpl5`
-2020-03-23 11:27:07,411 -INFO- get gene name `rpl16` from Counter({'rpl16': 28})
-2020-03-23 11:27:07,411 -INFO- using gene name `rpl16`
-2020-03-23 11:27:07,857 -INFO- get gene name `rps14` from Counter({'rps14': 25})
-2020-03-23 11:27:07,858 -INFO- using gene name `rps14`
-2020-03-23 11:27:08,751 -INFO- get gene name `rps10` from Counter({'rps10': 22})
-2020-03-23 11:27:08,751 -INFO- using gene name `rps10`
-2020-03-23 11:27:08,753 -INFO- get gene name `sdh4` from Counter({'sdh4': 22, 'orf116': 1})
-2020-03-23 11:27:08,753 -INFO- using gene name `sdh4`
-2020-03-23 11:27:10,051 -INFO- get gene name `rpl2` from Counter({'rpl2': 14, 'amoMp28': 1})
-2020-03-23 11:27:10,051 -INFO- using gene name `rpl2`
-2020-03-23 11:27:10,052 -INFO- get gene name `rpl10` from Counter({'rpl10': 18})
-2020-03-23 11:27:10,052 -INFO- using gene name `rpl10`
-2020-03-23 11:27:10,490 -INFO- get gene name `rps7` from Counter({'rps7': 13})
-2020-03-23 11:27:10,490 -INFO- using gene name `rps7`
-2020-03-23 11:27:11,410 -INFO- get gene name `rps19` from Counter({'rps19': 8, 'rps19-1': 2})
-2020-03-23 11:27:11,411 -INFO- using gene name `rps19`
-2020-03-23 11:27:11,412 -INFO- get gene name `rps13` from Counter({'rps13': 11})
-2020-03-23 11:27:11,412 -INFO- using gene name `rps13`
-2020-03-23 11:27:12,307 -INFO- get gene name `sdh3` from Counter({'sdh3': 8, 'sdh3-1': 1})
-2020-03-23 11:27:12,308 -INFO- using gene name `sdh3`
-2020-03-23 11:27:13,163 -INFO- get gene name `orf172-1` from Counter({'orf172-1': 1, 'orf250': 1, 'orf110': 1, 'orf110c': 1, 'orf214': 1, 'ORF234': 1})
-2020-03-23 11:27:13,619 -INFO- get gene name `orf241` from Counter({'orf241': 2, 'sdh3': 2, 'Populus_alba-gene138': 1, 'Populus_davidiana-gene133': 1})
-2020-03-23 11:27:13,620 -INFO- get gene name `ORF127` from Counter({'ORF127': 1, 'Populus_alba-gene2': 1, 'amoMp12': 1, 'ORF215': 1, 'Populus_davidiana-gene2': 1})
-2020-03-23 11:27:14,497 -INFO- get gene name `Populus_alba-gene21` from Counter({'Populus_alba-gene21': 1, 'Populus_davidiana-gene181': 1, 'Populus_alba-gene185': 1, 'ORF118': 1, 'Populus_davidiana-gene14': 1})
-2020-03-23 11:27:14,978 -INFO- get gene name `orf202` from Counter({'orf202': 2, 'amoMp14': 1, 'orf287': 1})
-2020-03-23 11:27:14,979 -INFO- get gene name `orf271` from Counter({'orf271': 2, 'ORF332': 1, 'ORF279': 1})
-2020-03-23 11:27:15,833 -INFO- get gene name `orf139-1` from Counter({'orf139-1': 1, 'orf139': 1})
-2020-03-23 11:27:16,259 -INFO- get gene name `orf110` from Counter({'orf110': 1, 'orf110a': 1})
-2020-03-23 11:27:16,260 -INFO- get gene name `orf189` from Counter({'orf189': 2, 'ORF217': 1})
-2020-03-23 11:27:16,260 -INFO- get gene name `orf136b` from Counter({'orf136b': 1, 'orf136': 1, 'ORF176': 1})
-2020-03-23 11:27:16,260 -INFO- get gene name `dpo` from Counter({'dpo': 1, 'ORF498': 1})
-2020-03-23 11:27:16,261 -INFO- get gene name `psaA` from Counter({'psaA': 1, 'amoMp1': 1})
-2020-03-23 11:27:16,261 -INFO- get gene name `orf135` from Counter({'orf135': 1, 'amoMp22': 1})
-2020-03-23 11:27:16,262 -INFO- get gene name `orf150` from Counter({'orf150': 1, 'orf110b': 1})
-2020-03-23 11:27:16,262 -INFO- get gene name `orf160a` from Counter({'orf160a': 1, 'amoMp26': 1})
-2020-03-23 11:27:16,262 -INFO- get gene name `orf104` from Counter({'orf104': 1, 'orf104a': 1})
-2020-03-23 11:27:16,263 -INFO- get gene name `orf129` from Counter({'orf129': 2})
-2020-03-23 11:27:16,263 -INFO- get gene name `orf152` from Counter({'orf152': 2})
-2020-03-23 11:27:16,263 -INFO- get gene name `orf100a` from Counter({'orf100a': 1, 'orf100': 1})
-2020-03-23 11:27:16,264 -INFO- get gene name `orf110e` from Counter({'orf110e': 1, 'orf110': 1})
-2020-03-23 11:27:16,264 -INFO- get gene name `orf109` from Counter({'orf109': 2})
-2020-03-23 11:27:16,264 -INFO- get gene name `orf106` from Counter({'orf106': 1, 'orf106a': 1})
-2020-03-23 11:27:16,265 -INFO- get gene name `orf114b` from Counter({'orf114b': 1, 'orf114': 1})
-2020-03-23 11:27:16,265 -INFO- get gene name `orf117` from Counter({'orf117': 2})
-2020-03-23 11:27:16,265 -INFO- get gene name `orf110b` from Counter({'orf110b': 1, 'orf110': 1})
-2020-03-23 11:27:16,265 -INFO- get gene name `orf167` from Counter({'orf167': 2})
-2020-03-23 11:27:16,266 -INFO- get gene name `orf151` from Counter({'orf151': 2})
-2020-03-23 11:27:16,266 -INFO- get gene name `orf261` from Counter({'orf261': 2})
-2020-03-23 11:27:16,266 -INFO- get gene name `orf101a` from Counter({'orf101a': 1, 'orf101': 1})
-2020-03-23 11:27:16,267 -INFO- get gene name `orf107` from Counter({'orf107': 1, 'orf107a': 1})
-2020-03-23 11:27:16,267 -INFO- get gene name `orf105a` from Counter({'orf105a': 1, 'orf105': 1})
-2020-03-23 11:27:16,267 -INFO- get gene name `orf107b` from Counter({'orf107b': 1, 'orf123': 1})
-2020-03-23 11:27:16,267 -INFO- get gene name `orf100b` from Counter({'orf100b': 1, 'orf100': 1})
-2020-03-23 11:27:16,267 -INFO- get gene name `orf136` from Counter({'orf136': 1, 'orf136a': 1})
-2020-03-23 11:27:16,268 -INFO- get gene name `orf103b` from Counter({'orf103b': 1, 'orf103': 1})
-2020-03-23 11:27:16,268 -INFO- get gene name `orf215` from Counter({'orf215': 2})
-2020-03-23 11:27:16,268 -INFO- get gene name `orf106` from Counter({'orf106': 1, 'orf106b': 1})
-2020-03-23 11:27:16,268 -INFO- get gene name `orf114` from Counter({'orf114': 1, 'orf114a': 1})
-2020-03-23 11:27:16,268 -INFO- get gene name `orf100c` from Counter({'orf100c': 1, 'orf100': 1})
-2020-03-23 11:27:16,268 -INFO- get gene name `orf145` from Counter({'orf145': 2})
-2020-03-23 11:27:16,269 -INFO- get gene name `orf103` from Counter({'orf103': 1, 'orf103c': 1})
-2020-03-23 11:27:16,269 -INFO- get gene name `orf178` from Counter({'orf178': 1, 'ccmF': 1})
-2020-03-23 11:27:16,269 -INFO- get gene name `Populus_alba-gene42` from Counter({'Populus_alba-gene42': 1, 'Populus_davidiana-gene35': 1})
-2020-03-23 11:27:16,269 -INFO- get gene name `Populus_alba-gene45` from Counter({'Populus_alba-gene45': 1, 'Populus_davidiana-gene38': 1})
-2020-03-23 11:27:16,269 -INFO- get gene name `Populus_alba-gene106` from Counter({'Populus_alba-gene106': 1, 'Populus_davidiana-gene99': 1})
-2020-03-23 11:27:16,270 -INFO- get gene name `Populus_davidiana-gene108` from Counter({'Populus_davidiana-gene108': 1, 'Populus_alba-gene115': 1})
-2020-03-23 11:27:16,270 -INFO- get gene name `Populus_alba-gene129` from Counter({'Populus_alba-gene129': 1, 'Populus_davidiana-gene122': 1})
-2020-03-23 11:27:16,270 -INFO- get gene name `Populus_alba-gene156` from Counter({'Populus_alba-gene156': 1, 'Populus_davidiana-gene152': 1})
-2020-03-23 11:27:16,270 -INFO- get gene name `Populus_davidiana-gene157` from Counter({'Populus_davidiana-gene157': 1, 'Populus_alba-gene161': 1})
-2020-03-23 11:27:16,270 -INFO- get gene name `Populus_davidiana-gene184` from Counter({'Populus_davidiana-gene184': 1, 'Populus_alba-gene188': 1})
-2020-03-23 11:27:16,271 -INFO- get gene name `Populus_davidiana-gene190` from Counter({'Populus_davidiana-gene190': 1, 'Populus_alba-gene194': 1})
-2020-03-23 11:27:16,271 -INFO- get gene name `Populus_davidiana-gene192` from Counter({'Populus_davidiana-gene192': 1, 'Populus_alba-gene196': 1})
-2020-03-23 11:27:16,271 -INFO- get gene name `Populus_alba-gene201` from Counter({'Populus_alba-gene201': 1, 'Populus_davidiana-gene197': 1})
-2020-03-23 11:27:16,271 -INFO- get gene name `Populus_davidiana-gene211` from Counter({'Populus_davidiana-gene211': 1, 'Populus_alba-gene215': 1})
-2020-03-23 11:27:16,271 -INFO- get gene name `Populus_davidiana-gene213` from Counter({'Populus_davidiana-gene213': 1, 'Populus_alba-gene217': 1})
-2020-03-23 11:27:16,271 -INFO- get gene name `Populus_alba-gene225` from Counter({'Populus_alba-gene225': 1, 'Populus_davidiana-gene221': 1})
-2020-03-23 11:27:16,272 -INFO- get gene name `Populus_alba-gene235` from Counter({'Populus_alba-gene235': 1, 'Populus_davidiana-gene229': 1})
-2020-03-23 11:27:16,704 -INFO- get gene name `cox2` from Counter({'cox2': 2})
-2020-03-23 11:27:16,710 -INFO- extrat 39 genes: ['atp1', 'atp4', 'atp6', 'atp8', 'atp9', 'ccmB', 'ccmC', 'ccmFc', 'ccmFn', 'cob', 'cox1', 'cox2', 'cox3', 'matR', 'mttB', 'nad1', 'nad2', 'nad3', 'nad4', 'nad4L', 'nad5', 'nad6', 'nad7', 'nad9', 'rpl10', 'rpl16', 'rpl2', 'rpl5', 'rps1', 'rps10', 'rps12', 'rps13', 'rps14', 'rps19', 'rps3', 'rps4', 'rps7', 'sdh3', 'sdh4']
-2020-03-23 11:27:16,710 -INFO- aligning sequences
-2020-03-23 11:33:14,890 -INFO- building hmm profiles
-2020-03-23 11:33:37,229 -INFO- building augustus profiles
-2020-03-23 11:34:01,499 -INFO- training augustus models
+2020-03-27 19:01:13,737 -INFO- 35 records: 4 orders, 8 families, 28 genera, 35 organism
+2020-03-27 19:01:13,737 -INFO- pruning taxa
+2020-03-27 19:01:13,738 -INFO- 35 records: 4 orders, 8 families, 28 genera, 35 organism
+2020-03-27 19:01:13,738 -INFO- building taxonomy tree
+2020-03-27 19:01:13,738 -INFO- run CMD: `ete3 ncbiquery --search 'Populus tremula x Populus alba' 'Prunus avium' 'Ziziphus jujuba' 'Senna tora' 'Cannabis sativa' 'Populus davidiana' 'Salix purpurea' 'Vigna radiata' 'Eriobotrya japonica' 'Pongamia pinnata' 'Populus alba' 'Cucurbita pepo' 'Acacia ligulata' 'Citrullus lanatus' 'Lotus japonicus' 'Morus notabilis' 'Senna occidentalis' 'Phaseolus vulgaris' 'Sophora flavescens' 'Malus domestica' 'Salix suchowensis' 'Manihot esculenta' 'Glycine max' 'Glycine soja' 'Tamarindus indica' 'Ricinus communis' 'Cucumis sativus' 'Libidibia coriaria' 'Ammopiptanthus mongolicus' 'Vigna angularis' 'Leucaena trichandra' 'Styphnolobium japonicum' 'Haematoxylum brasiletto' 'Populus tremula' 'Medicago truncatula' --tree >  /dev/shm/tmp/mt-fabids/species.tree.tmp`
+2020-03-27 19:01:27,856 -INFO- using speceis tree `/dev/shm/tmp/ogap_db/mt-fabids/species.treefile`
+2020-03-27 19:01:27,857 -INFO- writing protein sequences into /dev/shm/tmp/mt-fabids/prot
+2020-03-27 19:01:28,494 -INFO- 35 taxa: ['Acacia ligulata', 'Ammopiptanthus mongolicus', 'Cannabis sativa', 'Citrullus lanatus', 'Cucumis sativus', 'Cucurbita pepo', 'Eriobotrya japonica', 'Glycine max', 'Glycine soja', 'Haematoxylum brasiletto', 'Leucaena trichandra', 'Libidibia coriaria', 'Lotus japonicus', 'Malus domestica', 'Manihot esculenta', 'Medicago truncatula', 'Morus notabilis', 'Phaseolus vulgaris', 'Pongamia pinnata', 'Populus alba', 'Populus davidiana', 'Populus tremula', 'Populus tremula x Populus alba', 'Prunus avium', 'Ricinus communis', 'Salix purpurea', 'Salix suchowensis', 'Senna occidentalis', 'Senna tora', 'Sophora flavescens', 'Styphnolobium japonicum', 'Tamarindus indica', 'Vigna angularis', 'Vigna radiata', 'Ziziphus jujuba']
+2020-03-27 19:01:28,679 -INFO- get taxon `root;cellular organisms;Eukaryota;Viridiplantae;Streptophyta;Streptophytina;Embryophyta;Tracheophyta;Euphyllophyta;Spermatophyta;Magnoliopsida;Mesangiospermae;eudicotyledons;Gunneridae;Pentapetalae;rosids;fabids` from Counter({u'root;cellular organisms;Eukaryota;Viridiplantae;Streptophyta;Streptophytina;Embryophyta;Tracheophyta;Euphyllophyta;Spermatophyta;Magnoliopsida;Mesangiospermae;eudicotyledons;Gunneridae;Pentapetalae;rosids;fabids': 35})
+2020-03-27 19:01:28,688 -INFO- get transl_table `1` from Counter({1: 1408})
+2020-03-27 19:01:28,688 -INFO- running OrthoFinder to cluster genes
+2020-03-27 19:01:28,688 -INFO- run CMD: `orthofinder.py -f /dev/shm/tmp/mt-fabids/prot -M msa -T fasttree -t 24  -og`
+2020-03-27 19:03:44,768 -INFO- parsing OrthoFinder orthologs
+2020-03-27 19:03:44,769 -INFO- parsing orthologs group into /dev/shm/tmp/mt-fabids/alns
+2020-03-27 19:03:44,811 -INFO- using min_count=2.8 to get gene name
+2020-03-27 19:03:47,010 -INFO- get gene name `atp1` from Counter({'atp1': 34, 'atpA': 2, 'atp1-1': 1})
+2020-03-27 19:03:47,011 -INFO- using gene name `atp1`
+   remove gene Ammopiptanthus_mongolicus|atp1 with length 763 out of [483.0, 533.0]
+   remove gene Senna_tora|atp1 with length 707 out of [483.0, 533.0]
+   remove gene Sophora_flavescens|atp1 with length 667 out of [483.0, 533.0]
+2020-03-27 19:03:47,829 -INFO- get gene name `nad2` from Counter({'nad2': 36, 'orf127d': 1, 'orf101': 1})
+2020-03-27 19:03:47,829 -INFO- using gene name `nad2`
+   remove gene Ammopiptanthus_mongolicus|nad2 with length 63 out of [462.0, 512.0]
+   remove gene Ammopiptanthus_mongolicus|nad2-332 with length 196 out of [462.0, 512.0]
+   remove gene Ammopiptanthus_mongolicus|orf127d with length 245 out of [462.0, 512.0]
+   remove gene Glycine_soja|nad2 with length 176 out of [462.0, 512.0]
+   remove gene Glycine_soja|orf101-285 with length 101 out of [462.0, 512.0]
+   remove gene Leucaena_trichandra|nad2 with length 190 out of [462.0, 512.0]
+   remove gene Sophora_flavescens|nad2 with length 460 out of [462.0, 512.0]
+2020-03-27 19:03:48,739 -INFO- get gene name `nad4` from Counter({'nad4': 36, 'nad4a': 1})
+2020-03-27 19:03:48,739 -INFO- using gene name `nad4`
+   remove gene Ammopiptanthus_mongolicus|nad4 with length 223 out of [471.0, 519.0]
+   remove gene Ammopiptanthus_mongolicus|nad4-199 with length 293 out of [471.0, 519.0]
+   remove gene Ammopiptanthus_mongolicus|nad4a with length 175 out of [471.0, 519.0]
+   remove gene Cannabis_sativa|nad4 with length 354 out of [471.0, 519.0]
+   remove gene Leucaena_trichandra|nad4 with length 385 out of [471.0, 519.0]
+   remove gene Morus_notabilis|nad4 with length 353 out of [471.0, 519.0]
+   remove gene Vigna_angularis|nad4 with length 525 out of [471.0, 519.0]
+2020-03-27 19:03:50,115 -INFO- get gene name `atp6` from Counter({'atp6': 33, 'atp6-1': 1})
+2020-03-27 19:03:50,115 -INFO- using gene name `atp6`
+2020-03-27 19:03:51,046 -INFO- get gene name `nad9` from Counter({'nad9': 35})
+2020-03-27 19:03:51,046 -INFO- using gene name `nad9`
+   remove gene Sophora_flavescens|nad9 with length 222 out of [166.0, 214.0]
+2020-03-27 19:03:51,943 -INFO- get gene name `nad7` from Counter({'nad7': 35, 'amoMp16': 1})
+2020-03-27 19:03:51,943 -INFO- using gene name `nad7`
+   remove gene Ammopiptanthus_mongolicus|amoMp16 with length 771 out of [370.0, 418.0]
+   remove gene Ammopiptanthus_mongolicus|nad7 with length 171 out of [370.0, 418.0]
+2020-03-27 19:03:53,251 -INFO- get gene name `atp9` from Counter({'atp9': 33, 'atp9-1': 1})
+2020-03-27 19:03:53,251 -INFO- using gene name `atp9`
+   remove gene Cannabis_sativa|atp9 with length 129 out of [50.0, 98.0]
+2020-03-27 19:03:54,699 -INFO- get gene name `nad5` from Counter({'nad5': 33})
+2020-03-27 19:03:54,700 -INFO- using gene name `nad5`
+   remove gene Ammopiptanthus_mongolicus|nad5-369 with length 492 out of [634.0, 702.0]
+2020-03-27 19:03:55,132 -INFO- get gene name `ccmFn` from Counter({'ccmFn': 30, 'ccmFN': 3, 'ccmfn': 1, 'ccbFn': 1})
+2020-03-27 19:03:55,133 -INFO- using gene name `ccmFn`
+   remove gene Ammopiptanthus_mongolicus|ccmfn with length 882 out of [552.0, 602.0]
+2020-03-27 19:03:56,021 -INFO- get gene name `ccmFc` from Counter({'ccmFc': 29, 'ccmFC': 3, 'ccmfc': 2, 'orf298': 1})
+2020-03-27 19:03:56,022 -INFO- using gene name `ccmFc`
+   remove gene Ammopiptanthus_mongolicus|ccmfc with length 316 out of [354.5, 533.0]
+   remove gene Glycine_soja|orf298 with length 298 out of [354.5, 533.0]
+   remove gene Sophora_flavescens|ccmFc with length 239 out of [354.5, 533.0]
+2020-03-27 19:03:56,471 -INFO- get gene name `atp4` from Counter({'atp4': 35})
+2020-03-27 19:03:56,472 -INFO- using gene name `atp4`
+2020-03-27 19:03:57,307 -INFO- get gene name `atp8` from Counter({'atp8': 34, 'Populus_davidiana-gene135': 1, 'Populus_alba-gene140': 1})
+2020-03-27 19:03:57,308 -INFO- using gene name `atp8`
+   remove gene Populus_alba|gene140 with length 115 out of [135.0, 186.0]
+   remove gene Populus_davidiana|gene135 with length 206 out of [135.0, 186.0]
+2020-03-27 19:03:57,781 -INFO- get gene name `rps12` from Counter({'rps12': 34})
+2020-03-27 19:03:57,782 -INFO- using gene name `rps12`
+2020-03-27 19:03:58,759 -INFO- get gene name `nad3` from Counter({'nad3': 33})
+2020-03-27 19:03:58,759 -INFO- using gene name `nad3`
+   remove gene Sophora_flavescens|nad3 with length 336 out of [94.0, 142.0]
+2020-03-27 19:03:58,761 -INFO- get gene name `ccmB` from Counter({'ccmB': 33, 'ccbB': 1, 'ccmb': 1})
+2020-03-27 19:03:58,761 -INFO- using gene name `ccmB`
+   remove gene Ammopiptanthus_mongolicus|ccmb with length 100 out of [182.0, 230.0]
+2020-03-27 19:03:58,762 -INFO- get gene name `matR` from Counter({'matR': 35})
+2020-03-27 19:03:58,762 -INFO- using gene name `matR`
+   remove gene Ammopiptanthus_mongolicus|matR with length 876 out of [497.0, 820.0]
+2020-03-27 19:03:58,763 -INFO- get gene name `nad6` from Counter({'nad6': 35})
+2020-03-27 19:03:58,763 -INFO- using gene name `nad6`
+   remove gene Ammopiptanthus_mongolicus|nad6 with length 138 out of [181.0, 232.0]
+2020-03-27 19:03:58,765 -INFO- get gene name `ccmC` from Counter({'ccmC': 33, 'ccbC': 1, 'ccmc': 1})
+2020-03-27 19:03:58,765 -INFO- using gene name `ccmC`
+   remove gene Ammopiptanthus_mongolicus|ccmc with length 328 out of [214.0, 282.0]
+   remove gene Sophora_flavescens|ccmC with length 328 out of [214.0, 282.0]
+2020-03-27 19:03:59,247 -INFO- get gene name `cox3` from Counter({'cox3': 34})
+2020-03-27 19:03:59,248 -INFO- using gene name `cox3`
+2020-03-27 19:03:59,250 -INFO- get gene name `cox1` from Counter({'cox1': 34})
+2020-03-27 19:03:59,250 -INFO- using gene name `cox1`
+   remove gene Ammopiptanthus_mongolicus|cox1 with length 595 out of [503.0, 551.0]
+   remove gene Malus_domestica|cox1 with length 495 out of [503.0, 551.0]
+   remove gene Prunus_avium|cox1 with length 495 out of [503.0, 551.0]
+2020-03-27 19:04:00,140 -INFO- get gene name `nad1` from Counter({'nad1': 32, 'amoMp17': 1})
+2020-03-27 19:04:00,140 -INFO- using gene name `nad1`
+2020-03-27 19:04:00,143 -INFO- get gene name `cob` from Counter({'cob': 34})
+2020-03-27 19:04:00,143 -INFO- using gene name `cob`
+   remove gene Ammopiptanthus_mongolicus|cob with length 333 out of [368.0, 417.0]
+2020-03-27 19:04:01,101 -INFO- get gene name `nad4L` from Counter({'nad4L': 30, 'nad4L-1': 1})
+2020-03-27 19:04:01,101 -INFO- using gene name `nad4L`
+2020-03-27 19:04:01,104 -INFO- get gene name `rps3` from Counter({'rps3': 33})
+2020-03-27 19:04:01,104 -INFO- using gene name `rps3`
+   remove gene Ammopiptanthus_mongolicus|rps3 with length 1041 out of [419.0, 691.0]
+   remove gene Leucaena_trichandra|rps3 with length 353 out of [419.0, 691.0]
+2020-03-27 19:04:01,540 -INFO- get gene name `rps4` from Counter({'rps4': 31})
+2020-03-27 19:04:01,541 -INFO- using gene name `rps4`
+2020-03-27 19:04:02,487 -INFO- get gene name `rps1` from Counter({'rps1': 29, 'orf206': 1})
+2020-03-27 19:04:02,487 -INFO- using gene name `rps1`
+2020-03-27 19:04:02,489 -INFO- get gene name `mttB` from Counter({'mttB': 29, 'tatC': 1, 'Malus_domestica-gene7': 1})
+2020-03-27 19:04:02,489 -INFO- using gene name `mttB`
+2020-03-27 19:04:03,019 -INFO- get gene name `cox2` from Counter({'cox2': 30, 'ORF300': 1})
+2020-03-27 19:04:03,019 -INFO- using gene name `cox2`
+   remove gene Ammopiptanthus_mongolicus|cox2 with length 374 out of [159.5, 372.0]
+   remove gene Styphnolobium_japonicum|cox2 with length 446 out of [159.5, 372.0]
+2020-03-27 19:04:03,534 -INFO- get gene name `rpl5` from Counter({'rpl5': 26, 'rp15': 2})
+2020-03-27 19:04:03,535 -INFO- using gene name `rpl5`
+   remove gene Ammopiptanthus_mongolicus|rpl5 with length 283 out of [161.0, 209.0]
+2020-03-27 19:04:03,537 -INFO- get gene name `rpl16` from Counter({'rpl16': 28})
+2020-03-27 19:04:03,537 -INFO- using gene name `rpl16`
+2020-03-27 19:04:03,971 -INFO- get gene name `rps14` from Counter({'rps14': 25})
+2020-03-27 19:04:03,971 -INFO- using gene name `rps14`
+2020-03-27 19:04:04,875 -INFO- get gene name `rps10` from Counter({'rps10': 22})
+2020-03-27 19:04:04,875 -INFO- using gene name `rps10`
+2020-03-27 19:04:04,877 -INFO- get gene name `sdh4` from Counter({'sdh4': 22, 'orf116': 1})
+2020-03-27 19:04:04,877 -INFO- using gene name `sdh4`
+   remove gene Cannabis_sativa|sdh4 with length 180 out of [95.0, 171.5]
+2020-03-27 19:04:06,243 -INFO- get gene name `rpl2` from Counter({'rpl2': 14, 'amoMp28': 1})
+2020-03-27 19:04:06,243 -INFO- using gene name `rpl2`
+   remove gene Ammopiptanthus_mongolicus|amoMp28 with length 133 out of [286.5, 380.0]
+2020-03-27 19:04:06,245 -INFO- get gene name `rpl10` from Counter({'rpl10': 18})
+2020-03-27 19:04:06,246 -INFO- using gene name `rpl10`
+   remove gene Ammopiptanthus_mongolicus|rpl10 with length 318 out of [138.0, 187.0]
+2020-03-27 19:04:06,678 -INFO- get gene name `rps7` from Counter({'rps7': 13})
+2020-03-27 19:04:06,678 -INFO- using gene name `rps7`
+2020-03-27 19:04:07,602 -INFO- get gene name `rps19` from Counter({'rps19': 8, 'rps19-1': 2})
+2020-03-27 19:04:07,603 -INFO- using gene name `rps19`
+2020-03-27 19:04:07,604 -INFO- get gene name `rps13` from Counter({'rps13': 11})
+2020-03-27 19:04:07,604 -INFO- using gene name `rps13`
+2020-03-27 19:04:08,575 -INFO- get gene name `sdh3` from Counter({'sdh3': 8, 'sdh3-1': 1})
+2020-03-27 19:04:08,575 -INFO- using gene name `sdh3`
+2020-03-27 19:04:09,592 -INFO- get gene name `orf172-1` from Counter({'orf172-1': 1, 'orf250': 1, 'orf110': 1, 'orf110c': 1, 'orf214': 1, 'ORF234': 1})
+2020-03-27 19:04:10,081 -INFO- get gene name `orf241` from Counter({'orf241': 2, 'sdh3': 2, 'Populus_alba-gene138': 1, 'Populus_davidiana-gene133': 1})
+2020-03-27 19:04:10,081 -INFO- get gene name `ORF127` from Counter({'ORF127': 1, 'Populus_alba-gene2': 1, 'amoMp12': 1, 'ORF215': 1, 'Populus_davidiana-gene2': 1})
+2020-03-27 19:04:11,082 -INFO- get gene name `Populus_alba-gene21` from Counter({'Populus_alba-gene21': 1, 'Populus_davidiana-gene181': 1, 'Populus_alba-gene185': 1, 'ORF118': 1, 'Populus_davidiana-gene14': 1})
+2020-03-27 19:04:11,551 -INFO- get gene name `orf202` from Counter({'orf202': 2, 'amoMp14': 1, 'orf287': 1})
+2020-03-27 19:04:11,552 -INFO- get gene name `orf271` from Counter({'orf271': 2, 'ORF332': 1, 'ORF279': 1})
+2020-03-27 19:04:12,372 -INFO- get gene name `orf139-1` from Counter({'orf139-1': 1, 'orf139': 1})
+2020-03-27 19:04:12,767 -INFO- get gene name `orf110` from Counter({'orf110': 1, 'orf110a': 1})
+2020-03-27 19:04:12,768 -INFO- get gene name `orf189` from Counter({'orf189': 2, 'ORF217': 1})
+2020-03-27 19:04:12,768 -INFO- get gene name `orf136b` from Counter({'orf136b': 1, 'orf136': 1, 'ORF176': 1})
+2020-03-27 19:04:12,769 -INFO- get gene name `dpo` from Counter({'dpo': 1, 'ORF498': 1})
+2020-03-27 19:04:12,769 -INFO- get gene name `psaA` from Counter({'psaA': 1, 'amoMp1': 1})
+2020-03-27 19:04:12,769 -INFO- get gene name `orf135` from Counter({'orf135': 1, 'amoMp22': 1})
+2020-03-27 19:04:12,770 -INFO- get gene name `orf150` from Counter({'orf150': 1, 'orf110b': 1})
+2020-03-27 19:04:12,770 -INFO- get gene name `orf160a` from Counter({'orf160a': 1, 'amoMp26': 1})
+2020-03-27 19:04:12,770 -INFO- get gene name `orf104` from Counter({'orf104': 1, 'orf104a': 1})
+2020-03-27 19:04:12,771 -INFO- get gene name `orf129` from Counter({'orf129': 2})
+2020-03-27 19:04:12,771 -INFO- get gene name `orf152` from Counter({'orf152': 2})
+2020-03-27 19:04:12,771 -INFO- get gene name `orf100a` from Counter({'orf100a': 1, 'orf100': 1})
+2020-03-27 19:04:12,771 -INFO- get gene name `orf110e` from Counter({'orf110e': 1, 'orf110': 1})
+2020-03-27 19:04:12,772 -INFO- get gene name `orf109` from Counter({'orf109': 2})
+2020-03-27 19:04:12,772 -INFO- get gene name `orf106` from Counter({'orf106': 1, 'orf106a': 1})
+2020-03-27 19:04:12,772 -INFO- get gene name `orf114b` from Counter({'orf114b': 1, 'orf114': 1})
+2020-03-27 19:04:12,772 -INFO- get gene name `orf117` from Counter({'orf117': 2})
+2020-03-27 19:04:12,773 -INFO- get gene name `orf110b` from Counter({'orf110b': 1, 'orf110': 1})
+2020-03-27 19:04:12,773 -INFO- get gene name `orf167` from Counter({'orf167': 2})
+2020-03-27 19:04:12,773 -INFO- get gene name `orf151` from Counter({'orf151': 2})
+2020-03-27 19:04:12,773 -INFO- get gene name `orf261` from Counter({'orf261': 2})
+2020-03-27 19:04:12,774 -INFO- get gene name `orf101a` from Counter({'orf101a': 1, 'orf101': 1})
+2020-03-27 19:04:12,774 -INFO- get gene name `orf107` from Counter({'orf107': 1, 'orf107a': 1})
+2020-03-27 19:04:12,774 -INFO- get gene name `orf105a` from Counter({'orf105a': 1, 'orf105': 1})
+2020-03-27 19:04:12,774 -INFO- get gene name `orf107b` from Counter({'orf107b': 1, 'orf123': 1})
+2020-03-27 19:04:12,775 -INFO- get gene name `orf100b` from Counter({'orf100b': 1, 'orf100': 1})
+2020-03-27 19:04:12,775 -INFO- get gene name `orf136` from Counter({'orf136': 1, 'orf136a': 1})
+2020-03-27 19:04:12,775 -INFO- get gene name `orf103b` from Counter({'orf103b': 1, 'orf103': 1})
+2020-03-27 19:04:12,775 -INFO- get gene name `orf215` from Counter({'orf215': 2})
+2020-03-27 19:04:12,776 -INFO- get gene name `orf106` from Counter({'orf106': 1, 'orf106b': 1})
+2020-03-27 19:04:12,776 -INFO- get gene name `orf114` from Counter({'orf114': 1, 'orf114a': 1})
+2020-03-27 19:04:12,776 -INFO- get gene name `orf100c` from Counter({'orf100c': 1, 'orf100': 1})
+2020-03-27 19:04:12,776 -INFO- get gene name `orf145` from Counter({'orf145': 2})
+2020-03-27 19:04:12,777 -INFO- get gene name `orf103` from Counter({'orf103': 1, 'orf103c': 1})
+2020-03-27 19:04:12,777 -INFO- get gene name `orf178` from Counter({'orf178': 1, 'ccmF': 1})
+2020-03-27 19:04:12,777 -INFO- get gene name `Populus_alba-gene42` from Counter({'Populus_alba-gene42': 1, 'Populus_davidiana-gene35': 1})
+2020-03-27 19:04:12,778 -INFO- get gene name `Populus_alba-gene45` from Counter({'Populus_alba-gene45': 1, 'Populus_davidiana-gene38': 1})
+2020-03-27 19:04:12,778 -INFO- get gene name `Populus_alba-gene106` from Counter({'Populus_alba-gene106': 1, 'Populus_davidiana-gene99': 1})
+2020-03-27 19:04:12,778 -INFO- get gene name `Populus_davidiana-gene108` from Counter({'Populus_davidiana-gene108': 1, 'Populus_alba-gene115': 1})
+2020-03-27 19:04:12,778 -INFO- get gene name `Populus_alba-gene129` from Counter({'Populus_alba-gene129': 1, 'Populus_davidiana-gene122': 1})
+2020-03-27 19:04:12,778 -INFO- get gene name `Populus_alba-gene156` from Counter({'Populus_alba-gene156': 1, 'Populus_davidiana-gene152': 1})
+2020-03-27 19:04:12,778 -INFO- get gene name `Populus_davidiana-gene157` from Counter({'Populus_davidiana-gene157': 1, 'Populus_alba-gene161': 1})
+2020-03-27 19:04:12,778 -INFO- get gene name `Populus_davidiana-gene184` from Counter({'Populus_davidiana-gene184': 1, 'Populus_alba-gene188': 1})
+2020-03-27 19:04:12,779 -INFO- get gene name `Populus_davidiana-gene190` from Counter({'Populus_davidiana-gene190': 1, 'Populus_alba-gene194': 1})
+2020-03-27 19:04:12,779 -INFO- get gene name `Populus_davidiana-gene192` from Counter({'Populus_davidiana-gene192': 1, 'Populus_alba-gene196': 1})
+2020-03-27 19:04:12,779 -INFO- get gene name `Populus_alba-gene201` from Counter({'Populus_alba-gene201': 1, 'Populus_davidiana-gene197': 1})
+2020-03-27 19:04:12,779 -INFO- get gene name `Populus_davidiana-gene211` from Counter({'Populus_davidiana-gene211': 1, 'Populus_alba-gene215': 1})
+2020-03-27 19:04:12,779 -INFO- get gene name `Populus_davidiana-gene213` from Counter({'Populus_davidiana-gene213': 1, 'Populus_alba-gene217': 1})
+2020-03-27 19:04:12,779 -INFO- get gene name `Populus_alba-gene225` from Counter({'Populus_alba-gene225': 1, 'Populus_davidiana-gene221': 1})
+2020-03-27 19:04:12,780 -INFO- get gene name `Populus_alba-gene235` from Counter({'Populus_alba-gene235': 1, 'Populus_davidiana-gene229': 1})
+2020-03-27 19:04:13,207 -INFO- get gene name `cox2` from Counter({'cox2': 2})
+2020-03-27 19:04:13,213 -INFO- extrat 39 genes: ['atp1', 'atp4', 'atp6', 'atp8', 'atp9', 'ccmB', 'ccmC', 'ccmFc', 'ccmFn', 'cob', 'cox1', 'cox2', 'cox3', 'matR', 'mttB', 'nad1', 'nad2', 'nad3', 'nad4', 'nad4L', 'nad5', 'nad6', 'nad7', 'nad9', 'rpl10', 'rpl16', 'rpl2', 'rpl5', 'rps1', 'rps10', 'rps12', 'rps13', 'rps14', 'rps19', 'rps3', 'rps4', 'rps7', 'sdh3', 'sdh4']
+2020-03-27 19:04:13,214 -INFO- aligning sequences
+2020-03-27 19:11:30,576 -INFO- building hmm profiles
+2020-03-27 19:11:56,767 -INFO- building augustus profiles
+2020-03-27 19:12:23,667 -INFO- training augustus models
 /share/home/yuanqyk/.local/lib/python2.7/site-packages/Bio/SeqIO/InsdcIO.py:687: BiopythonWarning: Increasing length of locus line to allow long name. This will result in fields that are not in usual positions.
   BiopythonWarning,
-2020-03-23 11:36:51,608 -INFO- writing ('rRNA', 'tRNA') sequences into /dev/shm/tmp/mt-fabids/rrna
-2020-03-23 11:36:51,840 -INFO- running OrthoFinder to cluster genes
-2020-03-23 11:36:51,840 -INFO- run CMD: `orthofinder.py -f /dev/shm/tmp/mt-fabids/rrna -M msa -T fasttree -t 24 -S blastn -og`
-2020-03-23 11:38:34,733 -INFO- parsing OrthoFinder orthologs
-2020-03-23 11:38:34,734 -INFO- parsing orthologs group into /dev/shm/tmp/mt-fabids/alns
-2020-03-23 11:38:34,760 -INFO- using min_count=2 to get gene name
-2020-03-23 11:38:42,373 -INFO- get gene name `trnfM-CAU` from Counter({'trnfM-CAU': 10, 'trnfM': 9, 'trnfM-1': 4, 'trnM-CAU': 4, 'trnM': 3, 'trnfM-2': 3, 'trnM-CAT': 3, 'trnfM-CAT': 3, 'trnM-cat': 2, 'trnfM-cau': 2, 'trnfM-3': 1, 'tRNA-fMet-CAU': 1, 'trnfMet-CAU': 1})
-2020-03-23 11:38:42,374 -INFO- using gene name `trnfM-CAU`
-2020-03-23 11:38:45,471 -INFO- get gene name `trnP-UGG` from Counter({'trnP-UGG': 12, 'trnP-TGG': 10, 'trnP': 9, 'trnP-tgg': 1, 'trnF-TGG': 1, 'tRNA-Pro-UGG': 1, 'trnP-ugg': 1})
-2020-03-23 11:38:45,471 -INFO- using gene name `trnP-UGG`
-2020-03-23 11:38:47,707 -INFO- get gene name `rrnL` from Counter({'rrnL': 15, 'rrn26': 14, '26rrn': 2, 'rrL': 1, 'rnl': 1, 'rrn26S': 1, 'Salix_purpurea-gene202': 1})
-2020-03-23 11:38:47,707 -INFO- using gene name `rrnL`
-2020-03-23 11:38:49,926 -INFO- get gene name `trnK-UUU` from Counter({'trnK-UUU': 13, 'trnK-TTT': 10, 'trnK': 7, 'trnK-ttt': 1, 'tRNA-Lys-UUU': 1, 'trnK-uuu': 1})
-2020-03-23 11:38:49,927 -INFO- using gene name `trnK-UUU`
-2020-03-23 11:38:51,748 -INFO- get gene name `trnN-GTT-cp` from Counter({'trnN': 11, 'trnN-GUU': 11, 'trnN-cp': 4, 'trnN-GTT': 3, 'trnN-GTT-cp': 2, 'tRNA-Asn-GUU': 1, 'trnN-gtt': 1, 'trnN-guu': 1, 'trnN-GUU-cp': 1, 'trnD-GUC': 1})
-2020-03-23 11:38:51,749 -INFO- using gene name `trnN-GTT-cp`
-2020-03-23 11:38:53,127 -INFO- get gene name `trnH-GTG-cp` from Counter({'trnH-GUG': 13, 'trnH': 9, 'trnH-GTG': 4, 'trnH-cp': 3, 'trnH-GTG-cp': 2, 'trnH-gtg': 1, 'tRNA-His-GUG': 1, 'trnH-gug': 1})
-2020-03-23 11:38:53,127 -INFO- using gene name `trnH-GTG-cp`
-2020-03-23 11:38:54,018 -INFO- get gene name `rrn5` from Counter({'rrn5': 32, '5rrn': 2, 'rrn5S': 1})
-2020-03-23 11:38:54,018 -INFO- using gene name `rrn5`
-2020-03-23 11:38:54,937 -INFO- get gene name `trnG-GCC` from Counter({'trnG-GCC': 24, 'trnG': 7, 'trnG-gcc': 2, 'trnG-GCC-1': 1, 'tRNA-Gly-GCC': 1})
-2020-03-23 11:38:54,938 -INFO- using gene name `trnG-GCC`
-2020-03-23 11:38:55,407 -INFO- get gene name `trnQ-UUG` from Counter({'trnQ-UUG': 14, 'trnQ-TTG': 10, 'trnQ': 7, 'trnQ-ttg': 1, 'trnQ-uug': 1, 'tRNA-Gln-UUG': 1, 'trnQ-TTG-1': 1})
-2020-03-23 11:38:55,407 -INFO- using gene name `trnQ-UUG`
-2020-03-23 11:38:55,859 -INFO- get gene name `trnE-UUC` from Counter({'trnE-UUC': 14, 'trnE-TTC': 11, 'trnE': 7, 'tRNA-Glu-UUC': 1, 'trnE-ttc': 1, 'trnE-uuc': 1})
-2020-03-23 11:38:55,860 -INFO- using gene name `trnE-UUC`
-2020-03-23 11:38:56,776 -INFO- get gene name `trnW-cp` from Counter({'trnW-CCA': 18, 'trnW': 9, 'trnW-cp': 3, 'trnW-cca': 2, 'tRNA-Trp-CCA': 1})
-2020-03-23 11:38:56,776 -INFO- using gene name `trnW-cp`
-2020-03-23 11:38:57,733 -INFO- get gene name `rrnS` from Counter({'rrnS': 16, 'rrn18': 13, '18rrn': 2, 'rrS': 1, 'rrn18S': 1})
-2020-03-23 11:38:57,733 -INFO- using gene name `rrnS`
-2020-03-23 11:38:58,196 -INFO- get gene name `trnM-CAU` from Counter({'trnM-CAU': 12, 'trnI': 7, 'trnI-CAT': 5, 'trnM-CAT': 4, 'tRNA-Ile-CAU': 1, 'trnM': 1, 'trnI-cau': 1, 'trnM-cat': 1, 'trnI-CAU': 1, 'trnI-TAT': 1})
-2020-03-23 11:38:58,197 -INFO- using gene name `trnM-CAU`
-2020-03-23 11:38:58,667 -INFO- get gene name `trnF-GAA` from Counter({'trnF-GAA': 23, 'trnF': 7, 'trnF-gaa': 2, 'tRNA-Phe-GAA': 1})
-2020-03-23 11:38:58,667 -INFO- using gene name `trnF-GAA`
-2020-03-23 11:38:59,149 -INFO- get gene name `trnC-GCA` from Counter({'trnC-GCA': 20, 'trnC': 6, 'trnC-GCA-2': 3, 'trnC-gca': 2, 'trnC-1': 1, 'tRNA-Cys-GCA': 1})
-2020-03-23 11:38:59,150 -INFO- using gene name `trnC-GCA`
-2020-03-23 11:38:59,152 -INFO- get gene name `trnM-CAT-cp` from Counter({'trnM-CAU': 13, 'trnM': 10, 'trnM-cp': 3, 'trnM-CAT': 3, 'trnM-CAT-cp': 2, 'trnM-cat': 1, 'trnM-cau': 1, 'tRNA-Met-CAU': 1})
-2020-03-23 11:38:59,152 -INFO- using gene name `trnM-CAT-cp`
-2020-03-23 11:38:59,154 -INFO- get gene name `trnY-GTA` from Counter({'trnY-GTA': 15, 'trnY-GUA': 9, 'trnY': 6, 'trnY-gua': 1, 'tRNA-Tyr-GUA': 1, 'trnY-gta': 1})
-2020-03-23 11:38:59,154 -INFO- using gene name `trnY-GTA`
-2020-03-23 11:39:00,001 -INFO- get gene name `trnD-GUC` from Counter({'trnD-GUC': 14, 'trnD': 7, 'trnD-GTC': 6, 'trnD-guc': 1, 'tRNA-Asp-GUC': 1, 'trnD-gtc': 1})
-2020-03-23 11:39:00,002 -INFO- using gene name `trnD-GUC`
-2020-03-23 11:39:00,421 -INFO- get gene name `trnS-GCU` from Counter({'trnS-GCU': 12, 'trnS': 6, 'trnS-GCT': 5, 'trnS-gcu': 1, 'trnS-gct': 1})
-2020-03-23 11:39:00,421 -INFO- using gene name `trnS-GCU`
-2020-03-23 11:39:00,423 -INFO- get gene name `trnS-UGA` from Counter({'trnS-UGA': 7, 'trnS-TGA': 5, 'trnS-UGU': 4, 'tRNA-Ser-UGA': 1, 'trnS': 1, 'trnS-TGT': 1})
-2020-03-23 11:39:00,423 -INFO- using gene name `trnS-UGA`
-2020-03-23 11:39:00,895 -INFO- get gene name `trnP-UGG` from Counter({'trnP-UGG': 5, 'trnP': 1, 'tRNA-Pro-GGG': 1, 'trnP-GGG': 1, 'trnP-TGG': 1})
-2020-03-23 11:39:00,895 -INFO- using gene name `trnP-UGG`
-2020-03-23 11:39:00,897 -INFO- get gene name `trnC-GCA` from Counter({'trnC-GCA': 3, 'trnC-GCA-1': 3, 'trnC': 2, 'trnC-gca': 1, 'trnC-2': 1})
-2020-03-23 11:39:00,897 -INFO- using gene name `trnC-GCA`
-2020-03-23 11:39:00,898 -INFO- get gene name `trnV-GAC` from Counter({'trnV-GAC': 5, 'trnV': 2, 'trnV-gac': 1})
-2020-03-23 11:39:00,898 -INFO- using gene name `trnV-GAC`
-2020-03-23 11:39:00,898 -INFO- get gene name `trnS-GGA-cp` from Counter({'trnS-GGA': 6, 'trnS-GGA-cp': 1, 'trnS': 1})
-2020-03-23 11:39:00,898 -INFO- using gene name `trnS-GGA-cp`
-2020-03-23 11:39:00,899 -INFO- get gene name `trnT-UGU` from Counter({'trnT': 2, 'trnT-UGU': 2, 'trnM-CAT': 1, 'trnQ-UUG': 1, 'trnK-TTT': 1})
-2020-03-23 11:39:00,899 -INFO- using gene name `trnT-UGU`
-2020-03-23 11:39:00,899 -INFO- get gene name `trnM-CAU` from Counter({'trnM-CAU': 4, 'trnM-CAT': 1, 'trnM': 1})
-2020-03-23 11:39:00,899 -INFO- using gene name `trnM-CAU`
-2020-03-23 11:39:00,900 -INFO- get gene name `trnH-AUG` from Counter({'trnH-AUG': 4, 'trnH-ATG': 1})
-2020-03-23 11:39:00,900 -INFO- using gene name `trnH-AUG`
-2020-03-23 11:39:01,368 -INFO- get gene name `trnF-GAA` from Counter({'trnF-GAA': 2})
-2020-03-23 11:39:01,368 -INFO- using gene name `trnF-GAA`
-2020-03-23 11:39:02,276 -INFO- get gene name `trnF-GAA` from Counter({'trnF-GAA': 1, 'tRNA-Phe-GAA': 1})
-2020-03-23 11:39:02,277 -INFO- get gene name `trnD-GUC` from Counter({'trnD-GUC': 3, 'trnD': 1})
-2020-03-23 11:39:02,277 -INFO- using gene name `trnD-GUC`
-2020-03-23 11:39:02,278 -INFO- get gene name `trnK-CUU` from Counter({'trnK-CUU': 4})
-2020-03-23 11:39:02,278 -INFO- using gene name `trnK-CUU`
-2020-03-23 11:39:02,279 -INFO- get gene name `trnI-GAU` from Counter({'trnI-GAU': 3})
-2020-03-23 11:39:02,279 -INFO- using gene name `trnI-GAU`
-2020-03-23 11:39:02,280 -INFO- get gene name `trnL-CAA` from Counter({'trnL-CAA': 3})
-2020-03-23 11:39:02,280 -INFO- using gene name `trnL-CAA`
-2020-03-23 11:39:02,281 -INFO- get gene name `trnR-ACG` from Counter({'trnR-ACG': 2, 'trnR': 1})
-2020-03-23 11:39:02,281 -INFO- using gene name `trnR-ACG`
-2020-03-23 11:39:02,281 -INFO- get gene name `trnM-CAT` from Counter({'trnM-CAT': 1, 'trnM-CAU': 1})
-2020-03-23 11:39:02,282 -INFO- get gene name `trnN-GUU` from Counter({'trnN-GUU': 2})
-2020-03-23 11:39:02,282 -INFO- using gene name `trnN-GUU`
-2020-03-23 11:39:02,282 -INFO- get gene name `trnX` from Counter({'trnX': 2})
-2020-03-23 11:39:02,283 -INFO- using gene name `trnX`
-2020-03-23 11:39:02,283 -INFO- get gene name `trnC` from Counter({'trnC': 2})
-2020-03-23 11:39:02,283 -INFO- using gene name `trnC`
-2020-03-23 11:39:02,287 -INFO- extrat 36 genes: ['rrn5', 'rrnL', 'rrnS', 'trnC', 'trnC-GCA', 'trnC-GCA-21', 'trnD-GUC', 'trnD-GUC-29', 'trnE-UUC', 'trnF-GAA', 'trnF-GAA-27', 'trnG-GCC', 'trnH-AUG', 'trnH-GTG-cp', 'trnI-GAU', 'trnK-CUU', 'trnK-UUU', 'trnL-CAA', 'trnM-CAT-cp', 'trnM-CAU', 'trnM-CAU-25', 'trnN-GTT-cp', 'trnN-GUU', 'trnP-UGG', 'trnP-UGG-20', 'trnQ-UUG', 'trnR-ACG', 'trnS-GCU', 'trnS-GGA-cp', 'trnS-UGA', 'trnT-UGU', 'trnV-GAC', 'trnW-cp', 'trnX', 'trnY-GTA', 'trnfM-CAU']
-2020-03-23 11:39:02,287 -INFO- aligning sequences
-2020-03-23 11:44:45,070 -INFO- building hmm profiles
+2020-03-27 19:15:53,862 -INFO- writing ('rRNA', 'tRNA') sequences into /dev/shm/tmp/mt-fabids/rrna
+2020-03-27 19:15:54,088 -INFO- running OrthoFinder to cluster genes
+2020-03-27 19:15:54,089 -INFO- run CMD: `orthofinder.py -f /dev/shm/tmp/mt-fabids/rrna -M msa -T fasttree -t 24 -S blastn -og`
+2020-03-27 19:17:51,843 -INFO- parsing OrthoFinder orthologs
+2020-03-27 19:17:51,845 -INFO- parsing orthologs group into /dev/shm/tmp/mt-fabids/alns
+2020-03-27 19:17:51,876 -INFO- using min_count=2 to get gene name
+2020-03-27 19:17:59,667 -INFO- get gene name `trnfM-CAU` from Counter({'trnfM-CAU': 10, 'trnfM': 9, 'trnfM-1': 4, 'trnM-CAU': 4, 'trnM': 3, 'trnfM-2': 3, 'trnM-CAT': 3, 'trnfM-CAT': 3, 'trnM-cat': 2, 'trnfM-cau': 2, 'trnfM-3': 1, 'tRNA-fMet-CAU': 1, 'trnfMet-CAU': 1})
+2020-03-27 19:17:59,667 -INFO- using gene name `trnfM-CAU`
+2020-03-27 19:18:03,152 -INFO- get gene name `trnP-UGG` from Counter({'trnP-UGG': 12, 'trnP-TGG': 10, 'trnP': 9, 'trnP-tgg': 1, 'trnF-TGG': 1, 'tRNA-Pro-UGG': 1, 'trnP-ugg': 1})
+2020-03-27 19:18:03,152 -INFO- using gene name `trnP-UGG`
+2020-03-27 19:18:05,743 -INFO- get gene name `rrnL` from Counter({'rrnL': 15, 'rrn26': 14, '26rrn': 2, 'rrL': 1, 'rnl': 1, 'rrn26S': 1, 'Salix_purpurea-gene202': 1})
+2020-03-27 19:18:05,744 -INFO- using gene name `rrnL`
+2020-03-27 19:18:08,135 -INFO- get gene name `trnK-UUU` from Counter({'trnK-UUU': 13, 'trnK-TTT': 10, 'trnK': 7, 'trnK-ttt': 1, 'tRNA-Lys-UUU': 1, 'trnK-uuu': 1})
+2020-03-27 19:18:08,136 -INFO- using gene name `trnK-UUU`
+2020-03-27 19:18:10,159 -INFO- get gene name `trnN-GUU-cp` from Counter({'trnN': 11, 'trnN-GUU': 11, 'trnN-cp': 4, 'trnN-GTT': 3, 'trnN-GTT-cp': 2, 'tRNA-Asn-GUU': 1, 'trnN-gtt': 1, 'trnN-guu': 1, 'trnN-GUU-cp': 1, 'trnD-GUC': 1})
+2020-03-27 19:18:10,159 -INFO- using gene name `trnN-GUU-cp`
+2020-03-27 19:18:11,664 -INFO- get gene name `trnH-GUG-cp` from Counter({'trnH-GUG': 13, 'trnH': 9, 'trnH-GTG': 4, 'trnH-cp': 3, 'trnH-GTG-cp': 2, 'trnH-gtg': 1, 'tRNA-His-GUG': 1, 'trnH-gug': 1})
+2020-03-27 19:18:11,664 -INFO- using gene name `trnH-GUG-cp`
+2020-03-27 19:18:12,605 -INFO- get gene name `rrn5` from Counter({'rrn5': 32, '5rrn': 2, 'rrn5S': 1})
+2020-03-27 19:18:12,605 -INFO- using gene name `rrn5`
+2020-03-27 19:18:13,666 -INFO- get gene name `trnG-GCC` from Counter({'trnG-GCC': 24, 'trnG': 7, 'trnG-gcc': 2, 'trnG-GCC-1': 1, 'tRNA-Gly-GCC': 1})
+2020-03-27 19:18:13,666 -INFO- using gene name `trnG-GCC`
+2020-03-27 19:18:14,176 -INFO- get gene name `trnQ-UUG` from Counter({'trnQ-UUG': 14, 'trnQ-TTG': 10, 'trnQ': 7, 'trnQ-ttg': 1, 'trnQ-uug': 1, 'tRNA-Gln-UUG': 1, 'trnQ-TTG-1': 1})
+2020-03-27 19:18:14,176 -INFO- using gene name `trnQ-UUG`
+2020-03-27 19:18:14,654 -INFO- get gene name `trnE-UUC` from Counter({'trnE-UUC': 14, 'trnE-TTC': 11, 'trnE': 7, 'tRNA-Glu-UUC': 1, 'trnE-ttc': 1, 'trnE-uuc': 1})
+2020-03-27 19:18:14,655 -INFO- using gene name `trnE-UUC`
+2020-03-27 19:18:15,638 -INFO- get gene name `trnW-CCA-cp` from Counter({'trnW-CCA': 18, 'trnW': 9, 'trnW-cp': 3, 'trnW-cca': 2, 'tRNA-Trp-CCA': 1})
+2020-03-27 19:18:15,638 -INFO- using gene name `trnW-CCA-cp`
+2020-03-27 19:18:16,629 -INFO- get gene name `rrnS` from Counter({'rrnS': 16, 'rrn18': 13, '18rrn': 2, 'rrS': 1, 'rrn18S': 1})
+2020-03-27 19:18:16,629 -INFO- using gene name `rrnS`
+2020-03-27 19:18:17,168 -INFO- get gene name `trnM-CAU` from Counter({'trnM-CAU': 12, 'trnI': 7, 'trnI-CAT': 5, 'trnM-CAT': 4, 'tRNA-Ile-CAU': 1, 'trnM': 1, 'trnI-cau': 1, 'trnM-cat': 1, 'trnI-CAU': 1, 'trnI-TAT': 1})
+2020-03-27 19:18:17,168 -INFO- using gene name `trnM-CAU`
+2020-03-27 19:18:17,665 -INFO- get gene name `trnF-GAA` from Counter({'trnF-GAA': 23, 'trnF': 7, 'trnF-gaa': 2, 'tRNA-Phe-GAA': 1})
+2020-03-27 19:18:17,666 -INFO- using gene name `trnF-GAA`
+2020-03-27 19:18:18,213 -INFO- get gene name `trnC-GCA` from Counter({'trnC-GCA': 20, 'trnC': 6, 'trnC-GCA-2': 3, 'trnC-gca': 2, 'trnC-1': 1, 'tRNA-Cys-GCA': 1})
+2020-03-27 19:18:18,214 -INFO- using gene name `trnC-GCA`
+2020-03-27 19:18:18,217 -INFO- get gene name `trnM-CAU-cp` from Counter({'trnM-CAU': 13, 'trnM': 10, 'trnM-cp': 3, 'trnM-CAT': 3, 'trnM-CAT-cp': 2, 'trnM-cat': 1, 'trnM-cau': 1, 'tRNA-Met-CAU': 1})
+2020-03-27 19:18:18,217 -INFO- using gene name `trnM-CAU-cp`
+2020-03-27 19:18:18,219 -INFO- get gene name `trnY-GTA` from Counter({'trnY-GTA': 15, 'trnY-GUA': 9, 'trnY': 6, 'trnY-gua': 1, 'tRNA-Tyr-GUA': 1, 'trnY-gta': 1})
+2020-03-27 19:18:18,219 -INFO- using gene name `trnY-GTA`
+2020-03-27 19:18:19,220 -INFO- get gene name `trnD-GUC` from Counter({'trnD-GUC': 14, 'trnD': 7, 'trnD-GTC': 6, 'trnD-guc': 1, 'tRNA-Asp-GUC': 1, 'trnD-gtc': 1})
+2020-03-27 19:18:19,220 -INFO- using gene name `trnD-GUC`
+2020-03-27 19:18:19,740 -INFO- get gene name `trnS-GCU` from Counter({'trnS-GCU': 12, 'trnS': 6, 'trnS-GCT': 5, 'trnS-gcu': 1, 'trnS-gct': 1})
+2020-03-27 19:18:19,740 -INFO- using gene name `trnS-GCU`
+2020-03-27 19:18:19,742 -INFO- get gene name `trnS-UGA` from Counter({'trnS-UGA': 7, 'trnS-TGA': 5, 'trnS-UGU': 4, 'tRNA-Ser-UGA': 1, 'trnS': 1, 'trnS-TGT': 1})
+2020-03-27 19:18:19,743 -INFO- using gene name `trnS-UGA`
+2020-03-27 19:18:20,204 -INFO- get gene name `trnP-UGG` from Counter({'trnP-UGG': 5, 'trnP': 1, 'tRNA-Pro-GGG': 1, 'trnP-GGG': 1, 'trnP-TGG': 1})
+2020-03-27 19:18:20,205 -INFO- using gene name `trnP-UGG`
+2020-03-27 19:18:20,207 -INFO- get gene name `trnC-GCA` from Counter({'trnC-GCA': 3, 'trnC-GCA-1': 3, 'trnC': 2, 'trnC-gca': 1, 'trnC-2': 1})
+2020-03-27 19:18:20,207 -INFO- using gene name `trnC-GCA`
+2020-03-27 19:18:20,208 -INFO- get gene name `trnV-GAC` from Counter({'trnV-GAC': 5, 'trnV': 2, 'trnV-gac': 1})
+2020-03-27 19:18:20,208 -INFO- using gene name `trnV-GAC`
+2020-03-27 19:18:20,210 -INFO- get gene name `trnS-GGA-cp` from Counter({'trnS-GGA': 6, 'trnS-GGA-cp': 1, 'trnS': 1})
+2020-03-27 19:18:20,210 -INFO- using gene name `trnS-GGA-cp`
+2020-03-27 19:18:20,211 -INFO- get gene name `trnT-UGU` from Counter({'trnT': 2, 'trnT-UGU': 2, 'trnM-CAT': 1, 'trnQ-UUG': 1, 'trnK-TTT': 1})
+2020-03-27 19:18:20,211 -INFO- using gene name `trnT-UGU`
+2020-03-27 19:18:20,213 -INFO- get gene name `trnM-CAU` from Counter({'trnM-CAU': 4, 'trnM-CAT': 1, 'trnM': 1})
+2020-03-27 19:18:20,213 -INFO- using gene name `trnM-CAU`
+2020-03-27 19:18:20,214 -INFO- get gene name `trnH-AUG` from Counter({'trnH-AUG': 4, 'trnH-ATG': 1})
+2020-03-27 19:18:20,214 -INFO- using gene name `trnH-AUG`
+2020-03-27 19:18:20,675 -INFO- get gene name `trnF-GAA` from Counter({'trnF-GAA': 2})
+2020-03-27 19:18:20,676 -INFO- using gene name `trnF-GAA`
+2020-03-27 19:18:21,580 -INFO- get gene name `trnF-GAA` from Counter({'trnF-GAA': 1, 'tRNA-Phe-GAA': 1})
+2020-03-27 19:18:21,581 -INFO- get gene name `trnD-GUC` from Counter({'trnD-GUC': 3, 'trnD': 1})
+2020-03-27 19:18:21,581 -INFO- using gene name `trnD-GUC`
+2020-03-27 19:18:21,582 -INFO- get gene name `trnK-CUU` from Counter({'trnK-CUU': 4})
+2020-03-27 19:18:21,583 -INFO- using gene name `trnK-CUU`
+2020-03-27 19:18:21,584 -INFO- get gene name `trnI-GAU` from Counter({'trnI-GAU': 3})
+2020-03-27 19:18:21,584 -INFO- using gene name `trnI-GAU`
+2020-03-27 19:18:21,585 -INFO- get gene name `trnL-CAA` from Counter({'trnL-CAA': 3})
+2020-03-27 19:18:21,585 -INFO- using gene name `trnL-CAA`
+2020-03-27 19:18:21,586 -INFO- get gene name `trnR-ACG` from Counter({'trnR-ACG': 2, 'trnR': 1})
+2020-03-27 19:18:21,587 -INFO- using gene name `trnR-ACG`
+2020-03-27 19:18:21,587 -INFO- get gene name `trnM-CAT` from Counter({'trnM-CAT': 1, 'trnM-CAU': 1})
+2020-03-27 19:18:21,588 -INFO- get gene name `trnN-GUU` from Counter({'trnN-GUU': 2})
+2020-03-27 19:18:21,588 -INFO- using gene name `trnN-GUU`
+2020-03-27 19:18:21,588 -INFO- get gene name `trnX` from Counter({'trnX': 2})
+2020-03-27 19:18:21,588 -INFO- using gene name `trnX`
+2020-03-27 19:18:21,589 -INFO- get gene name `trnC` from Counter({'trnC': 2})
+2020-03-27 19:18:21,589 -INFO- using gene name `trnC`
+2020-03-27 19:18:21,592 -INFO- extrat 36 genes: ['rrn5', 'rrnL', 'rrnS', 'trnC', 'trnC-GCA', 'trnC-GCA-21', 'trnD-GUC', 'trnD-GUC-29', 'trnE-UUC', 'trnF-GAA', 'trnF-GAA-27', 'trnG-GCC', 'trnH-AUG', 'trnH-GUG-cp', 'trnI-GAU', 'trnK-CUU', 'trnK-UUU', 'trnL-CAA', 'trnM-CAU', 'trnM-CAU-25', 'trnM-CAU-cp', 'trnN-GUU', 'trnN-GUU-cp', 'trnP-UGG', 'trnP-UGG-20', 'trnQ-UUG', 'trnR-ACG', 'trnS-GCU', 'trnS-GGA-cp', 'trnS-UGA', 'trnT-UGU', 'trnV-GAC', 'trnW-CCA-cp', 'trnX', 'trnY-GTA', 'trnfM-CAU']
+2020-03-27 19:18:21,592 -INFO- aligning sequences
+2020-03-27 19:25:11,396 -INFO- building hmm profiles

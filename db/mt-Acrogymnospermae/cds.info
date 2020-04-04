@@ -1,0 +1,41 @@
+#id	name	product	seq_type	exon_count	trans_splicing	gene_count	species_count	names	products	species
+atp1	atp1	ATPase subunit 1	CDS	1	False	4	4	atp1:3,ATP1:1	ATPase subunit 1:3,ATP synthase subunit 1:1	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1,Welwitschia_mirabilis:1
+atp4	atp4	ATPase subunit 4	CDS	1	False	4	4	atp4:3,ATP4:1	ATPase subunit 4:3,ATP synthase subunit 4:1	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1,Welwitschia_mirabilis:1
+atp6	atp6	ATPase subunit 6	CDS	1	False	4	4	atp6:3,ATP6:1	ATPase subunit 6:3,ATP synthase subunit 6:1	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1,Welwitschia_mirabilis:1
+atp8	atp8	ATPase subunit 8	CDS	1	False	4	4	atp8:3,ATP8:1	ATPase subunit 8:3,ATP synthase subunit 8:1	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1,Welwitschia_mirabilis:1
+atp9	atp9	ATPase subunit 9	CDS	1	False	4	4	atp9:3,ATP9:1	ATPase subunit 9:3,ATP synthase subunit 9:1	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1,Welwitschia_mirabilis:1
+ccmB	ccmB	cytochrome c biogenesis B	CDS	1	False	4	4	ccmB:4	cytochrome c biogenesis B:4	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1,Welwitschia_mirabilis:1
+ccmC	ccmC	cytochrome c biogenesis C	CDS	1	False	4	4	ccmC:4	cytochrome c biogenesis C:4	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1,Welwitschia_mirabilis:1
+ccmFC	ccmFC	cytochrome c biogenesis FC	CDS	2	False	4	4	ccmFC:3,ccmFc:1	cytochrome c biogenesis FC:3,cytochrome c biogenesis F:1	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1,Welwitschia_mirabilis:1
+ccmFN	ccmFN	cytochrome c biogenesis FN	CDS	1	False	4	4	ccmFN:3,ccmFn:1	cytochrome c biogenesis FN:3,cytochrome c biogenesis F:1	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1,Welwitschia_mirabilis:1
+cob	cob	apocytochrome b	CDS	1	False	4	4	cob:4	apocytochrome b:4	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1,Welwitschia_mirabilis:1
+cox1	cox1	cytochrome c oxidase subunit 1	CDS	1	False	4	4	cox1:3,COX1:1	cytochrome c oxidase subunit 1:4	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1,Welwitschia_mirabilis:1
+cox2	cox2	cytochrome c oxidase subunit 2	CDS	2	False	4	4	cox2:3,COX2:1	cytochrome c oxidase subunit 2:4	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1,Welwitschia_mirabilis:1
+cox3	cox3	cytochrome c oxidase subunit 3	CDS	1	False	4	4	cox3:3,COX3:1	cytochrome c oxidase subunit 3:4	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1,Welwitschia_mirabilis:1
+matR	matR	maturase-related protein	CDS	1	False	4	4	matR:4	maturase-related protein:2,maturase:1,maturase R:1	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1,Welwitschia_mirabilis:1
+mttB	mttB	Sec-independent protein translocase protein	CDS	1	False	4	4	mttB:4	Sec-independent protein translocase protein:4	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1,Welwitschia_mirabilis:1
+nad1	nad1	NADH dehydrogenase subunit 1	CDS	4	True	4	4	nad1:3,NAD1:1	NADH dehydrogenase subunit 1:3,NADH dehydrogense subunit 1:1	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1,Welwitschia_mirabilis:1
+nad2	nad2	NADH dehydrogenase subunit 2	CDS	5	True	4	4	nad2:2,NAD2:1,ND2:1	NADH dehydrogenase subunit 2:3,NADH dehydrogense subunit 2:1	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1,Welwitschia_mirabilis:1
+nad3	nad3	NADH dehydrogenase subunit 3	CDS	1	False	4	4	nad3:3,NAD3:1	NADH dehydrogenase subunit 3:3,NADH dehydrogense subunit 3:1	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1,Welwitschia_mirabilis:1
+nad4	nad4	NADH dehydrogenase subunit 4	CDS	4	False	4	4	nad4:3,NAD4:1	NADH dehydrogenase subunit 4:3,NADH dehydrogense subunit 4:1	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1,Welwitschia_mirabilis:1
+nad4L	nad4L	NADH dehydrogenase subunit 4L	CDS	1	False	4	4	nad4L:3,NAD4L:1	NADH dehydrogenase subunit 4L:3,NADH dehydrogense subunit 4:1	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1,Welwitschia_mirabilis:1
+nad5	nad5	NADH dehydrogenase subunit 5	CDS	5	True	4	4	nad5:2,ND5:1,NAD5:1	NADH dehydrogenase subunit 5:3,NADH dehydrogense subunit 5:1	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1,Welwitschia_mirabilis:1
+nad6	nad6	NADH dehydrogenase subunit 6	CDS	1	False	4	4	nad6:3,NAD6:1	NADH dehydrogenase subunit 6:3,NADH dehydrogense subunit 6:1	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1,Welwitschia_mirabilis:1
+nad7	nad7	NADH dehydrogenase subunit 7	CDS	5	False	4	4	nad7:3,NAD7:1	NADH dehydrogenase subunit 7:3,NADH dehydrogense subunit 7:1	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1,Welwitschia_mirabilis:1
+nad9	nad9	NADH dehydrogenase subunit 9	CDS	1	False	4	4	nad9:3,NAD9:1	NADH dehydrogenase subunit 9:3,NADH dehydrogense subunit 9:1	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1,Welwitschia_mirabilis:1
+rpl16	rpl16	ribosomal protein L16	CDS	1	False	3	3	rpl16:3	ribosomal protein L16:3	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1
+rpl2	rpl2	ribosomal protein L2	CDS	2	False	3	3	rpl2:3	ribosomal protein L2:3	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1
+rpl5	rpl5	ribosomal protein L5	CDS	1	False	3	3	rpl5:3	ribosomal protein L5:3	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1
+rps1	rps1	ribosomal protein S1	CDS	1	False	3	3	rps1:3	ribosomal protein S1:3	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1
+rps10	rps10	ribosomal protein S10	CDS	2	False	3	3	rps10:3	ribosomal protein S10:3	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1
+rps11	rps11	ribosomal protein S11	CDS	1	False	3	3	rps11:3	ribosomal protein S11:3	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1
+rps12	rps12	ribosomal protein S12	CDS	1	False	4	4	rps12:4	ribosomal protein S12:4	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1,Welwitschia_mirabilis:1
+rps13	rps13	ribosomal protein S13	CDS	1	False	3	3	rps13:3	ribosomal protein S13:3	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1
+rps14	rps14	ribosomal protein S14	CDS	1	False	3	3	rps14:3	ribosomal protein S14:3	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1
+rps19	rps19	ribosomal protein S19	CDS	1	False	3	3	rps19:3	ribosomal protein S19:3	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1
+rps2	rps2	ribosomal protein S2	CDS	1	False	3	3	rps2:3	ribosomal protein S2:3	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1
+rps3	rps3	ribosomal protein S3	CDS	3	False	4	4	rps3:4	ribosomal protein S3:4	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1,Welwitschia_mirabilis:1
+rps4	rps4	ribosomal protein S4	CDS	1	False	4	4	rps4:4	ribosomal protein S4:4	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1,Welwitschia_mirabilis:1
+rps7	rps7	ribosomal protein S7	CDS	1	False	3	3	rps7:3	ribosomal protein S7:3	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1
+sdh3	sdh3	succinate dehydrogenase cytochrome subunit 3	CDS	1	False	3	3	sdh3:3	succinate dehydrogenase cytochrome subunit 3:3	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1
+sdh4	sdh4	succinate dehydrogenase cytochrome subunit 4	CDS	1	False	2	2	sdh4:2	succinate dehydrogenase cytochrome subunit 4:1,succinate dehydrogenase subunit 4:1	Ginkgo_biloba:1,Welwitschia_mirabilis:1

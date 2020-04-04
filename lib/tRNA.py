@@ -25,7 +25,7 @@ AA = {
     'Trp':'W',
 }
 class tRNAscan():
-	def __init__(self, output, struct=None, **kargs):
+	def __init__(self, output=None, struct=None, **kargs):
 		self.output = output
 		self.struct = struct
 		self.kargs = kargs
@@ -37,7 +37,9 @@ class tRNAscan():
 				continue
 			yield tRNAscanRecord(line, **self.kargs)
 class tRNAscanRecord():
-	def __init__(self, line, min_intron=20):
+	def __init__(self, line=None, min_intron=20):
+		if line is None:
+			return
 		self.line = line.strip().split()
 		self.title = ['target', 'n', 'start', 'end', 'type', 'anti_codon',
 					'intron_start', 'intron_end', 'score']
@@ -66,11 +68,12 @@ class tRNAscanRecord():
 	@property
 	def product(self):
 		return 'trn{}-{}'.format(self.aa, self.type)
-	def update_name(self, name):
+	def update_name(self, name, anti_codon=None):
 		name = str(name)
 		prefix = self.get_prefix(name)
 		aa = self.get_aa(name)
-		anti_codon = self.get_codon(name)
+		if anti_codon is None:
+			anti_codon = self.get_codon(name)
 		#if all([prefix, aa, anti_codon]):
 		#	return name
 		if aa is None:
@@ -102,10 +105,10 @@ class tRNAscanRecord():
 		return None
 	def get_codon(self, name):
 		name = str(name)	# trnM-(CAU)-cp
-		pattern = r'\-?([atcgu]{3})\-?'
+		pattern = r'\-([atcgu]{3})\-?'
 		match = re.compile(pattern, re.I).search(name)
 		if match:
-			return match.groups()[0].upper()
+			return match.groups()[0] #.upper()
 		return None
 	def is_cp(self, name):
 		name = str(name)	# trnM-CAU-(cp)

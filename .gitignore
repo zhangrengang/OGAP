@@ -1,6 +1,7 @@
 db/[mp]t/*/*/
 build*
-test
+#test
 tree
+#test/est.fa
 mitochondrion.*
 plastid.*

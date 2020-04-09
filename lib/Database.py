@@ -34,11 +34,11 @@ class Database():
 			dbrootdir = self.get_dbdir()
 		if custom is None:
 			if taxon is None:
-				ogtype = '{}-custom'.format(organ, )	# db name and prefix
+				ogtype = '{}/custom'.format(organ, )	# db name and prefix
 			else:
-				ogtype = '{}-{}'.format(organ, format_taxon(taxon))  # e.g. 'mt-Lamiales'
+				ogtype = '{}/{}'.format(organ, format_taxon(taxon))  # e.g. 'mt-Lamiales'
 		else:
-			ogtype = '{}-{}'.format(organ, format_taxon(custom))
+			ogtype = '{}/{}'.format(organ, format_taxon(custom))
 		self.ogtype = ogtype
 		self.organ = organ
 		self.dbrootdir = dbrootdir

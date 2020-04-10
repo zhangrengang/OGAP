@@ -42,7 +42,7 @@ def makeArgparse():
 	parser.add_argument("-est", action="store",type=str,
 					help="EST sequences for evidence in fasta format")
 
-	parser.add_argument('-organism', type=str, default=None,
+	parser.add_argument('-sp', '-organism', type=str, default=None,
 					help="organism to be included in sqn [default=%(default)s]")
 	parser.add_argument('-linear', action="store_true", default=False,
 					help="topology to be included in sqn [default=circular]")
@@ -50,10 +50,10 @@ def makeArgparse():
 					help="completeness to be included in sqn [default=complete]")
 	
 	group_out = parser.add_argument_group('output',)
-	group_out.add_argument("-outdir", action="store",
+	group_out.add_argument('-o', "-outdir", action="store",
 					default='.', type=str,
 					help="output directory [default=%(default)s]")
-	group_out.add_argument("-prefix", action="store",
+	group_out.add_argument('-pre', "-prefix", action="store",
 					default=None, type=str,
 					help="output prefix [default=%(default)s]")
 	# parser.add_argument('-min_cds_cov', type=float, default=80,

@@ -394,7 +394,7 @@ def main():
 #		parser.print_help()
 #		sys.exit()
 		cmd_list = file2list(sys.stdin, sep=separation)
-		cmd_file = '/io/tmp/share/RunCmdsMP.{}'.format(os.getpid())
+		cmd_file = '/tmp/RunCmdsMP.{}'.format(os.getpid())
 	else:
 		cmd_file = args[0]
 		cmd_list = None

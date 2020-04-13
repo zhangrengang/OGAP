@@ -32,17 +32,23 @@ class Database():
 				**kargs):
 		if dbrootdir is None:
 			dbrootdir = self.get_dbdir()
+		self.taxon = taxon
 		if custom is None:
 			if taxon is None:
-				ogtype = '{}/custom'.format(organ, )	# db name and prefix
+				taxon = 'custom'
+				#ogtype = '{}/custom'.format(organ, )	# db name and prefix
 			else:
-				ogtype = '{}/{}'.format(organ, format_taxon(taxon))  # e.g. 'mt-Lamiales'
+				taxon = format_taxon(taxon)
+				#ogtype = '{}/{}'.format(organ, format_taxon(taxon))  # e.g. 'mt-Lamiales'
 		else:
-			ogtype = '{}/{}'.format(organ, format_taxon(custom))
+			taxon = format_taxon(custom)
+			#ogtype = '{}/{}'.format(organ, format_taxon(custom))
+		ogtype = '{}-{}'.format(organ, taxon)
 		self.ogtype = ogtype
 		self.organ = organ
 		self.dbrootdir = dbrootdir
-		self.taxon = taxon
+		self.dborgndir = '{}/{}'.format(dbrootdir, organ)
+		#self.taxon = taxon
 		self.ncpu = ncpu
 		self.gbfiles = gbfiles
 		self.version = version
@@ -57,7 +63,8 @@ class Database():
 		self.upper_limit = upper_limit
 		self.lower_limit = lower_limit
 		# folders
-		dbdir = '{}/{}'.format(dbrootdir, ogtype)
+		#dbdir = '{}/{}'.format(dbrootdir, ogtype)
+		dbdir = '{}/{}'.format(self.dborgndir, taxon)
 		tmpdir = '{}/{}'.format(tmpdir, ogtype)
 		self.dbdir = dbdir = os.path.realpath(dbdir)
 		self.tmpdir = tmpdir = os.path.realpath(tmpdir)
@@ -84,20 +91,20 @@ class Database():
 		for db in self.getdb():
 			print >> sys.stdout, db.organ, db.taxon
 	def getdb(self):
-		for name in sorted(os.listdir(self.dbrootdir)):
-			filename = os.path.join(self.dbrootdir, name)
+		for name in sorted(os.listdir(self.dborgndir)):
+			filename = os.path.join(self.dborgndir, name)
 			if os.path.isdir(filename):
 				try:
-					organ, taxon = name.split('-')[:2]
+					taxon = name.split('-')[0]
 				except ValueError:
 					continue
-				yield Database(organ=organ, taxon=taxon)
+				yield Database(organ=self.organ, taxon=taxon)
 	def select_db(self, organism):
 		lineage = self.get_taxonomy(organism)
 		dbs = []
 		for db in self.getdb():
-			if not db.organ == self.organ:
-				continue
+			#if not db.organ == self.organ:
+			#	continue
 			try: db.index = lineage.index(db.taxon)
 			except ValueError: continue
 			dbs += [db]
@@ -136,6 +143,8 @@ class Database():
 			key = NameInfo.convert_name(name)
 			if not name.startswith('orf') and key not in name_dict:
 				logger.warn('{} is not found in name mapping'.format(name))
+				continue
+			elif name.startswith('orf'):
 				continue
 			mapped_gene = name_dict[key]
 			mapped_name, mapped_product = mapped_gene.name, mapped_gene.product
@@ -325,8 +334,8 @@ class Database():
 			logger.info('running OrthoFinder to cluster genes')
 		#	if sp_tree is not None:
 		#		of_opts += ' -s {}'.format(sp_tree)
-			of_opts += ' -og'
-			cmd = '{} -f {} -M msa -T fasttree -t {} {}'.format(ofbin, seqdir, self.ncpu, of_opts)
+		#	of_opts += ' -og'
+			cmd = '{} -f {} -t {} {}'.format(ofbin, seqdir, self.ncpu, of_opts)
 			run_cmd(cmd, log=True)
 
 			logger.info('parsing OrthoFinder orthologs')
@@ -388,8 +397,8 @@ class Database():
 		d_genes = {}
 		lines = []
 		gene_names, outseqs, groups = [], [], []
-#		for i, group in enumerate(orf.get_orthologs_cluster()):		# group by feat.id
-		for i, group in enumerate(orf.get_orthogroups()):
+		for i, group in enumerate(orf.get_orthologs_cluster()):		# group by feat.id
+#		for i, group in enumerate(orf.get_orthogroups()):
 			gene_name, name_count = self.get_gene_name(group, d_names,)
 			tmpfix = '{}/{}.para'.format(outdir, gene_name)
 			group = self.filter_paralogs(group, d_seqs, tmpfix)

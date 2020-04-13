@@ -1,5 +1,3 @@
-OGAP: Organelle Genome Annotation Pipeline
-
 ### Installation ###
 Dependencies:
 + [python 2.7](https://www.python.org/)  
@@ -60,9 +58,12 @@ By default, database will be selected by taxonomy mapping from organism (`-sp`),
 python ../OGAP.py Arabidopsis_thaliana-mt.fa -mt -o mt_out -sp Arabidopsis_thaliana -taxon rosids
 ```
 
-##### plastid/chloroplast genome
+##### plastid/chloroplast genome is similar but change to `-pt`
 ```
 python ../OGAP.py Arabidopsis_thaliana-pt.gb -pt -o pt_out
 ```
 
+### Pipeline for multiple genomes
+```
 
+```

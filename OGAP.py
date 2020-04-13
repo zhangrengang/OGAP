@@ -42,7 +42,7 @@ def makeArgparse():
 	parser.add_argument("-est", action="store",type=str,
 					help="EST sequences for evidence in fasta format")
 
-	parser.add_argument('-sp', '-organism', type=str, default=None,
+	parser.add_argument('-sp', '-organism', type=str, default=None, dest='organism',
 					help="organism to be included in sqn [default=%(default)s]")
 	parser.add_argument('-linear', action="store_true", default=False,
 					help="topology to be included in sqn [default=circular]")
@@ -50,10 +50,10 @@ def makeArgparse():
 					help="completeness to be included in sqn [default=complete]")
 	
 	group_out = parser.add_argument_group('output',)
-	group_out.add_argument('-o', "-outdir", action="store",
+	group_out.add_argument('-o', "-outdir", action="store", dest='outdir',
 					default='.', type=str,
 					help="output directory [default=%(default)s]")
-	group_out.add_argument('-pre', "-prefix", action="store",
+	group_out.add_argument('-pre', "-prefix", action="store", dest='prefix',
 					default=None, type=str,
 					help="output prefix [default=%(default)s]")
 	# parser.add_argument('-min_cds_cov', type=float, default=80,
@@ -75,6 +75,7 @@ def makeArgparse():
 	group_out.add_argument('-min_trn_score', type=float, default=0.8,
 					help="min score ratio to filter tRNA genes [default=%(default)s]")
 	group_out.add_argument('-orf', '-include_orf', action="store_true", default=False,
+					dest='include_orf',
 					help="include orf in gene prediction [default=%(default)s]")
 	group_out.add_argument('-trn_struct', action="store_true", default=False,
 					help="output tRNA structure [default=%(default)s]")

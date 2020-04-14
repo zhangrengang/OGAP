@@ -530,6 +530,8 @@ class HmmStructueGraph(DiGraph):
 					sum_distance += distance
 				distances += [sum_distance]
 #			print >>sys.stderr, products, distances, combinations
+			if not distances:
+				continue
 			min_dist, combination = min(zip(distances, combinations), key=lambda x:x[0])
 			if min_dist == inf:
 				continue

@@ -1,3 +1,4 @@
+.gitignore
 db/[mp]t/*/*/
 build*
 test/*/

@@ -1,2 +1,2 @@
-#organelle	taxon	transl_table	taxonomy
-pt	Sapindales	11	Eukaryota;Viridiplantae;Streptophyta;Embryophyta;Tracheophyta;Spermatophyta;Magnoliophyta;eudicotyledons;Gunneridae;Pentapetalae;rosids;malvids;Sapindales
+#id	db	transl_table	taxonomy
+pt	pt-Sapindales	11	root;cellular organisms;Eukaryota;Viridiplantae;Streptophyta;Streptophytina;Embryophyta;Tracheophyta;Euphyllophyta;Spermatophyta;Magnoliopsida;Mesangiospermae;eudicotyledons;Gunneridae;Pentapetalae;rosids;malvids;Sapindales

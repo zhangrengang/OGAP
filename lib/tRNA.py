@@ -33,7 +33,7 @@ class tRNAscan():
 		return self._parse()
 	def _parse(self):
 		for i, line in enumerate(open(self.output)):
-			if i < 3:
+			if not re.compile(r'\s\d+\s').search(line):
 				continue
 			yield tRNAscanRecord(line, **self.kargs)
 class tRNAscanRecord():

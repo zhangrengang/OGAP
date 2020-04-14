@@ -79,8 +79,10 @@ def makeArgparse():
 					help="include orf in gene prediction [default=%(default)s]")
 	group_out.add_argument('-trn_struct', action="store_true", default=False,
 					help="output tRNA structure [default=%(default)s]")
-	group_out.add_argument('-drawgenemap', action="store_true", default=True,
+	group_out.add_argument('-draw_map', action="store_true", default=False,
 					help="draw gene map [default=%(default)s]")
+	group_out.add_argument('-compare_map', action="store_true", default=True,
+                    help="compare gene map [default=%(default)s]")
 
 	group_rep = parser.add_argument_group('repeat', )
 	group_rep.add_argument('-repeat', action="store_true", default=False,
@@ -123,7 +125,8 @@ class Pipeline():
 				min_cov=50,			# filter final set (> min_cov%) to filter out single copy
 				trn_opts=' -O',
 				trn_struct=False,
-				drawgenemap=True,
+				draw_map=True,
+				compare_map=True,
 				repeat=False,
 				cleanup=True,
 				seqfmt='fasta', **kargs):
@@ -140,7 +143,8 @@ class Pipeline():
 		self.include_orf = include_orf
 		self.trn_opts = trn_opts
 		self.trn_struct = trn_struct
-		self.drawgenemap = drawgenemap
+		self.draw_map = draw_map
+		self.compare_map = compare_map
 		self.repeat =repeat
 		self.cleanup = cleanup
 		self.kargs = kargs
@@ -268,10 +272,10 @@ class Pipeline():
 		self.to_sqn(records)
 
 		# draw map
-		if self.drawgenemap:
-			self.draw_map()
-			if self.seqfmt == 'genbank':
-				self.compare_map()
+		if self.draw_map:
+			self.draw_gene_map()
+		if self.compare_map and self.seqfmt == 'genbank':
+			self.compare_gene_map()
 	
 		# summary
 		self.summary_records(records)
@@ -909,7 +913,7 @@ class Pipeline():
 		gb = '{}/{}.gb'.format(self.outdir, self.prefix)
 		cmd = 'asn2gb -i {} -o {}'.format(sqn, gb)
 		run_cmd(cmd, log=True)
-	def draw_map(self):
+	def draw_gene_map(self):
 		gb = '{}/{}.gb'.format(self.outdir, self.prefix)
 		outfig = '{}/{}.map.pdf'.format(self.outdir, self.prefix)
 		self._draw_map(gb, outfig)
@@ -921,7 +925,7 @@ class Pipeline():
 		cmd = 'ps2pdf {} {}'.format(tmpfig, outfig)
 		run_cmd(cmd, log=True)
 		
-	def compare_map(self):
+	def compare_gene_map(self):
 		opts = '--force_linear'
 		prefix = self.prefix.replace('.', '_')
 		gb = self.genome

@@ -1,2 +1,115 @@
-# name	alias	product	group
-
+# name	product									alias
+accD	acetyl-CoA carboxylase subunit
+atpA	ATP synthase CF1 alpha subunit
+atpB	ATP synthase CF1 beta subunit
+atpE	ATP synthase CF1 epsilon subunit
+atpF	ATP synthase CF0 subunit B
+atpH	ATP synthase CF0 subunit C
+atpI	ATP synthase CF0 subunit A
+ccsA	cytochrome c biogenesis protein			ycf5
+cemA	chloroplast envelope membrane protein	ycf10
+clpP	Clp protease catalytic subunit
+infA	translation initiation factor 1
+matK	maturase K
+ndhA	NADH dehydrogenase subunit 1
+ndhB	NADH dehydrogenase subunit 2
+ndhC	NADH dehydrogenase subunit 3
+ndhD	NADH dehydrogenase subunit 4
+ndhE	NADH dehydrogenase subunit 4L
+ndhF	NADH dehydrogenase subunit 5
+ndhG	NADH dehydrogenase subunit 6
+ndhH	NADH dehydrogenase subunit 7
+ndhI	NADH dehydrogenase subunit I
+ndhJ	NADH dehydrogenase subunit J
+ndhK	NADH dehydrogenase subunit K
+petA	cytochrome f
+petB	cytochrome b6
+petD	cytochrome b6/f complex subunit IV
+petG	cytochrome b6/f complex subunit G
+petL	cytochrome b6/f complex subunit L
+petN	cytochrome b6/f complex subunit N		ycf6
+psaA	photosystem I subunit A
+psaB	photosystem I subunit B
+psaC	photosystem I subunit C
+psaI	photosystem I subunit I
+psaJ	photosystem I subunit J
+psbA	photosystem II protein D1
+psbB	photosystem II subunit CP47
+psbC	photosystem II subunit CP43
+psbD	photosystem II protein D2
+psbE	photosystem II cytochrome b559 alpha submit
+psbF	photosystem II cytochrome b559 beta submit
+psbH	photosystem II protein H
+psbI	photosystem II protein I
+psbJ	photosystem II protein J
+psbK	photosystem II protein K
+psbL	photosystem II protein L
+psbM	photosystem II protein M
+psbN	photosystem II protein N
+psbT	photosystem II protein T
+psbZ	photosystem II protein Z	lhbA,ycf9
+rbcL	Rubisco large subunit
+rpl14	ribosomal protein L14
+rpl16	ribosomal protein L16
+rpl20	ribosomal protein L20
+rpl22	ribosomal protein L22
+rpl23	ribosomal protein L23
+rpl2	ribosomal protein L2
+rpl32	ribosomal protein L32
+rpl33	ribosomal protein L33
+rpl36	ribosomal protein L36
+rpoA	RNA polymerase alpha subunit
+rpoB	RNA polymerase beta subunit
+rpoC1	RNA polymerase beta' subunit
+rpoC2	RNA polymerase beta'' subunit
+rps11	ribosomal protein S11
+rps12	ribosomal protein S12
+rps14	ribosomal protein S14
+rps15	ribosomal protein S15
+rps16	ribosomal protein S16
+rps18	ribosomal protein S18
+rps19	ribosomal protein S19
+rps2	ribosomal protein S2
+rps3	ribosomal protein S3
+rps4	ribosomal protein S4
+rps7	ribosomal protein S7
+rps8	ribosomal protein S8
+ycf15	hypothetical chloroplast RF15
+ycf1	hypothetical chloroplast RF1
+ycf2	hypothetical chloroplast RF2
+ycf3	photosystem I assembly protein Ycf3
+ycf4	photosystem I assembly protein Ycf4
+rrn16	16S ribosomal RNA
+rrn23	23S ribosomal RNA
+rrn4.5	4.5S ribosomal RNA	rrn4-5,rrn4_5
+rrn5	5S ribosomal RNA
+trnA-UGC	tRNA-Ala
+trnC-GCA	tRNA-Cys
+trnD-GUC	tRNA-Asp
+trnE-UUC	tRNA-Glu
+trnF-GAA	tRNA-Phe
+trnfM-CAU	tRNA-Met	tRNA-fM-CAU
+trnG-GCC	tRNA-Gly
+trnG-UCC	tRNA-Gly
+trnH-GUG	tRNA-His
+trnI-CAU	tRNA-Ile
+trnI-GAU	tRNA-Ile
+trnK-UUU	tRNA-Lys
+trnL-CAA	tRNA-Leu
+trnL-UAA	tRNA-Leu
+trnL-UAG	tRNA-Leu
+trnM-CAU	tRNA-Met
+trnN-GUU	tRNA-Asn
+trnP-UGG	tRNA-Pro
+trnQ-UUG	tRNA-Gln
+trnR-ACG	tRNA-Arg
+trnR-UCU	tRNA-Arg
+trnS-GCU	tRNA-Ser
+trnS-GGA	tRNA-Ser
+trnS-UGA	tRNA-Ser
+trnT-GGU	tRNA-Thr
+trnT-UGU	tRNA-Thr
+trnV-GAC	tRNA-Val
+trnV-UAC	tRNA-Val
+trnW-CCA	tRNA-Trp
+trnY-GUA	tRNA-Tyr

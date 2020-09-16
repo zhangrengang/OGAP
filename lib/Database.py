@@ -252,7 +252,7 @@ class Database():
 		return len(records)
 		
 	def tgz_dirs(self, *dirs):
-		ckp = ''
+		ckp = '{basename}.x'
 		cmd = 'cd {dirname} && tar czf {basename}.tgz {basename} --remove-files'
 		self.tar_dirs(cmd, ckp, *dirs)
 	def untgz_dirs(self, *dirs):
@@ -263,7 +263,7 @@ class Database():
 		for _dir in dirs:
 			_dir = _dir.rstrip('/')
 			dirname, basename = os.path.dirname(_dir), os.path.basename(_dir)
-			_ckp = _dir #ckp.format(basename=basename)
+			_ckp = ckp.format(basename=basename)
 			if not os.path.exists(_ckp):
 				_cmd = cmd.format(dirname=dirname, basename=basename)
 				run_cmd(_cmd)
@@ -354,8 +354,8 @@ class Database():
 				gene_names, seqfiles, groups = \
 						self.parse_orthologs(orf, features, self.alndir, fout) # names
 			self.check_unique(seqfiles)
-			if not os.path.exists(prefix):
-				os.rename(info_file, prefix)
+			#if not os.path.exists(prefix):
+			os.rename(info_file, prefix)
 			logger.info('extrat {} genes: {}'.format(
 					len(gene_names), sorted(gene_names)))	# gene id
 
@@ -382,7 +382,9 @@ class Database():
 		# tar
 		self.tgz_dirs(self.seqdir, self.msadir, self.hmmdir, self.pfldir, self.tnddir)
 		if self.cleanup:
+			logger.info('cleaning')
 			rmdirs(self.tmpdir)
+		logger.info('build completed')
 	def check_unique(self, files):
 		if len(files) != len(set(files)):
 			logger.error('{}..are not unique'.format(files[0]))

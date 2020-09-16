@@ -16,8 +16,10 @@ from lib.translate_seq import six_frame_translate
 from lib.small_tools import mkdirs, rmdirs
 from lib.small_tools import open_file as open
 
-LOCATION = {'pt': 'chloroplast', 'mt': 'mitochondrion'}
+bindir = os.path.dirname(os.path.realpath(__file__))
+os.environ['PATH'] = bindir + ':' + os.environ['PATH']
 
+LOCATION = {'pt': 'chloroplast', 'mt': 'mitochondrion'}
 
 def makeArgparse():
 	parser = argparse.ArgumentParser( \
@@ -43,7 +45,7 @@ def makeArgparse():
 	parser.add_argument('-seqfmt', type=str, choices=['fasta', 'genbank'], default=None,
 					help="genome seqence format [default=auto]")
 	parser.add_argument("-est", action="store",type=str,
-					help="EST sequences for evidence in fasta format")
+					help="EST sequences as evidence in fasta format for coding genes annotation")
 
 	parser.add_argument('-sp', '-organism', type=str, default=None, dest='organism',
 					help="organism to be included in sqn [default=%(default)s]")
@@ -51,8 +53,8 @@ def makeArgparse():
 					help="topology to be included in sqn [default=circular]")
 	parser.add_argument('-partial', action="store_true", default=False,
 					help="completeness to be included in sqn [default=complete]")
-	parser.add_argument('-nosqn', action="store_true", default=False,
-                    help="do not generate sqn [default=%(default)s]")
+	parser.add_argument('-no_sqn', action="store_true", default=False,
+                    help="do not generate sqn file [default=%(default)s]")
 	parser.add_argument('-no_cds', action="store_true", default=False,
                     help="do not annotate coding gene [default=%(default)s]")
 	parser.add_argument('-no_rrn', action="store_true", default=False,
@@ -80,20 +82,20 @@ def makeArgparse():
 #	parser.add_argument('-score_cutoff', type=float, default=0.85,
 #					help="min score ratio of the highest of multi-copy gene to output [default=%(default)s]")
 	group_out.add_argument('-min_cds_score', type=float, default=0.85,
-					help="min score ratio to filter coding genes [default=%(default)s]")
+					help="min score ratio to filter duplicated coding genes [default=%(default)s]")
 	group_out.add_argument('-min_rrn_score', type=float, default=0.95,
-					help="min score ratio to filter rRNA genes [default=%(default)s]")
+					help="min score ratio to filter duplicated rRNA genes [default=%(default)s]")
 	group_out.add_argument('-min_trn_score', type=float, default=0.8,
-					help="min score ratio to filter tRNA genes [default=%(default)s]")
+					help="min score ratio to filter duplicated tRNA genes [default=%(default)s]")
 	group_out.add_argument('-orf', '-include_orf', action="store_true", default=False,
 					dest='include_orf',
-					help="include orf in gene prediction [default=%(default)s]")
+					help="include ORF genes in coding gene annotation [default=%(default)s]")
 	group_out.add_argument('-trn_struct', action="store_true", default=False,
 					help="output tRNA structure [default=%(default)s]")
 	group_out.add_argument('-draw_map', action="store_true", default=False,
 					help="draw gene map [default=%(default)s]")
 	group_out.add_argument('-compare_map', action="store_true", default=True,
-                    help="compare gene map [default=%(default)s]")
+                    help="compare gene map with genbank input [default=%(default)s]")
 
 	group_rep = parser.add_argument_group('repeat', )
 	group_rep.add_argument('-repeat', action="store_true", default=False,
@@ -1066,7 +1068,7 @@ class Pipeline():
 			return rc
 	def contains_gap(self, seqs):
 		for seq in seqs:
-			if set(seq.upper()) & {'N'}:
+			if set(seq.upper()) - set('ATCG'):
 				return True
 		return False
 

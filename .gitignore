@@ -1,7 +1,8 @@
 .gitignore
 db/[mp]t/*/*/
 build*
-test/*/
+test/test*/
+test/*out/
 tree
 #test/est.fa
 mitochondrion.*

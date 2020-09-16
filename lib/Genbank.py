@@ -41,7 +41,7 @@ class GenbankParser():
 			if key in d_species:
 				taxid, record.taxonomy, record.ranks = d_species[key]
 			else:
-				print >>sys.stderr, '`{}` is not found'.format(record.organism)
+				print >>sys.stderr, '`{}` ({}) is not found'.format(record.organism, record.id)
 				continue
 
 			index = record.is_taxon(taxon)
@@ -59,6 +59,7 @@ class GenbankParser():
 					continue
 			record.ranks = OrderedDict([(rank, tax) \
                     for rank, tax in zip(record.ranks, record.taxonomy)])
+			record.organism = record.ranks['species']
 			if not record.name_count:	# some taxa without annotation
 				continue
 			i += 1
@@ -100,10 +101,16 @@ class GenbankRecord():
 	@lazyproperty
 	def species(self):
 		#return self.annotations['organism'].replace(' ', '_')
-		return format_taxon(self.annotations['organism'])
+		#return format_taxon(self.annotations['organism'])
+		return format_taxon(self.organism)
 	@lazyproperty
 	def organism(self):
 		return self.annotations['organism']
+#		org = self.annotations['organism']
+#		if re.compile(r'(subsp|var)').search(org):
+#			return re.compile(r'(\S+.?\S+).?(subsp|var)?').match(org).groups()[0]
+#		else:
+#			return org
 	@lazyproperty
 	def genus(self):
 		#return self.annotations['organism'].split()[0]

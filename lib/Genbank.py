@@ -35,6 +35,8 @@ class GenbankParser():
 		print >>sys.stderr, 'loading genbank records'
 		self.tax = []
 		for record in self:
+			if not (record.cds_count>0 and record.rna_count>0):
+				continue
 			key = record.organism.lower()
 			if key in d_species:
 				taxid, record.taxonomy, record.ranks = d_species[key]
@@ -144,6 +146,9 @@ class GenbankRecord():
 	@lazyproperty
 	def trn_count(self):
 		return self.count_feature('tRNA')
+	@lazyproperty
+	def rna_count(self):
+		return self.rrn_count + self.trn_count
 	@lazyproperty
 	def name_count(self):
 		return self.count_qualifier('gene')

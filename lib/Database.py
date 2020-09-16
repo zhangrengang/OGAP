@@ -111,6 +111,7 @@ class Database():
 		return max(dbs, key=lambda x: x.index)
 	
 	def get_taxonomy(self, organism):
+		organism = organism.split()[0]	# use genus, which is more common
 		cmd = 'ete3 ncbiquery --search "{}" --info'.format(organism)
 		stdout, stderr, status = run_cmd(cmd, log=True)
 		for info in Ete3TaxonomyInfo(stdout):
@@ -137,6 +138,7 @@ class Database():
 		self.rna_genes = self.rna_info.genes
 		self.name_info = NameInfo(self.name_mapping)
 		name_dict = self.name_info.dict
+		self.gene_info = OrderedDict()
 		# update unified gene name and product
 		for gene in self.cds_genes + self.rna_genes:
 			name, product = gene.name, gene.product
@@ -153,6 +155,7 @@ class Database():
 			if product != mapped_product:
 				logger.info('mapping gene product {} -> {}'.format(product, mapped_product))
 			gene.name, gene.product = mapped_name, mapped_product
+			self.gene_info[gene.id] = gene
 		
 		logger.info('{} CDS, {} RNA'.format(len(self.cds_genes), len(self.rna_genes)))
 		self.cds_hmmfiles = [self.get_hmmfile(gene) for gene in self.cds_genes]
@@ -260,7 +263,7 @@ class Database():
 		for _dir in dirs:
 			_dir = _dir.rstrip('/')
 			dirname, basename = os.path.dirname(_dir), os.path.basename(_dir)
-			_ckp = ckp.format(basename=basename)
+			_ckp = _dir #ckp.format(basename=basename)
 			if not os.path.exists(_ckp):
 				_cmd = cmd.format(dirname=dirname, basename=basename)
 				run_cmd(_cmd)
@@ -332,8 +335,8 @@ class Database():
 					TaxonomyInfoLine(line).write(fout)
 
 			logger.info('running OrthoFinder to cluster genes')
-		#	if sp_tree is not None:
-		#		of_opts += ' -s {}'.format(sp_tree)
+			if sp_tree is not None:
+				of_opts += ' -s {}'.format(sp_tree)
 		#	of_opts += ' -og'
 			cmd = '{} -f {} -t {} {}'.format(ofbin, seqdir, self.ncpu, of_opts)
 			run_cmd(cmd, log=True)
@@ -637,7 +640,7 @@ augustus --species={species} {train_set}.test --translation_table={transl_table}
 	#	clade = min(depths, key=lambda x:x[1])[0]
 	#	tree.root_with_outgroup(clade)
 	#	print >>sys.stderr, 'rooted by {}'.format(clade)
-#		tree.root_at_midpoint()
+		tree.root_at_midpoint()
 		#tree.rooted = True
 		Phylo.write(tree, species_tree, trefmt)
 	@lazyproperty
@@ -861,16 +864,16 @@ class Ete3TaxonomyInfo(Info):
 		
 class Ete3TaxonomyInfoLine(GeneInfoLine):
 	def __init__(self, line=None):
-		self.title = ['taxid', 'sci_name', 'rank', '_named_lineage', '_taxid_lineage']
+		self.title = ['taxid', 'sci_name', 'rank', 'named_lineage_', 'taxid_lineage_']
 		self.ctype = [int, str, str, str, str]
 		self.line = line
 		self.set_attr()
 	@lazyproperty
 	def named_lineage(self):
-		return self._named_lineage.split(',')
+		return self.named_lineage_.split(',')
 	@lazyproperty
 	def taxid_lineage(self):
-		map(int, self._taxid_lineage.split(','))
+		return map(int, self.taxid_lineage_.split(','))
 
 def main():
 	'''example:

@@ -14,6 +14,7 @@ from lib.Repeat import RepeatPipeline, addRepeatArgs
 from lib.RunCmdsMP import run_cmd, run_job, logger
 from lib.translate_seq import six_frame_translate
 from lib.small_tools import mkdirs, rmdirs
+from lib.small_tools import open_file as open
 
 LOCATION = {'pt': 'chloroplast', 'mt': 'mitochondrion'}
 
@@ -31,6 +32,8 @@ def makeArgparse():
 					help="equal to '-organ pt' [default=%(default)s]")
 	parser.add_argument('-taxon', type=str, default=None, 
 					help="taxon to use as reference, such as rosids [default=auto by -organism]")
+	parser.add_argument('-trans', action="store_true", default=False,
+					help='transcipt mode [default=%(default)s]')
 	parser.add_argument("-tmpdir", action="store",
 					default='/dev/shm/tmp', type=str,
 					help="temporary directory [default=%(default)s]")
@@ -48,7 +51,15 @@ def makeArgparse():
 					help="topology to be included in sqn [default=circular]")
 	parser.add_argument('-partial', action="store_true", default=False,
 					help="completeness to be included in sqn [default=complete]")
-	
+	parser.add_argument('-nosqn', action="store_true", default=False,
+                    help="do not generate sqn [default=%(default)s]")
+	parser.add_argument('-no_cds', action="store_true", default=False,
+                    help="do not annotate coding gene [default=%(default)s]")
+	parser.add_argument('-no_rrn', action="store_true", default=False,
+                    help="do not annotate rRNA [default=%(default)s]")
+	parser.add_argument('-no_trn', action="store_true", default=False,
+                    help="do not annotate tRNA [default=%(default)s]")
+
 	group_out = parser.add_argument_group('output',)
 	group_out.add_argument('-o', "-outdir", action="store", dest='outdir',
 					default='.', type=str,
@@ -56,12 +67,12 @@ def makeArgparse():
 	group_out.add_argument('-pre', "-prefix", action="store", dest='prefix',
 					default=None, type=str,
 					help="output prefix [default=%(default)s]")
-	# parser.add_argument('-min_cds_cov', type=float, default=80,
-					# help="min coverage to filter candidate coding genes [default=%(default)s]")
-	# parser.add_argument('-min_rrn_cov', type=float, default=90,
-					# help="min coverage to filter candidate rRNA genes [default=%(default)s]")
-	# parser.add_argument('-min_trn_cov', type=float, default=50,
-					# help="min coverage to filter candidate tRNA genes [default=%(default)s]")
+	parser.add_argument('-min_cds_cov', type=float, default=40,
+					help="min coverage to filter candidate coding genes [default=%(default)s]")
+	parser.add_argument('-min_rrn_cov', type=float, default=40,
+					help="min coverage to filter candidate rRNA genes [default=%(default)s]")
+	parser.add_argument('-min_trn_cov', type=float, default=40,
+					help="min coverage to filter candidate tRNA genes [default=%(default)s]")
 	group_out.add_argument('-min_cov', type=float, default=25,
 					 help="min coverage to filter out final gene set [default=%(default)s]")
 	group_out.add_argument('-min_score', type=float, default=15,
@@ -104,6 +115,7 @@ def makeArgparse():
 class Pipeline():
 	def __init__(self, genome, 
 				organ, taxon, 
+				trans=False,
 				outdir='.',
 				prefix=None,
 				transl_table=None,
@@ -112,10 +124,19 @@ class Pipeline():
 				organism=None,
 				linear=False, 
 				partial=False,
-				include_orf=False,
-				min_cds_cov=80,		# obsoleted
-				min_rrn_cov=90,		# obsoleted
-				min_trn_cov=50,		# obsoleted
+				nosqn=False,
+				no_cds=False,		# do not annotate CDS
+				no_rrn=False,
+				no_trn=False,
+				sqn_annot=False,	# only sequences with annotation to sqn
+				include_orf=False,	# annotate ORF
+				exon_diff_penalty = 100,
+				min_cds_hmmcov=0,	# min coverage of each hmm hit
+				min_rrn_hmmcov=5,
+				min_trn_hmmcov=5,
+				min_cds_cov=40,		# min coverage of sum of hmm hits
+				min_rrn_cov=40,		# 
+				min_trn_cov=40,		# 
 				cov_cutoff=0.75,	# filter candidate (> highest * cov_cutoff)
 				#score_cutoff=0.85,	# filter final set (> highest * score_cutoff) to filter out multi-copy
 				min_cds_score=0.85,		# score_cutoff for cds
@@ -135,11 +156,17 @@ class Pipeline():
 		self.genome = os.path.realpath(genome)
 		self.organ = organ
 		self.taxon = taxon
+		self.trans = trans
 		self.outdir = os.path.realpath(outdir)
 		self.est = est
 		self.organism = organism
 		self.linear = linear
 		self.partial = partial
+		self.nosqn = nosqn
+		self.sqn_annot = sqn_annot
+		self.no_cds = no_cds
+		self.no_rrn = no_rrn
+		self.no_trn = no_trn
 		self.include_orf = include_orf
 		self.trn_opts = trn_opts
 		self.trn_struct = trn_struct
@@ -147,6 +174,7 @@ class Pipeline():
 		self.compare_map = compare_map
 		self.repeat =repeat
 		self.cleanup = cleanup
+		self.exon_diff_penalty = exon_diff_penalty
 		self.kargs = kargs
 		if seqfmt is None:
 			self.seqfmt = self.guess_seqfmt(self.genome)
@@ -154,7 +182,7 @@ class Pipeline():
 		else:
 			self.seqfmt = seqfmt
 		if self.seqfmt == 'genbank':
-			rc = self.get_record()
+			rc = self.get_record(self.genome)
 			if self.organism is None:
 				try:
 					self.organism = rc.annotations['organism'].replace(' Unclassified.', '')
@@ -168,7 +196,14 @@ class Pipeline():
 			if not self.partial:
 				if rc.description.find('complete') < 0:
 					self.partial = True
-
+		# min coverage of one hmm hit
+		self.min_cds_hmmcov = min_cds_hmmcov
+		self.min_rrn_hmmcov = min_rrn_hmmcov
+		self.min_trn_hmmcov = min_trn_hmmcov
+		if self.trans:	# expect complete gene region
+			self.min_cds_hmmcov = 90
+			self.min_rrn_hmmcov = 90
+			self.min_trn_hmmcov = 90
 		# min coverage
 		self.min_cds_cov = min_cds_cov
 		self.min_rrn_cov = min_rrn_cov
@@ -221,11 +256,18 @@ class Pipeline():
 		self.db.checkdb()
 		if self.transl_table is None:
 			self.transl_table = self.db.transl_table
-			
+	
 		# read genome seqs
-		self.seqs = self.get_seqs(self.genome, self.seqfmt)
+		self.seqs = self.get_seqs(open(self.genome), self.seqfmt)
 		self.seqlen = sum([len(seq) for seq in self.seqs.values()])
 		seqids = self.seqs.keys()
+		self.nseqs = len(seqids)
+		if self.nseqs > 1:
+			self.linear = self.partial = True
+			self.sqn_annot = True
+		if self.contains_gap(self.seqs.values()):
+			self.partial = True
+
 		# to fasta
 		self.fsa = self.to_fsa()
 
@@ -268,14 +310,17 @@ class Pipeline():
 		self.to_gff3(records)
 
 		# out sqn
-		logger.info('outputing sqn for submitting Genbank')
-		self.to_sqn(records)
+		if not self.nosqn:
+			if self.sqn_annot:
+				self.re_fsa(records)
+			logger.info('outputing sqn for submitting Genbank')
+			self.to_sqn(records)
 
-		# draw map
-		if self.draw_map:
-			self.draw_gene_map()
-		if self.compare_map and self.seqfmt == 'genbank':
-			self.compare_gene_map()
+			# draw map
+			if self.draw_map:
+				self.draw_gene_map()
+			if self.compare_map and self.seqfmt == 'genbank':
+				self.compare_gene_map()
 	
 		# summary
 		self.summary_records(records)
@@ -284,34 +329,6 @@ class Pipeline():
 		if self.cleanup:
 			logger.info('cleaning')
 			rmdirs(self.tmpdir)
-	def plot_struct(self, trndir, records):
-		mkdirs(trndir)
-		ids = set([])
-		for record in sorted(records, key=lambda x:(x.name, -x.score)):
-			if not record.rna_type == 'tRNA':
-				continue
-			id = '{}-{}'.format(record.product, record.name)
-			if id in ids:
-				print >>sys.stderr, '{} duplicates, ignored'.format(id)
-				continue
-			ids.add(id)
-			struct_file = '{}/{}.struct'.format(trndir, id)
-			with open(struct_file, 'w') as fout:
-				print >> fout, '{seq}\n{struct}'.format(
-					seq=record.struct.rna_seq, struct=record.struct.rna_struct)
-			struct_file = os.path.realpath(struct_file)
-			outfig = '{}/{}.pdf'.format(trndir, id)
-			# cmd = 'cd {dir} && cat {struct_file} | \
-					# RNAplot --pre "{start} {end} 8 GREEN omark" && mv rna.ps {id}.ps'.format(
-					# dir=trndir, struct_file=struct_file, 
-					# start=record.struct.codon_start, end=record.struct.codon_end,
-					# id=id)
-			cmd = 'cd {dir} && cat {struct_file} | \
-					RNAplot --pre "{start} {end} 8 GREEN omark" && ps2pdf rna.ps {outfig}'.format(
-					dir=self.tmpdir, struct_file=struct_file, 
-					start=record.struct.codon_start, end=record.struct.codon_end,
-					outfig=outfig)
-			run_cmd(cmd, log=True)
 
 	def remove_lowqual(self, records, cutoff={}, hard_cutoff=20, min_cov=50):
 		'''remove duplicates with same name and low qual'''
@@ -362,7 +379,7 @@ class Pipeline():
 		keys = set([])
 		d_group = OrderedDict()
 		for record in records:
-			key1 = (str(record),)
+			key1 = (str(record),)	# coordinate
 			key2 = key1 + (record.id, )
 			if key2 in keys:	# duplicates from the same gene
 				print >>sys.stderr, key2, 'removed'
@@ -371,7 +388,7 @@ class Pipeline():
 			except KeyError: d_group[key1] = [record]
 			keys.add(key2)
 		unique_records = []
-		for key, records in d_group.items():
+		for key, records in d_group.items():	# duplicates from different genes with same coordinate
 			if len(records) == 1:	# unique
 				unique_records += records
 				continue
@@ -387,7 +404,7 @@ class Pipeline():
 			for rc1, rc2 in combinations(records, 2):
 				#print >>sys.stderr, 'remove_overlaps'
 				if rc1.overlaps(rc2):
-					overalped_record = min(records, key=lambda x:x.score)
+					overalped_record = min([rc1, rc2], key=lambda x:x.score)
 					print >>sys.stderr, overalped_record, overalped_record.name, 'removed with overlap'
 					overalped_records += [overalped_record]
 			if len(overalped_records) == 0:
@@ -422,7 +439,7 @@ class Pipeline():
 			except KeyError: d_smy[record.rna_type] = [record]
 			
 		line = ['type', 'copy number', 'gene number', 'gene names']
-		print >>sys.stderr, '\t'.join(line)
+		print >>sys.stdout, '\t'.join(line)
 		for rna_type, records in d_smy.items():
 			genes = [record.id for record in records]
 			names = list({record.name for record in records})
@@ -432,23 +449,31 @@ class Pipeline():
 			print >>sys.stdout, '\t'.join(line)
 	
 	def hmmsearch_rna(self):
+		records = []
+		if self.no_rrn and self.no_trn:
+			return records
 		na_seq = '{}/{}.genome.na'.format(self.tmpdir, self.prefix)
 		na_seq = '{}/{}.genome.na'.format(self.tmpdir, self.prefix)
 		with open(na_seq, 'w') as fout:
-			d_length = self.double_seqs(self.genome, fout, seqfmt=self.seqfmt)
-		records = []
+			d_length = self.double_seqs(self.fsa, fout, seqfmt='fasta') #self.seqfmt)
 		#trn_records = []
 		for gene in self.db.rna_genes:
+			if gene.seq_type == 'rRNA' and self.no_rrn:
+				continue
+			if gene.seq_type == 'tRNA' and self.no_trn:
+				continue
 			print >>sys.stderr, '\n   >> {}: {}'.format(gene, gene.name)
 			hmmfile = self.db.get_hmmfile(gene)
 			domtblout = self.get_domtblout(gene, src='g')
 			self.hmmsearch(hmmfile, na_seq, domtblout)
 			if gene.seq_type == 'rRNA':
 				structs = HmmSearch(domtblout).get_gene_structure(d_length, 
-								min_ratio=self.cov_cutoff, min_hmmcov=5, min_part=2,
+								min_ratio=self.cov_cutoff, 
+								min_hmmcov=self.min_rrn_hmmcov, min_part=2,
 								min_cov=self.min_rrn_cov, seq_type='nucl', flank=2000)
 				for i, parts in enumerate(structs):
 					parts.id = '{}-{}'.format(gene, i+1)
+					parts = parts.link_part()
 					print >> sys.stderr, 'old', parts.to_str()
 					genefa = self.get_filename(self.agtoutdir, parts, 'fa')
 					with open(genefa, 'w') as fout:
@@ -478,11 +503,13 @@ class Pipeline():
 			elif gene.seq_type == 'tRNA':
 				#continue
 				structs = HmmSearch(domtblout).get_gene_structure(d_length,
-								min_ratio=self.cov_cutoff, min_hmmcov=5, min_part=2,
+								min_ratio=self.cov_cutoff, 
+								min_hmmcov=self.min_trn_hmmcov, min_part=2, # diff
 							    min_cov=self.min_trn_cov, seq_type='nucl', flank=200)
 				c = 0
 				for i, parts in enumerate(structs):
 					parts.id = '{}-{}'.format(gene, i+1)
+					parts = parts.link_part()
 					print >> sys.stderr, 'old', parts.to_str()
 					genefa = self.get_filename(self.hmmoutdir, parts, 'fa')
 					with open(genefa, 'w') as fout:
@@ -520,13 +547,16 @@ class Pipeline():
 
 
 	def hmmsearch_protein(self):
+		records = []
+		if self.no_cds:
+			return records
 		# translate
 		aa_seq = '{}/{}.genome.aa'.format(self.tmpdir, self.prefix)
 		with open(aa_seq, 'w') as fout:
-			d_length = six_frame_translate(self.genome, fout, seqfmt=self.seqfmt, 
+			d_length = six_frame_translate(self.fsa, fout, seqfmt='fasta', #self.seqfmt, 
 											transl_table=self.transl_table)
+			#print >>sys.stderr,d_length
 		# hmmsearch
-		records = []
 		for gene in self.db.cds_genes:
 			print >>sys.stderr, '\n   >> {}: {}'.format(gene, gene.name)
 			hmmfile = self.db.get_hmmfile(gene)
@@ -534,9 +564,11 @@ class Pipeline():
 			self.hmmsearch(hmmfile, aa_seq, domtblout)
 			structs = HmmSearch(domtblout).get_gene_structure(d_length,
 							min_ratio=self.cov_cutoff,
+							min_hmmcov=self.min_cds_hmmcov,
 							min_cov=self.min_cds_cov, seq_type='prot', flank=5000)
 			for i, parts in enumerate(structs):
 				parts.id = '{}-{}'.format(gene, i+1)	# parts is a copy
+				parts = parts.link_part()
 				genefa = self.get_filename(self.agtoutdir, parts, 'fa')
 				with open(genefa, 'w') as fout:
 					parts.write_seq(self.seqs, fout)
@@ -548,7 +580,7 @@ class Pipeline():
 				ex_gtf, ex_domtblout = self.exonerate_gene_predict(genefa, gene, parts)
 				# gene by augustus
 				ag_gtf, ag_domtblout = self.augustus_gene_predict(genefa, gene, parts)
-				best_gtf, source = self.get_best_gene(ag_gtf, ag_domtblout, ex_gtf, ex_domtblout)
+				best_gtf, source = self.get_best_gene(ag_gtf, ag_domtblout, ex_gtf, ex_domtblout, id=gene.id)
 				if best_gtf is None:
 					continue
 			#	print >> sys.stderr, source
@@ -581,7 +613,7 @@ class Pipeline():
 		
 	def prepare_hints(self):
 		for gene in self.db.cds_genes:
-			self.prepare_gene_hints(self.genome, gene)
+			self.prepare_gene_hints(self.fsa, gene)
 	def prepare_gene_hints(self, reference, gene, copy=None):
 		if copy is None:
 			copy = gene
@@ -626,7 +658,14 @@ class Pipeline():
 							if record.id == ex_hmm_best.tname][0]
 		return ex_best
 	
-	def get_best_gene(self, ag_gtf, ag_domtblout, ex_gtf, ex_domtblout, ex_weight=0.99):
+	def penalize_exon_diff(self, record, id):
+		#id = record.id
+		exon_count = record.count_type('cds', 'CDS') #count_exon()
+		db_exon_count = self.db.gene_info[id].exon_count
+		diff = abs(exon_count - db_exon_count)
+		return diff * self.exon_diff_penalty
+		
+	def get_best_gene(self, ag_gtf, ag_domtblout, ex_gtf, ex_domtblout, id=None, ex_weight=0.95):
 		ag_hmm_best = HmmSearch(ag_domtblout).get_best_hit() if os.path.exists(ag_domtblout) else None
 		ex_hmm_best = HmmSearch(ex_domtblout).get_best_hit() if os.path.exists(ex_domtblout) else None
 		if ag_hmm_best is None:
@@ -661,7 +700,9 @@ class Pipeline():
 				return ag_best
 			else:
 				return ag_best
-		#print >>sys.stderr, ex_hmm_best.edit_score, ag_hmm_best.edit_score
+		ex_hmm_best.edit_score -= self.penalize_exon_diff(ex_best[0], id)
+		ag_hmm_best.edit_score -= self.penalize_exon_diff(ag_best[0], id)
+		print >>sys.stderr, ex_hmm_best.edit_score, ag_hmm_best.edit_score
 		if ex_hmm_best.edit_score*ex_weight > ag_hmm_best.edit_score:
 			return ex_best
 		else:
@@ -687,7 +728,7 @@ class Pipeline():
 
 	def augustus_predict(self):
 		for gene in self.db.cds_genes:
-			self.augustus_gene_predict(self.genome, gene)
+			self.augustus_gene_predict(self.fsa, gene)
 	def augustus_gene_predict(self, reference, gene, copy=None):
 		if copy is None:
 			copy = gene
@@ -880,28 +921,45 @@ class Pipeline():
 		desc += ['[location={}]'.format(LOCATION[self.organ])]
 		if not self.linear:
 			desc += ['[topology=circular]']
+#		else:
+#			desc += ['[topology=linear]']
 		if not self.partial:
 			desc += ['[completeness=complete]']
+#		else:
+#			desc += ['[completeness=partial]']
+		if self.trans:
+			desc += ['[moltype=transcribed_RNA]']
 		desc = ' '.join(desc)
 		fsa = '{}/{}.fsa'.format(self.outdir, self.prefix)
 		fout = open(fsa, 'w')
-		for id, seq in self.seqs.items():
-			
+		for id, seq in self.seqs.items():	
 			print >> fout, '>{} {}\n{}'.format(id, desc, seq)
 		fout.close()
 		return fsa
 
+	def re_fsa(self, records):
+		d_seqs = OrderedDict([(rc.id, rc) for rc in SeqIO.parse(self.fsa, 'fasta')])
+		chroms = {record.chrom for record in records}
+		fout = open(self.fsa, 'w')
+		for chrom, rc in d_seqs.items():
+			if chrom in chroms:
+				SeqIO.write(rc, fout, 'fasta')
+		fout.close()
+
 	def to_sqn(self, records):
 		g,s = self.organism.split()[:2]
-		prefix = g[:2] + s[:3]
+		prefix = g[:1] + s[:2] + self.organ #[0]
 		prefix = prefix.upper()
 		# to tbl
 		tbl = '{}/{}.tbl'.format(self.outdir, self.prefix)
 		fout = open(tbl, 'w')
 		for seqid in self.seqs.keys():
+			my_records = [record for record in records if record.chrom == seqid]
+			if not my_records:
+				continue
 			print >>fout, '>Feature {}'.format(seqid)
-			for i, record in enumerate(records):
-				locus_tag = '{}_{:0>6d}'.format(prefix, i)
+			for i, record in enumerate(my_records):
+				locus_tag = '{}_{:0>4d}'.format(prefix, i)
 				record.to_tbl(fout, seqid, transl_table=self.transl_table, 
 						locus_tag=locus_tag)
 		fout.close()
@@ -909,6 +967,8 @@ class Pipeline():
 		sqn = '{}/{}.sqn'.format(self.outdir, self.prefix)
 		templete = self.db.templete
 		cmd = 'tbl2asn -i {} -o {} -t {}'.format(self.fsa, sqn, templete)
+		if self.nseqs > 1:
+			cmd += ' -M b'
 		run_cmd(cmd, log=True)
 		gb = '{}/{}.gb'.format(self.outdir, self.prefix)
 		cmd = 'asn2gb -i {} -o {}'.format(sqn, gb)
@@ -943,7 +1003,7 @@ class Pipeline():
 \usepackage{pdflscape}
 \begin{document}
 \begin{landscape}
-\begin{figure}[H]
+\begin{figure}
   \centering
   \includegraphics[width=1.0\linewidth]{%s}
   \includegraphics[width=1.0\linewidth]{%s}
@@ -960,6 +1020,35 @@ class Pipeline():
 				self.outdir, texfile, basename=basename)
 		run_cmd(cmd, log=True)
 	
+	def plot_struct(self, trndir, records):
+		mkdirs(trndir)
+		ids = set([])
+		for record in sorted(records, key=lambda x:(x.name, -x.score)):
+			if not record.rna_type == 'tRNA':
+				continue
+			id = '{}-{}'.format(record.product, record.name)
+			if id in ids:
+				print >>sys.stderr, '{} duplicates, ignored'.format(id)
+				continue
+			ids.add(id)
+			struct_file = '{}/{}.struct'.format(trndir, id)
+			with open(struct_file, 'w') as fout:
+				print >> fout, '{seq}\n{struct}'.format(
+					seq=record.struct.rna_seq, struct=record.struct.rna_struct)
+			struct_file = os.path.realpath(struct_file)
+			outfig = '{}/{}.pdf'.format(trndir, id)
+			# cmd = 'cd {dir} && cat {struct_file} | \
+					# RNAplot --pre "{start} {end} 8 GREEN omark" && mv rna.ps {id}.ps'.format(
+					# dir=trndir, struct_file=struct_file, 
+					# start=record.struct.codon_start, end=record.struct.codon_end,
+					# id=id)
+			cmd = 'cd {dir} && cat {struct_file} | \
+					RNAplot --pre "{start} {end} 8 GREEN omark" && ps2pdf rna.ps {outfig}'.format(
+					dir=self.tmpdir, struct_file=struct_file, 
+					start=record.struct.codon_start, end=record.struct.codon_end,
+					outfig=outfig)
+			run_cmd(cmd, log=True)
+
 	def _check_database(self):
 		pass
 	def _check_dependencies(self):
@@ -972,9 +1061,14 @@ class Pipeline():
 			return 'genbank'
 		else:
 			raise ValueError('unrecognized sequence format')
-	def get_record(self):
-		for rc in SeqIO.parse(self.genome, self.seqfmt):
+	def get_record(self, genome):
+		for rc in SeqIO.parse(genome, self.seqfmt):
 			return rc
+	def contains_gap(self, seqs):
+		for seq in seqs:
+			if set(seq.upper()) & {'N'}:
+				return True
+		return False
 
 def main():
 	args = makeArgparse()

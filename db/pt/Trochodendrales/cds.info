@@ -1,0 +1,87 @@
+#id	name	product	seq_type	exon_count	trans_splicing	gene_count	species_count	names	products	species
+accD	accD	acetyl-CoA carboxylase beta subunit	CDS	1	False	2	2	accD:2	acetyl-CoA carboxylase beta subunit:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+atpA	atpA	ATP synthase CF1 alpha subunit	CDS	1	False	2	2	atpA:2	ATP synthase CF1 alpha subunit:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+atpB	atpB	ATP synthase CF1 beta subunit	CDS	1	False	2	2	atpB:2	ATP synthase CF1 beta subunit:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+atpE	atpE	ATP synthase CF1 epsilon subunit	CDS	1	False	2	2	atpE:2	ATP synthase CF1 epsilon subunit:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+atpF	atpF	ATP synthase CF0 B subunit	CDS	2	False	2	2	atpF:2	ATP synthase CF0 B subunit:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+atpH	atpH	ATP synthase CF0 C subunit	CDS	1	False	2	2	atpH:2	ATP synthase CF0 C subunit:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+atpI	atpI	ATP synthase CF0 A subunit	CDS	1	False	2	2	atpI:2	ATP synthase CF0 A subunit:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+ccsA	ccsA	cytochrome c biogenesis protein	CDS	1	False	2	2	ccsA:2	cytochrome c biogenesis protein:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+cemA	cemA	envelope membrane protein	CDS	1	False	2	2	cemA:2	envelope membrane protein:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+clpP	clpP	ATP-dependent Clp protease proteolytic subunit	CDS	3	False	2	2	clpP:2	ATP-dependent Clp protease proteolytic subunit:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+infA	infA	translation initiation factor 1	CDS	1	False	2	2	infA:2	translation initiation factor 1:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+matK	matK	maturase K	CDS	1	False	2	2	matK:2	maturase K:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+ndhA	ndhA	NADH dehydrogenase subunit 1	CDS	2	False	2	2	ndhA:2	NADH dehydrogenase subunit 1:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+ndhB	ndhB	NADH dehydrogenase subunit 2	CDS	2	False	2	2	ndhB:2	NADH dehydrogenase subunit 2:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+ndhC	ndhC	NADH dehydrogenase subunit 3	CDS	1	False	2	2	ndhC:2	NADH dehydrogenase subunit 3:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+ndhD	ndhD	NADH dehydrogenase subunit 4	CDS	1	False	2	2	ndhD:2	NADH dehydrogenase subunit 4:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+ndhE	ndhE	NADH dehydrogenase subunit 4L	CDS	1	False	2	2	ndhE:2	NADH dehydrogenase subunit 4L:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+ndhF	ndhF	NADH dehydrogenase subunit 5	CDS	1	False	2	2	ndhF:2	NADH dehydrogenase subunit 5:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+ndhG	ndhG	NADH dehydrogenase subunit 6	CDS	1	False	2	2	ndhG:2	NADH dehydrogenase subunit 6:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+ndhH	ndhH	NADH dehydrogenase subunit 7	CDS	1	False	2	2	ndhH:2	NADH dehydrogenase subunit 7:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+ndhI	ndhI	NADH dehydrogenase subunit I	CDS	1	False	2	2	ndhI:2	NADH dehydrogenase subunit I:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+ndhJ	ndhJ	NADH dehydrogenase subunit J	CDS	1	False	2	2	ndhJ:2	NADH dehydrogenase subunit J:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+ndhK	ndhK	NADH dehydrogenase subunit K	CDS	1	False	2	2	ndhK:2	NADH dehydrogenase subunit K:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+petA	petA	cytochrome f	CDS	1	False	2	2	petA:2	cytochrome f:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+petB	petB	cytochrome b6	CDS	2	False	2	2	petB:2	cytochrome b6:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+petD	petD	cytochrome b6/f complex subunit IV	CDS	2	False	2	2	petD:2	cytochrome b6/f complex subunit IV:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+petG	petG	cytochrome b6/f complex subunit V	CDS	1	False	2	2	petG:2	cytochrome b6/f complex subunit V:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+petL	petL	cytochrome b6/f complex subunit VI	CDS	1	False	2	2	petL:2	cytochrome b6/f complex subunit VI:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+petN	petN	cytochrome b6/f complex subunit VIII	CDS	1	False	2	2	petN:2	cytochrome b6/f complex subunit VIII:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+psaA	psaA	photosystem I P700 chlorophyll a apoprotein A1	CDS	1	False	2	2	psaA:2	photosystem I P700 chlorophyll a apoprotein A1:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+psaB	psaB	photosystem I P700 chlorophyll a apoprotein A2	CDS	1	False	2	2	psaB:2	photosystem I P700 chlorophyll a apoprotein A2:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+psaC	psaC	photosystem I subunit VII	CDS	1	False	2	2	psaC:2	photosystem I subunit VII:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+psaI	psaI	photosystem I subunit VIII	CDS	1	False	2	2	psaI:2	photosystem I subunit VIII:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+psaJ	psaJ	photosystem I subunit IX	CDS	1	False	2	2	psaJ:2	photosystem I subunit IX:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+psbA	psbA	photosystem II protein D1	CDS	1	False	2	2	psbA:2	photosystem II protein D1:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+psbB	psbB	photosystem II 47 kDa protein	CDS	1	False	2	2	psbB:2	photosystem II 47 kDa protein:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+psbC	psbC	photosystem II 44 kDa protein	CDS	1	False	2	2	psbC:2	photosystem II 44 kDa protein:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+psbD	psbD	photosystem II protein D2	CDS	1	False	2	2	psbD:2	photosystem II protein D2:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+psbE	psbE	photosystem II protein V	CDS	1	False	2	2	psbE:2	photosystem II protein V:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+psbF	psbF	photosystem II protein VI	CDS	1	False	2	2	psbF:2	photosystem II protein VI:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+psbH	psbH	photosystem II protein H	CDS	1	False	2	2	psbH:2	photosystem II protein H:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+psbI	psbI	photosystem II protein I	CDS	1	False	2	2	psbI:2	photosystem II protein I:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+psbJ	psbJ	photosystem II protein J	CDS	1	False	2	2	psbJ:2	photosystem II protein J:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+psbK	psbK	photosystem II protein K	CDS	1	False	2	2	psbK:2	photosystem II protein K:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+psbL	psbL	photosystem II protein L	CDS	1	False	2	2	psbL:2	photosystem II protein L:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+psbM	psbM	photosystem II protein M	CDS	1	False	2	2	psbM:2	photosystem II protein M:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+psbN	psbN	photosystem II protein N	CDS	1	False	2	2	psbN:2	photosystem II protein N:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+psbT	psbT	photosystem II protein T	CDS	1	False	2	2	psbT:2	photosystem II protein T:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+psbZ	psbZ	photosystem II protein Z	CDS	1	False	2	2	psbZ:2	photosystem II protein Z:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+rbcL	rbcL	ribulose-1,5-bisphosphate carboxylase/oxygenase large subunit	CDS	1	False	2	2	rbcL:2	ribulose-1,5-bisphosphate carboxylase/oxygenase large subunit:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+rpl14	rpl14	ribosomal protein L14	CDS	1	False	2	2	rpl14:2	ribosomal protein L14:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+rpl16	rpl16	ribosomal protein L16	CDS	2	False	2	2	rpl16:2	ribosomal protein L16:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+rpl16-64	rpl16	ribosomal protein L16	CDS	2	False	2	2	rpl16:2	ribosomal protein L16:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+rpl2	rpl2	ribosomal protein L2	CDS	2	False	2	2	rpl2:2	ribosomal protein L2:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+rpl2-84	rpl2	ribosomal protein L2	CDS	2	False	2	2	rpl2:2	ribosomal protein L2:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+rpl20	rpl20	ribosomal protein L20	CDS	1	False	2	2	rpl20:2	ribosomal protein L20:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+rpl22	rpl22	ribosomal protein L22	CDS	1	False	2	2	rpl22:2	ribosomal protein L22:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+rpl23	rpl23	ribosomal protein L23	CDS	1	False	2	2	rpl23:2	ribosomal protein L23:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+rpl23-20	rpl23	ribosomal protein L23	CDS	1	False	2	2	rpl23:2	ribosomal protein L23:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+rpl32	rpl32	ribosomal protein L32	CDS	1	False	2	2	rpl32:2	ribosomal protein L32:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+rpl33	rpl33	ribosomal protein L33	CDS	1	False	2	2	rpl33:2	ribosomal protein L33:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+rpl36	rpl36	ribosomal protein L36	CDS	1	False	2	2	rpl36:2	ribosomal protein L36:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+rpoA	rpoA	RNA polymerase alpha subunit	CDS	1	False	2	2	rpoA:2	RNA polymerase alpha subunit:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+rpoB	rpoB	RNA polymerase beta subunit	CDS	1	False	2	2	rpoB:2	RNA polymerase beta subunit:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+rpoC1	rpoC1	RNA polymerase beta' subunit	CDS	2	False	2	2	rpoC1:2	RNA polymerase beta' subunit:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+rpoC2	rpoC2	RNA polymerase beta'' subunit	CDS	1	False	2	2	rpoC2:2	RNA polymerase beta'' subunit:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+rps11	rps11	ribosomal protein S11	CDS	1	False	2	2	rps11:2	ribosomal protein S11:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+rps12	rps12	ribosomal protein S12	CDS	3	True	2	2	rps12:2	ribosomal protein S12:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+rps12-66	rps12	ribosomal protein S12	CDS	3	True	2	2	rps12:2	ribosomal protein S12:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+rps14	rps14	ribosomal protein S14	CDS	1	False	2	2	rps14:2	ribosomal protein S14:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+rps15	rps15	ribosomal protein S15	CDS	1	False	2	2	rps15:2	ribosomal protein S15:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+rps16	rps16	ribosomal protein S16	CDS	2	False	2	2	rps16:2	ribosomal protein S16:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+rps18	rps18	ribosomal protein S18	CDS	1	False	2	2	rps18:2	ribosomal protein S18:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+rps19	rps19	ribosomal protein S19	CDS	1	False	2	2	rps19:2	ribosomal protein S19:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+rps19-71	rps19	ribosomal protein S19	CDS	1	False	2	2	rps19:2	ribosomal protein S19:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+rps2	rps2	ribosomal protein S2	CDS	1	False	2	2	rps2:2	ribosomal protein S2:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+rps3	rps3	ribosomal protein S3	CDS	1	False	2	2	rps3:2	ribosomal protein S3:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+rps3-50	rps3	ribosomal protein S3	CDS	1	False	2	2	rps3:2	ribosomal protein S3:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+rps4	rps4	ribosomal protein S4	CDS	1	False	2	2	rps4:2	ribosomal protein S4:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+rps7	rps7	ribosomal protein S7	CDS	1	False	2	2	rps7:2	ribosomal protein S7:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+rps7-43	rps7	ribosomal protein S7	CDS	1	False	2	2	rps7:2	ribosomal protein S7:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+rps8	rps8	ribosomal protein S8	CDS	1	False	2	2	rps8:2	ribosomal protein S8:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+rps8-24	rps8	ribosomal protein S8	CDS	1	False	2	2	rps8:2	ribosomal protein S8:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+ycf1	ycf1	hypothetical chloroplast RF1	CDS	1	False	2	2	ycf1:2	hypothetical chloroplast RF1:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+ycf3	ycf3	photosystem I assembly protein Ycf3	CDS	3	False	2	2	ycf3:2	photosystem I assembly protein Ycf3:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+ycf4	ycf4	photosystem I assembly protein Ycf4	CDS	1	False	2	2	ycf4:2	photosystem I assembly protein Ycf4:2	Tetracentron_sinense:1,Trochodendron_aralioides:1

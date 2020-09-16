@@ -5,11 +5,13 @@ import itertools
 from Bio import SeqIO
 from RunCmdsMP import run_cmd, logger
 from OrthoFinder import catAln
+from small_tools import mkdirs
 
 class PhyloPipeline(object):
 	def __init__(self, indir, 
 			outprefix=None,
-			tmpdir='/tmp',
+			gnid = True,
+			tmpdir='./tmp',
 			types=['cds'], 
 			min_shared=50):
 		self.indir = indir
@@ -17,11 +19,14 @@ class PhyloPipeline(object):
 		self.types = types
 		self.min_shared = min_shared
 		self.outprefix = outprefix
+		self.gnid = gnid
 		if outprefix is None:
 			self.outprefix = '{}-{}'.format(
 				os.path.basename(indir.strip('/')), '-'.join(types))
 		
 	def run(self):
+		mkdirs(self.tmpdir)
+		self.d_gnid = self.get_genome_id()
 		# bin
 		self.genes = self.bin_seqs()
 		# align
@@ -66,6 +71,8 @@ class PhyloPipeline(object):
 		for rc, prefix in self.get_seqs(fastas, prefixs):
 			gene = rc.id
 			rc.id = prefix
+			if self.gnid:
+				rc.id += '-{}'.format(self.d_gnid[prefix])
 			try: d_seqs[gene] += [rc]
 			except KeyError: d_seqs[gene] = [rc]
 
@@ -97,6 +104,16 @@ class PhyloPipeline(object):
 		fastafiles = sorted(glob.glob('{}/*{}'.format(self.indir, suffix)))
 		prefixs = [self.get_prefix(fasta, suffix) for fasta in fastafiles]
 		return fastafiles, prefixs
+	def get_genome_id(self):
+		suffix = '.gb'
+		gbfiles = sorted(glob.glob('{}/*{}'.format(self.indir, suffix)))
+		prefixs = [self.get_prefix(fasta, suffix) for fasta in gbfiles]
+		d = {}
+		for prefix, gbfile in zip(prefixs, gbfiles):
+			for rc in SeqIO.parse(gbfile, 'genbank'):
+				break
+			d[prefix] = rc.id
+		return d
 	def get_seqs(self, fastas, prefixs):
 		for fasta, prefix in zip(fastas, prefixs):
 			for rc in SeqIO.parse(fasta, 'fasta'):

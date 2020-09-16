@@ -1,0 +1,41 @@
+#id	name	product	seq_type	exon_count	trans_splicing	gene_count	species_count	names	products	species
+rrn16	rrn16	16S ribosomal RNA	rRNA	1	False	2	2	rrn16:2	16S ribosomal RNA:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+rrn23	rrn23	23S ribosomal RNA	rRNA	1	False	2	2	rrn23:2	23S ribosomal RNA:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+rrn4-5	rrn4-5	4.5S ribosomal RNA	rRNA	1	False	2	2	rrn4-5:2	4.5S ribosomal RNA:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+rrn5	rrn5	5S ribosomal RNA	rRNA	1	False	2	2	rrn5:2	5S ribosomal RNA:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+rrn5-31	rrn5	5S ribosomal RNA	rRNA	1	False	2	2	rrn5:2	5S ribosomal RNA:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+trnA-UGC	trnA-UGC	tRNA-Ala	tRNA	2	False	2	2	trnA-UGC:2	tRNA-Ala:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+trnC-GCA	trnC-GCA	tRNA-Cys	tRNA	1	False	2	2	trnC-GCA:2	tRNA-Cys:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+trnD-GUC	trnD-GUC	tRNA-Asp	tRNA	1	False	2	2	trnD-GUC:2	tRNA-Asp:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+trnE-UUC	trnE-UUC	tRNA-Glu	tRNA	1	False	2	2	trnE-UUC:2	tRNA-Glu:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+trnF-GAA	trnF-GAA	tRNA-Phe	tRNA	1	False	2	2	trnF-GAA:2	tRNA-Phe:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+trnG-GCC	trnG-GCC	tRNA-Gly	tRNA	1	False	2	2	trnG-GCC:2	tRNA-Gly:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+trnG-UCC	trnG-UCC	tRNA-Gly	tRNA	2	False	2	2	trnG-UCC:2	tRNA-Gly:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+trnH-GUG	trnH-GUG	tRNA-His	tRNA	1	False	2	2	trnH-GUG:2	tRNA-His:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+trnI-CAU	trnI-CAU	tRNA-Ile	tRNA	1	False	2	2	trnI-CAU:2	tRNA-Ile:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+trnI-CAU-28	trnI-CAU	tRNA-Ile	tRNA	1	False	2	2	trnI-CAU:2	tRNA-Ile:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+trnI-GAU	trnI-GAU	tRNA-Ile	tRNA	2	False	2	2	trnI-GAU:2	tRNA-Ile:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+trnI-GAU-19	trnI-GAU	tRNA-Ile	tRNA	2	False	2	2	trnI-GAU:2	tRNA-Ile:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+trnK-UUU	trnK-UUU	tRNA-Lys	tRNA	2	False	2	2	trnK-UUU:2	tRNA-Lys:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+trnL-CAA	trnL-CAA	tRNA-Leu	tRNA	1	False	2	2	trnL-CAA:2	tRNA-Leu:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+trnL-UAA	trnL-UAA	tRNA-Leu	tRNA	2	False	2	2	trnL-UAA:2	tRNA-Leu:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+trnL-UAG	trnL-UAG	tRNA-Leu	tRNA	1	False	2	2	trnL-UAG:2	tRNA-Leu:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+trnM-CAU	trnM-CAU	tRNA-Met	tRNA	1	False	2	2	trnM-CAU:2	tRNA-Met:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+trnN-GUU	trnN-GUU	tRNA-Asn	tRNA	1	False	2	2	trnN-GUU:2	tRNA-Asn:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+trnN-GUU-20	trnN-GUU	tRNA-Asn	tRNA	1	False	2	2	trnN-GUU:2	tRNA-Asn:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+trnP-UGG	trnP-UGG	tRNA-Pro	tRNA	1	False	2	2	trnP-UGG:2	tRNA-Pro:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+trnQ-UUG	trnQ-UUG	tRNA-Gln	tRNA	1	False	2	2	trnQ-UUG:2	tRNA-Gln:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+trnR-ACG	trnR-ACG	tRNA-Arg	tRNA	1	False	2	2	trnR-ACG:2	tRNA-Arg:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+trnR-ACG-7	trnR-ACG	tRNA-Arg	tRNA	1	False	2	2	trnR-ACG:2	tRNA-Arg:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+trnR-UCU	trnR-UCU	tRNA-Arg	tRNA	1	False	2	2	trnR-UCU:2	tRNA-Arg:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+trnS-GCU	trnS-GCU	tRNA-Ser	tRNA	1	False	2	2	trnS-GCU:2	tRNA-Ser:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+trnS-GGA	trnS-GGA	tRNA-Ser	tRNA	1	False	2	2	trnS-GGA:2	tRNA-Ser:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+trnS-UGA	trnS-UGA	tRNA-Ser	tRNA	1	False	2	2	trnS-UGA:2	tRNA-Ser:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+trnT-GGU	trnT-GGU	tRNA-Thr	tRNA	1	False	2	2	trnT-GGU:2	tRNA-Thr:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+trnT-UGU	trnT-UGU	tRNA-Thr	tRNA	1	False	2	2	trnT-UGU:2	tRNA-Thr:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+trnV-GAC	trnV-GAC	tRNA-Val	tRNA	1	False	2	2	trnV-GAC:2	tRNA-Val:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+trnV-GAC-36	trnV-GAC	tRNA-Val	tRNA	1	False	2	2	trnV-GAC:2	tRNA-Val:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+trnV-UAC	trnV-UAC	tRNA-Val	tRNA	2	False	2	2	trnV-UAC:2	tRNA-Val:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+trnW-CCA	trnW-CCA	tRNA-Trp	tRNA	1	False	2	2	trnW-CCA:2	tRNA-Trp:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+trnY-GUA	trnY-GUA	tRNA-Tyr	tRNA	1	False	2	2	trnY-GUA:2	tRNA-Tyr:2	Tetracentron_sinense:1,Trochodendron_aralioides:1
+trnfM-CAU	trnfM-CAU	tRNA-Met	tRNA	1	False	2	2	trnfM-CAU:2	tRNA-Met:2	Tetracentron_sinense:1,Trochodendron_aralioides:1

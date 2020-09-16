@@ -1,0 +1,3 @@
+#id	organism	name_count	cds_count	trn_count	rrn_count	length	GC	taxonomy
+NC_021425.1	Tetracentron sinense	137	92	37	8	164467	38.1	root;cellular organisms;Eukaryota;Viridiplantae;Streptophyta;Streptophytina;Embryophyta;Tracheophyta;Euphyllophyta;Spermatophyta;Magnoliopsida;Mesangiospermae;Trochodendrales;Trochodendraceae;Tetracentron;Tetracentron sinense
+NC_021426.1	Trochodendron aralioides	137	91	37	8	165945	38.0	root;cellular organisms;Eukaryota;Viridiplantae;Streptophyta;Streptophytina;Embryophyta;Tracheophyta;Euphyllophyta;Spermatophyta;Magnoliopsida;Mesangiospermae;Trochodendrales;Trochodendraceae;Trochodendron;Trochodendron aralioides

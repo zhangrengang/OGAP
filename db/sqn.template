@@ -4,8 +4,8 @@ Submit-block ::= {
       name
         name {
           last "Zhang" ,
-          first "Rengang" ,
-          initials "R." } ,
+          first "Reng-Gang" ,
+          initials "R.G." } ,
       affil
         std {
           affil "Ori-Gene Co., Ltd." ,
@@ -22,8 +22,8 @@ Submit-block ::= {
             name
               name {
                 last "Zhang" ,
-                first "Rengang" ,
-                initials "R." } } } ,
+                first "Ren-Gang" ,
+                initials "" } } } ,
       affil
         std {
           affil "Ori-Gene Co., Ltd." ,
@@ -47,12 +47,12 @@ Seqdesc ::= pub {
               name
                 name {
                   last "Zhang" ,
-                  first "Rengang" ,
-                  initials "R." } } } ,
+                  first "Reng-Gang" ,
+                  initials "" } } } ,
         affil
           std {
             affil "Ori-Gene Co., Ltd." ,
             div "Bioinformatics" ,
             city "Beijing" ,
             country "China" } } ,
-      title "unpulished" } } }
+      title "Organelle Genome Project" } } }

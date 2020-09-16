@@ -61,14 +61,14 @@ class HmmSearch(object):
 		hmmcovs = []
 		copies = []
 		for path in graph.linearize_path():
-			hmmcovs += [path.hmmcov]
-			#if path.hmmcov < min_cov:
-			#	continue
+			if path.hmmcov < min_cov:
+				continue
 			print >>sys.stderr, path, len(path.group_nodes()), path.hmmcov
 			parts = path.get_parts(d_length, flank=flank)
 		#	print >>sys.stderr, parts
 #			seq = parts.combine_seq()
 			copies += [parts]
+			hmmcovs += [path.hmmcov]
 		# filter out too many parts
 		if len(copies) > 0:
 	#		min_part_number = min(map(len, copies))
@@ -191,6 +191,7 @@ class SeqParts():
 		return SeqPart(chrom, start, end, strand)
 
 	def link_part(self, max_dist=10000):
+		'''link adj parts'''
 		# "--> -->" -> "----->"
 		parts = list(self)
 		if len(parts) < 2:
@@ -213,12 +214,42 @@ class SeqParts():
 			if len(group) == 1:
 				new_parts += group
 				continue
-			part = SeqParts(group).merge()
+			part = SeqParts(group).merge()	# SeqPart
 			new_parts += [part]
 		seqparts = copy.deepcopy(self)
 		seqparts.parts = new_parts
+		seqparts = seqparts.link_overlaped_part()
 		return seqparts
-
+	def link_overlaped_part(self):
+		parts = list(self)
+		while True:
+			i = 0
+			remove = []
+			replace = {}
+			for part1, part2 in itertools.combinations(parts, 2):
+				if part1.overlaps(part2):
+					print >>sys.stderr, '{} overlaps {}'.format(part1, part2)
+					i += 1
+					if len(part1) >= len(part2):
+						remove += [part2]
+						replace[part1] = SeqParts([part1, part2]).merge()
+					else:
+						remove += [part1]
+						replace[part2] = SeqParts([part1, part2]).merge()
+			if i == 0:
+				break
+			remove = set(remove)
+			new_parts = []
+			for part in parts:
+				if part in remove:
+					continue
+				if part in replace:
+					part = replace[part]
+				new_parts += [part]
+			parts = new_parts
+		seqparts = copy.deepcopy(self)
+		seqparts.parts = parts
+		return seqparts
 	@lazyproperty
 	def coord_map(self):
 		d = {}
@@ -322,6 +353,7 @@ class SeqParts():
 		return GtfExons(exons)
 
 class SeqPart():
+	'''Segment'''
 	def __init__(self, seqid, start, end, strand, seq=None):	# 0-based
 		self.seqid = seqid
 		self.start, self.end, self.strand = start, end, strand
@@ -337,8 +369,12 @@ class SeqPart():
 		return (self.seqid, self.start, self.end, self.strand)
 	def get_seq(self, d_seqs):
 		return d_seqs[self.seqid][self.start:self.end]
+	def overlaps(self, other):
+		if self.seqid != other.seqid or self.strand != other.strand:
+			return False
+		return max(0, min(self.end, other.end)-max(self.start, other.start))
 
-class HmmSearchDomHit(object):
+class HmmSearchDomHit:
 	def __init__(self, line):
 		self.line = line.strip().split()
 		self.title = ['tname', 'tacc', 'tlen', 'qname', 'qacc', 'qlen',
@@ -436,9 +472,14 @@ class HmmSearchDomHit(object):
 		return (self.nucl_alnstart, self.nucl_alnend, self.strand, self.hmmstart, self.hmmend)
 	def __str__(self):
 		return str(self.short)
+	def get_hmm_distance(self, other):
+		if self.hmmstart > other.hmmstart: # o--> s-->
+			return self.hmmend - other.hmmstart
+		else:	# s--> o-->
+			return other.hmmend - self.hmmstart
 	def get_distance(self, other):
 		if self.nucl_name != other.nucl_name:
-			return inf
+			return self.get_hmm_distance(other) * 3e6
 		if self.strand == other.strand:
 			if self.strand == '-':  # <-- <--
 				if self.nucl_alnstart > other.nucl_alnstart:  # <--o <--s
@@ -451,7 +492,7 @@ class HmmSearchDomHit(object):
 				else:										  # o--> s-->
 					return self.nucl_length - self.nucl_alnend + other.nucl_alnstart
 		else:  # s--> <--o, <--o s-->
-			return inf #self.nucl_length #min(self.nucl_alnstart + other.nucl_alnstart, 
+			return self.get_hmm_distance(other) * 1e6 #self.nucl_length #min(self.nucl_alnstart + other.nucl_alnstart, 
 					#self.nucl_length + other.nucl_length - self.nucl_alnend - other.nucl_alnend)
 	def to_gff(self):
 		line = [self.nucl_name, 'HMMsearch', 'protein_match', 

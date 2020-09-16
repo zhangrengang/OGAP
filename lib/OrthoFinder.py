@@ -65,7 +65,8 @@ class GroupRecord(object): # 解析每行
 		self.species = species
 		self.genes = [self._strip(genes) for genes in self.genes]
 		self.raw_genes = line[1:]
-	
+	def __iter__(self):
+		return iter(self.genes)
 	def get_group(self):
 		for genes in self.genes:
 			for gene in genes:
@@ -99,13 +100,15 @@ class OrthoMCLGroup():  # 解析groups.txt，迭代返回每行
 		for line in open(self.inGrp):
 			yield OrthoMCLGroupRecord(line)
 class OrthoMCLGroupRecord(GroupRecord): # 解析每行
-	def __init__(self, line=None, genes=None):
+	def __init__(self, line=None, genes=None, ogid=None):
 		if line is not None:
 			line = line.strip().split()
 			self.ogid = line[0].strip(':')
 			self.genes = line[1:]
 		if genes is not None:
 			self.genes = genes
+		if ogid is not None:
+			self.ogid = ogid
 		self.species = [gene.split('|')[0] for gene in self.genes]
 	@property
 	def spdict(self):
@@ -114,7 +117,10 @@ class OrthoMCLGroupRecord(GroupRecord): # 解析每行
 			try: d[sp] += [gene]
 			except KeyError:  d[sp] = [gene]
 		return d
-
+def parse_species(species):
+	if isinstance(species, str):
+		species = [line.strip().split()[0] for line in open(species)]
+	return species
 def to_hybpiper(ResultsDir, cdsSeq=None, outOGSeq=None, species=None, min_singlecopy=0.7, only_stats=False):
 	if species:
 		if isinstance(species, str):
@@ -146,7 +152,18 @@ def to_hybpiper(ResultsDir, cdsSeq=None, outOGSeq=None, species=None, min_single
 			print >>sys.stderr, '>={}\t{}'.format(cutoff, len(ratios))
 		return
 	print >>sys.stderr, '{} OGs'.format(i)
-
+def venn(ResultsDir, outTsv, species=None):
+	species = parse_species(species)
+	result = OrthoFinder(ResultsDir)
+	d_groups = {}
+	for group in result.get_orthologs_cluster(sps=species):
+		ogid = group.ogid
+		for sp in groups.species:
+			try: d_groups[sp] += [ogid]
+			except KeyError: d_groups[sp] = [ogid]
+	for sp, ogs in sorted(d_groups.items()):
+		line = [sp] + ogs
+		print >> outTsv, '\t'.join(line)
 def to_astral(ResultsDir, pepSeq, outTrees, tmpdir='/io/tmp/share', min_singlecopy=0.7):
 	from RunCmdsMP import run_job
 	tmpdir = '{}/to_astral.{}'.format(tmpdir, os.getpid())
@@ -224,13 +241,25 @@ class OrthoFinder:
 		Single_Copy_OGs = [line.strip() for line in \
 			open('{}/Orthogroups/Orthogroups_SingleCopyOrthologues.txt'.format(self.ResultsDir))]
 		return Single_Copy_OGs
+	def formatdir(self, xdir):
+		return '{}/{}'.format(self.ResultsDir, xdir)
+	def checkdir(self, xdir):
+		fdir = self.formatdir(xdir)
+		tgz = '{}.tgz'.format(fdir.rstrip('/'))
+		tgz2 = '{}.tgz'.format(xdir.rstrip('/'))
+		if os.path.exists(tgz) and not os.path.exists(fdir):
+			cmd = 'cd {} && tar xzf {}'.format(self.ResultsDir, tgz2)
+			print >>sys.stderr, cmd
+			run_cmd(cmd)
 	def Single_Copy_Codon_Align(self, cdsSeqs, tmpdir='/tmp'):
 		'''生成单拷贝OG的密码子比对'''
 		Single_Copy_OGs = self.Single_Copy_Orthologue
+		singlecopy_seqdir = self.formatdir('Single_Copy_Orthologue_Sequences')
+		self.checkdir('Single_Copy_Orthologue_Sequences')
 		d_cds = seq2dict(cdsSeqs)
 		ALNs = []
 		for OG in Single_Copy_OGs:
-			pepSeq = '{}/Single_Copy_Orthologue_Sequences/{}.fa'.format(self.ResultsDir, OG)
+			pepSeq = '{}/{}.fa'.format(singlecopy_seqdir, OG)
 			cdsSeq = '{}/{}.cds'.format(tmpdir, OG)
 			f = open(cdsSeq, 'w')
 			for rc in SeqIO.parse(pepSeq, 'fasta'):
@@ -474,8 +503,11 @@ class OrthoFinder:
 			G.add_edge(g1, g2)
 #		for g1, g2 in self.get_paralogs2():
 #			G.add_edge(g1, g2)
+		i = 0
 		for cmpt in nx.connected_components(G):
-			yield cmpt
+			i += 1
+			ogid = 'OG_{}'.format(i)
+			yield OrthoMCLGroupRecord(genes=cmpt, ogid=ogid)
 		
 	def get_singlecopy_orthologs(self, **kargs):
 		for cmpt in self.get_orthologs_cluster(**kargs):
@@ -677,8 +709,8 @@ def bootstrap_species_tree(OFdir, outdir, bootstrap=1000, iqtree_options='-mset 
 	msa = result.SpeciesTreeAlignment
 	treefile = result.SpeciesTree_rooted
 	new_msa = '{}/singlecopy_aligned.faa'.format(outdir)
-	#os.link(msa, new_msa)
-	cmd = 'trimal -in {} -gt 0.8 > {}'.format(msa, new_msa)
+	#os.link(msa, new_msa)	2020-5-31 改为-automated1，之前为-gt 0.8
+	cmd = 'trimal -in {} -automated1 > {}'.format(msa, new_msa)	# 2020-5-24改回link
 	run_cmd(cmd)
 	prefix = new_msa
 #	result.convert_seq_id(msa, new_msa)
@@ -966,10 +998,10 @@ def aln2beast(inALN, outNEX, partify=True):
 				genes = re.compile(r'genes:(\d+)').search(desc).groups()[0]
 			except:
 				genes = 0
-			try:
-				sites = re.compile(r'sites:(\d+)').search(desc).groups()[0]
-			except:
-				sites = len(rc.seq)
+			#try:
+			#	sites = re.compile(r'sites:(\d+)').search(desc).groups()[0]
+			#except:
+			sites = len(rc.seq)
 			try:
 				blocks = re.compile(r'blocks:(.*)').search(desc).groups()[0]
 				partitions = re.compile(r'(\d+)').findall(blocks)
@@ -1003,9 +1035,9 @@ def guess_seqtype(seq, gap='-'):
 	nACTG = sum([char_count.get(char, 0) for char in 'ACTG'])
 	nACUG = sum([char_count.get(char, 0) for char in 'ACUG'])
 	gap = char_count.get('-', 0)
-	if 1e2*nACTG / (len(seq)-gap) > 0.8:
+	if 1e2*nACTG / (len(seq)-gap) > 80:
 		return 'dna'
-	elif 1e2*nACUG / (len(seq)-gap) > 0.8:
+	elif 1e2*nACUG / (len(seq)-gap) > 80:
 		return 'rna'
 	else:
 		return 'protein'
@@ -1082,7 +1114,9 @@ def main():
 		OFdir=sys.argv[2]
 		pepSeq =sys.argv[3]
 		outTrees = sys.stdout
-		to_astral(OFdir, pepSeq, outTrees)
+		try: cutoff = float(sys.argv[4])
+		except IndexError: cutoff = 0.7
+		to_astral(OFdir, pepSeq, outTrees, min_singlecopy=cutoff)
 	elif subcommand == 'to_hybpiper':
 		OFdir=sys.argv[2]
 		cdsSeq =sys.argv[3]
@@ -1097,6 +1131,11 @@ def main():
 		try: species = sys.argv[3]
 		except IndexError: species = None
 		to_hybpiper(OFdir, species=species, only_stats=True)
+	elif subcommand == 'venn':
+		OFdir=sys.argv[2]
+		outTsv = sys.stdout
+		species = sys.argv[3]
+		venn(OFdir, outTsv, species=species)
 	else:
 		raise ValueError('Unknown command: {}'.format(subcommand))
 

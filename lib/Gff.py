@@ -7,6 +7,7 @@ import networkx as nx
 from Bio.Data import CodonTable
 from Bio.Seq import Seq
 from lazy_property import LazyWritableProperty as lazyproperty
+from small_tools import open_file as open
 from RunCmdsMP import logger
 from translate_seq import translate_cds
 try: from Region import Regions, Region, Position
@@ -25,22 +26,32 @@ class GffLine(object):
 			raise ValueError('Length ({}) `{}` of gff line is not equal to 9'.format(len(line), line))
 		(self.chrom, self.source, self.type, self.start, self.end, 
 			 self.score, self.strand, self.frame, self.raw_attributes) = line
+		self.line = tuple(line)
 		self.start, self.end = int(self.start), int(self.end)
 		try: self.score = float(self.score)
 		except: pass
 		try: self.frame = int(self.frame)
 		except: pass
-		self.__attributes = self.raw_attributes
+		self.attributes_ = self.raw_attributes
 
 	def __hash__(self):
 		return hash(self.key)
+	def __eq__(self, other):
+		return self.key == other.key
+	def __len__(self):
+		return self.end - self.start + 1
 	def __str__(self):
+		#print self.attributes_
 		line = [self.chrom, self.source, self.type, self.start, self.end, 
-				self.score, self.strand, self.frame, self.__attributes]
+				self.score, self.strand, self.frame, self.attributes_]
 		line = map(str, line)
 		return '\t'.join(line)
+	@lazyproperty
 	def key(self):
-		return (self.chrom, self.source, self.type, self.start, self.end, self.strand)
+		return self.line #(self.chrom, self.type, self.start, self.end, self.strand)
+	@lazyproperty
+	def coord(self):
+		return '{chrom}:{start}-{end}({strand})'.format(**self.__dict__)
 	@lazyproperty
 	def attributes(self):
 		if isinstance(self.raw_attributes, OrderedDict):
@@ -76,13 +87,21 @@ class GffLine(object):
 			return None
 	@property
 	def keys(self):
-		return self._keys
+		return self._keys_
 	@lazyproperty
-	def _keys(self):
+	def _keys_(self):
 		return ['ID', 'Parent', 'Name']
 	def parse_attr(self, attributes):
-		attributes = attributes.rstrip(';')
-		return OrderedDict(kv.split('=') for kv in attributes.split(';') if kv)
+		#attributes = attributes.rstrip(';')
+		#return OrderedDict(kv.split('=') for kv in attributes.split(';') if kv)
+		d_attr = OrderedDict()
+		for kv in attributes.split(';'):
+			skv = kv.split('=', 1)
+			if not len(skv) ==2:
+				continue
+			k, v = skv
+			d_attr[k] = v
+		return d_attr
 	def update_attr(self):
 		for attr_key in self.keys:
 			try:
@@ -97,10 +116,11 @@ class GffLine(object):
 		#line = [self.chrom, self.source, self.type, self.start, self.end, 
 		#		self.score, self.strand, self.frame, self._attributes]
 		#line = map(str, line)
+		#print self.attributes_
 		print >>fout, str(self) #'\t'.join(line)
 	def write(self, fout):
 		self.update_attr()
-		self.__attributes = self.format_attr()
+		self.attributes_ = self.format_attr()
 		return self._write(fout)
 	@property
 	def region(self):
@@ -109,7 +129,8 @@ class GffLine(object):
 		if not self.chrom == other.chrom:
 			return False
 		return max(0, min(self.end, other.end) - max(self.start, other.start))
-
+	def overlaps(self, other):
+		return self.region.overlaps(other.region)
 
 
 
@@ -123,7 +144,7 @@ class GtfLine(GffLine):
 		return OrderedDict(re.compile(r'(\S+) "?(.*?)"?;\s?').findall(attributes))
 	def format_attr(self):
 		return ' '.join(['{} "{}";'.format(k,v) for k, v in self.attributes.items()])
-	@property
+	@lazyproperty
 	def keys(self):
 		return ['gene_id', 'transcript_id']
 	@lazyproperty
@@ -133,21 +154,29 @@ class GtfLine(GffLine):
 	def transcript_id(self):
 		return self.attributes['transcript_id']
 	def to_gff(self):
-		self.keys = self._keys
+		attributes = copy.deepcopy(self.attributes)
+		keys = self.keys
 		if self.type == 'gene':
 			self.ID = self.gene_id
-		elif self.type == 'transcript':
+		elif self.type == 'transcript' or self.type.endswith('RNA'):
 			self.ID = self.transcript_id
 			self.Parent = self.gene_id
 		else:
 			self.ID = '{}:{}'.format(self.transcript_id, self.type.lower())
 			self.Parent = self.transcript_id
+		self.attributes = OrderedDict()
+		self.keys = self._keys_
 		self.update_attr()
-		self.__attributes = self._format_attr()
+		self.attributes.update(attributes)
+		for key in keys:
+			self.attributes[key] = None
+		self.attributes_ = self._format_attr()
 	def write_gff(self, fout):
 		self.to_gff()
+		#print self.__dict__, self.attributes_
 		return self._write(fout)
-
+	#def _write(self, fout=sys.stdout):
+	#	print >>fout, str(self)
 
 class AugustusGtfLine(GtfLine):
 	'''augustus gff2/gtf output is not standard'''
@@ -156,11 +185,11 @@ class AugustusGtfLine(GtfLine):
 	def parse_attr(self, attributes):
 		if self.type == 'gene':
 			gene_id = attributes
-			return OrderedDict(gene_id=gene_id)
+			return OrderedDict(gene_id=gene_id, ID=gene_id)
 		elif self.type == 'transcript':
 			transcript_id = attributes
 			gene_id = transcript_id.split('.')[0]
-			return OrderedDict(gene_id=gene_id, transcript_id=transcript_id)
+			return OrderedDict(gene_id=gene_id, transcript_id=transcript_id, ID=transcript_id)
 		elif self.source != 'AUGUSTUS':
 			return OrderedDict()
 		else:
@@ -247,15 +276,17 @@ class GffGenes(object):
 			id, parent = line.id, line.parent
 			if id in ids:	# duplicated ID of CDS and UTR
 				id = '{}.{}'.format(id, i)
+				if line.type == 'gene':	 # trans-splicing in RefSeq
+					continue
 			ids.add(id)
-			if parent is None and len(record.nodes()) > 0:
+			if (parent is None or line.type == 'gene') and len(record.nodes()) > 0:
 				yield record
 				record = GffRecord()
 				i = 1
 				record.add_node(id, line=line, index=i)
 			else:
 				record.add_node(id, line=line, index=i)
-				if parent is not None:
+				if parent is not None and line.type != 'gene':	# gene: parent: gene_id
 					record.add_edge(parent, id)
 		if len(record.nodes()) > 0:
 			yield record
@@ -271,7 +302,7 @@ class GtfGenes(GffGenes):
 			if line.type == 'gene':
 				parent = None
 				id = line.gene_id
-			elif line.type == 'transcript':
+			elif line.type == 'transcript' or line.type.endswith('RNA'):
 				id, parent = line.transcript_id, line.gene_id
 			else:
 				id, parent = i, line.transcript_id
@@ -288,6 +319,24 @@ class GtfGenes(GffGenes):
 		self.annotations = lines.annotations
 		if len(record.nodes()) > 0:
 			yield record
+class PinfishGtfGenes(GtfGenes):
+	def __init__(self, gff, parser=GtfLines):
+		super(PinfishGtfGenes, self).__init__(gff, parser)
+	def _parse(self):
+		lines = self.parser(self.gff)
+		record = GffRecord()
+		for i, line in enumerate(lines):
+			if line.type == 'mRNA':
+				id, parent = line.transcript_id, None
+				if len(record.nodes()) > 0:
+					yield record
+					record = GffRecord()
+			else:
+				id, parent = i, line.transcript_id
+			record.add_node(id, line=line, index=i)
+			if parent is not None:
+				record.add_edge(parent, id)
+		yield record
 class AugustusGtfGenes(GtfGenes):
 	def __init__(self, gff, parser=AugustusGtfLines):
 		super(AugustusGtfGenes, self).__init__(gff, parser)
@@ -360,6 +409,8 @@ class GffExons(object):
 	def __str__(self):
 		return ' -> '.join(['{chrom}:{start}-{end}({strand})'.format(**exon.__dict__) \
 								for exon in self if exon.type=='exon'])
+	def count_exon(self):
+		return len([1 for exon in self if exon.type=='exon'])
 	def __getitem__(self, index):
 		if isinstance(index, int):
 			return self.exons[index]
@@ -367,6 +418,9 @@ class GffExons(object):
 			return self.__class__(path=self.exons[index])
 	def __hash__(self):
 		return hash(str(self))
+	def __add__(self, other):
+		exons = self.exons + other.exons
+		return self.__class__(exons=exons)
 	def overlaps(self, other):
 		self_genes = self.filter('gene')
 		other_genes = other.filter('gene')
@@ -384,17 +438,27 @@ class GffExons(object):
 		return length
 	def get_region(self):
 		starts  = [exon.start  for exon in self]
-		ends    = [exon.end    for exon in self]
+		ends	= [exon.end	for exon in self]
 		strands = [exon.strand for exon in self]
 		chroms  = [exon.chrom  for exon in self]
 		chrom  = chroms[0]
 		strand = strands[0]
 		start  = min(starts + ends)
-		end    = max(starts + ends)
+		end	= max(starts + ends)
 		return chrom, start, end, strand
 	@lazyproperty
 	def coord(self):
 		return self.get_region()
+	@lazyproperty
+	def region(self):
+		chrom, start, end = self.coord[:3]
+		return Region(chrom, start, end)
+	@lazyproperty
+	def positions(self):
+		positions = []
+		for line in self:
+			positions += line.region.positions
+		return positions
 	@lazyproperty
 	def start(self):
 		return self.coord[1]
@@ -549,9 +613,10 @@ class GffExons(object):
 				product = rna_type
 		lines += [ ['', '', 'product', product] ]
 		if locus_tag is not None:
-			lines += [ ['', '', 'transcript_id', self.rna_id] ]
+			transcript_id = '{}|{}|{}'.format('gnl', locus_tag.split('_')[0], self.rna_id)
+			lines += [ ['', '', 'transcript_id', transcript_id] ]
 			if rna_type == 'CDS':
-				lines += [ ['', '', 'protein_id', self.rna_id+':cds'] ]
+				lines += [ ['', '', 'protein_id', transcript_id+':cds'] ]
 		# mRNA
 		if locus_tag is not None and rna_type == 'CDS':
 			for i, exon in enumerate(exons):
@@ -608,11 +673,35 @@ class GffExons(object):
 		for exon in self:
 			#print >>sys.stderr, exon.__dict__
 			exon.write(fout)
+	def update_frame(self):
+		'''add frame'''
+		accumulated_length = 0
+		for exon in self:
+			length = exon.end - exon.start + 1
+			_frame = accumulated_length % 3
+			frame = 3 - _frame if _frame > 0 else _frame
+			exon.frame = frame
+			accumulated_length += length
 
 class GtfExons(GffExons):
 	def __init__(self, exons):
 		super(GtfExons, self).__init__(exons)
-
+	def write_gff(self, fout):
+		for exon in self:
+			#print >>sys.stderr, exon.__dict__, exon.keys
+			#exon.keys = ['ID', 'Parent', 'Name']
+			exon.write_gff(fout)
+class PinfishGtfExons(GtfExons):	# 202-4-29 for shuiqingshu add_mRNA
+	def __init__(self, exons):
+		super(PinfishGtfExons, self).__init__(exons)
+	def extend_cds(self):
+		'''only work when mapping with cds sequences'''
+		exons = self.filter('exon')
+		exons = copy.deepcopy(exons)
+		exons.update_frame()
+		for exon in exons:
+			exon.type = 'CDS'
+		return self + exons
 class ExonerateGtfExons(GtfExons):
 	def __init__(self, exons):
 		super(ExonerateGtfExons, self).__init__(exons)
@@ -621,14 +710,6 @@ class ExonerateGtfExons(GtfExons):
 		if self.start_codon_found and self.stop_codon_found:
 			return True
 		return False
-	def update_frame(self):
-		accumulated_length = 0
-		for exon in self:
-			length = exon.end - exon.start + 1
-			_frame = accumulated_length % 3
-			frame = 3 - _frame if _frame > 0 else _frame
-			exon.frame = frame
-			accumulated_length += length
 	def trace_start_codon(self, seq, transl_table=1, max_dist=150):
 		first_exon = self.exons[0]
 		strand = first_exon.strand
@@ -636,6 +717,8 @@ class ExonerateGtfExons(GtfExons):
 		tss = first_exon.end if strand == '-' else first_exon.start-1
 		# --> right
 		upper = len(seq) if strand == '-' else first_exon.end
+		#print >>sys.stderr, tss, upper, strand, first_exon.start, first_exon.end
+		i = tss
 		for i in range(tss, upper, 3):
 			codon = seq[i:i+3]
 			if self.is_start_codon(codon, strand, transl_table):
@@ -646,10 +729,11 @@ class ExonerateGtfExons(GtfExons):
 				break
 		else:
 			dist1 = max_dist + 1
-		if strand == '+' and i >= first_exon.end:
+		if strand == '+' and i >= first_exon.end:	# exceed exon
 			dist1 = max_dist + 1
 		# <-- left
 		lower = first_exon.start if strand == '-' else 0
+		j = tss
 		for j in range(tss, lower, -3):
 			codon = seq[j-3:j]
 			if self.is_start_codon(codon, strand, transl_table):
@@ -660,7 +744,7 @@ class ExonerateGtfExons(GtfExons):
 				break
 		else:
 			dist2 = max_dist + 1
-		if strand == '-' and i <= first_exon.start:
+		if strand == '-' and i <= first_exon.start:	# exceed exon
 			dist2 = max_dist + 1
 		start_codon_found = True
 		if min(dist1, dist2) > max_dist:
@@ -915,7 +999,7 @@ class ExonerateGffGenes(GffGenes):	# each alignment
 		grps = set([])
 		for i, record in enumerate(self):
 			last_start = None
-			for line in record: # lines
+			for line in record.lines: # lines
 				if line.type == 'gene':
 					grp = line.attributes['sequence']
 					if grp in grps:
@@ -944,13 +1028,16 @@ class GffRecord(nx.DiGraph):
 	def __init__(self, graph=None, flank=5000):	# graph is a nx.DiGraph object
 		super(GffRecord, self).__init__()
 		self.flank = flank
-	def __iter__(self):
-		return iter(self.lines)
+	#def __iter__(self):
+	#	return iter(self.lines)
+	def __str__(self):
+		return str(self.region)
 	@lazyproperty
 	def id(self):
 		'''use the init gene id as record id'''
-		for node in self.nodes():
-			if not self.predecessors(node):
+		for node in self.non_empty_nodes:
+			predecessors = self.predecessors(node)
+			if not predecessors or not (set(predecessors)-self.empty_nodes):
 				return node
 	# @lazyproperty
 	# def source_record(self):	# gene
@@ -964,14 +1051,23 @@ class GffRecord(nx.DiGraph):
 	@lazyproperty
 	def length(self):
 		return self.end - self.start + 1
+	def __len__(self):
+		return self.end - self.start + 1
+	def __hash__(self):
+		return hash(tuple(self.lines))
+	def __eq__(self, other):
+		return hash(self) == hash(other)
 	@property
 	def lines(self):
 		return [self.node[node]['line'] for node in self.sort_nodes()]
 	def to_exons(self):
 		return GffExons(self.lines)
-		
+	@property
+	def rnas(self):
+		return GffRNARecords(self)	
 	def sort_nodes(self):
-		return sorted(self.nodes(), key=lambda x: self.node[x]['index'])
+		nodes = [node for node in self.nodes() if 'index' in self.node[node]]	# only lines
+		return sorted(nodes, key=lambda x: self.node[x]['index'])
 	def recur_remove_node(self, node):
 		last_nodes = [node]
 		nodes_to_del = [] + last_nodes
@@ -996,8 +1092,15 @@ class GffRecord(nx.DiGraph):
 		for line in self.lines:
 			#line = self.get_node_feature(node)
 			line.write(fout)
-	def count_type(self):
+	@lazyproperty
+	def type_count(self):
 		return Counter([self.get_node_feature(node).type for node in self.nodes()])
+	def count_type(self, *types):
+		types = set(types)
+		return len([node for node in self.lines if node.type in types])
+	@lazyproperty
+	def nexons(self):
+		return self.count_type('exon')
 	@property
 	def is_coding(self):
 		if 'CDS' in self.feature_regions:
@@ -1005,7 +1108,7 @@ class GffRecord(nx.DiGraph):
 		else:
 			return False
 	@lazyproperty
-	def gene(self):
+	def gene(self):		# GffLine
 		return self.get_node_feature(self.id)
 	@lazyproperty
 	def strand(self):
@@ -1018,10 +1121,15 @@ class GffRecord(nx.DiGraph):
 		return self.gene.start  #Position(chrom=self.chrom, pos=self.gene.start)
 	@lazyproperty
 	def end(self):
-		return self.gene.end    #Position(chrom=self.chrom, pos=self.gene.end)
+		return self.gene.end	#Position(chrom=self.chrom, pos=self.gene.end)
+	@lazyproperty
+	def type(self):
+		return self.gene.type
 	@lazyproperty
 	def region(self):
 		return self.gene.region
+	def overlaps(self, other):
+		return self.region.overlaps(other.region)
 
 	@property
 	def sorted_nodes(self):
@@ -1030,7 +1138,17 @@ class GffRecord(nx.DiGraph):
 	def sort_features(self, fetures):
 		return sorted(fetures, key=lambda x: self.get_node_index(x))
 	def get_node_feature(self, node):
-		return self.node[node]['line']
+		try: return self.node[node]['line']
+		except KeyError as e:
+			print >>sys.stderr, node, self.nodes()
+			raise KeyError(e)
+	@lazyproperty
+	def empty_nodes(self):
+		return {node for node in self.nodes() if 'line' not in self.node[node]}
+	@lazyproperty
+	def non_empty_nodes(self):
+		return set(self.nodes()) - self.empty_nodes
+
 	def get_node_index(self, node):
 		return self.node[node]['index']
 
@@ -1047,11 +1165,25 @@ class GffRecord(nx.DiGraph):
 	@lazyproperty
 	def features(self):
 		d_features = {}
-		for node in self.nodes():
-			feature = self.get_node_feature(node)
+		for feature in self.lines:
+			#feature = self.get_node_feature(node)
 			try: d_features[feature.type] += [feature]
 			except KeyError: d_features[feature.type] = [feature]
 		return d_features
+	@lazyproperty
+	def feature_length(self):
+		d_length = {}
+		for feature in self.lines:
+			try: d_length[feature.type] += len(feature)
+			except KeyError: d_length[feature.type] = len(feature)
+		return d_length
+	@lazyproperty
+	def feature_count(self):
+		return Counter([self.get_node_feature(node).type for node in self.nodes()])
+	def share_feat(self, other, feat='exon'):
+		self_feat = self.features[feat]
+		other_feat = other.features[feat]
+		return set(self_feat) & set(other_feat)
 	@lazyproperty
 	def feature_regions(self):
 		d_regions = {}
@@ -1108,14 +1240,22 @@ class GffRecord(nx.DiGraph):
 					
 class GffRNARecords():
 	def __init__(self, GeneRecord):
-		self.GeneRecord = copy.deepcopy(GeneRecord)
+		self._GeneRecord = GeneRecord
 	def __iter__(self):
 		return self._parse()
 	def _parse(self):
+		self.GeneRecord = copy.deepcopy(self._GeneRecord)
 		self.GeneRecord.remove_node(self.GeneRecord.id)
 		for cmpt in nx.connected_components(self.GeneRecord.to_undirected()):
 			yield self.GeneRecord.subgraph(cmpt)
-
+	def to_gene(self, rnas):
+		nodes = [self._GeneRecord.id]
+		for rna in rnas:
+			nodes += rna.nodes()
+		remove_nodes = set(self._GeneRecord.nodes()) - set(nodes)
+		if remove_nodes:
+			self._GeneRecord.remove_nodes_from(remove_nodes)
+		return self._GeneRecord
 
 def main():
 	pass

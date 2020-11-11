@@ -1,0 +1,4 @@
+#id	organism	name_count	cds_count	trn_count	rrn_count	length	GC	taxonomy
+NC_015309.1	Placozoan sp. 'Shirahama'	14	15	24	3	36676	40.4	root;cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Placozoa;unclassified Placozoa;Placozoan sp. 'Shirahama'
+NC_041549.1	Polyplacotoma mediterranea	12	12	25	3	23462	32.9	root;cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Placozoa;Polyplacotoma;Polyplacotoma mediterranea
+NC_008151.3	Trichoplax adhaerens	29	17	22	3	43079	47.0	root;cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Placozoa;Trichoplacidae;Trichoplax;Trichoplax adhaerens

@@ -86,7 +86,9 @@ class Database():
 		self.taxonomy_file = '{}/taxonomy.info'.format(self.dbdir)
 		self.name_mapping = '{}/{}.name_mapping'.format(self.dbrootdir, self.organ, )
 		self.taxonomy_dbfile = '{}/taxonomy.json.gz'.format(self.dbrootdir)
-
+	def check_augustus(self):
+		if not os.access(AUGUSTUS_CONFIG_PATH, os.W_OK):
+			raise ValueError('{} is not writable'.format(AUGUSTUS_CONFIG_PATH))
 	def listdb(self):
 		for db in self.getdb():
 			print >> sys.stdout, db.organ, db.taxon
@@ -117,7 +119,7 @@ class Database():
 		for info in Ete3TaxonomyInfo(stdout):
 			return info.named_lineage
 			
-	def checkdb(self):
+	def checkdb(self, untar=True):
 		# dbdir
 		logger.info('using database `{}` in `{}`'.format(self.ogtype, self.dbdir))
 		# version
@@ -163,8 +165,10 @@ class Database():
 		self.cds_pflfiles = [self.get_pflfile(gene) for gene in self.cds_genes]
 		self.augustus_species = [self.get_augustus_species(gene) for gene in self.cds_genes]
 		# untar
-		self.untgz_dirs(self.seqdir, self.hmmdir, self.pfldir, self.tnddir)
-		self.check_exists(*(self.cds_hmmfiles+self.rna_hmmfiles+self.cds_pflfiles))
+		if untar:
+			self.check_augustus()
+			self.untgz_dirs(self.seqdir, self.hmmdir, self.pfldir, self.tnddir)
+			self.check_exists(*(self.cds_hmmfiles+self.rna_hmmfiles+self.cds_pflfiles))
 
 	def check_exists(self, *files):
 		for file in files:
@@ -263,10 +267,11 @@ class Database():
 		for _dir in dirs:
 			_dir = _dir.rstrip('/')
 			dirname, basename = os.path.dirname(_dir), os.path.basename(_dir)
-			_ckp = ckp.format(basename=basename)
+			_ckp = ckp.format(basename=_dir)
+			print >>sys.stderr, 'check point: ' + _ckp
 			if not os.path.exists(_ckp):
 				_cmd = cmd.format(dirname=dirname, basename=basename)
-				run_cmd(_cmd)
+				run_cmd(_cmd, log=True)
 	def makedb(self):
 		rmdirs(self.pepdir, self.rnadir)  # for OrthoFinder
 		mkdirs(self.pepdir, self.rnadir, self.alndir, self.msadir, self.trndir) 
@@ -302,7 +307,7 @@ class Database():
 				[self.cds_file, self.rna_file],
 				['', '-S blastn'],
 				[True, False],
-				[0.08, 0.04],
+				[0.08, 0.02],
 				['cd-hit', 'cd-hit-est'],
 				[True, False],
 				):
@@ -412,6 +417,7 @@ class Database():
 			gene_name = NameInfo.get_trn_name(gene_name, name_count)
 			logger.info('get gene name `{}` from {}'.format(gene_name, name_count))
 			max_count = max(name_count.values()) #name_count[gene_name]
+			#max_count = sum(name_count.values())
 			if max_count < self.min_count:
 				continue
 			logger.info('using gene name `{}`'.format(gene_name))
@@ -532,6 +538,8 @@ augustus --species={species} {train_set}.test --translation_table={transl_table}
 	def get_augustus_species(self, gene):
 		species = '{}-{}'.format(self.ogtype, gene)
 		spdir = '{}/species/'.format(AUGUSTUS_CONFIG_PATH,)
+		if not os.access(spdir, os.W_OK):
+			raise ValueError('{} is not writable'.format(spdir))
 		species_dir = '{}/{}'.format(spdir, species)
 		species_tgz = '{}/{}.tgz'.format(self.tnddir, species)
 		if os.path.exists(species_dir):
@@ -676,13 +684,15 @@ class GeneInfo(Info):
 	def genes(self):
 		if self.include_orf:
 			for gene in self.dict.values():
-				if gene.name.lower().startswith('orf'):
+				if self.is_orf(gene):
 					gene.product = 'hypothetical protein'
 			return self.dict.values()
 		else:
-			return [gene for gene in self.dict.values() if not (
-						gene.name.lower().startswith('orf') \
-						or gene.product == 'hypothetical protein')]
+			return [gene for gene in self.dict.values() if not self.is_orf(gene)]
+	def is_orf(self, gene):
+		return gene.name.lower().startswith('orf') \
+			or gene.product == 'hypothetical protein' \
+			or re.compile(r'\-gene\d+').search(gene.name)
 class GeneInfoLine(object):
 	def __init__(self, line=None):
 		self.title = ['id', 'name', 'product', 'seq_type',
@@ -887,7 +897,7 @@ def main():
 	print >>sys.stderr, args.__dict__
 	db = Database(**args.__dict__)
 	if args.check:
-		db.checkdb()
+		db.checkdb(untar=False)
 	elif args.list:
 		db.listdb()
 	elif args.count:

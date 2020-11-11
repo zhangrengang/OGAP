@@ -2,7 +2,7 @@
 Dependencies:
 + [python 2.7](https://www.python.org/)  
     + [biopython](https://biopython.org/): quickly install by `pip install biopython`  
-    + [networkx](http://networkx.github.io/): quickly install by `pip install networkx`  
+    + [networkx](http://networkx.github.io/): quickly install by `pip install networkx<2.0`  
     + [lazy_property](https://github.com/jackmaney/lazy-property): quickly install by `pip install lazy-property`  
 + [hmmsearch 3.1x or 3.2x](http://hmmer.org/): compatible with HMMER3/f database format  
 + [exonerate](https://www.ebi.ac.uk/about/vertebrate-genomics/software/exonerate) for coding genes annotation

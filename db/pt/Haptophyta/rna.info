@@ -1,0 +1,32 @@
+#id	name	product	seq_type	exon_count	trans_splicing	gene_count	species_count	names	products	species
+rns	rns	16S small subunit ribosomal RNA	rRNA	1	False	6	6	rns:2,rrnS:2,rrn16S:1	16S small subunit ribosomal RNA:3,16S ribosomal RNA:2,small subunit ribosomal RNA:1	Chrysochromulina_parva:1,Emiliania_huxleyi:1,Pavlova_lutheri:1,Phaeocystis_antarctica:1,Phaeocystis_globosa:1,Tisochrysis_lutea:1
+rrn5	rrn5	5S ribosomal RNA	rRNA	1	False	2	2	rrn5:2	5S ribosomal RNA:2	Phaeocystis_antarctica:1,Phaeocystis_globosa:1
+rrnL	rrnL	23S large subunit ribosomal RNA	rRNA	1	False	6	6	rrnL:2,rnl:2,rrn23S:1	23S large subunit ribosomal RNA:3,23S ribosomal RNA:2,large subunit ribosomal RNA:1	Chrysochromulina_parva:1,Emiliania_huxleyi:1,Pavlova_lutheri:1,Phaeocystis_antarctica:1,Phaeocystis_globosa:1,Tisochrysis_lutea:1
+trnA-tgc	trnA-tgc	tRNA-Ala	tRNA	1	False	6	6	trnA:4,trnA-tgc:1	tRNA-Ala:6	Chrysochromulina_parva:1,Emiliania_huxleyi:1,Pavlova_lutheri:1,Phaeocystis_antarctica:1,Phaeocystis_globosa:1,Tisochrysis_lutea:1
+trnC	trnC	tRNA-Cys	tRNA	1	False	4	4	trnC:3	tRNA-Cys:4	Emiliania_huxleyi:1,Phaeocystis_antarctica:1,Phaeocystis_globosa:1,Tisochrysis_lutea:1
+trnD-gtc	trnD-gtc	tRNA-Asp	tRNA	1	False	6	6	trnD:4,trnD-gtc:1	tRNA-Asp:6	Chrysochromulina_parva:1,Emiliania_huxleyi:1,Pavlova_lutheri:1,Phaeocystis_antarctica:1,Phaeocystis_globosa:1,Tisochrysis_lutea:1
+trnE-ttc	trnE-ttc	tRNA-Glu	tRNA	1	False	6	6	trnE:4,trnE-ttc:1	tRNA-Glu:6	Chrysochromulina_parva:1,Emiliania_huxleyi:1,Pavlova_lutheri:1,Phaeocystis_antarctica:1,Phaeocystis_globosa:1,Tisochrysis_lutea:1
+trnF-gaa	trnF-gaa	tRNA-Phe	tRNA	1	False	6	6	trnF:4,trnF-gaa:1	tRNA-Phe:6	Chrysochromulina_parva:1,Emiliania_huxleyi:1,Pavlova_lutheri:1,Phaeocystis_antarctica:1,Phaeocystis_globosa:1,Tisochrysis_lutea:1
+trnG	trnG	tRNA-Gly	tRNA	1	False	5	5	trnG:4	tRNA-Gly:5	Chrysochromulina_parva:1,Emiliania_huxleyi:1,Phaeocystis_antarctica:1,Phaeocystis_globosa:1,Tisochrysis_lutea:1
+trnG-23	trnG	tRNA-Gly	tRNA	1	False	5	5	trnG2:2,trnG:2	tRNA-Gly:5	Chrysochromulina_parva:1,Emiliania_huxleyi:1,Phaeocystis_antarctica:1,Phaeocystis_globosa:1,Tisochrysis_lutea:1
+trnH-gtg	trnH-gtg	tRNA-His	tRNA	1	False	6	6	trnH:4,trnH-gtg:1	tRNA-His:6	Chrysochromulina_parva:1,Emiliania_huxleyi:1,Pavlova_lutheri:1,Phaeocystis_antarctica:1,Phaeocystis_globosa:1,Tisochrysis_lutea:1
+trnI	trnI	tRNA-Met	tRNA	1	False	6	6	trnI2:2,trnM:2,trnI:1	tRNA-Met:3,tRNA-Ile:3	Chrysochromulina_parva:1,Emiliania_huxleyi:1,Pavlova_lutheri:1,Phaeocystis_antarctica:1,Phaeocystis_globosa:1,Tisochrysis_lutea:1
+trnI-gat	trnI-gat	tRNA-Ile	tRNA	1	False	6	6	trnI:4,trnI-gat:1	tRNA-Ile:6	Chrysochromulina_parva:1,Emiliania_huxleyi:1,Pavlova_lutheri:1,Phaeocystis_antarctica:1,Phaeocystis_globosa:1,Tisochrysis_lutea:1
+trnK-ttt	trnK-ttt	tRNA-Lys	tRNA	1	False	5	5	trnK:3,trnK-ttt:1	tRNA-Lys:5	Chrysochromulina_parva:1,Emiliania_huxleyi:1,Pavlova_lutheri:1,Phaeocystis_antarctica:1,Tisochrysis_lutea:1
+trnL	trnL	tRNA-Leu	tRNA	1	False	5	5	trnL:4	tRNA-Leu:5	Chrysochromulina_parva:1,Emiliania_huxleyi:1,Phaeocystis_antarctica:1,Phaeocystis_globosa:1,Tisochrysis_lutea:1
+trnL-taa	trnL-taa	tRNA-Leu	tRNA	1	False	6	6	trnL:2,trnL2:2,trnL-taa:1	tRNA-Leu:6	Chrysochromulina_parva:1,Emiliania_huxleyi:1,Pavlova_lutheri:1,Phaeocystis_antarctica:1,Phaeocystis_globosa:1,Tisochrysis_lutea:1
+trnM	trnM	tRNA-Met	tRNA	1	False	4	4	trnM2:2,trnM:2	tRNA-Met:4	Chrysochromulina_parva:1,Emiliania_huxleyi:1,Phaeocystis_antarctica:1,Phaeocystis_globosa:1
+trnM-cat	trnM-cat	tRNA-Met	tRNA	1	False	6	6	trnM:2,trnM1:2,trnM-cat:1	tRNA-Met:6	Chrysochromulina_parva:1,Emiliania_huxleyi:1,Pavlova_lutheri:1,Phaeocystis_antarctica:1,Phaeocystis_globosa:1,Tisochrysis_lutea:1
+trnN-gtt	trnN-gtt	tRNA-Asn	tRNA	1	False	6	6	trnN:4,trnN-gtt:1	tRNA-Asn:6	Chrysochromulina_parva:1,Emiliania_huxleyi:1,Pavlova_lutheri:1,Phaeocystis_antarctica:1,Phaeocystis_globosa:1,Tisochrysis_lutea:1
+trnP	trnP	tRNA-Pro	tRNA	1	False	3	3	trnP:2	tRNA-Pro:3	Chrysochromulina_parva:1,Emiliania_huxleyi:1,Tisochrysis_lutea:1
+trnP-32	trnP	tRNA-Pro	tRNA	1	False	2	2	trnP:2	tRNA-Pro:2	Phaeocystis_antarctica:1,Phaeocystis_globosa:1
+trnQ-ttg	trnQ-ttg	tRNA-Gln	tRNA	1	False	4	4	trnQ:3,trnQ-ttg:1	tRNA-Gln:4	Chrysochromulina_parva:1,Pavlova_lutheri:1,Phaeocystis_antarctica:1,Phaeocystis_globosa:1
+trnR	trnR	tRNA-Arg	tRNA	1	False	5	5	trnR:2,trnR3:2	tRNA-Arg:5	Chrysochromulina_parva:1,Emiliania_huxleyi:1,Phaeocystis_antarctica:1,Phaeocystis_globosa:1,Tisochrysis_lutea:1
+trnR-24	trnR	tRNA-Arg	tRNA	1	False	2	2	trnR2:2	tRNA-Arg:2	Phaeocystis_antarctica:1,Phaeocystis_globosa:1
+trnR-tct	trnR-tct	tRNA-Arg	tRNA	1	False	6	6	trnR:2,trnR1:2,trnR-tct:1	tRNA-Arg:6	Chrysochromulina_parva:1,Emiliania_huxleyi:1,Pavlova_lutheri:1,Phaeocystis_antarctica:1,Phaeocystis_globosa:1,Tisochrysis_lutea:1
+trnS	trnS	tRNA-Ser	tRNA	1	False	5	5	trnS2:2,trnS:2	tRNA-Ser:5	Chrysochromulina_parva:1,Emiliania_huxleyi:1,Phaeocystis_antarctica:1,Phaeocystis_globosa:1,Tisochrysis_lutea:1
+trnS-gct	trnS-gct	tRNA-Ser	tRNA	1	False	6	6	trnS1:2,trnS:2,trnS-gct:1	tRNA-Ser:6	Chrysochromulina_parva:1,Emiliania_huxleyi:1,Pavlova_lutheri:1,Phaeocystis_antarctica:1,Phaeocystis_globosa:1,Tisochrysis_lutea:1
+trnT	trnT	tRNA-Thr	tRNA	1	False	5	5	trnT:4	tRNA-Thr:5	Chrysochromulina_parva:1,Emiliania_huxleyi:1,Phaeocystis_antarctica:1,Phaeocystis_globosa:1,Tisochrysis_lutea:1
+trnV	trnV	tRNA-Val	tRNA	1	False	5	5	trnV:4	tRNA-Val:5	Chrysochromulina_parva:1,Emiliania_huxleyi:1,Phaeocystis_antarctica:1,Phaeocystis_globosa:1,Tisochrysis_lutea:1
+trnW-cca	trnW-cca	tRNA-Trp	tRNA	1	False	6	6	trnW:4,trnW-cca:1	tRNA-Trp:6	Chrysochromulina_parva:1,Emiliania_huxleyi:1,Pavlova_lutheri:1,Phaeocystis_antarctica:1,Phaeocystis_globosa:1,Tisochrysis_lutea:1
+trnY-gta	trnY-gta	tRNA-Tyr	tRNA	1	False	6	6	trnY:4,trnY-gta:1	tRNA-Tyr:6	Chrysochromulina_parva:1,Emiliania_huxleyi:1,Pavlova_lutheri:1,Phaeocystis_antarctica:1,Phaeocystis_globosa:1,Tisochrysis_lutea:1

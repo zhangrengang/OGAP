@@ -79,10 +79,10 @@ ycf1	hypothetical chloroplast RF1
 ycf2	hypothetical chloroplast RF2
 ycf3	photosystem I assembly protein Ycf3
 ycf4	photosystem I assembly protein Ycf4
-rrn16	16S ribosomal RNA
-rrn23	23S ribosomal RNA
-rrn4.5	4.5S ribosomal RNA	rrn4-5,rrn4_5
-rrn5	5S ribosomal RNA
+rrn16	16S ribosomal RNA	rrn16S
+rrn23	23S ribosomal RNA	rrn23S
+rrn4.5	4.5S ribosomal RNA	rrn4-5,rrn4_5,rrn4-5S,rrn4_5S
+rrn5	5S ribosomal RNA	rrn5S
 trnA-UGC	tRNA-Ala
 trnC-GCA	tRNA-Cys
 trnD-GUC	tRNA-Asp

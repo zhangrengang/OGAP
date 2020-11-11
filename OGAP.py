@@ -35,7 +35,7 @@ def makeArgparse():
 	parser.add_argument('-taxon', type=str, default=None, 
 					help="taxon to use as reference, such as rosids [default=auto by -organism]")
 	parser.add_argument('-trans', action="store_true", default=False,
-					help='transcipt mode [default=%(default)s]')
+					help='transcipt input mode [default=%(default)s]')
 	parser.add_argument("-tmpdir", action="store",
 					default='/dev/shm/tmp', type=str,
 					help="temporary directory [default=%(default)s]")
@@ -48,7 +48,7 @@ def makeArgparse():
 					help="EST sequences as evidence in fasta format for coding genes annotation")
 
 	parser.add_argument('-sp', '-organism', type=str, default=None, dest='organism',
-					help="organism to be included in sqn [default=%(default)s]")
+					help="organism to be included in sqn, required for fasta input [default=%(default)s]")
 	parser.add_argument('-linear', action="store_true", default=False,
 					help="topology to be included in sqn [default=circular]")
 	parser.add_argument('-partial', action="store_true", default=False,
@@ -68,7 +68,7 @@ def makeArgparse():
 					help="output directory [default=%(default)s]")
 	group_out.add_argument('-pre', "-prefix", action="store", dest='prefix',
 					default=None, type=str,
-					help="output prefix [default=%(default)s]")
+					help="output prefix [default=genome file basename]")
 	parser.add_argument('-min_cds_cov', type=float, default=40,
 					help="min coverage to filter candidate coding genes [default=%(default)s]")
 	parser.add_argument('-min_rrn_cov', type=float, default=40,
@@ -92,7 +92,7 @@ def makeArgparse():
 					help="include ORF genes in coding gene annotation [default=%(default)s]")
 	group_out.add_argument('-trn_struct', action="store_true", default=False,
 					help="output tRNA structure [default=%(default)s]")
-	group_out.add_argument('-draw_map', action="store_true", default=False,
+	group_out.add_argument('-draw_map', action="store_true", default=True,
 					help="draw gene map [default=%(default)s]")
 	group_out.add_argument('-compare_map', action="store_true", default=True,
                     help="compare gene map with genbank input [default=%(default)s]")
@@ -183,6 +183,8 @@ class Pipeline():
 			logger.info('genome in {} format'.format(self.seqfmt))
 		else:
 			self.seqfmt = seqfmt
+		if self.seqfmt == 'fasta' and self.organism is None:
+			raise ValueError('-sp is required for fasta-format input')
 		if self.seqfmt == 'genbank':
 			rc = self.get_record(self.genome)
 			if self.organism is None:
@@ -265,9 +267,11 @@ class Pipeline():
 		seqids = self.seqs.keys()
 		self.nseqs = len(seqids)
 		if self.nseqs > 1:
+			logger.info('changing partial to True due to nseqs>1')
 			self.linear = self.partial = True
 			self.sqn_annot = True
 		if self.contains_gap(self.seqs.values()):
+			logger.info('changing partial to True due to non-ATCG gap(s)')
 			self.partial = True
 
 		# to fasta
@@ -325,6 +329,7 @@ class Pipeline():
 				self.compare_gene_map()
 	
 		# summary
+		self.summary_source(records)
 		self.summary_records(records)
 		
 		# clean up
@@ -439,9 +444,11 @@ class Pipeline():
 		for record in records:
 			try: d_smy[record.rna_type] += [record]
 			except KeyError: d_smy[record.rna_type] = [record]
-			
+		logger.info('summary by gene type:')
 		line = ['type', 'copy number', 'gene number', 'gene names']
 		print >>sys.stdout, '\t'.join(line)
+		self.print_summary(d_smy)
+	def print_summary(self, d_smy):
 		for rna_type, records in d_smy.items():
 			genes = [record.id for record in records]
 			names = list({record.name for record in records})
@@ -449,7 +456,16 @@ class Pipeline():
 			line = [rna_type, len(genes), len(names), ','.join(names)]
 			line = map(str, line)
 			print >>sys.stdout, '\t'.join(line)
-	
+	def summary_source(self, records):
+		d_smy = OrderedDict()
+		for record in records:
+			try: d_smy[record.source] += [record]
+			except KeyError: d_smy[record.source] = [record]
+		logger.info('summary by source:')
+		line = ['source', 'copy number', 'gene number', 'gene names']
+		print >>sys.stdout, '\t'.join(line)
+		self.print_summary(d_smy)
+
 	def hmmsearch_rna(self):
 		records = []
 		if self.no_rrn and self.no_trn:
@@ -804,7 +820,7 @@ class Pipeline():
 				showtargetgff='T')
 		
 	def hmmsearch(self, hmmfile, seqdb, domtblout):
-		cmd = 'hmmsearch --domtblout {domtblout} {hmmfile} {seqdb} > /dev/null'.format(
+		cmd = 'hmmsearch --nobias --domtblout {domtblout} {hmmfile} {seqdb} > /dev/null'.format(
 				hmmfile=hmmfile, seqdb=seqdb, domtblout=domtblout)
 		run_cmd(cmd, log=True)
 		return cmd
@@ -1002,18 +1018,20 @@ class Pipeline():
 \usepackage[margin=3mm]{geometry}
 \usepackage{graphicx}
 \usepackage{caption}
-\usepackage{pdflscape}
+\usepackage{subfig}
+\usepackage{float}
+%%\usepackage{pdflscape}
 \begin{document}
-\begin{landscape}
-\begin{figure}
+%%\begin{landscape}
+\begin{figure}[!htb]
   \centering
-  \includegraphics[width=1.0\linewidth]{%s}
-  \includegraphics[width=1.0\linewidth]{%s}
-  \caption{%s / %s (%s bp)}
+  \subfloat[Reference]{\includegraphics[angle=-90,totalheight=270mm]{%s}}
+  \subfloat[OGAP]{\includegraphics[angle=-90,totalheight=270mm]{%s}}
+  \caption{%s %s / %s (%s bp)}
 \end{figure}
-\end{landscape}
+%%\end{landscape}
 \end{document}
-''' % (outfig_ref, outfig_cmp, self.organism, acc, self.seqlen)
+''' % (outfig_ref, outfig_cmp, self.organism, LOCATION[self.organ], acc, self.seqlen)
 		texfile = '{}/{}.merge.tex'.format(self.tmpdir, self.prefix)
 		with open(texfile, 'w') as f:
 			print >>f, tex

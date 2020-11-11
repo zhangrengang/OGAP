@@ -1,0 +1,11 @@
+#id	organism	name_count	cds_count	trn_count	rrn_count	length	GC	taxonomy
+NC_034947.1	Archaphanostoma ylvae	34	12	22	2	16619	25.3	root;cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Xenacoelomorpha;Acoelomorpha;Acoela;Isodiametridae;Archaphanostoma;Archaphanostoma ylvae
+NC_034948.1	Isodiametra pulchra	33	11	22	2	18725	32.7	root;cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Xenacoelomorpha;Acoelomorpha;Acoela;Isodiametridae;Isodiametra;Isodiametra pulchra
+NC_034946.1	Paratomella rubra	35	13	22	2	14954	21.8	root;cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Xenacoelomorpha;Acoelomorpha;Acoela;Paratomellidae;Paratomella;Paratomella rubra
+NC_014578.1	Symsagittifera roscoffensis	12	12	21	2	14803	24.7	root;cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Xenacoelomorpha;Acoelomorpha;Acoela;Sagittiferidae;Symsagittifera;Symsagittifera roscoffensis
+NC_008556.1	Xenoturbella bocki	13	13	22	2	15234	35.4	root;cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Xenacoelomorpha;Xenoturbellida;Xenoturbellidae;Xenoturbella;Xenoturbella bocki
+NC_029217.1	Xenoturbella churro	35	13	22	2	15339	37.6	root;cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Xenacoelomorpha;Xenoturbellida;Xenoturbellidae;Xenoturbella;Xenoturbella churro
+NC_029218.1	Xenoturbella hollandorum	35	13	22	2	15210	34.6	root;cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Xenacoelomorpha;Xenoturbellida;Xenoturbellidae;Xenoturbella;Xenoturbella hollandorum
+NC_036763.1	Xenoturbella japonica	13	13	22	2	15249	37.6	root;cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Xenacoelomorpha;Xenoturbellida;Xenoturbellidae;Xenoturbella;Xenoturbella japonica
+NC_029219.1	Xenoturbella monstrosa	35	13	22	2	15279	36.7	root;cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Xenacoelomorpha;Xenoturbellida;Xenoturbellidae;Xenoturbella;Xenoturbella monstrosa
+NC_029220.1	Xenoturbella profunda	35	13	22	2	15403	36.8	root;cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Xenacoelomorpha;Xenoturbellida;Xenoturbellidae;Xenoturbella;Xenoturbella profunda

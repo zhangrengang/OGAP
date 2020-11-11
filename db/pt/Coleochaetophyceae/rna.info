@@ -1,0 +1,25 @@
+#id	name	product	seq_type	exon_count	trans_splicing	gene_count	species_count	names	products	species
+rrf	rrf	5S ribosomal RNA	rRNA	1	False	2	2	rrf:2	5S ribosomal RNA:2	Chaetosphaeridium_globosum:1,Coleochaete_scutata:1
+rrl	rrl	large subunit ribosomal RNA	rRNA	1	False	2	2	rrl:2	large subunit ribosomal RNA:2	Chaetosphaeridium_globosum:1,Coleochaete_scutata:1
+rrs	rrs	small subunit ribosomal RNA	rRNA	1	False	2	2	rrs:2	small subunit ribosomal RNA:2	Chaetosphaeridium_globosum:1,Coleochaete_scutata:1
+trnC-gca	trnC-gca	tRNA-Cys	tRNA	1	False	2	2	trnC-gca:2	tRNA-Cys:2	Chaetosphaeridium_globosum:1,Coleochaete_scutata:1
+trnD-guc	trnD-guc	tRNA-Asp	tRNA	1	False	2	2	trnD-guc:2	tRNA-Asp:2	Chaetosphaeridium_globosum:1,Coleochaete_scutata:1
+trnE-uuc	trnE-uuc	tRNA-Glu	tRNA	1	False	2	2	trnE-uuc:2	tRNA-Glu:2	Chaetosphaeridium_globosum:1,Coleochaete_scutata:1
+trnF-gaa	trnF-gaa	tRNA-Phe	tRNA	1	False	2	2	trnF-gaa:2	tRNA-Phe:2	Chaetosphaeridium_globosum:1,Coleochaete_scutata:1
+trnG-gcc	trnG-gcc	tRNA-Gly	tRNA	1	False	2	2	trnG-gcc:2	tRNA-Gly:2	Chaetosphaeridium_globosum:1,Coleochaete_scutata:1
+trnG-ucc	trnG-ucc	tRNA-Gly	tRNA	2	False	2	2	trnG-ucc:2	tRNA-Gly:2	Chaetosphaeridium_globosum:1,Coleochaete_scutata:1
+trnH-gug	trnH-gug	tRNA-His	tRNA	1	False	2	2	trnH-gug:2	tRNA-His:2	Chaetosphaeridium_globosum:1,Coleochaete_scutata:1
+trnI-cau	trnI-cau	tRNA-Ile	tRNA	1	False	2	2	trnI-cau:2	tRNA-Ile:2	Chaetosphaeridium_globosum:1,Coleochaete_scutata:1
+trnK-uuu	trnK-uuu	tRNA-Lys	tRNA	2	False	2	2	trnK-uuu:2	tRNA-Lys:2	Chaetosphaeridium_globosum:1,Coleochaete_scutata:1
+trnL-caa	trnL-caa	tRNA-Leu	tRNA	1	False	2	2	trnL-caa:2	tRNA-Leu:2	Chaetosphaeridium_globosum:1,Coleochaete_scutata:1
+trnL-uag	trnL-uag	tRNA-Leu	tRNA	1	False	2	2	trnL-uag:2	tRNA-Leu:2	Chaetosphaeridium_globosum:1,Coleochaete_scutata:1
+trnM-cau	trnM-cau	tRNA-Met	tRNA	1	False	2	2	trnMf-cau:2	tRNA-Met:2	Chaetosphaeridium_globosum:1,Coleochaete_scutata:1
+trnP-ugg	trnP-ugg	tRNA-Pro	tRNA	1	False	2	2	trnP-ugg:2	tRNA-Pro:2	Chaetosphaeridium_globosum:1,Coleochaete_scutata:1
+trnR-acg	trnR-acg	tRNA-Arg	tRNA	1	False	2	2	trnR-acg:2	tRNA-Arg:2	Chaetosphaeridium_globosum:1,Coleochaete_scutata:1
+trnR-ucu	trnR-ucu	tRNA-Arg	tRNA	1	False	2	2	trnR-ucu:2	tRNA-Arg:2	Chaetosphaeridium_globosum:1,Coleochaete_scutata:1
+trnS-gcu	trnS-gcu	tRNA-Ser	tRNA	1	False	2	2	trnS-gcu:2	tRNA-Ser:2	Chaetosphaeridium_globosum:1,Coleochaete_scutata:1
+trnT-ggu	trnT-ggu	tRNA-Thr	tRNA	1	False	2	2	trnT-ggu:2	tRNA-Thr:2	Chaetosphaeridium_globosum:1,Coleochaete_scutata:1
+trnV-gac	trnV-gac	tRNA-Val	tRNA	1	False	2	2	trnV-gac:2	tRNA-Val:2	Chaetosphaeridium_globosum:1,Coleochaete_scutata:1
+trnV-uac	trnV-uac	tRNA-Val	tRNA	2	False	2	2	trnV-uac:2	tRNA-Val:2	Chaetosphaeridium_globosum:1,Coleochaete_scutata:1
+trnW-cca	trnW-cca	tRNA-Trp	tRNA	1	False	2	2	trnW-cca:2	tRNA-Trp:2	Chaetosphaeridium_globosum:1,Coleochaete_scutata:1
+trnY-gua	trnY-gua	tRNA-Tyr	tRNA	1	False	2	2	trnY-gua:2	tRNA-Tyr:2	Chaetosphaeridium_globosum:1,Coleochaete_scutata:1

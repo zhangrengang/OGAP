@@ -1,0 +1,41 @@
+#id	name	product	seq_type	exon_count	trans_splicing	gene_count	species_count	names	products	species
+rrfA	rrfA	5S ribosomal RNA	rRNA	1	False	3	3	rrfA:2,rrfA-A:1	5S ribosomal RNA:3	Cyanophora_biloba:1,Cyanophora_paradoxa:1,Cyanophora_sudae:1
+rrl	rrl	23S ribosomal RNA	rRNA	1	False	5	5	rrl:2,rrlA:2,rrlA-A:1	23S ribosomal RNA:5	Cyanophora_biloba:1,Cyanophora_paradoxa:1,Cyanophora_sudae:1,Glaucocystis_incrassata:1,Gloeochaete_wittrockiana:1
+rrsA	rrsA	16S ribosomal RNA	rRNA	1	False	5	5	rrsA:2,rrs:2,rrsA-A:1	16S ribosomal RNA:5	Cyanophora_biloba:1,Cyanophora_paradoxa:1,Cyanophora_sudae:1,Glaucocystis_incrassata:1,Gloeochaete_wittrockiana:1
+trnA	trnA	tRNA-Ala	tRNA	1	False	4	4	trnA:4	tRNA-Ala:4	Cyanophora_biloba:1,Cyanophora_sudae:1,Glaucocystis_incrassata:1,Gloeochaete_wittrockiana:1
+trnA-25	trnA	tRNA-Ala	tRNA	1	False	4	4	trnA:3,trnA-A:1	tRNA-Ala:4	Cyanophora_paradoxa:1,Cyanophora_sudae:1,Glaucocystis_incrassata:1,Gloeochaete_wittrockiana:1
+trnC	trnC	tRNA-Cys	tRNA	1	False	3	3	trnC:2,trnC-A:1	tRNA-Cys:3	Cyanophora_biloba:1,Cyanophora_paradoxa:1,Cyanophora_sudae:1
+trnD	trnD	tRNA-Asp	tRNA	1	False	4	4	trnD:4	tRNA-Asp:3,tRNA-OTHER:1	Cyanophora_biloba:1,Cyanophora_paradoxa:1,Cyanophora_sudae:1,Gloeochaete_wittrockiana:1
+trnE	trnE	tRNA-Glu	tRNA	1	False	4	4	trnE:4	tRNA-Glu:3,tRNA-OTHER:1	Cyanophora_biloba:1,Cyanophora_paradoxa:1,Cyanophora_sudae:1,Glaucocystis_incrassata:1
+trnF	trnF	tRNA-Phe	tRNA	1	False	2	2	trnF:2	tRNA-Phe:2	Glaucocystis_incrassata:1,Gloeochaete_wittrockiana:1
+trnF-31	trnF	tRNA-Phe	tRNA	1	False	3	3	trnF:3	tRNA-Phe:3	Cyanophora_biloba:1,Cyanophora_paradoxa:1,Cyanophora_sudae:1
+trnG	trnG	tRNA-Gly	tRNA	1	False	5	5	trnG:4,trnG-A:1	tRNA-Gly:5	Cyanophora_biloba:1,Cyanophora_paradoxa:1,Cyanophora_sudae:1,Glaucocystis_incrassata:1,Gloeochaete_wittrockiana:1
+trnG-26	trnG	tRNA-Gly	tRNA	1	False	5	5	trnG:4,trnG-B:1	tRNA-Gly:5	Cyanophora_biloba:1,Cyanophora_paradoxa:1,Cyanophora_sudae:1,Glaucocystis_incrassata:1,Gloeochaete_wittrockiana:1
+trnH	trnH	tRNA-His	tRNA	1	False	2	2	trnH:2	tRNA-His:2	Glaucocystis_incrassata:1,Gloeochaete_wittrockiana:1
+trnH-36	trnH	tRNA-His	tRNA	1	False	3	3	trnH:3	tRNA-His:3	Cyanophora_biloba:1,Cyanophora_paradoxa:1,Cyanophora_sudae:1
+trnI	trnI	tRNA-Ile	tRNA	1	False	5	5	trnI:4,trnI-A:1	tRNA-Ile:5	Cyanophora_biloba:1,Cyanophora_paradoxa:1,Cyanophora_sudae:1,Glaucocystis_incrassata:1,Gloeochaete_wittrockiana:1
+trnK	trnK	tRNA-Lys	tRNA	1	False	2	2	trnK:2	tRNA-Lys:2	Glaucocystis_incrassata:1,Gloeochaete_wittrockiana:1
+trnK-35	trnK	tRNA-Lys	tRNA	1	False	3	3	trnK:3	tRNA-Lys:3	Cyanophora_biloba:1,Cyanophora_paradoxa:1,Cyanophora_sudae:1
+trnL	trnL	tRNA-Leu	tRNA	1	False	4	4	trnL:3	tRNA-Leu:4	Cyanophora_biloba:1,Cyanophora_paradoxa:1,Cyanophora_sudae:1,Gloeochaete_wittrockiana:1
+trnL-15	trnL	tRNA-Leu	tRNA	1	False	3	3	trnL:2,trnL-B:1	tRNA-Leu:3	Cyanophora_biloba:1,Cyanophora_paradoxa:1,Glaucocystis_incrassata:1
+trnL-28	trnL	tRNA-Leu	tRNA	2	False	3	3	trnL:2,trnL-A:1	tRNA-Leu:3	Cyanophora_biloba:1,Cyanophora_paradoxa:1,Cyanophora_sudae:1
+trnL-33	trnL	tRNA-Leu	tRNA	1	False	2	2	trnL:2	tRNA-Leu:2	Cyanophora_biloba:1,Cyanophora_sudae:1
+trnM	trnM	tRNA-Met	tRNA	1	False	3	3	trnM:3	tRNA-Met:3	Cyanophora_biloba:1,Cyanophora_paradoxa:1,Cyanophora_sudae:1
+trnM-34	trnM	tRNA-Met	tRNA	1	False	5	5	trnM:4,trnfM:1	tRNA-Met:5	Cyanophora_biloba:1,Cyanophora_paradoxa:1,Cyanophora_sudae:1,Glaucocystis_incrassata:1,Gloeochaete_wittrockiana:1
+trnM-37	trnM	tRNA-Met	tRNA	1	False	3	3	trnM:2,trnI-B:1	tRNA-Met:2,tRNA-Ile:1	Cyanophora_biloba:1,Cyanophora_paradoxa:1,Cyanophora_sudae:1
+trnN	trnN	tRNA-Asn	tRNA	1	False	5	5	trnN:5	tRNA-Asn:5	Cyanophora_biloba:1,Cyanophora_paradoxa:1,Cyanophora_sudae:1,Glaucocystis_incrassata:1,Gloeochaete_wittrockiana:1
+trnP	trnP	tRNA-Pro	tRNA	1	False	5	5	trnP:5	tRNA-Pro:5	Cyanophora_biloba:1,Cyanophora_paradoxa:1,Cyanophora_sudae:1,Glaucocystis_incrassata:1,Gloeochaete_wittrockiana:1
+trnQ	trnQ	tRNA-Gln	tRNA	1	False	3	3	trnQ:3	tRNA-Gln:3	Cyanophora_biloba:1,Cyanophora_paradoxa:1,Cyanophora_sudae:1
+trnR	trnR	tRNA-Arg	tRNA	1	False	5	5	trnR:4,trnR-C:1	tRNA-Arg:5	Cyanophora_biloba:1,Cyanophora_paradoxa:1,Cyanophora_sudae:1,Glaucocystis_incrassata:1,Gloeochaete_wittrockiana:1
+trnR-13	trnR	tRNA-Arg	tRNA	1	False	5	5	trnR:4,trnR-B:1	tRNA-Arg:5	Cyanophora_biloba:1,Cyanophora_paradoxa:1,Cyanophora_sudae:1,Glaucocystis_incrassata:1,Gloeochaete_wittrockiana:1
+trnR-29	trnR	tRNA-Arg	tRNA	1	False	3	3	trnR:2,trnR-A:1	tRNA-Arg:3	Cyanophora_biloba:1,Cyanophora_paradoxa:1,Cyanophora_sudae:1
+trnS	trnS	tRNA-Ser	tRNA	1	False	5	5	trnS:4,trnS-D:1	tRNA-Ser:5	Cyanophora_biloba:1,Cyanophora_paradoxa:1,Cyanophora_sudae:1,Glaucocystis_incrassata:1,Gloeochaete_wittrockiana:1
+trnS-16	trnS	tRNA-Ser	tRNA	1	False	5	5	trnS:4,trnS-B:1	tRNA-Ser:5	Cyanophora_biloba:1,Cyanophora_paradoxa:1,Cyanophora_sudae:1,Glaucocystis_incrassata:1,Gloeochaete_wittrockiana:1
+trnS-38	trnS	tRNA-Ser	tRNA	1	False	3	3	trnS:2,trnS-A:1	tRNA-Ser:3	Cyanophora_biloba:1,Cyanophora_paradoxa:1,Cyanophora_sudae:1
+trnS-39	trnS	tRNA-Ser	tRNA	1	False	3	3	trnS:2,trnS-C:1	tRNA-Ser:3	Cyanophora_biloba:1,Cyanophora_paradoxa:1,Cyanophora_sudae:1
+trnT	trnT	tRNA-Thr	tRNA	1	False	5	5	trnT:4,trnT-A:1	tRNA-Thr:5	Cyanophora_biloba:1,Cyanophora_paradoxa:1,Cyanophora_sudae:1,Glaucocystis_incrassata:1,Gloeochaete_wittrockiana:1
+trnT-24	trnT	tRNA-Thr	tRNA	1	False	5	5	trnT:4,trnT-B:1	tRNA-Thr:5	Cyanophora_biloba:1,Cyanophora_paradoxa:1,Cyanophora_sudae:1,Glaucocystis_incrassata:1,Gloeochaete_wittrockiana:1
+trnV	trnV	tRNA-Val	tRNA	1	False	4	4	trnV:3,trnV-B:1	tRNA-Val:4	Cyanophora_biloba:1,Cyanophora_paradoxa:1,Cyanophora_sudae:1,Glaucocystis_incrassata:1
+trnV-23	trnV	tRNA-Val	tRNA	1	False	3	3	trnV:2,trnV-A:1	tRNA-Val:3	Cyanophora_biloba:1,Cyanophora_paradoxa:1,Cyanophora_sudae:1
+trnW	trnW	tRNA-Trp	tRNA	1	False	4	4	trnW:4	tRNA-Trp:4	Cyanophora_biloba:1,Cyanophora_paradoxa:1,Cyanophora_sudae:1,Gloeochaete_wittrockiana:1
+trnY	trnY	tRNA-Tyr	tRNA	1	False	5	5	trnY:5	tRNA-Tyr:5	Cyanophora_biloba:1,Cyanophora_paradoxa:1,Cyanophora_sudae:1,Glaucocystis_incrassata:1,Gloeochaete_wittrockiana:1

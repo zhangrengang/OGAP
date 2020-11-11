@@ -1,0 +1,604 @@
+>Feature NC_037304.1
+6264	8389	gene
+		gene	cox2
+		locus_tag	ATHMT_0000
+6264	6963	mRNA
+8307	8389
+		product	cytochrome c oxidase subunit 2
+		transcript_id	gnl|ATHMT|cox2-1.t1
+		protein_id	gnl|ATHMT|cox2-1.t1:cds
+6264	6963	CDS
+8307	8389
+		product	cytochrome c oxidase subunit 2
+		transcript_id	gnl|ATHMT|cox2-1.t1
+		protein_id	gnl|ATHMT|cox2-1.t1:cds
+		codon_start	1
+18434	17814	gene
+		gene	ccmB
+		locus_tag	ATHMT_0001
+18434	17814	mRNA
+		product	cytochrome c biogenesis B
+		transcript_id	gnl|ATHMT|ccmB-1.t1
+		protein_id	gnl|ATHMT|ccmB-1.t1:cds
+18434	17814	CDS
+		product	cytochrome c biogenesis B
+		transcript_id	gnl|ATHMT|ccmB-1.t1
+		protein_id	gnl|ATHMT|ccmB-1.t1:cds
+		codon_start	1
+19928	20000	gene
+		gene	trnK-UUU
+		locus_tag	ATHMT_0002
+19928	20000	tRNA
+		product	tRNA-Lys
+		transcript_id	gnl|ATHMT|trnK-UUU-2.t1
+20165	23418	gene
+		gene	rps3
+		locus_tag	ATHMT_0003
+20165	20238	mRNA
+21822	23418
+		product	ribosomal protein S3
+		transcript_id	gnl|ATHMT|rps3-1.t1
+		protein_id	gnl|ATHMT|rps3-1.t1:cds
+20165	20238	CDS
+21822	23418
+		product	ribosomal protein S3
+		transcript_id	gnl|ATHMT|rps3-1.t1
+		protein_id	gnl|ATHMT|rps3-1.t1:cds
+		codon_start	1
+23285	23824	gene
+		gene	rpl16
+		locus_tag	ATHMT_0004
+23285	23824	mRNA
+		product	ribosomal protein L16
+		transcript_id	gnl|ATHMT|rpl16-1.t1
+		protein_id	gnl|ATHMT|rpl16-1.t1:cds
+23285	23824	CDS
+		product	ribosomal protein L16
+		transcript_id	gnl|ATHMT|rpl16-1.t1
+		protein_id	gnl|ATHMT|rpl16-1.t1:cds
+		codon_start	1
+24665	25237	gene
+		gene	nad9
+		locus_tag	ATHMT_0005
+24665	25237	mRNA
+		product	NADH dehydrogenase subunit 9
+		transcript_id	gnl|ATHMT|nad9-1.t1
+		protein_id	gnl|ATHMT|nad9-1.t1:cds
+24665	25237	CDS
+		product	NADH dehydrogenase subunit 9
+		transcript_id	gnl|ATHMT|nad9-1.t1
+		protein_id	gnl|ATHMT|nad9-1.t1:cds
+		codon_start	1
+234352	236631	gene
+26813	28336
+		gene	nad5
+		exception	trans-splicing
+		locus_tag	ATHMT_0006
+234352	234580	mRNA
+235412	236631
+26813	27211
+28190	28336
+		product	NADH dehydrogenase subunit 5
+		transcript_id	gnl|ATHMT|nad5-1.t1
+		protein_id	gnl|ATHMT|nad5-1.t1:cds
+234352	234580	CDS
+235412	236631
+26813	27211
+28190	28336
+		product	NADH dehydrogenase subunit 5
+		transcript_id	gnl|ATHMT|nad5-1.t1
+		protein_id	gnl|ATHMT|nad5-1.t1:cds
+		codon_start	1
+41486	41573	gene
+		gene	trnS-GCU
+		locus_tag	ATHMT_0007
+41486	41573	tRNA
+		product	tRNA-Ser
+		transcript_id	gnl|ATHMT|trnS-GCU-2.t1
+42116	42190	gene
+		gene	trnP-UGG
+		locus_tag	ATHMT_0008
+42116	42190	tRNA
+		product	tRNA-Pro
+		transcript_id	gnl|ATHMT|trnP-UGG-1.t1
+42546	42616	gene
+		gene	trnC-GCA
+		locus_tag	ATHMT_0009
+42546	42616	tRNA
+		product	tRNA-Cys
+		transcript_id	gnl|ATHMT|trnC-GCA-1.t1
+43544	43615	gene
+		gene	trnN-GUU-cp
+		locus_tag	ATHMT_0010
+43544	43615	tRNA
+		product	tRNA-Asn
+		transcript_id	gnl|ATHMT|trnN-GUU-cp-1.t1
+44462	44544	gene
+		gene	trnY-GUA
+		locus_tag	ATHMT_0011
+44462	44544	tRNA
+		product	tRNA-Tyr
+		transcript_id	gnl|ATHMT|trnY-GUA-1.t1
+49423	50580	gene
+		gene	atp6
+		locus_tag	ATHMT_0012
+49423	50580	mRNA
+		product	ATP synthase subunit 6
+		transcript_id	gnl|ATHMT|atp6-1.t1
+		protein_id	gnl|ATHMT|atp6-1.t1:cds
+49423	50580	CDS
+		product	ATP synthase subunit 6
+		transcript_id	gnl|ATHMT|atp6-1.t1
+		protein_id	gnl|ATHMT|atp6-1.t1:cds
+		codon_start	1
+50626	50712	gene
+		gene	trnS-UGA
+		locus_tag	ATHMT_0013
+50626	50712	tRNA
+		product	tRNA-Ser
+		transcript_id	gnl|ATHMT|trnS-UGA-2.t1
+83231	82937	gene
+58315	59481
+230304	234132
+		gene	nad1
+		exception	trans-splicing
+		locus_tag	ATHMT_0014
+83231	82937	mRNA
+58315	58397
+59290	59481
+230304	230362
+233874	234132
+		product	NADH dehydrogenase subunit 1
+		transcript_id	gnl|ATHMT|nad1-1.t1
+		protein_id	gnl|ATHMT|nad1-1.t1:cds
+83231	82937	CDS
+58315	58397
+59290	59481
+230304	230362
+233874	234132
+		product	NADH dehydrogenase subunit 1
+		transcript_id	gnl|ATHMT|nad1-1.t1
+		protein_id	gnl|ATHMT|nad1-1.t1:cds
+		codon_start	1
+68621	67098	gene
+		gene	atp1
+		locus_tag	ATHMT_0015
+68621	67098	mRNA
+		product	ATP synthase subunit 1
+		transcript_id	gnl|ATHMT|atp1-1.t1
+		protein_id	gnl|ATHMT|atp1-1.t1:cds
+68621	67098	CDS
+		product	ATP synthase subunit 1
+		transcript_id	gnl|ATHMT|atp1-1.t1
+		protein_id	gnl|ATHMT|atp1-1.t1:cds
+		codon_start	1
+79559	80005	gene
+		gene	rps7
+		locus_tag	ATHMT_0016
+79559	80005	mRNA
+		product	ribosomal protein S7
+		transcript_id	gnl|ATHMT|rps7-1.t1
+		protein_id	gnl|ATHMT|rps7-1.t1:cds
+79559	80005	CDS
+		product	ribosomal protein S7
+		transcript_id	gnl|ATHMT|rps7-1.t1
+		protein_id	gnl|ATHMT|rps7-1.t1:cds
+		codon_start	1
+161832	163357	gene
+98042	92819
+		gene	nad2
+		exception	trans-splicing
+		locus_tag	ATHMT_0017
+161832	161984	mRNA
+162966	163357
+98042	97882
+95238	94666
+93006	92819
+		product	NADH dehydrogenase subunit 2
+		transcript_id	gnl|ATHMT|nad2-2.t1
+		protein_id	gnl|ATHMT|nad2-2.t1:cds
+161832	161984	CDS
+162966	163357
+98042	97882
+95238	94666
+93006	92819
+		product	NADH dehydrogenase subunit 2
+		transcript_id	gnl|ATHMT|nad2-2.t1
+		protein_id	gnl|ATHMT|nad2-2.t1:cds
+		codon_start	1
+102603	102675	gene
+		gene	trnM-CAU-cp
+		locus_tag	ATHMT_0018
+102603	102675	tRNA
+		product	tRNA-Met
+		transcript_id	gnl|ATHMT|trnM-CAT-cp-1.t1
+116345	114762	gene
+		gene	cox1
+		locus_tag	ATHMT_0019
+116345	114762	mRNA
+		product	cytochrome c oxidase subunit 1
+		transcript_id	gnl|ATHMT|cox1-1.t1
+		protein_id	gnl|ATHMT|cox1-1.t1:cds
+116345	114762	CDS
+		product	cytochrome c oxidase subunit 1
+		transcript_id	gnl|ATHMT|cox1-1.t1
+		protein_id	gnl|ATHMT|cox1-1.t1:cds
+		codon_start	1
+124676	124603	gene
+		gene	trnH-GUG-cp
+		locus_tag	ATHMT_0020
+124676	124603	tRNA
+		product	tRNA-His
+		transcript_id	gnl|ATHMT|trnH-GTG-cp-1.t1
+126118	126000	gene
+		gene	rrn5
+		locus_tag	ATHMT_0021
+126118	126000	rRNA
+		product	5S ribosomal RNA
+		transcript_id	gnl|ATHMT|rrn5-1.t1
+128215	126291	gene
+		gene	rrn18
+		locus_tag	ATHMT_0022
+128215	126291	rRNA
+		product	18S ribosomal RNA
+		transcript_id	gnl|ATHMT|rrn18-2.t1
+143965	140796	gene
+		gene	rrn26
+		locus_tag	ATHMT_0023
+143965	140796	rRNA
+		product	26S ribosomal RNA
+		transcript_id	gnl|ATHMT|rrn26-1.t1
+159980	161068	gene
+		gene	rps4
+		locus_tag	ATHMT_0024
+159980	161068	mRNA
+		product	ribosomal protein S4
+		transcript_id	gnl|ATHMT|rps4-1.t1
+		protein_id	gnl|ATHMT|rps4-1.t1:cds
+159980	161068	CDS
+		product	ribosomal protein S4
+		transcript_id	gnl|ATHMT|rps4-1.t1
+		protein_id	gnl|ATHMT|rps4-1.t1:cds
+		codon_start	1
+165838	166455	gene
+		gene	nad6
+		locus_tag	ATHMT_0025
+165838	166455	mRNA
+		product	NADH dehydrogenase subunit 6
+		transcript_id	gnl|ATHMT|nad6-1.t1
+		protein_id	gnl|ATHMT|nad6-1.t1:cds
+165838	166455	CDS
+		product	NADH dehydrogenase subunit 6
+		transcript_id	gnl|ATHMT|nad6-1.t1
+		protein_id	gnl|ATHMT|nad6-1.t1:cds
+		codon_start	1
+171643	171570	gene
+		gene	trnfM-CAU
+		locus_tag	ATHMT_0026
+171643	171570	tRNA
+		product	tRNA-Met
+		transcript_id	gnl|ATHMT|trnfM-CAT-1.t1
+180744	180658	gene
+		gene	trnS-GGA-cp
+		locus_tag	ATHMT_0027
+180744	180658	tRNA
+		product	tRNA-Ser
+		transcript_id	gnl|ATHMT|trnS-GGA-cp-1.t1
+182858	181677	gene
+		gene	cob
+		locus_tag	ATHMT_0028
+182858	181677	mRNA
+		product	apocytochrome b
+		transcript_id	gnl|ATHMT|cob-1.t1
+		protein_id	gnl|ATHMT|cob-1.t1:cds
+182858	181677	CDS
+		product	apocytochrome b
+		transcript_id	gnl|ATHMT|cob-1.t1
+		protein_id	gnl|ATHMT|cob-1.t1:cds
+		codon_start	1
+184820	184503	gene
+		gene	rps14
+		locus_tag	ATHMT_0029
+184820	184797	mRNA
+184748	184503
+		product	ribosomal protein S14
+		transcript_id	gnl|ATHMT|rps14-1.t1
+		protein_id	gnl|ATHMT|rps14-1.t1:cds
+184820	184797	CDS
+184748	184503
+		product	ribosomal protein S14
+		transcript_id	gnl|ATHMT|rps14-1.t1
+		protein_id	gnl|ATHMT|rps14-1.t1:cds
+		codon_start	1
+185319	184762	gene
+		gene	rpl5
+		locus_tag	ATHMT_0030
+185319	184762	mRNA
+		product	ribosomal protein L5
+		transcript_id	gnl|ATHMT|rpl5-1.t1
+		protein_id	gnl|ATHMT|rpl5-1.t1:cds
+185319	184762	CDS
+		product	ribosomal protein L5
+		transcript_id	gnl|ATHMT|rpl5-1.t1
+		protein_id	gnl|ATHMT|rpl5-1.t1:cds
+		codon_start	1
+189287	189358	gene
+		gene	trnG-GCC
+		locus_tag	ATHMT_0031
+189287	189358	tRNA
+		product	tRNA-Gly
+		transcript_id	gnl|ATHMT|trnG-GCC-1.t1
+189483	191800	gene
+		gene	ccmFC
+		locus_tag	ATHMT_0032
+189483	190261	mRNA
+191215	191800
+		product	cytochrome c biogenesis FC
+		transcript_id	gnl|ATHMT|ccmFC-1.t1
+		protein_id	gnl|ATHMT|ccmFC-1.t1:cds
+189483	190261	CDS
+191215	191800
+		product	cytochrome c biogenesis FC
+		transcript_id	gnl|ATHMT|ccmFC-1.t1
+		protein_id	gnl|ATHMT|ccmFC-1.t1:cds
+		codon_start	1
+215562	207580	gene
+		gene	nad4
+		locus_tag	ATHMT_0033
+215562	215102	mRNA
+213629	213115
+210033	209611
+207668	207580
+		product	NADH dehydrogenase subunit 4
+		transcript_id	gnl|ATHMT|nad4-1.t1
+		protein_id	gnl|ATHMT|nad4-1.t1:cds
+215562	215102	CDS
+213629	213115
+210033	209611
+207668	207580
+		product	NADH dehydrogenase subunit 4
+		transcript_id	gnl|ATHMT|nad4-1.t1
+		protein_id	gnl|ATHMT|nad4-1.t1:cds
+		codon_start	1
+219746	218904	gene
+		gene	mttB
+		locus_tag	ATHMT_0034
+219746	218904	mRNA
+		product	transport membrane protein
+		transcript_id	gnl|ATHMT|mttB-1.t1
+		protein_id	gnl|ATHMT|mttB-1.t1:cds
+219746	218904	CDS
+		product	transport membrane protein
+		transcript_id	gnl|ATHMT|mttB-1.t1
+		protein_id	gnl|ATHMT|mttB-1.t1:cds
+		codon_start	1
+222610	219910	gene
+		gene	rpl2
+		locus_tag	ATHMT_0035
+222610	221696	mRNA
+220047	219910
+		product	ribosomal protein L2
+		transcript_id	gnl|ATHMT|rpl2-1.t1
+		protein_id	gnl|ATHMT|rpl2-1.t1:cds
+222610	221696	CDS
+220047	219910
+		product	ribosomal protein L2
+		transcript_id	gnl|ATHMT|rpl2-1.t1
+		protein_id	gnl|ATHMT|rpl2-1.t1:cds
+		codon_start	1
+231089	233059	gene
+		gene	matR
+		locus_tag	ATHMT_0036
+231089	233059	mRNA
+		product	maturase-related protein
+		transcript_id	gnl|ATHMT|matR-1.t1
+		protein_id	gnl|ATHMT|matR-1.t1:cds
+231089	233059	CDS
+		product	maturase-related protein
+		transcript_id	gnl|ATHMT|matR-1.t1
+		protein_id	gnl|ATHMT|matR-1.t1:cds
+		codon_start	1
+245330	239250	gene
+		gene	nad7
+		locus_tag	ATHMT_0037
+245330	245188	mRNA
+244223	244155
+243091	242625
+241571	241328
+239511	239250
+		product	NADH dehydrogenase subunit 7
+		transcript_id	gnl|ATHMT|nad7-1.t1
+		protein_id	gnl|ATHMT|nad7-1.t1:cds
+245330	245188	CDS
+244223	244155
+243091	242625
+241571	241328
+239511	239250
+		product	NADH dehydrogenase subunit 7
+		transcript_id	gnl|ATHMT|nad7-1.t1
+		protein_id	gnl|ATHMT|nad7-1.t1:cds
+		codon_start	1
+247492	247016	gene
+		gene	atp8
+		locus_tag	ATHMT_0038
+247492	247016	mRNA
+		product	ATP synthase subunit 8
+		transcript_id	gnl|ATHMT|atp8-1.t1
+		protein_id	gnl|ATHMT|atp8-1.t1:cds
+247492	247016	CDS
+		product	ATP synthase subunit 8
+		transcript_id	gnl|ATHMT|atp8-1.t1
+		protein_id	gnl|ATHMT|atp8-1.t1:cds
+		codon_start	1
+250307	250383	gene
+		gene	trnI-CAU
+		locus_tag	ATHMT_0039
+250307	250383	tRNA
+		product	tRNA-Ile
+		transcript_id	gnl|ATHMT|trnI-CAU-1.t1
+264421	264335	gene
+		gene	trnS-UGA
+		locus_tag	ATHMT_0040
+264421	264335	tRNA
+		product	tRNA-Ser
+		transcript_id	gnl|ATHMT|trnS-UGA-1.t1
+265516	264467	gene
+		gene	atp6
+		locus_tag	ATHMT_0041
+265516	264467	mRNA
+		product	ATP synthase subunit 6
+		transcript_id	gnl|ATHMT|atp6-2.t1
+		protein_id	gnl|ATHMT|atp6-2.t1:cds
+265516	264467	CDS
+		product	ATP synthase subunit 6
+		transcript_id	gnl|ATHMT|atp6-2.t1
+		protein_id	gnl|ATHMT|atp6-2.t1:cds
+		codon_start	1
+271185	270961	gene
+		gene	atp9
+		locus_tag	ATHMT_0042
+271185	270961	mRNA
+		product	ATP synthase subunit 9
+		transcript_id	gnl|ATHMT|atp9-1.t1
+		protein_id	gnl|ATHMT|atp9-1.t1:cds
+271185	270961	CDS
+		product	ATP synthase subunit 9
+		transcript_id	gnl|ATHMT|atp9-1.t1
+		protein_id	gnl|ATHMT|atp9-1.t1:cds
+		codon_start	1
+275010	274937	gene
+		gene	trnD-GUC-cp
+		locus_tag	ATHMT_0043
+275010	274937	tRNA
+		product	tRNA-Asp
+		transcript_id	gnl|ATHMT|trnD-GUC-cp-1.t1
+288044	288400	gene
+		gene	nad3
+		locus_tag	ATHMT_0044
+288044	288400	mRNA
+		product	NADH dehydrogenase subunit 3
+		transcript_id	gnl|ATHMT|nad3-1.t1
+		protein_id	gnl|ATHMT|nad3-1.t1:cds
+288044	288400	CDS
+		product	NADH dehydrogenase subunit 3
+		transcript_id	gnl|ATHMT|nad3-1.t1
+		protein_id	gnl|ATHMT|nad3-1.t1:cds
+		codon_start	1
+288446	288823	gene
+		gene	rps12
+		locus_tag	ATHMT_0045
+288446	288823	mRNA
+		product	ribosomal protein S12
+		transcript_id	gnl|ATHMT|rps12-1.t1
+		protein_id	gnl|ATHMT|rps12-1.t1:cds
+288446	288823	CDS
+		product	ribosomal protein S12
+		transcript_id	gnl|ATHMT|rps12-1.t1
+		protein_id	gnl|ATHMT|rps12-1.t1:cds
+		codon_start	1
+316013	317135	gene
+291578	292191
+		gene	ccmFN
+		exception	trans-splicing
+		locus_tag	ATHMT_0046
+316013	317135	mRNA
+291578	292191
+		product	cytochrome c biogenesis FN
+		transcript_id	gnl|ATHMT|ccmFN-1.t1
+		protein_id	gnl|ATHMT|ccmFN-1.t1:cds
+316013	317135	CDS
+291578	292191
+		product	cytochrome c biogenesis FN
+		transcript_id	gnl|ATHMT|ccmFN-1.t1
+		protein_id	gnl|ATHMT|ccmFN-1.t1:cds
+		codon_start	1
+294477	294548	gene
+		gene	trnQ-UUG
+		locus_tag	ATHMT_0047
+294477	294548	tRNA
+		product	tRNA-Gln
+		transcript_id	gnl|ATHMT|trnQ-UUG-1.t1
+298901	298974	gene
+		gene	trnW-CCA-cp
+		locus_tag	ATHMT_0048
+298901	298974	tRNA
+		product	tRNA-Trp
+		transcript_id	gnl|ATHMT|trnW-CCA-cp-1.t1
+308298	309068	gene
+		gene	ccmC
+		locus_tag	ATHMT_0049
+308298	309068	mRNA
+		product	cytochrome c biogenesis C
+		transcript_id	gnl|ATHMT|ccmC-1.t1
+		protein_id	gnl|ATHMT|ccmC-1.t1:cds
+308298	309068	CDS
+		product	cytochrome c biogenesis C
+		transcript_id	gnl|ATHMT|ccmC-1.t1
+		protein_id	gnl|ATHMT|ccmC-1.t1:cds
+		codon_start	1
+321438	321367	gene
+		gene	trnE-UUC
+		locus_tag	ATHMT_0050
+321438	321367	tRNA
+		product	tRNA-Glu
+		transcript_id	gnl|ATHMT|trnE-UUC-1.t1
+321945	321858	gene
+		gene	trnS-GCU
+		locus_tag	ATHMT_0051
+321945	321858	tRNA
+		product	tRNA-Ser
+		transcript_id	gnl|ATHMT|trnS-GCU-1.t1
+330048	329761	gene
+		gene	sdh4
+		locus_tag	ATHMT_0052
+330048	329761	mRNA
+		product	succinate dehydrogenase subunit 4
+		transcript_id	gnl|ATHMT|sdh4-1.t1
+		protein_id	gnl|ATHMT|sdh4-1.t1:cds
+330048	329761	CDS
+		product	succinate dehydrogenase subunit 4
+		transcript_id	gnl|ATHMT|sdh4-1.t1
+		protein_id	gnl|ATHMT|sdh4-1.t1:cds
+		codon_start	1
+330773	329976	gene
+		gene	cox3
+		locus_tag	ATHMT_0053
+330773	329976	mRNA
+		product	cytochrome c oxidase subunit 3
+		transcript_id	gnl|ATHMT|cox3-1.t1
+		protein_id	gnl|ATHMT|cox3-1.t1:cds
+330773	329976	CDS
+		product	cytochrome c oxidase subunit 3
+		transcript_id	gnl|ATHMT|cox3-1.t1
+		protein_id	gnl|ATHMT|cox3-1.t1:cds
+		codon_start	1
+346454	346526	gene
+		gene	trnK-UUU
+		locus_tag	ATHMT_0054
+346454	346526	tRNA
+		product	tRNA-Lys
+		transcript_id	gnl|ATHMT|trnK-UUU-1.t1
+361637	361939	gene
+		gene	nad4L
+		locus_tag	ATHMT_0055
+361637	361939	mRNA
+		product	NADH dehydrogenase subunit 4L
+		transcript_id	gnl|ATHMT|nad4L-1.t1
+		protein_id	gnl|ATHMT|nad4L-1.t1:cds
+361637	361939	CDS
+		product	NADH dehydrogenase subunit 4L
+		transcript_id	gnl|ATHMT|nad4L-1.t1
+		protein_id	gnl|ATHMT|nad4L-1.t1:cds
+		codon_start	1
+362206	362784	gene
+		gene	atp4
+		locus_tag	ATHMT_0056
+362206	362784	mRNA
+		product	ATP synthase subunit 4
+		transcript_id	gnl|ATHMT|atp4-1.t1
+		protein_id	gnl|ATHMT|atp4-1.t1:cds
+362206	362784	CDS
+		product	ATP synthase subunit 4
+		transcript_id	gnl|ATHMT|atp4-1.t1
+		protein_id	gnl|ATHMT|atp4-1.t1:cds
+		codon_start	1

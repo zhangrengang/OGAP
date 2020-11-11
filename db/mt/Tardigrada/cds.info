@@ -1,0 +1,14 @@
+#id	name	product	seq_type	exon_count	trans_splicing	gene_count	species_count	names	products	species
+ATP6	ATP6	ATP synthase F0 subunit 6	CDS	1	False	3	3	ATP6:3	ATP synthase F0 subunit 6:3	Hypsibius_dujardini:1,Ramazzottius_varieornatus:1,Thulinius_sp._DVL_2010:1
+ATP8	ATP8	ATP synthase F0 subunit 8	CDS	1	False	3	3	ATP8:3	ATP synthase F0 subunit 8:3	Hypsibius_dujardini:1,Ramazzottius_varieornatus:1,Thulinius_sp._DVL_2010:1
+COX1	COX1	cytochrome c oxidase subunit I	CDS	1	False	3	3	COX1:3	cytochrome c oxidase subunit I:3	Hypsibius_dujardini:1,Ramazzottius_varieornatus:1,Thulinius_sp._DVL_2010:1
+COX2	COX2	cytochrome c oxidase subunit II	CDS	1	False	3	3	COX2:3	cytochrome c oxidase subunit II:3	Hypsibius_dujardini:1,Ramazzottius_varieornatus:1,Thulinius_sp._DVL_2010:1
+COX3	COX3	cytochrome c oxidase subunit III	CDS	1	False	3	3	COX3:3	cytochrome c oxidase subunit III:3	Hypsibius_dujardini:1,Ramazzottius_varieornatus:1,Thulinius_sp._DVL_2010:1
+CYTB	CYTB	cytochrome b	CDS	1	False	3	3	CYTB:3	cytochrome b:3	Hypsibius_dujardini:1,Ramazzottius_varieornatus:1,Thulinius_sp._DVL_2010:1
+ND1	ND1	NADH dehydrogenase subunit 1	CDS	1	False	3	3	ND1:3	NADH dehydrogenase subunit 1:3	Hypsibius_dujardini:1,Ramazzottius_varieornatus:1,Thulinius_sp._DVL_2010:1
+ND2	ND2	NADH dehydrogenase subunit 2	CDS	1	False	3	3	ND2:3	NADH dehydrogenase subunit 2:3	Hypsibius_dujardini:1,Ramazzottius_varieornatus:1,Thulinius_sp._DVL_2010:1
+ND3	ND3	NADH dehydrogenase subunit 3	CDS	1	False	3	3	ND3:3	NADH dehydrogenase subunit 3:3	Hypsibius_dujardini:1,Ramazzottius_varieornatus:1,Thulinius_sp._DVL_2010:1
+ND4	ND4	NADH dehydrogenase subunit 4	CDS	1	False	3	3	ND4:3	NADH dehydrogenase subunit 4:3	Hypsibius_dujardini:1,Ramazzottius_varieornatus:1,Thulinius_sp._DVL_2010:1
+ND4L	ND4L	NADH dehydrogenase subunit 4L	CDS	1	False	3	3	ND4L:3	NADH dehydrogenase subunit 4L:3	Hypsibius_dujardini:1,Ramazzottius_varieornatus:1,Thulinius_sp._DVL_2010:1
+ND5	ND5	NADH dehydrogenase subunit 5	CDS	1	False	3	3	ND5:3	NADH dehydrogenase subunit 5:3	Hypsibius_dujardini:1,Ramazzottius_varieornatus:1,Thulinius_sp._DVL_2010:1
+ND6	ND6	NADH dehydrogenase subunit 6	CDS	1	False	3	3	ND6:3	NADH dehydrogenase subunit 6:3	Hypsibius_dujardini:1,Ramazzottius_varieornatus:1,Thulinius_sp._DVL_2010:1

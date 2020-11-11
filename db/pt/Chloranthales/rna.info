@@ -1,0 +1,42 @@
+#id	name	product	seq_type	exon_count	trans_splicing	gene_count	species_count	names	products	species
+Chloranthus_spicatus-gene418	Chloranthus_spicatus-gene418	23S ribosomal RNA	rRNA	1	False	2	2		23S ribosomal RNA:2	Chloranthus_japonicus:1,Chloranthus_spicatus:1
+Chloranthus_spicatus-gene422	Chloranthus_spicatus-gene422	5S ribosomal RNA	rRNA	1	False	2	2	rrn5:1	5S ribosomal RNA:2	Chloranthus_erectus:1,Chloranthus_spicatus:1
+Chloranthus_spicatus-gene485	Chloranthus_spicatus-gene485	23S ribosomal RNA	rRNA	1	False	2	2		23S ribosomal RNA:2	Chloranthus_japonicus:1,Chloranthus_spicatus:1
+rrn16	rrn16	16S ribosomal RNA	rRNA	1	False	4	4	rrn16:2	16S ribosomal RNA:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+rrn4-5	rrn4-5	4.5S ribosomal RNA	rRNA	1	False	4	4	rrn4-5:2	4.5S ribosomal RNA:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+rrn5	rrn5	5S ribosomal RNA	rRNA	1	False	4	4	rrn5:2	5S ribosomal RNA:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+trnA-UGC	trnA-UGC	tRNA-Ala	tRNA	2	False	4	4	trnA-UGC:4	tRNA-Ala:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+trnA-UGC-39	trnA-UGC	tRNA-Ala	tRNA	2	False	2	2	trnA-UGC:2	tRNA-Ala:2	Chloranthus_japonicus:1,Sarcandra_glabra:1
+trnC-GCA	trnC-GCA	tRNA-Cys	tRNA	1	False	4	4	trnC-GCA:4	tRNA-Cys:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+trnD-GUC	trnD-GUC	tRNA-Asp	tRNA	1	False	4	4	trnD-GUC:4	tRNA-Asp:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+trnE-UUC	trnE-UUC	tRNA-Glu	tRNA	1	False	4	4	trnE-UUC:4	tRNA-Glu:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+trnF-GAA	trnF-GAA	tRNA-Phe	tRNA	1	False	4	4	trnF-GAA:4	tRNA-Phe:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+trnG-GCC	trnG-GCC	tRNA-Gly	tRNA	1	False	4	4	trnG-GCC:4	tRNA-Gly:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+trnG-UCC	trnG-UCC	tRNA-Gly	tRNA	2	False	4	4	trnG-UCC:2,trnG-GCC:2	tRNA-Gly:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+trnH-GUG	trnH-GUG	tRNA-His	tRNA	1	False	4	4	trnH-GUG:4	tRNA-His:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+trnI-CAU	trnI-CAU	tRNA-Ile	tRNA	1	False	4	4	trnI-CAU:4	tRNA-Ile:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+trnI-CAU-35	trnI-CAU	tRNA-Ile	tRNA	1	False	4	4	trnI-CAU:4	tRNA-Ile:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+trnI-GAU	trnI-GAU	tRNA-Ile	tRNA	2	False	4	4	trnI-GAU:4	tRNA-Ile:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+trnK-UUU	trnK-UUU	tRNA-Lys	tRNA	2	False	4	4	trnK-UUU:4	tRNA-Lys:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+trnL-CAA	trnL-CAA	tRNA-Leu	tRNA	1	False	4	4	trnL-CAA:4	tRNA-Leu:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+trnL-CAA-28	trnL-CAA	tRNA-Leu	tRNA	1	False	4	4	trnL-CAA:4	tRNA-Leu:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+trnL-UAA	trnL-UAA	tRNA-Leu	tRNA	2	False	4	4	trnL-UAA:4	tRNA-Leu:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+trnL-UAG	trnL-UAG	tRNA-Leu	tRNA	1	False	4	4	trnL-UAG:4	tRNA-Leu:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+trnM-CAU	trnM-CAU	tRNA-Met	tRNA	1	False	4	4	trnM-CAU:4	tRNA-Met:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+trnN-GUU	trnN-GUU	tRNA-Asn	tRNA	1	False	4	4	trnN-GUU:4	tRNA-Asn:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+trnP-UGG	trnP-UGG	tRNA-Pro	tRNA	1	False	4	4	trnP-UGG:4	tRNA-Pro:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+trnQ-UUG	trnQ-UUG	tRNA-Gln	tRNA	1	False	3	3	trnQ-UUG:3	tRNA-Gln:3	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1
+trnR-ACG	trnR-ACG	tRNA-Arg	tRNA	1	False	4	4	trnR-ACG:4	tRNA-Arg:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+trnR-ACG-40	trnR-ACG	tRNA-Arg	tRNA	1	False	2	2	trnR-ACG:2	tRNA-Arg:2	Chloranthus_japonicus:1,Sarcandra_glabra:1
+trnR-UCU	trnR-UCU	tRNA-Arg	tRNA	1	False	4	4	trnR-UCU:4	tRNA-Arg:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+trnS-GCU	trnS-GCU	tRNA-Ser	tRNA	1	False	4	4	trnS-GCU:4	tRNA-Ser:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+trnS-GGA	trnS-GGA	tRNA-Ser	tRNA	1	False	4	4	trnS-GGA:4	tRNA-Ser:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+trnS-UGA	trnS-UGA	tRNA-Ser	tRNA	1	False	4	4	trnS-UGA:4	tRNA-Ser:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+trnT-GGU	trnT-GGU	tRNA-Thr	tRNA	1	False	4	4	trnT-GGU:4	tRNA-Thr:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+trnT-UGU	trnT-UGU	tRNA-Thr	tRNA	1	False	4	4	trnT-UGU:4	tRNA-Thr:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+trnV-GAC	trnV-GAC	tRNA-Val	tRNA	1	False	3	3	trnV-GAC:3	tRNA-Val:3	Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+trnV-GAC-13	trnV-GAC	tRNA-Val	tRNA	1	False	3	3	trnV-GAC:3	tRNA-Val:3	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1
+trnV-UAC	trnV-UAC	tRNA-Val	tRNA	2	False	4	4	trnV-UAC:4	tRNA-Val:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+trnW-CCA	trnW-CCA	tRNA-Trp	tRNA	1	False	4	4	trnW-CCA:4	tRNA-Trp:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+trnY-GUA	trnY-GUA	tRNA-Tyr	tRNA	1	False	4	4	trnY-GUA:4	tRNA-Tyr:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+trnfM-CAU	trnfM-CAU	tRNA-Met	tRNA	1	False	4	4	trnfM-CAU:4	tRNA-Met:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1

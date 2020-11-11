@@ -1,0 +1,3 @@
+#id	organism	name_count	cds_count	trn_count	rrn_count	length	GC	taxonomy
+NC_004115.1	Chaetosphaeridium globosum	136	98	37	6	131183	29.6	root;cellular organisms;Eukaryota;Viridiplantae;Streptophyta;Streptophytina;Coleochaetophyceae;Coleochaetales;Chaetosphaeridiaceae;Chaetosphaeridium;Chaetosphaeridium globosum
+NC_030358.1	Coleochaete scutata	117	82	32	3	107236	27.6	root;cellular organisms;Eukaryota;Viridiplantae;Streptophyta;Streptophytina;Coleochaetophyceae;Coleochaetales;Coleochaetaceae;Coleochaete;Coleochaete scutata

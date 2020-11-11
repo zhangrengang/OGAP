@@ -100,6 +100,7 @@ class GffLine(object):
 			if not len(skv) ==2:
 				continue
 			k, v = skv
+			k, v = k.strip(), v.strip()
 			d_attr[k] = v
 		return d_attr
 	def update_attr(self):
@@ -537,6 +538,7 @@ class GffExons(object):
 				lines += [exon_line]
 			lines += [line]
 		record = GffExons(lines)
+		record.source = source
 		record.chrom = chrom
 		record.start = start0
 		record.end = end0

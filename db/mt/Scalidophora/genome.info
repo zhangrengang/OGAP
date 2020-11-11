@@ -1,0 +1,6 @@
+#id	organism	name_count	cds_count	trn_count	rrn_count	length	GC	taxonomy
+NC_031873.1	Echinoderes svetlanae	13	13	23	2	15304	25.6	root;cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Protostomia;Ecdysozoa;Scalidophora;Kinorhyncha;Cyclorhagida;Echinoderidae;Echinoderes;Echinoderes svetlanae
+NC_020030.1	Halicryptus spinulosus	36	13	22	2	14732	30.6	root;cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Protostomia;Ecdysozoa;Scalidophora;Priapulida;Priapulimorpha;Priapulimorphida;Priapulidae;Halicryptus;Halicryptus spinulosus
+NC_008557.1	Priapulus caudatus	13	13	22	2	14919	30.9	root;cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Protostomia;Ecdysozoa;Scalidophora;Priapulida;Priapulimorpha;Priapulimorphida;Priapulidae;Priapulus;Priapulus caudatus
+NC_031872.1	Pycnophyes kielensis	13	13	23	2	14985	26.0	root;cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Protostomia;Ecdysozoa;Scalidophora;Kinorhyncha;Allomalorhagida;Pycnophyidae;Pycnophyes;Pycnophyes kielensis
+NC_045069.1	Semnoderes armiger	12	12	22	2	14986	23.8	root;cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Protostomia;Ecdysozoa;Scalidophora;Kinorhyncha;Cyclorhagida;Semnoderidae;Semnoderes;Semnoderes armiger

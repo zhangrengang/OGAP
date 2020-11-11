@@ -61,6 +61,7 @@ class HmmSearch(object):
 		hmmcovs = []
 		copies = []
 		for path in graph.linearize_path():
+			#print >>sys.stderr, 'path:', path
 			if path.hmmcov < min_cov:
 				continue
 			print >>sys.stderr, path, len(path.group_nodes()), path.hmmcov

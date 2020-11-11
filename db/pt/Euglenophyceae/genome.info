@@ -1,0 +1,21 @@
+#id	organism	name_count	cds_count	trn_count	rrn_count	length	GC	taxonomy
+NC_027286.1	Cryptoglena skujai	93	66	28	3	106843	26.3	root;cellular organisms;Eukaryota;Discoba;Euglenozoa;Euglenida;Spirocuta;Euglenophyceae;Euglenales;Euglenaceae;Cryptoglena;Cryptoglena skujai
+NC_039969.1	Discoplastis spathirhyncha	96	61	29	6	83936	29.3	root;cellular organisms;Eukaryota;Discoba;Euglenozoa;Euglenida;Spirocuta;Euglenophyceae;Euglenales;Phacaceae;Discoplastis;Discoplastis spathirhyncha
+NC_035156.1	Euglena archaeoplastidiata	94	67	27	3	97245	27.5	root;cellular organisms;Eukaryota;Discoba;Euglenozoa;Euglenida;Spirocuta;Euglenophyceae;Euglenales;Euglenaceae;Euglena;Euglena archaeoplastidiata
+NC_038187.1	Euglena clara	93	62	29	6	98470	27.9	root;cellular organisms;Eukaryota;Discoba;Euglenozoa;Euglenida;Spirocuta;Euglenophyceae;Euglenales;Euglenaceae;Euglena;Euglena clara
+NC_001603.2	Euglena gracilis	58	67	37	11	143171	26.1	root;cellular organisms;Eukaryota;Discoba;Euglenozoa;Euglenida;Spirocuta;Euglenophyceae;Euglenales;Euglenaceae;Euglena;Euglena gracilis
+NC_039156.1	Euglena hiemalis	107	67	29	5	128302	24.8	root;cellular organisms;Eukaryota;Discoba;Euglenozoa;Euglenida;Spirocuta;Euglenophyceae;Euglenales;Euglenaceae;Euglena;Euglena hiemalis
+NC_002652.1	Euglena longa	55	46	28	10	73345	22.4	root;cellular organisms;Eukaryota;Discoba;Euglenozoa;Euglenida;Spirocuta;Euglenophyceae;Euglenales;Euglenaceae;Euglena;Euglena longa
+NC_020460.2	Euglena viridis	92	75	27	3	91616	26.4	root;cellular organisms;Eukaryota;Discoba;Euglenozoa;Euglenida;Spirocuta;Euglenophyceae;Euglenales;Euglenaceae;Euglena;Euglena viridis
+NC_024154.1	Euglenaformis proxima	90	63	27	3	94185	26.9	root;cellular organisms;Eukaryota;Discoba;Euglenozoa;Euglenida;Spirocuta;Euglenophyceae;Euglenales;Euglenaceae;Euglenaformis;Euglenaformis proxima
+NC_027269.1	Euglenaria anabaena	93	67	27	3	88487	28.0	root;cellular organisms;Eukaryota;Discoba;Euglenozoa;Euglenida;Spirocuta;Euglenophyceae;Euglenales;Euglenaceae;Euglenaria;Euglenaria anabaena
+NC_017754.2	Eutreptiella gymnastica	88	62	26	4	67623	34.3	root;cellular organisms;Eukaryota;Discoba;Euglenozoa;Euglenida;Spirocuta;Euglenophyceae;Eutreptiales;Eutreptiella;Eutreptiella gymnastica
+NC_039928.1	Lepocinclis ovum	32	62	28	4	69550	30.3	root;cellular organisms;Eukaryota;Discoba;Euglenozoa;Euglenida;Spirocuta;Euglenophyceae;Euglenales;Phacaceae;Lepocinclis;Lepocinclis ovum
+NC_039970.1	Lepocinclis playfairiana	33	62	29	4	77415	31.9	root;cellular organisms;Eukaryota;Discoba;Euglenozoa;Euglenida;Spirocuta;Euglenophyceae;Euglenales;Phacaceae;Lepocinclis;Lepocinclis playfairiana
+NC_039971.1	Lepocinclis steinii	33	61	29	4	82134	30.4	root;cellular organisms;Eukaryota;Discoba;Euglenozoa;Euglenida;Spirocuta;Euglenophyceae;Euglenales;Phacaceae;Lepocinclis;Lepocinclis steinii
+NC_039968.1	Lepocinclis tripteris	35	61	29	6	81048	27.3	root;cellular organisms;Eukaryota;Discoba;Euglenozoa;Euglenida;Spirocuta;Euglenophyceae;Euglenales;Phacaceae;Lepocinclis;Lepocinclis tripteris
+NC_020018.1	Monomorphina aenigmatica	87	62	27	2	74746	29.4	root;cellular organisms;Eukaryota;Discoba;Euglenozoa;Euglenida;Spirocuta;Euglenophyceae;Euglenales;Euglenaceae;Monomorphina;Monomorphina aenigmatica
+NC_027287.1	Monomorphina parapyrum	93	64	27	3	80147	28.0	root;cellular organisms;Eukaryota;Discoba;Euglenozoa;Euglenida;Spirocuta;Euglenophyceae;Euglenales;Euglenaceae;Monomorphina;Monomorphina parapyrum
+NC_039967.1	Phacus inflexus	30	60	27	3	58112	29.4	root;cellular organisms;Eukaryota;Discoba;Euglenozoa;Euglenida;Spirocuta;Euglenophyceae;Euglenales;Phacaceae;Phacus;Phacus inflexus
+NC_039927.1	Phacus pleuronectes	30	63	27	3	90869	24.6	root;cellular organisms;Eukaryota;Discoba;Euglenozoa;Euglenida;Spirocuta;Euglenophyceae;Euglenales;Phacaceae;Phacus;Phacus pleuronectes
+NC_027288.1	Trachelomonas volvocina	93	64	27	3	85392	27.3	root;cellular organisms;Eukaryota;Discoba;Euglenozoa;Euglenida;Spirocuta;Euglenophyceae;Euglenales;Euglenaceae;Trachelomonas;Trachelomonas volvocina

@@ -1,17 +1,31 @@
 #id	name	product	seq_type	exon_count	trans_splicing	gene_count	species_count	names	products	species
-rrn18	rrn18	18S ribosomal RNA	rRNA	1	False	4	4	rrn18:4	18S ribosomal RNA:4	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1,Welwitschia_mirabilis:1
-rrn26	rrn26	26S ribosomal RNA	rRNA	1	False	4	4	rrn26:4	26S ribosomal RNA:4	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1,Welwitschia_mirabilis:1
-rrn5	rrn5	5S ribosomal RNA	rRNA	1	False	2	2	rrn5:2	5S ribosomal RNA:2	Cycas_taitungensis:1,Ginkgo_biloba:1
+rrn5	rrn5	5S ribosomal RNA	rRNA	1	False	16	16	rrn5:16	5S ribosomal RNA:16	Abies_sibirica:1,Araucaria_heterophylla:1,Ceratozamia_hildae:1,Cupressus_sempervirens:1,Cycas_taitungensis:1,Ginkgo_biloba:1,Hesperocyparis_glabra:1,Picea_abies:1,Picea_glauca:1,Picea_sitchensis:1,Pinus_strobus:1,Pinus_taeda:1,Podocarpus_macrophyllus:1,Taxus_baccata:1,Taxus_cuspidata:1,Zamia_integrifolia:1
+rrn5-30	rrn5	5S ribosomal RNA	rRNA	1	False	2	2	rrn5:2	5S ribosomal RNA:2	Gnetum_gnemon:1,Welwitschia_mirabilis:1
+rrnL	rrnL	large subunit ribosomal RNA	rRNA	1	False	18	18	rrnL:11,rrn26:7	large subunit ribosomal RNA:11,26S ribosomal RNA:7	Abies_sibirica:1,Araucaria_heterophylla:1,Ceratozamia_hildae:1,Cupressus_sempervirens:1,Cycas_taitungensis:1,Ginkgo_biloba:1,Gnetum_gnemon:1,Hesperocyparis_glabra:1,Picea_abies:1,Picea_glauca:1,Picea_sitchensis:1,Pinus_strobus:1,Pinus_taeda:1,Podocarpus_macrophyllus:1,Taxus_baccata:1,Taxus_cuspidata:1,Welwitschia_mirabilis:1,Zamia_integrifolia:1
+rrnS	rrnS	small subunit ribosomal RNA	rRNA	1	False	18	18	rrnS:11,rrn18:6,rrn18_1:1	small subunit ribosomal RNA:11,18S ribosomal RNA:7	Abies_sibirica:1,Araucaria_heterophylla:1,Ceratozamia_hildae:1,Cupressus_sempervirens:1,Cycas_taitungensis:1,Ginkgo_biloba:1,Gnetum_gnemon:1,Hesperocyparis_glabra:1,Picea_abies:1,Picea_glauca:1,Picea_sitchensis:1,Pinus_strobus:1,Pinus_taeda:1,Podocarpus_macrophyllus:1,Taxus_baccata:1,Taxus_cuspidata:1,Welwitschia_mirabilis:1,Zamia_integrifolia:1
 trnC	trnC	tRNA-Cys	tRNA	1	False	2	2	trnC:2	tRNA-Cys:2	Cycas_taitungensis:1,Ginkgo_biloba:1
-trnD-GUC	trnD-GUC	tRNA-Asp	tRNA	1	False	4	4	trnD:2,trnD-GUC:1,trnD-GTC:1	tRNA-Asp:4	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1,Welwitschia_mirabilis:1
-trnE-UUC	trnE-UUC	tRNA-Glu	tRNA	1	False	4	4	trnE:2,trnE-UUC:1,trnE-CTC:1	tRNA-Glu:4	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1,Welwitschia_mirabilis:1
+trnD-GUC	trnD-GUC	tRNA-Asp	tRNA	1	False	8	7	trnD-GUC:5,trnD:2,trnD-GTC:1	tRNA-Asp:8	Cycas_taitungensis:1,Ginkgo_biloba:1,Picea_glauca:1,Picea_sitchensis:1,Pinus_taeda:1,Taxus_cuspidata:2,Welwitschia_mirabilis:1
+trnE-UUC	trnE-UUC	tRNA-Glu	tRNA	1	False	8	7	trnE-UUC:5,trnE:2,trnE-CTC:1	tRNA-Glu:8	Cycas_taitungensis:1,Ginkgo_biloba:1,Picea_glauca:1,Picea_sitchensis:1,Pinus_taeda:1,Taxus_cuspidata:2,Welwitschia_mirabilis:1
 trnF	trnF	tRNA-Phe	tRNA	1	False	3	2	trnF:2,trnL:1	tRNA-Phe:2,tRNA-Leu:1	Cycas_taitungensis:1,Ginkgo_biloba:2
+trnH-GUG	trnH-GUG	tRNA-His	tRNA	1	False	4	4	trnH-GUG:2,trnH:1,trnH-GTG:1	tRNA-His:4	Ginkgo_biloba:1,Picea_glauca:1,Picea_sitchensis:1,Pinus_taeda:1
 trnK	trnK	tRNA-Lys	tRNA	1	False	2	2	trnK:2	tRNA-Lys:2	Cycas_taitungensis:1,Ginkgo_biloba:1
+trnK-UUU	trnK-UUU	tRNA-Lys	tRNA	1	False	3	3	trnK-UUU:2,trnK-TTT:1	tRNA-Lys:3	Picea_glauca:1,Picea_sitchensis:1,Pinus_taeda:1
 trnL	trnL	tRNA-Leu	tRNA	1	False	2	2	trnL:2	tRNA-Leu:2	Cycas_taitungensis:1,Ginkgo_biloba:1
-trnL-14	trnL	tRNA-Leu	tRNA	1	False	2	2	trnL:2	tRNA-Leu:2	Cycas_taitungensis:1,Ginkgo_biloba:1
+trnL-28	trnL	tRNA-Leu	tRNA	1	False	2	2	trnL:2	tRNA-Leu:2	Cycas_taitungensis:1,Ginkgo_biloba:1
+trnL-CAA	trnL-CAA	tRNA-Leu	tRNA	1	False	2	2	trnL-CAA:2	tRNA-Leu:2	Picea_glauca:1,Picea_sitchensis:1
 trnM	trnM	tRNA-Met	tRNA	1	False	2	2	trnM:2	tRNA-Met:2	Cycas_taitungensis:1,Ginkgo_biloba:1
-trnQ-TTG	trnQ-TTG	tRNA-Gln	tRNA	1	False	4	4	trnQ:2,trnQ-TTG:1,trnQ-UUG:1	tRNA-Gln:4	Cycas_taitungensis:1,Ginkgo_biloba:1,Pinus_taeda:1,Welwitschia_mirabilis:1
+trnM-CAU	trnM-CAU	tRNA-Met	tRNA	1	False	2	2	trnM-CAU:2	tRNA-Met:2	Picea_glauca:1,Picea_sitchensis:1
+trnM-CAU-20	trnM-CAU	tRNA-Met	tRNA	1	False	15	7	trnM-CAU:6,trnM:3,trnM-CAT:2,trnI-CAU:2,trnI:1,trnfM:1	tRNA-Met:12,tRNA-Ile:3	Cycas_taitungensis:3,Ginkgo_biloba:2,Picea_glauca:2,Picea_sitchensis:2,Pinus_taeda:2,Taxus_cuspidata:3,Welwitschia_mirabilis:1
+trnN-GUU	trnN-GUU	tRNA-Asn	tRNA	1	False	2	2	trnN-GUU:2	tRNA-Asn:2	Picea_glauca:1,Picea_sitchensis:1
+trnP-AGG	trnP-AGG	tRNA-Pro	tRNA	1	False	3	3	trnP-AGG:2,trnP:1	tRNA-Pro:3	Ginkgo_biloba:1,Picea_glauca:1,Picea_sitchensis:1
+trnP-UGG	trnP-UGG	tRNA-Pro	tRNA	1	False	4	4	trnP-UGG:2,trnP-TGG:1,trnP:1	tRNA-Pro:4	Cycas_taitungensis:1,Picea_glauca:1,Picea_sitchensis:1,Pinus_taeda:1
+trnQ-UUG	trnQ-UUG	tRNA-Gln	tRNA	1	False	7	7	trnQ-UUG:3,trnQ:2,trnQ-TTG:1,trnR-UCG:1	tRNA-Gln:6,tRNA-Arg:1	Cycas_taitungensis:1,Ginkgo_biloba:1,Picea_glauca:1,Picea_sitchensis:1,Pinus_taeda:1,Taxus_cuspidata:1,Welwitschia_mirabilis:1
+trnR-GCG	trnR-GCG	tRNA-Arg	tRNA	1	False	2	2	trnR-GCG:2	tRNA-Arg:2	Picea_glauca:1,Picea_sitchensis:1
 trnS	trnS	tRNA-Ser	tRNA	1	False	2	2	trnS:2	tRNA-Ser:2	Cycas_taitungensis:1,Ginkgo_biloba:1
-trnS-16	trnS	tRNA-Ser	tRNA	1	False	2	2	trnS:2	tRNA-Ser:2	Cycas_taitungensis:1,Ginkgo_biloba:1
+trnS-26	trnS	tRNA-Ser	tRNA	1	False	2	2	trnS:2	tRNA-Ser:2	Cycas_taitungensis:1,Ginkgo_biloba:1
+trnT-AGU	trnT-AGU	tRNA-Thr	tRNA	1	False	2	2	trnT-AGU:2	tRNA-Thr:2	Picea_glauca:1,Picea_sitchensis:1
+trnT-UGU	trnT-UGU	tRNA-Thr	tRNA	1	False	2	2	trnT-UGU:2	tRNA-Thr:2	Picea_glauca:1,Picea_sitchensis:1
 trnW	trnW	tRNA-Trp	tRNA	1	False	2	2	trnW:2	tRNA-Trp:2	Cycas_taitungensis:1,Ginkgo_biloba:1
-trnY-GUA	trnY-GUA	tRNA-Tyr	tRNA	1	False	3	3	trnY:2,trnY-GUA:1	tRNA-Tyr:3	Cycas_taitungensis:1,Ginkgo_biloba:1,Welwitschia_mirabilis:1
+trnW-CCA	trnW-CCA	tRNA-Trp	tRNA	1	False	3	3	trnW-CCA:3	tRNA-Trp:3	Picea_glauca:1,Picea_sitchensis:1,Welwitschia_mirabilis:1
+trnY-AUA	trnY-AUA	tRNA-Tyr	tRNA	1	False	2	2	trnY-AUA:2	tRNA-Tyr:2	Picea_glauca:1,Picea_sitchensis:1
+trnY-GUA	trnY-GUA	tRNA-Tyr	tRNA	1	False	6	6	trnY-GUA:4,trnY:2	tRNA-Tyr:6	Cycas_taitungensis:1,Ginkgo_biloba:1,Picea_glauca:1,Picea_sitchensis:1,Taxus_cuspidata:1,Welwitschia_mirabilis:1

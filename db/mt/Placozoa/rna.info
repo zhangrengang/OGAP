@@ -1,0 +1,21 @@
+#id	name	product	seq_type	exon_count	trans_splicing	gene_count	species_count	names	products	species
+Placozoan_sp-__Shirahama_-gene103	Placozoan_sp-__Shirahama_-gene103	tRNA-Thr	tRNA	1	False	2	2		tRNA-Thr:2	Placozoan_sp.__Shirahama_:1,Trichoplax_adhaerens:1
+Placozoan_sp-__Shirahama_-gene116	Placozoan_sp-__Shirahama_-gene116	tRNA-Leu	tRNA	1	False	3	3	trnL:1	tRNA-Leu:3	Placozoan_sp.__Shirahama_:1,Polyplacotoma_mediterranea:1,Trichoplax_adhaerens:1
+Placozoan_sp-__Shirahama_-gene123	Placozoan_sp-__Shirahama_-gene123	tRNA-Arg	tRNA	1	False	2	2	trnR:1	tRNA-Arg:1,tRNA-Trp:1	Placozoan_sp.__Shirahama_:1,Trichoplax_adhaerens:1
+Placozoan_sp-__Shirahama_-gene130	Placozoan_sp-__Shirahama_-gene130	tRNA-Leu	tRNA	1	False	2	2	trnL:1	tRNA-Leu:2	Placozoan_sp.__Shirahama_:1,Trichoplax_adhaerens:1
+Placozoan_sp-__Shirahama_-gene135	Placozoan_sp-__Shirahama_-gene135	tRNA-Val	tRNA	1	False	2	2	trnV:1	tRNA-Val:2	Placozoan_sp.__Shirahama_:1,Trichoplax_adhaerens:1
+Placozoan_sp-__Shirahama_-gene21	Placozoan_sp-__Shirahama_-gene21	tRNA-Met	tRNA	1	False	2	2	trnM:1	tRNA-Met:2	Placozoan_sp.__Shirahama_:1,Trichoplax_adhaerens:1
+Placozoan_sp-__Shirahama_-gene31	Placozoan_sp-__Shirahama_-gene31	tRNA-Pro	tRNA	1	False	2	2		tRNA-Pro:2	Placozoan_sp.__Shirahama_:1,Trichoplax_adhaerens:1
+Placozoan_sp-__Shirahama_-gene49	Placozoan_sp-__Shirahama_-gene49	tRNA-Phe	tRNA	1	False	3	3		tRNA-Phe:3	Placozoan_sp.__Shirahama_:1,Polyplacotoma_mediterranea:1,Trichoplax_adhaerens:1
+Placozoan_sp-__Shirahama_-gene51	Placozoan_sp-__Shirahama_-gene51	tRNA-His	tRNA	1	False	2	2		tRNA-His:2	Placozoan_sp.__Shirahama_:1,Trichoplax_adhaerens:1
+Polyplacotoma_mediterranea-gene23	Polyplacotoma_mediterranea-gene23	tRNA-Glu	tRNA	1	False	2	2		tRNA-Glu:2	Polyplacotoma_mediterranea:1,Trichoplax_adhaerens:1
+Polyplacotoma_mediterranea-gene57	Polyplacotoma_mediterranea-gene57	tRNA-Lys	tRNA	1	False	3	3		tRNA-Lys:3	Placozoan_sp.__Shirahama_:1,Polyplacotoma_mediterranea:1,Trichoplax_adhaerens:1
+Polyplacotoma_mediterranea-gene97	Polyplacotoma_mediterranea-gene97	12S ribosomal RNA	rRNA	1	False	3	3		12S ribosomal RNA:2,small subunit ribosomal RNA:1	Placozoan_sp.__Shirahama_:1,Polyplacotoma_mediterranea:1,Trichoplax_adhaerens:1
+Polyplacotoma_mediterranea-gene99	Polyplacotoma_mediterranea-gene99	16S ribosomal RNA	rRNA	1	False	3	3		16S ribosomal RNA:2,large subunit ribosomal RNA:1	Placozoan_sp.__Shirahama_:1,Polyplacotoma_mediterranea:1,Trichoplax_adhaerens:1
+Trichoplax_adhaerens-gene63	Trichoplax_adhaerens-gene63	tRNA-Asn	tRNA	1	False	2	2		tRNA-Asn:2	Placozoan_sp.__Shirahama_:1,Trichoplax_adhaerens:1
+rnLa	rnLa	16S ribosomal RNA	rRNA	1	False	3	3	rnLa:1	16S ribosomal RNA:2,large subunit ribosomal RNA:1	Placozoan_sp.__Shirahama_:1,Polyplacotoma_mediterranea:1,Trichoplax_adhaerens:1
+trnA	trnA	tRNA-Ala	tRNA	1	False	2	2	trnA:1	tRNA-Ala:2	Placozoan_sp.__Shirahama_:1,Trichoplax_adhaerens:1
+trnL	trnL	tRNA-Leu	tRNA	1	False	2	2	trnL:1	tRNA-Leu:1,tRNA-Ile:1	Placozoan_sp.__Shirahama_:1,Trichoplax_adhaerens:1
+trnQ	trnQ	tRNA-Gln	tRNA	1	False	2	2	trnQ:1	tRNA-Gln:2	Placozoan_sp.__Shirahama_:1,Trichoplax_adhaerens:1
+trnS	trnS	tRNA-Arg	tRNA	1	False	2	2	trnS:1	tRNA-Arg:1,tRNA-Ser:1	Placozoan_sp.__Shirahama_:1,Trichoplax_adhaerens:1
+trnY	trnY	tRNA-Tyr	tRNA	1	False	2	2	trnY:1	tRNA-Tyr:2	Placozoan_sp.__Shirahama_:1,Trichoplax_adhaerens:1

@@ -48,8 +48,8 @@ rps19	ribosomal protein S19
 sdh3	succinate dehydrogenase subunit 3	
 sdh4	succinate dehydrogenase subunit 4	
 # plant
-rrn18	18S ribosomal RNA	rrn18,18rrn,rrn18S
-rrn26	26S ribosomal RNA	rrn26,26rrn,rrn26S
+rrn18	18S ribosomal RNA	rrn18,18rrn,rrn18S,rrnS
+rrn26	26S ribosomal RNA	rrn26,26rrn,rrn26S,rrnL
 rrn5	5S ribosomal RNA	5rrn,rrn5S
 trnA-UGC	tRNA-Ala	tRNA-Ala-UGC
 trnC-GCA	tRNA-Cys	tRNA-Cys-GCA
@@ -80,8 +80,10 @@ trnN-GUU	tRNA-Asn	tRNA-Asn-GTT
 trnN-GUU-cp	tRNA-Asn	tRNA-Asn-GTT-cp
 trnP-UGG	tRNA-Pro	tRNA-Pro-TGG
 trnP-UGG-cp	tRNA-Pro	tRNA-Pro-TGG-cp
+trnP-AGG	tRNA-Pro	
 trnQ-UUG	tRNA-Gln	tRNA-Gln-TTG
 trnR-ACG	tRNA-Arg	tRNA-Arg-ACG
+trnR-GCG	tRNA-Arg
 trnR-UCG	tRNA-Arg	tRNA-Arg-TCG
 trnR-UCU	tRNA-Arg	tRNA-Arg-TCT
 trnR-UCU-cp	tRNA-Arg	tRNA-Arg-TCT-cp
@@ -91,6 +93,7 @@ trnS-GGA-cp	tRNA-Ser	tRNA-Ser-GGA-cp
 trnS-UGA	tRNA-Ser	tRNA-Ser-UGA
 trnT-GGU	tRNA-Thr	tRNA-Thr-GGT
 trnT-UGU	tRNA-Thr	tRNA-Thr-TGT
+trnT-AGU	tRNA-Thr	
 trnV-UAC	tRNA-Val	tRNA-Val-TAC
 trnV-UAC-cp	tRNA-Val	tRNA-Val-TAC-cp
 trnV-GAC	tRNA-Val	tRNA-Val-GAC
@@ -98,6 +101,7 @@ trnV-GAC-cp	tRNA-Val	tRNA-Val-GAC-cp
 trnW-CCA	tRNA-Trp	tRNA-Trp-CCA
 trnW-CCA-cp	tRNA-Trp	tRNA-Trp-CCA-cp
 trnY-GUA	tRNA-Tyr	tRNA-Tyr-GUA
+trnY-AUA	tRNA-Tyr	
 # animal
 ATP6	ATP synthase F0 subunit 6
 ATP8	ATP synthase F0 subunit 8

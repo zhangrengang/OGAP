@@ -1,0 +1,84 @@
+#id	name	product	seq_type	exon_count	trans_splicing	gene_count	species_count	names	products	species
+accD	accD	beta subunit of acetyl-CoA carboxylase carboxytransferase	CDS	1	False	2	2	accD:2	beta subunit of acetyl-CoA carboxylase carboxytransferase:1,acetyl-CoA carboxylase beta subunit:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+atpA	atpA	CF1 alpha subunit of ATP synthase	CDS	1	False	2	2	atpA:2	CF1 alpha subunit of ATP synthase:1,ATP synthase CF1 alpha subunit:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+atpB	atpB	CF1 beta subunit of ATP synthase	CDS	1	False	2	2	atpB:2	CF1 beta subunit of ATP synthase:1,ATP synthase CF1 beta subunit:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+atpE	atpE	CF1 epsilon subunit of ATP synthase	CDS	1	False	2	2	atpE:2	CF1 epsilon subunit of ATP synthase:1,ATP synthase CF1 epsilon subunit:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+atpF	atpF	CF0 subunit I of ATP synthase	CDS	2	False	2	2	atpF:2	CF0 subunit I of ATP synthase:1,ATP synthase CF0 B subunit:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+atpH	atpH	ATP synthase CF0 C subunit	CDS	1	False	2	2	atpH:2	ATP synthase CF0 C subunit:1,CF0 subunit III of ATP synthase:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+atpI	atpI	CF0 subunit IV of ATP synthase	CDS	1	False	2	2	atpI:2	CF0 subunit IV of ATP synthase:1,ATP synthase CF0 A subunit:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+ccsA	ccsA	cytochrome c biogenesis protein	CDS	1	False	2	2	ccsA:2	cytochrome c biogenesis protein:1,heme attachment to plastid cytochrome c:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+cemA	cemA	envelope membrane protein	CDS	1	False	2	2	cemA:2	envelope membrane protein:1,chloroplast enveloppe membrane protein:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+chlB	chlB	photochlorophyllide reductase subunit B	CDS	1	False	2	2	chlB:2	photochlorophyllide reductase subunit B:1,ChlB subunit of protochlorophyllide reductase:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+chlL	chlL	ATP-binding subunit of protochlorophyllide reductase	CDS	1	False	2	2	chlL:2	ATP-binding subunit of protochlorophyllide reductase:1,photochlorophyllide reductase subunit L:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+chlN	chlN	photochlorophyllide reductase subunit N	CDS	1	False	2	2	chlN:2	photochlorophyllide reductase subunit N:1,ChlN subunit of protochlorophyllide reductase:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+clpP	clpP	proteolytic subunit 2 of clp protease	CDS	3	False	2	2	clpP:2	proteolytic subunit 2 of clp protease:1,ATP-dependent Clp protease proteolytic subunit:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+cysA	cysA	probable transport protein	CDS	1	False	2	2	cysA:2	probable transport protein:1,sulfate ABC transporter protein:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+cysT	cysT	sulfate transport protein	CDS	1	False	2	2	cysT:2	sulfate transport protein:1,probable transport protein:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+infA	infA	translation initiation factor 1	CDS	1	False	2	2	infA:2	translation initiation factor 1:1,translational initiation factor 1:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+ndhA	ndhA	NADH dehydrogenase subunit 1	CDS	2	False	2	2	ndhA:2	NADH dehydrogenase subunit 1:1,subunit 1 of NADH-plastoquinone oxidoreductase:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+ndhB	ndhB	subunit 2 of NADH-plastoquinone oxidoreductase	CDS	2	False	2	2	ndhB:2	subunit 2 of NADH-plastoquinone oxidoreductase:1,NADH dehydrogenase subunit 2:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+ndhC	ndhC	NADH dehydrogenase subunit 3	CDS	1	False	2	2	ndhC:2	NADH dehydrogenase subunit 3:1,subunit 3 of NADH-plastoquinone oxidoreductase:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+ndhD	ndhD	NADH dehydrogenase subunit 4	CDS	1	False	2	2	ndhD:2	NADH dehydrogenase subunit 4:1,subunit 4 of NADH-plastoquinone oxidoreductase:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+ndhE	ndhE	NADH dehydrogenase subunit 4L	CDS	1	False	2	2	ndhE:2	NADH dehydrogenase subunit 4L:1,subunit 4L of NADH-plastoquinone oxidoreductase:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+ndhF	ndhF	subunit 5 of NADH-plastoquinone oxidoreductase	CDS	1	False	2	2	ndhF:2	subunit 5 of NADH-plastoquinone oxidoreductase:1,NADH dehydrogenase subunit 5:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+ndhG	ndhG	subunit 6 of NADH-plastoquinone oxidoreductase	CDS	1	False	2	2	ndhG:2	subunit 6 of NADH-plastoquinone oxidoreductase:1,NADH dehydrogenase subunit 6:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+ndhH	ndhH	49 kDa subunit of NADH-plastoquinone oxidoreductase	CDS	1	False	2	2	ndhH:2	49 kDa subunit of NADH-plastoquinone oxidoreductase:1,NADH dehydrogenase subunit 7:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+ndhI	ndhI	NADH dehydrogenase subunit I	CDS	1	False	2	2	ndhI:2	NADH dehydrogenase subunit I:1,18 kDa subunit of NADH-plastoquinone oxidoreductase:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+ndhJ	ndhJ	30 kDa subunit of NADH-plastoquinone oxidoreductase	CDS	1	False	2	2	ndhJ:2	30 kDa subunit of NADH-plastoquinone oxidoreductase:1,NADH dehydrogenase subunit J:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+ndhK	ndhK	27 kDa subunit of NADH-ubiquinone oxidoreductase	CDS	1	False	2	2	ndhK:2	27 kDa subunit of NADH-ubiquinone oxidoreductase:1,NADH dehydrogenase subunit K:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+petA	petA	apocytochrome f of cytochrome b6/f complex	CDS	1	False	2	2	petA:2	apocytochrome f of cytochrome b6/f complex:1,cytochrome f:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+petB	petB	cytochrome b6	CDS	2	False	2	2	petB:2	cytochrome b6:1,apocytochrome b6 of cytochrome b6/f complex:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+petD	petD	subunit IV of cytochrome b6/f complex	CDS	2	False	2	2	petD:2	subunit IV of cytochrome b6/f complex:1,cytochrome b6/f complex subunit IV:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+petG	petG	cytochrome b6/f complex subunit V	CDS	1	False	2	2	petG:2	cytochrome b6/f complex subunit V:1,subunit V of cytochrome b6/f complex:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+petL	petL	cytochrome b6/f complex subunit VI	CDS	1	False	2	2	petL:2	cytochrome b6/f complex subunit VI:1,subunit VI of cytochrome b6/f complex:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+petN	petN	cytochrome b6/f complex subunit VIII	CDS	1	False	2	2	petN:2	cytochrome b6/f complex subunit VIII:1,subunit VIII of cytochrome b6/f complex:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+psaA	psaA	photosystem I P700 chlorophyll a apoprotein A1	CDS	1	False	2	2	psaA:2	photosystem I P700 chlorophyll a apoprotein A1:1,P700 apoprotein A1 of photosystem I:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+psaB	psaB	P700 apoprotein A2 of photosystem I	CDS	1	False	2	2	psaB:2	P700 apoprotein A2 of photosystem I:1,photosystem I P700 chlorophyll a apoprotein A2:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+psaC	psaC	photosystem I subunit VII	CDS	1	False	2	2	psaC:2	photosystem I subunit VII:1,subunit VII of photosystem I (Fe-Spolypeptide):1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+psaI	psaI	subunit VIII of photosystem I	CDS	1	False	2	2	psaI:2	subunit VIII of photosystem I:1,photosystem I subunit VIII:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+psaJ	psaJ	photosystem I subunit IX	CDS	1	False	2	2	psaJ:2	photosystem I subunit IX:1,subunit IX of photosystem I:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+psaM	psaM	photosystem I protein M	CDS	1	False	2	2	psaM:2	photosystem I protein M:1,M polypeptide of photosystem I:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+psbA	psbA	photosystem II protein D1	CDS	1	False	2	2	psbA:2	photosystem II protein D1:1,D1 reaction center protein of photosystem II:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+psbB	psbB	CP47 chlorophyll apoprotein of photosystem II	CDS	1	False	2	2	psbB:2	CP47 chlorophyll apoprotein of photosystem II:1,photosystem II 47 kDa protein:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+psbC	psbC	photosystem II 44 kDa protein	CDS	1	False	2	2	psbC:2	photosystem II 44 kDa protein:1,CP43 chlorophyll apoprotein of photosystem II:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+psbD	psbD	photosystem II protein D2	CDS	1	False	2	2	psbD:2	photosystem II protein D2:1,D2 reaction center protein of photosystem II:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+psbE	psbE	photosystem II protein V	CDS	1	False	2	2	psbE:2	photosystem II protein V:1,cytochrome b559 alpha subunit of photosystem II:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+psbF	psbF	cytochrome b559 beta subunit of photosystem II	CDS	1	False	2	2	psbF:2	cytochrome b559 beta subunit of photosystem II:1,photosystem II protein VI:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+psbH	psbH	photosystem II protein H	CDS	1	False	2	2	psbH:2	photosystem II protein H:1,10 KDa phosphoprotein of photosystem II:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+psbI	psbI	I polypeptide of photosystem II	CDS	1	False	2	2	psbI:2	I polypeptide of photosystem II:1,photosystem II protein I:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+psbJ	psbJ	photosystem II protein J	CDS	1	False	2	2	psbJ:2	photosystem II protein J:1,J protein of photosystem II:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+psbK	psbK	photosystem II protein K	CDS	1	False	2	2	psbK:2	photosystem II protein K:1,K protein of photosystem II:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+psbL	psbL	L protein of photosystem II	CDS	1	False	2	2	psbL:2	L protein of photosystem II:1,photosystem II protein L:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+psbM	psbM	M protein of photosystem II	CDS	1	False	2	2	psbM:2	M protein of photosystem II:1,photosystem II protein M:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+psbN	psbN	photosystem II protein N	CDS	1	False	2	2	psbN:2	photosystem II protein N:1,N protein of photosystem II:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+psbT	psbT	T protein of photosystem II	CDS	1	False	2	2	psbT:2	T protein of photosystem II:1,photosystem II protein T:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+psbZ	psbZ	photosystem II protein Z	CDS	1	False	2	2	psbZ:2	photosystem II protein Z:1,Z protein of photosystem II:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+rbcL	rbcL	ribulose-1,5-bisphosphate carboxylase/oxygenase large subunit	CDS	1	False	2	2	rbcL:2	ribulose-1,5-bisphosphate carboxylase/oxygenase large subunit:2	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+rpl14	rpl14	ribosomal protein L14	CDS	1	False	2	2	rpl14:2	ribosomal protein L14:2	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+rpl16	rpl16	ribosomal protein L16	CDS	2	False	2	2	rpl16:2	ribosomal protein L16:2	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+rpl2	rpl2	ribosomal protein L2	CDS	2	False	2	2	rpl2:2	ribosomal protein L2:2	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+rpl20	rpl20	ribosomal protein L20	CDS	1	False	2	2	rpl20:2	ribosomal protein L20:2	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+rpl21	rpl21	ribosomal protein L21	CDS	1	False	2	2	rpl21:2	ribosomal protein L21:2	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+rpl22	rpl22	ribosomal protein L22	CDS	1	False	2	2	rpl22:2	ribosomal protein L22:2	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+rpl23	rpl23	ribosomal protein L23	CDS	1	False	2	2	rpl23:2	ribosomal protein L23:2	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+rpl32	rpl32	ribosomal protein L32	CDS	1	False	2	2	rpl32:2	ribosomal protein L32:2	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+rpl33	rpl33	ribosomal protein L33	CDS	1	False	2	2	rpl33:2	ribosomal protein L33:2	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+rpl36	rpl36	ribosomal protein L36	CDS	1	False	2	2	rpl36:2	ribosomal protein L36:2	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+rpoA	rpoA	RNA polymerase alpha subunit	CDS	1	False	2	2	rpoA:2	RNA polymerase alpha subunit:1,alpha subunit of RNA polymerase:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+rpoB	rpoB	RNA polymerase beta subunit	CDS	1	False	2	2	rpoB:2	RNA polymerase beta subunit:1,beta subunit of RNA polymerase:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+rpoC1	rpoC1	RNA polymerase beta' subunit	CDS	2	False	2	2	rpoC1:2	RNA polymerase beta' subunit:1,beta' subunit of RNA polymerase:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+rpoC2	rpoC2	RNA polymerase beta'' subunit	CDS	1	False	2	2	rpoC2:2	RNA polymerase beta'' subunit:1,bet'' subunit of RNA polymerase:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+rps11	rps11	ribosomal protein S11	CDS	1	False	2	2	rps11:2	ribosomal protein S11:2	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+rps12	rps12	ribosomal protein S12	CDS	3	True	2	2	rps12:2	ribosomal protein S12:2	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+rps14	rps14	ribosomal protein S14	CDS	1	False	2	2	rps14:2	ribosomal protein S14:2	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+rps16	rps16	ribosomal protein S16	CDS	2	False	2	2	rps16:2	ribosomal protein S16:2	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+rps18	rps18	ribosomal protein S18	CDS	1	False	2	2	rps18:2	ribosomal protein S18:2	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+rps19	rps19	ribosomal protein S19	CDS	1	False	2	2	rps19:2	ribosomal protein S19:2	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+rps2	rps2	ribosomal protein S2	CDS	1	False	2	2	rps2:2	ribosomal protein S2:2	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+rps3	rps3	ribosomal protein S3	CDS	1	False	2	2	rps3:2	ribosomal protein S3:2	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+rps4	rps4	ribosomal protein S4	CDS	1	False	2	2	rps4:2	ribosomal protein S4:2	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+rps7	rps7	ribosomal protein S7	CDS	1	False	2	2	rps7:2	ribosomal protein S7:2	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+rps8	rps8	ribosomal protein S8	CDS	1	False	2	2	rps8:2	ribosomal protein S8:2	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+ycf12	ycf12	hypothetical chloroplast RF12	CDS	1	False	2	2	ycf12:2	hypothetical chloroplast RF12:1,Ycf12:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+ycf3	ycf3	photosystem I assembly protein Ycf3	CDS	3	False	2	2	ycf3:2	photosystem I assembly protein Ycf3:1,hypothetical chloroplast RF3:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1
+ycf4	ycf4	hypothetical chloroplast RF4	CDS	1	False	2	2	ycf4:2	hypothetical chloroplast RF4:1,photosystem I assembly protein Ycf4:1	Anthoceros_angustus:1,Leiosporoceros_dussii:1

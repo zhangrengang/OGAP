@@ -1,0 +1,7 @@
+#id	organism	name_count	cds_count	trn_count	rrn_count	length	GC	taxonomy
+NC_036937.1	Chrysochromulina parva	145	112	27	6	104520	36.3	root;cellular organisms;Eukaryota;Haptista;Haptophyta;Prymnesiophyceae;Prymnesiales;Chrysochromulinaceae;Chrysochromulina;Chrysochromulina parva
+NC_007288.1	Emiliania huxleyi	144	119	30	6	105309	36.8	root;cellular organisms;Eukaryota;Haptista;Haptophyta;Prymnesiophyceae;Isochrysidales;Noelaerhabdaceae;Emiliania;Emiliania huxleyi
+NC_020371.1	Pavlova lutheri	133	111	27	3	95281	35.6	root;cellular organisms;Eukaryota;Haptista;Haptophyta;Pavlovales;Pavlovaceae;Pavlova;Pavlova lutheri
+NC_016703.2	Phaeocystis antarctica	141	108	27	6	105512	35.5	root;cellular organisms;Eukaryota;Haptista;Haptophyta;Prymnesiophyceae;Phaeocystales;Phaeocystaceae;Phaeocystis;Phaeocystis antarctica
+NC_021637.1	Phaeocystis globosa	142	108	27	6	107461	35.4	root;cellular organisms;Eukaryota;Haptista;Haptophyta;Prymnesiophyceae;Phaeocystales;Phaeocystaceae;Phaeocystis;Phaeocystis globosa
+NC_040291.1	Tisochrysis lutea	110	110	29	5	105837	36.2	root;cellular organisms;Eukaryota;Haptista;Haptophyta;Prymnesiophyceae;Isochrysidales;Isochrysidaceae;Tisochrysis;Tisochrysis lutea

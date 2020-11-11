@@ -1,0 +1,62 @@
+#id	name	product	seq_type	exon_count	trans_splicing	gene_count	species_count	names	products	species
+atpA	atpA	CF1 alpha subunit of ATP synthase	CDS	1	False	2	2	atpA:2	CF1 alpha subunit of ATP synthase:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+atpB	atpB	CF1 beta subunit of ATP synthase	CDS	1	False	2	2	atpB:2	CF1 beta subunit of ATP synthase:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+atpE	atpE	CF1 epsilon subunit of ATP synthase	CDS	1	False	2	2	atpE:2	CF1 epsilon subunit of ATP synthase:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+atpF	atpF	CF0 subunit I of ATP synthase	CDS	1	False	2	2	atpF:2	CF0 subunit I of ATP synthase:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+atpH	atpH	CF0 subunit III of ATP synthase	CDS	1	False	2	2	atpH:2	CF0 subunit III of ATP synthase:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+atpI	atpI	CF0 subunit IV of ATP synthase	CDS	1	False	2	2	atpI:2	CF0 subunit IV of ATP synthase:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+ccsA	ccsA	protein involved in cytochrome c biogenesis	CDS	1	False	2	2	ccsA:2	protein involved in cytochrome c biogenesis:1,heme attachment to plastid cytochrome c:1	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+cemA	cemA	chloroplast envelope membrane protein	CDS	1	False	2	2	cemA:2	chloroplast envelope membrane protein:1,chloroplast enveloppe membrane protein:1	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+chlB	chlB	ChlB subunit of protochlorophyllide reductase	CDS	1	False	2	2	chlB:2	ChlB subunit of protochlorophyllide reductase:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+chlI	chlI	magnesium chelatase subunit of protochlorophyllide reductase	CDS	1	False	2	2	chlI:2	magnesium chelatase subunit of protochlorophyllide reductase:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+chlL	chlL	ATP-binding subunit of protochlorophyllide reductase	CDS	1	False	2	2	chlL:2	ATP-binding subunit of protochlorophyllide reductase:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+chlN	chlN	ChlN subunit of protochlorophyllide reductase	CDS	1	False	2	2	chlN:2	ChlN subunit of protochlorophyllide reductase:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+clpP	clpP	proteolytic subunit 2 of clp protease	CDS	1	False	2	2	clpP:2	proteolytic subunit 2 of clp protease:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+petA	petA	apocytochrome f of cytochrome b6/f complex	CDS	1	False	2	2	petA:2	apocytochrome f of cytochrome b6/f complex:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+petB	petB	apocytochrome b6 of cytochrome b6/f complex	CDS	1	False	2	2	petB:2	apocytochrome b6 of cytochrome b6/f complex:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+petD	petD	subunit IV of cytochrome b6/f complex	CDS	1	False	2	2	petD:2	subunit IV of cytochrome b6/f complex:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+petG	petG	subunit V of cytochrome b6/f complex	CDS	1	False	2	2	petG:2	subunit V of cytochrome b6/f complex:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+psaA	psaA	P700 apoprotein A1 of photosystem I	CDS	1	False	2	2	psaA:2	P700 apoprotein A1 of photosystem I:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+psaB	psaB	P700 apoprotein A2 of photosystem I	CDS	1	False	2	2	psaB:2	P700 apoprotein A2 of photosystem I:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+psaC	psaC	subunit VII of photosystem I (Fe-S polypeptide)	CDS	1	False	2	2	psaC:2	subunit VII of photosystem I (Fe-S polypeptide):1,subunit VII of photosystem I (Fe-Spolypeptide):1	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+psaI	psaI	subunit VIII of photosystem I	CDS	1	False	2	2	psaI:2	subunit VIII of photosystem I:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+psaJ	psaJ	subunit IX of photosystem I	CDS	1	False	2	2	psaJ:2	subunit IX of photosystem I:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+psbA	psbA	D1 reaction center protein of photosystem II	CDS	1	False	2	2	psbA:2	D1 reaction center protein of photosystem II:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+psbB	psbB	CP47 chlorophyll apoprotein of photosystem II	CDS	1	False	2	2	psbB:2	CP47 chlorophyll apoprotein of photosystem II:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+psbC	psbC	CP43 chlorophyll apoprotein of photosystem II	CDS	1	False	2	2	psbC:2	CP43 chlorophyll apoprotein of photosystem II:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+psbD	psbD	D2 reaction center protein of photosystem II	CDS	1	False	2	2	psbD:2	D2 reaction center protein of photosystem II:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+psbE	psbE	cytochrome b559 alpha subunit of photosystem II	CDS	1	False	2	2	psbE:2	cytochrome b559 alpha subunit of photosystem II:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+psbF	psbF	cytochrome b559 beta subunit of photosystem II	CDS	1	False	2	2	psbF:2	cytochrome b559 beta subunit of photosystem II:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+psbH	psbH	10 kDa phosphoprotein of photosystem II	CDS	1	False	2	2	psbH:2	10 kDa phosphoprotein of photosystem II:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+psbI	psbI	I polypeptide of photosystem II	CDS	1	False	2	2	psbI:2	I polypeptide of photosystem II:1,I protein of photosystem II:1	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+psbJ	psbJ	J protein of photosystem II	CDS	1	False	2	2	psbJ:2	J protein of photosystem II:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+psbK	psbK	K protein of photosystem II	CDS	1	False	2	2	psbK:2	K protein of photosystem II:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+psbL	psbL	L protein of photosystem II	CDS	1	False	2	2	psbL:2	L protein of photosystem II:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+psbM	psbM	M protein of photosystem II	CDS	1	False	2	2	psbM:2	M protein of photosystem II:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+psbN	psbN	N protein of photosystem II	CDS	1	False	2	2	psbN:2	N protein of photosystem II:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+psbT	psbT	T protein of photosystem II	CDS	1	False	2	2	psbT:2	T protein of photosystem II:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+psbZ	psbZ	Z protein of photosystem II	CDS	1	False	2	2	psbZ:2	Z protein of photosystem II:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+rbcL	rbcL	large subunit of Rubisco	CDS	1	False	2	2	rbcL:2	large subunit of Rubisco:1,ribulose-1,5-bisphosphate carboxylase/oxygenase large subunit:1	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+rpl19	rpl19	ribosomal protein L19	CDS	1	False	2	2	rpl19:2	ribosomal protein L19:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+rpl2	rpl2	ribosomal protein L2	CDS	1	False	2	2	rpl2:2	ribosomal protein L2:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+rpl20	rpl20	ribosomal protein L20	CDS	1	False	2	2	rpl20:2	ribosomal protein L20:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+rpl32	rpl32	ribosomal protein L32	CDS	1	False	2	2	rpl32:2	ribosomal protein L32:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+rpl36	rpl36	ribosomal protein L36	CDS	1	False	2	2	rpl36:2	ribosomal protein L36:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+rpoA	rpoA	alpha subunit of RNA polymerase	CDS	1	False	2	2	rpoA:2	alpha subunit of RNA polymerase:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+rpoB	rpoB	beta subunit of RNA polymerase	CDS	1	False	2	2	rpoB:2	beta subunit of RNA polymerase:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+rpoC1	rpoC1	beta' subunit of RNA polymerase	CDS	1	False	2	2	rpoC1:2	beta' subunit of RNA polymerase:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+rpoC2	rpoC2	beta'' subunit of RNA polymerase	CDS	1	False	2	2	rpoC2:2	beta'' subunit of RNA polymerase:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+rps11	rps11	ribosomal protein S11	CDS	1	False	2	2	rps11:2	ribosomal protein S11:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+rps12	rps12	ribosomal protein S12	CDS	1	False	2	2	rps12:2	ribosomal protein S12:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+rps14	rps14	ribosomal protein S14	CDS	1	False	2	2	rps14:2	ribosomal protein S14:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+rps18	rps18	ribosomal protein S18	CDS	1	False	2	2	rps18:2	ribosomal protein S18:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+rps19	rps19	ribosomal protein S19	CDS	1	False	2	2	rps19:2	ribosomal protein S19:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+rps2	rps2	ribosomal protein S2	CDS	1	False	2	2	rps2:2	ribosomal protein S2:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+rps4	rps4	ribosomal protein S4	CDS	1	False	2	2	rps4:2	ribosomal protein S4:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+rps7	rps7	ribosomal protein S7	CDS	1	False	2	2	rps7:2	ribosomal protein S7:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+rps8	rps8	ribosomal protein S8	CDS	1	False	2	2	rps8:2	ribosomal protein S8:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+rps9	rps9	ribosomal protein S9	CDS	1	False	2	2	rps9:2	ribosomal protein S9:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+tufA	tufA	translational elongation factor Tu	CDS	1	False	2	2	tufA:2	translational elongation factor Tu:2	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+ycf12	ycf12	hypothetical chloroplast RF12	CDS	1	False	2	2	ycf12:2	hypothetical chloroplast RF12:1,hypothetical protein RF12:1	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+ycf4	ycf4	hypothetical chloroplast RF4	CDS	1	False	2	2	ycf4:2	hypothetical chloroplast RF4:1,hypothetical protein RF4:1	Interfilum_terricola:1,Klebsormidium_flaccidum:1
+ycf62	ycf62	hypothetical chloroplast RF62	CDS	1	False	2	2	ycf62:2	hypothetical chloroplast RF62:1,hypothetical protein RF62:1	Interfilum_terricola:1,Klebsormidium_flaccidum:1

@@ -1,0 +1,81 @@
+#id	name	product	seq_type	exon_count	trans_splicing	gene_count	species_count	names	products	species
+accD	accD	acetyl-CoA carboxylase carboxyltransferase beta subunit	CDS	1	False	4	4	accD:4	acetyl-CoA carboxylase carboxyltransferase beta subunit:3,acetyl-CoA carboxylase beta subunit:1	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+atpA	atpA	ATP synthase CF1 alpha subunit	CDS	1	False	4	4	atpA:4	ATP synthase CF1 alpha subunit:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+atpB	atpB	ATP synthase CF1 beta subunit	CDS	1	False	4	4	atpB:4	ATP synthase CF1 beta subunit:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+atpE	atpE	ATP synthase CF1 epsilon subunit	CDS	1	False	4	4	atpE:4	ATP synthase CF1 epsilon subunit:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+atpF	atpF	ATP synthase CF0 subunit I	CDS	2	False	4	4	atpF:4	ATP synthase CF0 subunit I:3,ATP synthase CF0 B subunit:1	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+atpH	atpH	ATP synthase CF0 subunit III	CDS	1	False	4	4	atpH:4	ATP synthase CF0 subunit III:3,ATP synthase CF0 C subunit:1	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+atpI	atpI	ATP synthase CF0 subunit IV	CDS	1	False	4	4	atpI:4	ATP synthase CF0 subunit IV:3,ATP synthase CF0 A subunit:1	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+ccsA	ccsA	cytochrome c heme attachment protein	CDS	1	False	4	4	ccsA:4	cytochrome c heme attachment protein:3,cytochrome c biogenesis protein:1	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+cemA	cemA	envelope membrane protein	CDS	1	False	4	4	cemA:4	envelope membrane protein:3,chloroplast envelope membrane protein:1	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+clpP	clpP	clp protease proteolytic subunit	CDS	3	False	4	4	clpP:4	clp protease proteolytic subunit:3,ATP-dependent Clp protease proteolytic subunit:1	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+infA	infA	translation initiation factor 1	CDS	1	False	4	4	infA:4	translation initiation factor 1:3,translational initiation factor 1:1	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+matK	matK	maturase K	CDS	1	False	4	4	matK:4	maturase K:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+ndhA	ndhA	NADH-plastoquinone oxidoreductase subunit 1	CDS	2	False	4	4	ndhA:4	NADH-plastoquinone oxidoreductase subunit 1:3,NADH dehydrogenase subunit 1:1	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+ndhB	ndhB	NADH-plastoquinone oxidoreductase subunit 2	CDS	2	False	4	4	ndhB:4	NADH-plastoquinone oxidoreductase subunit 2:3,NADH dehydrogenase subunit 2:1	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+ndhB-40	ndhB	NADH-plastoquinone oxidoreductase subunit 2	CDS	2	False	2	2	ndhB:2	NADH-plastoquinone oxidoreductase subunit 2:2	Chloranthus_erectus:1,Chloranthus_japonicus:1
+ndhC	ndhC	NADH-plastoquinone oxidoreductase subunit 3	CDS	1	False	4	4	ndhC:4	NADH-plastoquinone oxidoreductase subunit 3:3,NADH dehydrogenase subunit 3:1	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+ndhD	ndhD	NADH-plastoquinone oxidoreductase subunit 4	CDS	1	False	4	4	ndhD:4	NADH-plastoquinone oxidoreductase subunit 4:3,NADH dehydrogenase subunit 4:1	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+ndhE	ndhE	NADH-plastoquinone oxidoreductase subunit 4L	CDS	1	False	4	4	ndhE:4	NADH-plastoquinone oxidoreductase subunit 4L:3,NADH dehydrogenase subunit 4L:1	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+ndhF	ndhF	NADH-plastoquinone oxidoreductase subunit 5	CDS	1	False	4	4	ndhF:4	NADH-plastoquinone oxidoreductase subunit 5:3,NADH dehydrogenase subunit 5:1	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+ndhG	ndhG	NADH-plastoquinone oxidoreductase subunit 6	CDS	1	False	4	4	ndhG:4	NADH-plastoquinone oxidoreductase subunit 6:3,NADH dehydrogenase subunit 6:1	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+ndhH	ndhH	NADH-plastoquinone oxidoreductase subunit 7	CDS	1	False	4	4	ndhH:4	NADH-plastoquinone oxidoreductase subunit 7:3,NADH dehydrogenase subunit 7:1	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+ndhI	ndhI	NADH-plastoquinone oxidoreductase subunit I	CDS	1	False	4	4	ndhI:4	NADH-plastoquinone oxidoreductase subunit I:3,NADH dehydrogenase subunit I:1	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+ndhJ	ndhJ	NADH-plastoquinone oxidoreductase subunit J	CDS	1	False	4	4	ndhJ:4	NADH-plastoquinone oxidoreductase subunit J:3,NADH dehydrogenase subunit J:1	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+ndhK	ndhK	NADH-plastoquinone oxidoreductase subunit K	CDS	1	False	4	4	ndhK:4	NADH-plastoquinone oxidoreductase subunit K:3,NADH dehydrogenase subunit K:1	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+petA	petA	cytochrome f	CDS	1	False	4	4	petA:4	cytochrome f:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+petB	petB	cytochrome b6	CDS	2	False	4	4	petB:4	cytochrome b6:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+petD	petD	cytochrome b6/f complex subunit IV	CDS	2	False	4	4	petD:4	cytochrome b6/f complex subunit IV:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+petG	petG	cytochrome b6/f complex subunit V	CDS	1	False	4	4	petG:4	cytochrome b6/f complex subunit V:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+petL	petL	cytochrome b6/f complex subunit VI	CDS	1	False	4	4	petL:4	cytochrome b6/f complex subunit VI:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+petN	petN	cytochrome b6/f complex subunit VIII	CDS	1	False	4	4	petN:4	cytochrome b6/f complex subunit VIII:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+psaA	psaA	photosystem I P700 apoprotein A1	CDS	1	False	4	4	psaA:4	photosystem I P700 apoprotein A1:3,photosystem I P700 chlorophyll a apoprotein A1:1	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+psaB	psaB	photosystem I P700 apoprotein A2	CDS	1	False	4	4	psaB:4	photosystem I P700 apoprotein A2:3,photosystem I P700 chlorophyll a apoprotein A2:1	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+psaC	psaC	photosystem I subunit VII	CDS	1	False	4	4	psaC:4	photosystem I subunit VII:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+psaI	psaI	photosystem I subunit VIII	CDS	1	False	4	4	psaI:4	photosystem I subunit VIII:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+psaJ	psaJ	photosystem I subunit IX	CDS	1	False	4	4	psaJ:4	photosystem I subunit IX:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+psbA	psbA	photosystem II protein D1	CDS	1	False	4	4	psbA:4	photosystem II protein D1:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+psbB	psbB	photosystem II CP47 chlorophyll apoprotein	CDS	1	False	4	4	psbB:4	photosystem II CP47 chlorophyll apoprotein:3,photosystem II 47 kDa protein:1	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+psbC	psbC	photosystem II CP43 chlorophyll apoprotein	CDS	1	False	4	4	psbC:4	photosystem II CP43 chlorophyll apoprotein:3,photosystem II 44 kDa protein:1	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+psbD	psbD	photosystem II protein D2	CDS	1	False	4	4	psbD:4	photosystem II protein D2:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+psbE	psbE	photosystem II cytochrome b559 alpha subunit	CDS	1	False	4	4	psbE:4	photosystem II cytochrome b559 alpha subunit:3,photosystem II protein V:1	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+psbF	psbF	photosystem II cytochrome b559 beta subunit	CDS	1	False	4	4	psbF:4	photosystem II cytochrome b559 beta subunit:3,photosystem II protein VI:1	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+psbH	psbH	photosystem II phosphoprotein	CDS	1	False	4	4	psbH:4	photosystem II phosphoprotein:3,photosystem II protein H:1	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+psbI	psbI	photosystem II protein I	CDS	1	False	4	4	psbI:4	photosystem II protein I:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+psbJ	psbJ	photosystem II protein J	CDS	1	False	4	4	psbJ:4	photosystem II protein J:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+psbK	psbK	photosystem II protein K	CDS	1	False	4	4	psbK:4	photosystem II protein K:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+psbL	psbL	photosystem II protein L	CDS	1	False	4	4	psbL:4	photosystem II protein L:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+psbM	psbM	photosystem II protein M	CDS	1	False	4	4	psbM:4	photosystem II protein M:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+psbN	psbN	photosystem II protein N	CDS	1	False	4	4	psbN:4	photosystem II protein N:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+psbT	psbT	photosystem II protein T	CDS	1	False	4	4	psbT:4	photosystem II protein T:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+psbZ	psbZ	photosystem II protein Z	CDS	1	False	4	4	psbZ:4	photosystem II protein Z:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+rbcL	rbcL	ribulose-1,5-bisphosphate carboxylase/oxygenase large subunit	CDS	1	False	4	4	rbcL:4	ribulose-1,5-bisphosphate carboxylase/oxygenase large subunit:2,ribulose bisophosphate carboxylase:2	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+rpl14	rpl14	ribosomal protein L14	CDS	1	False	4	4	rpl14:4	ribosomal protein L14:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+rpl16	rpl16	50S ribosomal protein L16	CDS	2	False	4	4	rpl16:4	50S ribosomal protein L16:2,ribosomal protein L16:2	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+rpl2	rpl2	ribosomal protein L2	CDS	2	False	4	4	rpl2:4	ribosomal protein L2:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+rpl20	rpl20	ribosomal protein L20	CDS	1	False	4	4	rpl20:4	ribosomal protein L20:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+rpl22	rpl22	ribosomal protein L22	CDS	1	False	4	4	rpl22:4	ribosomal protein L22:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+rpl23	rpl23	ribosomal protein L23	CDS	1	False	4	4	rpl23:4	ribosomal protein L23:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+rpl32	rpl32	ribosomal protein L32	CDS	1	False	4	4	rpl32:4	ribosomal protein L32:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+rpl33	rpl33	ribosomal protein L33	CDS	1	False	4	4	rpl33:4	ribosomal protein L33:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+rpl36	rpl36	ribosomal protein L36	CDS	1	False	4	4	rpl36:4	ribosomal protein L36:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+rpoA	rpoA	RNA polymerase alpha subunit	CDS	1	False	4	4	rpoA:4	RNA polymerase alpha subunit:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+rpoB	rpoB	RNA polymerase beta subunit	CDS	1	False	4	4	rpoB:4	RNA polymerase beta subunit:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+rpoC1	rpoC1	RNA polymerase beta subunit	CDS	2	False	4	4	rpoC1:4	RNA polymerase beta subunit:2,RNA polymerase beta' subunit:1,RNA polymerase beta:1	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+rpoC2	rpoC2	RNA polymerase beta subunit	CDS	1	False	4	4	rpoC2:4	RNA polymerase beta subunit:2,RNA polymerase beta'' subunit:1,RNA polymerase beta' subunit:1	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+rps11	rps11	ribosomal protein S11	CDS	1	False	4	4	rps11:4	ribosomal protein S11:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+rps12	rps12	ribosomal protein S12	CDS	3	True	4	4	rps12:4	ribosomal protein S12:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+rps14	rps14	ribosomal protein S14	CDS	1	False	4	4	rps14:4	ribosomal protein S14:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+rps15	rps15	ribosomal protein S15	CDS	1	False	4	4	rps15:4	ribosomal protein S15:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+rps16	rps16	ribosomal protein S16	CDS	2	False	4	4	rps16:4	ribosomal protein S16:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+rps18	rps18	ribosomal protein S18	CDS	1	False	4	4	rps18:4	ribosomal protein S18:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+rps19	rps19	ribosomal protein S19	CDS	1	False	4	4	rps19:4	ribosomal protein S19:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+rps2	rps2	ribosomal protein S2	CDS	1	False	4	4	rps2:4	ribosomal protein S2:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+rps3	rps3	ribosomal protein S3	CDS	1	False	4	4	rps3:4	ribosomal protein S3:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+rps4	rps4	ribosomal protein S4	CDS	1	False	4	4	rps4:4	ribosomal protein S4:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+rps7	rps7	ribosomal protein S7	CDS	1	False	3	3	rps7:3	ribosomal protein S7:3	Chloranthus_erectus:1,Chloranthus_japonicus:1,Sarcandra_glabra:1
+rps7-35	rps7	ribosomal protein S7	CDS	1	False	3	3	rps7:3	ribosomal protein S7:3	Chloranthus_erectus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+rps8	rps8	ribosomal protein S8	CDS	1	False	4	4	rps8:4	ribosomal protein S8:4	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+ycf1	ycf1	hypothetical chloroplast RF1	CDS	1	False	4	4	ycf1:4	hypothetical chloroplast RF1:2,hypothetical protein RF1:2	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+ycf3	ycf3	photosystem I assembly protein Ycf3	CDS	3	False	4	4	ycf3:4	photosystem I assembly protein Ycf3:3,photosystem I assembly protein ycf3:1	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1
+ycf4	ycf4	photosystem I assembly protein Ycf4	CDS	1	False	4	4	ycf4:4	photosystem I assembly protein Ycf4:3,photosystem I assembly protein ycf4:1	Chloranthus_erectus:1,Chloranthus_japonicus:1,Chloranthus_spicatus:1,Sarcandra_glabra:1

@@ -1,0 +1,3 @@
+#id	organism	name_count	cds_count	trn_count	rrn_count	length	GC	taxonomy
+NC_004543.1	Anthoceros angustus	135	90	37	8	161162	32.9	root;cellular organisms;Eukaryota;Viridiplantae;Streptophyta;Streptophytina;Embryophyta;Anthocerotophyta;Anthocerotopsida;Anthocerotidae;Anthocerotales;Anthocerotaceae;Anthoceros;Anthoceros angustus
+NC_039750.1	Leiosporoceros dussii	130	86	38	6	155956	30.9	root;cellular organisms;Eukaryota;Viridiplantae;Streptophyta;Streptophytina;Embryophyta;Anthocerotophyta;Leiosporocerotopsida;Leiosporocerotales;Leiosporocerotaceae;Leiosporoceros;Leiosporoceros dussii

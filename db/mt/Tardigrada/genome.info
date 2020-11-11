@@ -1,0 +1,4 @@
+#id	organism	name_count	cds_count	trn_count	rrn_count	length	GC	taxonomy
+NC_014848.1	Hypsibius dujardini	38	13	23	2	15169	31.1	root;cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Protostomia;Ecdysozoa;Panarthropoda;Tardigrada;Eutardigrada;Parachela;Hypsibioidea;Hypsibiidae;Hypsibius;Hypsibius dujardini
+NC_031407.1	Ramazzottius varieornatus	37	13	22	2	14428	28.6	root;cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Protostomia;Ecdysozoa;Panarthropoda;Tardigrada;Eutardigrada;Parachela;Hypsibioidea;Ramazzottiidae;Ramazzottius;Ramazzottius varieornatus
+NC_015829.1	Thulinius sp. DVL-2010	37	13	22	2	15047	28.8	root;cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Protostomia;Ecdysozoa;Panarthropoda;Tardigrada;Eutardigrada;Parachela;Hypsibioidea;Hypsibiidae;Thulinius;unclassified Thulinius;Thulinius sp. DVL-2010

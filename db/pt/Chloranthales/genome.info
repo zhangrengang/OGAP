@@ -1,0 +1,5 @@
+#id	organism	name_count	cds_count	trn_count	rrn_count	length	GC	taxonomy
+NC_039627.1	Chloranthus erectus	130	85	37	6	157852	38.9	root;cellular organisms;Eukaryota;Viridiplantae;Streptophyta;Streptophytina;Embryophyta;Tracheophyta;Euphyllophyta;Spermatophyta;Magnoliopsida;Mesangiospermae;Chloranthales;Chloranthaceae;Chloranthus;Chloranthus erectus
+NC_026565.1	Chloranthus japonicus	123	86	37	8	158640	38.9	root;cellular organisms;Eukaryota;Viridiplantae;Streptophyta;Streptophytina;Embryophyta;Tracheophyta;Euphyllophyta;Spermatophyta;Magnoliopsida;Mesangiospermae;Chloranthales;Chloranthaceae;Chloranthus;Chloranthus japonicus
+NC_009598.1	Chloranthus spicatus	123	86	37	8	157772	38.9	root;cellular organisms;Eukaryota;Viridiplantae;Streptophyta;Streptophytina;Embryophyta;Tracheophyta;Euphyllophyta;Spermatophyta;Magnoliopsida;Mesangiospermae;Chloranthales;Chloranthaceae;Chloranthus;Chloranthus spicatus
+NC_039621.1	Sarcandra glabra	130	85	37	6	158900	39.2	root;cellular organisms;Eukaryota;Viridiplantae;Streptophyta;Streptophytina;Embryophyta;Tracheophyta;Euphyllophyta;Spermatophyta;Magnoliopsida;Mesangiospermae;Chloranthales;Chloranthaceae;Sarcandra;Sarcandra glabra

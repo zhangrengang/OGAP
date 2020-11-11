@@ -1,0 +1,3 @@
+#id	organism	name_count	cds_count	trn_count	rrn_count	length	GC	taxonomy
+NC_009599.1	Buxus microphylla	139	86	45	8	159010	38.1	root;cellular organisms;Eukaryota;Viridiplantae;Streptophyta;Streptophytina;Embryophyta;Tracheophyta;Euphyllophyta;Spermatophyta;Magnoliopsida;Mesangiospermae;Buxales;Buxaceae;Buxus;Buxus microphylla
+NC_029433.1	Pachysandra terminalis	133	88	37	8	160623	38.3	root;cellular organisms;Eukaryota;Viridiplantae;Streptophyta;Streptophytina;Embryophyta;Tracheophyta;Euphyllophyta;Spermatophyta;Magnoliopsida;Mesangiospermae;Buxales;Buxaceae;Pachysandra;Pachysandra terminalis

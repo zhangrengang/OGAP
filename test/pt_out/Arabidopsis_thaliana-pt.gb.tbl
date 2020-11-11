@@ -1,0 +1,1404 @@
+>Feature NC_000932.1
+76	4	gene
+		gene	trnH-GUG
+		locus_tag	ATHPT_0000
+76	4	tRNA
+		product	tRNA-His
+		transcript_id	gnl|ATHPT|trnH-GUG-1.t1
+1444	383	gene
+		gene	psbA
+		locus_tag	ATHPT_0001
+1444	383	mRNA
+		product	photosystem II protein D1
+		transcript_id	gnl|ATHPT|psbA-1.t1
+		protein_id	gnl|ATHPT|psbA-1.t1:cds
+1444	383	CDS
+		product	photosystem II protein D1
+		transcript_id	gnl|ATHPT|psbA-1.t1
+		protein_id	gnl|ATHPT|psbA-1.t1:cds
+		transl_table	11
+		codon_start	1
+3636	2056	gene
+		gene	matK
+		locus_tag	ATHPT_0002
+3636	2056	mRNA
+		product	maturase K
+		transcript_id	gnl|ATHPT|matK-1.t1
+		protein_id	gnl|ATHPT|matK-1.t1:cds
+3636	2056	CDS
+		product	maturase K
+		transcript_id	gnl|ATHPT|matK-1.t1
+		protein_id	gnl|ATHPT|matK-1.t1:cds
+		transl_table	11
+		codon_start	1
+6188	5084	gene
+		gene	rps16
+		locus_tag	ATHPT_0003
+6188	6149	mRNA
+5283	5084
+		product	ribosomal protein S16
+		transcript_id	gnl|ATHPT|rps16-1.t1
+		protein_id	gnl|ATHPT|rps16-1.t1:cds
+6188	6149	CDS
+5283	5084
+		product	ribosomal protein S16
+		transcript_id	gnl|ATHPT|rps16-1.t1
+		protein_id	gnl|ATHPT|rps16-1.t1:cds
+		transl_table	11
+		codon_start	1
+6687	6616	gene
+		gene	trnQ-UUG
+		locus_tag	ATHPT_0004
+6687	6616	tRNA
+		product	tRNA-Gln
+		transcript_id	gnl|ATHPT|trnQ-UUG-1.t1
+7017	7202	gene
+		gene	psbK
+		locus_tag	ATHPT_0005
+7017	7202	mRNA
+		product	photosystem II protein K
+		transcript_id	gnl|ATHPT|psbK-1.t1
+		protein_id	gnl|ATHPT|psbK-1.t1:cds
+7017	7202	CDS
+		product	photosystem II protein K
+		transcript_id	gnl|ATHPT|psbK-1.t1
+		protein_id	gnl|ATHPT|psbK-1.t1:cds
+		transl_table	11
+		codon_start	1
+7583	7693	gene
+		gene	psbI
+		locus_tag	ATHPT_0006
+7583	7693	mRNA
+		product	photosystem II protein I
+		transcript_id	gnl|ATHPT|psbI-1.t1
+		protein_id	gnl|ATHPT|psbI-1.t1:cds
+7583	7693	CDS
+		product	photosystem II protein I
+		transcript_id	gnl|ATHPT|psbI-1.t1
+		protein_id	gnl|ATHPT|psbI-1.t1:cds
+		transl_table	11
+		codon_start	1
+7872	7785	gene
+		gene	trnS-GCU
+		locus_tag	ATHPT_0007
+7872	7785	tRNA
+		product	tRNA-Ser
+		transcript_id	gnl|ATHPT|trnS-GCU-1.t1
+9590	9661	gene
+		gene	trnR-UCU
+		locus_tag	ATHPT_0008
+9590	9661	tRNA
+		product	tRNA-Arg
+		transcript_id	gnl|ATHPT|trnR-UCU-1.t1
+11461	9938	gene
+		gene	atpA
+		locus_tag	ATHPT_0009
+11461	9938	mRNA
+		product	ATP synthase CF1 alpha subunit
+		transcript_id	gnl|ATHPT|atpA-1.t1
+		protein_id	gnl|ATHPT|atpA-1.t1:cds
+11461	9938	CDS
+		product	ATP synthase CF1 alpha subunit
+		transcript_id	gnl|ATHPT|atpA-1.t1
+		protein_id	gnl|ATHPT|atpA-1.t1:cds
+		transl_table	11
+		codon_start	1
+12798	11529	gene
+		gene	atpF
+		locus_tag	ATHPT_0010
+12798	12654	mRNA
+11953	11529
+		product	ATP synthase CF0 subunit B
+		transcript_id	gnl|ATHPT|atpF-1.t1
+		protein_id	gnl|ATHPT|atpF-1.t1:cds
+12798	12654	CDS
+11953	11529
+		product	ATP synthase CF0 subunit B
+		transcript_id	gnl|ATHPT|atpF-1.t1
+		protein_id	gnl|ATHPT|atpF-1.t1:cds
+		transl_table	11
+		codon_start	1
+13507	13262	gene
+		gene	atpH
+		locus_tag	ATHPT_0011
+13507	13262	mRNA
+		product	ATP synthase CF0 subunit C
+		transcript_id	gnl|ATHPT|atpH-1.t1
+		protein_id	gnl|ATHPT|atpH-1.t1:cds
+13507	13262	CDS
+		product	ATP synthase CF0 subunit C
+		transcript_id	gnl|ATHPT|atpH-1.t1
+		protein_id	gnl|ATHPT|atpH-1.t1:cds
+		transl_table	11
+		codon_start	1
+14770	14021	gene
+		gene	atpI
+		locus_tag	ATHPT_0012
+14770	14021	mRNA
+		product	ATP synthase CF0 subunit A
+		transcript_id	gnl|ATHPT|atpI-1.t1
+		protein_id	gnl|ATHPT|atpI-1.t1:cds
+14770	14021	CDS
+		product	ATP synthase CF0 subunit A
+		transcript_id	gnl|ATHPT|atpI-1.t1
+		protein_id	gnl|ATHPT|atpI-1.t1:cds
+		transl_table	11
+		codon_start	1
+15723	15013	gene
+		gene	rps2
+		locus_tag	ATHPT_0013
+15723	15013	mRNA
+		product	ribosomal protein S2
+		transcript_id	gnl|ATHPT|rps2-1.t1
+		protein_id	gnl|ATHPT|rps2-1.t1:cds
+15723	15013	CDS
+		product	ribosomal protein S2
+		transcript_id	gnl|ATHPT|rps2-1.t1
+		protein_id	gnl|ATHPT|rps2-1.t1:cds
+		transl_table	11
+		codon_start	1
+20080	15938	gene
+		gene	rpoC2
+		locus_tag	ATHPT_0014
+20080	15938	mRNA
+		product	RNA polymerase beta'' subunit
+		transcript_id	gnl|ATHPT|rpoC2-1.t1
+		protein_id	gnl|ATHPT|rpoC2-1.t1:cds
+20080	15938	CDS
+		product	RNA polymerase beta'' subunit
+		transcript_id	gnl|ATHPT|rpoC2-1.t1
+		protein_id	gnl|ATHPT|rpoC2-1.t1:cds
+		transl_table	11
+		codon_start	1
+23084	20251	gene
+		gene	rpoC1
+		locus_tag	ATHPT_0015
+23084	22651	mRNA
+21886	20251
+		product	RNA polymerase beta' subunit
+		transcript_id	gnl|ATHPT|rpoC1-1.t1
+		protein_id	gnl|ATHPT|rpoC1-1.t1:cds
+23084	22651	CDS
+21886	20251
+		product	RNA polymerase beta' subunit
+		transcript_id	gnl|ATHPT|rpoC1-1.t1
+		protein_id	gnl|ATHPT|rpoC1-1.t1:cds
+		transl_table	11
+		codon_start	1
+26329	23111	gene
+		gene	rpoB
+		locus_tag	ATHPT_0016
+26329	23111	mRNA
+		product	RNA polymerase beta subunit
+		transcript_id	gnl|ATHPT|rpoB-1.t1
+		protein_id	gnl|ATHPT|rpoB-1.t1:cds
+26329	23111	CDS
+		product	RNA polymerase beta subunit
+		transcript_id	gnl|ATHPT|rpoB-1.t1
+		protein_id	gnl|ATHPT|rpoB-1.t1:cds
+		transl_table	11
+		codon_start	1
+28089	28178	gene
+		gene	petN
+		locus_tag	ATHPT_0017
+28089	28178	mRNA
+		product	cytochrome b6/f complex subunit N
+		transcript_id	gnl|ATHPT|petN-1.t1
+		protein_id	gnl|ATHPT|petN-1.t1:cds
+28089	28178	CDS
+		product	cytochrome b6/f complex subunit N
+		transcript_id	gnl|ATHPT|petN-1.t1
+		protein_id	gnl|ATHPT|petN-1.t1:cds
+		transl_table	11
+		codon_start	1
+28811	28707	gene
+		gene	psbM
+		locus_tag	ATHPT_0018
+28811	28707	mRNA
+		product	photosystem II protein M
+		transcript_id	gnl|ATHPT|psbM-1.t1
+		protein_id	gnl|ATHPT|psbM-1.t1:cds
+28811	28707	CDS
+		product	photosystem II protein M
+		transcript_id	gnl|ATHPT|psbM-1.t1
+		protein_id	gnl|ATHPT|psbM-1.t1:cds
+		transl_table	11
+		codon_start	1
+29874	29801	gene
+		gene	trnD-GUC
+		locus_tag	ATHPT_0019
+29874	29801	tRNA
+		product	tRNA-Asp
+		transcript_id	gnl|ATHPT|trnD-GUC-1.t1
+30406	30323	gene
+		gene	trnY-GUA
+		locus_tag	ATHPT_0020
+30406	30323	tRNA
+		product	tRNA-Tyr
+		transcript_id	gnl|ATHPT|trnY-GUA-1.t1
+30538	30466	gene
+		gene	trnE-UUC
+		locus_tag	ATHPT_0021
+30538	30466	tRNA
+		product	tRNA-Glu
+		transcript_id	gnl|ATHPT|trnE-UUC-1.t1
+31369	31440	gene
+		gene	trnT-GGU
+		locus_tag	ATHPT_0022
+31369	31440	tRNA
+		product	tRNA-Thr
+		transcript_id	gnl|ATHPT|trnT-GGU-1.t1
+32711	33772	gene
+		gene	psbD
+		locus_tag	ATHPT_0023
+32711	33772	mRNA
+		product	photosystem II protein D2
+		transcript_id	gnl|ATHPT|psbD-1.t1
+		protein_id	gnl|ATHPT|psbD-1.t1:cds
+32711	33772	CDS
+		product	photosystem II protein D2
+		transcript_id	gnl|ATHPT|psbD-1.t1
+		protein_id	gnl|ATHPT|psbD-1.t1:cds
+		transl_table	11
+		codon_start	1
+33720	35141	gene
+		gene	psbC
+		locus_tag	ATHPT_0024
+33720	35141	mRNA
+		product	photosystem II subunit CP43
+		transcript_id	gnl|ATHPT|psbC-1.t1
+		protein_id	gnl|ATHPT|psbC-1.t1:cds
+33720	35141	CDS
+		product	photosystem II subunit CP43
+		transcript_id	gnl|ATHPT|psbC-1.t1
+		protein_id	gnl|ATHPT|psbC-1.t1:cds
+		transl_table	11
+		codon_start	1
+35403	35312	gene
+		gene	trnS-UGA
+		locus_tag	ATHPT_0025
+35403	35312	tRNA
+		product	tRNA-Ser
+		transcript_id	gnl|ATHPT|trnS-UGA-1.t1
+35751	35939	gene
+		gene	psbZ
+		locus_tag	ATHPT_0026
+35751	35939	mRNA
+		product	photosystem II protein Z
+		transcript_id	gnl|ATHPT|psbZ-1.t1
+		protein_id	gnl|ATHPT|psbZ-1.t1:cds
+35751	35939	CDS
+		product	photosystem II protein Z
+		transcript_id	gnl|ATHPT|psbZ-1.t1
+		protein_id	gnl|ATHPT|psbZ-1.t1:cds
+		transl_table	11
+		codon_start	1
+36490	36560	gene
+		gene	trnG-GCC
+		locus_tag	ATHPT_0027
+36490	36560	tRNA
+		product	tRNA-Gly
+		transcript_id	gnl|ATHPT|trnG-GCC-1.t1
+36777	36704	gene
+		gene	trnfM-CAU
+		locus_tag	ATHPT_0028
+36777	36704	tRNA
+		product	tRNA-Met
+		transcript_id	gnl|ATHPT|trnfM-CAU-1.t1
+37240	36938	gene
+		gene	rps14
+		locus_tag	ATHPT_0029
+37240	36938	mRNA
+		product	ribosomal protein S14
+		transcript_id	gnl|ATHPT|rps14-1.t1
+		protein_id	gnl|ATHPT|rps14-1.t1:cds
+37240	36938	CDS
+		product	ribosomal protein S14
+		transcript_id	gnl|ATHPT|rps14-1.t1
+		protein_id	gnl|ATHPT|rps14-1.t1:cds
+		transl_table	11
+		codon_start	1
+39579	37375	gene
+		gene	psaB
+		locus_tag	ATHPT_0030
+39579	37375	mRNA
+		product	photosystem I subunit B
+		transcript_id	gnl|ATHPT|psaB-1.t1
+		protein_id	gnl|ATHPT|psaB-1.t1:cds
+39579	37375	CDS
+		product	photosystem I subunit B
+		transcript_id	gnl|ATHPT|psaB-1.t1
+		protein_id	gnl|ATHPT|psaB-1.t1:cds
+		transl_table	11
+		codon_start	1
+41857	39605	gene
+		gene	psaA
+		locus_tag	ATHPT_0031
+41857	39605	mRNA
+		product	photosystem I subunit A
+		transcript_id	gnl|ATHPT|psaA-1.t1
+		protein_id	gnl|ATHPT|psaA-1.t1:cds
+41857	39605	CDS
+		product	photosystem I subunit A
+		transcript_id	gnl|ATHPT|psaA-1.t1
+		protein_id	gnl|ATHPT|psaA-1.t1:cds
+		transl_table	11
+		codon_start	1
+44591	42584	gene
+		gene	ycf3
+		locus_tag	ATHPT_0032
+44591	44468	mRNA
+43753	43524
+42736	42584
+		product	photosystem I assembly protein Ycf3
+		transcript_id	gnl|ATHPT|ycf3-1.t1
+		protein_id	gnl|ATHPT|ycf3-1.t1:cds
+44591	44468	CDS
+43753	43524
+42736	42584
+		product	photosystem I assembly protein Ycf3
+		transcript_id	gnl|ATHPT|ycf3-1.t1
+		protein_id	gnl|ATHPT|ycf3-1.t1:cds
+		transl_table	11
+		codon_start	1
+44827	44913	gene
+		gene	trnS-GGA
+		locus_tag	ATHPT_0033
+44827	44913	tRNA
+		product	tRNA-Ser
+		transcript_id	gnl|ATHPT|trnS-GGA-1.t1
+45828	45223	gene
+		gene	rps4
+		locus_tag	ATHPT_0034
+45828	45223	mRNA
+		product	ribosomal protein S4
+		transcript_id	gnl|ATHPT|rps4-1.t1
+		protein_id	gnl|ATHPT|rps4-1.t1:cds
+45828	45223	CDS
+		product	ribosomal protein S4
+		transcript_id	gnl|ATHPT|rps4-1.t1
+		protein_id	gnl|ATHPT|rps4-1.t1:cds
+		transl_table	11
+		codon_start	1
+46285	46213	gene
+		gene	trnT-UGU
+		locus_tag	ATHPT_0035
+46285	46213	tRNA
+		product	tRNA-Thr
+		transcript_id	gnl|ATHPT|trnT-UGU-1.t1
+49153	48677	gene
+		gene	ndhJ
+		locus_tag	ATHPT_0036
+49153	48677	mRNA
+		product	NADH dehydrogenase subunit J
+		transcript_id	gnl|ATHPT|ndhJ-1.t1
+		protein_id	gnl|ATHPT|ndhJ-1.t1:cds
+49153	48677	CDS
+		product	NADH dehydrogenase subunit J
+		transcript_id	gnl|ATHPT|ndhJ-1.t1
+		protein_id	gnl|ATHPT|ndhJ-1.t1:cds
+		transl_table	11
+		codon_start	1
+49934	49257	gene
+		gene	ndhK
+		locus_tag	ATHPT_0037
+49934	49257	mRNA
+		product	NADH dehydrogenase subunit K
+		transcript_id	gnl|ATHPT|ndhK-1.t1
+		protein_id	gnl|ATHPT|ndhK-1.t1:cds
+49934	49257	CDS
+		product	NADH dehydrogenase subunit K
+		transcript_id	gnl|ATHPT|ndhK-1.t1
+		protein_id	gnl|ATHPT|ndhK-1.t1:cds
+		transl_table	11
+		codon_start	1
+50363	50001	gene
+		gene	ndhC
+		locus_tag	ATHPT_0038
+50363	50001	mRNA
+		product	NADH dehydrogenase subunit 3
+		transcript_id	gnl|ATHPT|ndhC-1.t1
+		protein_id	gnl|ATHPT|ndhC-1.t1:cds
+50363	50001	CDS
+		product	NADH dehydrogenase subunit 3
+		transcript_id	gnl|ATHPT|ndhC-1.t1
+		protein_id	gnl|ATHPT|ndhC-1.t1:cds
+		transl_table	11
+		codon_start	1
+51870	51834	gene
+135080	135048
+		gene	trnV-UAC
+		exception	trans-splicing
+		locus_tag	ATHPT_0039
+51870	51834	tRNA
+135080	135048
+		product	tRNA-Val
+		transcript_id	gnl|ATHPT|trnV-UAC-1.t1
+52056	52128	gene
+		gene	trnM-CAU
+		locus_tag	ATHPT_0040
+52056	52128	tRNA
+		product	tRNA-Met
+		transcript_id	gnl|ATHPT|trnM-CAU-1.t1
+52663	52265	gene
+		gene	atpE
+		locus_tag	ATHPT_0041
+52663	52265	mRNA
+		product	ATP synthase CF1 epsilon subunit
+		transcript_id	gnl|ATHPT|atpE-1.t1
+		protein_id	gnl|ATHPT|atpE-1.t1:cds
+52663	52265	CDS
+		product	ATP synthase CF1 epsilon subunit
+		transcript_id	gnl|ATHPT|atpE-1.t1
+		protein_id	gnl|ATHPT|atpE-1.t1:cds
+		transl_table	11
+		codon_start	1
+54156	52660	gene
+		gene	atpB
+		locus_tag	ATHPT_0042
+54156	52660	mRNA
+		product	ATP synthase CF1 beta subunit
+		transcript_id	gnl|ATHPT|atpB-1.t1
+		protein_id	gnl|ATHPT|atpB-1.t1:cds
+54156	52660	CDS
+		product	ATP synthase CF1 beta subunit
+		transcript_id	gnl|ATHPT|atpB-1.t1
+		protein_id	gnl|ATHPT|atpB-1.t1:cds
+		transl_table	11
+		codon_start	1
+54958	56397	gene
+		gene	rbcL
+		locus_tag	ATHPT_0043
+54958	56397	mRNA
+		product	Rubisco large subunit
+		transcript_id	gnl|ATHPT|rbcL-1.t1
+		protein_id	gnl|ATHPT|rbcL-1.t1:cds
+54958	56397	CDS
+		product	Rubisco large subunit
+		transcript_id	gnl|ATHPT|rbcL-1.t1
+		protein_id	gnl|ATHPT|rbcL-1.t1:cds
+		transl_table	11
+		codon_start	1
+57075	58541	gene
+		gene	accD
+		locus_tag	ATHPT_0044
+57075	58541	mRNA
+		product	acetyl-CoA carboxylase subunit
+		transcript_id	gnl|ATHPT|accD-1.t1
+		protein_id	gnl|ATHPT|accD-1.t1:cds
+57075	58541	CDS
+		product	acetyl-CoA carboxylase subunit
+		transcript_id	gnl|ATHPT|accD-1.t1
+		protein_id	gnl|ATHPT|accD-1.t1:cds
+		transl_table	11
+		codon_start	1
+59247	59360	gene
+		gene	psaI
+		locus_tag	ATHPT_0045
+59247	59360	mRNA
+		product	photosystem I subunit I
+		transcript_id	gnl|ATHPT|psaI-1.t1
+		protein_id	gnl|ATHPT|psaI-1.t1:cds
+59247	59360	CDS
+		product	photosystem I subunit I
+		transcript_id	gnl|ATHPT|psaI-1.t1
+		protein_id	gnl|ATHPT|psaI-1.t1:cds
+		transl_table	11
+		codon_start	1
+59772	60326	gene
+		gene	ycf4
+		locus_tag	ATHPT_0046
+59772	60326	mRNA
+		product	photosystem I assembly protein Ycf4
+		transcript_id	gnl|ATHPT|ycf4-1.t1
+		protein_id	gnl|ATHPT|ycf4-1.t1:cds
+59772	60326	CDS
+		product	photosystem I assembly protein Ycf4
+		transcript_id	gnl|ATHPT|ycf4-1.t1
+		protein_id	gnl|ATHPT|ycf4-1.t1:cds
+		transl_table	11
+		codon_start	1
+60741	61430	gene
+		gene	cemA
+		locus_tag	ATHPT_0047
+60741	61430	mRNA
+		product	chloroplast envelope membrane protein
+		transcript_id	gnl|ATHPT|cemA-1.t1
+		protein_id	gnl|ATHPT|cemA-1.t1:cds
+60741	61430	CDS
+		product	chloroplast envelope membrane protein
+		transcript_id	gnl|ATHPT|cemA-1.t1
+		protein_id	gnl|ATHPT|cemA-1.t1:cds
+		transl_table	11
+		codon_start	1
+61657	62619	gene
+		gene	petA
+		locus_tag	ATHPT_0048
+61657	62619	mRNA
+		product	cytochrome f
+		transcript_id	gnl|ATHPT|petA-1.t1
+		protein_id	gnl|ATHPT|petA-1.t1:cds
+61657	62619	CDS
+		product	cytochrome f
+		transcript_id	gnl|ATHPT|petA-1.t1
+		protein_id	gnl|ATHPT|petA-1.t1:cds
+		transl_table	11
+		codon_start	1
+63660	63538	gene
+		gene	psbJ
+		locus_tag	ATHPT_0049
+63660	63538	mRNA
+		product	photosystem II protein J
+		transcript_id	gnl|ATHPT|psbJ-1.t1
+		protein_id	gnl|ATHPT|psbJ-1.t1:cds
+63660	63538	CDS
+		product	photosystem II protein J
+		transcript_id	gnl|ATHPT|psbJ-1.t1
+		protein_id	gnl|ATHPT|psbJ-1.t1:cds
+		transl_table	11
+		codon_start	1
+63920	63804	gene
+		gene	psbL
+		locus_tag	ATHPT_0050
+63920	63804	mRNA
+		product	photosystem II protein L
+		transcript_id	gnl|ATHPT|psbL-1.t1
+		protein_id	gnl|ATHPT|psbL-1.t1:cds
+63920	63804	CDS
+		product	photosystem II protein L
+		transcript_id	gnl|ATHPT|psbL-1.t1
+		protein_id	gnl|ATHPT|psbL-1.t1:cds
+		transl_table	11
+		codon_start	1
+64061	63942	gene
+		gene	psbF
+		locus_tag	ATHPT_0051
+64061	63942	mRNA
+		product	photosystem II cytochrome b559 beta submit
+		transcript_id	gnl|ATHPT|psbF-1.t1
+		protein_id	gnl|ATHPT|psbF-1.t1:cds
+64061	63942	CDS
+		product	photosystem II cytochrome b559 beta submit
+		transcript_id	gnl|ATHPT|psbF-1.t1
+		protein_id	gnl|ATHPT|psbF-1.t1:cds
+		transl_table	11
+		codon_start	1
+64322	64071	gene
+		gene	psbE
+		locus_tag	ATHPT_0052
+64322	64071	mRNA
+		product	photosystem II cytochrome b559 alpha submit
+		transcript_id	gnl|ATHPT|psbE-1.t1
+		protein_id	gnl|ATHPT|psbE-1.t1:cds
+64322	64071	CDS
+		product	photosystem II cytochrome b559 alpha submit
+		transcript_id	gnl|ATHPT|psbE-1.t1
+		protein_id	gnl|ATHPT|psbE-1.t1:cds
+		transl_table	11
+		codon_start	1
+65712	65807	gene
+		gene	petL
+		locus_tag	ATHPT_0053
+65712	65807	mRNA
+		product	cytochrome b6/f complex subunit L
+		transcript_id	gnl|ATHPT|petL-1.t1
+		protein_id	gnl|ATHPT|petL-1.t1:cds
+65712	65807	CDS
+		product	cytochrome b6/f complex subunit L
+		transcript_id	gnl|ATHPT|petL-1.t1
+		protein_id	gnl|ATHPT|petL-1.t1:cds
+		transl_table	11
+		codon_start	1
+65998	66111	gene
+		gene	petG
+		locus_tag	ATHPT_0054
+65998	66111	mRNA
+		product	cytochrome b6/f complex subunit G
+		transcript_id	gnl|ATHPT|petG-1.t1
+		protein_id	gnl|ATHPT|petG-1.t1:cds
+65998	66111	CDS
+		product	cytochrome b6/f complex subunit G
+		transcript_id	gnl|ATHPT|petG-1.t1
+		protein_id	gnl|ATHPT|petG-1.t1:cds
+		transl_table	11
+		codon_start	1
+66302	66229	gene
+		gene	trnW-CCA
+		locus_tag	ATHPT_0055
+66302	66229	tRNA
+		product	tRNA-Trp
+		transcript_id	gnl|ATHPT|trnW-CCA-1.t1
+66563	66490	gene
+		gene	trnP-UGG
+		locus_tag	ATHPT_0056
+66563	66490	tRNA
+		product	tRNA-Pro
+		transcript_id	gnl|ATHPT|trnP-UGG-1.t1
+66929	67063	gene
+		gene	psaJ
+		locus_tag	ATHPT_0057
+66929	67063	mRNA
+		product	photosystem I subunit J
+		transcript_id	gnl|ATHPT|psaJ-1.t1
+		protein_id	gnl|ATHPT|psaJ-1.t1:cds
+66929	67063	CDS
+		product	photosystem I subunit J
+		transcript_id	gnl|ATHPT|psaJ-1.t1
+		protein_id	gnl|ATHPT|psaJ-1.t1:cds
+		transl_table	11
+		codon_start	1
+67488	67688	gene
+		gene	rpl33
+		locus_tag	ATHPT_0058
+67488	67688	mRNA
+		product	ribosomal protein L33
+		transcript_id	gnl|ATHPT|rpl33-1.t1
+		protein_id	gnl|ATHPT|rpl33-1.t1:cds
+67488	67688	CDS
+		product	ribosomal protein L33
+		transcript_id	gnl|ATHPT|rpl33-1.t1
+		protein_id	gnl|ATHPT|rpl33-1.t1:cds
+		transl_table	11
+		codon_start	1
+67917	68222	gene
+		gene	rps18
+		locus_tag	ATHPT_0059
+67917	68222	mRNA
+		product	ribosomal protein S18
+		transcript_id	gnl|ATHPT|rps18-1.t1
+		protein_id	gnl|ATHPT|rps18-1.t1:cds
+67917	68222	CDS
+		product	ribosomal protein S18
+		transcript_id	gnl|ATHPT|rps18-1.t1
+		protein_id	gnl|ATHPT|rps18-1.t1:cds
+		transl_table	11
+		codon_start	1
+68865	68512	gene
+		gene	rpl20
+		locus_tag	ATHPT_0060
+68865	68512	mRNA
+		product	ribosomal protein L20
+		transcript_id	gnl|ATHPT|rpl20-1.t1
+		protein_id	gnl|ATHPT|rpl20-1.t1:cds
+68865	68512	CDS
+		product	ribosomal protein L20
+		transcript_id	gnl|ATHPT|rpl20-1.t1
+		protein_id	gnl|ATHPT|rpl20-1.t1:cds
+		transl_table	11
+		codon_start	1
+69724	69611	gene
+139856	140650
+		gene	rps12
+		exception	trans-splicing
+		locus_tag	ATHPT_0061
+69724	69611	mRNA
+139856	140087
+140625	140650
+		product	ribosomal protein S12
+		transcript_id	gnl|ATHPT|rps12-1.t1
+		protein_id	gnl|ATHPT|rps12-1.t1:cds
+69724	69611	CDS
+139856	140087
+140625	140650
+		product	ribosomal protein S12
+		transcript_id	gnl|ATHPT|rps12-1.t1
+		protein_id	gnl|ATHPT|rps12-1.t1:cds
+		transl_table	11
+		codon_start	1
+69724	69611	gene
+98793	97999
+		gene	rps12
+		exception	trans-splicing
+		locus_tag	ATHPT_0062
+69724	69611	mRNA
+98793	98562
+98024	97999
+		product	ribosomal protein S12
+		transcript_id	gnl|ATHPT|rps12-2.t1
+		protein_id	gnl|ATHPT|rps12-2.t1:cds
+69724	69611	CDS
+98793	98562
+98024	97999
+		product	ribosomal protein S12
+		transcript_id	gnl|ATHPT|rps12-2.t1
+		protein_id	gnl|ATHPT|rps12-2.t1:cds
+		transl_table	11
+		codon_start	1
+71882	69910	gene
+		gene	clpP
+		locus_tag	ATHPT_0063
+71882	71812	mRNA
+70944	70651
+70135	69910
+		product	Clp protease catalytic subunit
+		transcript_id	gnl|ATHPT|clpP-1.t1
+		protein_id	gnl|ATHPT|clpP-1.t1:cds
+71882	71812	CDS
+70944	70651
+70135	69910
+		product	Clp protease catalytic subunit
+		transcript_id	gnl|ATHPT|clpP-1.t1
+		protein_id	gnl|ATHPT|clpP-1.t1:cds
+		transl_table	11
+		codon_start	1
+72371	73897	gene
+		gene	psbB
+		locus_tag	ATHPT_0064
+72371	73897	mRNA
+		product	photosystem II subunit CP47
+		transcript_id	gnl|ATHPT|psbB-1.t1
+		protein_id	gnl|ATHPT|psbB-1.t1:cds
+72371	73897	CDS
+		product	photosystem II subunit CP47
+		transcript_id	gnl|ATHPT|psbB-1.t1
+		protein_id	gnl|ATHPT|psbB-1.t1:cds
+		transl_table	11
+		codon_start	1
+73689	76292	gene
+		gene	petB
+		locus_tag	ATHPT_0065
+73689	73740	mRNA
+75655	76292
+		product	cytochrome b6
+		transcript_id	gnl|ATHPT|petB-1.t1
+		protein_id	gnl|ATHPT|petB-1.t1:cds
+73689	73740	CDS
+75655	76292
+		product	cytochrome b6
+		transcript_id	gnl|ATHPT|petB-1.t1
+		protein_id	gnl|ATHPT|petB-1.t1:cds
+		transl_table	11
+		codon_start	1
+74082	74183	gene
+		gene	psbT
+		locus_tag	ATHPT_0066
+74082	74183	mRNA
+		product	photosystem II protein T
+		transcript_id	gnl|ATHPT|psbT-1.t1
+		protein_id	gnl|ATHPT|psbT-1.t1:cds
+74082	74183	CDS
+		product	photosystem II protein T
+		transcript_id	gnl|ATHPT|psbT-1.t1
+		protein_id	gnl|ATHPT|psbT-1.t1:cds
+		transl_table	11
+		codon_start	1
+74380	74249	gene
+		gene	psbN
+		locus_tag	ATHPT_0067
+74380	74249	mRNA
+		product	photosystem II protein N
+		transcript_id	gnl|ATHPT|psbN-1.t1
+		protein_id	gnl|ATHPT|psbN-1.t1:cds
+74380	74249	CDS
+		product	photosystem II protein N
+		transcript_id	gnl|ATHPT|psbN-1.t1
+		protein_id	gnl|ATHPT|psbN-1.t1:cds
+		transl_table	11
+		codon_start	1
+74485	74706	gene
+		gene	psbH
+		locus_tag	ATHPT_0068
+74485	74706	mRNA
+		product	photosystem II protein H
+		transcript_id	gnl|ATHPT|psbH-1.t1
+		protein_id	gnl|ATHPT|psbH-1.t1:cds
+74485	74706	CDS
+		product	photosystem II protein H
+		transcript_id	gnl|ATHPT|psbH-1.t1
+		protein_id	gnl|ATHPT|psbH-1.t1:cds
+		transl_table	11
+		codon_start	1
+77196	77672	gene
+		gene	petD
+		locus_tag	ATHPT_0069
+77196	77672	mRNA
+		product	cytochrome b6/f complex subunit IV
+		transcript_id	gnl|ATHPT|petD-1.t1
+		protein_id	gnl|ATHPT|petD-1.t1:cds
+77196	77672	CDS
+		product	cytochrome b6/f complex subunit IV
+		transcript_id	gnl|ATHPT|petD-1.t1
+		protein_id	gnl|ATHPT|petD-1.t1:cds
+		transl_table	11
+		codon_start	1
+78890	77901	gene
+		gene	rpoA
+		locus_tag	ATHPT_0070
+78890	77901	mRNA
+		product	RNA polymerase alpha subunit
+		transcript_id	gnl|ATHPT|rpoA-1.t1
+		protein_id	gnl|ATHPT|rpoA-1.t1:cds
+78890	77901	CDS
+		product	RNA polymerase alpha subunit
+		transcript_id	gnl|ATHPT|rpoA-1.t1
+		protein_id	gnl|ATHPT|rpoA-1.t1:cds
+		transl_table	11
+		codon_start	1
+79376	78960	gene
+		gene	rps11
+		locus_tag	ATHPT_0071
+79376	78960	mRNA
+		product	ribosomal protein S11
+		transcript_id	gnl|ATHPT|rps11-1.t1
+		protein_id	gnl|ATHPT|rps11-1.t1:cds
+79376	78960	CDS
+		product	ribosomal protein S11
+		transcript_id	gnl|ATHPT|rps11-1.t1
+		protein_id	gnl|ATHPT|rps11-1.t1:cds
+		transl_table	11
+		codon_start	1
+79602	79489	gene
+		gene	rpl36
+		locus_tag	ATHPT_0072
+79602	79489	mRNA
+		product	ribosomal protein L36
+		transcript_id	gnl|ATHPT|rpl36-1.t1
+		protein_id	gnl|ATHPT|rpl36-1.t1:cds
+79602	79489	CDS
+		product	ribosomal protein L36
+		transcript_id	gnl|ATHPT|rpl36-1.t1
+		protein_id	gnl|ATHPT|rpl36-1.t1:cds
+		transl_table	11
+		codon_start	1
+80472	80068	gene
+		gene	rps8
+		locus_tag	ATHPT_0073
+80472	80068	mRNA
+		product	ribosomal protein S8
+		transcript_id	gnl|ATHPT|rps8-1.t1
+		protein_id	gnl|ATHPT|rps8-1.t1:cds
+80472	80068	CDS
+		product	ribosomal protein S8
+		transcript_id	gnl|ATHPT|rps8-1.t1
+		protein_id	gnl|ATHPT|rps8-1.t1:cds
+		transl_table	11
+		codon_start	1
+81064	80696	gene
+		gene	rpl14
+		locus_tag	ATHPT_0074
+81064	80696	mRNA
+		product	ribosomal protein L14
+		transcript_id	gnl|ATHPT|rpl14-1.t1
+		protein_id	gnl|ATHPT|rpl14-1.t1:cds
+81064	80696	CDS
+		product	ribosomal protein L14
+		transcript_id	gnl|ATHPT|rpl14-1.t1
+		protein_id	gnl|ATHPT|rpl14-1.t1:cds
+		transl_table	11
+		codon_start	1
+84126	81189	gene
+		gene	rpl16
+		locus_tag	ATHPT_0075
+84126	84107	mRNA
+81579	81189
+		product	ribosomal protein L16
+		transcript_id	gnl|ATHPT|rpl16-1.t1
+		protein_id	gnl|ATHPT|rpl16-1.t1:cds
+84126	84107	CDS
+81579	81189
+		product	ribosomal protein L16
+		transcript_id	gnl|ATHPT|rpl16-1.t1
+		protein_id	gnl|ATHPT|rpl16-1.t1:cds
+		transl_table	11
+		codon_start	1
+83482	82826	gene
+		gene	rps3
+		locus_tag	ATHPT_0076
+83482	82826	mRNA
+		product	ribosomal protein S3
+		transcript_id	gnl|ATHPT|rps3-1.t1
+		protein_id	gnl|ATHPT|rps3-1.t1:cds
+83482	82826	CDS
+		product	ribosomal protein S3
+		transcript_id	gnl|ATHPT|rps3-1.t1
+		protein_id	gnl|ATHPT|rps3-1.t1:cds
+		transl_table	11
+		codon_start	1
+83949	83467	gene
+		gene	rpl22
+		locus_tag	ATHPT_0077
+83949	83467	mRNA
+		product	ribosomal protein L22
+		transcript_id	gnl|ATHPT|rpl22-1.t1
+		protein_id	gnl|ATHPT|rpl22-1.t1:cds
+83949	83467	CDS
+		product	ribosomal protein L22
+		transcript_id	gnl|ATHPT|rpl22-1.t1
+		protein_id	gnl|ATHPT|rpl22-1.t1:cds
+		transl_table	11
+		codon_start	1
+84283	84005	gene
+		gene	rps19
+		locus_tag	ATHPT_0078
+84283	84005	mRNA
+		product	ribosomal protein S19
+		transcript_id	gnl|ATHPT|rps19-1.t1
+		protein_id	gnl|ATHPT|rps19-1.t1:cds
+84283	84005	CDS
+		product	ribosomal protein S19
+		transcript_id	gnl|ATHPT|rps19-1.t1
+		protein_id	gnl|ATHPT|rps19-1.t1:cds
+		transl_table	11
+		codon_start	1
+85843	84337	gene
+		gene	rpl2
+		locus_tag	ATHPT_0079
+85843	85453	mRNA
+84770	84337
+		product	ribosomal protein L2
+		transcript_id	gnl|ATHPT|rpl2-1.t1
+		protein_id	gnl|ATHPT|rpl2-1.t1:cds
+85843	85453	CDS
+84770	84337
+		product	ribosomal protein L2
+		transcript_id	gnl|ATHPT|rpl2-1.t1
+		protein_id	gnl|ATHPT|rpl2-1.t1:cds
+		transl_table	11
+		codon_start	1
+86143	85862	gene
+		gene	rpl23
+		locus_tag	ATHPT_0080
+86143	85862	mRNA
+		product	ribosomal protein L23
+		transcript_id	gnl|ATHPT|rpl23-2.t1
+		protein_id	gnl|ATHPT|rpl23-2.t1:cds
+86143	85862	CDS
+		product	ribosomal protein L23
+		transcript_id	gnl|ATHPT|rpl23-2.t1
+		protein_id	gnl|ATHPT|rpl23-2.t1:cds
+		transl_table	11
+		codon_start	1
+86385	86312	gene
+		gene	trnI-CAU
+		locus_tag	ATHPT_0081
+86385	86312	tRNA
+		product	tRNA-Ile
+		transcript_id	gnl|ATHPT|trnI-CAU-3.t1
+86474	93358	gene
+		gene	ycf2
+		locus_tag	ATHPT_0082
+86474	93358	mRNA
+		product	hypothetical chloroplast RF2
+		transcript_id	gnl|ATHPT|ycf2-1.t1
+		protein_id	gnl|ATHPT|ycf2-1.t1:cds
+86474	93358	CDS
+		product	hypothetical chloroplast RF2
+		transcript_id	gnl|ATHPT|ycf2-1.t1
+		protein_id	gnl|ATHPT|ycf2-1.t1:cds
+		transl_table	11
+		codon_start	1
+93495	93728	gene
+		gene	ycf15
+		locus_tag	ATHPT_0083
+93495	93728	mRNA
+		product	hypothetical chloroplast RF15
+		transcript_id	gnl|ATHPT|ycf15-1.t1
+		protein_id	gnl|ATHPT|ycf15-1.t1:cds
+93495	93728	CDS
+		product	hypothetical chloroplast RF15
+		transcript_id	gnl|ATHPT|ycf15-1.t1
+		protein_id	gnl|ATHPT|ycf15-1.t1:cds
+		transl_table	11
+		codon_start	1
+94356	94276	gene
+		gene	trnL-CAA
+		locus_tag	ATHPT_0084
+94356	94276	tRNA
+		product	tRNA-Leu
+		transcript_id	gnl|ATHPT|trnL-CAA-1.t1
+97164	94941	gene
+		gene	ndhB
+		locus_tag	ATHPT_0085
+97164	96388	mRNA
+95735	94941
+		product	NADH dehydrogenase subunit 2
+		transcript_id	gnl|ATHPT|ndhB-2.t1
+		protein_id	gnl|ATHPT|ndhB-2.t1:cds
+97164	96388	CDS
+95735	94941
+		product	NADH dehydrogenase subunit 2
+		transcript_id	gnl|ATHPT|ndhB-2.t1
+		protein_id	gnl|ATHPT|ndhB-2.t1:cds
+		transl_table	11
+		codon_start	1
+97945	97478	gene
+		gene	rps7
+		locus_tag	ATHPT_0086
+97945	97478	mRNA
+		product	ribosomal protein S7
+		transcript_id	gnl|ATHPT|rps7-76-2.t1
+		protein_id	gnl|ATHPT|rps7-76-2.t1:cds
+97945	97478	CDS
+		product	ribosomal protein S7
+		transcript_id	gnl|ATHPT|rps7-76-2.t1
+		protein_id	gnl|ATHPT|rps7-76-2.t1:cds
+		transl_table	11
+		codon_start	1
+100709	100780	gene
+		gene	trnV-GAC
+		locus_tag	ATHPT_0087
+100709	100780	tRNA
+		product	tRNA-Val
+		transcript_id	gnl|ATHPT|trnV-GAC-2.t1
+101012	102504	gene
+		gene	rrn16
+		locus_tag	ATHPT_0088
+101012	102504	rRNA
+		product	16S ribosomal RNA
+		transcript_id	gnl|ATHPT|rrn16S-2.t1
+102801	102888	gene
+		gene	trnI-GAU
+		locus_tag	ATHPT_0089
+102801	102888	tRNA
+		product	tRNA-Ile
+		transcript_id	gnl|ATHPT|trnI-GAU-5.t1
+103665	103769	gene
+		gene	trnA-UGC
+		locus_tag	ATHPT_0090
+103665	103701	tRNA
+103742	103769
+		product	tRNA-Ala
+		transcript_id	gnl|ATHPT|trnA-UGC-1.t1
+104691	107501	gene
+		gene	rrn23
+		locus_tag	ATHPT_0091
+104691	107501	rRNA
+		product	23S ribosomal RNA
+		transcript_id	gnl|ATHPT|rrn23S-2.t1
+107599	107702	gene
+		gene	rrn4.5
+		locus_tag	ATHPT_0092
+107599	107702	rRNA
+		product	4.5S ribosomal RNA
+		transcript_id	gnl|ATHPT|rrn4-5S-2.t1
+107949	108080	gene
+		gene	rrn5
+		locus_tag	ATHPT_0093
+107949	108080	rRNA
+		product	5S ribosomal RNA
+		transcript_id	gnl|ATHPT|rrn5S-41-2.t1
+108302	108375	gene
+		gene	trnR-ACG
+		locus_tag	ATHPT_0094
+108302	108375	tRNA
+		product	tRNA-Arg
+		transcript_id	gnl|ATHPT|trnR-ACG-31-1.t1
+109084	109013	gene
+		gene	trnN-GUU
+		locus_tag	ATHPT_0095
+109084	109013	tRNA
+		product	tRNA-Asn
+		transcript_id	gnl|ATHPT|trnN-GUU-1.t1
+112638	110398	gene
+		gene	ndhF
+		locus_tag	ATHPT_0096
+112638	110398	mRNA
+		product	NADH dehydrogenase subunit 5
+		transcript_id	gnl|ATHPT|ndhF-1.t1
+		protein_id	gnl|ATHPT|ndhF-1.t1:cds
+112638	110398	CDS
+		product	NADH dehydrogenase subunit 5
+		transcript_id	gnl|ATHPT|ndhF-1.t1
+		protein_id	gnl|ATHPT|ndhF-1.t1:cds
+		transl_table	11
+		codon_start	1
+113449	113607	gene
+		gene	rpl32
+		locus_tag	ATHPT_0097
+113449	113607	mRNA
+		product	ribosomal protein L32
+		transcript_id	gnl|ATHPT|rpl32-1.t1
+		protein_id	gnl|ATHPT|rpl32-1.t1:cds
+113449	113607	CDS
+		product	ribosomal protein L32
+		transcript_id	gnl|ATHPT|rpl32-1.t1
+		protein_id	gnl|ATHPT|rpl32-1.t1:cds
+		transl_table	11
+		codon_start	1
+114270	114349	gene
+		gene	trnL-UAG
+		locus_tag	ATHPT_0098
+114270	114349	tRNA
+		product	tRNA-Leu
+		transcript_id	gnl|ATHPT|trnL-UAG-1.t1
+114461	115447	gene
+		gene	ccsA
+		locus_tag	ATHPT_0099
+114461	115447	mRNA
+		product	cytochrome c biogenesis protein
+		transcript_id	gnl|ATHPT|ccsA-1.t1
+		protein_id	gnl|ATHPT|ccsA-1.t1:cds
+114461	115447	CDS
+		product	cytochrome c biogenesis protein
+		transcript_id	gnl|ATHPT|ccsA-1.t1
+		protein_id	gnl|ATHPT|ccsA-1.t1:cds
+		transl_table	11
+		codon_start	1
+117185	115665	gene
+		gene	ndhD
+		locus_tag	ATHPT_0100
+117185	115665	mRNA
+		product	NADH dehydrogenase subunit 4
+		transcript_id	gnl|ATHPT|ndhD-1.t1
+		protein_id	gnl|ATHPT|ndhD-1.t1:cds
+117185	115665	CDS
+		product	NADH dehydrogenase subunit 4
+		transcript_id	gnl|ATHPT|ndhD-1.t1
+		protein_id	gnl|ATHPT|ndhD-1.t1:cds
+		transl_table	11
+		codon_start	1
+117563	117318	gene
+		gene	psaC
+		locus_tag	ATHPT_0101
+117563	117318	mRNA
+		product	photosystem I subunit C
+		transcript_id	gnl|ATHPT|psaC-1.t1
+		protein_id	gnl|ATHPT|psaC-1.t1:cds
+117563	117318	CDS
+		product	photosystem I subunit C
+		transcript_id	gnl|ATHPT|psaC-1.t1
+		protein_id	gnl|ATHPT|psaC-1.t1:cds
+		transl_table	11
+		codon_start	1
+118109	117804	gene
+		gene	ndhE
+		locus_tag	ATHPT_0102
+118109	117804	mRNA
+		product	NADH dehydrogenase subunit 4L
+		transcript_id	gnl|ATHPT|ndhE-1.t1
+		protein_id	gnl|ATHPT|ndhE-1.t1:cds
+118109	117804	CDS
+		product	NADH dehydrogenase subunit 4L
+		transcript_id	gnl|ATHPT|ndhE-1.t1
+		protein_id	gnl|ATHPT|ndhE-1.t1:cds
+		transl_table	11
+		codon_start	1
+118907	118377	gene
+		gene	ndhG
+		locus_tag	ATHPT_0103
+118907	118377	mRNA
+		product	NADH dehydrogenase subunit 6
+		transcript_id	gnl|ATHPT|ndhG-1.t1
+		protein_id	gnl|ATHPT|ndhG-1.t1:cds
+118907	118377	CDS
+		product	NADH dehydrogenase subunit 6
+		transcript_id	gnl|ATHPT|ndhG-1.t1
+		protein_id	gnl|ATHPT|ndhG-1.t1:cds
+		transl_table	11
+		codon_start	1
+119762	119244	gene
+		gene	ndhI
+		locus_tag	ATHPT_0104
+119762	119244	mRNA
+		product	NADH dehydrogenase subunit I
+		transcript_id	gnl|ATHPT|ndhI-1.t1
+		protein_id	gnl|ATHPT|ndhI-1.t1:cds
+119762	119244	CDS
+		product	NADH dehydrogenase subunit I
+		transcript_id	gnl|ATHPT|ndhI-1.t1
+		protein_id	gnl|ATHPT|ndhI-1.t1:cds
+		transl_table	11
+		codon_start	1
+122009	119847	gene
+		gene	ndhA
+		locus_tag	ATHPT_0105
+122009	121457	mRNA
+120379	119847
+		product	NADH dehydrogenase subunit 1
+		transcript_id	gnl|ATHPT|ndhA-1.t1
+		protein_id	gnl|ATHPT|ndhA-1.t1:cds
+122009	121457	CDS
+120379	119847
+		product	NADH dehydrogenase subunit 1
+		transcript_id	gnl|ATHPT|ndhA-1.t1
+		protein_id	gnl|ATHPT|ndhA-1.t1:cds
+		transl_table	11
+		codon_start	1
+123192	122011	gene
+		gene	ndhH
+		locus_tag	ATHPT_0106
+123192	122011	mRNA
+		product	NADH dehydrogenase subunit 7
+		transcript_id	gnl|ATHPT|ndhH-1.t1
+		protein_id	gnl|ATHPT|ndhH-1.t1:cds
+123192	122011	CDS
+		product	NADH dehydrogenase subunit 7
+		transcript_id	gnl|ATHPT|ndhH-1.t1
+		protein_id	gnl|ATHPT|ndhH-1.t1:cds
+		transl_table	11
+		codon_start	1
+123562	123296	gene
+		gene	rps15
+		locus_tag	ATHPT_0107
+123562	123296	mRNA
+		product	ribosomal protein S15
+		transcript_id	gnl|ATHPT|rps15-1.t1
+		protein_id	gnl|ATHPT|rps15-1.t1:cds
+123562	123296	CDS
+		product	ribosomal protein S15
+		transcript_id	gnl|ATHPT|rps15-1.t1
+		protein_id	gnl|ATHPT|rps15-1.t1:cds
+		transl_table	11
+		codon_start	1
+129244	123884	gene
+		gene	ycf1
+		locus_tag	ATHPT_0108
+129244	123884	mRNA
+		product	hypothetical chloroplast RF1
+		transcript_id	gnl|ATHPT|ycf1-1.t1
+		protein_id	gnl|ATHPT|ycf1-1.t1:cds
+129244	123884	CDS
+		product	hypothetical chloroplast RF1
+		transcript_id	gnl|ATHPT|ycf1-1.t1
+		protein_id	gnl|ATHPT|ycf1-1.t1:cds
+		transl_table	11
+		codon_start	1
+129565	129636	gene
+		gene	trnN-GUU
+		locus_tag	ATHPT_0109
+129565	129636	tRNA
+		product	tRNA-Asn
+		transcript_id	gnl|ATHPT|trnN-GUU-5.t1
+130347	130274	gene
+		gene	trnR-ACG
+		locus_tag	ATHPT_0110
+130347	130274	tRNA
+		product	tRNA-Arg
+		transcript_id	gnl|ATHPT|trnR-ACG-31-2.t1
+130700	130569	gene
+		gene	rrn5
+		locus_tag	ATHPT_0111
+130700	130569	rRNA
+		product	5S ribosomal RNA
+		transcript_id	gnl|ATHPT|rrn5S-41-1.t1
+131050	130947	gene
+		gene	rrn4.5
+		locus_tag	ATHPT_0112
+131050	130947	rRNA
+		product	4.5S ribosomal RNA
+		transcript_id	gnl|ATHPT|rrn4-5S-1.t1
+133958	131148	gene
+		gene	rrn23
+		locus_tag	ATHPT_0113
+133958	131148	rRNA
+		product	23S ribosomal RNA
+		transcript_id	gnl|ATHPT|rrn23S-1.t1
+134984	134880	gene
+		gene	trnA-UGC
+		locus_tag	ATHPT_0114
+134984	134948	tRNA
+134907	134880
+		product	tRNA-Ala
+		transcript_id	gnl|ATHPT|trnA-UGC-3.t1
+135848	135761	gene
+		gene	trnI-GAU
+		locus_tag	ATHPT_0115
+135848	135761	tRNA
+		product	tRNA-Ile
+		transcript_id	gnl|ATHPT|trnI-GAU-1.t1
+137637	136145	gene
+		gene	rrn16
+		locus_tag	ATHPT_0116
+137637	136145	rRNA
+		product	16S ribosomal RNA
+		transcript_id	gnl|ATHPT|rrn16S-1.t1
+137940	137869	gene
+		gene	trnV-GAC
+		locus_tag	ATHPT_0117
+137940	137869	tRNA
+		product	tRNA-Val
+		transcript_id	gnl|ATHPT|trnV-GAC-1.t1
+140704	141171	gene
+		gene	rps7
+		locus_tag	ATHPT_0118
+140704	141171	mRNA
+		product	ribosomal protein S7
+		transcript_id	gnl|ATHPT|rps7-76-1.t1
+		protein_id	gnl|ATHPT|rps7-76-1.t1:cds
+140704	141171	CDS
+		product	ribosomal protein S7
+		transcript_id	gnl|ATHPT|rps7-76-1.t1
+		protein_id	gnl|ATHPT|rps7-76-1.t1:cds
+		transl_table	11
+		codon_start	1
+141485	143708	gene
+		gene	ndhB
+		locus_tag	ATHPT_0119
+141485	142261	mRNA
+142914	143708
+		product	NADH dehydrogenase subunit 2
+		transcript_id	gnl|ATHPT|ndhB-1.t1
+		protein_id	gnl|ATHPT|ndhB-1.t1:cds
+141485	142261	CDS
+142914	143708
+		product	NADH dehydrogenase subunit 2
+		transcript_id	gnl|ATHPT|ndhB-1.t1
+		protein_id	gnl|ATHPT|ndhB-1.t1:cds
+		transl_table	11
+		codon_start	1
+144293	144373	gene
+		gene	trnL-CAA
+		locus_tag	ATHPT_0120
+144293	144373	tRNA
+		product	tRNA-Leu
+		transcript_id	gnl|ATHPT|trnL-CAA-2.t1
+145154	144921	gene
+		gene	ycf15
+		locus_tag	ATHPT_0121
+145154	144921	mRNA
+		product	hypothetical chloroplast RF15
+		transcript_id	gnl|ATHPT|ycf15-2.t1
+		protein_id	gnl|ATHPT|ycf15-2.t1:cds
+145154	144921	CDS
+		product	hypothetical chloroplast RF15
+		transcript_id	gnl|ATHPT|ycf15-2.t1
+		protein_id	gnl|ATHPT|ycf15-2.t1:cds
+		transl_table	11
+		codon_start	1
+152175	145291	gene
+		gene	ycf2
+		locus_tag	ATHPT_0122
+152175	145291	mRNA
+		product	hypothetical chloroplast RF2
+		transcript_id	gnl|ATHPT|ycf2-2.t1
+		protein_id	gnl|ATHPT|ycf2-2.t1:cds
+152175	145291	CDS
+		product	hypothetical chloroplast RF2
+		transcript_id	gnl|ATHPT|ycf2-2.t1
+		protein_id	gnl|ATHPT|ycf2-2.t1:cds
+		transl_table	11
+		codon_start	1
+152264	152337	gene
+		gene	trnI-CAU
+		locus_tag	ATHPT_0123
+152264	152337	tRNA
+		product	tRNA-Ile
+		transcript_id	gnl|ATHPT|trnI-CAU-1.t1
+152506	152787	gene
+		gene	rpl23
+		locus_tag	ATHPT_0124
+152506	152787	mRNA
+		product	ribosomal protein L23
+		transcript_id	gnl|ATHPT|rpl23-1.t1
+		protein_id	gnl|ATHPT|rpl23-1.t1:cds
+152506	152787	CDS
+		product	ribosomal protein L23
+		transcript_id	gnl|ATHPT|rpl23-1.t1
+		protein_id	gnl|ATHPT|rpl23-1.t1:cds
+		transl_table	11
+		codon_start	1
+152806	154312	gene
+		gene	rpl2
+		locus_tag	ATHPT_0125
+152806	153196	mRNA
+153879	154312
+		product	ribosomal protein L2
+		transcript_id	gnl|ATHPT|rpl2-2.t1
+		protein_id	gnl|ATHPT|rpl2-2.t1:cds
+152806	153196	CDS
+153879	154312
+		product	ribosomal protein L2
+		transcript_id	gnl|ATHPT|rpl2-2.t1
+		protein_id	gnl|ATHPT|rpl2-2.t1:cds
+		transl_table	11
+		codon_start	1

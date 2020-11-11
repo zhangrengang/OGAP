@@ -1,0 +1,35 @@
+#id	name	product	seq_type	exon_count	trans_splicing	gene_count	species_count	names	products	species
+rnl	rnl	23S large subunit ribosomal RNA	rRNA	1	False	6	6	rnl:3,rrn23:1,rnl_1:1	23S large subunit ribosomal RNA:6	Chroomonas_placoidea:1,Cryptomonas_curvata:1,Cryptomonas_paramecium:1,Guillardia_theta:1,Rhodomonas_salina:1,Teleaulax_amphioxeia:1
+rns	rns	16S small subunit ribosomal RNA	rRNA	1	False	6	6	rns:3,rns_1:1,rrn16:1	16S small subunit ribosomal RNA:6	Chroomonas_placoidea:1,Cryptomonas_curvata:1,Cryptomonas_paramecium:1,Guillardia_theta:1,Rhodomonas_salina:1,Teleaulax_amphioxeia:1
+rrn5	rrn5	5S ribosomal RNA	rRNA	1	False	4	3	rrn5:3,rrn5_1:1	5S ribosomal RNA:4	Cryptomonas_curvata:2,Guillardia_theta:1,Teleaulax_amphioxeia:1
+rrn5-10	rrn5	5S ribosomal RNA	rRNA	1	False	4	2	rrn5:2	5S ribosomal RNA:4	Chroomonas_placoidea:2,Rhodomonas_salina:2
+trnA-UGC	trnA-UGC	tRNA-Ala	tRNA	1	False	6	6	trnA-UGC:4,trnA-TGC:1,trnA-ugc-_1:1	tRNA-Ala:6	Chroomonas_placoidea:1,Cryptomonas_curvata:1,Cryptomonas_paramecium:1,Guillardia_theta:1,Rhodomonas_salina:1,Teleaulax_amphioxeia:1
+trnC-GCA	trnC-GCA	tRNA-Cys	tRNA	1	False	5	5	trnC-GCA:4,trnC-gca:1	tRNA-Cys:5	Chroomonas_placoidea:1,Cryptomonas_curvata:1,Guillardia_theta:1,Rhodomonas_salina:1,Teleaulax_amphioxeia:1
+trnD-GUC	trnD-GUC	tRNA-Asp	tRNA	1	False	5	5	trnD-GUC:4,trnD-guc:1	tRNA-Asp:5	Chroomonas_placoidea:1,Cryptomonas_curvata:1,Guillardia_theta:1,Rhodomonas_salina:1,Teleaulax_amphioxeia:1
+trnE-UUC	trnE-UUC	tRNA-Glu	tRNA	1	False	6	6	trnE-UUC:4,trnE-TTC:1,trnE-uuc:1	tRNA-Glu:6	Chroomonas_placoidea:1,Cryptomonas_curvata:1,Cryptomonas_paramecium:1,Guillardia_theta:1,Rhodomonas_salina:1,Teleaulax_amphioxeia:1
+trnF-GAA	trnF-GAA	tRNA-Phe	tRNA	1	False	6	6	trnF-GAA:5,trnF-gaa:1	tRNA-Phe:6	Chroomonas_placoidea:1,Cryptomonas_curvata:1,Cryptomonas_paramecium:1,Guillardia_theta:1,Rhodomonas_salina:1,Teleaulax_amphioxeia:1
+trnG-GCC	trnG-GCC	tRNA-Gly	tRNA	1	False	3	3	trnG-GCC:3	tRNA-Gly:3	Chroomonas_placoidea:1,Cryptomonas_curvata:1,Rhodomonas_salina:1
+trnG-UCC	trnG-UCC	tRNA-Gly	tRNA	1	False	5	5	trnG-UCC:4,trnG-ucc:1	tRNA-Gly:5	Chroomonas_placoidea:1,Cryptomonas_curvata:1,Guillardia_theta:1,Rhodomonas_salina:1,Teleaulax_amphioxeia:1
+trnH-GUG	trnH-GUG	tRNA-His	tRNA	1	False	2	2	trnH-GUG:2	tRNA-His:2	Chroomonas_placoidea:1,Cryptomonas_curvata:1
+trnI-GAU	trnI-GAU	tRNA-Ile	tRNA	1	False	4	4	trnI-GAU:3,trnI-gau-_2:1	tRNA-Ile:4	Chroomonas_placoidea:1,Cryptomonas_curvata:1,Guillardia_theta:1,Teleaulax_amphioxeia:1
+trnI-GAU-32	trnI-GAU	tRNA-Ile	tRNA	1	False	4	4	trnI-GAU:2,trnI-gau-_1:1,trnI-GAT:1	tRNA-Ile:4	Cryptomonas_paramecium:1,Guillardia_theta:1,Rhodomonas_salina:1,Teleaulax_amphioxeia:1
+trnK-UUU	trnK-UUU	tRNA-Lys	tRNA	1	False	6	6	trnK-UUU:4,trnK-uuu:1,trnK-TTT:1	tRNA-Lys:6	Chroomonas_placoidea:1,Cryptomonas_curvata:1,Cryptomonas_paramecium:1,Guillardia_theta:1,Rhodomonas_salina:1,Teleaulax_amphioxeia:1
+trnL-CAA	trnL-CAA	tRNA-Leu	tRNA	1	False	3	3	trnL-CAA:2,trnL-caa:1	tRNA-Leu:3	Chroomonas_placoidea:1,Guillardia_theta:1,Rhodomonas_salina:1
+trnL-UAA	trnL-UAA	tRNA-Leu	tRNA	1	False	5	5	trnL-UAA:4,trnL-uaa:1	tRNA-Leu:5	Chroomonas_placoidea:1,Cryptomonas_curvata:1,Guillardia_theta:1,Rhodomonas_salina:1,Teleaulax_amphioxeia:1
+trnL-UAG	trnL-UAG	tRNA-Leu	tRNA	1	False	6	6	trnL-UAG:4,trnL-uag:1,trnL-TAG:1	tRNA-Leu:6	Chroomonas_placoidea:1,Cryptomonas_curvata:1,Cryptomonas_paramecium:1,Guillardia_theta:1,Rhodomonas_salina:1,Teleaulax_amphioxeia:1
+trnM-CAU	trnM-CAU	tRNA-Met	tRNA	1	False	5	5	trnM-CAU:4,trnI-cau:1	tRNA-Met:4,tRNA-Ile:1	Chroomonas_placoidea:1,Cryptomonas_curvata:1,Guillardia_theta:1,Rhodomonas_salina:1,Teleaulax_amphioxeia:1
+trnM-CAU-22	trnM-CAU	tRNA-Met	tRNA	1	False	5	5	trnM-CAU:4,trnM-cau-_2:1	tRNA-Met:5	Chroomonas_placoidea:1,Cryptomonas_curvata:1,Guillardia_theta:1,Rhodomonas_salina:1,Teleaulax_amphioxeia:1
+trnM-CAU-31	trnM-CAU	tRNA-Met	tRNA	1	False	4	4	trnM-CAU:2,trnM-CAT:1,trnM-cau-_1:1	tRNA-Met:4	Cryptomonas_curvata:1,Cryptomonas_paramecium:1,Guillardia_theta:1,Rhodomonas_salina:1
+trnN-GUU	trnN-GUU	tRNA-Asn	tRNA	1	False	6	6	trnN-GUU:4,trnN-guu:1,trnN-GTT:1	tRNA-Asn:6	Chroomonas_placoidea:1,Cryptomonas_curvata:1,Cryptomonas_paramecium:1,Guillardia_theta:1,Rhodomonas_salina:1,Teleaulax_amphioxeia:1
+trnP-UGG	trnP-UGG	tRNA-Pro	tRNA	1	False	5	5	trnP-UGG:4,trnP-ugg:1	tRNA-Pro:5	Chroomonas_placoidea:1,Cryptomonas_curvata:1,Guillardia_theta:1,Rhodomonas_salina:1,Teleaulax_amphioxeia:1
+trnQ-UUG	trnQ-UUG	tRNA-Gln	tRNA	1	False	5	5	trnQ-UUG:3,trnQ-TTG:1,trnQ-uug:1	tRNA-Gln:5	Cryptomonas_curvata:1,Cryptomonas_paramecium:1,Guillardia_theta:1,Rhodomonas_salina:1,Teleaulax_amphioxeia:1
+trnR-ACG	trnR-ACG	tRNA-Arg	tRNA	1	False	5	5	trnR-ACG:4,trnR-acg:1	tRNA-Arg:5	Chroomonas_placoidea:1,Cryptomonas_curvata:1,Guillardia_theta:1,Rhodomonas_salina:1,Teleaulax_amphioxeia:1
+trnR-CCG	trnR-CCG	tRNA-Arg	tRNA	1	False	2	2	trnR-CCG:2	tRNA-Arg:2	Rhodomonas_salina:1,Teleaulax_amphioxeia:1
+trnR-UCU	trnR-UCU	tRNA-Arg	tRNA	1	False	5	5	trnR-UCU:4,trnR-ucu:1	tRNA-Arg:5	Chroomonas_placoidea:1,Cryptomonas_curvata:1,Guillardia_theta:1,Rhodomonas_salina:1,Teleaulax_amphioxeia:1
+trnS-GCU	trnS-GCU	tRNA-Ser	tRNA	1	False	5	5	trnS-GCU:4,trnS-gcu:1	tRNA-Ser:5	Chroomonas_placoidea:1,Cryptomonas_curvata:1,Guillardia_theta:1,Rhodomonas_salina:1,Teleaulax_amphioxeia:1
+trnS-GGA	trnS-GGA	tRNA-Ser	tRNA	1	False	3	3	trnS-GGA:3	tRNA-Ser:3	Chroomonas_placoidea:1,Cryptomonas_curvata:1,Rhodomonas_salina:1
+trnS-UGA	trnS-UGA	tRNA-Ser	tRNA	1	False	6	6	trnS-UGA:4,trnS-TGA:1,trnS-uga:1	tRNA-Ser:6	Chroomonas_placoidea:1,Cryptomonas_curvata:1,Cryptomonas_paramecium:1,Guillardia_theta:1,Rhodomonas_salina:1,Teleaulax_amphioxeia:1
+trnT-UGU	trnT-UGU	tRNA-Thr	tRNA	1	False	5	5	trnT-UGU:3,trnT-TGT:1,trnT-ugu:1	tRNA-Thr:5	Chroomonas_placoidea:1,Cryptomonas_curvata:1,Cryptomonas_paramecium:1,Guillardia_theta:1,Rhodomonas_salina:1
+trnV-UAC	trnV-UAC	tRNA-Val	tRNA	1	False	6	6	trnV-UAC:4,trnV-TAC:1,trnV-uac:1	tRNA-Val:6	Chroomonas_placoidea:1,Cryptomonas_curvata:1,Cryptomonas_paramecium:1,Guillardia_theta:1,Rhodomonas_salina:1,Teleaulax_amphioxeia:1
+trnW-CCA	trnW-CCA	tRNA-Trp	tRNA	1	False	5	5	trnW-CCA:4,trnW-cca:1	tRNA-Trp:5	Chroomonas_placoidea:1,Cryptomonas_curvata:1,Guillardia_theta:1,Rhodomonas_salina:1,Teleaulax_amphioxeia:1
+trnY-GUA	trnY-GUA	tRNA-Tyr	tRNA	1	False	5	5	trnY-GUA:4,trnY-gua:1	tRNA-Tyr:5	Chroomonas_placoidea:1,Cryptomonas_curvata:1,Guillardia_theta:1,Rhodomonas_salina:1,Teleaulax_amphioxeia:1

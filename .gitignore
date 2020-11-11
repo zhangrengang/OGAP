@@ -1,9 +1,12 @@
+custom
 .gitignore
+*/*.pyc
 db/[mp]t/*/*/
 build*
 test/test*/
-test/*out/
+#test/*out/
 tree
 #test/est.fa
 mitochondrion.*
 plastid.*
+nohup.out

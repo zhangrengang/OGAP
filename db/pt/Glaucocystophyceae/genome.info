@@ -1,0 +1,6 @@
+#id	organism	name_count	cds_count	trn_count	rrn_count	length	GC	taxonomy
+NC_038216.1	Cyanophora biloba	183	149	36	6	130509	30.2	root;cellular organisms;Eukaryota;Glaucocystophyceae;Cyanophoraceae;Cyanophora;Cyanophora biloba
+NC_001675.1	Cyanophora paradoxa	175	149	36	6	135599	30.5	root;cellular organisms;Eukaryota;Glaucocystophyceae;Cyanophoraceae;Cyanophora;Cyanophora paradoxa
+NC_038215.1	Cyanophora sudae	172	162	37	6	150128	29.8	root;cellular organisms;Eukaryota;Glaucocystophyceae;Cyanophoraceae;Cyanophora;Cyanophora sudae
+NC_040152.1	Glaucocystis incrassata	186	165	34	6	137017	33.6	root;cellular organisms;Eukaryota;Glaucocystophyceae;Glaucocystales;Glaucocystaceae;Glaucocystis;Glaucocystis incrassata
+NC_040153.1	Gloeochaete wittrockiana	198	169	40	6	143343	29.6	root;cellular organisms;Eukaryota;Glaucocystophyceae;Gloeochaetales;Gloeochaetaceae;Gloeochaete;Gloeochaete wittrockiana

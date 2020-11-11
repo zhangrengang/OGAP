@@ -1,0 +1,7 @@
+#id	organism	name_count	cds_count	trn_count	rrn_count	length	GC	taxonomy
+NC_035721.1	Chroomonas placoidea	178	147	32	6	139432	35.8	root;cellular organisms;Eukaryota;Cryptophyceae;Pyrenomonadales;Chroomonadaceae;Chroomonas;Chroomonas placoidea
+NC_035720.1	Cryptomonas curvata	178	146	31	6	128285	35.3	root;cellular organisms;Eukaryota;Cryptophyceae;Cryptomonadales;Cryptomonadaceae;Cryptomonas;Cryptomonas curvata
+NC_013703.1	Cryptomonas paramecium	110	82	29	3	77717	38.1	root;cellular organisms;Eukaryota;Cryptophyceae;Cryptomonadales;Cryptomonadaceae;Cryptomonas;Cryptomonas paramecium
+NC_000926.1	Guillardia theta	176	147	30	6	121524	33.0	root;cellular organisms;Eukaryota;Cryptophyceae;Pyrenomonadales;Geminigeraceae;Guillardia;Guillardia theta
+NC_009573.1	Rhodomonas salina	173	146	31	6	135854	34.8	root;cellular organisms;Eukaryota;Cryptophyceae;Pyrenomonadales;Pyrenomonadaceae;Rhodomonas;Rhodomonas salina
+NC_027589.1	Teleaulax amphioxeia	176	143	30	6	129772	34.2	root;cellular organisms;Eukaryota;Cryptophyceae;Pyrenomonadales;Geminigeraceae;Teleaulax;Teleaulax amphioxeia

@@ -35,9 +35,11 @@ class GenbankParser():
 		print >>sys.stderr, 'loading genbank records'
 		self.tax = []
 		for record in self:
-			if not (record.cds_count>0 and record.rna_count>0):
+			#print >> sys.stderr, record.organism, record.id, record.cds_count, record.rna_count
+			if not (record.cds_count + record.rna_count>0):
 				continue
 			key = record.organism.lower()
+			#print >> sys.stderr, record.organism, record.id
 			if key in d_species:
 				taxid, record.taxonomy, record.ranks = d_species[key]
 			else:
@@ -47,6 +49,7 @@ class GenbankParser():
 			index = record.is_taxon(taxon)
 			#if record.organism =='Sus scrofa':
 			#	print >>sys.stderr, i, record.taxonomy, record.ranks, index
+			#print >> sys.stderr, record.organism, record.id
 			if not index:
 				continue
 			if exclude is not None:
@@ -59,9 +62,10 @@ class GenbankParser():
 					continue
 			record.ranks = OrderedDict([(rank, tax) \
                     for rank, tax in zip(record.ranks, record.taxonomy)])
-			record.organism = record.ranks['species']
+			record.organism = str(record.ranks['species'])
 			if not record.name_count:	# some taxa without annotation
 				continue
+			#print >> sys.stderr, record.organism, record.id
 			i += 1
 			self.tax += [record.taxonomy[:index]]
 			yield record
@@ -194,7 +198,11 @@ class GenbankRecord():
 					feat_id = 'gene{}'.format(i)
 				if feat_id in features:
 					feat_id = '{}-{}'.format(feat_id, i)
-				nucl_seq = feature.extract(self.seq)
+				try: nucl_seq = feature.extract(self.seq)
+				except Exception as e:
+					print >> sys.stderr, e, self.organism, self.id, feat_id, feature.type, feature.location
+					continue
+					#raise Exception(e)
 				features.add(feat_id)
 				yield FeatureRecord(id=feat_id, seq=nucl_seq, index=i, feature=feature)
 ##						type=feature.type, location=feature.location,

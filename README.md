@@ -1,7 +1,7 @@
 ### Installation ###
 Dependencies:
 + [python 2.7](https://www.python.org/)  
-    + [biopython](https://biopython.org/): quickly install by `pip install biopython`  
+    + [biopython](https://biopython.org/): quickly install by `pip install biopython<=1.76`  
     + [networkx](http://networkx.github.io/): quickly install by `pip install networkx<2.0`  
     + [lazy_property](https://github.com/jackmaney/lazy-property): quickly install by `pip install lazy-property`  
 + [hmmsearch 3.1x or 3.2x](http://hmmer.org/): compatible with HMMER3/f database format  
@@ -50,15 +50,19 @@ git clone https://github.com/zhangrengang/OGAP
 cd OGAP/test
 python ../OGAP.py Arabidopsis_thaliana-mt.gb -mt -o mt_out
 ```
-By default, organism will be extract from the genbank file (ORGANISM) and database will be selected by taxonomy mapping from organism, automatically.
+By default, organism name will be extract from the genbank file (ORGANISM) and database will be selected by taxonomy mapping from organism, automatically.
 ##### mitochondrion genome in fasta format
 ```
 python ../OGAP.py Arabidopsis_thaliana-mt.fa -mt -o mt_out -sp Arabidopsis_thaliana
 ```
 By default, database will be selected by taxonomy mapping from organism (`-sp`), automatically.
-##### mitochondrion genome with database specified
+##### mitochondrion genome with database specified (`-taxon`)
 ```
 python ../OGAP.py Arabidopsis_thaliana-mt.fa -mt -o mt_out -sp Arabidopsis_thaliana -taxon rosids
+```
+##### multiple database are supported
+```
+python ../OGAP.py Arabidopsis_thaliana-mt.fa -mt -o mt_out -sp Arabidopsis_thaliana -taxon rosids malvids
 ```
 
 ##### plastid/chloroplast genome is similar but change to `-pt` mode

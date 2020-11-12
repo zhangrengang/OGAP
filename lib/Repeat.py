@@ -142,6 +142,7 @@ class RepeatSegemnt:
 	def to_exons(self):
 		record = GffExons([self.to_gff()])
 		record.chrom = self.chrom
+		record.source = self.source
 		record.start = self.start
 		record.end = self.end
 		record.strand = self.strand

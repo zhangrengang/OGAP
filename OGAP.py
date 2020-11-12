@@ -32,7 +32,7 @@ def makeArgparse():
 					help="equal to '-organ mt' [default=%(default)s]")
 	parser.add_argument('-pt', action="store_true", default=False,
 					help="equal to '-organ pt' [default=%(default)s]")
-	parser.add_argument('-taxon', type=str, default=None, 
+	parser.add_argument('-taxon', type=str, default=None, nargs='+',
 					help="taxon to use as reference, such as rosids [default=auto by -organism]")
 	parser.add_argument('-trans', action="store_true", default=False,
 					help='transcipt input mode [default=%(default)s]')
@@ -92,7 +92,7 @@ def makeArgparse():
 					help="include ORF genes in coding gene annotation [default=%(default)s]")
 	group_out.add_argument('-trn_struct', action="store_true", default=False,
 					help="output tRNA structure [default=%(default)s]")
-	group_out.add_argument('-draw_map', action="store_true", default=True,
+	group_out.add_argument('-draw_map', action="store_true", default=False,
 					help="draw gene map [default=%(default)s]")
 	group_out.add_argument('-compare_map', action="store_true", default=True,
                     help="compare gene map with genbank input [default=%(default)s]")
@@ -221,12 +221,14 @@ class Pipeline():
 
 		if taxon is None and self.organism is not None:
 			taxon = Database(organ=organ).select_db(self.organism).taxon
+			taxon = [taxon]
 			logger.info('automatically select db: {}'.format(taxon))
 		elif taxon is None:
 			logger.info('neither -taxon or -organism must be specified')
-		self.db = Database(organ=organ, taxon=taxon, include_orf=include_orf)
+		self.taxon = taxon	# taxa
+		#self.db = Database(organ=organ, taxon=taxon, include_orf=include_orf)
 		
-		self.ogtype = self.db.ogtype
+		#self.ogtype = self.db.ogtype
 		self.transl_table = transl_table
 		
 		if prefix is None:
@@ -234,13 +236,14 @@ class Pipeline():
 		else:
 			self.prefix = prefix
 		# folder
-		self.tmpdir = '{}/{}/{}'.format(tmpdir, self.ogtype, 
-								os.path.basename(self.prefix))
-		self.hmmoutdir = '{}/hmmout'.format(self.tmpdir)
-		#self.estoutdir = '{}/estout'.format(self.tmpdir)
-		#self.exnoutdir = '{}/exnout'.format(self.tmpdir)
-		self.agtoutdir = '{}/augustus'.format(self.tmpdir)
-		self.trndir = '{}/{}.trna'.format(self.outdir, self.prefix)
+		self.tmpdir0 = tmpdir
+		#self.tmpdir = '{}/{}/{}'.format(tmpdir, self.ogtype, 
+		#						os.path.basename(self.prefix))
+		#self.hmmoutdir = '{}/hmmout'.format(self.tmpdir)
+		##self.estoutdir = '{}/estout'.format(self.tmpdir)
+		##self.exnoutdir = '{}/exnout'.format(self.tmpdir)
+		#self.agtoutdir = '{}/augustus'.format(self.tmpdir)
+		#self.trndir = '{}/{}.trna'.format(self.outdir, self.prefix)
 
 	def run(self):
 		# draw map
@@ -252,14 +255,14 @@ class Pipeline():
 #				self.compare_map()
 #		return
 		
-		rmdirs(self.agtoutdir)
-		mkdirs(self.outdir, self.tmpdir)
-		mkdirs(self.hmmoutdir, self.agtoutdir)
+#		rmdirs(self.agtoutdir)
+#		mkdirs(self.outdir, self.tmpdir)
+#		mkdirs(self.hmmoutdir, self.agtoutdir)
 		# check
-		logger.info('checking database: {}'.format(self.db.ogtype))
-		self.db.checkdb()
-		if self.transl_table is None:
-			self.transl_table = self.db.transl_table
+#		logger.info('checking database: {}'.format(self.db.ogtype))
+#		self.db.checkdb()
+#		if self.transl_table is None:
+#			self.transl_table = self.db.transl_table
 	
 		# read genome seqs
 		self.seqs = self.get_seqs(open(self.genome), self.seqfmt)
@@ -278,16 +281,36 @@ class Pipeline():
 		self.fsa = self.to_fsa()
 
 		records = []
-		# cds-protein finder
-		if self.est is not None:
-			self.hmmsearch_est()
-		logger.info('finding protein-coding genes by HMM+enonerate+augustus')
-		records += self.hmmsearch_protein()
+		for taxon in self.taxon:
+			db_records = []
+			self.db = Database(organ=self.organ, taxon=taxon, include_orf=self.include_orf)
+			self.ogtype = self.db.ogtype
+			# folder
+			self.tmpdir = '{}/{}/{}'.format(self.tmpdir0, self.ogtype,
+                               os.path.basename(self.prefix))
+			self.hmmoutdir = '{}/hmmout'.format(self.tmpdir)
+			self.agtoutdir = '{}/augustus'.format(self.tmpdir)
+			self.trndir = '{}/{}.trna'.format(self.outdir, self.prefix)
+			rmdirs(self.agtoutdir)
+			mkdirs(self.outdir, self.tmpdir)
+			mkdirs(self.hmmoutdir, self.agtoutdir)
+			# check
+			logger.info('checking database: {}'.format(self.db.ogtype))
+			self.db.checkdb()
+			if self.transl_table is None:
+				self.transl_table = self.db.transl_table
+			# cds-protein finder
+			if self.est is not None:
+				self.hmmsearch_est()
+			logger.info('finding protein-coding genes by HMM+enonerate+augustus')
+			db_records += self.hmmsearch_protein()
 		
-		# rna finder
-		logger.info('finding non-coding genes by HMM+exonerate (rRNA) or HMM+tRNAscan-SE(tRNA)')
-		records += self.hmmsearch_rna()
-
+			# rna finder
+			logger.info('finding non-coding genes by HMM+exonerate (rRNA) or HMM+tRNAscan-SE(tRNA)')
+			db_records += self.hmmsearch_rna()
+			for record in db_records:
+				record[0].attributes['db'] = taxon
+			records += db_records
 		# score
 		#logger.info('scoring genes by HMM')
 		#records = [self.score_record(record) for record in records]

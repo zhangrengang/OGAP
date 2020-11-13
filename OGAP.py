@@ -985,7 +985,7 @@ class Pipeline():
 
 	def re_fsa(self, records):
 		d_seqs = OrderedDict([(rc.id, rc) for rc in SeqIO.parse(self.fsa, 'fasta')])
-		chroms = {record.chrom for record in records}
+		chroms = {exon.chrom for record in records for exon in record}
 		fout = open(self.fsa, 'w')
 		for chrom, rc in d_seqs.items():
 			if chrom in chroms:

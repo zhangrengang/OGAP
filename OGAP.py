@@ -55,6 +55,10 @@ def makeArgparse():
 					help="completeness to be included in sqn [default=complete]")
 	parser.add_argument('-no_sqn', action="store_true", default=False,
                     help="do not generate sqn file [default=%(default)s]")
+	parser.add_argument('-wgs', action="store_true", default=False,
+                    help="for WGS submission [default=%(default)s]")
+	parser.add_argument('-sqn_annot', action="store_true", default=False,
+                    help="only include sequences with annotaion into sqn file [default=%(default)s]")
 	parser.add_argument('-no_cds', action="store_true", default=False,
                     help="do not annotate coding gene [default=%(default)s]")
 	parser.add_argument('-no_rrn', action="store_true", default=False,
@@ -126,7 +130,7 @@ class Pipeline():
 				organism=None,
 				linear=False, 
 				partial=False,
-				nosqn=False,
+				nosqn=False, wgs=False,
 				no_cds=False,		# do not annotate CDS
 				no_rrn=False,
 				no_trn=False,
@@ -165,6 +169,7 @@ class Pipeline():
 		self.linear = linear
 		self.partial = partial
 		self.nosqn = nosqn
+		self.wgs = wgs
 		self.sqn_annot = sqn_annot
 		self.no_cds = no_cds
 		self.no_rrn = no_rrn
@@ -994,15 +999,22 @@ class Pipeline():
 		# to tbl
 		tbl = '{}/{}.tbl'.format(self.outdir, self.prefix)
 		fout = open(tbl, 'w')
+		d_tags = {}
+		i = 0
 		for seqid in self.seqs.keys():
-			my_records = [record for record in records if record.chrom == seqid]
+			my_records = [record for record in records if seqid in record.chroms]
 			if not my_records:
 				continue
 			print >>fout, '>Feature {}'.format(seqid)
-			for i, record in enumerate(my_records):
-				locus_tag = '{}_{:0>4d}'.format(prefix, i)
+			for record in my_records:
+				if record in d_tags:
+					locus_tag = d_tags[record]
+				else:
+					i += 1
+					locus_tag = '{}_{:0>4d}'.format(prefix, i)
+					d_tags[record] = locus_tag
 				record.to_tbl(fout, seqid, transl_table=self.transl_table, 
-						locus_tag=locus_tag)
+						locus_tag=locus_tag, wgs=self.wgs)
 		fout.close()
 		# fsa + tbl -> sqn -> genbank
 		sqn = '{}/{}.sqn'.format(self.outdir, self.prefix)

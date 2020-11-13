@@ -451,6 +451,9 @@ class GffExons(object):
 	def coord(self):
 		return self.get_region()
 	@lazyproperty
+	def chroms(self):
+		return {exon.chrom  for exon in self}
+	@lazyproperty
 	def region(self):
 		chrom, start, end = self.coord[:3]
 		return Region(chrom, start, end)
@@ -555,7 +558,7 @@ class GffExons(object):
 		record.rna_type = rna_type
 		record.trans_splicing = trans_splicing
 		return record
-	def to_tbl(self, fout, chrom=None, feat_type='gene', 
+	def to_tbl(self, fout, chrom=None, feat_type='gene', wgs=True,
 			transl_table=1, rna_type=None, locus_tag=None):
 		if self.rna_type == 'repeat':
 			exon = self[0]
@@ -586,6 +589,8 @@ class GffExons(object):
 		if chrom is not None:
 			exons.exons = [exon for exon in exons if exon.chrom == chrom]
 		genes = self.filter('gene')
+		if chrom is not None:
+			genes.exons = [exon for exon in genes if exon.chrom == chrom]
 		for i, exon in enumerate(genes):
 			start, end = exon.start, exon.end
 			start, end = (end, start) if exon.strand == '-' else (start, end)
@@ -620,11 +625,12 @@ class GffExons(object):
 		lines += [ ['', '', 'product', product] ]
 		if locus_tag is not None:
 			transcript_id = '{}|{}|{}'.format('gnl', locus_tag.split('_')[0], self.rna_id)
-			lines += [ ['', '', 'transcript_id', transcript_id] ]
+			if wgs: # nesscery to submit to WGS, but not for GenBank
+				lines += [ ['', '', 'transcript_id', transcript_id] ]
 			if rna_type == 'CDS':
 				lines += [ ['', '', 'protein_id', transcript_id+':cds'] ]
 		# mRNA
-		if locus_tag is not None and rna_type == 'CDS':
+		if locus_tag is not None and rna_type == 'CDS' and wgs:
 			for i, exon in enumerate(exons):
 				start, end = exon.start, exon.end
 				start, end = (end, start) if exon.strand == '-' else (start, end)

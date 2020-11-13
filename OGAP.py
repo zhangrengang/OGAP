@@ -629,8 +629,14 @@ class Pipeline():
 				# gene by augustus
 				ag_gtf, ag_domtblout = self.augustus_gene_predict(genefa, gene, parts)
 				best_gtf, source = self.get_best_gene(ag_gtf, ag_domtblout, ex_gtf, ex_domtblout, id=gene.id)
+				pseudo = False
 				if best_gtf is None:
-					continue
+					pseudo = True
+					ex_gtf, ex_domtblout = self.exonerate_gene_predict(genefa, gene, parts, completed=False)
+					best_gtf, source = self.get_best_gene(ag_gtf, ag_domtblout, 
+												ex_gtf, ex_domtblout, id=gene.id)
+					if best_gtf is None:
+						continue
 			#	print >> sys.stderr, source
 			#	best_gtf.write(sys.stderr)	# GffRecord -> AugustusGtfLine -> Gtf
 			#	print >> sys.stderr, ''
@@ -641,12 +647,13 @@ class Pipeline():
 			#	print >> sys.stderr, parts.to_str()
 				new_parts.source = source
 			#	cds.write(sys.stderr)
-				record = cds.extend_gene(gene, new_parts, rna_type=gene.seq_type)
+				record = cds.extend_gene(gene, new_parts, rna_type=gene.seq_type, pseudo=pseudo)
 				print >> sys.stderr, ''
 				#record.write(sys.stderr)
 				cds_seq = record.extract_seq(self.seqs)
 				pep_seq = record.translate_cds(cds_seq, transl_table=self.transl_table)
 				record.cds_seq, record.pep_seq = cds_seq, pep_seq
+				record.pseudo = pseudo
 			#	record.rna_seq = record.cds_seq
 			#	print >> sys.stderr, '# coding sequence = [{}]'.format(cds_seq)
 			#	print >> sys.stderr, '# protein sequence = [{}]'.format(pep_seq)
@@ -758,7 +765,7 @@ class Pipeline():
 				return ag_best	# strict?
 			else:
 				return ag_best	# change
-	def exonerate_gene_predict(self, reference, gene, copy=None):
+	def exonerate_gene_predict(self, reference, gene, copy=None, completed=True):
 		exn_gff = self.get_exnfile(copy, 'p')
 		outgff = exn_gff + '.gff'
 		gene_seqs = self.get_seqs(reference)
@@ -767,7 +774,7 @@ class Pipeline():
 											  transl_table=self.transl_table)
 		pepfaa = outgff + '.faa'
 		with open(pepfaa, 'w') as fout:
-			self.check_augustus_gff(outgff, fout)
+			self.check_augustus_gff(outgff, fout, completed=completed)
 		hmmfile = self.db.get_hmmfile(gene)
 		domtblout = pepfaa + '.domtbl'
 		self.hmmsearch(hmmfile, pepfaa, domtblout)
@@ -797,12 +804,12 @@ class Pipeline():
 		domtblout = pepfaa + '.domtbl'
 		self.hmmsearch(hmmfile, pepfaa, domtblout)
 		return outgff, domtblout
-	def check_augustus_gff(self, gff, fout):
+	def check_augustus_gff(self, gff, fout, completed=True):
 		genes, has_block, has_support, has_obey = 0,0,0,0
 		full_support = 0
 		both_support = 0
 		for record in AugustusGtfGenes(gff):
-			if not record.is_complete:	# only use compelte gene
+			if completed and not record.is_complete:	# only use compelte gene
 				continue
 			genes += 1
 			if record.annotations.blocks:
@@ -822,7 +829,7 @@ class Pipeline():
 				record.annotations.total_exons,
 				record.annotations.supported_P, record.annotations.supported_E,
 				record.annotations.fully_obeyed)
-			if {'X', '*'} & set(seq):	# stop codon in CDS
+			if completed and {'X', '*'} & set(seq):	# stop codon in CDS
 				continue
 			print >>fout, '>{} {}\n{}'.format(record.id, desc, seq)
 		return genes, has_block, has_support, full_support, has_obey, both_support

@@ -484,7 +484,7 @@ class GffExons(object):
 		return ''.join(seqs)
 	def to_gff_record(self):
 		pass
-	def extend_gene(self, gene, gene_copy, source=None, rna_type='mRNA'):
+	def extend_gene(self, gene, gene_copy, source=None, rna_type='mRNA', pseudo=False):
 		rna_type = 'mRNA' if rna_type == 'CDS' else rna_type
 		if source is None:
 			source = gene_copy.source
@@ -507,7 +507,8 @@ class GffExons(object):
 			attributes0[k] = v
 		if trans_splicing:
 			attributes0['exception'] = 'trans-splicing'
-			
+		if pseudo:
+			attributes0['pseudo'] = 'true'
 		lines = []
 		for part in gene_copy:
 			# gene
@@ -613,7 +614,12 @@ class GffExons(object):
 		if locus_tag is not None:
 			line = ['', '', 'locus_tag', locus_tag]
 			print >>fout, '\t'.join(line)
-		# shared lines
+		if getattr(self, 'pseudo'):
+			line = ['', '', 'pseudo']
+			print >>fout, '\t'.join(line)
+			return
+
+		# shared lines by mRNA and CDS
 		lines = []
 		try:
 			product = self.product

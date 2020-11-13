@@ -535,7 +535,7 @@ class Pipeline():
 					# #exons.write(sys.stderr)
 					# record = exons.extend_gene(gene, parts, rna_type=gene.seq_type)
 					print >> sys.stderr, ''
-					rna_seq = record.extract_seq(self.seqs[record.chrom])
+					rna_seq = record.extract_seq(self.seqs)
 					record.rna_seq = rna_seq
 					record = self.score_record(record)
 					record.npart = len(new_parts)
@@ -574,7 +574,7 @@ class Pipeline():
 						new_parts.id = '{}-{}'.format(gene, c)
 						record = trna.extend_gene(new_gene, new_parts, rna_type=gene.seq_type)	 # GffExons
 						#record.write(sys.stderr)
-						rna_seq = record.extract_seq(self.seqs[record.chrom])
+						rna_seq = record.extract_seq(self.seqs)
 						record.rna_seq = rna_seq
 						record.struct = struct
 						record = self.score_record(record)
@@ -637,7 +637,7 @@ class Pipeline():
 				record = cds.extend_gene(gene, new_parts, rna_type=gene.seq_type)
 				print >> sys.stderr, ''
 				#record.write(sys.stderr)
-				cds_seq = record.extract_seq(self.seqs[record.chrom])
+				cds_seq = record.extract_seq(self.seqs)
 				pep_seq = record.translate_cds(cds_seq, transl_table=self.transl_table)
 				record.cds_seq, record.pep_seq = cds_seq, pep_seq
 			#	record.rna_seq = record.cds_seq

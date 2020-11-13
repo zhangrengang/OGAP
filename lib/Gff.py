@@ -465,11 +465,15 @@ class GffExons(object):
 		return self.coord[1]
 	def strand(self):
 		return self.coord[3]
-	def extract_seq(self, seq, type='exon'):
+	def extract_seq(self, d_seqs, type='exon'):
 		seqs = []
 		for line in self:	# exon
 			if not line.type == type:
 				continue
+			if isinstance(d_seqs, dict):
+				seq = d_seqs[line.chrom]	# support for extracting from different contigs
+			else:
+				seq = d_seqs
 			exon_seq = seq[line.start-1:line.end]
 			if line.strand == '-':
 				exon_seq = exon_seq.reverse_complement()

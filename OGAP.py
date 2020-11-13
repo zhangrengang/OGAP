@@ -254,7 +254,7 @@ class Pipeline():
 #			if self.seqfmt == 'genbank':
 #				self.compare_map()
 #		return
-		
+		mkdirs(self.outdir)
 #		rmdirs(self.agtoutdir)
 #		mkdirs(self.outdir, self.tmpdir)
 #		mkdirs(self.hmmoutdir, self.agtoutdir)
@@ -292,7 +292,7 @@ class Pipeline():
 			self.agtoutdir = '{}/augustus'.format(self.tmpdir)
 			self.trndir = '{}/{}.trna'.format(self.outdir, self.prefix)
 			rmdirs(self.agtoutdir)
-			mkdirs(self.outdir, self.tmpdir)
+			mkdirs(self.tmpdir)
 			mkdirs(self.hmmoutdir, self.agtoutdir)
 			# check
 			logger.info('checking database: {}'.format(self.db.ogtype))

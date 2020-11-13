@@ -1,6 +1,7 @@
 import sys, os
 import copy
 import argparse
+import uuid
 from collections import OrderedDict
 from itertools import izip, combinations
 from Bio import SeqIO
@@ -291,8 +292,9 @@ class Pipeline():
 			self.db = Database(organ=self.organ, taxon=taxon, include_orf=self.include_orf)
 			self.ogtype = self.db.ogtype
 			# folder
-			self.tmpdir = '{}/{}/{}'.format(self.tmpdir0, self.ogtype,
-                               os.path.basename(self.prefix))
+			uid = uuid.uuid1()
+			self.tmpdir = '{}/{}/{}-{}'.format(self.tmpdir0, self.ogtype,
+                               os.path.basename(self.prefix), uid)
 			self.hmmoutdir = '{}/hmmout'.format(self.tmpdir)
 			self.agtoutdir = '{}/augustus'.format(self.tmpdir)
 			self.trndir = '{}/{}.trna'.format(self.outdir, self.prefix)

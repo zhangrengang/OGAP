@@ -614,7 +614,7 @@ class GffExons(object):
 		if locus_tag is not None:
 			line = ['', '', 'locus_tag', locus_tag]
 			print >>fout, '\t'.join(line)
-		if getattr(self, 'pseudo'):
+		if getattr(self, 'pseudo', None):
 			line = ['', '', 'pseudo']
 			print >>fout, '\t'.join(line)
 			return

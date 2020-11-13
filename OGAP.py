@@ -944,6 +944,8 @@ class Pipeline():
 			
 			desc = 'gene={};id={};product={};exons={};score={};cov={}'.format(record.name, 
 						record.rna_id, record.product, record, record.score, record.cov)
+			if record.pseudo:
+				desc += ';pseudo=true'
 			try:
 				print >> f_cds, '>{} {}\n{}'.format(xid, desc, record.cds_seq)
 			except AttributeError: pass

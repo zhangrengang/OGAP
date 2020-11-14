@@ -145,6 +145,7 @@ class Database():
 		for gene in self.cds_genes + self.rna_genes:
 			name, product = gene.name, gene.product
 			key = NameInfo.convert_name(name)
+			self.gene_info[gene.id] = gene
 			if not name.startswith('orf') and key not in name_dict:
 				logger.warn('{} is not found in name mapping'.format(name))
 				continue
@@ -157,7 +158,7 @@ class Database():
 			if product != mapped_product:
 				logger.info('mapping gene product {} -> {}'.format(product, mapped_product))
 			gene.name, gene.product = mapped_name, mapped_product
-			self.gene_info[gene.id] = gene
+#			self.gene_info[gene.id] = gene
 		
 		logger.info('{} CDS, {} RNA'.format(len(self.cds_genes), len(self.rna_genes)))
 		self.cds_hmmfiles = [self.get_hmmfile(gene) for gene in self.cds_genes]

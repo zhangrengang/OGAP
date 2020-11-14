@@ -716,7 +716,10 @@ class Pipeline():
 	def penalize_exon_diff(self, record, id):
 		#id = record.id
 		exon_count = record.count_type('cds', 'CDS') #count_exon()
-		db_exon_count = self.db.gene_info[id].exon_count
+		try: db_exon_count = self.db.gene_info[id].exon_count
+		except KeyError as e:
+			print >>sys.stderr, self.db.gene_info
+			raise KeyError(e)
 		diff = abs(exon_count - db_exon_count)
 		return diff * self.exon_diff_penalty
 		

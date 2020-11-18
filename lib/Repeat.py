@@ -68,6 +68,7 @@ class RepeatPipeline():
 			if dedup_nodes[-1].contains(node):
 				continue
 			dedup_nodes += [node]
+		dedup_nodes = self.remove_singleton(dedup_nodes)
 		records = []	
 		for node in dedup_nodes:
 			record = node.to_exons()
@@ -75,6 +76,24 @@ class RepeatPipeline():
 		for record in sorted(records, key=lambda x:x.start):
 			record.write(sys.stdout)
 		return records	
+	def remove_singleton(self, nodes, source='vmatch'):
+		d_names = {}
+		for node in nodes:
+			if not node.source == source:
+				continue
+			try: d_names[node.name] += [node]
+			except: d_names[node.name] = [node]
+		remove_nodes = []
+		for xnodes in d_names.values():
+			if len(xnodes) == 1:
+				remove_nodes += xnodes
+		remove_nodes = set(remove_nodes)
+		left_nodes = []
+		for node in nodes:
+			if node in remove_nodes:
+				continue
+			left_nodes += [node]
+		return left_nodes
 	def run_vmatch(self):
 		cmd = 'mkvtree -db {} -indexname {} -dna -allout -pl'.format(
 				self.genome, self.prefix)

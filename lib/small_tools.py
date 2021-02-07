@@ -272,6 +272,8 @@ def flattern(nested):
 				yield element
 	except TypeError:
 		yield nested
+def flatten(*args):
+	return flattern2(*args)
 def flattern2(nested):
 	for sublist in nested:
 		for element in sublist:

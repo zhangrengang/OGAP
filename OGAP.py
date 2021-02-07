@@ -588,6 +588,9 @@ class Pipeline():
 						record.npart = len(new_parts)
 						record.write(sys.stderr)
 					#	trn_records += [record]
+						if record.trans_splicing:
+							logger.warn('This tRNA is annotated as trans_splicing. Discarded')
+							continue
 						records += [record]
 		#records += self.remove_duplicates(trn_records)
 			#break
@@ -989,6 +992,8 @@ class Pipeline():
 #			desc += ['[completeness=partial]']
 		if self.trans:
 			desc += ['[moltype=transcribed_RNA]']
+		desc += ['gcode={}'.format(self.transl_table)]	# transl_table in tbl do not work well
+
 		desc = ' '.join(desc)
 		fsa = '{}/{}.fsa'.format(self.outdir, self.prefix)
 		fout = open(fsa, 'w')

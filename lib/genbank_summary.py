@@ -27,7 +27,7 @@ class GenbankSummary:
 		print >>sys.stderr, d_records.keys()
 		for species, records in sorted(d_records.items()):
 			refseq_records = self.get_refseq(records)
-			if refseq_records:
+			if refseq_records:	# refseq first
 				records = refseq_records
 			record = self.get_longest(records)
 			species = species.replace(' ', '_')

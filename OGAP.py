@@ -284,7 +284,7 @@ class Pipeline():
 			self.partial = True
 
 		# to fasta
-		self.fsa = self.to_fsa()
+		#self.fsa = self.to_fsa()
 
 		records = []
 		for taxon in self.taxon:
@@ -306,6 +306,9 @@ class Pipeline():
 			self.db.checkdb()
 			if self.transl_table is None:
 				self.transl_table = self.db.transl_table
+				logger.info('transl_table: {}'.format(self.transl_table))
+			# to fasta	# require self.transl_table
+			self.fsa = self.to_fsa()
 			# cds-protein finder
 			if self.est is not None:
 				self.hmmsearch_est()
@@ -992,7 +995,7 @@ class Pipeline():
 #			desc += ['[completeness=partial]']
 		if self.trans:
 			desc += ['[moltype=transcribed_RNA]']
-		desc += ['gcode={}'.format(self.transl_table)]	# transl_table in tbl do not work well
+		desc += ['[gcode={}]'.format(self.transl_table)]	# transl_table in tbl do not work well
 
 		desc = ' '.join(desc)
 		fsa = '{}/{}.fsa'.format(self.outdir, self.prefix)
@@ -1045,6 +1048,10 @@ class Pipeline():
 		gb = '{}/{}.gb'.format(self.outdir, self.prefix)
 		cmd = 'asn2gb -i {} -o {}'.format(sqn, gb)
 		run_cmd(cmd, log=True)
+		if self.nseqs > 1:
+			basename = '{}/{}'.format(self.outdir, self.prefix)
+			cmd = 'rm {basename}.val {basename}.dr errorsummary.val'.format(basename=basename)
+			run_cmd(cmd, log=False)
 	def draw_gene_map(self):
 		gb = '{}/{}.gb'.format(self.outdir, self.prefix)
 		outfig = '{}/{}.map.pdf'.format(self.outdir, self.prefix)

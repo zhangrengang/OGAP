@@ -500,10 +500,10 @@ class GffExons(object):
 		chrom, start0, end0, strand0 = self.get_region()
 		
 		attributes0 = OrderedDict()
-		for k, v in zip(('ID', 'Parent', 'Name', 'product',
-							'gene', ),
-						(gene_id, None, gene_name, product,
-							gene_name, )):
+		for k, v in zip(('ID', 'Parent', 'Name', 'gene', 'product',
+							 ),
+						(gene_id, None, gene_name, gene_name, product,
+							 )):
 			attributes0[k] = v
 		if trans_splicing:
 			attributes0['exception'] = 'trans-splicing'

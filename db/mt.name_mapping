@@ -32,6 +32,7 @@ rpl6	ribosomal protein L6
 rpl10	ribosomal protein L10
 rpl14	ribosomal protein L14	
 rpl16	ribosomal protein L16
+rpl23	ribosomal protein L23
 rpl31	ribosomal protein L31	
 rps1	ribosomal protein S1	
 rps2	ribosomal protein S2	
@@ -57,6 +58,7 @@ trnC-GCA-cp	tRNA-Cys	tRNA-Cys-GCA-cp
 trnD-GUC	tRNA-Asp	tRNA-Asp-GCA
 trnD-GUC-cp	tRNA-Asp	tRNA-Asp-GTC-cp
 trnE-UUC	tRNA-Glu	tRNA-Glu-TTC
+trnE-uuc-cp	tRNA-Glu
 trnF-GAA	tRNA-Phe	tRNA-Phe-GAA
 trnF-GAA-cp	tRNA-Phe	tRNA-Phe-GAA-cp
 trnG-GCC	tRNA-Gly	tRNA-Gly-GCC
@@ -65,6 +67,7 @@ trnH-AUG	tRNA-His	tRNA-His-ATG
 trnH-GUG	tRNA-His	tRNA-His-GTG
 trnH-GUG-cp	tRNA-His	tRNA-His-GUG-cp
 trnI-CAU	tRNA-Ile	tRNA-Ile-CAT
+trnI-CAA-cp	tRNA-Ile
 trnI-GAU	tRNA-Ile	tRNA-Ile-GAT
 trnI-UAU-cp	tRNA-Ile	tRNA-Ile-UAU-cp
 trnK-CUU	tRNA-Lys	tRNA-Lys-CUU

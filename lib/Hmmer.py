@@ -54,15 +54,19 @@ class HmmSearch(object):
 	#		print >>sys.stderr, hit.nucl_hit
 			graph.add_node(hit)
 		graph.link_nodes()
-	#	for n1, n2 in graph.edges():
-	#		print >>sys.stderr, n1.short, n2.short
+#		for node in graph.nodes():
+#			print >>sys.stderr, node.short
+#		for n1, n2 in graph.edges():
+#			print >>sys.stderr, n1.short, '-',  n2.short
 		graph.prune_graph()
+	#	print >>sys.stderr, graph.nodes()
 
 		hmmcovs = []
 		copies = []
 		for path in graph.linearize_path():
 			#print >>sys.stderr, 'path:', path
 			if path.hmmcov < min_cov:
+				print >>sys.stderr, 'discarded path for low coverage:', path
 				continue
 			print >>sys.stderr, path, len(path.group_nodes()), path.hmmcov
 			parts = path.get_parts(d_length, flank=flank)
@@ -415,6 +419,13 @@ class HmmSearchDomHit:
 		'''--->	 self
 			  --->  other
 		'''
+		# contains
+		# ------->	self	 ---->
+		#   ---->   other  -------->
+		if other.hmmstart >= self.hmmstart and other.hmmend <= self.hmmend:
+			return False
+		if self.hmmstart >= other.hmmstart and self.hmmend <= other.hmmend:
+			return False
 		left_dist = other.hmmstart - self.hmmstart + 1
 		mid_dist  = other.hmmstart - self.hmmend + 1
 		right_dist = other.hmmend - self.hmmend + 1
@@ -538,6 +549,13 @@ class HmmStructueGraph(DiGraph):
 				self.add_edge(hit1, hit2, dist=dist_12)
 			if not dist_21 is False:
 				self.add_edge(hit2, hit1, dist=dist_21)
+	def break_circle(self):
+		for circle in nx.simple_cycles(self):
+			sg = G.subgraph(circle)
+			max_dist_edge = max(sg.edges(), key=lambda x: sg.get_edge_data(*x))
+			n1, n2 = max_dist_edge
+			print >>sys.stderr, 'break circle', n1.short, '-',  n2.short
+			G.remove_edge(*max_dist_edge)
 	def prune_graph(self):
 		# remove bridged edge
 		for node in self.nodes():

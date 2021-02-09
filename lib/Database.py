@@ -19,6 +19,7 @@ from small_tools import mkdirs, rmdirs
 
 AUGUSTUS_CONFIG_PATH=os.environ['AUGUSTUS_CONFIG_PATH']
 
+d_lineage = {}
 class Database():
 	def __init__(self, organ=None, taxon=None, dbrootdir=None,
 				gbfiles=None, custom=None, version=None,
@@ -114,10 +115,17 @@ class Database():
 	
 	def get_taxonomy(self, organism):
 		organism = organism.split()[0]	# use genus, which is more common
+		try:
+			lineage = d_lineage[organism] 
+			print >> sys.stderr, 'Using existed', organism
+			return lineage
+		except KeyError: pass
 		cmd = 'ete3 ncbiquery --search "{}" --info'.format(organism)
 		stdout, stderr, status = run_cmd(cmd, log=True)
 		for info in Ete3TaxonomyInfo(stdout):
-			return info.named_lineage
+			lineage = info.named_lineage
+			d_lineage[organism] = lineage
+			return lineage
 			
 	def checkdb(self, untar=True):
 		# dbdir

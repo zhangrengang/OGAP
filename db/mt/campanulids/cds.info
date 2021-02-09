@@ -1,5 +1,5 @@
 #id	name	product	seq_type	exon_count	trans_splicing	gene_count	species_count	names	products	species
-RNAP	RNAP	RNA polymerase	CDS	1	False	2	2	RNAP:2	RNA polymerase:2	Lactuca_sativa:1,Lactuca_serriola:1
+#RNAP	RNAP	RNA polymerase	CDS	1	False	2	2	RNAP:2	RNA polymerase:2	Lactuca_sativa:1,Lactuca_serriola:1
 atp1	atp1	ATPase subunit 1	CDS	1	False	14	11	atp1:14	ATPase subunit 1:10,Atp1:2,ATP synthase F1 subunit 1:2	Bupleurum_falcatum:1,Chrysanthemum_boreale:1,Codonopsis_lanceolata:1,Daucus_carota_subsp._sativus:1,Diplostephium_hartwegii:1,Helianthus_annuus:1,Ilex_pubescens:1,Lactuca_saligna:2,Lactuca_sativa:2,Lactuca_serriola:2,Platycodon_grandiflorus:1
 atp4	atp4	ATPase subunit 4	CDS	1	False	11	11	atp4:11	ATPase subunit 4:9,Atp4:2	Bupleurum_falcatum:1,Chrysanthemum_boreale:1,Codonopsis_lanceolata:1,Daucus_carota_subsp._sativus:1,Diplostephium_hartwegii:1,Helianthus_annuus:1,Ilex_pubescens:1,Lactuca_saligna:1,Lactuca_sativa:1,Lactuca_serriola:1,Platycodon_grandiflorus:1
 atp6	atp6	ATPase subunit 6	CDS	1	False	11	11	atp6:11	ATPase subunit 6:4,ATP synthase subunit 6:3,ATP synthase F0 subunit 6:2,Atp6:2	Bupleurum_falcatum:1,Chrysanthemum_boreale:1,Codonopsis_lanceolata:1,Daucus_carota_subsp._sativus:1,Diplostephium_hartwegii:1,Helianthus_annuus:1,Ilex_pubescens:1,Lactuca_saligna:1,Lactuca_sativa:1,Lactuca_serriola:1,Platycodon_grandiflorus:1

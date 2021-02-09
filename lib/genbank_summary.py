@@ -2,6 +2,8 @@ import sys
 import re
 from Database import Database
 
+db = Database()
+
 class GenbankSummary:
 	def __init__(self, summary):
 		self.summary = summary
@@ -31,7 +33,7 @@ class GenbankSummary:
 				records = refseq_records
 			record = self.get_longest(records)
 			species = species.replace(' ', '_')
-			line = [species, record.accession, record.length, record.topology]
+			line = [species, record.accession, record.length, record.topology, record.title]
 			tax = record.lineage
 			line += tax
 			line = map(str, line)
@@ -50,7 +52,7 @@ class GenbankSummaryLines:
 				re.compile(r'(\d+)\.\s+(.*)').match(title).groups()
 		self.species = self._parse_species()
 		topology = self.lines[1]
-		self.length, self.topology = \
+		self.length, self.topology = \	# circular or not
 			re.compile(r'([,\d]+)\s+bp\s+(\w+)\s+\S+').match(topology).groups()
 		self.length = int(self.length.replace(',', ''))
 		accession = self.lines[2]
@@ -62,12 +64,16 @@ class GenbankSummaryLines:
 		if title[0].startswith('UNVERIFIED'):
 			title = title[1:]
 		if title[1] == 'x':
+# hybrid
 			e = 3
 		if title[1] == 'sp.':
+# "sp." is used in the case that an author (writer, ichthyologist, etc.)can not say any of the above mentioned, but he is sure of the fact that the species he is talking about (writing, or showing a photo of) belongs to the referred genus (eg. Rasbora sp.), but does not know at all if new, or which species it might be.
 			e = 1
 		if title[1] == 'aff.':
+# "aff."is used a specimen that has similar characters (morphology) as the following cited species, but he is not (yet) sure that it is a different species.
 			title.pop(1)
-		if title[1] == 'cf.':
+		if title[1] == 'cf.':	
+# "cf." is used with a specimen that the author (writer/ichthyologist, describer, etc.) wants to compare with the following cited species, but he believes that it is different, probably new to science
 			title.pop(1)
 		return ' '.join(title[s:e])
 
@@ -79,7 +85,7 @@ class GenbankSummaryLines:
 	@property
 	def lineage(self):
 		try:
-			return Database().get_taxonomy(self.species)
+			return db.get_taxonomy(self.species)
 		except ValueError as e:
 			print >>sys.stderr, e
 			return []

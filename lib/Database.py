@@ -86,6 +86,7 @@ class Database():
 		self.species_file = '{}/genome.info'.format(self.dbdir)
 		self.taxonomy_file = '{}/taxonomy.info'.format(self.dbdir)
 		self.name_mapping = '{}/{}.name_mapping'.format(self.dbrootdir, self.organ, )
+		self.name_banning = '{}/{}.name_banning'.format(self.dbrootdir, self.organ, )
 		self.taxonomy_dbfile = '{}/taxonomy.json.gz'.format(self.dbrootdir)
 	def check_augustus(self):
 		if not os.access(AUGUSTUS_CONFIG_PATH, os.W_OK):
@@ -148,12 +149,19 @@ class Database():
 		self.rna_genes = self.rna_info.genes
 		self.name_info = NameInfo(self.name_mapping)
 		name_dict = self.name_info.dict
+		self.ban_info  = NameInfo(self.name_banning)
+		ban_dict = self.ban_info.dict
 		self.gene_info = OrderedDict()
+		ban_names = set([])
 		# update unified gene name and product
 		for gene in self.cds_genes + self.rna_genes:
 			name, product = gene.name, gene.product
 			key = NameInfo.convert_name(name)
 			self.gene_info[gene.id] = gene
+			if set([name, key]) & set(ban_dict):
+				ban_names.add(name)
+				logger.info('gene {} is banned from file {}'.format(name, self.name_banning))
+				continue
 			if not name.startswith('orf') and key not in name_dict:
 				logger.warn('{} is not found in name mapping'.format(name))
 				continue
@@ -161,13 +169,22 @@ class Database():
 				continue
 			mapped_gene = name_dict[key]
 			mapped_name, mapped_product = mapped_gene.name, mapped_gene.product
+			#print >> sys.stderr, [name, key, mapped_name], set(ban_dict), set([name, key, mapped_name]) & set(ban_dict)
+			if set([name, key, mapped_name]) & set(ban_dict):
+				ban_names.add(name)
+				logger.info('gene {} is banned from file {}'.format(name, self.name_banning))
+				continue
 			if name != mapped_name:
 				logger.info('mapping gene name {} -> {}'.format(name, mapped_name))
 			if product != mapped_product:
 				logger.info('mapping gene product {} -> {}'.format(product, mapped_product))
 			gene.name, gene.product = mapped_name, mapped_product
 #			self.gene_info[gene.id] = gene
-		
+		#logger.info('{} CDS, {} RNA'.format(len(self.cds_genes), len(self.rna_genes)))
+		# ban
+		self.cds_genes = [gene for gene in self.cds_genes if gene.name not in ban_names]
+		self.rna_genes = [gene for gene in self.rna_genes if gene.name not in ban_names]
+		#print >> sys.stderr, sorted([gene.name for gene in self.cds_genes])
 		logger.info('{} CDS, {} RNA'.format(len(self.cds_genes), len(self.rna_genes)))
 		self.cds_hmmfiles = [self.get_hmmfile(gene) for gene in self.cds_genes]
 		self.rna_hmmfiles = [self.get_hmmfile(gene) for gene in self.rna_genes]

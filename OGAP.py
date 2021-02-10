@@ -392,6 +392,9 @@ class Pipeline():
 			#print >>sys.stderr, key, count, '->', len(better_record)
 			# remove that high qual but with more parts
 			top_record = [record for record in records if record.score >= highest_score*0.96]
+			print >>sys.stderr, key, count, highest_score, good_cutoff, top_record, better_record
+			if not top_record:
+				continue
 			min_npart = min([record.npart for record in top_record])
 			better_record = [record for record in better_record if record.npart <= min_npart]
 			
@@ -1153,6 +1156,7 @@ class Pipeline():
 
 def main():
 	args = makeArgparse()
+	print >>sys.stderr, ' '.join(sys.argv)
 	print >>sys.stderr, args.__dict__
 	pipeline = Pipeline(**args.__dict__)
 	pipeline.run()

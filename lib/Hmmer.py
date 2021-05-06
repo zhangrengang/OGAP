@@ -54,17 +54,24 @@ class HmmSearch(object):
 	#		print >>sys.stderr, hit.nucl_hit
 			graph.add_node(hit)
 		graph.link_nodes()
-#		for node in graph.nodes():
-#			print >>sys.stderr, node.short
-#		for n1, n2 in graph.edges():
-#			print >>sys.stderr, n1.short, '-',  n2.short
+		print >>sys.stderr, 'Nodes:'
+		for node in sorted(graph.nodes(), key=lambda x: x.hmmcoord):
+			print >>sys.stderr, node.short
+		print >>sys.stderr, 'Edges:'
+		for n1, n2 in sorted(graph.edges(), key=lambda x: (x[0].hmmcoord, x[1].hmmcoord)):
+			print >>sys.stderr, n1.short, '-',  n2.short
 		graph.prune_graph()
+		graph.break_circle()
 	#	print >>sys.stderr, graph.nodes()
+
+		print >>sys.stderr, 'after pruned:'
+		for n1, n2 in sorted(graph.edges(), key=lambda x: (x[0].hmmcoord, x[1].hmmcoord)):
+			print >>sys.stderr, n1.short, '-',  n2.short
 
 		hmmcovs = []
 		copies = []
 		for path in graph.linearize_path():
-			#print >>sys.stderr, 'path:', path
+	#		print >>sys.stderr, 'path:', path
 			if path.hmmcov < min_cov:
 				print >>sys.stderr, 'discarded path for low coverage:', path
 				continue
@@ -422,9 +429,9 @@ class HmmSearchDomHit:
 		# contains
 		# ------->	self	 ---->
 		#   ---->   other  -------->
-		if other.hmmstart >= self.hmmstart and other.hmmend <= self.hmmend:
+		if other.hmmstart-10 >= self.hmmstart and other.hmmend+10 <= self.hmmend:
 			return False
-		if self.hmmstart >= other.hmmstart and self.hmmend <= other.hmmend:
+		if self.hmmstart-10 >= other.hmmstart and self.hmmend+10 <= other.hmmend:
 			return False
 		left_dist = other.hmmstart - self.hmmstart + 1
 		mid_dist  = other.hmmstart - self.hmmend + 1
@@ -482,6 +489,9 @@ class HmmSearchDomHit:
 	@property
 	def short(self):
 		return (self.nucl_alnstart, self.nucl_alnend, self.strand, self.hmmstart, self.hmmend)
+	@property
+	def hmmcoord(self):
+		return (self.hmmstart, self.hmmend)
 	def __str__(self):
 		return str(self.short)
 	def get_hmm_distance(self, other):
@@ -526,8 +536,8 @@ class HmmSearchDomHit:
 			frame = '.'
 		return strand, frame
 class DiGraph(nx.DiGraph):
-	def __init__(self):
-		super(DiGraph, self).__init__()
+	def __init__(self, data=None, **attr):
+		super(DiGraph, self).__init__(data, **attr)
 	@property
 	def sources(self):
 		return [ node for node in self.nodes() if not self.predecessors(node)]
@@ -536,8 +546,8 @@ class DiGraph(nx.DiGraph):
 		return [ node for node in self.nodes() if not self.successors(node)]
 
 class HmmStructueGraph(DiGraph):
-	def __init__(self):
-		super(HmmStructueGraph, self).__init__()
+	def __init__(self, data=None, **attr):
+		super(HmmStructueGraph, self).__init__(data, **attr)
 	def build_from_hmm_hits(self, hits):	# HmmSearchDomHit
 		for i, hit in enumerate(hits):
 			self.add_node(hit)
@@ -551,11 +561,12 @@ class HmmStructueGraph(DiGraph):
 				self.add_edge(hit2, hit1, dist=dist_21)
 	def break_circle(self):
 		for circle in nx.simple_cycles(self):
-			sg = G.subgraph(circle)
+#			print circle
+			sg = self.subgraph(circle)
 			max_dist_edge = max(sg.edges(), key=lambda x: sg.get_edge_data(*x))
 			n1, n2 = max_dist_edge
 			print >>sys.stderr, 'break circle', n1.short, '-',  n2.short
-			G.remove_edge(*max_dist_edge)
+			self.remove_edge(*max_dist_edge)
 	def prune_graph(self):
 		# remove bridged edge
 		for node in self.nodes():
@@ -564,6 +575,8 @@ class HmmStructueGraph(DiGraph):
 			for predecessor, successor in itertools.product(predecessors, successors):
 				if self.has_edge(predecessor, successor):
 					self.remove_edge(predecessor, successor)
+					n1, n2 = predecessor, successor
+					print >>sys.stderr, 'remove bridged edge:', n1.short, '-',  n2.short
 		# remove distant edge
 		for node in self.nodes():
 			predecessors = set(self.predecessors(node))
@@ -599,6 +612,8 @@ class HmmStructueGraph(DiGraph):
 				if edge in set(combination):
 					continue
 				self.remove_edge(*edge)
+				n1, n2 = edge
+				print >>sys.stderr, 'remove distant edge:', n1.short, '-',  n2.short
 	def linearize_path(self):
 		for source, target in itertools.product(self.sources, self.targets):
 			for path in nx.all_simple_paths(self, source, target):

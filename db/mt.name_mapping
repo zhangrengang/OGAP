@@ -95,6 +95,7 @@ trnS-GGA	tRNA-Ser	tRNA-Ser-GGA
 trnS-GGA-cp	tRNA-Ser	tRNA-Ser-GGA-cp
 trnS-UGA	tRNA-Ser	tRNA-Ser-UGA
 trnT-GGU	tRNA-Thr	tRNA-Thr-GGT
+trnT-GGU-cp	tRNA-Thr
 trnT-UGU	tRNA-Thr	tRNA-Thr-TGT
 trnT-AGU	tRNA-Thr	
 trnV-UAC	tRNA-Val	tRNA-Val-TAC

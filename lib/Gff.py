@@ -280,7 +280,8 @@ class GffGenes(object):
 				if line.type == 'gene':	 # trans-splicing in RefSeq
 					continue
 			ids.add(id)
-			if (parent is None or line.type == 'gene') and len(record.nodes()) > 0:
+			if (parent is None or line.type == 'gene' or parent not in record) \
+					and len(record.nodes()) > 0:
 				yield record
 				record = GffRecord()
 				i = 1
@@ -320,6 +321,29 @@ class GtfGenes(GffGenes):
 		self.annotations = lines.annotations
 		if len(record.nodes()) > 0:
 			yield record
+class StringTieGtfGenes(GtfGenes):
+	def __init__(self, gff, parser=GtfLines):
+		super(PinfishGtfGenes, self).__init__(gff, parser)
+	def _parse(self):
+		lines = self.parser(self.gff)
+		record = GffRecord()
+		last_gene = ''
+		for i, line in enumerate(lines):
+			if line.type == 'transcript':
+				id, parent = line.transcript_id, line.gene_id
+				gene = parent
+			else:
+				id, parent = i, line.transcript_id
+			if last_gene and last_gene != gene:
+				yield record
+				record = GffRecord()
+				record.add_node(id, line=line, index=i)
+			else:
+				record.add_node(id, line=line, index=i)
+				record.add_edge(parent, id)
+			last_gene = gene
+		yield record
+
 class PinfishGtfGenes(GtfGenes):
 	def __init__(self, gff, parser=GtfLines):
 		super(PinfishGtfGenes, self).__init__(gff, parser)
@@ -466,6 +490,9 @@ class GffExons(object):
 	@lazyproperty
 	def start(self):
 		return self.coord[1]
+	@lazyproperty
+	def end(self):
+		return self.coord[2]
 	def strand(self):
 		return self.coord[3]
 	def extract_seq(self, d_seqs, type='exon'):
@@ -478,6 +505,8 @@ class GffExons(object):
 			else:
 				seq = d_seqs
 			exon_seq = seq[line.start-1:line.end]
+			if isinstance(exon_seq, list):
+				exon_seq = Seq(''.join(exon_seq))
 			if line.strand == '-':
 				exon_seq = exon_seq.reverse_complement()
 			seqs += [str(exon_seq)]
@@ -491,7 +520,7 @@ class GffExons(object):
 		gene_name = gene.name
 		product = gene.product
 		gene_id = gene_copy.id
-		rna_id = gene_id + '.t1'
+		rna_id = '{}.t1'.format(gene_id)
 		type = 'gene'
 		score, frame = '.', '.'
 		trans_splicing = False
@@ -533,15 +562,18 @@ class GffExons(object):
 			attributes = copy.deepcopy(attributes)
 			line = copy.deepcopy(line)
 			line.__dict__.update(**exon.__dict__)
-			attributes.update(ID='{}:{}{}'.format(rna_id, exon.type[0].lower(), i+1))
+			line.ID = '{}:{}{}'.format(rna_id, exon.type[0].lower(), i+1)
+#			attributes.update(ID='{}:{}{}'.format(rna_id, exon.type[0].lower(), i+1))
 			line.attributes = attributes
-			
+			line.Parent = rna_id
+
 			line.__dict__.update(source=source) #, score=score)
 			#print >>sys.stderr, line.attributes
 			if exon.type != 'exon':
 				type = 'exon'
 				exon_line = copy.deepcopy(line)
-				exon_line.attributes.update(ID='{}:{}{}'.format(rna_id, type[0], i+1))
+				exon_line.ID = '{}:{}{}'.format(rna_id, type[0], i+1)
+#				exon_line.attributes.update(ID='{}:{}{}'.format(rna_id, type[0], i+1))
 				exon_line.__dict__.update(type=type, frame=frame, score=score)
 				lines += [exon_line]
 			lines += [line]
@@ -728,6 +760,11 @@ class ExonerateGtfExons(GtfExons):
 		if self.start_codon_found and self.stop_codon_found:
 			return True
 		return False
+	def get_seq(self, seq, start, end):
+		seq = seq[start:end]
+		if isinstance(seq, list):
+			seq = Seq(''.join(seq))
+		return seq
 	def trace_start_codon(self, seq, transl_table=1, max_dist=150):
 		first_exon = self.exons[0]
 		strand = first_exon.strand
@@ -738,7 +775,7 @@ class ExonerateGtfExons(GtfExons):
 		#print >>sys.stderr, tss, upper, strand, first_exon.start, first_exon.end
 		i = tss
 		for i in range(tss, upper, 3):
-			codon = seq[i:i+3]
+			codon = self.get_seq(seq, i, i+3) #seq[i:i+3]
 			if self.is_start_codon(codon, strand, transl_table):
 				dist1 = i - tss
 				break
@@ -753,7 +790,7 @@ class ExonerateGtfExons(GtfExons):
 		lower = first_exon.start if strand == '-' else 0
 		j = tss
 		for j in range(tss, lower, -3):
-			codon = seq[j-3:j]
+			codon = self.get_seq(seq, j-3,j) #seq[j-3:j]
 			if self.is_start_codon(codon, strand, transl_table):
 				dist2 = tss - j + 3
 				break
@@ -787,7 +824,7 @@ class ExonerateGtfExons(GtfExons):
 		# --> right
 		upper = last_exon.end if strand == '-' else len(seq)
 		for i in range(tes, upper, 3):
-			codon = seq[i:i+3]
+			codon = self.get_seq(seq, i, i+3) #seq[i:i+3]
 			if self.is_stop_codon(codon, strand, transl_table):
 				dist1 = i - tes
 				break
@@ -796,7 +833,7 @@ class ExonerateGtfExons(GtfExons):
 		# <-- left
 		lower = 0 if strand == '-' else last_exon.start
 		for j in range(tes, lower, -3):
-			codon = seq[j-3:j]
+			codon = self.get_seq(seq, j-3, j) #seq[j-3:j]
 			if self.is_stop_codon(codon, strand, transl_table):
 				dist2 = tes - j + 3
 				break
@@ -814,7 +851,7 @@ class ExonerateGtfExons(GtfExons):
 					last_exon.end = i + 3
 			else:	# <--
 				if strand == '-':
-					last_exon.start = j - 3
+					last_exon.start = j - 2 #3
 				else:
 					last_exon.end = j
 		self.has_stop_codon = stop_codon_found
@@ -827,7 +864,7 @@ class ExonerateGtfExons(GtfExons):
 				if last_truncated:
 					exon.end -= exon.frame
 				for i in range(start, stop, step):
-					codon = seq[i-3:i]
+					codon = self.get_seq(seq, i-3, i) #seq[i-3:i]
 					if self.is_stop_codon(codon, strand, transl_table):
 						exon.start = i
 						last_truncated = True
@@ -841,7 +878,7 @@ class ExonerateGtfExons(GtfExons):
 					exon.start += exon.frame
 					exon.frame = 0
 				for i in range(start, stop, step):
-					codon = seq[i:i+3]
+					codon = self.get_seq(seq, i, i+3) #seq[i:i+3]
 					if self.is_stop_codon(codon, strand, transl_table):
 						exon.end = i	# 1-based
 						last_truncated = True
@@ -917,7 +954,7 @@ class ExonerateGtfExons(GtfExons):
 		print >> fout, '# hit = {}::{}'.format(self.hit, self.score)
 		
 class ExonerateGffGenes(GffGenes):	# each alignment
-	def __init__(self, gff, parser=ExonerateGtfLines):
+	def __init__(self, gff=None, parser=ExonerateGtfLines):
 		self.gff = gff
 		self.parser = parser
 	def _parse(self):
@@ -983,9 +1020,12 @@ class ExonerateGffGenes(GffGenes):	# each alignment
 		#print >>sys.stderr, record.score
 		exons = [line for line in record.lines if line.type == 'exon']
 		exons = ExonerateGtfExons(exons)
-		exons.hit = record.gene.attributes['sequence']
-		exons.score = int(record.score)
+		try: exons.hit = record.gene.attributes['sequence']
+		except : exons.hit = None
+		try: exons.score = int(record.score)
+		except: exons.score = 0
 		exons.update_frame()
+#		seq = list(seq)
 		exons.trace_start_codon(seq, **kargs)
 		try:
 			assert exons.total_length % 3 == 0
@@ -998,7 +1038,7 @@ class ExonerateGffGenes(GffGenes):	# each alignment
 		try:
 			assert exons.total_length % 3 == 0
 		except AssertionError:
-			print >>sys.stderr, exons.total_length, exons.score, exons
+			print >>sys.stderr, 'not 3 CDS', exons.total_length, exons.score, exons
 			
 		if '*' in set(exons.pep_seq):
 			exons.truncate_exons(seq, **kargs)
@@ -1007,7 +1047,7 @@ class ExonerateGffGenes(GffGenes):	# each alignment
 		try:
 			assert exons.total_length % 3 == 0
 		except AssertionError:
-			print >>sys.stderr, exons.total_length, exons.score, exons
+			print >>sys.stderr, 'not 3 CDS', exons.total_length, exons.score, exons
 		return exons
 
 	def to_hints(self, fout, src='P', pri=4, source='exonerate', intron_type = 'intronpart'):
@@ -1078,6 +1118,17 @@ class GffRecord(nx.DiGraph):
 	@property
 	def lines(self):
 		return [self.node[node]['line'] for node in self.sort_nodes()]
+	@property
+	def rna_type(self):
+		for line in self.lines:
+			if line.type.find('RNA') >=0:
+				return line.type
+		for line in self.lines:
+			if line.type not in {'gene', 'exon', 'CDS'}:
+				return line.type
+		for line in self.lines:
+			if line.type == 'CDS':
+				return 'mRNA'
 	def to_exons(self):
 		return GffExons(self.lines)
 	@property
@@ -1158,7 +1209,7 @@ class GffRecord(nx.DiGraph):
 	def get_node_feature(self, node):
 		try: return self.node[node]['line']
 		except KeyError as e:
-			print >>sys.stderr, node, self.nodes()
+			print >>sys.stderr, 'get_node_feature-KeyError', node, self.nodes()
 			raise KeyError(e)
 	@lazyproperty
 	def empty_nodes(self):
@@ -1263,7 +1314,8 @@ class GffRNARecords():
 		return self._parse()
 	def _parse(self):
 		self.GeneRecord = copy.deepcopy(self._GeneRecord)
-		self.GeneRecord.remove_node(self.GeneRecord.id)
+		if self.GeneRecord.gene.type == 'gene':
+			self.GeneRecord.remove_node(self.GeneRecord.id)
 		for cmpt in nx.connected_components(self.GeneRecord.to_undirected()):
 			yield self.GeneRecord.subgraph(cmpt)
 	def to_gene(self, rnas):

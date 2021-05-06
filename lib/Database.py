@@ -684,13 +684,15 @@ augustus --species={species} {train_set}.test --translation_table={transl_table}
 		return '{}/{}'.format(self.dbrootdir, 'sqn.template')
 
 class Info(object):
-	def __init__(self, infofile):
+	def __init__(self, infofile, ban=None):
 		self.infofile = open(infofile)
 	def __iter__(self):
 		return self._parse()
 	def _parse(self):
 		for line in self.infofile:
 			if line.startswith('#'):
+				continue
+			if hasattr(self, 'ban') and self.ban is not None and line.startswith(self.ban):
 				continue
 			line = re.compile(r'\t+').split((line.strip()))
 			yield self._parse_line(line)
@@ -897,6 +899,7 @@ class TaxonomyInfoLine(GeneInfoLine):
 class Ete3TaxonomyInfo(Info):
 	def __init__(self, infolines):
 		self.infofile = infolines.split('\n')
+		self.ban = 'WARN'
 	def _parse_line(self, line):
 		return Ete3TaxonomyInfoLine(line)
 		

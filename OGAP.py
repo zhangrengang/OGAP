@@ -18,7 +18,7 @@ from lib.small_tools import mkdirs, rmdirs
 from lib.small_tools import open_file as open
 
 bindir = os.path.dirname(os.path.realpath(__file__))
-os.environ['PATH'] = bindir + ':' + os.environ['PATH']
+os.environ['PATH'] = bindir+'/bin' + ':' + os.environ['PATH']
 
 LOCATION = {'pt': 'chloroplast', 'mt': 'mitochondrion'}
 
@@ -66,6 +66,8 @@ def makeArgparse():
                     help="do not annotate rRNA [default=%(default)s]")
 	parser.add_argument('-no_trn', action="store_true", default=False,
                     help="do not annotate tRNA [default=%(default)s]")
+	parser.add_argument('-genes', type=str, default=None, nargs='+',
+					help="only annotate specified genes [default=%(default)s]")
 
 	group_out = parser.add_argument_group('output',)
 	group_out.add_argument('-o', "-outdir", action="store", dest='outdir',
@@ -116,7 +118,7 @@ def makeArgparse():
 		elif args.pt:
 			args.organ = 'pt'
 		else:
-			raise ValueError('no organ type specified')
+			raise ValueError('no organelle type (-pt or -mt) specified')
 	return args
 
 class Pipeline():
@@ -135,6 +137,7 @@ class Pipeline():
 				no_cds=False,		# do not annotate CDS
 				no_rrn=False,
 				no_trn=False,
+				genes=None,
 				sqn_annot=False,	# only sequences with annotation to sqn
 				include_orf=False,	# annotate ORF
 				exon_diff_penalty = 100,
@@ -175,6 +178,7 @@ class Pipeline():
 		self.no_cds = no_cds
 		self.no_rrn = no_rrn
 		self.no_trn = no_trn
+		self.genes = genes
 		self.include_orf = include_orf
 		self.trn_opts = trn_opts
 		self.trn_struct = trn_struct
@@ -392,8 +396,9 @@ class Pipeline():
 			#print >>sys.stderr, key, count, '->', len(better_record)
 			# remove that high qual but with more parts
 			top_record = [record for record in records if record.score >= highest_score*0.96]
-			print >>sys.stderr, key, count, highest_score, good_cutoff, top_record, better_record
+			#print >>sys.stderr, key, count, highest_score, good_cutoff, top_record, better_record
 			if not top_record:
+				print >>sys.stderr, key, count, '->', 0, 'with highest_score:', highest_score
 				continue
 			min_npart = min([record.npart for record in top_record])
 			better_record = [record for record in better_record if record.npart <= min_npart]
@@ -516,6 +521,8 @@ class Pipeline():
 				continue
 			if gene.seq_type == 'tRNA' and self.no_trn:
 				continue
+			if self.genes is not None and gene.name not in set(self.genes):
+				continue
 			print >>sys.stderr, '\n   >> {}: {}'.format(gene, gene.name)
 			hmmfile = self.db.get_hmmfile(gene)
 			domtblout = self.get_domtblout(gene, src='g')
@@ -615,6 +622,8 @@ class Pipeline():
 			#print >>sys.stderr,d_length
 		# hmmsearch
 		for gene in self.db.cds_genes:
+			if self.genes is not None and gene.name not in set(self.genes):
+				continue
 			print >>sys.stderr, '\n   >> {}: {}'.format(gene, gene.name)
 			hmmfile = self.db.get_hmmfile(gene)
 			domtblout = self.get_domtblout(gene, src='g')
@@ -1156,8 +1165,8 @@ class Pipeline():
 
 def main():
 	args = makeArgparse()
-	print >>sys.stderr, ' '.join(sys.argv)
-	print >>sys.stderr, args.__dict__
+	print >>sys.stderr, 'To re-run:', ' '.join(sys.argv)
+	print >>sys.stderr, 'ARGS:', args.__dict__
 	pipeline = Pipeline(**args.__dict__)
 	pipeline.run()
 

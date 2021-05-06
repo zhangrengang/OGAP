@@ -12,7 +12,7 @@ class PhyloPipeline(object):
 			outprefix=None,
 			gnid = True,
 			tmpdir='./tmp',
-			types=['cds'], 
+			types=['cds'], #, 'rna'], 
 			min_shared=50):
 		self.indir = indir
 		self.tmpdir = tmpdir
@@ -80,6 +80,7 @@ class PhyloPipeline(object):
 		# write
 		for gene, records in d_seqs.items():
 			shared = 1e2*len(records) / nspecies
+			logger.info('{}\t{}'.format(gene, shared))
 			if shared < self.min_shared:
 				logger.info('gene {} is only shared by {}% species, removed.\
 							'.format(gene, shared))
@@ -104,6 +105,10 @@ class PhyloPipeline(object):
 		fastafiles = sorted(glob.glob('{}/*{}'.format(self.indir, suffix)))
 		prefixs = [self.get_prefix(fasta, suffix) for fasta in fastafiles]
 		return fastafiles, prefixs
+	def get_files(self, suffix):
+		files = sorted(glob.glob('{}/*{}'.format(self.indir, suffix)))
+		prefixs = [self.get_prefix(fl, suffix) for fl in files]
+		return files, prefixs
 	def get_genome_id(self):
 		suffix = '.gb'
 		gbfiles = sorted(glob.glob('{}/*{}'.format(self.indir, suffix)))
@@ -120,6 +125,36 @@ class PhyloPipeline(object):
 				if re.compile('\-\d+$').search(rc.id):
 					continue
 				yield rc, prefix
+class Summary(PhyloPipeline):
+	def __init__(self, indir,):
+		self.indir = indir
+		self.output = '{}.summry'.format(self.indir.rstrip('/'))
+	def summary(self):
+		from Gff import GffGenes
+		genes = []
+		d_info = {}
+		for gff, prefix in zip(*self.get_files('.gff3')):
+			d_genes = {}
+			for rc in GffGenes(gff):
+				gene = rc.gene
+				name = gene.attributes['gene']
+				cov = gene.attributes['cov']
+				try: d_genes[name] += [cov]
+				except KeyError: d_genes[name] = [cov]
+				genes += [(rc.rna_type, name)]
+			d_info[prefix] = d_genes
+
+		f = open(self.output, 'w')
+		sps = sorted(d_info.keys())
+		line = ['gene', 'type'] + sps
+		print >>f, '\t'.join(line)
+		for type, gene in sorted(set(genes)):
+			covs = [d_info[sp].get(gene, ['0']) for sp in sps]
+#			print covs
+			covs = ['/'.join(sorted(cov, key=lambda y:-float(y))) for cov in covs]
+			line = [gene, type] + covs
+			print >>f, '\t'.join(line)
+		f.close()
 class KaKsPipeline(PhyloPipeline):
 	def __init__(self, indir, tmpdir='/dev/shm/tmp/', ncpu=20):
 		self.indir = indir
@@ -180,6 +215,8 @@ def main():
 		PhyloPipeline(indir).run()
 	elif subcmd == 'kaks':
 		KaKsPipeline(indir).run()
+	elif subcmd == 'summary':
+		Summary(indir).summary()
 	else:
 		raise ValueError
 

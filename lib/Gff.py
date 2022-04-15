@@ -634,7 +634,7 @@ class GffExons(object):
 		record.trans_splicing = trans_splicing
 		return record
 	def to_tbl(self, fout, chrom=None, feat_type='gene', wgs=True, gene=True,
-			transl_table=1, rna_type=None, locus_tag=None):
+			transl_table=1, rna_type=None, locus_tag=None, note=None):
 		if self.rna_type == 'repeat':
 			exon = self[0]
 			start, end = exon.start, exon.end
@@ -692,6 +692,10 @@ class GffExons(object):
 			line = ['', '', 'pseudo']
 			print >>fout, '\t'.join(line)
 			return
+		if note:
+			line = ['', '', 'note', note]
+			line = map(str, line)
+			print >>fout, '\t'.join(line)
 
 		# shared lines by mRNA and CDS
 		lines = []
@@ -744,6 +748,7 @@ class GffExons(object):
 			line = ['', '', 'codon_start', codon_start]
 			line = map(str, line)
 			print >>fout, '\t'.join(line)
+
 	def reverse(self, length):
 		exons = []
 		for exon in self:

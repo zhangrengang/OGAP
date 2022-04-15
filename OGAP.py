@@ -120,6 +120,8 @@ def makeArgparse():
 	if args.organ is None:
 		if args.mt:
 			args.organ = 'mt'
+			if args.pt:
+				args.extend_organ = 'pt'
 		elif args.pt:
 			args.organ = 'pt'
 		else:
@@ -129,6 +131,7 @@ def makeArgparse():
 class Pipeline():
 	def __init__(self, genome, 
 				organ, taxon, 
+				extend_organ = None,
 				trans=False,
 				outdir='.',
 				prefix=None,
@@ -170,8 +173,8 @@ class Pipeline():
 				seqfmt='fasta', **kargs):
 		
 		self.organ = organ
+		self.extend_organ = extend_organ
 		self.genome = os.path.realpath(genome)
-		self.organ = organ
 		self.taxon = taxon
 		self.trans = trans
 		self.outdir = os.path.realpath(outdir)
@@ -249,6 +252,13 @@ class Pipeline():
 		elif taxon is None:
 			logger.info('neither -taxon or -organism must be specified')
 		self.taxon = taxon	# taxa
+		
+		self.d_taxa = OrderedDict()
+		self.d_taxa[self.organ] = taxon
+		# extend
+		if self.extend_organ:
+			taxon = Database(organ=self.extend_organ).select_db(self.organism).taxon
+			self.d_taxa[self.extend_organ] = [taxon]
 		#self.db = Database(organ=organ, taxon=taxon, include_orf=include_orf)
 		
 		#self.ogtype = self.db.ogtype
@@ -306,42 +316,47 @@ class Pipeline():
 
 		# to fasta
 		#self.fsa = self.to_fsa()
-
+		#print self.d_taxa
 		records = []
-		for taxon in self.taxon:
-			db_records = []
-			self.db = Database(organ=self.organ, taxon=taxon, include_orf=self.include_orf)
-			self.ogtype = self.db.ogtype
-			# folder
-			uid = uuid.uuid1()
-			self.tmpdir = '{}/{}/{}-{}'.format(self.tmpdir0, self.ogtype,
-                               os.path.basename(self.prefix), uid)
-			self.hmmoutdir = '{}/hmmout'.format(self.tmpdir)
-			self.agtoutdir = '{}/augustus'.format(self.tmpdir)
-			self.trndir = '{}/{}.trna'.format(self.outdir, self.prefix)
-			rmdirs(self.agtoutdir)
-			mkdirs(self.tmpdir)
-			mkdirs(self.hmmoutdir, self.agtoutdir)
-			# check
-			logger.info('checking database: {}'.format(self.db.ogtype))
-			self.db.checkdb()
-			if self.transl_table is None:
-				self.transl_table = self.db.transl_table
-				logger.info('transl_table: {}'.format(self.transl_table))
-			# to fasta	# require self.transl_table
-			self.fsa = self.to_fsa()
-			# cds-protein finder
-			if self.est is not None:
-				self.hmmsearch_est()
-			logger.info('finding protein-coding genes by HMM+enonerate+augustus')
-			db_records += self.hmmsearch_protein()
-		
-			# rna finder
-			logger.info('finding non-coding genes by HMM+exonerate (rRNA) or HMM+tRNAscan-SE(tRNA)')
-			db_records += self.hmmsearch_rna()
-			for record in db_records:
-				record[0].attributes['db'] = taxon
-			records += db_records
+		for organ, taxa in self.d_taxa.items():
+			for taxon in taxa:
+				db_records = []
+				self.db = Database(organ=organ, taxon=taxon, include_orf=self.include_orf)
+				self.ogtype = self.db.ogtype
+				# folder
+				uid = uuid.uuid1()
+				self.tmpdir = '{}/{}/{}-{}'.format(self.tmpdir0, self.ogtype,
+								   os.path.basename(self.prefix), uid)
+				self.hmmoutdir = '{}/hmmout'.format(self.tmpdir)
+				self.agtoutdir = '{}/augustus'.format(self.tmpdir)
+				self.trndir = '{}/{}.trna'.format(self.outdir, self.prefix)
+				rmdirs(self.agtoutdir)
+				mkdirs(self.tmpdir)
+				mkdirs(self.hmmoutdir, self.agtoutdir)
+				# check
+				logger.info('checking database: {}'.format(self.db.ogtype))
+				self.db.checkdb()
+				if self.transl_table is None:
+					self.transl_table = self.db.transl_table
+					logger.info('transl_table: {}'.format(self.transl_table))
+				# to fasta	# require self.transl_table
+				self.fsa = self.to_fsa()
+				# cds-protein finder
+				if self.est is not None:
+					self.hmmsearch_est()
+				logger.info('finding protein-coding genes by HMM+enonerate+augustus')
+				db_records += self.hmmsearch_protein()
+			
+				# rna finder
+				logger.info('finding non-coding genes by HMM+exonerate (rRNA) or HMM+tRNAscan-SE(tRNA)')
+				db_records += self.hmmsearch_rna()
+				for record in db_records:
+					record[0].attributes['db'] = taxon
+					if self.extend_organ and organ == 'pt':
+						record[0].attributes['note'] = 'cp-derived'
+						if record.rna_type == 'tRNA':
+							record.gene += '-cp'
+				records += db_records
 		# score
 		#logger.info('scoring genes by HMM')
 		#records = [self.score_record(record) for record in records]
@@ -359,7 +374,7 @@ class Pipeline():
 		if self.trn_struct:
 			self.plot_struct(self.trndir, records)
 		
-		# repeat	
+		# repeat
 		if self.repeat:
 			rep = RepeatPipeline(genome=self.fsa, tmpdir=self.tmpdir, prefix=self.prefix, **self.kargs)
 			records += rep.run()
@@ -1066,6 +1081,7 @@ class Pipeline():
 				continue
 			print >>fout, '>Feature {}'.format(seqid)
 			for record in my_records:
+				note = record[0].attributes.get('note')
 				if record in d_tags:
 					locus_tag = d_tags[record]
 				else:
@@ -1073,7 +1089,7 @@ class Pipeline():
 					locus_tag = '{}_{:0>4d}'.format(prefix, i)
 					d_tags[record] = locus_tag
 				record.to_tbl(fout, seqid, transl_table=self.transl_table, 
-						locus_tag=locus_tag, wgs=self.wgs)
+						locus_tag=locus_tag, wgs=self.wgs, note=note)
 		fout.close()
 		# fsa + tbl -> sqn -> genbank
 		sqn = '{}/{}.sqn'.format(self.outdir, self.prefix)

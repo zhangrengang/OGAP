@@ -69,7 +69,10 @@ python ../OGAP.py Arabidopsis_thaliana-mt.fa -mt -o mt_out -sp Arabidopsis_thali
 ```
 python ../OGAP.py Arabidopsis_thaliana-pt.gb -pt -o pt_out
 ```
-
+##### annonating mitochondrion naive and chloroplast(cp)-derived genes at the same time #####
+```
+python ../OGAP.py Arabidopsis_thaliana-mt.gb -mt -pt -o mt_out
+```
 ### Pipeline for multiple genomes (an example)
 ```
 for sp in Arabidopsis_thaliana Vitis_vinifera Oryza_sativa Salix_suchowensis Citrus_sinensis

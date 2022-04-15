@@ -106,13 +106,81 @@ class PslRecord():
 		return self.match - self.mismatch - self.qgap_count - self.qgap_bases - self.tgap_count - self.tgap_bases - self.block_count - self.qlclip - self.qrclip
 	@property
 	def qcov(self):
-		return
+		return 1.0*(self.qend - self.qstart) / self.qsize
 	@property
-	def tcov(self):
-		return
+	def tcov(self):	# global
+		return 1.0*(self.tend - self.tstart) / self.tsize
+	@property
+	def qmcov(self):
+		return 1.0*(self.match+self.mismatch) / self.qsize
+	@property
+	def tmcov(self):
+		return 1.0*(self.match+self.mismatch) / self.tsize
+
+	@property
+	def identity(self):	# local
+		return 1e2 * self.match/ (self.match+self.mismatch)
+	@property
+	def global_identity(self):
+		return 1e2 * self.match/ (self.match+self.mismatch+self.qgap_bases+self.tgap_bases+self.qlclip+self.qrclip)
 def test():
-	psl = sys.stdin
+	#psl = sys.stdin
+	psl = sys.argv[1]
 	for rc in PslParser(psl):
-		print rc.line, rc.score
+	#	print rc.line, rc.score
+		print rc.qname, rc.tname, rc.identity, rc.qcov, rc.tcov
+
+
+title = ['qname', 'tname', 'qsize', 'tsize',
+                    'qcov', 'tcov',     # (end-start) / size
+                    'qmcov', 'tmcov', # cov of match+mismatch, no indel
+                    'identity', 'global_identity']
+
+def _get_full_length(psl, min_qcov=0.95, min_tcov=0.95):
+	for rc in PslParser(psl):
+		if min_qcov is not None and rc.qcov<min_qcov:
+			continue
+		if min_tcov is not None and rc.tcov<min_tcov:
+			continue
+		rc.line = [rc.qname, rc.tname, rc.qsize, rc.tsize, rc.qcov, rc.tcov,
+                    rc.qmcov, rc.tmcov, # cov of match+mismatch
+                    rc.identity, rc.global_identity]
+		yield rc
+
+def get_full_length(psl, outab, min_qcov=0.95, min_tcov=0.95):
+	print >> outab, '\t'.join(title)
+	for rc in _get_full_length(psl, min_qcov=min_qcov, min_tcov=min_tcov):
+		line = map(str, rc.line)
+		print >> outab, '\t'.join(line)
+def get_best_full_length(psl, outab, min_qcov=0.95, min_tcov=0.95):
+	d_rcs = {}
+	for rc in _get_full_length(psl, min_qcov=min_qcov, min_tcov=min_tcov):
+		try: d_rcs[rc.qname] += [rc]
+		except KeyError: d_rcs[rc.qname] = [rc]
+	print >> outab, '\t'.join(title)
+	for qname, rcs in d_rcs.items():
+		best = max(rcs, key=lambda x:x.score)
+		line = map(str, best.line)
+		print >> outab, '\t'.join(line)
+def get_full_length2(psl, outab, min_qcov=0.95):
+	return get_full_length(psl, outab, min_qcov=min_qcov, min_tcov=None)
+
+def main():
+	subcmd = sys.argv[1]
+	if subcmd == 'full_length':
+		psl = sys.argv[2]
+		outab = sys.stdout
+		get_full_length(psl, outab)
+	elif subcmd == 'full_length2':
+		psl = sys.argv[2]
+		outab = sys.stdout
+		get_full_length2(psl, outab)
+	elif subcmd == 'best_fl':
+		psl = sys.argv[2]
+		outab = sys.stdout
+		get_best_full_length(psl, outab)
+	else:
+		raise ValueError('unknown command: {}'.format(subcmd))
 if __name__ == '__main__':
-	test()
+#	test()
+	main()

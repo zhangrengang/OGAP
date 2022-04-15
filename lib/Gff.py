@@ -7,9 +7,12 @@ import networkx as nx
 from Bio.Data import CodonTable
 from Bio.Seq import Seq
 from lazy_property import LazyWritableProperty as lazyproperty
-from small_tools import open_file as open
-from RunCmdsMP import logger
-from translate_seq import translate_cds
+try: from small_tools import open_file as open
+except ImportError: pass
+try: from RunCmdsMP import logger
+except ImportError: pass
+try: from translate_seq import translate_cds
+except ImportError: pass
 try: from Region import Regions, Region, Position
 except ImportError: pass
 
@@ -126,6 +129,16 @@ class GffLine(object):
 	@property
 	def region(self):
 		return Region(chrom=self.chrom, start=self.start, end=self.end)
+	@lazyproperty
+	def positions(self):	# list
+		if self.strand == '-':
+			return list(reversed(self.region.positions))
+		return self.region.positions
+	def extract_seq(self, chrom):
+		seq = chrom[self.start-1:self.end]
+		if self.strand == '-':
+			seq = seq.reverse_complement()
+		return seq
 	def has_overlap(self, other):
 		if not self.chrom == other.chrom:
 			return False
@@ -204,6 +217,11 @@ class ExonerateGtfLine(GtfLine):
 	def parse_attr(self, attributes):
 		return OrderedDict(kv.split(' ') for kv in attributes.split(' ; '))
 
+global HAS_PRINTED
+global PRINT_LIMIT
+HAS_PRINTED = 0
+PRINT_LIMIT = 10
+
 class GffLines(object):
 	'''gff parser for lines'''
 	def __init__(self, gff, parser=None, format=None, ):
@@ -228,6 +246,8 @@ class GffLines(object):
 	def __iter__(self):
 		return self._parse()
 	def _parse(self):
+		HAS_PRINTED = 0
+		PRINT_LIMIT = 2
 		if isinstance(self.gff, file):
 			handle = self.gff
 		elif isinstance(self.gff, str):
@@ -235,11 +255,17 @@ class GffLines(object):
 		else:
 			raise TypeError('Type {} of `{}` is invalid for gff'.format(type(self.gff), self.gff))
 		for line in handle:
+			#print >>sys.stderr, line
 			if line.startswith('#'):
 				self.annotations += [line]
 				continue
-			line = line.strip('\r\n').split('\t')
+			line = line.strip().split('\t')
+			if not line:
+				continue
 			if len(line) != 9 :
+				if HAS_PRINTED < PRINT_LIMIT:
+					print >>sys.stderr, '[WARN] length of {} is not 9'.format(line)
+					HAS_PRINTED += 1
 				continue
 			yield self.parser(line)
 class GtfLines(GffLines):
@@ -263,18 +289,21 @@ class ExonerateGtfLines(GffLines):
 			
 class GffGenes(object):
 	'''gff parser for genes'''
-	def __init__(self, gff, parser=GffLines):
+	def __init__(self, gff, parser=GffLines, **kargs):
 		self.gff = gff
 		self.parser = parser
+		self.kargs = kargs
 	def __iter__(self):
 		return self._parse()
 	def _parse(self):
-		record = GffRecord()
+		record = GffRecord(**self.kargs)
 		i = 0
 		ids = set([])
 		for line in self.parser(self.gff):
 			i += 1
 			id, parent = line.id, line.parent
+#			if i < 10:
+#				print >> sys.stderr, line
 			if id in ids:	# duplicated ID of CDS and UTR
 				id = '{}.{}'.format(id, i)
 				if line.type == 'gene':	 # trans-splicing in RefSeq
@@ -427,6 +456,7 @@ class AugustusGtfAnnotations():
 class GffExons(object):
 	def __init__(self, exons):
 		self.exons = exons
+		self.rna_type = 'mRNA'
 	def __iter__(self):
 		return iter(self.exons)
 	def __len__(self):
@@ -496,6 +526,7 @@ class GffExons(object):
 	def strand(self):
 		return self.coord[3]
 	def extract_seq(self, d_seqs, type='exon'):
+		'''exons must be in order'''
 		seqs = []
 		for line in self:	# exon
 			if not line.type == type:
@@ -511,6 +542,17 @@ class GffExons(object):
 				exon_seq = exon_seq.reverse_complement()
 			seqs += [str(exon_seq)]
 		return ''.join(seqs)
+	def to_positions(self, type='exon'):
+		positions = []
+		for line in self:   # exon
+			if not line.type == type:
+				continue
+		#   if line.strand == '-':
+		#	   positions += list(reversed(line.positions))
+		#   else:
+			positions += line.positions	# reverse if strand == '-'
+		return positions
+
 	def to_gff_record(self):
 		pass
 	def extend_gene(self, gene, gene_copy, source=None, rna_type='mRNA', pseudo=False):
@@ -591,7 +633,7 @@ class GffExons(object):
 		record.rna_type = rna_type
 		record.trans_splicing = trans_splicing
 		return record
-	def to_tbl(self, fout, chrom=None, feat_type='gene', wgs=True,
+	def to_tbl(self, fout, chrom=None, feat_type='gene', wgs=True, gene=True,
 			transl_table=1, rna_type=None, locus_tag=None):
 		if self.rna_type == 'repeat':
 			exon = self[0]
@@ -691,6 +733,7 @@ class GffExons(object):
 					codon_start = exon.frame + 1
 			line = map(str, line)
 			print >>fout, '\t'.join(line)
+
 		for line in lines:
 			print >>fout, '\t'.join(line)
 		if rna_type == 'CDS' and transl_table != 1:
@@ -1272,14 +1315,15 @@ class GffRecord(nx.DiGraph):
 			if utr.start < cds_start:
 				utr5 += [utr]
 			elif utr.end > cds_end:
-				Utr3 += [utr]
+				utr3 += [utr]
 			else:
 				raise ValueError('never')
 		if self.strand == '-':
 			utr5, utr3 = utr3, utr5
 		return utr5, utr3
-	def classify_positons(self, d_positon={}):
+	def classify_positons(self, d_positon={}, flank=5000):
 		'''codon1-3, utr, intron, upstream, downstream'''
+		self.flank = flank
 		if not self.is_coding:
 			return d_positon
 		for RNARecord in GffRNARecords(self):
@@ -1288,9 +1332,10 @@ class GffRecord(nx.DiGraph):
 			upstream, downsteam = RNARecord.streams
 			exons = feat_regions['exon']
 			introns = Regions.get_introns(exons)
+			splicing = Regions.get_splicing(exons)
 			for postype, regions in zip(
-					['upstream', 'utr5', 'intron', 'utr3', 'downsteam'], 
-					[upstream, utr5, introns, utr3, downsteam]):
+					['upstream', 'utr5', 'intron', 'utr3', 'downstream', 'splicing'], 
+					[upstream, utr5, introns, utr3, downsteam, splicing]):
 				for region in regions:
 					for pos in region.positions:
 						try: d_positon[pos].add(postype)
@@ -1298,6 +1343,9 @@ class GffRecord(nx.DiGraph):
 			d_condon = {0:'condon1', 1:'condon2', 2:'condon3'}
 			for cds in RNARecord.features['CDS']:
 				for pos in cds.region.positions:
+					postype = 'cds'
+					try: d_positon[pos].add(postype)
+					except KeyError: d_positon[pos] = {postype}
 					if cds.strand == '-':
 						condon = (cds.end-pos.pos-cds.frame) % 3
 					else:
@@ -1306,7 +1354,73 @@ class GffRecord(nx.DiGraph):
 					try: d_positon[pos].add(postype)
 					except KeyError: d_positon[pos] = {postype}
 		return d_positon
-					
+	def classify_fold(self, d_seqs, d_positon={}):
+		if not self.is_coding:
+			return d_positon
+		seq = d_seqs[self.chrom]
+		for RNARecord in GffRNARecords(self):
+			cds = RNARecord.features['CDS']
+			reverse = 1 if RNARecord.strand == '-' else 0
+			cds = sorted(cds, key=lambda x:x.start, reverse=reverse)
+			exons = GffExons(cds)
+		#	exons = RNARecord.to_exons()	# sorted
+			cds_seq = exons.extract_seq(seq, 'CDS')
+			cds_pos =  exons.to_positions('CDS')
+			#if RNARecord.id == 'Acyan01G0001200.1':
+			#   print >>sys.stderr, cds_pos, cds_seq, str(Seq(cds_seq).translate())
+			assert len(cds_seq) == len(cds_pos)
+			if len(cds_seq) % 3 != 0:
+				print >> sys.stderr, '[WARN] CDS of {} is not Multiple of 3'.format(RNARecord.id)
+			for i in range(0, len(cds_pos), 3):
+				codon = cds_seq[i:i+3]
+				cod_pos = cds_pos[i:i+3]
+				for j, pos in zip(range(3), cod_pos):
+					postype = fold_codon(codon, j)
+					if postype is None:
+						continue
+					try: d_positon[pos].add(postype)
+					except KeyError: d_positon[pos] = {postype}
+	def classify_fold2(self, d_seqs, d_positon={}):
+		'''exclude splicing sites'''
+		if not self.is_coding:
+			return d_positon
+		seq = d_seqs[self.chrom]
+		for RNARecord in GffRNARecords(self):
+			for cds in RNARecord.features['CDS']:
+				frame = cds.frame
+				cds_seq = cds.extract_seq(seq)	# coding strand
+				cds_pos = cds.positions			# coding strand
+				cds_seq = cds_seq[frame:]
+				cds_pos = cds_pos[frame:]
+				assert len(cds_seq) == len(cds_pos)
+				for i in range(0, len(cds_pos), 3):
+					codon = cds_seq[i:i+3]
+					cod_pos = cds_pos[i:i+3]
+					for j, pos in zip(range(3), cod_pos):
+						postype = fold_codon(codon, j)
+						if postype is None:
+							continue
+						try: d_positon[pos].add(postype)
+						except KeyError: d_positon[pos] = {postype}
+
+def fold_codon(codon, index):
+	if len(codon) != 3:
+		return None
+	my_codon = list(codon)
+	aas = []
+	for base in 'ATCG':
+		my_codon[index] = base
+		aa = Seq(''.join(my_codon)).translate()
+		aa = str(aa)
+		aas += [aa]
+	aas = set(aas)
+	if len(aas) == 4:
+		return 'fold-0'
+	if len(aas) == 1:
+	#   print >> sys.stderr, codon, index
+		return 'fold-4'
+	return None
+		
 class GffRNARecords():
 	def __init__(self, GeneRecord):
 		self._GeneRecord = GeneRecord
@@ -1315,7 +1429,10 @@ class GffRNARecords():
 	def _parse(self):
 		self.GeneRecord = copy.deepcopy(self._GeneRecord)
 		if self.GeneRecord.gene.type == 'gene':
-			self.GeneRecord.remove_node(self.GeneRecord.id)
+			if len(self.GeneRecord.lines) == 1:
+				pass
+			else:
+				self.GeneRecord.remove_node(self.GeneRecord.id)
 		for cmpt in nx.connected_components(self.GeneRecord.to_undirected()):
 			yield self.GeneRecord.subgraph(cmpt)
 	def to_gene(self, rnas):

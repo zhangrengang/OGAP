@@ -1,4 +1,4 @@
-import sys, os
+import sys, os, re
 import copy
 import argparse
 import uuid
@@ -51,9 +51,14 @@ def makeArgparse():
 	parser.add_argument('-sp', '-organism', type=str, default=None, dest='organism',
 					help="organism to be included in sqn, required for fasta input [default=%(default)s]")
 	parser.add_argument('-linear', action="store_true", default=False,
-					help="topology to be included in sqn [default=circular]")
+					help="topology to be included in sqn [default=circular for one sequence or linear for multiple sequences]")
+	parser.add_argument('-circular', action="store_true", default=None,
+                    help="force circular topology even with multiple sequences [default=%(default)s]")
 	parser.add_argument('-partial', action="store_true", default=False,
-					help="completeness to be included in sqn [default=complete]")
+					help="completeness to be included in sqn [default=complete for one sequence and partial for multiple sequences]")
+	parser.add_argument('-complete', action="store_true", default=None,
+                    help="force complete even with multiple sequences or gap(s) [default=%(default)s]")
+
 	parser.add_argument('-no_sqn', action="store_true", default=False,
                     help="do not generate sqn file [default=%(default)s]")
 	parser.add_argument('-wgs', action="store_true", default=False,
@@ -132,7 +137,9 @@ class Pipeline():
 				tmpdir='/dev/shm/tmp', 
 				organism=None,
 				linear=False, 
+				circular=None,
 				partial=False,
+				complete=None,
 				nosqn=False, wgs=False,
 				no_cds=False,		# do not annotate CDS
 				no_rrn=False,
@@ -171,7 +178,9 @@ class Pipeline():
 		self.est = est
 		self.organism = organism
 		self.linear = linear
+		self.circular = circular
 		self.partial = partial
+		self.complete = complete
 		self.nosqn = nosqn
 		self.wgs = wgs
 		self.sqn_annot = sqn_annot
@@ -206,10 +215,14 @@ class Pipeline():
 				try:
 					if rc.annotations['topology'] == 'linear':
 						self.linear = True
+					else:
+						self.circular = True
 				except KeyError: pass
 			if not self.partial:
 				if rc.description.find('complete') < 0:
 					self.partial = True
+				else:
+					self.complete = True
 		# min coverage of one hmm hit
 		self.min_cds_hmmcov = min_cds_hmmcov
 		self.min_rrn_hmmcov = min_rrn_hmmcov
@@ -280,12 +293,16 @@ class Pipeline():
 		seqids = self.seqs.keys()
 		self.nseqs = len(seqids)
 		if self.nseqs > 1:
-			logger.info('changing partial to True due to nseqs>1')
-			self.linear = self.partial = True
+			if not self.circular:
+				self.linear = True
+			if not self.complete:
+				logger.info('changing partial to True due to nseqs>1')
+				self.partial = True
 			self.sqn_annot = True
 		if self.contains_gap(self.seqs.values()):
-			logger.info('changing partial to True due to non-ATCG gap(s)')
-			self.partial = True
+			if not self.complete:
+				logger.info('changing partial to True due to non-ATCG gap(s)')
+				self.partial = True
 
 		# to fasta
 		#self.fsa = self.to_fsa()
@@ -1012,8 +1029,16 @@ class Pipeline():
 		desc = ' '.join(desc)
 		fsa = '{}/{}.fsa'.format(self.outdir, self.prefix)
 		fout = open(fsa, 'w')
-		for id, seq in self.seqs.items():	
-			print >> fout, '>{} {}\n{}'.format(id, desc, seq)
+		i = 0
+		for id, seq in self.seqs.items():
+			i += 1
+			if self.complete and self.nseqs > 1:	# chromosome
+				try: chrid = re.compile(r'(\d+)').search(id).groups()[0]
+				except AttributeError: chrid = i
+				desc2 = desc + ' [chromosome={}]'.format(chrid)
+			else:
+				desc2 = desc
+			print >> fout, '>{} {}\n{}'.format(id, desc2, seq)
 		fout.close()
 		return fsa
 

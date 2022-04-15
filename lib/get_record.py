@@ -88,7 +88,9 @@ def get_records(input_file, output_file, in_accnos,
 		i = 0
 		for line in open(input_file,'r'):
 			i += 1
-			if i == head:
+			if not line.strip():
+				continue
+			if i <= head:
 				f.write(line)
 			else:
 				temp = line.strip().split(sep)

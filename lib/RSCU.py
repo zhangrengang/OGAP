@@ -50,6 +50,10 @@ def main_plot(cdsfiles, transl_table=1):
 	taxa = [list(CodonUsage(cdsfile, transl_table=transl_table)) 
 				for cdsfile in cdsfiles]
 	bar_plot(taxa)
+	with open('CodonUsage.tsv', 'w') as outable:
+		main(cdsfile, outable, transl_table=transl_table)
+
+
 colors_lst = ['#980000','#00ffff','#4a86e8','#ff9900', #'#ffff00', '#0000ff',
     '#9900ff','#ff00ff','#274e13','#000000','#cccccc','#7f6000',
     '#a64d79','#6aa84f','#fff2cc','#47a952','#3ea6b6','#a5b805','#8f9276','#ca8d7c',

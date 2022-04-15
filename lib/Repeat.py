@@ -143,6 +143,8 @@ class RepeatSegemnt:
 		if self.key == other.key:
 			return True
 		return False
+	def __len__(self):
+		return self.end - self.start +1
 	def __str__(self):
 		return '{chrom}:{start}-{end}'.format(**self.__dict__)
 	@property

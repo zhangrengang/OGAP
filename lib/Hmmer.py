@@ -59,7 +59,7 @@ class HmmSearch(object):
 			print >>sys.stderr, node.short
 		print >>sys.stderr, 'Edges:'
 		for n1, n2 in sorted(graph.edges(), key=lambda x: (x[0].hmmcoord, x[1].hmmcoord)):
-			print >>sys.stderr, n1.short, '-',  n2.short
+			print >>sys.stderr, n1.short, '-',  n2.short, graph[n1][n2]['dist']
 		graph.prune_graph()
 		graph.break_circle()
 	#	print >>sys.stderr, graph.nodes()
@@ -436,18 +436,22 @@ class HmmSearchDomHit:
 		left_dist = other.hmmstart - self.hmmstart + 1
 		mid_dist  = other.hmmstart - self.hmmend + 1
 		right_dist = other.hmmend - self.hmmend + 1
+		#print self.short, other.short, left_dist, mid_dist, right_dist
+		#print >> sys.stderr, self.short, other.short, left_dist, mid_dist, right_dist
 		if min_ovl <= mid_dist <= max_dist:
 #			if min(left_dist, right_dist) < min_flank_dist:
 			if left_dist >= min_flank_dist:
 				return mid_dist
 		# rRNA algnment
-		if self.nucl_name == other.nucl_name:
-			left_dist = other.alnstart - self.alnstart + 1
-			mid_dist  = other.alnstart - self.alnend + 1
-			right_dist = other.alnend - self.alnend + 1
+		if self.nucl_name == other.nucl_name and self.strand == other.strand:
+			left_dist = other.nucl_alnstart - self.nucl_alnstart + 1
+			mid_dist  = other.nucl_alnstart - self.nucl_alnend + 1
+			right_dist = other.nucl_alnend - self.nucl_alnend + 1
+		#	print >> sys.stderr, self.short, other.short, (self.alnstart,self.alnend), (other.alnstart,other.alnend), left_dist, mid_dist, right_dist
 			if min_ovl*3 <= mid_dist <= max_dist*3:
 				if left_dist >= min_flank_dist:
 					return mid_dist
+#		print >> sys.stderr, self.short, other.short, left_dist, mid_dist, right_dist
 		return False
 			
 	def split_name(self):
@@ -555,6 +559,7 @@ class HmmStructueGraph(DiGraph):
 		for hit1, hit2 in itertools.combinations(self.nodes(), 2):
 			dist_12 = hit1.link_hits(hit2)
 			dist_21 = hit2.link_hits(hit1)
+			#print >>sys.stderr, hit1.short, hit2.short, dist_12, dist_21
 			if not dist_12 is False:
 				self.add_edge(hit1, hit2, dist=dist_12)
 			if not dist_21 is False:

@@ -13,6 +13,7 @@ class PhyloPipeline(object):
 			gnid = True,
 			tmpdir='./tmp',
 			types=['cds'], #, 'rna'], 
+			root=None,
 			min_shared=50):
 		self.indir = indir
 		self.tmpdir = tmpdir
@@ -20,6 +21,7 @@ class PhyloPipeline(object):
 		self.min_shared = min_shared
 		self.outprefix = outprefix
 		self.gnid = gnid
+		self.root = root
 		if outprefix is None:
 			self.outprefix = '{}-{}'.format(
 				os.path.basename(indir.strip('/')), '-'.join(types))
@@ -27,6 +29,7 @@ class PhyloPipeline(object):
 	def run(self):
 		mkdirs(self.tmpdir)
 		self.d_gnid = self.get_genome_id()
+
 		# bin
 		self.genes = self.bin_seqs()
 		# align
@@ -42,6 +45,8 @@ class PhyloPipeline(object):
 		self.iqtree(trimed_alignment)
 
 	def iqtree(self, alnfile, opts='-nt AUTO'):
+		if self.root is not None:
+			opts += ' -o {}'.format(self.root)
 		cmd = 'iqtree -s {} -bb 1000 {} > /dev/null'.format(alnfile, opts)
 		run_cmd(cmd, log=True)
 
@@ -72,7 +77,10 @@ class PhyloPipeline(object):
 			gene = rc.id
 			rc.id = prefix
 			if self.gnid:
-				rc.id += '-{}'.format(self.d_gnid[prefix])
+				suffix = '-{}'.format(self.d_gnid[prefix])
+				rc.id += suffix
+				if self.root == prefix:
+					self.root = rc.id
 			try: d_seqs[gene] += [rc]
 			except KeyError: d_seqs[gene] = [rc]
 
@@ -212,7 +220,9 @@ def main():
 	subcmd = sys.argv[1]
 	indir = sys.argv[2]
 	if subcmd == 'phylo':
-		PhyloPipeline(indir).run()
+		try: root = sys.argv[3]
+		except IndexError: root=None
+		PhyloPipeline(indir, root=root).run()
 	elif subcmd == 'kaks':
 		KaKsPipeline(indir).run()
 	elif subcmd == 'summary':

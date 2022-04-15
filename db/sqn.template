@@ -55,4 +55,4 @@ Seqdesc ::= pub {
             div "Bioinformatics" ,
             city "Beijing" ,
             country "China" } } ,
-      title "Organelle Genome Project" } } }
+      title "OGAP: Organelle Genome Annotation Pipeline" } } }

@@ -1,3 +1,4 @@
+'''python /share/home/nature/users/zrg/ogap/lib/genbank_summary.py popular-mt.txt'''
 import sys
 import re
 from Database import Database
@@ -52,7 +53,8 @@ class GenbankSummaryLines:
 				re.compile(r'(\d+)\.\s+(.*)').match(title).groups()
 		self.species = self._parse_species()
 		topology = self.lines[1]
-		self.length, self.topology = \	# circular or not
+		# circular or not
+		self.length, self.topology = \
 			re.compile(r'([,\d]+)\s+bp\s+(\w+)\s+\S+').match(topology).groups()
 		self.length = int(self.length.replace(',', ''))
 		accession = self.lines[2]
@@ -75,7 +77,9 @@ class GenbankSummaryLines:
 		if title[1] == 'cf.':	
 # "cf." is used with a specimen that the author (writer/ichthyologist, describer, etc.) wants to compare with the following cited species, but he believes that it is different, probably new to science
 			title.pop(1)
-		return ' '.join(title[s:e])
+		sp = title[s:e]
+		sp[0] = sp[0].strip('[]')
+		return ' '.join(sp)
 
 	@property
 	def is_refseq(self):

@@ -81,13 +81,13 @@ def makeArgparse():
 	group_out.add_argument('-pre', "-prefix", action="store", dest='prefix',
 					default=None, type=str,
 					help="output prefix [default=genome file basename]")
-	parser.add_argument('-min_cds_cov', type=float, default=40,
+	parser.add_argument('-min_cds_cov', type=float, default=60,
 					help="min coverage to filter candidate coding genes [default=%(default)s]")
-	parser.add_argument('-min_rrn_cov', type=float, default=40,
+	parser.add_argument('-min_rrn_cov', type=float, default=60,
 					help="min coverage to filter candidate rRNA genes [default=%(default)s]")
-	parser.add_argument('-min_trn_cov', type=float, default=40,
+	parser.add_argument('-min_trn_cov', type=float, default=60,
 					help="min coverage to filter candidate tRNA genes [default=%(default)s]")
-	group_out.add_argument('-min_cov', type=float, default=25,
+	group_out.add_argument('-min_cov', type=float, default=30,
 					 help="min coverage to filter out final gene set [default=%(default)s]")
 	group_out.add_argument('-min_score', type=float, default=15,
 					 help="min score to filter out final gene set [default=%(default)s]")
@@ -154,9 +154,9 @@ class Pipeline():
 				min_cds_hmmcov=0,	# min coverage of each hmm hit
 				min_rrn_hmmcov=5,
 				min_trn_hmmcov=5,
-				min_cds_cov=40,		# min coverage of sum of hmm hits
-				min_rrn_cov=40,		# 
-				min_trn_cov=40,		# 
+				min_cds_cov=60,		# min coverage of sum of hmm hits
+				min_rrn_cov=60,		# 
+				min_trn_cov=60,		# 
 				cov_cutoff=0.75,	# filter candidate (> highest * cov_cutoff)
 				#score_cutoff=0.85,	# filter final set (> highest * score_cutoff) to filter out multi-copy
 				min_cds_score=0.85,		# score_cutoff for cds
@@ -678,7 +678,8 @@ class Pipeline():
 				ex_gtf, ex_domtblout = self.exonerate_gene_predict(genefa, gene, parts)
 				# gene by augustus
 				ag_gtf, ag_domtblout = self.augustus_gene_predict(genefa, gene, parts)
-				best_gtf, source = self.get_best_gene(ag_gtf, ag_domtblout, ex_gtf, ex_domtblout, id=gene.id)
+				best_gtf, source = self.get_best_gene(ag_gtf, ag_domtblout, ex_gtf, ex_domtblout, 
+							id=gene.id, min_cds_cov=self.min_cds_cov)
 				pseudo = False
 				if best_gtf is None:
 					pseudo = True
@@ -773,9 +774,15 @@ class Pipeline():
 		diff = abs(exon_count - db_exon_count)
 		return diff * self.exon_diff_penalty
 		
-	def get_best_gene(self, ag_gtf, ag_domtblout, ex_gtf, ex_domtblout, id=None, ex_weight=0.95):
+	def get_best_gene(self, ag_gtf, ag_domtblout, ex_gtf, ex_domtblout, id=None, ex_weight=0.95, min_cds_cov=40):
+		none = (None, None)
 		ag_hmm_best = HmmSearch(ag_domtblout).get_best_hit() if os.path.exists(ag_domtblout) else None
 		ex_hmm_best = HmmSearch(ex_domtblout).get_best_hit() if os.path.exists(ex_domtblout) else None
+		if ag_hmm_best.hmmcov < min_cds_cov:
+			ag_hmm_best = None
+		if ex_hmm_best.hmmcov < min_cds_cov:
+			ex_hmm_best = None
+			
 		if ag_hmm_best is None:
 			ag_best = None
 		else:
@@ -798,7 +805,7 @@ class Pipeline():
 				ex_best = None
 		ag_best = (ag_best, 'augustus')
 		ex_best = (ex_best, 'exonerate')
-		none = (None, None)
+		
 		if ag_hmm_best is None and ex_hmm_best is None:	# both no hit
 			return none
 		elif ag_hmm_best is None:	# augustus no hit
@@ -999,6 +1006,10 @@ class Pipeline():
 						record.rna_id, record.product, record, record.score, record.cov)
 			if getattr(record, 'pseudo', None):
 				desc += ';pseudo=true'
+			note = record[0].attributes.get('note')
+			if note:
+				desc += ';note={}'.format(note)
+				
 			try:
 				print >> f_cds, '>{} {}\n{}'.format(xid, desc, record.cds_seq)
 			except AttributeError: pass

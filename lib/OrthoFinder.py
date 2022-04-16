@@ -21,6 +21,8 @@ def catAln(inALNs, outALN, allow_missing=True):
 	d_seqs = {}
 	lens = []
 	for inALN in inALNs:
+		if os.path.getsize(inALN) == 0:
+			continue
 		ntax = 0
 		sps = set([])
 		for rc in SeqIO.parse(inALN, 'fasta'):

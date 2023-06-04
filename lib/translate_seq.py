@@ -1,7 +1,8 @@
 #!/bin/env python
-import sys
+import sys,re
 from Bio import SeqIO
 from Bio.Data import CodonTable
+from xopen import xopen as open
 def six_frame_translate(inFa, fout=sys.stdout, seqfmt='fasta', transl_table=1):
 	d_length = {}
 	for rc in SeqIO.parse(inFa, seqfmt):
@@ -15,13 +16,17 @@ def six_frame_translate(inFa, fout=sys.stdout, seqfmt='fasta', transl_table=1):
 		d_length[rc.id] = len(rc.seq)
 	return d_length
 			
-def translate_seq(inSeq, **kargs):
-	aa = inSeq.translate(**kargs)
-	return aa
-def translate_cds(inSeq, transl_table=1, **kargs):
+def clean_kargs(kargs):
 	for key in kargs.keys():
 		if not key in {'to_stop', 'stop_symbol', 'gap'}:
 			del kargs[key]
+
+def translate_seq(inSeq, transl_table=1, **kargs):
+	clean_kargs(kargs)
+	aa = inSeq.translate(table=transl_table, **kargs)
+	return aa
+def translate_cds(inSeq, transl_table=1, **kargs):
+	clean_kargs(kargs)
 	try:
 		aa = translate_seq(inSeq, cds=True, table=transl_table, **kargs)
 	except CodonTable.TranslationError as e:
@@ -29,8 +34,11 @@ def translate_cds(inSeq, transl_table=1, **kargs):
 	return aa
 
 def main(inFa, outSeq=sys.stdout):
-	for rc in SeqIO.parse(inFa, 'fasta'):
-		print >> outSeq, '>{}\n{}'.format(rc.id, translate_seq(rc.seq))
+	for rc in SeqIO.parse(open(inFa), 'fasta'):
+		try: frame = int(re.compile('frame "(\d+)?";').search(rc.description).groups()[0])
+		except AttributeError: frame = 0
+
+		print >> outSeq, '>{}\n{}'.format(rc.id, translate_seq(rc.seq[frame:]))
 
 if __name__ == '__main__':
 	import sys

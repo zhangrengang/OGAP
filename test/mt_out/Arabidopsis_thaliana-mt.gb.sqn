@@ -33,9 +33,9 @@ Seq-submit ::= {
             country "China" } } ,
       date
         std {
-          year 2020 ,
-          month 10 ,
-          day 14 } } ,
+          year 2023 ,
+          month 6 ,
+          day 4 } } ,
     subtype new ,
     tool "tbl2asn 24.3 - LINUX UNIX" } ,
   data
@@ -79,7 +79,7 @@ Seq-submit ::= {
                       div "Bioinformatics" ,
                       city "Beijing" ,
                       country "China" } } ,
-                title "Organelle Genome Project" } } } ,
+                title "OGAP: Organelle Genome Annotation Pipeline" } } } ,
           user {
             type
               str "NcbiCleanup" ,
@@ -98,22 +98,22 @@ Seq-submit ::= {
                 label
                   str "month" ,
                 data
-                  int 10 } ,
+                  int 6 } ,
               {
                 label
                   str "day" ,
                 data
-                  int 14 } ,
+                  int 4 } ,
               {
                 label
                   str "year" ,
                 data
-                  int 2020 } } } ,
+                  int 2023 } } } ,
           create-date
             std {
-              year 2020 ,
-              month 10 ,
-              day 14 } } ,
+              year 2023 ,
+              month 6 ,
+              day 4 } } ,
         seq-set {
           seq {
             id {
@@ -2496,7 +2496,7 @@ B6E21'H } ,
                       data
                         gene {
                           locus "cox2" ,
-                          locus-tag "ATHMT_0000" } ,
+                          locus-tag "ATHMT_0001" } ,
                       location
                         int {
                           from 6263 ,
@@ -2507,79 +2507,14 @@ B6E21'H } ,
                               str "NC_037304.1" } } ,
                     {
                       data
-                        rna {
-                          type mRNA ,
-                          ext
-                            name "cytochrome c oxidase subunit 2" } ,
-                      location
-                        mix {
-                          int {
-                            from 6263 ,
-                            to 6962 ,
-                            strand plus ,
-                            id
-                              local
-                                str "NC_037304.1" } ,
-                          int {
-                            from 8306 ,
-                            to 8388 ,
-                            strand plus ,
-                            id
-                              local
-                                str "NC_037304.1" } } } ,
-                    {
-                      data
                         gene {
                           locus "ccmB" ,
-                          locus-tag "ATHMT_0001" } ,
-                      location
-                        int {
-                          from 17813 ,
-                          to 18433 ,
-                          strand minus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type mRNA ,
-                          ext
-                            name "cytochrome c biogenesis B" } ,
-                      location
-                        int {
-                          from 17813 ,
-                          to 18433 ,
-                          strand minus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        gene {
-                          locus "trnK-UUU" ,
                           locus-tag "ATHMT_0002" } ,
                       location
                         int {
-                          from 19927 ,
-                          to 19999 ,
-                          strand plus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type tRNA ,
-                          ext
-                            tRNA {
-                              aa
-                                ncbieaa 75 } } ,
-                      location
-                        int {
-                          from 19927 ,
-                          to 19999 ,
-                          strand plus ,
+                          from 17813 ,
+                          to 18433 ,
+                          strand minus ,
                           id
                             local
                               str "NC_037304.1" } } ,
@@ -2598,45 +2533,32 @@ B6E21'H } ,
                               str "NC_037304.1" } } ,
                     {
                       data
-                        rna {
-                          type mRNA ,
-                          ext
-                            name "ribosomal protein S3" } ,
+                        gene {
+                          locus "nad5" ,
+                          locus-tag "ATHMT_0004" } ,
+                      except TRUE ,
                       location
                         mix {
                           int {
-                            from 20164 ,
-                            to 20237 ,
+                            from 234351 ,
+                            to 239380 ,
                             strand plus ,
                             id
                               local
                                 str "NC_037304.1" } ,
                           int {
-                            from 21821 ,
-                            to 23417 ,
+                            from 21863 ,
+                            to 28335 ,
                             strand plus ,
                             id
                               local
-                                str "NC_037304.1" } } } ,
+                                str "NC_037304.1" } } ,
+                      except-text "trans-splicing" } ,
                     {
                       data
                         gene {
                           locus "rpl16" ,
-                          locus-tag "ATHMT_0004" } ,
-                      location
-                        int {
-                          from 23284 ,
-                          to 23823 ,
-                          strand plus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type mRNA ,
-                          ext
-                            name "ribosomal protein L16" } ,
+                          locus-tag "ATHMT_0005" } ,
                       location
                         int {
                           from 23284 ,
@@ -2649,229 +2571,11 @@ B6E21'H } ,
                       data
                         gene {
                           locus "nad9" ,
-                          locus-tag "ATHMT_0005" } ,
-                      location
-                        int {
-                          from 24664 ,
-                          to 25236 ,
-                          strand plus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type mRNA ,
-                          ext
-                            name "NADH dehydrogenase subunit 9" } ,
-                      location
-                        int {
-                          from 24664 ,
-                          to 25236 ,
-                          strand plus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        gene {
-                          locus "nad5" ,
                           locus-tag "ATHMT_0006" } ,
-                      except TRUE ,
-                      location
-                        mix {
-                          int {
-                            from 234351 ,
-                            to 236630 ,
-                            strand plus ,
-                            id
-                              local
-                                str "NC_037304.1" } ,
-                          int {
-                            from 26812 ,
-                            to 28335 ,
-                            strand plus ,
-                            id
-                              local
-                                str "NC_037304.1" } } ,
-                      except-text "trans-splicing" } ,
-                    {
-                      data
-                        rna {
-                          type mRNA ,
-                          ext
-                            name "NADH dehydrogenase subunit 5" } ,
-                      location
-                        mix {
-                          int {
-                            from 234351 ,
-                            to 234579 ,
-                            strand plus ,
-                            id
-                              local
-                                str "NC_037304.1" } ,
-                          int {
-                            from 235411 ,
-                            to 236630 ,
-                            strand plus ,
-                            id
-                              local
-                                str "NC_037304.1" } ,
-                          int {
-                            from 26812 ,
-                            to 27210 ,
-                            strand plus ,
-                            id
-                              local
-                                str "NC_037304.1" } ,
-                          int {
-                            from 28189 ,
-                            to 28335 ,
-                            strand plus ,
-                            id
-                              local
-                                str "NC_037304.1" } } } ,
-                    {
-                      data
-                        gene {
-                          locus "trnS-GCU" ,
-                          locus-tag "ATHMT_0007" } ,
                       location
                         int {
-                          from 41485 ,
-                          to 41572 ,
-                          strand plus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type tRNA ,
-                          ext
-                            tRNA {
-                              aa
-                                ncbieaa 83 } } ,
-                      location
-                        int {
-                          from 41485 ,
-                          to 41572 ,
-                          strand plus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        gene {
-                          locus "trnP-UGG" ,
-                          locus-tag "ATHMT_0008" } ,
-                      location
-                        int {
-                          from 42115 ,
-                          to 42189 ,
-                          strand plus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type tRNA ,
-                          ext
-                            tRNA {
-                              aa
-                                ncbieaa 80 } } ,
-                      location
-                        int {
-                          from 42115 ,
-                          to 42189 ,
-                          strand plus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        gene {
-                          locus "trnC-GCA" ,
-                          locus-tag "ATHMT_0009" } ,
-                      location
-                        int {
-                          from 42545 ,
-                          to 42615 ,
-                          strand plus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type tRNA ,
-                          ext
-                            tRNA {
-                              aa
-                                ncbieaa 67 } } ,
-                      location
-                        int {
-                          from 42545 ,
-                          to 42615 ,
-                          strand plus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        gene {
-                          locus "trnN-GUU-cp" ,
-                          locus-tag "ATHMT_0010" } ,
-                      location
-                        int {
-                          from 43543 ,
-                          to 43614 ,
-                          strand plus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type tRNA ,
-                          ext
-                            tRNA {
-                              aa
-                                ncbieaa 78 } } ,
-                      location
-                        int {
-                          from 43543 ,
-                          to 43614 ,
-                          strand plus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        gene {
-                          locus "trnY-GUA" ,
-                          locus-tag "ATHMT_0011" } ,
-                      location
-                        int {
-                          from 44461 ,
-                          to 44543 ,
-                          strand plus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type tRNA ,
-                          ext
-                            tRNA {
-                              aa
-                                ncbieaa 89 } } ,
-                      location
-                        int {
-                          from 44461 ,
-                          to 44543 ,
+                          from 24664 ,
+                          to 25236 ,
                           strand plus ,
                           id
                             local
@@ -2880,54 +2584,11 @@ B6E21'H } ,
                       data
                         gene {
                           locus "atp6" ,
-                          locus-tag "ATHMT_0012" } ,
+                          locus-tag "ATHMT_0007" } ,
                       location
                         int {
                           from 49422 ,
                           to 50579 ,
-                          strand plus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type mRNA ,
-                          ext
-                            name "ATP synthase subunit 6" } ,
-                      location
-                        int {
-                          from 49422 ,
-                          to 50579 ,
-                          strand plus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        gene {
-                          locus "trnS-UGA" ,
-                          locus-tag "ATHMT_0013" } ,
-                      location
-                        int {
-                          from 50625 ,
-                          to 50711 ,
-                          strand plus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type tRNA ,
-                          ext
-                            tRNA {
-                              aa
-                                ncbieaa 83 } } ,
-                      location
-                        int {
-                          from 50625 ,
-                          to 50711 ,
                           strand plus ,
                           id
                             local
@@ -2936,7 +2597,7 @@ B6E21'H } ,
                       data
                         gene {
                           locus "nad1" ,
-                          locus-tag "ATHMT_0014" } ,
+                          locus-tag "ATHMT_0008" } ,
                       except TRUE ,
                       location
                         mix {
@@ -2961,69 +2622,13 @@ B6E21'H } ,
                             id
                               local
                                 str "NC_037304.1" } } ,
+                      pseudo TRUE ,
                       except-text "trans-splicing" } ,
-                    {
-                      data
-                        rna {
-                          type mRNA ,
-                          ext
-                            name "NADH dehydrogenase subunit 1" } ,
-                      location
-                        mix {
-                          int {
-                            from 82936 ,
-                            to 83230 ,
-                            strand minus ,
-                            id
-                              local
-                                str "NC_037304.1" } ,
-                          int {
-                            from 58314 ,
-                            to 58396 ,
-                            strand plus ,
-                            id
-                              local
-                                str "NC_037304.1" } ,
-                          int {
-                            from 59289 ,
-                            to 59480 ,
-                            strand plus ,
-                            id
-                              local
-                                str "NC_037304.1" } ,
-                          int {
-                            from 230303 ,
-                            to 230361 ,
-                            strand plus ,
-                            id
-                              local
-                                str "NC_037304.1" } ,
-                          int {
-                            from 233873 ,
-                            to 234131 ,
-                            strand plus ,
-                            id
-                              local
-                                str "NC_037304.1" } } } ,
                     {
                       data
                         gene {
                           locus "atp1" ,
-                          locus-tag "ATHMT_0015" } ,
-                      location
-                        int {
-                          from 67097 ,
-                          to 68620 ,
-                          strand minus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type mRNA ,
-                          ext
-                            name "ATP synthase subunit 1" } ,
+                          locus-tag "ATHMT_0009" } ,
                       location
                         int {
                           from 67097 ,
@@ -3036,21 +2641,7 @@ B6E21'H } ,
                       data
                         gene {
                           locus "rps7" ,
-                          locus-tag "ATHMT_0016" } ,
-                      location
-                        int {
-                          from 79558 ,
-                          to 80004 ,
-                          strand plus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type mRNA ,
-                          ext
-                            name "ribosomal protein S7" } ,
+                          locus-tag "ATHMT_0010" } ,
                       location
                         int {
                           from 79558 ,
@@ -3063,7 +2654,7 @@ B6E21'H } ,
                       data
                         gene {
                           locus "nad2" ,
-                          locus-tag "ATHMT_0017" } ,
+                          locus-tag "ATHMT_0011" } ,
                       except TRUE ,
                       location
                         mix {
@@ -3081,131 +2672,17 @@ B6E21'H } ,
                             id
                               local
                                 str "NC_037304.1" } } ,
+                      pseudo TRUE ,
                       except-text "trans-splicing" } ,
-                    {
-                      data
-                        rna {
-                          type mRNA ,
-                          ext
-                            name "NADH dehydrogenase subunit 2" } ,
-                      location
-                        mix {
-                          int {
-                            from 161831 ,
-                            to 161983 ,
-                            strand plus ,
-                            id
-                              local
-                                str "NC_037304.1" } ,
-                          int {
-                            from 162965 ,
-                            to 163356 ,
-                            strand plus ,
-                            id
-                              local
-                                str "NC_037304.1" } ,
-                          int {
-                            from 97881 ,
-                            to 98041 ,
-                            strand minus ,
-                            id
-                              local
-                                str "NC_037304.1" } ,
-                          int {
-                            from 94665 ,
-                            to 95237 ,
-                            strand minus ,
-                            id
-                              local
-                                str "NC_037304.1" } ,
-                          int {
-                            from 92818 ,
-                            to 93005 ,
-                            strand minus ,
-                            id
-                              local
-                                str "NC_037304.1" } } } ,
-                    {
-                      data
-                        gene {
-                          locus "trnM-CAU-cp" ,
-                          locus-tag "ATHMT_0018" } ,
-                      location
-                        int {
-                          from 102602 ,
-                          to 102674 ,
-                          strand plus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type tRNA ,
-                          ext
-                            tRNA {
-                              aa
-                                ncbieaa 77 } } ,
-                      location
-                        int {
-                          from 102602 ,
-                          to 102674 ,
-                          strand plus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
                     {
                       data
                         gene {
                           locus "cox1" ,
-                          locus-tag "ATHMT_0019" } ,
+                          locus-tag "ATHMT_0012" } ,
                       location
                         int {
                           from 114761 ,
                           to 116344 ,
-                          strand minus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type mRNA ,
-                          ext
-                            name "cytochrome c oxidase subunit 1" } ,
-                      location
-                        int {
-                          from 114761 ,
-                          to 116344 ,
-                          strand minus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        gene {
-                          locus "trnH-GUG-cp" ,
-                          locus-tag "ATHMT_0020" } ,
-                      location
-                        int {
-                          from 124602 ,
-                          to 124675 ,
-                          strand minus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type tRNA ,
-                          ext
-                            tRNA {
-                              aa
-                                ncbieaa 72 } } ,
-                      location
-                        int {
-                          from 124602 ,
-                          to 124675 ,
                           strand minus ,
                           id
                             local
@@ -3214,7 +2691,7 @@ B6E21'H } ,
                       data
                         gene {
                           locus "rrn5" ,
-                          locus-tag "ATHMT_0021" } ,
+                          locus-tag "ATHMT_0013" } ,
                       location
                         int {
                           from 125999 ,
@@ -3241,7 +2718,7 @@ B6E21'H } ,
                       data
                         gene {
                           locus "rrn18" ,
-                          locus-tag "ATHMT_0022" } ,
+                          locus-tag "ATHMT_0014" } ,
                       location
                         int {
                           from 126290 ,
@@ -3268,7 +2745,7 @@ B6E21'H } ,
                       data
                         gene {
                           locus "rrn26" ,
-                          locus-tag "ATHMT_0023" } ,
+                          locus-tag "ATHMT_0015" } ,
                       location
                         int {
                           from 140795 ,
@@ -3295,21 +2772,7 @@ B6E21'H } ,
                       data
                         gene {
                           locus "rps4" ,
-                          locus-tag "ATHMT_0024" } ,
-                      location
-                        int {
-                          from 159979 ,
-                          to 161067 ,
-                          strand plus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type mRNA ,
-                          ext
-                            name "ribosomal protein S4" } ,
+                          locus-tag "ATHMT_0016" } ,
                       location
                         int {
                           from 159979 ,
@@ -3322,84 +2785,12 @@ B6E21'H } ,
                       data
                         gene {
                           locus "nad6" ,
-                          locus-tag "ATHMT_0025" } ,
+                          locus-tag "ATHMT_0017" } ,
                       location
                         int {
                           from 165837 ,
                           to 166454 ,
                           strand plus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type mRNA ,
-                          ext
-                            name "NADH dehydrogenase subunit 6" } ,
-                      location
-                        int {
-                          from 165837 ,
-                          to 166454 ,
-                          strand plus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        gene {
-                          locus "trnfM-CAU" ,
-                          locus-tag "ATHMT_0026" } ,
-                      location
-                        int {
-                          from 171569 ,
-                          to 171642 ,
-                          strand minus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type tRNA ,
-                          ext
-                            tRNA {
-                              aa
-                                ncbieaa 77 } } ,
-                      location
-                        int {
-                          from 171569 ,
-                          to 171642 ,
-                          strand minus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        gene {
-                          locus "trnS-GGA-cp" ,
-                          locus-tag "ATHMT_0027" } ,
-                      location
-                        int {
-                          from 180657 ,
-                          to 180743 ,
-                          strand minus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type tRNA ,
-                          ext
-                            tRNA {
-                              aa
-                                ncbieaa 83 } } ,
-                      location
-                        int {
-                          from 180657 ,
-                          to 180743 ,
-                          strand minus ,
                           id
                             local
                               str "NC_037304.1" } } ,
@@ -3407,7 +2798,7 @@ B6E21'H } ,
                       data
                         gene {
                           locus "cob" ,
-                          locus-tag "ATHMT_0028" } ,
+                          locus-tag "ATHMT_0018" } ,
                       location
                         int {
                           from 181676 ,
@@ -3416,108 +2807,16 @@ B6E21'H } ,
                           id
                             local
                               str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type mRNA ,
-                          ext
-                            name "apocytochrome b" } ,
-                      location
-                        int {
-                          from 181676 ,
-                          to 182857 ,
-                          strand minus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        gene {
-                          locus "rps14" ,
-                          locus-tag "ATHMT_0029" } ,
-                      location
-                        int {
-                          from 184502 ,
-                          to 184819 ,
-                          strand minus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type mRNA ,
-                          ext
-                            name "ribosomal protein S14" } ,
-                      location
-                        mix {
-                          int {
-                            from 184796 ,
-                            to 184819 ,
-                            strand minus ,
-                            id
-                              local
-                                str "NC_037304.1" } ,
-                          int {
-                            from 184502 ,
-                            to 184747 ,
-                            strand minus ,
-                            id
-                              local
-                                str "NC_037304.1" } } } ,
                     {
                       data
                         gene {
                           locus "rpl5" ,
-                          locus-tag "ATHMT_0030" } ,
+                          locus-tag "ATHMT_0019" } ,
                       location
                         int {
                           from 184761 ,
                           to 185318 ,
                           strand minus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type mRNA ,
-                          ext
-                            name "ribosomal protein L5" } ,
-                      location
-                        int {
-                          from 184761 ,
-                          to 185318 ,
-                          strand minus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        gene {
-                          locus "trnG-GCC" ,
-                          locus-tag "ATHMT_0031" } ,
-                      location
-                        int {
-                          from 189286 ,
-                          to 189357 ,
-                          strand plus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type tRNA ,
-                          ext
-                            tRNA {
-                              aa
-                                ncbieaa 71 } } ,
-                      location
-                        int {
-                          from 189286 ,
-                          to 189357 ,
-                          strand plus ,
                           id
                             local
                               str "NC_037304.1" } } ,
@@ -3525,7 +2824,7 @@ B6E21'H } ,
                       data
                         gene {
                           locus "ccmFC" ,
-                          locus-tag "ATHMT_0032" } ,
+                          locus-tag "ATHMT_0020" } ,
                       location
                         int {
                           from 189482 ,
@@ -3536,31 +2835,9 @@ B6E21'H } ,
                               str "NC_037304.1" } } ,
                     {
                       data
-                        rna {
-                          type mRNA ,
-                          ext
-                            name "cytochrome c biogenesis FC" } ,
-                      location
-                        mix {
-                          int {
-                            from 189482 ,
-                            to 190260 ,
-                            strand plus ,
-                            id
-                              local
-                                str "NC_037304.1" } ,
-                          int {
-                            from 191214 ,
-                            to 191799 ,
-                            strand plus ,
-                            id
-                              local
-                                str "NC_037304.1" } } } ,
-                    {
-                      data
                         gene {
                           locus "nad4" ,
-                          locus-tag "ATHMT_0033" } ,
+                          locus-tag "ATHMT_0021" } ,
                       location
                         int {
                           from 207579 ,
@@ -3571,45 +2848,9 @@ B6E21'H } ,
                               str "NC_037304.1" } } ,
                     {
                       data
-                        rna {
-                          type mRNA ,
-                          ext
-                            name "NADH dehydrogenase subunit 4" } ,
-                      location
-                        mix {
-                          int {
-                            from 215101 ,
-                            to 215561 ,
-                            strand minus ,
-                            id
-                              local
-                                str "NC_037304.1" } ,
-                          int {
-                            from 213114 ,
-                            to 213628 ,
-                            strand minus ,
-                            id
-                              local
-                                str "NC_037304.1" } ,
-                          int {
-                            from 209610 ,
-                            to 210032 ,
-                            strand minus ,
-                            id
-                              local
-                                str "NC_037304.1" } ,
-                          int {
-                            from 207579 ,
-                            to 207667 ,
-                            strand minus ,
-                            id
-                              local
-                                str "NC_037304.1" } } } ,
-                    {
-                      data
                         gene {
                           locus "mttB" ,
-                          locus-tag "ATHMT_0034" } ,
+                          locus-tag "ATHMT_0022" } ,
                       location
                         int {
                           from 218903 ,
@@ -3617,26 +2858,13 @@ B6E21'H } ,
                           strand minus ,
                           id
                             local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type mRNA ,
-                          ext
-                            name "transport membrane protein" } ,
-                      location
-                        int {
-                          from 218903 ,
-                          to 219745 ,
-                          strand minus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
+                              str "NC_037304.1" } ,
+                      pseudo TRUE } ,
                     {
                       data
                         gene {
                           locus "rpl2" ,
-                          locus-tag "ATHMT_0035" } ,
+                          locus-tag "ATHMT_0023" } ,
                       location
                         int {
                           from 219909 ,
@@ -3647,45 +2875,9 @@ B6E21'H } ,
                               str "NC_037304.1" } } ,
                     {
                       data
-                        rna {
-                          type mRNA ,
-                          ext
-                            name "ribosomal protein L2" } ,
-                      location
-                        mix {
-                          int {
-                            from 221695 ,
-                            to 222609 ,
-                            strand minus ,
-                            id
-                              local
-                                str "NC_037304.1" } ,
-                          int {
-                            from 219909 ,
-                            to 220046 ,
-                            strand minus ,
-                            id
-                              local
-                                str "NC_037304.1" } } } ,
-                    {
-                      data
                         gene {
                           locus "matR" ,
-                          locus-tag "ATHMT_0036" } ,
-                      location
-                        int {
-                          from 231088 ,
-                          to 233058 ,
-                          strand plus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type mRNA ,
-                          ext
-                            name "maturase-related protein" } ,
+                          locus-tag "ATHMT_0024" } ,
                       location
                         int {
                           from 231088 ,
@@ -3698,7 +2890,7 @@ B6E21'H } ,
                       data
                         gene {
                           locus "nad7" ,
-                          locus-tag "ATHMT_0037" } ,
+                          locus-tag "ATHMT_0025" } ,
                       location
                         int {
                           from 239249 ,
@@ -3709,155 +2901,13 @@ B6E21'H } ,
                               str "NC_037304.1" } } ,
                     {
                       data
-                        rna {
-                          type mRNA ,
-                          ext
-                            name "NADH dehydrogenase subunit 7" } ,
-                      location
-                        mix {
-                          int {
-                            from 245187 ,
-                            to 245329 ,
-                            strand minus ,
-                            id
-                              local
-                                str "NC_037304.1" } ,
-                          int {
-                            from 244154 ,
-                            to 244222 ,
-                            strand minus ,
-                            id
-                              local
-                                str "NC_037304.1" } ,
-                          int {
-                            from 242624 ,
-                            to 243090 ,
-                            strand minus ,
-                            id
-                              local
-                                str "NC_037304.1" } ,
-                          int {
-                            from 241327 ,
-                            to 241570 ,
-                            strand minus ,
-                            id
-                              local
-                                str "NC_037304.1" } ,
-                          int {
-                            from 239249 ,
-                            to 239510 ,
-                            strand minus ,
-                            id
-                              local
-                                str "NC_037304.1" } } } ,
-                    {
-                      data
                         gene {
                           locus "atp8" ,
-                          locus-tag "ATHMT_0038" } ,
+                          locus-tag "ATHMT_0026" } ,
                       location
                         int {
                           from 247015 ,
                           to 247491 ,
-                          strand minus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type mRNA ,
-                          ext
-                            name "ATP synthase subunit 8" } ,
-                      location
-                        int {
-                          from 247015 ,
-                          to 247491 ,
-                          strand minus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        gene {
-                          locus "trnI-CAU" ,
-                          locus-tag "ATHMT_0039" } ,
-                      location
-                        int {
-                          from 250306 ,
-                          to 250382 ,
-                          strand plus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type tRNA ,
-                          ext
-                            tRNA {
-                              aa
-                                ncbieaa 73 } } ,
-                      location
-                        int {
-                          from 250306 ,
-                          to 250382 ,
-                          strand plus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        gene {
-                          locus "trnS-UGA" ,
-                          locus-tag "ATHMT_0040" } ,
-                      location
-                        int {
-                          from 264334 ,
-                          to 264420 ,
-                          strand minus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type tRNA ,
-                          ext
-                            tRNA {
-                              aa
-                                ncbieaa 83 } } ,
-                      location
-                        int {
-                          from 264334 ,
-                          to 264420 ,
-                          strand minus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        gene {
-                          locus "atp6" ,
-                          locus-tag "ATHMT_0041" } ,
-                      location
-                        int {
-                          from 264466 ,
-                          to 265515 ,
-                          strand minus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type mRNA ,
-                          ext
-                            name "ATP synthase subunit 6" } ,
-                      location
-                        int {
-                          from 264466 ,
-                          to 265515 ,
                           strand minus ,
                           id
                             local
@@ -3866,54 +2916,11 @@ B6E21'H } ,
                       data
                         gene {
                           locus "atp9" ,
-                          locus-tag "ATHMT_0042" } ,
+                          locus-tag "ATHMT_0027" } ,
                       location
                         int {
                           from 270960 ,
                           to 271184 ,
-                          strand minus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type mRNA ,
-                          ext
-                            name "ATP synthase subunit 9" } ,
-                      location
-                        int {
-                          from 270960 ,
-                          to 271184 ,
-                          strand minus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        gene {
-                          locus "trnD-GUC-cp" ,
-                          locus-tag "ATHMT_0043" } ,
-                      location
-                        int {
-                          from 274936 ,
-                          to 275009 ,
-                          strand minus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type tRNA ,
-                          ext
-                            tRNA {
-                              aa
-                                ncbieaa 68 } } ,
-                      location
-                        int {
-                          from 274936 ,
-                          to 275009 ,
                           strand minus ,
                           id
                             local
@@ -3922,21 +2929,7 @@ B6E21'H } ,
                       data
                         gene {
                           locus "nad3" ,
-                          locus-tag "ATHMT_0044" } ,
-                      location
-                        int {
-                          from 288043 ,
-                          to 288399 ,
-                          strand plus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type mRNA ,
-                          ext
-                            name "NADH dehydrogenase subunit 3" } ,
+                          locus-tag "ATHMT_0028" } ,
                       location
                         int {
                           from 288043 ,
@@ -3949,128 +2942,11 @@ B6E21'H } ,
                       data
                         gene {
                           locus "rps12" ,
-                          locus-tag "ATHMT_0045" } ,
+                          locus-tag "ATHMT_0029" } ,
                       location
                         int {
                           from 288445 ,
                           to 288822 ,
-                          strand plus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type mRNA ,
-                          ext
-                            name "ribosomal protein S12" } ,
-                      location
-                        int {
-                          from 288445 ,
-                          to 288822 ,
-                          strand plus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        gene {
-                          locus "ccmFN" ,
-                          locus-tag "ATHMT_0046" } ,
-                      except TRUE ,
-                      location
-                        mix {
-                          int {
-                            from 316012 ,
-                            to 317134 ,
-                            strand plus ,
-                            id
-                              local
-                                str "NC_037304.1" } ,
-                          int {
-                            from 291577 ,
-                            to 292190 ,
-                            strand plus ,
-                            id
-                              local
-                                str "NC_037304.1" } } ,
-                      except-text "trans-splicing" } ,
-                    {
-                      data
-                        rna {
-                          type mRNA ,
-                          ext
-                            name "cytochrome c biogenesis FN" } ,
-                      location
-                        mix {
-                          int {
-                            from 316012 ,
-                            to 317134 ,
-                            strand plus ,
-                            id
-                              local
-                                str "NC_037304.1" } ,
-                          int {
-                            from 291577 ,
-                            to 292190 ,
-                            strand plus ,
-                            id
-                              local
-                                str "NC_037304.1" } } } ,
-                    {
-                      data
-                        gene {
-                          locus "trnQ-UUG" ,
-                          locus-tag "ATHMT_0047" } ,
-                      location
-                        int {
-                          from 294476 ,
-                          to 294547 ,
-                          strand plus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type tRNA ,
-                          ext
-                            tRNA {
-                              aa
-                                ncbieaa 81 } } ,
-                      location
-                        int {
-                          from 294476 ,
-                          to 294547 ,
-                          strand plus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        gene {
-                          locus "trnW-CCA-cp" ,
-                          locus-tag "ATHMT_0048" } ,
-                      location
-                        int {
-                          from 298900 ,
-                          to 298973 ,
-                          strand plus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type tRNA ,
-                          ext
-                            tRNA {
-                              aa
-                                ncbieaa 87 } } ,
-                      location
-                        int {
-                          from 298900 ,
-                          to 298973 ,
                           strand plus ,
                           id
                             local
@@ -4079,21 +2955,7 @@ B6E21'H } ,
                       data
                         gene {
                           locus "ccmC" ,
-                          locus-tag "ATHMT_0049" } ,
-                      location
-                        int {
-                          from 308297 ,
-                          to 309067 ,
-                          strand plus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type mRNA ,
-                          ext
-                            name "cytochrome c biogenesis C" } ,
+                          locus-tag "ATHMT_0030" } ,
                       location
                         int {
                           from 308297 ,
@@ -4105,58 +2967,13 @@ B6E21'H } ,
                     {
                       data
                         gene {
-                          locus "trnE-UUC" ,
-                          locus-tag "ATHMT_0050" } ,
+                          locus "ccmFN" ,
+                          locus-tag "ATHMT_0031" } ,
                       location
                         int {
-                          from 321366 ,
-                          to 321437 ,
-                          strand minus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type tRNA ,
-                          ext
-                            tRNA {
-                              aa
-                                ncbieaa 69 } } ,
-                      location
-                        int {
-                          from 321366 ,
-                          to 321437 ,
-                          strand minus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        gene {
-                          locus "trnS-GCU" ,
-                          locus-tag "ATHMT_0051" } ,
-                      location
-                        int {
-                          from 321857 ,
-                          to 321944 ,
-                          strand minus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type tRNA ,
-                          ext
-                            tRNA {
-                              aa
-                                ncbieaa 83 } } ,
-                      location
-                        int {
-                          from 321857 ,
-                          to 321944 ,
-                          strand minus ,
+                          from 316012 ,
+                          to 317160 ,
+                          strand plus ,
                           id
                             local
                               str "NC_037304.1" } } ,
@@ -4164,21 +2981,7 @@ B6E21'H } ,
                       data
                         gene {
                           locus "sdh4" ,
-                          locus-tag "ATHMT_0052" } ,
-                      location
-                        int {
-                          from 329760 ,
-                          to 330047 ,
-                          strand minus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type mRNA ,
-                          ext
-                            name "succinate dehydrogenase subunit 4" } ,
+                          locus-tag "ATHMT_0032" } ,
                       location
                         int {
                           from 329760 ,
@@ -4191,55 +2994,12 @@ B6E21'H } ,
                       data
                         gene {
                           locus "cox3" ,
-                          locus-tag "ATHMT_0053" } ,
+                          locus-tag "ATHMT_0033" } ,
                       location
                         int {
                           from 329975 ,
                           to 330772 ,
                           strand minus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type mRNA ,
-                          ext
-                            name "cytochrome c oxidase subunit 3" } ,
-                      location
-                        int {
-                          from 329975 ,
-                          to 330772 ,
-                          strand minus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        gene {
-                          locus "trnK-UUU" ,
-                          locus-tag "ATHMT_0054" } ,
-                      location
-                        int {
-                          from 346453 ,
-                          to 346525 ,
-                          strand plus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type tRNA ,
-                          ext
-                            tRNA {
-                              aa
-                                ncbieaa 75 } } ,
-                      location
-                        int {
-                          from 346453 ,
-                          to 346525 ,
-                          strand plus ,
                           id
                             local
                               str "NC_037304.1" } } ,
@@ -4247,21 +3007,7 @@ B6E21'H } ,
                       data
                         gene {
                           locus "nad4L" ,
-                          locus-tag "ATHMT_0055" } ,
-                      location
-                        int {
-                          from 361636 ,
-                          to 361938 ,
-                          strand plus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type mRNA ,
-                          ext
-                            name "NADH dehydrogenase subunit 4L" } ,
+                          locus-tag "ATHMT_0034" } ,
                       location
                         int {
                           from 361636 ,
@@ -4274,21 +3020,7 @@ B6E21'H } ,
                       data
                         gene {
                           locus "atp4" ,
-                          locus-tag "ATHMT_0056" } ,
-                      location
-                        int {
-                          from 362205 ,
-                          to 362783 ,
-                          strand plus ,
-                          id
-                            local
-                              str "NC_037304.1" } } ,
-                    {
-                      data
-                        rna {
-                          type mRNA ,
-                          ext
-                            name "ATP synthase subunit 4" } ,
+                          locus-tag "ATHMT_0035" } ,
                       location
                         int {
                           from 362205 ,
@@ -4312,12 +3044,12 @@ B6E21'H } ,
             inst {
               repr raw ,
               mol aa ,
-              length 260 ,
+              length 263 ,
               seq-data
                 ncbieaa "MIVLKWLFLTISPCDAAEPWQLGSQDAATPIMQGIIDLHHDIFFFLILILVFV
 LWILVRALWHFHYKKNAIPQRIVHGTTIEILRTIFPSIISMFIAIPSFALLYSMDEVVVDPAITIKAIGHQWYRTYEY
 SDYNSSDEQSLTFDSYMIPEEDLELGQSRLLEVDNRVVVPAKTHLRIIVTSADVPHSWAVPSSGVKCDAVPGRLNQIS
-ILVQREGVYYGQCSEICGTNHAFTPIVVEAVPRKDYGSRVSNQLIPQTGEA" } ,
+ILVQREGVYYGQCSEICGTNHAFTPAGERVVKAVPRKDYGSRVSNQLIPQTGEA" } ,
             annot {
               {
                 data
@@ -4330,7 +3062,7 @@ ILVQREGVYYGQCSEICGTNHAFTPIVVEAVPRKDYGSRVSNQLIPQTGEA" } ,
                       location
                         int {
                           from 0 ,
-                          to 259 ,
+                          to 262 ,
                           id
                             general {
                               db "ATHMT" ,
@@ -4389,16 +3121,16 @@ VLTLLCGIHSRSALGITSSSGWNSSQNPTTSPTLLPLTVSRTSIETEWFHVLSSIGYSSLFVSLFPISVSISLQD" } ,
             inst {
               repr raw ,
               mol aa ,
-              length 556 ,
+              length 561 ,
               seq-data
-                ncbieaa "MARKGNPISVRLGKNRSSDSSRFSDYYYGKFVYQDVNLRSYFGSIRPPTRLTF
-GFRLGRCIILHFPKRTFIHFFLPRRPRRLKRREKTRPGKEKGRWWTTFGKAGPIECLHSSDDTEEERNEVRGRGARKR
-VESIRLDDRKKQNEIRGWPKKKQRYGYHDRLPSIKKNLSKSLRISGAFKHPKYAGVVNDIAFLIENDDSFKKTKLFKL
-FFQNKSRSDGPTSYLRTLPAVRPSLNFLVMQYFFNTKNQINFDPVVVLNHFVAPGAAEPSTMGRANAQGRSLQKRIRS
-RIAFFVESSTSEKKCLAEAKNRLTHFIRLANDLRFAGTTKTTISLFPFFGATFFFLRDGVGVYNNLDAREQLLNQLRV
-KCWNLVGKDKIMELIEKLKNLGGIEELIKVIDMMIEIILRKRGIPYRYNSYFYEVKKMRSFLSNRTNTKTLIESVKIK
-SVYQSASPIAQDISFQLKNKRRSFHSIFAKIVKEIPKGVEGIRICFSGRLKDAAEKAQTKCYKHRKTSRNVFNHKIDY
-APAEVSTRYGISGVKVWISYSQKKGRRAISETYEI" } ,
+                ncbieaa "MARKGNPISLNVDIINASGSFYGGVTIDSIYYYGKFVYQDVNLRSYFGSIRPP
+TRLTFGFRLGRCIILHFPKRTFIHFFLPRRPRRLKRREKTRPGKEKGRWWTTFGKAGPIECLHSSDDTEEERNEVRGR
+GARKRVESIRLDDRKKQNEIRGWPKKKQRYGYHDRLPSIKKNLSKSLRISGAFKHPKYAGVVNDIAFLIENDDSFKKT
+KLFKLFFQNKSRSDGPTSYLRTLPAVRPSLNFLVMQYFFNTKNQINFDPVVVLNHFVAPGAAEPSTMGRANAQGRSLQ
+KRIRSRIAFFVESSTSEKKCLAEAKNRLTHFIRLANDLRFAGTTKTTISLFPFFGATFFFLRDGVGVYNNLDAREQLL
+NQLRVKCWNLVGKDKIMELIEKLKNLGGIEELIKVIDMMIEIILRKRGIPYRYNSYFYEVKKMRSFLSNRTNTKTLIE
+SVKIKSVYQSASPIAQDISFQLKNKRRSFHSIFAKIVKEIPKGVEGIRICFSGRLKDAAEKAQTKCYKHRKTSRNVFN
+HKIDYAPAEVSTRYGISGVKVWISYSQKKGRRAISETYEI" } ,
             annot {
               {
                 data
@@ -4411,12 +3143,56 @@ APAEVSTRYGISGVKVWISYSQKKGRRAISETYEI" } ,
                       location
                         int {
                           from 0 ,
-                          to 555 ,
+                          to 560 ,
                           id
                             general {
                               db "ATHMT" ,
                               tag
                                 str "rps3-1.t1:cds" } } } } } } } ,
+          seq {
+            id {
+              general {
+                db "ATHMT" ,
+                tag
+                  str "nad5-1.t1:cds" } } ,
+            descr {
+              title "NADH dehydrogenase subunit 5 (mitochondrion) [Arabidopsis
+ thaliana]" ,
+              molinfo {
+                biomol peptide ,
+                tech concept-trans } } ,
+            inst {
+              repr raw ,
+              mol aa ,
+              length 665 ,
+              seq-data
+                ncbieaa "MYLLIVFLPLLGSSVAGFFGRFLGSEGSAIMTTTCVSFSSILSLIAFYEVAPG
+ASACYLRIAPWISSEMFDASWGFFGDLMLIVVTSISSLVHLYSISYMSEDPHSPRFMCYLSILTFFMPMLVTGDNSLQ
+LFLGWEGVGLASYLLIHFWFTRLQADKAATKAMLVNRVGDFGLALGISGRFTLFQTVDFSTIFARASAPRNSWISCNM
+RLNAISLICILLLIGAVGKSAQIGSHTWSPDAMEGPTPVSASIHAATMVTAGVFMIARCSPLFEYPPTALIVITSAGA
+TTSFLAATTGILQNDLKRVIAYSTCSQLGYMIFACGISNYSVSVFHLMNHAFFKALLFLSAGSVIHAMSDEQDMRKMG
+GLASSFPLTYAMMLIGSLSLIGFPFLTGFYSKDVILELAYTKYTISGNFAFWLGSISVLFTSYYSFRLLFLTFLVPTN
+SFGRDISRCHDAPIPMAIPSILLALGSLFVGYLAKSRIFFGNMMFPECSPLVRPGALILRRSYFGSIPITTVFIILFS
+TSGAFVAYNVNPVADQFQRAFQTSTFCNRLYSFFNKRWFFDQVLNDFLVRSFLRFGYEVSFEALDKGAIEILGPYGIS
+YTFRRLAERISQLQSGFVVRRVRYDPWPPAWWGAAPPLWGRLSSGSHNRSSFILIVSSFYTKSSQE" } ,
+            annot {
+              {
+                data
+                  ftable {
+                    {
+                      data
+                        prot {
+                          name {
+                            "NADH dehydrogenase subunit 5" } } ,
+                      location
+                        int {
+                          from 0 ,
+                          to 664 ,
+                          id
+                            general {
+                              db "ATHMT" ,
+                              tag
+                                str "nad5-1.t1:cds" } } } } } } } ,
           seq {
             id {
               general {
@@ -4498,50 +3274,6 @@ ISTDYGFEGHPLRKDLPLSGYVEVRYDDPEKRVVSEPIEMTQEFRYFDFASPWEQRSDG" } ,
               general {
                 db "ATHMT" ,
                 tag
-                  str "nad5-1.t1:cds" } } ,
-            descr {
-              title "NADH dehydrogenase subunit 5 (mitochondrion) [Arabidopsis
- thaliana]" ,
-              molinfo {
-                biomol peptide ,
-                tech concept-trans } } ,
-            inst {
-              repr raw ,
-              mol aa ,
-              length 664 ,
-              seq-data
-                ncbieaa "MYLLIVFLPLLGSSVAGFFGRFLGSEGSAIMTTTCVSFSSILSLIAFYEVAPG
-ASACYLRIAPWISSEMFDASWGFLFDSPTVVMLIVVTSISSLVHLYSISYMSEDPHSPRFMCYLSILTFFMPMLVTGD
-NSLQLFLGWEGVGLASYLLIHFWFTRLQADKAATKAMLVNRVGDFGLALGISGRFTLFQTVDFSTIFARASAPRNSWI
-SCNMRLNAISLICILLLIGAVGKSAQIGSHTWSPDAMEGPTPVSASIHAATMVTAGVFMIARCSPLFEYPPTALIVIT
-SAGATTSFLAATTGILQNDLKRVIAYSTCSQLGYMIFACGISNYSVSVFHLMNHAFFKALLFLSAGSVIHAMSDEQDM
-RKMGGLASSFPLTYAMMLIGSLSLIGFPFLTGFYSKDVILELAYTKYTISGNFAFWLGSISVLFTSYYSFRLLFLTFL
-VPTNSFGRDISRCHDAPIPMAIPSILLALGSLFVGYLAKVLSNFWANSPLVLPKNEILAESEFAAPTITKLIPILFST
-SGAFVAYNVNPVADQFQRAFQTSTFCNRLYSFFNKRWFFDQVLNDFLVRSFLRFGYEVSFEALDKGAIEILGPYGISY
-TFRRLAERISQLQSGFVYHYAFAMLLGSTLFVTFSRMWDSLSSWVDNRSSFILIVSSFYTKSSQE" } ,
-            annot {
-              {
-                data
-                  ftable {
-                    {
-                      data
-                        prot {
-                          name {
-                            "NADH dehydrogenase subunit 5" } } ,
-                      location
-                        int {
-                          from 0 ,
-                          to 663 ,
-                          id
-                            general {
-                              db "ATHMT" ,
-                              tag
-                                str "nad5-1.t1:cds" } } } } } } } ,
-          seq {
-            id {
-              general {
-                db "ATHMT" ,
-                tag
                   str "atp6-1.t1:cds" } } ,
             descr {
               title "ATP synthase subunit 6 (mitochondrion) [Arabidopsis
@@ -4578,46 +3310,6 @@ QAYVFTILICIYLNDAINLH" } ,
                               db "ATHMT" ,
                               tag
                                 str "atp6-1.t1:cds" } } } } } } } ,
-          seq {
-            id {
-              general {
-                db "ATHMT" ,
-                tag
-                  str "nad1-1.t1:cds" } } ,
-            descr {
-              title "NADH dehydrogenase subunit 1 (mitochondrion) [Arabidopsis
- thaliana]" ,
-              molinfo {
-                biomol peptide ,
-                tech concept-trans } } ,
-            inst {
-              repr raw ,
-              mol aa ,
-              length 295 ,
-              seq-data
-                ncbieaa "MAFVQRRKGPDVVGSFGLLQPLADGSKLILKEPISPSSANFFLFRMAPVATFM
-LSLVARAVVPFDYGMVLSDPNIGLLYLFAISSLGVYGIIIAGRSSNSKYAFLGALRSAAQMVSYEVSIGLILITVLIC
-VGPRNSSEIVMAQKQIWSGIPLFPVLVMFLISRLAETNRAPFDLPEAEAESVAGYNVEYSSMGSALFFLGEYANMILM
-SGPCTLFFPGGWPPILDLPIFKKIPGSIWFSIKVLLFLFLYIWVRAAFPRYRYDQLMGLGRKVFLPLSLARVVPVSGL
-LVTFQWLP" } ,
-            annot {
-              {
-                data
-                  ftable {
-                    {
-                      data
-                        prot {
-                          name {
-                            "NADH dehydrogenase subunit 1" } } ,
-                      location
-                        int {
-                          from 0 ,
-                          to 294 ,
-                          id
-                            general {
-                              db "ATHMT" ,
-                              tag
-                                str "nad1-1.t1:cds" } } } } } } } ,
           seq {
             id {
               general {
@@ -4698,48 +3390,6 @@ LHGLASTNRSFAHFRWW" } ,
                               db "ATHMT" ,
                               tag
                                 str "rps7-1.t1:cds" } } } } } } } ,
-          seq {
-            id {
-              general {
-                db "ATHMT" ,
-                tag
-                  str "nad2-2.t1:cds" } } ,
-            descr {
-              title "NADH dehydrogenase subunit 2 (mitochondrion) [Arabidopsis
- thaliana]" ,
-              molinfo {
-                biomol peptide ,
-                tech concept-trans } } ,
-            inst {
-              repr raw ,
-              mol aa ,
-              length 488 ,
-              seq-data
-                ncbieaa "MFNLFLAVSPEIFIINATSILLIHGVVFSTSKKYDYPPLASNVGWLGLLSVLI
-TLLLLAAGAPLLTIAHLFWNNLFRRDNFTYFCQIFLLLSTAGTISMCFDSSDQERFDAFEFIVLIPLPTRGMLFMISA
-HDLIAMYLAIEPQSLCFYVIAASKRKSEFSTEAGSKYLILGAFSSGILLFGCSMIYGSTGATHFDQLAKILTGYEITG
-ARSSGIFMGILSIAVGFLFKITAVPFHMWAPDIYEGSPTPVTAFLSIAPKISISANILRVSIYGSYGATLQQIFFFCS
-IASMILGALAAMAQTKVKRPLAHSSIGHVGYIRTGFSCGTIEGIQSLLIGIFIYALMTMDAFAIVSALRQTRVKYIAD
-LGALAKTNPISAITFSITMFSYAGIPPLAGFCSKFYLFFAALGCGAYFLAPVGVVTSVIGRFYYIRLVKRMFFDTPRT
-WILYEPMDRNKSLLLAMTSFFITSSLLYPSPLFSVTHQMALSSYL" } ,
-            annot {
-              {
-                data
-                  ftable {
-                    {
-                      data
-                        prot {
-                          name {
-                            "NADH dehydrogenase subunit 2" } } ,
-                      location
-                        int {
-                          from 0 ,
-                          to 487 ,
-                          id
-                            general {
-                              db "ATHMT" ,
-                              tag
-                                str "nad2-2.t1:cds" } } } } } } } ,
           seq {
             id {
               general {
@@ -4906,43 +3556,6 @@ FLFFAITPILGRVGRGIPNSYTDETDHT" } ,
               general {
                 db "ATHMT" ,
                 tag
-                  str "rps14-1.t1:cds" } } ,
-            descr {
-              title "ribosomal protein S14 (mitochondrion) [Arabidopsis
- thaliana]" ,
-              molinfo {
-                biomol peptide ,
-                tech concept-trans } } ,
-            inst {
-              repr raw ,
-              mol aa ,
-              length 89 ,
-              seq-data
-                ncbieaa "MRLYHCGAQNSRDHKRRLLAAKFELRRKLYKAFCKDPDLPSDMRDKHCYKLSK
-LPRNSSFARVRNRCISTVALVLYLSSFEFLVSFFVD" } ,
-            annot {
-              {
-                data
-                  ftable {
-                    {
-                      data
-                        prot {
-                          name {
-                            "ribosomal protein S14" } } ,
-                      location
-                        int {
-                          from 0 ,
-                          to 88 ,
-                          id
-                            general {
-                              db "ATHMT" ,
-                              tag
-                                str "rps14-1.t1:cds" } } } } } } } ,
-          seq {
-            id {
-              general {
-                db "ATHMT" ,
-                tag
                   str "rpl5-1.t1:cds" } } ,
             descr {
               title "ribosomal protein L5 (mitochondrion) [Arabidopsis
@@ -5033,15 +3646,16 @@ NRESSVEFIIA" } ,
             inst {
               repr raw ,
               mol aa ,
-              length 495 ,
+              length 552 ,
               seq-data
                 ncbieaa "MLEHFCECYSNLSGLILCPVLGSITLLFIPNSRIRPIRLIGLCASLITFLYSP
 VPRIQFDSSTAKSQFVESLRWLPYENINFYLGIDGISLFFVILTTFLIPICISVGWSGMRSYGKEYITAFLIREFLMI
-AVFRMLDLLLFYVFPESVPIPMFIIIGVWGSRQRKIKAAYQFFLYTLLGSLFMLLAILLILFQTGTTDLQISLTTEFS
-ERRQIFLWIASFASFAVKVPMVPVHIWLPEAHVEAPTAGSVILAGIPLKFGTHGFLRFSIPMFPEATLCSTPFIYTLS
-AIAIIYTSLTTSRQIDLKKIIAYSSVAHMNLVTIGMFSPNIQGIGGSILPMLSHGLVPSALFLCVGVLYDRHKTRLVR
-YYGGLVSTMPNLSTIFFSFTLANMSSPGTSSFIGEFLILVGAFQRNSLVATLAALGMILGAAYSLWLYNRVVSGNLKP
-DFLHKFSDSNGREVSIFIPFLVGVVRMGVHPKVFPDCMHTSVSNLVQHGKFH" } ,
+AVFRMLDLLLFYVFPESVPIPMLQRKIKAAYQFFLYTLLGSLFMLLAILLILFQTGTTDLQISLTTEFSERRQIFLWI
+ASFASFAVKVPMVPVHIWLPEAHVEAPTAGSVILAGIPLKFGTHGFLRFSIPMFPEATLCSTPFIYTLSAIAIIYTSL
+TTSRQIDLKKIIAYSSVAHMNLVTIGMFSRAAAVRSPILSYGHTRPKHVCRALNWRTEVTFGTILPTAANITYALSSG
+SLIRKIELGGGLRCDTQKSFALSNIQGIGGSILPMLSHGLVPSALFLCVGVLYDRHKTRLVRYYGGLVSTMPNLSTIF
+FSFTLANMSSPGTSSFIGEFLILVGAFQRNSLVATLAALGMILGAAYSLWLYNRVVSGNLKPDFLHKFSDSNGREVSI
+FIPFLVGGATVLFPDCMHTSVSNLVQHGKFH" } ,
             annot {
               {
                 data
@@ -5054,51 +3668,12 @@ DFLHKFSDSNGREVSIFIPFLVGVVRMGVHPKVFPDCMHTSVSNLVQHGKFH" } ,
                       location
                         int {
                           from 0 ,
-                          to 494 ,
+                          to 551 ,
                           id
                             general {
                               db "ATHMT" ,
                               tag
                                 str "nad4-1.t1:cds" } } } } } } } ,
-          seq {
-            id {
-              general {
-                db "ATHMT" ,
-                tag
-                  str "mttB-1.t1:cds" } } ,
-            descr {
-              title "transport membrane protein (mitochondrion) [Arabidopsis
- thaliana]" ,
-              molinfo {
-                biomol peptide ,
-                tech concept-trans } } ,
-            inst {
-              repr raw ,
-              mol aa ,
-              length 280 ,
-              seq-data
-                ncbieaa "MNYLYISYEFNFASETILGEVRIRSVRILIGLGLTWFTCYWFPEELISPLASP
-FLTLPFDSYFVCTQLTEAFSTFVATSSIACSYFVFPLISYQIWCFLIPSCYGEQRTKYNRFLHLSGSRFFLFLFLTPP
-RVVPNVWHFPYFVGATSTNSLMIKLQPKIYDHIMLTVRISFIPSVCSQVPVIVICLPEPRGLSLETFTNNRRFLMVFP
-LLTAALSTPPDIWCQIVARFLISLIIELAIFVASIVQVREEGWTSGMRESGSIEKKNKSSPPPRTWQSNYQ" } ,
-            annot {
-              {
-                data
-                  ftable {
-                    {
-                      data
-                        prot {
-                          name {
-                            "transport membrane protein" } } ,
-                      location
-                        int {
-                          from 0 ,
-                          to 279 ,
-                          id
-                            general {
-                              db "ATHMT" ,
-                              tag
-                                str "mttB-1.t1:cds" } } } } } } } ,
           seq {
             id {
               general {
@@ -5200,11 +3775,11 @@ KHKSSARNIILKYSKDSNIVNQEGGKILAEFPNSIELGKLGPGQDLNKKEHSTTSLV" } ,
               mol aa ,
               length 394 ,
               seq-data
-                ncbieaa "MTTRKRQIKNFTSNFGPQHPAAHGVSRLVLEMNGEVVERAEPHIGSLHRGTEK
-LIEYKTYLQALPYSDRSDYVSMMAQEHAHSSAVEKLLNCEVPLRAQYIRVLFREITRISNHSLALTTHAMDVGALTPF
-LWAFEEREKLLEFYERVSGARMHASFIRPGGVAQDLPLGLCRDIDSFTQQFASRIDELEEMSTGNRIWKQRLVDIGTV
-TAQQAKDWGFSGVMLRGPGVCWDSRRAAPYDVHDQSDLDVPVGTRGDRYDRYCIRIEEMRQSLRIIVQCLNQMPSGMI
-KADDRKLCPPSRCRMKLSMESSIHHFELYTEGFSVPASSTYTAVEAPKGEFGVFLVSNGSNRPYRRKIRAPGSAHSQG
+                ncbieaa "MTTRKRQIKNFTSNFGPQHPAAHGVSRLVLEMNGEVVERAEPHIGSLQSEPIY
+KIGTEKLIDFVFRSVFDPIYVSMMAQEHAHSSAVEKLLNCEVPLRAQYIRVLFREITRISNHSLALTTHAMDVGALTP
+FLWAFEEREKLLEFYERVSGARMHASFIRPGGVAQDLPLGLCRDIDSFTQQFASRIDELEEMSTGNRIWKQRLVDIGT
+VTAQQAKDWGFSGVMLRGRVCWDSRRAAPYDVHDQSDLDVPVGTRGDRYDRYCIRIEEMRQSLRIIVQCLNQMPSGMI
+KADDRKLCPPSRCRMKLSMESCVVRFELAKRCFSVPASSTYTAVEAPKGEFGVFLVSNGSNRPYRRKIRAPGSAHSQG
 LDSMSKHHMPADVVTIIGTQDIVFGEVDR" } ,
             annot {
               {
@@ -5262,46 +3837,6 @@ TGRWITCRNCRNDIMLIHVVHGQGSIK" } ,
                               db "ATHMT" ,
                               tag
                                 str "atp8-1.t1:cds" } } } } } } } ,
-          seq {
-            id {
-              general {
-                db "ATHMT" ,
-                tag
-                  str "atp6-2.t1:cds" } } ,
-            descr {
-              title "ATP synthase subunit 6 (mitochondrion) [Arabidopsis
- thaliana]" ,
-              molinfo {
-                biomol peptide ,
-                tech concept-trans } } ,
-            inst {
-              repr raw ,
-              mol aa ,
-              length 349 ,
-              seq-data
-                ncbieaa "MERLTRLNHFLVNMRWDFYEGVIQAGYIRNLQRELDHTPAELLGSKLDLIFFR
-ESLNLSTYVNNWYMQNLGVPGPVNFIEKYHDACFSNYMKLMEIPSPLDQFEIVPLIPMHIGNFYFSFTNPSLFMLLTL
-SFFLLLIHFVTKKGGGNLVPNAWQSLVELLYDFVLNLVKEQIGGLSGNVKQMFFPCILVTFLFLLFCNLQGMIPYSFT
-VTSHFLITLALSFSIFIGITIVGFQRHGLHFFSFLLPAGVPLPLAPFLVLLELISYCFRALSLGIRLFANMMAGHSLV
-KILSGFAWTMLCMNDIFYFIGALGPLFIVLALTGLELGVAILQAYVFTILICIYLNDAINLH" } ,
-            annot {
-              {
-                data
-                  ftable {
-                    {
-                      data
-                        prot {
-                          name {
-                            "ATP synthase subunit 6" } } ,
-                      location
-                        int {
-                          from 0 ,
-                          to 348 ,
-                          id
-                            general {
-                              db "ATHMT" ,
-                              tag
-                                str "atp6-2.t1:cds" } } } } } } } ,
           seq {
             id {
               general {
@@ -5418,49 +3953,6 @@ KVRLSNRHDIFAHIPGEGHNSQEHSTVLIRGGRVKDSPGVKSHCIRGVKDLMGIPGRRRGRSKYGAEKPKSI" } ,
               general {
                 db "ATHMT" ,
                 tag
-                  str "ccmFN-1.t1:cds" } } ,
-            descr {
-              title "cytochrome c biogenesis FN (mitochondrion) [Arabidopsis
- thaliana]" ,
-              molinfo {
-                biomol peptide ,
-                tech concept-trans } } ,
-            inst {
-              repr raw ,
-              mol aa ,
-              length 578 ,
-              seq-data
-                ncbieaa "MSISIYEFFHYSLFPGLFVAFTYNKKQPPAFGAAPAFWCILLSFLGLSFCHIP
-NNLSNYNVLTANAPFFYQISGTWSNHEGSILLWCRIPNFYGFFLCYRGRPQSHNVLKQGGHRESLFFFFVSNFVKNSI
-LSLPRYEQESGLKNQLYTPFVLRTLVDSELRSRRNRTFDGPALFYAPLYPERKIKNPLDAWRSRGSREGKRTHPLLHL
-ARDDKERASSIDEQRIDGALGIALFFSPFLSASSDPFVRNFFVCTEPLAESNPVPQDPISAIHPPCIYAGDVASAEGF
-GLCRSKMMNGIVALHSPPMRKDAAEKNGTLLRSAGCVGSRITSELFTLKFKHVGAKCYPALLLRSNRSPLMLLRRRFF
-AFSSFWAGANVDTGREQAKRVVRNGKKETTTSPLCWTAGANTVVSDQDQEPIRIWILTCWWFLTVGILPGSWWAYHEL
-GRGGWWFRDPVENASFMPRVLATARIHSVILPLLHSWTSFLNIVTFPCCVSGTFSIRSGLLAPVHSFATDDTRGIFLW
-WFFLLMTGISMILFYQMKQQASVRRTYKKEMVVARSTLVHLRHSARAQPRPVMLWKN" } ,
-            annot {
-              {
-                data
-                  ftable {
-                    {
-                      data
-                        prot {
-                          name {
-                            "cytochrome c biogenesis FN" } } ,
-                      location
-                        int {
-                          from 0 ,
-                          to 577 ,
-                          id
-                            general {
-                              db "ATHMT" ,
-                              tag
-                                str "ccmFN-1.t1:cds" } } } } } } } ,
-          seq {
-            id {
-              general {
-                db "ATHMT" ,
-                tag
                   str "ccmC-1.t1:cds" } } ,
             descr {
               title "cytochrome c biogenesis C (mitochondrion) [Arabidopsis
@@ -5495,6 +3987,47 @@ FVLETRLPIPSFLESPITEEIEAREGIPKPSSLALFASMAEWLKRPT" } ,
                               db "ATHMT" ,
                               tag
                                 str "ccmC-1.t1:cds" } } } } } } } ,
+          seq {
+            id {
+              general {
+                db "ATHMT" ,
+                tag
+                  str "ccmFN-1.t1:cds" } } ,
+            descr {
+              title "cytochrome c biogenesis FN (mitochondrion) [Arabidopsis
+ thaliana]" ,
+              molinfo {
+                biomol peptide ,
+                tech concept-trans } } ,
+            inst {
+              repr raw ,
+              mol aa ,
+              length 382 ,
+              seq-data
+                ncbieaa "MSISIYEFFHYSLFPGLFVAFTYNKKQPPAFGAAPAFWCILLSFLGLSFCHIP
+NNLSNYNVLTANAPFFYQISGTWSNHEGSILLWCRIPNFYGFFLCYRGRPQSHNVLKQGGHRESLFFFFVSNFVKNSI
+LSLPRYEQESGLKNQLYTPFVLRTLVDSELRSRRNRTFDGPALFYAPLYPERKIKNPLDAWRSRGSREGKRTHPLLHL
+ARDDKERASSIDEQRIDGALGIALFFSPFLSASSDPFVRNFFVCTEPLAESNPVPQDPISAIHPPCIYAGDVASAEGF
+GLCRSKMMNGIVALHSPPMRKDAAEKNGTLLRSAGCVGSRITSELFTLKFKHVGAKCYPALLLRSNRSPLMLLRRRFF
+AFSSFWAGARSHSTKRY" } ,
+            annot {
+              {
+                data
+                  ftable {
+                    {
+                      data
+                        prot {
+                          name {
+                            "cytochrome c biogenesis FN" } } ,
+                      location
+                        int {
+                          from 0 ,
+                          to 381 ,
+                          id
+                            general {
+                              db "ATHMT" ,
+                              tag
+                                str "ccmFN-1.t1:cds" } } } } } } } ,
           seq {
             id {
               general {
@@ -5672,7 +4205,14 @@ SATLTNATSSRRIRFQDDLVTKFYTLVGKQFAYSCISKAERVEFIRESLVVLRMVRGGGFS" } ,
                           local
                             str "NC_037304.1" } ,
                       int {
-                        from 8306 ,
+                        from 7178 ,
+                        to 7198 ,
+                        strand plus ,
+                        id
+                          local
+                            str "NC_037304.1" } ,
+                      int {
+                        from 8318 ,
                         to 8388 ,
                         strand plus ,
                         id
@@ -5714,14 +4254,105 @@ SATLTNATSSRRIRFQDDLVTKFYTLVGKQFAYSCISKAERVEFIRESLVVLRMVRGGGFS" } ,
                     mix {
                       int {
                         from 20164 ,
-                        to 20237 ,
+                        to 20190 ,
                         strand plus ,
                         id
                           local
                             str "NC_037304.1" } ,
                       int {
-                        from 21821 ,
+                        from 20446 ,
+                        to 20471 ,
+                        strand plus ,
+                        id
+                          local
+                            str "NC_037304.1" } ,
+                      int {
+                        from 21785 ,
                         to 23417 ,
+                        strand plus ,
+                        id
+                          local
+                            str "NC_037304.1" } } } ,
+                {
+                  data
+                    cdregion {
+                      frame one ,
+                      code {
+                        id 1 } } ,
+                  product
+                    whole
+                      general {
+                        db "ATHMT" ,
+                        tag
+                          str "nad5-1.t1:cds" } ,
+                  location
+                    mix {
+                      int {
+                        from 234351 ,
+                        to 234588 ,
+                        strand plus ,
+                        id
+                          local
+                            str "NC_037304.1" } ,
+                      int {
+                        from 235432 ,
+                        to 236627 ,
+                        strand plus ,
+                        id
+                          local
+                            str "NC_037304.1" } ,
+                      int {
+                        from 238338 ,
+                        to 238369 ,
+                        strand plus ,
+                        id
+                          local
+                            str "NC_037304.1" } ,
+                      int {
+                        from 238652 ,
+                        to 238673 ,
+                        strand plus ,
+                        id
+                          local
+                            str "NC_037304.1" } ,
+                      int {
+                        from 239358 ,
+                        to 239380 ,
+                        strand plus ,
+                        id
+                          local
+                            str "NC_037304.1" } ,
+                      int {
+                        from 21863 ,
+                        to 21882 ,
+                        strand plus ,
+                        id
+                          local
+                            str "NC_037304.1" } ,
+                      int {
+                        from 25976 ,
+                        to 26006 ,
+                        strand plus ,
+                        id
+                          local
+                            str "NC_037304.1" } ,
+                      int {
+                        from 26922 ,
+                        to 27273 ,
+                        strand plus ,
+                        id
+                          local
+                            str "NC_037304.1" } ,
+                      int {
+                        from 27615 ,
+                        to 27636 ,
+                        strand plus ,
+                        id
+                          local
+                            str "NC_037304.1" } ,
+                      int {
+                        from 28274 ,
+                        to 28335 ,
                         strand plus ,
                         id
                           local
@@ -5777,48 +4408,6 @@ SATLTNATSSRRIRFQDDLVTKFYTLVGKQFAYSCISKAERVEFIRESLVVLRMVRGGGFS" } ,
                       general {
                         db "ATHMT" ,
                         tag
-                          str "nad5-1.t1:cds" } ,
-                  location
-                    mix {
-                      int {
-                        from 234351 ,
-                        to 234579 ,
-                        strand plus ,
-                        id
-                          local
-                            str "NC_037304.1" } ,
-                      int {
-                        from 235411 ,
-                        to 236630 ,
-                        strand plus ,
-                        id
-                          local
-                            str "NC_037304.1" } ,
-                      int {
-                        from 26812 ,
-                        to 27210 ,
-                        strand plus ,
-                        id
-                          local
-                            str "NC_037304.1" } ,
-                      int {
-                        from 28189 ,
-                        to 28335 ,
-                        strand plus ,
-                        id
-                          local
-                            str "NC_037304.1" } } } ,
-                {
-                  data
-                    cdregion {
-                      frame one ,
-                      code {
-                        id 1 } } ,
-                  product
-                    whole
-                      general {
-                        db "ATHMT" ,
-                        tag
                           str "atp6-1.t1:cds" } ,
                   location
                     int {
@@ -5828,55 +4417,6 @@ SATLTNATSSRRIRFQDDLVTKFYTLVGKQFAYSCISKAERVEFIRESLVVLRMVRGGGFS" } ,
                       id
                         local
                           str "NC_037304.1" } } ,
-                {
-                  data
-                    cdregion {
-                      frame one ,
-                      code {
-                        id 1 } } ,
-                  product
-                    whole
-                      general {
-                        db "ATHMT" ,
-                        tag
-                          str "nad1-1.t1:cds" } ,
-                  location
-                    mix {
-                      int {
-                        from 82936 ,
-                        to 83230 ,
-                        strand minus ,
-                        id
-                          local
-                            str "NC_037304.1" } ,
-                      int {
-                        from 58314 ,
-                        to 58396 ,
-                        strand plus ,
-                        id
-                          local
-                            str "NC_037304.1" } ,
-                      int {
-                        from 59289 ,
-                        to 59480 ,
-                        strand plus ,
-                        id
-                          local
-                            str "NC_037304.1" } ,
-                      int {
-                        from 230303 ,
-                        to 230361 ,
-                        strand plus ,
-                        id
-                          local
-                            str "NC_037304.1" } ,
-                      int {
-                        from 233873 ,
-                        to 234131 ,
-                        strand plus ,
-                        id
-                          local
-                            str "NC_037304.1" } } } ,
                 {
                   data
                     cdregion {
@@ -5917,55 +4457,6 @@ SATLTNATSSRRIRFQDDLVTKFYTLVGKQFAYSCISKAERVEFIRESLVVLRMVRGGGFS" } ,
                       id
                         local
                           str "NC_037304.1" } } ,
-                {
-                  data
-                    cdregion {
-                      frame one ,
-                      code {
-                        id 1 } } ,
-                  product
-                    whole
-                      general {
-                        db "ATHMT" ,
-                        tag
-                          str "nad2-2.t1:cds" } ,
-                  location
-                    mix {
-                      int {
-                        from 161831 ,
-                        to 161983 ,
-                        strand plus ,
-                        id
-                          local
-                            str "NC_037304.1" } ,
-                      int {
-                        from 162965 ,
-                        to 163356 ,
-                        strand plus ,
-                        id
-                          local
-                            str "NC_037304.1" } ,
-                      int {
-                        from 97881 ,
-                        to 98041 ,
-                        strand minus ,
-                        id
-                          local
-                            str "NC_037304.1" } ,
-                      int {
-                        from 94665 ,
-                        to 95237 ,
-                        strand minus ,
-                        id
-                          local
-                            str "NC_037304.1" } ,
-                      int {
-                        from 92818 ,
-                        to 93005 ,
-                        strand minus ,
-                        id
-                          local
-                            str "NC_037304.1" } } } ,
                 {
                   data
                     cdregion {
@@ -6057,34 +4548,6 @@ SATLTNATSSRRIRFQDDLVTKFYTLVGKQFAYSCISKAERVEFIRESLVVLRMVRGGGFS" } ,
                       general {
                         db "ATHMT" ,
                         tag
-                          str "rps14-1.t1:cds" } ,
-                  location
-                    mix {
-                      int {
-                        from 184796 ,
-                        to 184819 ,
-                        strand minus ,
-                        id
-                          local
-                            str "NC_037304.1" } ,
-                      int {
-                        from 184502 ,
-                        to 184747 ,
-                        strand minus ,
-                        id
-                          local
-                            str "NC_037304.1" } } } ,
-                {
-                  data
-                    cdregion {
-                      frame one ,
-                      code {
-                        id 1 } } ,
-                  product
-                    whole
-                      general {
-                        db "ATHMT" ,
-                        tag
                           str "rpl5-1.t1:cds" } ,
                   location
                     int {
@@ -6144,46 +4607,40 @@ SATLTNATSSRRIRFQDDLVTKFYTLVGKQFAYSCISKAERVEFIRESLVVLRMVRGGGFS" } ,
                           local
                             str "NC_037304.1" } ,
                       int {
-                        from 213114 ,
-                        to 213628 ,
+                        from 213047 ,
+                        to 213601 ,
                         strand minus ,
                         id
                           local
                             str "NC_037304.1" } ,
                       int {
-                        from 209610 ,
-                        to 210032 ,
+                        from 212228 ,
+                        to 212284 ,
+                        strand minus ,
+                        id
+                          local
+                            str "NC_037304.1" } ,
+                      int {
+                        from 210254 ,
+                        to 210326 ,
+                        strand minus ,
+                        id
+                          local
+                            str "NC_037304.1" } ,
+                      int {
+                        from 209598 ,
+                        to 210048 ,
                         strand minus ,
                         id
                           local
                             str "NC_037304.1" } ,
                       int {
                         from 207579 ,
-                        to 207667 ,
+                        to 207640 ,
                         strand minus ,
                         id
                           local
                             str "NC_037304.1" } } } ,
-                {
-                  data
-                    cdregion {
-                      frame one ,
-                      code {
-                        id 1 } } ,
-                  product
-                    whole
-                      general {
-                        db "ATHMT" ,
-                        tag
-                          str "mttB-1.t1:cds" } ,
-                  location
-                    int {
-                      from 218903 ,
-                      to 219745 ,
-                      strand minus ,
-                      id
-                        local
-                          str "NC_037304.1" } } ,
                 {
                   data
                     cdregion {
@@ -6254,29 +4711,43 @@ SATLTNATSSRRIRFQDDLVTKFYTLVGKQFAYSCISKAERVEFIRESLVVLRMVRGGGFS" } ,
                           local
                             str "NC_037304.1" } ,
                       int {
-                        from 244154 ,
-                        to 244222 ,
+                        from 244452 ,
+                        to 244472 ,
+                        strand minus ,
+                        id
+                          local
+                            str "NC_037304.1" } ,
+                      int {
+                        from 244199 ,
+                        to 244219 ,
                         strand minus ,
                         id
                           local
                             str "NC_037304.1" } ,
                       int {
                         from 242624 ,
-                        to 243090 ,
+                        to 243120 ,
                         strand minus ,
                         id
                           local
                             str "NC_037304.1" } ,
                       int {
-                        from 241327 ,
-                        to 241570 ,
+                        from 241318 ,
+                        to 241567 ,
+                        strand minus ,
+                        id
+                          local
+                            str "NC_037304.1" } ,
+                      int {
+                        from 239769 ,
+                        to 239791 ,
                         strand minus ,
                         id
                           local
                             str "NC_037304.1" } ,
                       int {
                         from 239249 ,
-                        to 239510 ,
+                        to 239478 ,
                         strand minus ,
                         id
                           local
@@ -6297,26 +4768,6 @@ SATLTNATSSRRIRFQDDLVTKFYTLVGKQFAYSCISKAERVEFIRESLVVLRMVRGGGFS" } ,
                     int {
                       from 247015 ,
                       to 247491 ,
-                      strand minus ,
-                      id
-                        local
-                          str "NC_037304.1" } } ,
-                {
-                  data
-                    cdregion {
-                      frame one ,
-                      code {
-                        id 1 } } ,
-                  product
-                    whole
-                      general {
-                        db "ATHMT" ,
-                        tag
-                          str "atp6-2.t1:cds" } ,
-                  location
-                    int {
-                      from 264466 ,
-                      to 265515 ,
                       strand minus ,
                       id
                         local
@@ -6392,23 +4843,15 @@ SATLTNATSSRRIRFQDDLVTKFYTLVGKQFAYSCISKAERVEFIRESLVVLRMVRGGGFS" } ,
                       general {
                         db "ATHMT" ,
                         tag
-                          str "ccmFN-1.t1:cds" } ,
+                          str "ccmC-1.t1:cds" } ,
                   location
-                    mix {
-                      int {
-                        from 316012 ,
-                        to 317134 ,
-                        strand plus ,
-                        id
-                          local
-                            str "NC_037304.1" } ,
-                      int {
-                        from 291577 ,
-                        to 292190 ,
-                        strand plus ,
-                        id
-                          local
-                            str "NC_037304.1" } } } ,
+                    int {
+                      from 308297 ,
+                      to 309067 ,
+                      strand plus ,
+                      id
+                        local
+                          str "NC_037304.1" } } ,
                 {
                   data
                     cdregion {
@@ -6420,11 +4863,11 @@ SATLTNATSSRRIRFQDDLVTKFYTLVGKQFAYSCISKAERVEFIRESLVVLRMVRGGGFS" } ,
                       general {
                         db "ATHMT" ,
                         tag
-                          str "ccmC-1.t1:cds" } ,
+                          str "ccmFN-1.t1:cds" } ,
                   location
                     int {
-                      from 308297 ,
-                      to 309067 ,
+                      from 316012 ,
+                      to 317160 ,
                       strand plus ,
                       id
                         local

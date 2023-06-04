@@ -6,7 +6,7 @@ cd OGAP
 # install
 conda env create -f OGAP.yaml
 conda activate OGAP
-python setup.py install
+#python setup.py install
 
 # start
 cd test
@@ -98,6 +98,7 @@ do
 	python ../OGAP.py genbank/$sp.gb -mt -prefix $sp -outdir re_anno &> $sp.log
 done
 
+python ../lib/Comparative.py summary re_anno/
 python ../lib/Comparative.py phylo re_anno/
 python ../lib/Comparative.py kaks re_anno/
 ```

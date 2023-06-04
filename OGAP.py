@@ -893,7 +893,7 @@ class Pipeline():
 				record.annotations.total_exons,
 				record.annotations.supported_P, record.annotations.supported_E,
 				record.annotations.fully_obeyed)
-			if completed and {'X', '*'} & set(seq):	# stop codon in CDS
+			if completed and {'X', '*'} & set(seq[:-1]):	# stop codon in CDS
 				continue
 			print >>fout, '>{} {}\n{}'.format(record.id, desc, seq)
 		return genes, has_block, has_support, full_support, has_obey, both_support

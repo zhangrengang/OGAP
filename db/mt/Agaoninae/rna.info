@@ -1,0 +1,9 @@
+#id	name	product	seq_type	exon_count	trans_splicing	gene_count	species_count	names	products	species
+12S-ribosomal-RNA	12S-ribosomal-RNA	12S ribosomal RNA	rRNA	1	False	5	5	12S-ribosomal-RNA:5	12S ribosomal RNA:5	Ceratosolen_fusciceps:1,Ceratosolen_solmsi:1,Dolichoris_vasculosae:1,Eupristina_koningsbergeri:1,Wiebesia_pumilae:1
+16S-ribosomal-RNA	16S-ribosomal-RNA	16S ribosomal RNA	rRNA	1	False	5	5	16S-ribosomal-RNA:5	16S ribosomal RNA:5	Ceratosolen_fusciceps:1,Ceratosolen_solmsi:1,Dolichoris_vasculosae:1,Eupristina_koningsbergeri:1,Wiebesia_pumilae:1
+trnL	trnL	tRNA-Leu	tRNA	1	False	3	3	tRNA-Leu:3	tRNA-Leu:3	Eupristina_koningsbergeri:1,Platyscapa_corneri:1,Wiebesia_pumilae:1
+trnL-5	trnL	tRNA-Leu	tRNA	1	False	2	2	tRNA-Leu:2	tRNA-Leu:2	Ceratosolen_fusciceps:1,Ceratosolen_solmsi:1
+trnM	trnM	tRNA-Met	tRNA	1	False	2	2	tRNA-Met:2	tRNA-Met:2	Dolichoris_vasculosae:1,Eupristina_koningsbergeri:1
+trnN	trnN	tRNA-Asn	tRNA	1	False	2	2	tRNA-Asn:2	tRNA-Asn:2	Ceratosolen_fusciceps:1,Wiebesia_pumilae:1
+trnS	trnS	tRNA-Ser	tRNA	1	False	2	2	tRNA-Ser:2	tRNA-Ser:2	Ceratosolen_fusciceps:1,Ceratosolen_solmsi:1
+trnY	trnY	tRNA-Tyr	tRNA	1	False	4	4	tRNA-Tyr:4	tRNA-Tyr:4	Ceratosolen_fusciceps:1,Dolichoris_vasculosae:1,Eupristina_koningsbergeri:1,Wiebesia_pumilae:1

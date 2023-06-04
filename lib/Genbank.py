@@ -195,7 +195,9 @@ class GenbankRecord():
 				try:
 					feat_id = feature.qualifiers['gene'][0]
 				except KeyError:
-					feat_id = 'gene{}'.format(i)
+					try: feat_id = feature.qualifiers['product'][0].replace(' ', '_')
+					except KeyError:
+						feat_id = 'gene{}'.format(i)
 				if feat_id in features:
 					feat_id = '{}-{}'.format(feat_id, i)
 				try: nucl_seq = feature.extract(self.seq)
@@ -261,7 +263,10 @@ class FeatureRecord():
 		try:
 			gene = self.qualifiers['gene'][0]
 		except KeyError:
-			gene = self.id
+			try:
+				gene = self.qualifiers['product'][0]
+			except KeyError:
+				gene = self.id
 		return self.format_id(gene)
 	@lazyproperty
 	def nexon(self):

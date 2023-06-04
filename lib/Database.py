@@ -307,7 +307,11 @@ class Database():
 		if self.version is None:
 			version = time.strftime("%Y-%m-%d", time.gmtime(os.path.getmtime(self.gbfiles[0])))
 			today = time.strftime("%Y-%m-%d", time.gmtime(time.time()))
-			self.version = 'RefSeq {}: build {}'.format(version, today)
+			if re.compile(r'\S+.genomic.gbff').search(self.gbfiles[0]):
+				source = 'RefSeq'
+			else:
+				source = 'Unknown'
+			self.version = '{} {}: build {}'.format(source, version, today)
 			logger.info('version: {}'.format(self.version))
 			with open(self.vesion_file, 'w') as fout:
 				print >>fout, self.version
@@ -433,8 +437,16 @@ class Database():
 		d_genes = {}
 		lines = []
 		gene_names, outseqs, groups = [], [], []
-		for i, group in enumerate(orf.get_orthologs_cluster()):		# group by feat.id
+		if len(list(orf.get_orthologs_cluster())) == 0:
+			orthologs = orf.get_orthogroups()
+			logger.info('using orthogroups')
+		else:
+			orthologs = orf.get_orthologs_cluster()
+			logger.info('using orthologues groups')
+#		for i, group in enumerate(orf.get_orthologs_cluster()):		# group by feat.id
 #		for i, group in enumerate(orf.get_orthogroups()):
+		for i, group in enumerate(orthologs):
+		#	print group, d_names
 			gene_name, name_count = self.get_gene_name(group, d_names,)
 			tmpfix = '{}/{}.para'.format(outdir, gene_name)
 			group = self.filter_paralogs(group, d_seqs, tmpfix)

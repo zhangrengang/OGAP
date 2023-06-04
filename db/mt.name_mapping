@@ -120,15 +120,14 @@ ND4		NADH dehydrogenase subunit 4
 ND4		NADH dehydrogenase subunit 4
 ND4L	NADH dehydrogenase subunit 4L
 ND5		NADH dehydrogenase subunit 5
-ND5		NADH dehydrogenase subunit 5
 ND6		NADH dehydrogenase subunit 6
-rrn12	12S ribosomal RNA	12S-rRNA
-rrn16	16S ribosomal RNA	16S-rRNA
+rrn12	12S ribosomal RNA	rrnS,12S-rRNA,12S-ribosomal-RNA
+rrn16	16S ribosomal RNA	rrnL,16S-rRNA,16S-ribosomal-RNA
 trnN-guu	tRNA-Asn
 trnP-ugg	tRNA-Pro
 trnR-tcg	tRNA-Arg
-trnL1-uag	tRNA-Leu
-trnL2-uaa	tRNA-Leu
+trnL1-uag	tRNA-Leu	trnL-uag
+trnL2-uaa	tRNA-Leu	trnL-uaa
 # fungi 
 rnl		large subunit ribosomal RNA
 rns		small subunit ribosomal RNA

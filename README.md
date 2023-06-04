@@ -1,3 +1,21 @@
+### Quick install and start ###
+```
+git clone https://github.com/zhangrengang/OGAP
+cd OGAP
+
+# install
+conda env create -f OGAP.yaml
+conda activate OGAP
+python setup.py install
+
+# start
+cd test
+python ../OGAP.py Arabidopsis_thaliana-mt.gb -mt -o mt_out
+python ../OGAP.py Arabidopsis_thaliana-mt.fa -mt -o mt_out -sp Arabidopsis_thaliana
+python ../OGAP.py Arabidopsis_thaliana-pt.gb -pt -o pt_out
+python ../OGAP.py Arabidopsis_thaliana-mt.gb -mt -pt -o mt_out
+```
+
 ### Installation ###
 Dependencies:
 + [python 2.7](https://www.python.org/)  
@@ -19,8 +37,8 @@ Dependencies:
 + `-draw_map` option to draw Genome Map
     + [OGDraw](https://chlorobox.mpimp-golm.mpg.de/OGDraw-Downloads.html) 
 + `-compare_map` option to draw Genome Map together with the raw genbank record
-    + OGDraw  
-	+ latex  
+    + OGDraw (not in conda)
+	+ latex  (not in conda)
 + `-repeat` option to annotate repeat region
     + [vmatch](http://www.vmatch.de/)  
     + [trf](http://tandem.bu.edu/trf/trf.html)  

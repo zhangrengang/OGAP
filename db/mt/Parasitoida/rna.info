@@ -1,0 +1,17 @@
+#id	name	product	seq_type	exon_count	trans_splicing	gene_count	species_count	names	products	species
+12S-ribosomal-RNA	12S-ribosomal-RNA	12S ribosomal RNA	rRNA	1	False	7	7	12S-ribosomal-RNA:7	12S ribosomal RNA:7	Apocrypta_bakeri:1,Ceratosolen_fusciceps:1,Dolichoris_vasculosae:1,Eupristina_koningsbergeri:1,Micranisa_ralianga:1,Philotrypesis_tridentata:1,Wiebesia_pumilae:1
+12S-ribosomal-RNA-11	12S-ribosomal-RNA	12S ribosomal RNA	rRNA	1	False	2	2	12S-ribosomal-RNA:2	12S ribosomal RNA:2	Odontofroggatia_galili:1,Walkerella_microcarpae:1
+16S-ribosomal-RNA	16S-ribosomal-RNA	16S ribosomal RNA	rRNA	1	False	11	11	16S-ribosomal-RNA:11	16S ribosomal RNA:11	Apocrypta_bakeri:1,Ceratosolen_fusciceps:1,Dolichoris_vasculosae:1,Eupristina_koningsbergeri:1,Micranisa_ralianga:1,Odontofroggatia_galili:1,Philotrypesis_tridentata:1,Platyneura_mayri:1,Sycophaga_agraensis:1,Walkerella_microcarpae:1,Wiebesia_pumilae:1
+trnH	trnH	tRNA-His	tRNA	1	False	3	3	tRNA-His:3	tRNA-His:3	Ceratosolen_fusciceps:1,Platyneura_mayri:1,Wiebesia_pumilae:1
+trnL	trnL	tRNA-Leu	tRNA	1	False	3	3	tRNA-Leu:3	tRNA-Leu:3	Apocrypta_bakeri:1,Micranisa_ralianga:1,Platyneura_mayri:1
+trnL-5	trnL	tRNA-Leu	tRNA	1	False	3	3	tRNA-Leu:3	tRNA-Leu:3	Eupristina_koningsbergeri:1,Platyscapa_corneri:1,Wiebesia_pumilae:1
+trnL-8	trnL	tRNA-Leu	tRNA	1	False	2	2	tRNA-Leu:2	tRNA-Leu:2	Ceratosolen_fusciceps:1,Walkerella_microcarpae:1
+trnM	trnM	tRNA-Met	tRNA	1	False	2	2	tRNA-Met:2	tRNA-Met:2	Dolichoris_vasculosae:1,Eupristina_koningsbergeri:1
+trnN	trnN	tRNA-Asn	tRNA	1	False	2	2	tRNA-Asn:2	tRNA-Asn:2	Ceratosolen_fusciceps:1,Wiebesia_pumilae:1
+trnN-14	trnN	tRNA-Asn	tRNA	1	False	2	2	tRNA-Asn:2	tRNA-Asn:2	Platyneura_mayri:1,Sycophaga_agraensis:1
+trnP	trnP	tRNA-Pro	tRNA	1	False	2	2	tRNA-Pro:2	tRNA-Pro:2	Apocrypta_bakeri:1,Eupristina_koningsbergeri:1
+trnP-12	trnP	tRNA-Pro	tRNA	1	False	2	2	tRNA-Pro:2	tRNA-Pro:2	Odontofroggatia_galili:1,Sycophaga_agraensis:1
+trnY	trnY	tRNA-Tyr	tRNA	1	False	5	5	tRNA-Tyr:5	tRNA-Tyr:5	Ceratosolen_fusciceps:1,Dolichoris_vasculosae:1,Eupristina_koningsbergeri:1,Odontofroggatia_galili:1,Wiebesia_pumilae:1
+trnY-13	trnY	tRNA-Tyr	tRNA	1	False	2	2	tRNA-Tyr:2	tRNA-Tyr:2	Philotrypesis_tridentata:1,Sycophaga_agraensis:1
+trnY-15	trnY	tRNA-Tyr	tRNA	1	False	2	2	tRNA-Tyr:2	tRNA-Tyr:2	Platyneura_mayri:1,Platyscapa_corneri:1
+trnY-7	trnY	tRNA-Tyr	tRNA	1	False	2	2	tRNA-Tyr:2	tRNA-Tyr:2	Apocrypta_bakeri:1,Walkerella_microcarpae:1

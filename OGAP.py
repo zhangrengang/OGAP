@@ -1,3 +1,4 @@
+#!/bin/env python
 import sys, os, re
 import copy
 import argparse
@@ -40,7 +41,7 @@ def makeArgparse():
 	parser.add_argument("-tmpdir", action="store",
 					default='/dev/shm/tmp', type=str,
 					help="temporary directory [default=%(default)s]")
-	parser.add_argument('-cleanup', action="store_true", default=False,
+	parser.add_argument('-cleanup', action="store_true", default=True,
 					help='clean up temporary directory [default=%(default)s]')
 					
 	parser.add_argument('-seqfmt', type=str, choices=['fasta', 'genbank'], default=None,
@@ -81,6 +82,8 @@ def makeArgparse():
 	group_out.add_argument('-pre', "-prefix", action="store", dest='prefix',
 					default=None, type=str,
 					help="output prefix [default=genome file basename]")
+#	parser.add_argument('-min_cds_hmmcov', type=float, default=0,
+#                    help="min coverage to filter HMM hits [default=%(default)s]")
 	parser.add_argument('-min_cds_cov', type=float, default=60,
 					help="min coverage to filter candidate coding genes [default=%(default)s]")
 	parser.add_argument('-min_rrn_cov', type=float, default=60,
@@ -89,7 +92,7 @@ def makeArgparse():
 					help="min coverage to filter candidate tRNA genes [default=%(default)s]")
 	group_out.add_argument('-min_cov', type=float, default=30,
 					 help="min coverage to filter out final gene set [default=%(default)s]")
-	group_out.add_argument('-min_score', type=float, default=15,
+	group_out.add_argument('-min_score', type=float, default=0.2,
 					 help="min score to filter out final gene set [default=%(default)s]")
 #	parser.add_argument('-score_cutoff', type=float, default=0.85,
 #					help="min score ratio of the highest of multi-copy gene to output [default=%(default)s]")
@@ -106,7 +109,7 @@ def makeArgparse():
 					help="output tRNA structure [default=%(default)s]")
 	group_out.add_argument('-draw_map', action="store_true", default=False,
 					help="draw gene map [default=%(default)s]")
-	group_out.add_argument('-compare_map', action="store_true", default=True,
+	group_out.add_argument('-compare_map', action="store_true", default=False,
                     help="compare gene map with genbank input [default=%(default)s]")
 
 	group_rep = parser.add_argument_group('repeat', )
@@ -162,7 +165,7 @@ class Pipeline():
 				min_cds_score=0.85,		# score_cutoff for cds
 				min_rrn_score=0.95,		# score_cutoff for rrn
 				min_trn_score=0.80,		# score_cutoff for trn
-				min_score=20, # filter final set (> hard_score_cutoff) to filter out single copy
+				min_score=0.2, # filter final set (> hard_score_cutoff) to filter out single copy
 				min_cov=50,			# filter final set (> min_cov%) to filter out single copy
 				trn_opts=' -O',
 				trn_struct=False,
@@ -353,9 +356,10 @@ class Pipeline():
 				for record in db_records:
 					record[0].attributes['db'] = taxon
 					if self.extend_organ and organ == 'pt':
-						record[0].attributes['note'] = 'cp-derived'
+						record[0].attributes['note'] = 'chloroplast-derived' #'cp-derived'
 						if record.rna_type == 'tRNA':
-							record.gene += '-cp'
+							record[0].attributes['gene'] = record.gene = record.gene+'-cp'
+							
 				records += db_records
 		# score
 		#logger.info('scoring genes by HMM')
@@ -503,7 +507,7 @@ class Pipeline():
 		self.hmmsearch(hmmfile, rnafa, domtblout)
 		hmm_best = HmmSearch(domtblout).get_best_hit()
 		try:
-			record.score = round(hmm_best.edit_score, 1)
+			record.score = round(hmm_best.edit_score / hmm_best.tlen, 2)	# normalize
 			record.cov = round(hmm_best.cov, 1)
 		except AttributeError:
 			record.score = 0
@@ -727,7 +731,7 @@ class Pipeline():
 		exn_gff = self.get_exnfile(copy, 'p')
 		self.exonerate(seqfile, reference, exn_gff,		# protein
 				model='protein2genome', percent=20,
-				maxintron=500000,
+				maxintron=500000, geneticcode=self.transl_table,
 				showtargetgff='T')
 		hintfile = self.get_hintfile(copy)
 		with open(hintfile, 'w') as fout:
@@ -778,9 +782,9 @@ class Pipeline():
 		none = (None, None)
 		ag_hmm_best = HmmSearch(ag_domtblout).get_best_hit() if os.path.exists(ag_domtblout) else None
 		ex_hmm_best = HmmSearch(ex_domtblout).get_best_hit() if os.path.exists(ex_domtblout) else None
-		if ag_hmm_best.hmmcov < min_cds_cov:
+		if ag_hmm_best is not None and ag_hmm_best.hmmcov < min_cds_cov:
 			ag_hmm_best = None
-		if ex_hmm_best.hmmcov < min_cds_cov:
+		if ex_hmm_best is not None and ex_hmm_best.hmmcov < min_cds_cov:
 			ex_hmm_best = None
 			
 		if ag_hmm_best is None:
@@ -1078,8 +1082,11 @@ class Pipeline():
 		fout.close()
 
 	def to_sqn(self, records):
-		g,s = self.organism.split()[:2]
-		prefix = g[:1] + s[:2] + self.organ #[0]
+		try: 
+			g,s = self.organism.split()[:2]
+			prefix = g[:1] + s[:2] + self.organ #[0]
+		except ValueError:
+			prefix = self.organism[:3] + self.organ
 		prefix = prefix.upper()
 		# to tbl
 		tbl = '{}/{}.tbl'.format(self.outdir, self.prefix)

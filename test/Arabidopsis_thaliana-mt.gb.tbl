@@ -1,1585 +1,424 @@
 >Feature NC_037304.1
-1	4193	repeat_region
-		note	DR59-1
-		rpt_type	dispersed
-6108	6119	repeat_region
-		note	SR20-1
-		rpt_type	tandem
-6118	6530	repeat_region
-		note	DR152-1
-		rpt_type	dispersed
+1940	1872	gene
+		gene	trnF-GAA-cp
+		locus_tag	ATHMT_0001
+		note	cp-derived
+1940	1872	tRNA
+		product	tRNA-Phe
 6264	8389	gene
 		gene	cox2
-		locus_tag	ATHMT_0003
-6264	6963	mRNA
-8307	8389
-		product	cytochrome c oxidase subunit 2
-		transcript_id	gnl|ATHMT|cox2-1.t1
-		protein_id	gnl|ATHMT|cox2-1.t1:cds
+		locus_tag	ATHMT_0002
 6264	6963	CDS
 8307	8389
 		product	cytochrome c oxidase subunit 2
-		transcript_id	gnl|ATHMT|cox2-1.t1
 		protein_id	gnl|ATHMT|cox2-1.t1:cds
 		codon_start	1
-6486	6538	repeat_region
-		note	DR54-1
-		rpt_type	dispersed
-8915	9013	repeat_region
-		note	DR27-1
-		rpt_type	dispersed
-10083	10120	repeat_region
-		note	TR28-1
-		rpt_type	tandem
-10747	10809	repeat_region
-		note	DR18-1
-		rpt_type	dispersed
-11394	11535	repeat_region
-		note	DR141-1
-		rpt_type	dispersed
-11528	11621	repeat_region
-		note	DR147-1
-		rpt_type	dispersed
-14161	14172	repeat_region
-		note	SR5-1
-		rpt_type	tandem
-15162	15213	repeat_region
-		note	DR35-1
-		rpt_type	dispersed
-15164	15242	repeat_region
-		note	TR5-1
-		rpt_type	tandem
 18434	17814	gene
 		gene	ccmB
-		locus_tag	ATHMT_0013
-18434	17814	mRNA
-		product	cytochrome c biogenesis B
-		transcript_id	gnl|ATHMT|ccmB-1.t1
-		protein_id	gnl|ATHMT|ccmB-1.t1:cds
+		locus_tag	ATHMT_0003
 18434	17814	CDS
 		product	cytochrome c biogenesis B
-		transcript_id	gnl|ATHMT|ccmB-1.t1
 		protein_id	gnl|ATHMT|ccmB-1.t1:cds
 		codon_start	1
-19041	19052	repeat_region
-		note	SR40-1
-		rpt_type	tandem
-19280	19289	repeat_region
-		note	SR1-1
-		rpt_type	tandem
-19290	19299	repeat_region
-		note	SR12-1
-		rpt_type	tandem
-19682	20189	repeat_region
-		note	DR11-1
-		rpt_type	dispersed
 19928	20000	gene
 		gene	trnK-UUU
-		locus_tag	ATHMT_0018
+		locus_tag	ATHMT_0004
 19928	20000	tRNA
 		product	tRNA-Lys
-		transcript_id	gnl|ATHMT|trnK-UUU-2.t1
 20165	23418	gene
 		gene	rps3
-		locus_tag	ATHMT_0019
-20165	20238	mRNA
-21822	23418
-		product	ribosomal protein S3
-		transcript_id	gnl|ATHMT|rps3-1.t1
-		protein_id	gnl|ATHMT|rps3-1.t1:cds
+		locus_tag	ATHMT_0005
 20165	20238	CDS
 21822	23418
 		product	ribosomal protein S3
-		transcript_id	gnl|ATHMT|rps3-1.t1
 		protein_id	gnl|ATHMT|rps3-1.t1:cds
 		codon_start	1
-20187	20237	repeat_region
-		note	DR22-1
-		rpt_type	dispersed
-20201	20254	repeat_region
-		note	DR90-1
-		rpt_type	dispersed
-20754	20815	repeat_region
-		note	DR156-1
-		rpt_type	dispersed
-21953	21964	repeat_region
-		note	SR3-1
-		rpt_type	tandem
-23253	23503	repeat_region
-		note	DR32-1
-		rpt_type	dispersed
 23285	23824	gene
 		gene	rpl16
-		locus_tag	ATHMT_0025
-23285	23824	mRNA
-		product	ribosomal protein L16
-		transcript_id	gnl|ATHMT|rpl16-1.t1
-		protein_id	gnl|ATHMT|rpl16-1.t1:cds
+		locus_tag	ATHMT_0006
 23285	23824	CDS
 		product	ribosomal protein L16
-		transcript_id	gnl|ATHMT|rpl16-1.t1
 		protein_id	gnl|ATHMT|rpl16-1.t1:cds
 		codon_start	1
-23875	23952	repeat_region
-		note	DR64-1
-		rpt_type	dispersed
 24665	25237	gene
 		gene	nad9
-		locus_tag	ATHMT_0027
-24665	25237	mRNA
-		product	NADH dehydrogenase subunit 9
-		transcript_id	gnl|ATHMT|nad9-1.t1
-		protein_id	gnl|ATHMT|nad9-1.t1:cds
+		locus_tag	ATHMT_0007
 24665	25237	CDS
 		product	NADH dehydrogenase subunit 9
-		transcript_id	gnl|ATHMT|nad9-1.t1
 		protein_id	gnl|ATHMT|nad9-1.t1:cds
 		codon_start	1
-25279	25304	repeat_region
-		note	TR39-1
-		rpt_type	tandem
 234352	236631	gene
 26813	28336
 		gene	nad5
 		exception	trans-splicing
-		locus_tag	ATHMT_0029
-234352	234580	mRNA
-235412	236631
-26813	27211
-28190	28336
-		product	NADH dehydrogenase subunit 5
-		transcript_id	gnl|ATHMT|nad5-1.t1
-		protein_id	gnl|ATHMT|nad5-1.t1:cds
+		locus_tag	ATHMT_0008
 234352	234580	CDS
 235412	236631
 26813	27211
 28190	28336
 		product	NADH dehydrogenase subunit 5
-		transcript_id	gnl|ATHMT|nad5-1.t1
 		protein_id	gnl|ATHMT|nad5-1.t1:cds
 		codon_start	1
-30442	30722	repeat_region
-		note	DR3-1
-		rpt_type	dispersed
-30716	30789	repeat_region
-		note	DR115-1
-		rpt_type	dispersed
-30782	30832	repeat_region
-		note	DR69-1
-		rpt_type	dispersed
-30825	30870	repeat_region
-		note	TR47-1
-		rpt_type	tandem
-30938	31272	repeat_region
-		note	DR151-1
-		rpt_type	dispersed
-31574	31625	repeat_region
-		note	DR144-1
-		rpt_type	dispersed
-31725	31963	repeat_region
-		note	DR67-1
-		rpt_type	dispersed
-31832	31989	repeat_region
-		note	DR134-1
-		rpt_type	dispersed
-31904	32030	repeat_region
-		note	DR117-1
-		rpt_type	dispersed
-31924	32066	repeat_region
-		note	DR103-1
-		rpt_type	dispersed
-36362	36818	repeat_region
-		note	DR52-1
-		rpt_type	dispersed
-37002	37066	repeat_region
-		note	TR3-1
-		rpt_type	tandem
-41464	41996	repeat_region
-		note	DR61-1
-		rpt_type	dispersed
 41486	41573	gene
 		gene	trnS-GCU
-		locus_tag	ATHMT_0043
+		locus_tag	ATHMT_0009
 41486	41573	tRNA
 		product	tRNA-Ser
-		transcript_id	gnl|ATHMT|trnS-GCU-2.t1
-42088	42098	repeat_region
-		note	SR1-2
-		rpt_type	tandem
 42116	42190	gene
 		gene	trnP-UGG
-		locus_tag	ATHMT_0045
+		locus_tag	ATHMT_0010
 42116	42190	tRNA
 		product	tRNA-Pro
-		transcript_id	gnl|ATHMT|trnP-UGG-1.t1
 42546	42616	gene
 		gene	trnC-GCA
-		locus_tag	ATHMT_0046
+		locus_tag	ATHMT_0011
 42546	42616	tRNA
 		product	tRNA-Cys
-		transcript_id	gnl|ATHMT|trnC-GCA-1.t1
 43544	43615	gene
 		gene	trnN-GUU-cp
-		locus_tag	ATHMT_0047
+		locus_tag	ATHMT_0012
 43544	43615	tRNA
 		product	tRNA-Asn
-		transcript_id	gnl|ATHMT|trnN-GUU-cp-1.t1
-44066	44077	repeat_region
-		note	SR28-1
-		rpt_type	tandem
 44462	44544	gene
 		gene	trnY-GUA
-		locus_tag	ATHMT_0049
+		locus_tag	ATHMT_0013
 44462	44544	tRNA
 		product	tRNA-Tyr
-		transcript_id	gnl|ATHMT|trnY-GUA-1.t1
-44474	44554	repeat_region
-		note	DR120-1
-		rpt_type	dispersed
-44602	44659	repeat_region
-		note	DR2-1
-		rpt_type	dispersed
-44668	44756	repeat_region
-		note	DR130-1
-		rpt_type	dispersed
-46593	46697	repeat_region
-		note	TR8-1
-		rpt_type	tandem
-48955	49185	repeat_region
-		note	DR106-1
-		rpt_type	dispersed
-49243	49418	repeat_region
-		note	DR25-1
-		rpt_type	dispersed
-49366	49426	repeat_region
-		note	DR62-1
-		rpt_type	dispersed
 49423	50580	gene
 		gene	atp6
-		locus_tag	ATHMT_0057
-49423	50580	mRNA
-		product	ATP synthase subunit 6
-		transcript_id	gnl|ATHMT|atp6-1.t1
-		protein_id	gnl|ATHMT|atp6-1.t1:cds
+		locus_tag	ATHMT_0014
 49423	50580	CDS
 		product	ATP synthase subunit 6
-		transcript_id	gnl|ATHMT|atp6-1.t1
 		protein_id	gnl|ATHMT|atp6-1.t1:cds
 		codon_start	1
-49820	56409	repeat_region
-		note	DR154-1
-		rpt_type	dispersed
 50626	50712	gene
 		gene	trnS-UGA
-		locus_tag	ATHMT_0059
+		locus_tag	ATHMT_0015
 50626	50712	tRNA
 		product	tRNA-Ser
-		transcript_id	gnl|ATHMT|trnS-UGA-2.t1
 83231	82937	gene
 58315	59481
 230304	234132
 		gene	nad1
 		exception	trans-splicing
-		locus_tag	ATHMT_0060
-83231	82937	mRNA
-58315	58397
-59290	59481
-230304	230362
-233874	234132
-		product	NADH dehydrogenase subunit 1
-		transcript_id	gnl|ATHMT|nad1-1.t1
-		protein_id	gnl|ATHMT|nad1-1.t1:cds
+		locus_tag	ATHMT_0016
 83231	82937	CDS
 58315	58397
 59290	59481
 230304	230362
 233874	234132
 		product	NADH dehydrogenase subunit 1
-		transcript_id	gnl|ATHMT|nad1-1.t1
 		protein_id	gnl|ATHMT|nad1-1.t1:cds
 		codon_start	1
-59226	59276	repeat_region
-		note	DR37-1
-		rpt_type	dispersed
-59776	59833	repeat_region
-		note	DR95-1
-		rpt_type	dispersed
-60464	60516	repeat_region
-		note	DR104-1
-		rpt_type	dispersed
-60912	60989	repeat_region
-		note	DR129-1
-		rpt_type	dispersed
-63630	63671	repeat_region
-		note	TR45-1
-		rpt_type	tandem
-64719	64730	repeat_region
-		note	SR6-1
-		rpt_type	tandem
-65547	65673	repeat_region
-		note	DR20-1
-		rpt_type	dispersed
-66857	67062	repeat_region
-		note	DR60-1
-		rpt_type	dispersed
 68621	67098	gene
 		gene	atp1
-		locus_tag	ATHMT_0069
-68621	67098	mRNA
-		product	ATP synthase subunit 1
-		transcript_id	gnl|ATHMT|atp1-1.t1
-		protein_id	gnl|ATHMT|atp1-1.t1:cds
+		locus_tag	ATHMT_0017
 68621	67098	CDS
 		product	ATP synthase subunit 1
-		transcript_id	gnl|ATHMT|atp1-1.t1
 		protein_id	gnl|ATHMT|atp1-1.t1:cds
 		codon_start	1
-68660	68840	repeat_region
-		note	DR114-1
-		rpt_type	dispersed
-70871	70944	repeat_region
-		note	DR115-2
-		rpt_type	dispersed
-71577	71588	repeat_region
-		note	SR10-1
-		rpt_type	tandem
-72602	72656	repeat_region
-		note	DR5-1
-		rpt_type	dispersed
-72834	72845	repeat_region
-		note	SR23-1
-		rpt_type	tandem
-73265	73276	repeat_region
-		note	SR10-2
-		rpt_type	tandem
-73427	73477	repeat_region
-		note	DR80-1
-		rpt_type	dispersed
-73611	73737	repeat_region
-		note	DR20-2
-		rpt_type	dispersed
-76800	76811	repeat_region
-		note	SR14-1
-		rpt_type	tandem
-77082	77123	repeat_region
-		note	TR33-1
-		rpt_type	tandem
-78843	78854	repeat_region
-		note	SR11-2
-		rpt_type	tandem
-79013	79024	repeat_region
-		note	SR12-2
-		rpt_type	tandem
-79095	79110	repeat_region
-		note	SR22-1
-		rpt_type	tandem
-79227	79370	repeat_region
-		note	DR84-1
-		rpt_type	dispersed
-79324	79374	repeat_region
-		note	DR12-1
-		rpt_type	dispersed
+68432	67098	gene
+		gene	atpA
+		locus_tag	ATHMT_0018
+		note	cp-derived
+68432	67098	CDS
+		product	ATP synthase CF1 alpha subunit
+		protein_id	gnl|ATHMT|atpA-1.t1:cds
+		codon_start	1
 79559	80005	gene
 		gene	rps7
-		locus_tag	ATHMT_0085
-79559	80005	mRNA
-		product	ribosomal protein S7
-		transcript_id	gnl|ATHMT|rps7-1.t1
-		protein_id	gnl|ATHMT|rps7-1.t1:cds
+		locus_tag	ATHMT_0019
 79559	80005	CDS
 		product	ribosomal protein S7
-		transcript_id	gnl|ATHMT|rps7-1.t1
 		protein_id	gnl|ATHMT|rps7-1.t1:cds
 		codon_start	1
-80041	80096	repeat_region
-		note	DR70-1
-		rpt_type	dispersed
-80177	80360	repeat_region
-		note	DR150-1
-		rpt_type	dispersed
-84120	84172	repeat_region
-		note	DR54-2
-		rpt_type	dispersed
-84128	84540	repeat_region
-		note	DR152-2
-		rpt_type	dispersed
-84558	84607	repeat_region
-		note	DR69-2
-		rpt_type	dispersed
-87937	88078	repeat_region
-		note	DR141-2
-		rpt_type	dispersed
-88444	88534	repeat_region
-		note	DR28-1
-		rpt_type	dispersed
-88488	88540	repeat_region
-		note	DR110-1
-		rpt_type	dispersed
-92745	92755	repeat_region
-		note	SR1-4
-		rpt_type	tandem
 161832	163357	gene
 98042	92819
 		gene	nad2
 		exception	trans-splicing
-		locus_tag	ATHMT_0095
-161832	161984	mRNA
-162966	163357
-98042	97882
-95238	94666
-93006	92819
-		product	NADH dehydrogenase subunit 2
-		transcript_id	gnl|ATHMT|nad2-2.t1
-		protein_id	gnl|ATHMT|nad2-2.t1:cds
+		locus_tag	ATHMT_0020
 161832	161984	CDS
 162966	163357
 98042	97882
 95238	94666
 93006	92819
 		product	NADH dehydrogenase subunit 2
-		transcript_id	gnl|ATHMT|nad2-2.t1
 		protein_id	gnl|ATHMT|nad2-2.t1:cds
 		codon_start	1
-93325	93388	repeat_region
-		note	DR43-1
-		rpt_type	dispersed
-93774	93785	repeat_region
-		note	SR35-1
-		rpt_type	tandem
-96728	96806	repeat_region
-		note	DR44-1
-		rpt_type	dispersed
-96757	96814	repeat_region
-		note	DR127-1
-		rpt_type	dispersed
-97163	97212	repeat_region
-		note	DR42-1
-		rpt_type	dispersed
-98576	98656	repeat_region
-		note	DR120-2
-		rpt_type	dispersed
+98660	98586	gene
+		gene	trnY-GUA
+		locus_tag	ATHMT_0021
+98660	98586	tRNA
+		product	tRNA-Tyr
 102603	102675	gene
 		gene	trnM-CAU-cp
-		locus_tag	ATHMT_0102
+		locus_tag	ATHMT_0022
 102603	102675	tRNA
 		product	tRNA-Met
-		transcript_id	gnl|ATHMT|trnM-CAT-cp-1.t1
-110118	110127	repeat_region
-		note	SR1-5
-		rpt_type	tandem
-110303	110532	repeat_region
-		note	DR106-2
-		rpt_type	dispersed
-111640	111724	repeat_region
-		note	DR155-2
-		rpt_type	dispersed
-112103	112114	repeat_region
-		note	SR39-1
-		rpt_type	tandem
-113664	113786	repeat_region
-		note	DR63-1
-		rpt_type	dispersed
-113898	113909	repeat_region
-		note	SR2-1
-		rpt_type	tandem
 116345	114762	gene
 		gene	cox1
-		locus_tag	ATHMT_0109
-116345	114762	mRNA
-		product	cytochrome c oxidase subunit 1
-		transcript_id	gnl|ATHMT|cox1-1.t1
-		protein_id	gnl|ATHMT|cox1-1.t1:cds
+		locus_tag	ATHMT_0023
 116345	114762	CDS
 		product	cytochrome c oxidase subunit 1
-		transcript_id	gnl|ATHMT|cox1-1.t1
 		protein_id	gnl|ATHMT|cox1-1.t1:cds
 		codon_start	1
-117554	117622	repeat_region
-		note	TR35-1
-		rpt_type	tandem
-118662	118762	repeat_region
-		note	TR14-1
-		rpt_type	tandem
-119816	119840	repeat_region
-		note	TR26-1
-		rpt_type	tandem
-121442	121510	repeat_region
-		note	TR29-1
-		rpt_type	tandem
-121608	121671	repeat_region
-		note	TR1-1
-		rpt_type	tandem
-121934	121994	repeat_region
-		note	TR24-1
-		rpt_type	tandem
-123222	123251	repeat_region
-		note	TR21-1
-		rpt_type	tandem
-124212	124272	repeat_region
-		note	TR4-1
-		rpt_type	tandem
 124676	124603	gene
 		gene	trnH-GUG-cp
-		locus_tag	ATHMT_0118
+		locus_tag	ATHMT_0024
+		note	cp-derived
 124676	124603	tRNA
 		product	tRNA-His
-		transcript_id	gnl|ATHMT|trnH-GTG-cp-1.t1
 126118	126000	gene
 		gene	rrn5
-		locus_tag	ATHMT_0119
+		locus_tag	ATHMT_0025
 126118	126000	rRNA
 		product	5S ribosomal RNA
-		transcript_id	gnl|ATHMT|rrn5-1.t1
-126286	126356	repeat_region
-		note	DR139-1
-		rpt_type	dispersed
 128215	126291	gene
 		gene	rrn18
-		locus_tag	ATHMT_0121
+		locus_tag	ATHMT_0026
 128215	126291	rRNA
 		product	18S ribosomal RNA
-		transcript_id	gnl|ATHMT|rrn18-2.t1
-126871	126927	repeat_region
-		note	DR95-2
-		rpt_type	dispersed
-127915	127983	repeat_region
-		note	DR10-2
-		rpt_type	dispersed
-128290	128342	repeat_region
-		note	DR85-1
-		rpt_type	dispersed
-128343	128398	repeat_region
-		note	DR55-1
-		rpt_type	dispersed
-128351	128403	repeat_region
-		note	DR118-1
-		rpt_type	dispersed
-128566	128662	repeat_region
-		note	DR89-1
-		rpt_type	dispersed
-128841	128850	repeat_region
-		note	SR1-6
-		rpt_type	tandem
-130160	130231	repeat_region
-		note	DR126-1
-		rpt_type	dispersed
-134640	134902	repeat_region
-		note	DR93-1
-		rpt_type	dispersed
-134964	135069	repeat_region
-		note	DR79-1
-		rpt_type	dispersed
-135079	135193	repeat_region
-		note	DR87-1
-		rpt_type	dispersed
-138930	138992	repeat_region
-		note	DR119-1
-		rpt_type	dispersed
-139080	139142	repeat_region
-		note	DR74-1
-		rpt_type	dispersed
-139161	139211	repeat_region
-		note	DR97-1
-		rpt_type	dispersed
-140289	140344	repeat_region
-		note	DR46-2
-		rpt_type	dispersed
-140372	140386	repeat_region
-		note	SR11-3
-		rpt_type	tandem
 143965	140796	gene
 		gene	rrn26
-		locus_tag	ATHMT_0138
+		locus_tag	ATHMT_0027
 143965	140796	rRNA
 		product	26S ribosomal RNA
-		transcript_id	gnl|ATHMT|rrn26-1.t1
-142096	142138	repeat_region
-		note	TR20-1
-		rpt_type	tandem
-143953	144409	repeat_region
-		note	DR52-2
-		rpt_type	dispersed
-146188	146199	repeat_region
-		note	SR10-3
-		rpt_type	tandem
-147714	147723	repeat_region
-		note	SR1-7
-		rpt_type	tandem
-148615	148720	repeat_region
-		note	DR146-1
-		rpt_type	dispersed
-149691	149745	repeat_region
-		note	DR157-1
-		rpt_type	dispersed
-150648	150659	repeat_region
-		note	SR34-1
-		rpt_type	tandem
-152966	152975	repeat_region
-		note	SR19-1
-		rpt_type	tandem
-153586	153637	repeat_region
-		note	DR111-1
-		rpt_type	dispersed
-154967	154978	repeat_region
-		note	SR15-1
-		rpt_type	tandem
-155124	155135	repeat_region
-		note	SR10-4
-		rpt_type	tandem
-156734	156793	repeat_region
-		note	DR122-1
-		rpt_type	dispersed
-156747	156804	repeat_region
-		note	DR100-1
-		rpt_type	dispersed
-156786	156899	repeat_region
-		note	TR13-1
-		rpt_type	tandem
-158852	158881	repeat_region
-		note	TR44-1
-		rpt_type	tandem
 159980	161068	gene
 		gene	rps4
-		locus_tag	ATHMT_0154
-159980	161068	mRNA
-		product	ribosomal protein S4
-		transcript_id	gnl|ATHMT|rps4-1.t1
-		protein_id	gnl|ATHMT|rps4-1.t1:cds
+		locus_tag	ATHMT_0028
 159980	161068	CDS
 		product	ribosomal protein S4
-		transcript_id	gnl|ATHMT|rps4-1.t1
 		protein_id	gnl|ATHMT|rps4-1.t1:cds
 		codon_start	1
-161529	161584	repeat_region
-		note	DR17-1
-		rpt_type	dispersed
-161625	161718	repeat_region
-		note	DR147-2
-		rpt_type	dispersed
-162094	162103	repeat_region
-		note	SR12-3
-		rpt_type	tandem
-162901	162951	repeat_region
-		note	DR37-2
-		rpt_type	dispersed
-163510	163519	repeat_region
-		note	SR12-4
-		rpt_type	tandem
-165832	165932	repeat_region
-		note	DR7-1
-		rpt_type	dispersed
 165838	166455	gene
 		gene	nad6
-		locus_tag	ATHMT_0161
-165838	166455	mRNA
-		product	NADH dehydrogenase subunit 6
-		transcript_id	gnl|ATHMT|nad6-1.t1
-		protein_id	gnl|ATHMT|nad6-1.t1:cds
+		locus_tag	ATHMT_0029
 165838	166455	CDS
 		product	NADH dehydrogenase subunit 6
-		transcript_id	gnl|ATHMT|nad6-1.t1
 		protein_id	gnl|ATHMT|nad6-1.t1:cds
 		codon_start	1
-165948	166134	repeat_region
-		note	DR132-1
-		rpt_type	dispersed
-167768	167825	repeat_region
-		note	DR100-2
-		rpt_type	dispersed
-171553	171564	repeat_region
-		note	SR18-1
-		rpt_type	tandem
-171568	171622	repeat_region
-		note	DR157-2
-		rpt_type	dispersed
 171643	171570	gene
 		gene	trnfM-CAU
-		locus_tag	ATHMT_0166
+		locus_tag	ATHMT_0030
 171643	171570	tRNA
 		product	tRNA-Met
-		transcript_id	gnl|ATHMT|trnfM-CAT-1.t1
-171714	171804	repeat_region
-		note	DR101-1
-		rpt_type	dispersed
-172944	173043	repeat_region
-		note	DR27-2
-		rpt_type	dispersed
-174475	174533	repeat_region
-		note	TR10-1
-		rpt_type	tandem
-175406	175417	repeat_region
-		note	SR11-4
-		rpt_type	tandem
-176813	176838	repeat_region
-		note	TR15-1
-		rpt_type	tandem
-178937	179010	repeat_region
-		note	TR23-1
-		rpt_type	tandem
 180744	180658	gene
 		gene	trnS-GGA-cp
-		locus_tag	ATHMT_0173
+		locus_tag	ATHMT_0031
 180744	180658	tRNA
 		product	tRNA-Ser
-		transcript_id	gnl|ATHMT|trnS-GGA-cp-1.t1
 182858	181677	gene
 		gene	cob
-		locus_tag	ATHMT_0174
-182858	181677	mRNA
-		product	apocytochrome b
-		transcript_id	gnl|ATHMT|cob-1.t1
-		protein_id	gnl|ATHMT|cob-1.t1:cds
+		locus_tag	ATHMT_0032
 182858	181677	CDS
 		product	apocytochrome b
-		transcript_id	gnl|ATHMT|cob-1.t1
 		protein_id	gnl|ATHMT|cob-1.t1:cds
 		codon_start	1
-182729	182934	repeat_region
-		note	DR78-1
-		rpt_type	dispersed
-182932	182941	repeat_region
-		note	SR22-2
-		rpt_type	tandem
-183492	183555	repeat_region
-		note	DR43-2
-		rpt_type	dispersed
-183662	183675	repeat_region
-		note	SR1-8
-		rpt_type	tandem
-183791	183849	repeat_region
-		note	DR39-2
-		rpt_type	dispersed
-184820	184503	gene
-		gene	rps14
-		locus_tag	ATHMT_0180
-184820	184797	mRNA
-184748	184503
-		product	ribosomal protein S14
-		transcript_id	gnl|ATHMT|rps14-1.t1
-		protein_id	gnl|ATHMT|rps14-1.t1:cds
-184820	184797	CDS
-184748	184503
-		product	ribosomal protein S14
-		transcript_id	gnl|ATHMT|rps14-1.t1
-		protein_id	gnl|ATHMT|rps14-1.t1:cds
-		codon_start	1
+182858	182211	gene
+		gene	petB
+		locus_tag	ATHMT_0033
+		pseudo
 185319	184762	gene
 		gene	rpl5
-		locus_tag	ATHMT_0181
-185319	184762	mRNA
-		product	ribosomal protein L5
-		transcript_id	gnl|ATHMT|rpl5-1.t1
-		protein_id	gnl|ATHMT|rpl5-1.t1:cds
+		locus_tag	ATHMT_0034
 185319	184762	CDS
 		product	ribosomal protein L5
-		transcript_id	gnl|ATHMT|rpl5-1.t1
 		protein_id	gnl|ATHMT|rpl5-1.t1:cds
 		codon_start	1
-185351	185417	repeat_region
-		note	DR113-1
-		rpt_type	dispersed
-185722	185736	repeat_region
-		note	SR26-1
-		rpt_type	tandem
-187070	187081	repeat_region
-		note	SR32-1
-		rpt_type	tandem
-188646	188710	repeat_region
-		note	TR40-1
-		rpt_type	tandem
-189142	189152	repeat_region
-		note	SR1-9
-		rpt_type	tandem
 189287	189358	gene
 		gene	trnG-GCC
-		locus_tag	ATHMT_0187
+		locus_tag	ATHMT_0035
 189287	189358	tRNA
 		product	tRNA-Gly
-		transcript_id	gnl|ATHMT|trnG-GCC-1.t1
 189483	191800	gene
 		gene	ccmFC
-		locus_tag	ATHMT_0188
-189483	190261	mRNA
-191215	191800
-		product	cytochrome c biogenesis FC
-		transcript_id	gnl|ATHMT|ccmFC-1.t1
-		protein_id	gnl|ATHMT|ccmFC-1.t1:cds
+		locus_tag	ATHMT_0036
 189483	190261	CDS
 191215	191800
 		product	cytochrome c biogenesis FC
-		transcript_id	gnl|ATHMT|ccmFC-1.t1
 		protein_id	gnl|ATHMT|ccmFC-1.t1:cds
 		codon_start	1
-194198	198390	repeat_region
-		note	DR59-2
-		rpt_type	dispersed
-198645	198656	repeat_region
-		note	SR29-1
-		rpt_type	tandem
-200976	201040	repeat_region
-		note	DR140-1
-		rpt_type	dispersed
-202731	202785	repeat_region
-		note	DR24-1
-		rpt_type	dispersed
-202931	202980	repeat_region
-		note	DR123-1
-		rpt_type	dispersed
-203349	203387	repeat_region
-		note	TR27-1
-		rpt_type	tandem
-203468	203501	repeat_region
-		note	TR6-1
-		rpt_type	tandem
-206095	206444	repeat_region
-		note	DR48-1
-		rpt_type	dispersed
-206636	206724	repeat_region
-		note	DR76-1
-		rpt_type	dispersed
-207232	207332	repeat_region
-		note	DR7-2
-		rpt_type	dispersed
-207329	207534	repeat_region
-		note	DR78-2
-		rpt_type	dispersed
+196137	196069	gene
+		gene	trnF-GAA-cp
+		locus_tag	ATHMT_0037
+		note	cp-derived
+196137	196069	tRNA
+		product	tRNA-Phe
 215562	207580	gene
 		gene	nad4
-		locus_tag	ATHMT_0200
-215562	215102	mRNA
-213629	213115
-210033	209611
-207668	207580
-		product	NADH dehydrogenase subunit 4
-		transcript_id	gnl|ATHMT|nad4-1.t1
-		protein_id	gnl|ATHMT|nad4-1.t1:cds
+		locus_tag	ATHMT_0038
 215562	215102	CDS
 213629	213115
 210033	209611
 207668	207580
 		product	NADH dehydrogenase subunit 4
-		transcript_id	gnl|ATHMT|nad4-1.t1
 		protein_id	gnl|ATHMT|nad4-1.t1:cds
 		codon_start	1
-208820	208834	repeat_region
-		note	SR36-1
-		rpt_type	tandem
-210718	210730	repeat_region
-		note	SR1-10
-		rpt_type	tandem
-217905	217916	repeat_region
-		note	SR37-1
-		rpt_type	tandem
 219746	218904	gene
 		gene	mttB
-		locus_tag	ATHMT_0204
-219746	218904	mRNA
-		product	transport membrane protein
-		transcript_id	gnl|ATHMT|mttB-1.t1
-		protein_id	gnl|ATHMT|mttB-1.t1:cds
+		locus_tag	ATHMT_0039
 219746	218904	CDS
 		product	transport membrane protein
-		transcript_id	gnl|ATHMT|mttB-1.t1
 		protein_id	gnl|ATHMT|mttB-1.t1:cds
 		codon_start	1
 222610	219910	gene
 		gene	rpl2
-		locus_tag	ATHMT_0205
-222610	221696	mRNA
-220047	219910
-		product	ribosomal protein L2
-		transcript_id	gnl|ATHMT|rpl2-1.t1
-		protein_id	gnl|ATHMT|rpl2-1.t1:cds
+		locus_tag	ATHMT_0040
 222610	221696	CDS
 220047	219910
 		product	ribosomal protein L2
-		transcript_id	gnl|ATHMT|rpl2-1.t1
 		protein_id	gnl|ATHMT|rpl2-1.t1:cds
 		codon_start	1
-220803	220855	repeat_region
-		note	DR104-2
-		rpt_type	dispersed
-222608	222685	repeat_region
-		note	DR64-2
-		rpt_type	dispersed
-222639	222705	repeat_region
-		note	DR113-2
-		rpt_type	dispersed
-223469	223531	repeat_region
-		note	DR68-1
-		rpt_type	dispersed
-223871	223881	repeat_region
-		note	SR12-5
-		rpt_type	tandem
-223960	223971	repeat_region
-		note	SR4-1
-		rpt_type	tandem
-228517	228528	repeat_region
-		note	SR2-2
-		rpt_type	tandem
-229111	229182	repeat_region
-		note	DR126-2
-		rpt_type	dispersed
-230323	230332	repeat_region
-		note	SR1-11
-		rpt_type	tandem
-230557	230566	repeat_region
-		note	SR12-6
-		rpt_type	tandem
-231028	231039	repeat_region
-		note	SR10-5
-		rpt_type	tandem
 231089	233059	gene
 		gene	matR
-		locus_tag	ATHMT_0217
-231089	233059	mRNA
-		product	maturase-related protein
-		transcript_id	gnl|ATHMT|matR-1.t1
-		protein_id	gnl|ATHMT|matR-1.t1:cds
+		locus_tag	ATHMT_0041
 231089	233059	CDS
 		product	maturase-related protein
-		transcript_id	gnl|ATHMT|matR-1.t1
 		protein_id	gnl|ATHMT|matR-1.t1:cds
 		codon_start	1
-233046	233060	repeat_region
-		note	SR21-1
-		rpt_type	tandem
-233437	233448	repeat_region
-		note	SR38-1
-		rpt_type	tandem
-233607	233618	repeat_region
-		note	SR3-2
-		rpt_type	tandem
-233646	233789	repeat_region
-		note	DR84-2
-		rpt_type	dispersed
-233743	233792	repeat_region
-		note	DR12-2
-		rpt_type	dispersed
-234048	234125	repeat_region
-		note	DR129-2
-		rpt_type	dispersed
-234172	234429	repeat_region
-		note	DR153-1
-		rpt_type	dispersed
-234382	234466	repeat_region
-		note	DR107-1
-		rpt_type	dispersed
-234412	234477	repeat_region
-		note	DR143-1
-		rpt_type	dispersed
-234984	235045	repeat_region
-		note	DR156-2
-		rpt_type	dispersed
-237066	237077	repeat_region
-		note	SR12-7
-		rpt_type	tandem
-237286	237297	repeat_region
-		note	SR30-1
-		rpt_type	tandem
-238255	238266	repeat_region
-		note	SR10-6
-		rpt_type	tandem
-238393	238442	repeat_region
-		note	DR83-1
-		rpt_type	dispersed
-239189	239268	repeat_region
-		note	DR53-2
-		rpt_type	dispersed
 245330	239250	gene
 		gene	nad7
-		locus_tag	ATHMT_0233
-245330	245188	mRNA
-244223	244155
-243091	242625
-241571	241328
-239511	239250
-		product	NADH dehydrogenase subunit 7
-		transcript_id	gnl|ATHMT|nad7-1.t1
-		protein_id	gnl|ATHMT|nad7-1.t1:cds
+		locus_tag	ATHMT_0042
 245330	245188	CDS
 244223	244155
 243091	242625
 241571	241328
 239511	239250
 		product	NADH dehydrogenase subunit 7
-		transcript_id	gnl|ATHMT|nad7-1.t1
 		protein_id	gnl|ATHMT|nad7-1.t1:cds
 		codon_start	1
-240034	240049	repeat_region
-		note	SR22-3
-		rpt_type	tandem
-243328	243406	repeat_region
-		note	DR44-2
-		rpt_type	dispersed
-243357	243414	repeat_region
-		note	DR127-2
-		rpt_type	dispersed
-245477	245486	repeat_region
-		note	SR1-12
-		rpt_type	tandem
-246766	247115	repeat_region
-		note	DR48-2
-		rpt_type	dispersed
 247492	247016	gene
 		gene	atp8
-		locus_tag	ATHMT_0239
-247492	247016	mRNA
-		product	ATP synthase subunit 8
-		transcript_id	gnl|ATHMT|atp8-1.t1
-		protein_id	gnl|ATHMT|atp8-1.t1:cds
+		locus_tag	ATHMT_0043
 247492	247016	CDS
 		product	ATP synthase subunit 8
-		transcript_id	gnl|ATHMT|atp8-1.t1
 		protein_id	gnl|ATHMT|atp8-1.t1:cds
 		codon_start	1
-247484	247538	repeat_region
-		note	DR36-1
-		rpt_type	dispersed
-247489	247550	repeat_region
-		note	DR62-2
-		rpt_type	dispersed
-247498	247673	repeat_region
-		note	DR25-2
-		rpt_type	dispersed
 250307	250383	gene
 		gene	trnI-CAU
-		locus_tag	ATHMT_0243
+		locus_tag	ATHMT_0044
 250307	250383	tRNA
 		product	tRNA-Ile
-		transcript_id	gnl|ATHMT|trnI-CAU-1.t1
-254594	254656	repeat_region
-		note	DR18-2
-		rpt_type	dispersed
-254842	255122	repeat_region
-		note	DR3-2
-		rpt_type	dispersed
-256221	256232	repeat_region
-		note	SR20-2
-		rpt_type	tandem
-256305	256319	repeat_region
-		note	SR33-1
-		rpt_type	tandem
-256957	256968	repeat_region
-		note	SR8-1
-		rpt_type	tandem
-257621	257883	repeat_region
-		note	DR93-2
-		rpt_type	dispersed
-257923	258028	repeat_region
-		note	DR79-2
-		rpt_type	dispersed
-258029	258143	repeat_region
-		note	DR87-2
-		rpt_type	dispersed
-258145	258207	repeat_region
-		note	DR119-2
-		rpt_type	dispersed
-258284	258346	repeat_region
-		note	DR74-2
-		rpt_type	dispersed
-258361	258411	repeat_region
-		note	DR97-2
-		rpt_type	dispersed
-258580	258589	repeat_region
-		note	SR19-2
-		rpt_type	tandem
-258638	265227	repeat_region
-		note	DR154-2
-		rpt_type	dispersed
 264421	264335	gene
 		gene	trnS-UGA
-		locus_tag	ATHMT_0257
+		locus_tag	ATHMT_0045
 264421	264335	tRNA
 		product	tRNA-Ser
-		transcript_id	gnl|ATHMT|trnS-UGA-1.t1
 265516	264467	gene
 		gene	atp6
-		locus_tag	ATHMT_0258
-265516	264467	mRNA
-		product	ATP synthase subunit 6
-		transcript_id	gnl|ATHMT|atp6-2.t1
-		protein_id	gnl|ATHMT|atp6-2.t1:cds
+		locus_tag	ATHMT_0046
 265516	264467	CDS
 		product	ATP synthase subunit 6
-		transcript_id	gnl|ATHMT|atp6-2.t1
 		protein_id	gnl|ATHMT|atp6-2.t1:cds
 		codon_start	1
-265507	265646	repeat_region
-		note	DR31-3
-		rpt_type	dispersed
-265688	265742	repeat_region
-		note	DR36-2
-		rpt_type	dispersed
-265693	265744	repeat_region
-		note	DR124-2
-		rpt_type	dispersed
-265765	265822	repeat_region
-		note	DR65-3
-		rpt_type	dispersed
-265804	265867	repeat_region
-		note	DR94-3
-		rpt_type	dispersed
-267040	267051	repeat_region
-		note	SR2-3
-		rpt_type	tandem
-269570	269775	repeat_region
-		note	DR60-2
-		rpt_type	dispersed
-269779	269849	repeat_region
-		note	DR139-2
-		rpt_type	dispersed
-269880	269933	repeat_region
-		note	DR6-2
-		rpt_type	dispersed
-269887	270060	repeat_region
-		note	DR19-1
-		rpt_type	dispersed
-269935	270092	repeat_region
-		note	DR134-2
-		rpt_type	dispersed
-269961	270199	repeat_region
-		note	DR67-2
-		rpt_type	dispersed
-270076	270293	repeat_region
-		note	DR26-1
-		rpt_type	dispersed
-270571	270620	repeat_region
-		note	DR91-1
-		rpt_type	dispersed
-270573	270830	repeat_region
-		note	DR153-2
-		rpt_type	dispersed
-270773	270862	repeat_region
-		note	DR130-2
-		rpt_type	dispersed
-270775	271023	repeat_region
-		note	DR41-1
-		rpt_type	dispersed
 271185	270961	gene
 		gene	atp9
-		locus_tag	ATHMT_0276
-271185	270961	mRNA
-		product	ATP synthase subunit 9
-		transcript_id	gnl|ATHMT|atp9-1.t1
-		protein_id	gnl|ATHMT|atp9-1.t1:cds
+		locus_tag	ATHMT_0047
 271185	270961	CDS
 		product	ATP synthase subunit 9
-		transcript_id	gnl|ATHMT|atp9-1.t1
 		protein_id	gnl|ATHMT|atp9-1.t1:cds
 		codon_start	1
-271061	271395	repeat_region
-		note	DR151-2
-		rpt_type	dispersed
-273274	273323	repeat_region
-		note	DR51-2
-		rpt_type	dispersed
-273277	273336	repeat_region
-		note	DR122-2
-		rpt_type	dispersed
-274487	274496	repeat_region
-		note	SR16-1
-		rpt_type	tandem
 275010	274937	gene
 		gene	trnD-GUC-cp
-		locus_tag	ATHMT_0281
+		locus_tag	ATHMT_0048
 275010	274937	tRNA
 		product	tRNA-Asp
-		transcript_id	gnl|ATHMT|trnD-GUC-cp-1.t1
-275018	275107	repeat_region
-		note	DR101-2
-		rpt_type	dispersed
-276497	276619	repeat_region
-		note	DR63-2
-		rpt_type	dispersed
-277624	277728	repeat_region
-		note	DR146-2
-		rpt_type	dispersed
-278381	278436	repeat_region
-		note	DR70-2
-		rpt_type	dispersed
-278458	278640	repeat_region
-		note	DR150-2
-		rpt_type	dispersed
-282029	282078	repeat_region
-		note	DR42-2
-		rpt_type	dispersed
-285128	285190	repeat_region
-		note	DR68-2
-		rpt_type	dispersed
-286583	286629	repeat_region
-		note	TR43-1
-		rpt_type	tandem
-286701	286752	repeat_region
-		note	DR15-1
-		rpt_type	dispersed
-286705	286760	repeat_region
-		note	DR55-2
-		rpt_type	dispersed
-286756	286808	repeat_region
-		note	DR85-2
-		rpt_type	dispersed
-286764	286816	repeat_region
-		note	DR38-1
-		rpt_type	dispersed
-286851	286919	repeat_region
-		note	DR21-2
-		rpt_type	dispersed
-287031	287096	repeat_region
-		note	DR143-2
-		rpt_type	dispersed
-287452	287504	repeat_region
-		note	DR72-1
-		rpt_type	dispersed
 288044	288400	gene
 		gene	nad3
-		locus_tag	ATHMT_0297
-288044	288400	mRNA
-		product	NADH dehydrogenase subunit 3
-		transcript_id	gnl|ATHMT|nad3-1.t1
-		protein_id	gnl|ATHMT|nad3-1.t1:cds
+		locus_tag	ATHMT_0049
 288044	288400	CDS
 		product	NADH dehydrogenase subunit 3
-		transcript_id	gnl|ATHMT|nad3-1.t1
 		protein_id	gnl|ATHMT|nad3-1.t1:cds
 		codon_start	1
-288315	288508	repeat_region
-		note	DR131-1
-		rpt_type	dispersed
+288158	288400	gene
+		gene	ndhC
+		locus_tag	ATHMT_0050
+		note	cp-derived
+288158	288400	CDS
+		product	NADH dehydrogenase subunit 3
+		protein_id	gnl|ATHMT|ndhC-1.t1:cds
+		codon_start	1
 288446	288823	gene
 		gene	rps12
-		locus_tag	ATHMT_0299
-288446	288823	mRNA
-		product	ribosomal protein S12
-		transcript_id	gnl|ATHMT|rps12-1.t1
-		protein_id	gnl|ATHMT|rps12-1.t1:cds
+		locus_tag	ATHMT_0051
 288446	288823	CDS
 		product	ribosomal protein S12
-		transcript_id	gnl|ATHMT|rps12-1.t1
 		protein_id	gnl|ATHMT|rps12-1.t1:cds
 		codon_start	1
-288619	288668	repeat_region
-		note	DR83-2
-		rpt_type	dispersed
 316013	317135	gene
 291578	292191
 		gene	ccmFN
 		exception	trans-splicing
-		locus_tag	ATHMT_0301
-316013	317135	mRNA
-291578	292191
-		product	cytochrome c biogenesis FN
-		transcript_id	gnl|ATHMT|ccmFN-1.t1
-		protein_id	gnl|ATHMT|ccmFN-1.t1:cds
+		locus_tag	ATHMT_0052
 316013	317135	CDS
 291578	292191
 		product	cytochrome c biogenesis FN
-		transcript_id	gnl|ATHMT|ccmFN-1.t1
 		protein_id	gnl|ATHMT|ccmFN-1.t1:cds
 		codon_start	1
-293947	293958	repeat_region
-		note	SR9-1
-		rpt_type	tandem
 294477	294548	gene
 		gene	trnQ-UUG
-		locus_tag	ATHMT_0303
+		locus_tag	ATHMT_0053
 294477	294548	tRNA
 		product	tRNA-Gln
-		transcript_id	gnl|ATHMT|trnQ-UUG-1.t1
-298023	298034	repeat_region
-		note	SR5-2
-		rpt_type	tandem
-298353	298407	repeat_region
-		note	DR24-2
-		rpt_type	dispersed
-298850	298860	repeat_region
-		note	SR1-13
-		rpt_type	tandem
 298901	298974	gene
 		gene	trnW-CCA-cp
-		locus_tag	ATHMT_0307
+		locus_tag	ATHMT_0054
+		note	cp-derived
 298901	298974	tRNA
 		product	tRNA-Trp
-		transcript_id	gnl|ATHMT|trnW-CCA-cp-1.t1
-300057	300071	repeat_region
-		note	SR7-1
-		rpt_type	tandem
-301775	301786	repeat_region
-		note	SR2-4
-		rpt_type	tandem
-301875	301946	repeat_region
-		note	TR11-1
-		rpt_type	tandem
-302337	302386	repeat_region
-		note	TR30-1
-		rpt_type	tandem
-302454	302508	repeat_region
-		note	DR5-2
-		rpt_type	dispersed
-304918	304927	repeat_region
-		note	SR19-3
-		rpt_type	tandem
-305396	305475	repeat_region
-		note	DR148-3
-		rpt_type	dispersed
-306456	306494	repeat_region
-		note	TR36-1
-		rpt_type	tandem
-306969	307164	repeat_region
-		note	DR131-2
-		rpt_type	dispersed
-307719	307807	repeat_region
-		note	DR76-2
-		rpt_type	dispersed
-307932	308118	repeat_region
-		note	DR132-2
-		rpt_type	dispersed
 308298	309068	gene
 		gene	ccmC
-		locus_tag	ATHMT_0319
-308298	309068	mRNA
-		product	cytochrome c biogenesis C
-		transcript_id	gnl|ATHMT|ccmC-1.t1
-		protein_id	gnl|ATHMT|ccmC-1.t1:cds
+		locus_tag	ATHMT_0055
 308298	309068	CDS
 		product	cytochrome c biogenesis C
-		transcript_id	gnl|ATHMT|ccmC-1.t1
 		protein_id	gnl|ATHMT|ccmC-1.t1:cds
 		codon_start	1
-310709	310805	repeat_region
-		note	DR89-2
-		rpt_type	dispersed
-316365	316378	repeat_region
-		note	SR1-14
-		rpt_type	tandem
-317179	317307	repeat_region
-		note	TR12-1
-		rpt_type	tandem
-319666	319691	repeat_region
-		note	TR37-1
-		rpt_type	tandem
-320362	320373	repeat_region
-		note	SR27-1
-		rpt_type	tandem
 321438	321367	gene
 		gene	trnE-UUC
-		locus_tag	ATHMT_0325
+		locus_tag	ATHMT_0056
 321438	321367	tRNA
 		product	tRNA-Glu
-		transcript_id	gnl|ATHMT|trnE-UUC-1.t1
-321435	321967	repeat_region
-		note	DR61-2
-		rpt_type	dispersed
 321945	321858	gene
 		gene	trnS-GCU
-		locus_tag	ATHMT_0327
+		locus_tag	ATHMT_0057
 321945	321858	tRNA
 		product	tRNA-Ser
-		transcript_id	gnl|ATHMT|trnS-GCU-1.t1
-326705	326753	repeat_region
-		note	TR17-1
-		rpt_type	tandem
-328994	329041	repeat_region
-		note	TR19-1
-		rpt_type	tandem
-329613	329624	repeat_region
-		note	SR17-2
-		rpt_type	tandem
 330048	329761	gene
 		gene	sdh4
-		locus_tag	ATHMT_0331
-330048	329761	mRNA
-		product	succinate dehydrogenase subunit 4
-		transcript_id	gnl|ATHMT|sdh4-1.t1
-		protein_id	gnl|ATHMT|sdh4-1.t1:cds
+		locus_tag	ATHMT_0058
 330048	329761	CDS
 		product	succinate dehydrogenase subunit 4
-		transcript_id	gnl|ATHMT|sdh4-1.t1
 		protein_id	gnl|ATHMT|sdh4-1.t1:cds
 		codon_start	1
 330773	329976	gene
 		gene	cox3
-		locus_tag	ATHMT_0332
-330773	329976	mRNA
-		product	cytochrome c oxidase subunit 3
-		transcript_id	gnl|ATHMT|cox3-1.t1
-		protein_id	gnl|ATHMT|cox3-1.t1:cds
+		locus_tag	ATHMT_0059
 330773	329976	CDS
 		product	cytochrome c oxidase subunit 3
-		transcript_id	gnl|ATHMT|cox3-1.t1
 		protein_id	gnl|ATHMT|cox3-1.t1:cds
 		codon_start	1
-331031	331042	repeat_region
-		note	SR25-1
-		rpt_type	tandem
-331581	331831	repeat_region
-		note	DR32-2
-		rpt_type	dispersed
-331833	331887	repeat_region
-		note	DR90-2
-		rpt_type	dispersed
-331877	332125	repeat_region
-		note	DR41-2
-		rpt_type	dispersed
-332181	332323	repeat_region
-		note	DR103-2
-		rpt_type	dispersed
-332210	332383	repeat_region
-		note	DR19-2
-		rpt_type	dispersed
-332399	332616	repeat_region
-		note	DR26-2
-		rpt_type	dispersed
-332679	332787	repeat_region
-		note	DR34-1
-		rpt_type	dispersed
-332788	332874	repeat_region
-		note	DR98-1
-		rpt_type	dispersed
-332814	332898	repeat_region
-		note	DR107-2
-		rpt_type	dispersed
-332874	332934	repeat_region
-		note	DR86-1
-		rpt_type	dispersed
-332903	332955	repeat_region
-		note	DR30-1
-		rpt_type	dispersed
-333027	333094	repeat_region
-		note	DR4-1
-		rpt_type	dispersed
-333065	333115	repeat_region
-		note	DR16-3
-		rpt_type	dispersed
-333122	333174	repeat_region
-		note	DR1-3
-		rpt_type	dispersed
-339767	339776	repeat_region
-		note	SR12-8
-		rpt_type	tandem
-342458	342469	repeat_region
-		note	SR17-3
-		rpt_type	tandem
-342839	342872	repeat_region
-		note	TR38-1
-		rpt_type	tandem
-342845	342879	repeat_region
-		note	TR2-1
-		rpt_type	tandem
-345311	345320	repeat_region
-		note	SR1-15
-		rpt_type	tandem
-346109	346120	repeat_region
-		note	SR2-5
-		rpt_type	tandem
-346208	346715	repeat_region
-		note	DR11-2
-		rpt_type	dispersed
 346454	346526	gene
 		gene	trnK-UUU
-		locus_tag	ATHMT_0355
+		locus_tag	ATHMT_0060
 346454	346526	tRNA
 		product	tRNA-Lys
-		transcript_id	gnl|ATHMT|trnK-UUU-1.t1
-346714	346763	repeat_region
-		note	DR22-2
-		rpt_type	dispersed
-347512	347576	repeat_region
-		note	DR140-2
-		rpt_type	dispersed
-348601	348612	repeat_region
-		note	SR41-1
-		rpt_type	tandem
-353470	353524	repeat_region
-		note	TR32-1
-		rpt_type	tandem
-354686	354735	repeat_region
-		note	TR46-1
-		rpt_type	tandem
-354774	354823	repeat_region
-		note	DR123-2
-		rpt_type	dispersed
-355371	355404	repeat_region
-		note	TR18-1
-		rpt_type	tandem
-357983	358033	repeat_region
-		note	DR80-2
-		rpt_type	dispersed
-358518	358570	repeat_region
-		note	DR110-2
-		rpt_type	dispersed
-358524	358614	repeat_region
-		note	DR28-2
-		rpt_type	dispersed
-358721	358773	repeat_region
-		note	DR118-2
-		rpt_type	dispersed
-358778	358830	repeat_region
-		note	DR38-2
-		rpt_type	dispersed
-358888	358955	repeat_region
-		note	DR4-2
-		rpt_type	dispersed
-358982	359037	repeat_region
-		note	DR30-2
-		rpt_type	dispersed
-359006	359067	repeat_region
-		note	DR86-2
-		rpt_type	dispersed
-359069	359155	repeat_region
-		note	DR98-2
-		rpt_type	dispersed
-359165	359273	repeat_region
-		note	DR34-2
-		rpt_type	dispersed
-359442	359494	repeat_region
-		note	DR72-2
-		rpt_type	dispersed
-360667	360677	repeat_region
-		note	SR1-16
-		rpt_type	tandem
-360869	361049	repeat_region
-		note	DR114-2
-		rpt_type	dispersed
+355972	355895	gene
+		gene	trnM-CAU-cp
+		locus_tag	ATHMT_0061
+		note	cp-derived
+355972	355895	tRNA
+		product	tRNA-Met
 361637	361939	gene
 		gene	nad4L
-		locus_tag	ATHMT_0376
-361637	361939	mRNA
-		product	NADH dehydrogenase subunit 4L
-		transcript_id	gnl|ATHMT|nad4L-1.t1
-		protein_id	gnl|ATHMT|nad4L-1.t1:cds
+		locus_tag	ATHMT_0062
 361637	361939	CDS
 		product	NADH dehydrogenase subunit 4L
-		transcript_id	gnl|ATHMT|nad4L-1.t1
 		protein_id	gnl|ATHMT|nad4L-1.t1:cds
 		codon_start	1
-362083	362199	repeat_region
-		note	DR47-3
-		rpt_type	dispersed
 362206	362784	gene
 		gene	atp4
-		locus_tag	ATHMT_0378
-362206	362784	mRNA
-		product	ATP synthase subunit 4
-		transcript_id	gnl|ATHMT|atp4-1.t1
-		protein_id	gnl|ATHMT|atp4-1.t1:cds
+		locus_tag	ATHMT_0063
 362206	362784	CDS
 		product	ATP synthase subunit 4
-		transcript_id	gnl|ATHMT|atp4-1.t1
 		protein_id	gnl|ATHMT|atp4-1.t1:cds
 		codon_start	1
-362765	362774	repeat_region
-		note	SR12-9
-		rpt_type	tandem
-366617	366665	repeat_region
-		note	TR7-1
-		rpt_type	tandem
-366773	366842	repeat_region
-		note	TR41-1
-		rpt_type	tandem
-366782	366858	repeat_region
-		note	TR34-1
-		rpt_type	tandem
-367677	367728	repeat_region
-		note	DR111-2
-		rpt_type	dispersed

@@ -118,12 +118,12 @@ class PhyloPipeline(object):
 		prefixs = [self.get_prefix(fl, suffix) for fl in files]
 		return files, prefixs
 	def get_genome_id(self):
-		suffix = '.gb'
+		suffix = '.fsa'
 		gbfiles = sorted(glob.glob('{}/*{}'.format(self.indir, suffix)))
 		prefixs = [self.get_prefix(fasta, suffix) for fasta in gbfiles]
 		d = {}
 		for prefix, gbfile in zip(prefixs, gbfiles):
-			for rc in SeqIO.parse(gbfile, 'genbank'):
+			for rc in SeqIO.parse(gbfile, 'fasta'):
 				break
 			d[prefix] = rc.id
 		return d
@@ -145,8 +145,15 @@ class Summary(PhyloPipeline):
 			d_genes = {}
 			for rc in GffGenes(gff):
 				gene = rc.gene
-				name = gene.attributes['gene']
-				cov = gene.attributes['cov']
+				try: name = gene.attributes['gene']
+				except KeyError:
+					print >> sys.stderr, '[WARN] gene {} has no cov in {}; please check'.format(gene.id, gff)
+					continue
+				#print(gff, gene, gene.attributes)
+				try: cov = gene.attributes['cov']
+				except KeyError:
+					print >> sys.stderr, '[WARN] gene {} has no cov in {}; please check'.format(name, gff)
+					continue
 				try: d_genes[name] += [cov]
 				except KeyError: d_genes[name] = [cov]
 				genes += [(rc.rna_type, name)]

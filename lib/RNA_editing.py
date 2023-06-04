@@ -61,7 +61,7 @@ class ReditPipeline():
 			
 		self.main_cmd = '{} -i {} -f {} {}'.format(self.tools,
 				self.rna_bam, self.genome, self.options)
-		
+
 	def run(self):
 		rmdirs(self.out_folder)
 		# REDItools

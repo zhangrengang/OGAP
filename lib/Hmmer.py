@@ -44,7 +44,7 @@ class HmmSearch(object):
 			nucl_names += [hit.nucl_name]
 		get_records(inseq, outseq, nucl_names, type='fasta')
 	def get_gene_structure(self, d_length, max_copies=4, min_part=1,
-			min_hmmcov=0,
+			min_hmmcov=0, min_contained_cov=0.95,
 			min_cov=80, min_ratio=0.9, seq_type='prot', flank=1000):
 		graph = HmmStructueGraph()
 		for hit in self:
@@ -53,6 +53,8 @@ class HmmSearch(object):
 			hit.convert_to_nucl_coord(d_length, seq_type=seq_type)
 	#		print >>sys.stderr, hit.nucl_hit
 			graph.add_node(hit)
+		print >>sys.stderr, 'Contained nodes:'
+		graph.prune_contained(min_cov=min_contained_cov)
 		graph.link_nodes()
 		print >>sys.stderr, 'Nodes:'
 		for node in sorted(graph.nodes(), key=lambda x: x.hmmcoord):
@@ -420,8 +422,15 @@ class HmmSearchDomHit:
 	def hmmcov(self):
 		return round(1e2*(self.hmmend - self.hmmstart + 1) / self.hmm_length, 1)
 	@property
+	def hmmcovlen(self):
+		return self.hmmend - self.hmmstart + 1
+	@property
 	def key(self):
 		return (self.tname, self.qname, self.hmmstart, self.hmmend, self.alnstart, self.alnend)
+	def contained(self, other):
+		if other.hmmstart >= self.hmmstart and other.hmmend <= self.hmmend:
+			return 1.0*other.hmmcovlen / self.hmmcovlen
+		return 2
 	def link_hits(self, other, max_dist=60, min_ovl=-60, min_flank_dist=2):
 		'''--->	 self
 			  --->  other
@@ -564,6 +573,18 @@ class HmmStructueGraph(DiGraph):
 				self.add_edge(hit1, hit2, dist=dist_12)
 			if not dist_21 is False:
 				self.add_edge(hit2, hit1, dist=dist_21)
+	def prune_contained(self, min_cov=0.6):
+		tobe_removed = set([])
+		for hit1, hit2 in itertools.combinations(self.nodes(), 2):
+			if hit1.contained(hit2) < min_cov:
+				print >>sys.stderr, hit1.short, '-',  hit2.short
+				tobe_removed.add(hit2)
+			elif hit2.contained(hit1) < min_cov:
+				print >>sys.stderr, hit2.short, '-',  hit1.short
+				tobe_removed.add(hit1)
+		
+		for node in tobe_removed:
+			self.remove_node(node)
 	def break_circle(self):
 		for circle in nx.simple_cycles(self):
 #			print circle

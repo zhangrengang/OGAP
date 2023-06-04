@@ -1,9 +1,13 @@
 custom
+*egg-info
+dist
 .gitignore
-*/*.pyc
+*.pyc
 db/[mp]t/*/*/
 build*
 test/test*/
+test/*/
+macse*
 #test/*out/
 tree
 #test/est.fa

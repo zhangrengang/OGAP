@@ -1,4 +1,4 @@
-LOCUS       NC_037304.1           367808 bp    DNA     circular PLN 12-NOV-2020
+LOCUS       NC_037304.1           367808 bp    DNA     circular PLN 16-APR-2022
 DEFINITION  Arabidopsis thaliana mitochondrion, complete genome.
 ACCESSION   
 VERSION
@@ -10,12 +10,12 @@ SOURCE      mitochondrion Arabidopsis thaliana (thale cress)
             Brassicales; Brassicaceae; Arabidopsis.
 REFERENCE   1  (bases 1 to 367808)
   AUTHORS   Zhang,R.-G.
-  TITLE     Organelle Genome Project
+  TITLE     OGAP: Organelle Genome Annotation Pipeline
   JOURNAL   Unpublished
 REFERENCE   2  (bases 1 to 367808)
   AUTHORS   Zhang,R.-G.
   TITLE     Direct Submission
-  JOURNAL   Submitted (12-NOV-2020) Bioinformatics, Ori-Gene Co., Ltd.,
+  JOURNAL   Submitted (16-APR-2022) Bioinformatics, Ori-Gene Co., Ltd.,
             Beijing, China
 FEATURES             Location/Qualifiers
      source          1..367808
@@ -25,17 +25,12 @@ FEATURES             Location/Qualifiers
                      /db_xref="taxon:3702"
      gene            join(234352..236631,26813..28336)
                      /gene="nad5"
-                     /locus_tag="ATHMT_0029"
+                     /locus_tag="ATHMT_0008"
                      /trans_splicing
-     mRNA            join(234352..234580,235412..236631,26813..27211,
-                     28190..28336)
-                     /gene="nad5"
-                     /locus_tag="ATHMT_0029"
-                     /product="NADH dehydrogenase subunit 5"
      CDS             join(234352..234580,235412..236631,26813..27211,
                      28190..28336)
                      /gene="nad5"
-                     /locus_tag="ATHMT_0029"
+                     /locus_tag="ATHMT_0008"
                      /codon_start=1
                      /product="NADH dehydrogenase subunit 5"
                      /protein_id="ATHMT:nad5-1.t1:cds"
@@ -53,15 +48,11 @@ FEATURES             Location/Qualifiers
                      LGSTLFVTFSRMWDSLSSWVDNRSSFILIVSSFYTKSSQE"
      gene            join(316013..317135,291578..292191)
                      /gene="ccmFN"
-                     /locus_tag="ATHMT_0301"
+                     /locus_tag="ATHMT_0052"
                      /trans_splicing
-     mRNA            join(316013..317135,291578..292191)
-                     /gene="ccmFN"
-                     /locus_tag="ATHMT_0301"
-                     /product="cytochrome c biogenesis FN"
      CDS             join(316013..317135,291578..292191)
                      /gene="ccmFN"
-                     /locus_tag="ATHMT_0301"
+                     /locus_tag="ATHMT_0052"
                      /codon_start=1
                      /product="cytochrome c biogenesis FN"
                      /protein_id="ATHMT:ccmFN-1.t1:cds"
@@ -76,25 +67,20 @@ FEATURES             Location/Qualifiers
                      RDPVENASFMPRVLATARIHSVILPLLHSWTSFLNIVTFPCCVSGTFSIRSGLLAPVH
                      SFATDDTRGIFLWWFFLLMTGISMILFYQMKQQASVRRTYKKEMVVARSTLVHLRHSA
                      RAQPRPVMLWKN"
-     repeat_region   1..4193
-                     /note="DR59-1"
-                     /rpt_type=dispersed
-     repeat_region   6108..6119
-                     /note="SR20-1"
-                     /rpt_type=tandem
-     repeat_region   6118..6530
-                     /note="DR152-1"
-                     /rpt_type=dispersed
+     gene            complement(1872..1940)
+                     /gene="trnF-GAA-cp"
+                     /locus_tag="ATHMT_0001"
+                     /note="cp-derived"
+     tRNA            complement(1872..1940)
+                     /gene="trnF-GAA-cp"
+                     /locus_tag="ATHMT_0001"
+                     /product="tRNA-Phe"
      gene            6264..8389
                      /gene="cox2"
-                     /locus_tag="ATHMT_0003"
-     mRNA            join(6264..6963,8307..8389)
-                     /gene="cox2"
-                     /locus_tag="ATHMT_0003"
-                     /product="cytochrome c oxidase subunit 2"
+                     /locus_tag="ATHMT_0002"
      CDS             join(6264..6963,8307..8389)
                      /gene="cox2"
-                     /locus_tag="ATHMT_0003"
+                     /locus_tag="ATHMT_0002"
                      /codon_start=1
                      /product="cytochrome c oxidase subunit 2"
                      /protein_id="ATHMT:cox2-1.t1:cds"
@@ -103,45 +89,12 @@ FEATURES             Location/Qualifiers
                      LLYSMDEVVVDPAITIKAIGHQWYRTYEYSDYNSSDEQSLTFDSYMIPEEDLELGQSR
                      LLEVDNRVVVPAKTHLRIIVTSADVPHSWAVPSSGVKCDAVPGRLNQISILVQREGVY
                      YGQCSEICGTNHAFTPIVVEAVPRKDYGSRVSNQLIPQTGEA"
-     repeat_region   6486..6538
-                     /gene="cox2"
-                     /locus_tag="ATHMT_0003"
-                     /note="DR54-1"
-                     /rpt_type=dispersed
-     repeat_region   8915..9013
-                     /note="DR27-1"
-                     /rpt_type=dispersed
-     repeat_region   10083..10120
-                     /note="TR28-1"
-                     /rpt_type=tandem
-     repeat_region   10747..10809
-                     /note="DR18-1"
-                     /rpt_type=dispersed
-     repeat_region   11394..11535
-                     /note="DR141-1"
-                     /rpt_type=dispersed
-     repeat_region   11528..11621
-                     /note="DR147-1"
-                     /rpt_type=dispersed
-     repeat_region   14161..14172
-                     /note="SR5-1"
-                     /rpt_type=tandem
-     repeat_region   15162..15213
-                     /note="DR35-1"
-                     /rpt_type=dispersed
-     repeat_region   15164..15242
-                     /note="TR5-1"
-                     /rpt_type=tandem
      gene            complement(17814..18434)
                      /gene="ccmB"
-                     /locus_tag="ATHMT_0013"
-     mRNA            complement(17814..18434)
-                     /gene="ccmB"
-                     /locus_tag="ATHMT_0013"
-                     /product="cytochrome c biogenesis B"
+                     /locus_tag="ATHMT_0003"
      CDS             complement(17814..18434)
                      /gene="ccmB"
-                     /locus_tag="ATHMT_0013"
+                     /locus_tag="ATHMT_0003"
                      /codon_start=1
                      /product="cytochrome c biogenesis B"
                      /protein_id="ATHMT:ccmB-1.t1:cds"
@@ -149,35 +102,19 @@ FEATURES             Location/Qualifiers
                      HSHLGPIRIPPLFPFPPAPFPRNEKEDGTLELYYLSTYCLPKILLLQLVGHRVIQISR
                      VFCGFPMLQLSYQFGRSGMDRLNIPLGSLVLTLLCGIHSRSALGITSSSGWNSSQNPT
                      TSPTLLPLTVSRTSIETEWFHVLSSIGYSSLFVSLFPISVSISLQD"
-     repeat_region   19041..19052
-                     /note="SR40-1"
-                     /rpt_type=tandem
-     repeat_region   19280..19289
-                     /note="SR1-1"
-                     /rpt_type=tandem
-     repeat_region   19290..19299
-                     /note="SR12-1"
-                     /rpt_type=tandem
-     repeat_region   19682..20189
-                     /note="DR11-1"
-                     /rpt_type=dispersed
      gene            19928..20000
                      /gene="trnK-UUU"
-                     /locus_tag="ATHMT_0018"
+                     /locus_tag="ATHMT_0004"
      tRNA            19928..20000
                      /gene="trnK-UUU"
-                     /locus_tag="ATHMT_0018"
+                     /locus_tag="ATHMT_0004"
                      /product="tRNA-Lys"
      gene            20165..23418
                      /gene="rps3"
-                     /locus_tag="ATHMT_0019"
-     mRNA            join(20165..20238,21822..23418)
-                     /gene="rps3"
-                     /locus_tag="ATHMT_0019"
-                     /product="ribosomal protein S3"
+                     /locus_tag="ATHMT_0005"
      CDS             join(20165..20238,21822..23418)
                      /gene="rps3"
-                     /locus_tag="ATHMT_0019"
+                     /locus_tag="ATHMT_0005"
                      /codon_start=1
                      /product="ribosomal protein S3"
                      /protein_id="ATHMT:rps3-1.t1:cds"
@@ -191,39 +128,12 @@ FEATURES             Location/Qualifiers
                      IKVIDMMIEIILRKRGIPYRYNSYFYEVKKMRSFLSNRTNTKTLIESVKIKSVYQSAS
                      PIAQDISFQLKNKRRSFHSIFAKIVKEIPKGVEGIRICFSGRLKDAAEKAQTKCYKHR
                      KTSRNVFNHKIDYAPAEVSTRYGISGVKVWISYSQKKGRRAISETYEI"
-     repeat_region   20187..20237
-                     /gene="rps3"
-                     /locus_tag="ATHMT_0019"
-                     /note="DR22-1"
-                     /rpt_type=dispersed
-     repeat_region   20201..20254
-                     /gene="rps3"
-                     /locus_tag="ATHMT_0019"
-                     /note="DR90-1"
-                     /rpt_type=dispersed
-     repeat_region   20754..20815
-                     /gene="rps3"
-                     /locus_tag="ATHMT_0019"
-                     /note="DR156-1"
-                     /rpt_type=dispersed
-     repeat_region   21953..21964
-                     /gene="rps3"
-                     /locus_tag="ATHMT_0019"
-                     /note="SR3-1"
-                     /rpt_type=tandem
-     repeat_region   23253..23503
-                     /note="DR32-1"
-                     /rpt_type=dispersed
      gene            23285..23824
                      /gene="rpl16"
-                     /locus_tag="ATHMT_0025"
-     mRNA            23285..23824
-                     /gene="rpl16"
-                     /locus_tag="ATHMT_0025"
-                     /product="ribosomal protein L16"
+                     /locus_tag="ATHMT_0006"
      CDS             23285..23824
                      /gene="rpl16"
-                     /locus_tag="ATHMT_0025"
+                     /locus_tag="ATHMT_0006"
                      /codon_start=1
                      /product="ribosomal protein L16"
                      /protein_id="ATHMT:rpl16-1.t1:cds"
@@ -231,19 +141,12 @@ FEATURES             Location/Qualifiers
                      SKYRKGRCSRGCKPDGTKLGFGRYGTKSCKAGRLSYRAIEAARRAIIGHFHRAMSGQF
                      RRNGKIWVRVFADLPITGKPTEVRMGRGKGNPTGWIARVSTGQIPFEMDGVSLANARQ
                      AATLAAHKPCSSTKFVQWS"
-     repeat_region   23875..23952
-                     /note="DR64-1"
-                     /rpt_type=dispersed
      gene            24665..25237
                      /gene="nad9"
-                     /locus_tag="ATHMT_0027"
-     mRNA            24665..25237
-                     /gene="nad9"
-                     /locus_tag="ATHMT_0027"
-                     /product="NADH dehydrogenase subunit 9"
+                     /locus_tag="ATHMT_0007"
      CDS             24665..25237
                      /gene="nad9"
-                     /locus_tag="ATHMT_0027"
+                     /locus_tag="ATHMT_0007"
                      /codon_start=1
                      /product="NADH dehydrogenase subunit 9"
                      /protein_id="ATHMT:nad9-1.t1:cds"
@@ -251,120 +154,47 @@ FEATURES             Location/Qualifiers
                      LKLHTYTRVQVSIDICGVDHPSRKRRFEVVYNLLSTRYNSRIRVQTSADEVTRISPVV
                      SLFPSAGRWEREVWDMFGVSFINHPDLRRISTDYGFEGHPLRKDLPLSGYVEVRYDDP
                      EKRVVSEPIEMTQEFRYFDFASPWEQRSDG"
-     repeat_region   25279..25304
-                     /note="TR39-1"
-                     /rpt_type=tandem
-     repeat_region   30442..30722
-                     /note="DR3-1"
-                     /rpt_type=dispersed
-     repeat_region   30716..30789
-                     /note="DR115-1"
-                     /rpt_type=dispersed
-     repeat_region   30782..30832
-                     /note="DR69-1"
-                     /rpt_type=dispersed
-     repeat_region   30825..30870
-                     /note="TR47-1"
-                     /rpt_type=tandem
-     repeat_region   30938..31272
-                     /note="DR151-1"
-                     /rpt_type=dispersed
-     repeat_region   31574..31625
-                     /note="DR144-1"
-                     /rpt_type=dispersed
-     repeat_region   31725..31963
-                     /note="DR67-1"
-                     /rpt_type=dispersed
-     repeat_region   31832..31989
-                     /note="DR134-1"
-                     /rpt_type=dispersed
-     repeat_region   31904..32030
-                     /note="DR117-1"
-                     /rpt_type=dispersed
-     repeat_region   31924..32066
-                     /note="DR103-1"
-                     /rpt_type=dispersed
-     repeat_region   36362..36818
-                     /note="DR52-1"
-                     /rpt_type=dispersed
-     repeat_region   37002..37066
-                     /note="TR3-1"
-                     /rpt_type=tandem
-     repeat_region   41464..41996
-                     /note="DR61-1"
-                     /rpt_type=dispersed
      gene            41486..41573
                      /gene="trnS-GCU"
-                     /locus_tag="ATHMT_0043"
+                     /locus_tag="ATHMT_0009"
      tRNA            41486..41573
                      /gene="trnS-GCU"
-                     /locus_tag="ATHMT_0043"
+                     /locus_tag="ATHMT_0009"
                      /product="tRNA-Ser"
-     repeat_region   42088..42098
-                     /note="SR1-2"
-                     /rpt_type=tandem
      gene            42116..42190
                      /gene="trnP-UGG"
-                     /locus_tag="ATHMT_0045"
+                     /locus_tag="ATHMT_0010"
      tRNA            42116..42190
                      /gene="trnP-UGG"
-                     /locus_tag="ATHMT_0045"
+                     /locus_tag="ATHMT_0010"
                      /product="tRNA-Pro"
      gene            42546..42616
                      /gene="trnC-GCA"
-                     /locus_tag="ATHMT_0046"
+                     /locus_tag="ATHMT_0011"
      tRNA            42546..42616
                      /gene="trnC-GCA"
-                     /locus_tag="ATHMT_0046"
+                     /locus_tag="ATHMT_0011"
                      /product="tRNA-Cys"
      gene            43544..43615
                      /gene="trnN-GUU-cp"
-                     /locus_tag="ATHMT_0047"
+                     /locus_tag="ATHMT_0012"
      tRNA            43544..43615
                      /gene="trnN-GUU-cp"
-                     /locus_tag="ATHMT_0047"
+                     /locus_tag="ATHMT_0012"
                      /product="tRNA-Asn"
-     repeat_region   44066..44077
-                     /note="SR28-1"
-                     /rpt_type=tandem
      gene            44462..44544
                      /gene="trnY-GUA"
-                     /locus_tag="ATHMT_0049"
+                     /locus_tag="ATHMT_0013"
      tRNA            44462..44544
                      /gene="trnY-GUA"
-                     /locus_tag="ATHMT_0049"
+                     /locus_tag="ATHMT_0013"
                      /product="tRNA-Tyr"
-     repeat_region   44474..44554
-                     /note="DR120-1"
-                     /rpt_type=dispersed
-     repeat_region   44602..44659
-                     /note="DR2-1"
-                     /rpt_type=dispersed
-     repeat_region   44668..44756
-                     /note="DR130-1"
-                     /rpt_type=dispersed
-     repeat_region   46593..46697
-                     /note="TR8-1"
-                     /rpt_type=tandem
-     repeat_region   48955..49185
-                     /note="DR106-1"
-                     /rpt_type=dispersed
-     repeat_region   49243..49418
-                     /note="DR25-1"
-                     /rpt_type=dispersed
-     repeat_region   49366..49426
-                     /note="DR62-1"
-                     /rpt_type=dispersed
      gene            49423..50580
                      /gene="atp6"
-                     /locus_tag="ATHMT_0057"
-     mRNA            49423..50580
-                     /gene="atp6"
-                     /locus_tag="ATHMT_0057"
-                     /product="ATP synthase subunit 6"
+                     /locus_tag="ATHMT_0014"
      CDS             49423..50580
                      /gene="atp6"
-                     /locus_tag="ATHMT_0057"
+                     /locus_tag="ATHMT_0014"
                      /codon_start=1
                      /product="ATP synthase subunit 6"
                      /protein_id="ATHMT:atp6-1.t1:cds"
@@ -375,29 +205,21 @@ FEATURES             Location/Qualifiers
                      MFFPCILVTFLFLLFCNLQGMIPYSFTVTSHFLITLALSFSIFIGITIVGFQRHGLHF
                      FSFLLPAGVPLPLAPFLVLLELISYCFRALSLGIRLFANMMAGHSLVKILSGFAWTML
                      CMNDIFYFIGALGPLFIVLALTGLELGVAILQAYVFTILICIYLNDAINLH"
-     repeat_region   49820..56409
-                     /note="DR154-1"
-                     /rpt_type=dispersed
      gene            50626..50712
                      /gene="trnS-UGA"
-                     /locus_tag="ATHMT_0059"
+                     /locus_tag="ATHMT_0015"
      tRNA            50626..50712
                      /gene="trnS-UGA"
-                     /locus_tag="ATHMT_0059"
+                     /locus_tag="ATHMT_0015"
                      /product="tRNA-Ser"
      gene            join(complement(82937..83231),58315..59481,230304..234132)
                      /gene="nad1"
-                     /locus_tag="ATHMT_0060"
+                     /locus_tag="ATHMT_0016"
                      /trans_splicing
-     mRNA            join(complement(82937..83231),58315..58397,59290..59481,
-                     230304..230362,233874..234132)
-                     /gene="nad1"
-                     /locus_tag="ATHMT_0060"
-                     /product="NADH dehydrogenase subunit 1"
      CDS             join(complement(82937..83231),58315..58397,59290..59481,
                      230304..230362,233874..234132)
                      /gene="nad1"
-                     /locus_tag="ATHMT_0060"
+                     /locus_tag="ATHMT_0016"
                      /codon_start=1
                      /product="NADH dehydrogenase subunit 1"
                      /protein_id="ATHMT:nad1-1.t1:cds"
@@ -407,42 +229,12 @@ FEATURES             Location/Qualifiers
                      LISRLAETNRAPFDLPEAEAESVAGYNVEYSSMGSALFFLGEYANMILMSGPCTLFFP
                      GGWPPILDLPIFKKIPGSIWFSIKVLLFLFLYIWVRAAFPRYRYDQLMGLGRKVFLPL
                      SLARVVPVSGLLVTFQWLP"
-     repeat_region   59226..59276
-                     /gene="nad1"
-                     /locus_tag="ATHMT_0060"
-                     /note="DR37-1"
-                     /rpt_type=dispersed
-     repeat_region   59776..59833
-                     /note="DR95-1"
-                     /rpt_type=dispersed
-     repeat_region   60464..60516
-                     /note="DR104-1"
-                     /rpt_type=dispersed
-     repeat_region   60912..60989
-                     /note="DR129-1"
-                     /rpt_type=dispersed
-     repeat_region   63630..63671
-                     /note="TR45-1"
-                     /rpt_type=tandem
-     repeat_region   64719..64730
-                     /note="SR6-1"
-                     /rpt_type=tandem
-     repeat_region   65547..65673
-                     /note="DR20-1"
-                     /rpt_type=dispersed
-     repeat_region   66857..67062
-                     /note="DR60-1"
-                     /rpt_type=dispersed
      gene            complement(67098..68621)
                      /gene="atp1"
-                     /locus_tag="ATHMT_0069"
-     mRNA            complement(67098..68621)
-                     /gene="atp1"
-                     /locus_tag="ATHMT_0069"
-                     /product="ATP synthase subunit 1"
+                     /locus_tag="ATHMT_0017"
      CDS             complement(67098..68621)
                      /gene="atp1"
-                     /locus_tag="ATHMT_0069"
+                     /locus_tag="ATHMT_0017"
                      /codon_start=1
                      /product="ATP synthase subunit 1"
                      /protein_id="ATHMT:atp1-1.t1:cds"
@@ -455,109 +247,45 @@ FEATURES             Location/Qualifiers
                      GDVSAYIPTNVISITDGQICLETELFYRGIRPAINVGLSVSRVGSAAQLKAMKQVCGS
                      SKLELAQYREVAAFAQFGSDLDAATQALLNRGARLTEVPKQPQYAPLPIEKQILVIYA
                      AVNGFCDRMPLDRISQYEKAIPNSVKPELLQALKGGLTNERKMEPDAFLKERALALI"
-     repeat_region   68660..68840
-                     /note="DR114-1"
-                     /rpt_type=dispersed
-     repeat_region   70871..70944
-                     /note="DR115-2"
-                     /rpt_type=dispersed
-     repeat_region   71577..71588
-                     /note="SR10-1"
-                     /rpt_type=tandem
-     repeat_region   72602..72656
-                     /note="DR5-1"
-                     /rpt_type=dispersed
-     repeat_region   72834..72845
-                     /note="SR23-1"
-                     /rpt_type=tandem
-     repeat_region   73265..73276
-                     /note="SR10-2"
-                     /rpt_type=tandem
-     repeat_region   73427..73477
-                     /note="DR80-1"
-                     /rpt_type=dispersed
-     repeat_region   73611..73737
-                     /note="DR20-2"
-                     /rpt_type=dispersed
-     repeat_region   76800..76811
-                     /note="SR14-1"
-                     /rpt_type=tandem
-     repeat_region   77082..77123
-                     /note="TR33-1"
-                     /rpt_type=tandem
-     repeat_region   78843..78854
-                     /note="SR11-2"
-                     /rpt_type=tandem
-     repeat_region   79013..79024
-                     /note="SR12-2"
-                     /rpt_type=tandem
-     repeat_region   79095..79110
-                     /note="SR22-1"
-                     /rpt_type=tandem
-     repeat_region   79227..79370
-                     /note="DR84-1"
-                     /rpt_type=dispersed
-     repeat_region   79324..79374
-                     /note="DR12-1"
-                     /rpt_type=dispersed
+     gene            complement(67098..68432)
+                     /gene="atpA"
+                     /locus_tag="ATHMT_0018"
+                     /note="cp-derived"
+     CDS             complement(67098..68432)
+                     /gene="atpA"
+                     /locus_tag="ATHMT_0018"
+                     /codon_start=1
+                     /product="ATP synthase CF1 alpha subunit"
+                     /protein_id="ATHMT:atpA-1.t1:cds"
+                     /translation="MALNLENENVGIVVFGGDTAIKEGDLVKRTGSIVDVPAGKAMLG
+                     RVVDAMGVPIDGKGALSDHEQRRVEVKAPGILERKSVHEPMQTGLKAVDSLVPIGRGQ
+                     RELLIGDRQTGKTTIAIDTILNQKQINSRATSESETMYCVYVAIGQKRSTVGQLIQTL
+                     EEANALEYSILVAATASDPAPLQFLAPYSGCAMGEYFRDNGMHALIIYDDLSKQAVAY
+                     RQMSLLLRRPPGREAFPGDVFYLHSRLLERAAKRSDQTGAGSLTALPVIETQAGDVSA
+                     YIPTNVISITDGQICLETELFYRGIRPAINVGLSVSRVGSAAQLKAMKQVCGSSKLEL
+                     AQYREVAAFAQFGSDLDAATQALLNRGARLTEVPKQPQYAPLPIEKQILVIYAAVNGF
+                     CDRMPLDRISQYEKAIPNSVKPELLQALKGGLTNERKMEPDAFLKERALALI"
      gene            79559..80005
                      /gene="rps7"
-                     /locus_tag="ATHMT_0085"
-     mRNA            79559..80005
-                     /gene="rps7"
-                     /locus_tag="ATHMT_0085"
-                     /product="ribosomal protein S7"
+                     /locus_tag="ATHMT_0019"
      CDS             79559..80005
                      /gene="rps7"
-                     /locus_tag="ATHMT_0085"
+                     /locus_tag="ATHMT_0019"
                      /codon_start=1
                      /product="ribosomal protein S7"
                      /protein_id="ATHMT:rps7-1.t1:cds"
                      /translation="MGGLDGEQKLLIKKLVNFRMKEGKRTRVRAIVYQTFHRPARTER
                      DVIKLMVDAVENIKPICEVAKVGVAGTIYDVPGIVARDRQQTLAIRWILEAAFKRRIS
                      YRISLEKCSFAEILDAYQKRGSARRKRENLHGLASTNRSFAHFRWW"
-     repeat_region   80041..80096
-                     /note="DR70-1"
-                     /rpt_type=dispersed
-     repeat_region   80177..80360
-                     /note="DR150-1"
-                     /rpt_type=dispersed
-     repeat_region   84120..84172
-                     /note="DR54-2"
-                     /rpt_type=dispersed
-     repeat_region   84128..84540
-                     /note="DR152-2"
-                     /rpt_type=dispersed
-     repeat_region   84558..84607
-                     /note="DR69-2"
-                     /rpt_type=dispersed
-     repeat_region   87937..88078
-                     /note="DR141-2"
-                     /rpt_type=dispersed
-     repeat_region   88444..88534
-                     /note="DR28-1"
-                     /rpt_type=dispersed
-     repeat_region   88488..88540
-                     /note="DR110-1"
-                     /rpt_type=dispersed
-     repeat_region   92745..92755
-                     /note="SR1-4"
-                     /rpt_type=tandem
      gene            join(161832..163357,complement(92819..98042))
                      /gene="nad2"
-                     /locus_tag="ATHMT_0095"
+                     /locus_tag="ATHMT_0020"
                      /trans_splicing
-     mRNA            join(161832..161984,162966..163357,
-                     complement(97882..98042),complement(94666..95238),
-                     complement(92819..93006))
-                     /gene="nad2"
-                     /locus_tag="ATHMT_0095"
-                     /product="NADH dehydrogenase subunit 2"
      CDS             join(161832..161984,162966..163357,
                      complement(97882..98042),complement(94666..95238),
                      complement(92819..93006))
                      /gene="nad2"
-                     /locus_tag="ATHMT_0095"
+                     /locus_tag="ATHMT_0020"
                      /codon_start=1
                      /product="NADH dehydrogenase subunit 2"
                      /protein_id="ATHMT:nad2-2.t1:cds"
@@ -570,69 +298,26 @@ FEATURES             Location/Qualifiers
                      LIGIFIYALMTMDAFAIVSALRQTRVKYIADLGALAKTNPISAITFSITMFSYAGIPP
                      LAGFCSKFYLFFAALGCGAYFLAPVGVVTSVIGRFYYIRLVKRMFFDTPRTWILYEPM
                      DRNKSLLLAMTSFFITSSLLYPSPLFSVTHQMALSSYL"
-     repeat_region   93325..93388
-                     /gene="nad2"
-                     /locus_tag="ATHMT_0095"
-                     /note="DR43-1"
-                     /rpt_type=dispersed
-     repeat_region   93774..93785
-                     /gene="nad2"
-                     /locus_tag="ATHMT_0095"
-                     /note="SR35-1"
-                     /rpt_type=tandem
-     repeat_region   96728..96806
-                     /gene="nad2"
-                     /locus_tag="ATHMT_0095"
-                     /note="DR44-1"
-                     /rpt_type=dispersed
-     repeat_region   96757..96814
-                     /gene="nad2"
-                     /locus_tag="ATHMT_0095"
-                     /note="DR127-1"
-                     /rpt_type=dispersed
-     repeat_region   97163..97212
-                     /gene="nad2"
-                     /locus_tag="ATHMT_0095"
-                     /note="DR42-1"
-                     /rpt_type=dispersed
-     repeat_region   98576..98656
-                     /note="DR120-2"
-                     /rpt_type=dispersed
+     gene            complement(98586..98660)
+                     /gene="trnY-GUA"
+                     /locus_tag="ATHMT_0021"
+     tRNA            complement(98586..98660)
+                     /gene="trnY-GUA"
+                     /locus_tag="ATHMT_0021"
+                     /product="tRNA-Tyr"
      gene            102603..102675
                      /gene="trnM-CAU-cp"
-                     /locus_tag="ATHMT_0102"
+                     /locus_tag="ATHMT_0022"
      tRNA            102603..102675
                      /gene="trnM-CAU-cp"
-                     /locus_tag="ATHMT_0102"
+                     /locus_tag="ATHMT_0022"
                      /product="tRNA-Met"
-     repeat_region   110118..110127
-                     /note="SR1-5"
-                     /rpt_type=tandem
-     repeat_region   110303..110532
-                     /note="DR106-2"
-                     /rpt_type=dispersed
-     repeat_region   111640..111724
-                     /note="DR155-2"
-                     /rpt_type=dispersed
-     repeat_region   112103..112114
-                     /note="SR39-1"
-                     /rpt_type=tandem
-     repeat_region   113664..113786
-                     /note="DR63-1"
-                     /rpt_type=dispersed
-     repeat_region   113898..113909
-                     /note="SR2-1"
-                     /rpt_type=tandem
      gene            complement(114762..116345)
                      /gene="cox1"
-                     /locus_tag="ATHMT_0109"
-     mRNA            complement(114762..116345)
-                     /gene="cox1"
-                     /locus_tag="ATHMT_0109"
-                     /product="cytochrome c oxidase subunit 1"
+                     /locus_tag="ATHMT_0023"
      CDS             complement(114762..116345)
                      /gene="cox1"
-                     /locus_tag="ATHMT_0109"
+                     /locus_tag="ATHMT_0023"
                      /codon_start=1
                      /product="cytochrome c oxidase subunit 1"
                      /protein_id="ATHMT:cox1-1.t1:cds"
@@ -646,164 +331,41 @@ FEATURES             Location/Qualifiers
                      AGFYYWVGKIFGRTYPETLGQIHFWITFFGVNLTFFPMHFLGLSGMPRRIPDYPDAYA
                      GWNALSSFGSYISVVGICCFFVVVTITLSSGNNKRCAPSPWALELNSTTLEWMVQSPP
                      AFHTFGELPAIKETKSYVK"
-     repeat_region   117554..117622
-                     /note="TR35-1"
-                     /rpt_type=tandem
-     repeat_region   118662..118762
-                     /note="TR14-1"
-                     /rpt_type=tandem
-     repeat_region   119816..119840
-                     /note="TR26-1"
-                     /rpt_type=tandem
-     repeat_region   121442..121510
-                     /note="TR29-1"
-                     /rpt_type=tandem
-     repeat_region   121608..121671
-                     /note="TR1-1"
-                     /rpt_type=tandem
-     repeat_region   121934..121994
-                     /note="TR24-1"
-                     /rpt_type=tandem
-     repeat_region   123222..123251
-                     /note="TR21-1"
-                     /rpt_type=tandem
-     repeat_region   124212..124272
-                     /note="TR4-1"
-                     /rpt_type=tandem
      gene            complement(124603..124676)
                      /gene="trnH-GUG-cp"
-                     /locus_tag="ATHMT_0118"
+                     /locus_tag="ATHMT_0024"
+                     /note="cp-derived"
      tRNA            complement(124603..124676)
                      /gene="trnH-GUG-cp"
-                     /locus_tag="ATHMT_0118"
+                     /locus_tag="ATHMT_0024"
                      /product="tRNA-His"
      gene            complement(126000..126118)
                      /gene="rrn5"
-                     /locus_tag="ATHMT_0119"
+                     /locus_tag="ATHMT_0025"
      rRNA            complement(126000..126118)
                      /gene="rrn5"
-                     /locus_tag="ATHMT_0119"
+                     /locus_tag="ATHMT_0025"
                      /product="5S ribosomal RNA"
-     repeat_region   126286..126356
-                     /note="DR139-1"
-                     /rpt_type=dispersed
      gene            complement(126291..128215)
                      /gene="rrn18"
-                     /locus_tag="ATHMT_0121"
+                     /locus_tag="ATHMT_0026"
      rRNA            complement(126291..128215)
                      /gene="rrn18"
-                     /locus_tag="ATHMT_0121"
+                     /locus_tag="ATHMT_0026"
                      /product="18S ribosomal RNA"
-     repeat_region   126871..126927
-                     /note="DR95-2"
-                     /rpt_type=dispersed
-     repeat_region   127915..127983
-                     /note="DR10-2"
-                     /rpt_type=dispersed
-     repeat_region   128290..128342
-                     /note="DR85-1"
-                     /rpt_type=dispersed
-     repeat_region   128343..128398
-                     /note="DR55-1"
-                     /rpt_type=dispersed
-     repeat_region   128351..128403
-                     /note="DR118-1"
-                     /rpt_type=dispersed
-     repeat_region   128566..128662
-                     /note="DR89-1"
-                     /rpt_type=dispersed
-     repeat_region   128841..128850
-                     /note="SR1-6"
-                     /rpt_type=tandem
-     repeat_region   130160..130231
-                     /note="DR126-1"
-                     /rpt_type=dispersed
-     repeat_region   134640..134902
-                     /note="DR93-1"
-                     /rpt_type=dispersed
-     repeat_region   134964..135069
-                     /note="DR79-1"
-                     /rpt_type=dispersed
-     repeat_region   135079..135193
-                     /note="DR87-1"
-                     /rpt_type=dispersed
-     repeat_region   138930..138992
-                     /note="DR119-1"
-                     /rpt_type=dispersed
-     repeat_region   139080..139142
-                     /note="DR74-1"
-                     /rpt_type=dispersed
-     repeat_region   139161..139211
-                     /note="DR97-1"
-                     /rpt_type=dispersed
-     repeat_region   140289..140344
-                     /note="DR46-2"
-                     /rpt_type=dispersed
-     repeat_region   140372..140386
-                     /note="SR11-3"
-                     /rpt_type=tandem
      gene            complement(140796..143965)
                      /gene="rrn26"
-                     /locus_tag="ATHMT_0138"
+                     /locus_tag="ATHMT_0027"
      rRNA            complement(140796..143965)
                      /gene="rrn26"
-                     /locus_tag="ATHMT_0138"
+                     /locus_tag="ATHMT_0027"
                      /product="26S ribosomal RNA"
-     repeat_region   142096..142138
-                     /note="TR20-1"
-                     /rpt_type=tandem
-     repeat_region   143953..144409
-                     /note="DR52-2"
-                     /rpt_type=dispersed
-     repeat_region   146188..146199
-                     /note="SR10-3"
-                     /rpt_type=tandem
-     repeat_region   147714..147723
-                     /note="SR1-7"
-                     /rpt_type=tandem
-     repeat_region   148615..148720
-                     /note="DR146-1"
-                     /rpt_type=dispersed
-     repeat_region   149691..149745
-                     /note="DR157-1"
-                     /rpt_type=dispersed
-     repeat_region   150648..150659
-                     /note="SR34-1"
-                     /rpt_type=tandem
-     repeat_region   152966..152975
-                     /note="SR19-1"
-                     /rpt_type=tandem
-     repeat_region   153586..153637
-                     /note="DR111-1"
-                     /rpt_type=dispersed
-     repeat_region   154967..154978
-                     /note="SR15-1"
-                     /rpt_type=tandem
-     repeat_region   155124..155135
-                     /note="SR10-4"
-                     /rpt_type=tandem
-     repeat_region   156734..156793
-                     /note="DR122-1"
-                     /rpt_type=dispersed
-     repeat_region   156747..156804
-                     /note="DR100-1"
-                     /rpt_type=dispersed
-     repeat_region   156786..156899
-                     /note="TR13-1"
-                     /rpt_type=tandem
-     repeat_region   158852..158881
-                     /note="TR44-1"
-                     /rpt_type=tandem
      gene            159980..161068
                      /gene="rps4"
-                     /locus_tag="ATHMT_0154"
-     mRNA            159980..161068
-                     /gene="rps4"
-                     /locus_tag="ATHMT_0154"
-                     /product="ribosomal protein S4"
+                     /locus_tag="ATHMT_0028"
      CDS             159980..161068
                      /gene="rps4"
-                     /locus_tag="ATHMT_0154"
+                     /locus_tag="ATHMT_0028"
                      /codon_start=1
                      /product="ribosomal protein S4"
                      /protein_id="ATHMT:rps4-1.t1:cds"
@@ -814,38 +376,12 @@ FEATURES             Location/Qualifiers
                      QLRSSMQEEDLERTKKFGSEKVCLGSSFAEHKRMKRNLLKSLFLSKRRKDKNLNLPTR
                      TISPIVYNSSLSLYSNSTYCFASPHKLTMKRRIKRIELPTHYSEVNHRTPKAVVSYGP
                      NIGHIPHDIRLKDPNLPLRSRNGRGQNI"
-     repeat_region   161529..161584
-                     /note="DR17-1"
-                     /rpt_type=dispersed
-     repeat_region   161625..161718
-                     /note="DR147-2"
-                     /rpt_type=dispersed
-     repeat_region   162094..162103
-                     /gene="nad2"
-                     /locus_tag="ATHMT_0095"
-                     /note="SR12-3"
-                     /rpt_type=tandem
-     repeat_region   162901..162951
-                     /gene="nad2"
-                     /locus_tag="ATHMT_0095"
-                     /note="DR37-2"
-                     /rpt_type=dispersed
-     repeat_region   163510..163519
-                     /note="SR12-4"
-                     /rpt_type=tandem
-     repeat_region   165832..165932
-                     /note="DR7-1"
-                     /rpt_type=dispersed
      gene            165838..166455
                      /gene="nad6"
-                     /locus_tag="ATHMT_0161"
-     mRNA            165838..166455
-                     /gene="nad6"
-                     /locus_tag="ATHMT_0161"
-                     /product="NADH dehydrogenase subunit 6"
+                     /locus_tag="ATHMT_0029"
      CDS             165838..166455
                      /gene="nad6"
-                     /locus_tag="ATHMT_0161"
+                     /locus_tag="ATHMT_0029"
                      /codon_start=1
                      /product="NADH dehydrogenase subunit 6"
                      /protein_id="ATHMT:nad6-1.t1:cds"
@@ -853,62 +389,26 @@ FEATURES             Location/Qualifiers
                      GLDFFAMIFPVVHIGAIAVSFLFVVMMFHIQIAEIHEEVLRYLPVSGIIGLIFWWEMF
                      FILDNESIPLLPTQRNTTSLRYTVYAGKVRSWTNLETLGNLLYTYYSVWFLVPSLILL
                      VAMIGAIVLTMHRTTKVKRQDVFRRNAIDFRRTIMRRTTDPLTIY"
-     repeat_region   165948..166134
-                     /gene="nad6"
-                     /locus_tag="ATHMT_0161"
-                     /note="DR132-1"
-                     /rpt_type=dispersed
-     repeat_region   167768..167825
-                     /note="DR100-2"
-                     /rpt_type=dispersed
-     repeat_region   171553..171564
-                     /note="SR18-1"
-                     /rpt_type=tandem
-     repeat_region   171568..171622
-                     /note="DR157-2"
-                     /rpt_type=dispersed
      gene            complement(171570..171643)
                      /gene="trnfM-CAU"
-                     /locus_tag="ATHMT_0166"
+                     /locus_tag="ATHMT_0030"
      tRNA            complement(171570..171643)
                      /gene="trnfM-CAU"
-                     /locus_tag="ATHMT_0166"
+                     /locus_tag="ATHMT_0030"
                      /product="tRNA-Met"
-     repeat_region   171714..171804
-                     /note="DR101-1"
-                     /rpt_type=dispersed
-     repeat_region   172944..173043
-                     /note="DR27-2"
-                     /rpt_type=dispersed
-     repeat_region   174475..174533
-                     /note="TR10-1"
-                     /rpt_type=tandem
-     repeat_region   175406..175417
-                     /note="SR11-4"
-                     /rpt_type=tandem
-     repeat_region   176813..176838
-                     /note="TR15-1"
-                     /rpt_type=tandem
-     repeat_region   178937..179010
-                     /note="TR23-1"
-                     /rpt_type=tandem
      gene            complement(180658..180744)
                      /gene="trnS-GGA-cp"
-                     /locus_tag="ATHMT_0173"
+                     /locus_tag="ATHMT_0031"
      tRNA            complement(180658..180744)
                      /gene="trnS-GGA-cp"
-                     /locus_tag="ATHMT_0173"
+                     /locus_tag="ATHMT_0031"
                      /product="tRNA-Ser"
      gene            complement(181677..182858)
                      /gene="cob"
-                     /locus_tag="ATHMT_0174"
-     mRNA            complement(181677..182858)
-                     /gene="cob"
-                     /locus_tag="ATHMT_0174"
-                     /product="apocytochrome b"
+                     /locus_tag="ATHMT_0032"
      CDS             complement(181677..182858)
                      /gene="cob"
-                     /locus_tag="ATHMT_0174"
+                     /locus_tag="ATHMT_0032"
                      /codon_start=1
                      /product="apocytochrome b"
                      /protein_id="ATHMT:cob-1.t1:cds"
@@ -920,46 +420,16 @@ FEATURES             Location/Qualifiers
                      PEWYFLPIHAILRSIPDKAGGVAAIAPVFICLLALPFFKSMYVRSSSFRPIHQGMFWL
                      LLADCLLLGWIGCQPVEAPFVTIGQISPLVFFLFFAITPILGRVGRGIPNSYTDETDH
                      T"
-     repeat_region   182729..182934
-                     /note="DR78-1"
-                     /rpt_type=dispersed
-     repeat_region   182932..182941
-                     /note="SR22-2"
-                     /rpt_type=tandem
-     repeat_region   183492..183555
-                     /note="DR43-2"
-                     /rpt_type=dispersed
-     repeat_region   183662..183675
-                     /note="SR1-8"
-                     /rpt_type=tandem
-     repeat_region   183791..183849
-                     /note="DR39-2"
-                     /rpt_type=dispersed
-     gene            complement(184503..184820)
-                     /gene="rps14"
-                     /locus_tag="ATHMT_0180"
-     mRNA            complement(join(184503..184748,184797..184820))
-                     /gene="rps14"
-                     /locus_tag="ATHMT_0180"
-                     /product="ribosomal protein S14"
-     CDS             complement(join(184503..184748,184797..184820))
-                     /gene="rps14"
-                     /locus_tag="ATHMT_0180"
-                     /codon_start=1
-                     /product="ribosomal protein S14"
-                     /protein_id="ATHMT:rps14-1.t1:cds"
-                     /translation="MRLYHCGAQNSRDHKRRLLAAKFELRRKLYKAFCKDPDLPSDMR
-                     DKHCYKLSKLPRNSSFARVRNRCISTVALVLYLSSFEFLVSFFVD"
+     gene            complement(182211..182858)
+                     /gene="petB"
+                     /locus_tag="ATHMT_0033"
+                     /pseudo
      gene            complement(184762..185319)
                      /gene="rpl5"
-                     /locus_tag="ATHMT_0181"
-     mRNA            complement(184762..185319)
-                     /gene="rpl5"
-                     /locus_tag="ATHMT_0181"
-                     /product="ribosomal protein L5"
+                     /locus_tag="ATHMT_0034"
      CDS             complement(184762..185319)
                      /gene="rpl5"
-                     /locus_tag="ATHMT_0181"
+                     /locus_tag="ATHMT_0034"
                      /codon_start=1
                      /product="ribosomal protein L5"
                      /protein_id="ATHMT:rpl5-1.t1:cds"
@@ -967,38 +437,19 @@ FEATURES             Location/Qualifiers
                      IIKNGKLAMEIPRGQKFIQTQRGSTGKSFRSNPFLGSNKDKGYVSDLARQSTLRGHGM
                      SNFSVRISTVMSLLDFPVEIRKNSIQFSMETEFCEFSPELEDHFEIFEHIRGFNVTII
                      TSANTQDETLPLWSGFLQKDEGETQ"
-     repeat_region   185351..185417
-                     /note="DR113-1"
-                     /rpt_type=dispersed
-     repeat_region   185722..185736
-                     /note="SR26-1"
-                     /rpt_type=tandem
-     repeat_region   187070..187081
-                     /note="SR32-1"
-                     /rpt_type=tandem
-     repeat_region   188646..188710
-                     /note="TR40-1"
-                     /rpt_type=tandem
-     repeat_region   189142..189152
-                     /note="SR1-9"
-                     /rpt_type=tandem
      gene            189287..189358
                      /gene="trnG-GCC"
-                     /locus_tag="ATHMT_0187"
+                     /locus_tag="ATHMT_0035"
      tRNA            189287..189358
                      /gene="trnG-GCC"
-                     /locus_tag="ATHMT_0187"
+                     /locus_tag="ATHMT_0035"
                      /product="tRNA-Gly"
      gene            189483..191800
                      /gene="ccmFC"
-                     /locus_tag="ATHMT_0188"
-     mRNA            join(189483..190261,191215..191800)
-                     /gene="ccmFC"
-                     /locus_tag="ATHMT_0188"
-                     /product="cytochrome c biogenesis FC"
+                     /locus_tag="ATHMT_0036"
      CDS             join(189483..190261,191215..191800)
                      /gene="ccmFC"
-                     /locus_tag="ATHMT_0188"
+                     /locus_tag="ATHMT_0036"
                      /codon_start=1
                      /product="cytochrome c biogenesis FC"
                      /protein_id="ATHMT:ccmFC-1.t1:cds"
@@ -1011,51 +462,21 @@ FEATURES             Location/Qualifiers
                      FPASYKNGKLEHFLHWWMKNRKHNNFWLTMFPEKRYFRERTSTAEVAIHTNLFTDLYA
                      SIGTGSSRTGGWYTTIMKLPFIFFIRIGFMLASLGGSPSLLRQLQKDKLRWNRESSVE
                      FIIA"
-     repeat_region   194198..198390
-                     /note="DR59-2"
-                     /rpt_type=dispersed
-     repeat_region   198645..198656
-                     /note="SR29-1"
-                     /rpt_type=tandem
-     repeat_region   200976..201040
-                     /note="DR140-1"
-                     /rpt_type=dispersed
-     repeat_region   202731..202785
-                     /note="DR24-1"
-                     /rpt_type=dispersed
-     repeat_region   202931..202980
-                     /note="DR123-1"
-                     /rpt_type=dispersed
-     repeat_region   203349..203387
-                     /note="TR27-1"
-                     /rpt_type=tandem
-     repeat_region   203468..203501
-                     /note="TR6-1"
-                     /rpt_type=tandem
-     repeat_region   206095..206444
-                     /note="DR48-1"
-                     /rpt_type=dispersed
-     repeat_region   206636..206724
-                     /note="DR76-1"
-                     /rpt_type=dispersed
-     repeat_region   207232..207332
-                     /note="DR7-2"
-                     /rpt_type=dispersed
-     repeat_region   207329..207534
-                     /note="DR78-2"
-                     /rpt_type=dispersed
+     gene            complement(196069..196137)
+                     /gene="trnF-GAA-cp"
+                     /locus_tag="ATHMT_0037"
+                     /note="cp-derived"
+     tRNA            complement(196069..196137)
+                     /gene="trnF-GAA-cp"
+                     /locus_tag="ATHMT_0037"
+                     /product="tRNA-Phe"
      gene            complement(207580..215562)
                      /gene="nad4"
-                     /locus_tag="ATHMT_0200"
-     mRNA            complement(join(207580..207668,209611..210033,
-                     213115..213629,215102..215562))
-                     /gene="nad4"
-                     /locus_tag="ATHMT_0200"
-                     /product="NADH dehydrogenase subunit 4"
+                     /locus_tag="ATHMT_0038"
      CDS             complement(join(207580..207668,209611..210033,
                      213115..213629,215102..215562))
                      /gene="nad4"
-                     /locus_tag="ATHMT_0200"
+                     /locus_tag="ATHMT_0038"
                      /codon_start=1
                      /product="NADH dehydrogenase subunit 4"
                      /protein_id="ATHMT:nad4-1.t1:cds"
@@ -1068,25 +489,12 @@ FEATURES             Location/Qualifiers
                      ILPMLSHGLVPSALFLCVGVLYDRHKTRLVRYYGGLVSTMPNLSTIFFSFTLANMSSP
                      GTSSFIGEFLILVGAFQRNSLVATLAALGMILGAAYSLWLYNRVVSGNLKPDFLHKFS
                      DSNGREVSIFIPFLVGVVRMGVHPKVFPDCMHTSVSNLVQHGKFH"
-     repeat_region   208820..208834
-                     /note="SR36-1"
-                     /rpt_type=tandem
-     repeat_region   210718..210730
-                     /note="SR1-10"
-                     /rpt_type=tandem
-     repeat_region   217905..217916
-                     /note="SR37-1"
-                     /rpt_type=tandem
      gene            complement(218904..219746)
                      /gene="mttB"
-                     /locus_tag="ATHMT_0204"
-     mRNA            complement(218904..219746)
-                     /gene="mttB"
-                     /locus_tag="ATHMT_0204"
-                     /product="transport membrane protein"
+                     /locus_tag="ATHMT_0039"
      CDS             complement(218904..219746)
                      /gene="mttB"
-                     /locus_tag="ATHMT_0204"
+                     /locus_tag="ATHMT_0039"
                      /codon_start=1
                      /product="transport membrane protein"
                      /protein_id="ATHMT:mttB-1.t1:cds"
@@ -1098,14 +506,10 @@ FEATURES             Location/Qualifiers
                      SNYQ"
      gene            complement(219910..222610)
                      /gene="rpl2"
-                     /locus_tag="ATHMT_0205"
-     mRNA            complement(join(219910..220047,221696..222610))
-                     /gene="rpl2"
-                     /locus_tag="ATHMT_0205"
-                     /product="ribosomal protein L2"
+                     /locus_tag="ATHMT_0040"
      CDS             complement(join(219910..220047,221696..222610))
                      /gene="rpl2"
-                     /locus_tag="ATHMT_0205"
+                     /locus_tag="ATHMT_0040"
                      /codon_start=1
                      /product="ribosomal protein L2"
                      /protein_id="ATHMT:rpl2-1.t1:cds"
@@ -1116,55 +520,12 @@ FEATURES             Location/Qualifiers
                      SLCEVQKGRTHSILWAHRIKGKAGLSWQSFRRQDTLGLVGAAGHKKSKPKTDQGNLPA
                      KPIGERAKQLKALRGLRAKDGACKVDRAPVNTYIIASHQLEAGKMVMNCDWSKPSTSS
                      FLQSAQNDHPKPLFTV"
-     repeat_region   220803..220855
-                     /note="DR104-2"
-                     /rpt_type=dispersed
-     repeat_region   222608..222685
-                     /note="DR64-2"
-                     /rpt_type=dispersed
-     repeat_region   222639..222705
-                     /note="DR113-2"
-                     /rpt_type=dispersed
-     repeat_region   223469..223531
-                     /note="DR68-1"
-                     /rpt_type=dispersed
-     repeat_region   223871..223881
-                     /note="SR12-5"
-                     /rpt_type=tandem
-     repeat_region   223960..223971
-                     /note="SR4-1"
-                     /rpt_type=tandem
-     repeat_region   228517..228528
-                     /note="SR2-2"
-                     /rpt_type=tandem
-     repeat_region   229111..229182
-                     /note="DR126-2"
-                     /rpt_type=dispersed
-     repeat_region   230323..230332
-                     /gene="nad1"
-                     /locus_tag="ATHMT_0060"
-                     /note="SR1-11"
-                     /rpt_type=tandem
-     repeat_region   230557..230566
-                     /gene="nad1"
-                     /locus_tag="ATHMT_0060"
-                     /note="SR12-6"
-                     /rpt_type=tandem
-     repeat_region   231028..231039
-                     /gene="nad1"
-                     /locus_tag="ATHMT_0060"
-                     /note="SR10-5"
-                     /rpt_type=tandem
      gene            231089..233059
                      /gene="matR"
-                     /locus_tag="ATHMT_0217"
-     mRNA            231089..233059
-                     /gene="matR"
-                     /locus_tag="ATHMT_0217"
-                     /product="maturase-related protein"
+                     /locus_tag="ATHMT_0041"
      CDS             231089..233059
                      /gene="matR"
-                     /locus_tag="ATHMT_0217"
+                     /locus_tag="ATHMT_0041"
                      /codon_start=1
                      /product="maturase-related protein"
                      /protein_id="ATHMT:matR-1.t1:cds"
@@ -1180,81 +541,13 @@ FEATURES             Location/Qualifiers
                      GSISSEFPIKIEAPIKKILRRLRDRGIISRRRPWPIHVACLTNVSDEDIVNWSAGIAI
                      SPLSYYRCRDNLYQVRTIVDHQIRWSAIFTLAHKHKSSARNIILKYSKDSNIVNQEGG
                      KILAEFPNSIELGKLGPGQDLNKKEHSTTSLV"
-     repeat_region   233046..233060
-                     /gene="nad1"
-                     /locus_tag="ATHMT_0060"
-                     /note="SR21-1"
-                     /rpt_type=tandem
-     repeat_region   233437..233448
-                     /gene="nad1"
-                     /locus_tag="ATHMT_0060"
-                     /note="SR38-1"
-                     /rpt_type=tandem
-     repeat_region   233607..233618
-                     /gene="nad1"
-                     /locus_tag="ATHMT_0060"
-                     /note="SR3-2"
-                     /rpt_type=tandem
-     repeat_region   233646..233789
-                     /gene="nad1"
-                     /locus_tag="ATHMT_0060"
-                     /note="DR84-2"
-                     /rpt_type=dispersed
-     repeat_region   233743..233792
-                     /gene="nad1"
-                     /locus_tag="ATHMT_0060"
-                     /note="DR12-2"
-                     /rpt_type=dispersed
-     repeat_region   234048..234125
-                     /gene="nad1"
-                     /locus_tag="ATHMT_0060"
-                     /note="DR129-2"
-                     /rpt_type=dispersed
-     repeat_region   234172..234429
-                     /note="DR153-1"
-                     /rpt_type=dispersed
-     repeat_region   234382..234466
-                     /gene="nad5"
-                     /locus_tag="ATHMT_0029"
-                     /note="DR107-1"
-                     /rpt_type=dispersed
-     repeat_region   234412..234477
-                     /gene="nad5"
-                     /locus_tag="ATHMT_0029"
-                     /note="DR143-1"
-                     /rpt_type=dispersed
-     repeat_region   234984..235045
-                     /gene="nad5"
-                     /locus_tag="ATHMT_0029"
-                     /note="DR156-2"
-                     /rpt_type=dispersed
-     repeat_region   237066..237077
-                     /note="SR12-7"
-                     /rpt_type=tandem
-     repeat_region   237286..237297
-                     /note="SR30-1"
-                     /rpt_type=tandem
-     repeat_region   238255..238266
-                     /note="SR10-6"
-                     /rpt_type=tandem
-     repeat_region   238393..238442
-                     /note="DR83-1"
-                     /rpt_type=dispersed
-     repeat_region   239189..239268
-                     /note="DR53-2"
-                     /rpt_type=dispersed
      gene            complement(239250..245330)
                      /gene="nad7"
-                     /locus_tag="ATHMT_0233"
-     mRNA            complement(join(239250..239511,241328..241571,
-                     242625..243091,244155..244223,245188..245330))
-                     /gene="nad7"
-                     /locus_tag="ATHMT_0233"
-                     /product="NADH dehydrogenase subunit 7"
+                     /locus_tag="ATHMT_0042"
      CDS             complement(join(239250..239511,241328..241571,
                      242625..243091,244155..244223,245188..245330))
                      /gene="nad7"
-                     /locus_tag="ATHMT_0233"
+                     /locus_tag="ATHMT_0042"
                      /codon_start=1
                      /product="NADH dehydrogenase subunit 7"
                      /protein_id="ATHMT:nad7-1.t1:cds"
@@ -1266,109 +559,38 @@ FEATURES             Location/Qualifiers
                      QCLNQMPSGMIKADDRKLCPPSRCRMKLSMESSIHHFELYTEGFSVPASSTYTAVEAP
                      KGEFGVFLVSNGSNRPYRRKIRAPGSAHSQGLDSMSKHHMPADVVTIIGTQDIVFGEV
                      DR"
-     repeat_region   240034..240049
-                     /note="SR22-3"
-                     /rpt_type=tandem
-     repeat_region   243328..243406
-                     /note="DR44-2"
-                     /rpt_type=dispersed
-     repeat_region   243357..243414
-                     /note="DR127-2"
-                     /rpt_type=dispersed
-     repeat_region   245477..245486
-                     /note="SR1-12"
-                     /rpt_type=tandem
-     repeat_region   246766..247115
-                     /note="DR48-2"
-                     /rpt_type=dispersed
      gene            complement(247016..247492)
                      /gene="atp8"
-                     /locus_tag="ATHMT_0239"
-     mRNA            complement(247016..247492)
-                     /gene="atp8"
-                     /locus_tag="ATHMT_0239"
-                     /product="ATP synthase subunit 8"
+                     /locus_tag="ATHMT_0043"
      CDS             complement(247016..247492)
                      /gene="atp8"
-                     /locus_tag="ATHMT_0239"
+                     /locus_tag="ATHMT_0043"
                      /codon_start=1
                      /product="ATP synthase subunit 8"
                      /protein_id="ATHMT:atp8-1.t1:cds"
                      /translation="MPQLDKFTYFSQFFWLCLFFFTFYIFICNDGDGVLGISRILKLR
                      NQLLSHRGKTIRSKDPNSLEDLLRKGFSTGVSYMYASLFEVSQWCKAVDLLGKRRKIT
                      LISCFGEISGSRGMERNILYNISKSSPSNTGRWITCRNCRNDIMLIHVVHGQGSIK"
-     repeat_region   247484..247538
-                     /note="DR36-1"
-                     /rpt_type=dispersed
-     repeat_region   247489..247550
-                     /note="DR62-2"
-                     /rpt_type=dispersed
-     repeat_region   247498..247673
-                     /note="DR25-2"
-                     /rpt_type=dispersed
      gene            250307..250383
                      /gene="trnI-CAU"
-                     /locus_tag="ATHMT_0243"
+                     /locus_tag="ATHMT_0044"
      tRNA            250307..250383
                      /gene="trnI-CAU"
-                     /locus_tag="ATHMT_0243"
+                     /locus_tag="ATHMT_0044"
                      /product="tRNA-Ile"
-     repeat_region   254594..254656
-                     /note="DR18-2"
-                     /rpt_type=dispersed
-     repeat_region   254842..255122
-                     /note="DR3-2"
-                     /rpt_type=dispersed
-     repeat_region   256221..256232
-                     /note="SR20-2"
-                     /rpt_type=tandem
-     repeat_region   256305..256319
-                     /note="SR33-1"
-                     /rpt_type=tandem
-     repeat_region   256957..256968
-                     /note="SR8-1"
-                     /rpt_type=tandem
-     repeat_region   257621..257883
-                     /note="DR93-2"
-                     /rpt_type=dispersed
-     repeat_region   257923..258028
-                     /note="DR79-2"
-                     /rpt_type=dispersed
-     repeat_region   258029..258143
-                     /note="DR87-2"
-                     /rpt_type=dispersed
-     repeat_region   258145..258207
-                     /note="DR119-2"
-                     /rpt_type=dispersed
-     repeat_region   258284..258346
-                     /note="DR74-2"
-                     /rpt_type=dispersed
-     repeat_region   258361..258411
-                     /note="DR97-2"
-                     /rpt_type=dispersed
-     repeat_region   258580..258589
-                     /note="SR19-2"
-                     /rpt_type=tandem
-     repeat_region   258638..265227
-                     /note="DR154-2"
-                     /rpt_type=dispersed
      gene            complement(264335..264421)
                      /gene="trnS-UGA"
-                     /locus_tag="ATHMT_0257"
+                     /locus_tag="ATHMT_0045"
      tRNA            complement(264335..264421)
                      /gene="trnS-UGA"
-                     /locus_tag="ATHMT_0257"
+                     /locus_tag="ATHMT_0045"
                      /product="tRNA-Ser"
      gene            complement(264467..265516)
                      /gene="atp6"
-                     /locus_tag="ATHMT_0258"
-     mRNA            complement(264467..265516)
-                     /gene="atp6"
-                     /locus_tag="ATHMT_0258"
-                     /product="ATP synthase subunit 6"
+                     /locus_tag="ATHMT_0046"
      CDS             complement(264467..265516)
                      /gene="atp6"
-                     /locus_tag="ATHMT_0258"
+                     /locus_tag="ATHMT_0046"
                      /codon_start=1
                      /product="ATP synthase subunit 6"
                      /protein_id="ATHMT:atp6-2.t1:cds"
@@ -1379,245 +601,81 @@ FEATURES             Location/Qualifiers
                      ALSFSIFIGITIVGFQRHGLHFFSFLLPAGVPLPLAPFLVLLELISYCFRALSLGIRL
                      FANMMAGHSLVKILSGFAWTMLCMNDIFYFIGALGPLFIVLALTGLELGVAILQAYVF
                      TILICIYLNDAINLH"
-     repeat_region   265507..265646
-                     /note="DR31-3"
-                     /rpt_type=dispersed
-     repeat_region   265688..265742
-                     /note="DR36-2"
-                     /rpt_type=dispersed
-     repeat_region   265693..265744
-                     /note="DR124-2"
-                     /rpt_type=dispersed
-     repeat_region   265765..265822
-                     /note="DR65-3"
-                     /rpt_type=dispersed
-     repeat_region   265804..265867
-                     /note="DR94-3"
-                     /rpt_type=dispersed
-     repeat_region   267040..267051
-                     /note="SR2-3"
-                     /rpt_type=tandem
-     repeat_region   269570..269775
-                     /note="DR60-2"
-                     /rpt_type=dispersed
-     repeat_region   269779..269849
-                     /note="DR139-2"
-                     /rpt_type=dispersed
-     repeat_region   269880..269933
-                     /note="DR6-2"
-                     /rpt_type=dispersed
-     repeat_region   269887..270060
-                     /note="DR19-1"
-                     /rpt_type=dispersed
-     repeat_region   269935..270092
-                     /note="DR134-2"
-                     /rpt_type=dispersed
-     repeat_region   269961..270199
-                     /note="DR67-2"
-                     /rpt_type=dispersed
-     repeat_region   270076..270293
-                     /note="DR26-1"
-                     /rpt_type=dispersed
-     repeat_region   270571..270620
-                     /note="DR91-1"
-                     /rpt_type=dispersed
-     repeat_region   270573..270830
-                     /note="DR153-2"
-                     /rpt_type=dispersed
-     repeat_region   270773..270862
-                     /note="DR130-2"
-                     /rpt_type=dispersed
-     repeat_region   270775..271023
-                     /note="DR41-1"
-                     /rpt_type=dispersed
      gene            complement(270961..271185)
                      /gene="atp9"
-                     /locus_tag="ATHMT_0276"
-     mRNA            complement(270961..271185)
-                     /gene="atp9"
-                     /locus_tag="ATHMT_0276"
-                     /product="ATP synthase subunit 9"
+                     /locus_tag="ATHMT_0047"
      CDS             complement(270961..271185)
                      /gene="atp9"
-                     /locus_tag="ATHMT_0276"
+                     /locus_tag="ATHMT_0047"
                      /codon_start=1
                      /product="ATP synthase subunit 9"
                      /protein_id="ATHMT:atp9-1.t1:cds"
                      /translation="MLEGAKSIGAGAATIASAGAAIGIGNVFSSLIHSVARNPSLAKQ
                      SFGYAILGFALTEAIALFAPMMAFLILFVF"
-     repeat_region   271061..271395
-                     /note="DR151-2"
-                     /rpt_type=dispersed
-     repeat_region   273274..273323
-                     /note="DR51-2"
-                     /rpt_type=dispersed
-     repeat_region   273277..273336
-                     /note="DR122-2"
-                     /rpt_type=dispersed
-     repeat_region   274487..274496
-                     /note="SR16-1"
-                     /rpt_type=tandem
      gene            complement(274937..275010)
                      /gene="trnD-GUC-cp"
-                     /locus_tag="ATHMT_0281"
+                     /locus_tag="ATHMT_0048"
      tRNA            complement(274937..275010)
                      /gene="trnD-GUC-cp"
-                     /locus_tag="ATHMT_0281"
+                     /locus_tag="ATHMT_0048"
                      /product="tRNA-Asp"
-     repeat_region   275018..275107
-                     /note="DR101-2"
-                     /rpt_type=dispersed
-     repeat_region   276497..276619
-                     /note="DR63-2"
-                     /rpt_type=dispersed
-     repeat_region   277624..277728
-                     /note="DR146-2"
-                     /rpt_type=dispersed
-     repeat_region   278381..278436
-                     /note="DR70-2"
-                     /rpt_type=dispersed
-     repeat_region   278458..278640
-                     /note="DR150-2"
-                     /rpt_type=dispersed
-     repeat_region   282029..282078
-                     /note="DR42-2"
-                     /rpt_type=dispersed
-     repeat_region   285128..285190
-                     /note="DR68-2"
-                     /rpt_type=dispersed
-     repeat_region   286583..286629
-                     /note="TR43-1"
-                     /rpt_type=tandem
-     repeat_region   286701..286752
-                     /note="DR15-1"
-                     /rpt_type=dispersed
-     repeat_region   286705..286760
-                     /note="DR55-2"
-                     /rpt_type=dispersed
-     repeat_region   286756..286808
-                     /note="DR85-2"
-                     /rpt_type=dispersed
-     repeat_region   286764..286816
-                     /note="DR38-1"
-                     /rpt_type=dispersed
-     repeat_region   286851..286919
-                     /note="DR21-2"
-                     /rpt_type=dispersed
-     repeat_region   287031..287096
-                     /note="DR143-2"
-                     /rpt_type=dispersed
-     repeat_region   287452..287504
-                     /note="DR72-1"
-                     /rpt_type=dispersed
      gene            288044..288400
                      /gene="nad3"
-                     /locus_tag="ATHMT_0297"
-     mRNA            288044..288400
-                     /gene="nad3"
-                     /locus_tag="ATHMT_0297"
-                     /product="NADH dehydrogenase subunit 3"
+                     /locus_tag="ATHMT_0049"
      CDS             288044..288400
                      /gene="nad3"
-                     /locus_tag="ATHMT_0297"
+                     /locus_tag="ATHMT_0049"
                      /codon_start=1
                      /product="NADH dehydrogenase subunit 3"
                      /protein_id="ATHMT:nad3-1.t1:cds"
                      /translation="MSEFAPISIYLVISLLVSLILLGVPFPFASNSSTYPEKLSAYEC
                      GFDPSGDARSRFDIRFYLVSILFLIPDLEVTFFFPWAVPPNKIDLFGFWSMMAFLFIL
                      TIGFLYEWKRGASDRE"
-     repeat_region   288315..288508
-                     /note="DR131-1"
-                     /rpt_type=dispersed
+     gene            288158..288400
+                     /gene="ndhC"
+                     /locus_tag="ATHMT_0050"
+                     /note="cp-derived"
+     CDS             288158..288400
+                     /gene="ndhC"
+                     /locus_tag="ATHMT_0050"
+                     /codon_start=1
+                     /product="NADH dehydrogenase subunit 3"
+                     /protein_id="ATHMT:ndhC-1.t1:cds"
+                     /translation="MSAYECGFDPSGDARSRFDIRFYLVSILFLIPDLEVTFFFPWAV
+                     PPNKIDLFGFWSMMAFLFILTIGFLYEWKRGASDRE"
      gene            288446..288823
                      /gene="rps12"
-                     /locus_tag="ATHMT_0299"
-     mRNA            288446..288823
-                     /gene="rps12"
-                     /locus_tag="ATHMT_0299"
-                     /product="ribosomal protein S12"
+                     /locus_tag="ATHMT_0051"
      CDS             288446..288823
                      /gene="rps12"
-                     /locus_tag="ATHMT_0299"
+                     /locus_tag="ATHMT_0051"
                      /codon_start=1
                      /product="ribosomal protein S12"
                      /protein_id="ATHMT:rps12-1.t1:cds"
                      /translation="MPTFNQLIRHGREEKRRTDRTRALDKCPQKTGVCPRVSTRTPKK
                      PNSAPRKIAKVRLSNRHDIFAHIPGEGHNSQEHSTVLIRGGRVKDSPGVKSHCIRGVK
                      DLMGIPGRRRGRSKYGAEKPKSI"
-     repeat_region   288619..288668
-                     /gene="rps12"
-                     /locus_tag="ATHMT_0299"
-                     /note="DR83-2"
-                     /rpt_type=dispersed
-     repeat_region   293947..293958
-                     /note="SR9-1"
-                     /rpt_type=tandem
      gene            294477..294548
                      /gene="trnQ-UUG"
-                     /locus_tag="ATHMT_0303"
+                     /locus_tag="ATHMT_0053"
      tRNA            294477..294548
                      /gene="trnQ-UUG"
-                     /locus_tag="ATHMT_0303"
+                     /locus_tag="ATHMT_0053"
                      /product="tRNA-Gln"
-     repeat_region   298023..298034
-                     /note="SR5-2"
-                     /rpt_type=tandem
-     repeat_region   298353..298407
-                     /note="DR24-2"
-                     /rpt_type=dispersed
-     repeat_region   298850..298860
-                     /note="SR1-13"
-                     /rpt_type=tandem
      gene            298901..298974
                      /gene="trnW-CCA-cp"
-                     /locus_tag="ATHMT_0307"
+                     /locus_tag="ATHMT_0054"
+                     /note="cp-derived"
      tRNA            298901..298974
                      /gene="trnW-CCA-cp"
-                     /locus_tag="ATHMT_0307"
+                     /locus_tag="ATHMT_0054"
                      /product="tRNA-Trp"
-     repeat_region   300057..300071
-                     /note="SR7-1"
-                     /rpt_type=tandem
-     repeat_region   301775..301786
-                     /note="SR2-4"
-                     /rpt_type=tandem
-     repeat_region   301875..301946
-                     /note="TR11-1"
-                     /rpt_type=tandem
-     repeat_region   302337..302386
-                     /note="TR30-1"
-                     /rpt_type=tandem
-     repeat_region   302454..302508
-                     /note="DR5-2"
-                     /rpt_type=dispersed
-     repeat_region   304918..304927
-                     /note="SR19-3"
-                     /rpt_type=tandem
-     repeat_region   305396..305475
-                     /note="DR148-3"
-                     /rpt_type=dispersed
-     repeat_region   306456..306494
-                     /note="TR36-1"
-                     /rpt_type=tandem
-     repeat_region   306969..307164
-                     /note="DR131-2"
-                     /rpt_type=dispersed
-     repeat_region   307719..307807
-                     /note="DR76-2"
-                     /rpt_type=dispersed
-     repeat_region   307932..308118
-                     /note="DR132-2"
-                     /rpt_type=dispersed
      gene            308298..309068
                      /gene="ccmC"
-                     /locus_tag="ATHMT_0319"
-     mRNA            308298..309068
-                     /gene="ccmC"
-                     /locus_tag="ATHMT_0319"
-                     /product="cytochrome c biogenesis C"
+                     /locus_tag="ATHMT_0055"
      CDS             308298..309068
                      /gene="ccmC"
-                     /locus_tag="ATHMT_0319"
+                     /locus_tag="ATHMT_0055"
                      /codon_start=1
                      /product="cytochrome c biogenesis C"
                      /protein_id="ATHMT:ccmC-1.t1:cds"
@@ -1626,59 +684,26 @@ FEATURES             Location/Qualifiers
                      FTLVTGGFRGRPMWGTFWVWDARLTSVFISFLIYLGALRFQKLPVEPASISIRAGPID
                      IPIIKSSVNWWNTSHQPGSISRSGTSIHVPMPIPILSNFANFPFSTRILFVLETRLPI
                      PSFLESPITEEIEAREGIPKPSSLALFASMAEWLKRPT"
-     repeat_region   310709..310805
-                     /note="DR89-2"
-                     /rpt_type=dispersed
-     repeat_region   316365..316378
-                     /gene="ccmFN"
-                     /locus_tag="ATHMT_0301"
-                     /note="SR1-14"
-                     /rpt_type=tandem
-     repeat_region   317179..317307
-                     /note="TR12-1"
-                     /rpt_type=tandem
-     repeat_region   319666..319691
-                     /note="TR37-1"
-                     /rpt_type=tandem
-     repeat_region   320362..320373
-                     /note="SR27-1"
-                     /rpt_type=tandem
      gene            complement(321367..321438)
                      /gene="trnE-UUC"
-                     /locus_tag="ATHMT_0325"
+                     /locus_tag="ATHMT_0056"
      tRNA            complement(321367..321438)
                      /gene="trnE-UUC"
-                     /locus_tag="ATHMT_0325"
+                     /locus_tag="ATHMT_0056"
                      /product="tRNA-Glu"
-     repeat_region   321435..321967
-                     /note="DR61-2"
-                     /rpt_type=dispersed
      gene            complement(321858..321945)
                      /gene="trnS-GCU"
-                     /locus_tag="ATHMT_0327"
+                     /locus_tag="ATHMT_0057"
      tRNA            complement(321858..321945)
                      /gene="trnS-GCU"
-                     /locus_tag="ATHMT_0327"
+                     /locus_tag="ATHMT_0057"
                      /product="tRNA-Ser"
-     repeat_region   326705..326753
-                     /note="TR17-1"
-                     /rpt_type=tandem
-     repeat_region   328994..329041
-                     /note="TR19-1"
-                     /rpt_type=tandem
-     repeat_region   329613..329624
-                     /note="SR17-2"
-                     /rpt_type=tandem
      gene            complement(329761..330048)
                      /gene="sdh4"
-                     /locus_tag="ATHMT_0331"
-     mRNA            complement(329761..330048)
-                     /gene="sdh4"
-                     /locus_tag="ATHMT_0331"
-                     /product="succinate dehydrogenase subunit 4"
+                     /locus_tag="ATHMT_0058"
      CDS             complement(329761..330048)
                      /gene="sdh4"
-                     /locus_tag="ATHMT_0331"
+                     /locus_tag="ATHMT_0058"
                      /codon_start=1
                      /product="succinate dehydrogenase subunit 4"
                      /protein_id="ATHMT:sdh4-1.t1:cds"
@@ -1686,14 +711,10 @@ FEATURES             Location/Qualifiers
                      QRITAAFPLPLIIIYNKVSSTFLPNLSLFWHINEGIEEIMADHVHQEMTRN"
      gene            complement(329976..330773)
                      /gene="cox3"
-                     /locus_tag="ATHMT_0332"
-     mRNA            complement(329976..330773)
-                     /gene="cox3"
-                     /locus_tag="ATHMT_0332"
-                     /product="cytochrome c oxidase subunit 3"
+                     /locus_tag="ATHMT_0059"
      CDS             complement(329976..330773)
                      /gene="cox3"
-                     /locus_tag="ATHMT_0332"
+                     /locus_tag="ATHMT_0059"
                      /codon_start=1
                      /product="cytochrome c oxidase subunit 3"
                      /protein_id="ATHMT:cox3-1.t1:cds"
@@ -1702,167 +723,38 @@ FEATURES             Location/Qualifiers
                      ASSHSSLAPAVEIGGIWPPKGIEVLDPWEIPFLNTPILPSSGAAVTWAHHAILAGKEK
                      RAVYALVATVLLALVFTGFQGMEYYQAPFTISDSIYGSTFFLATGFHGFHVIIGTLFL
                      IICGIRQYLGHLTKEHHVGFEAAAWYWHFVDVVWLFLFVSIYWWGGI"
-     repeat_region   331031..331042
-                     /note="SR25-1"
-                     /rpt_type=tandem
-     repeat_region   331581..331831
-                     /note="DR32-2"
-                     /rpt_type=dispersed
-     repeat_region   331833..331887
-                     /note="DR90-2"
-                     /rpt_type=dispersed
-     repeat_region   331877..332125
-                     /note="DR41-2"
-                     /rpt_type=dispersed
-     repeat_region   332181..332323
-                     /note="DR103-2"
-                     /rpt_type=dispersed
-     repeat_region   332210..332383
-                     /note="DR19-2"
-                     /rpt_type=dispersed
-     repeat_region   332399..332616
-                     /note="DR26-2"
-                     /rpt_type=dispersed
-     repeat_region   332679..332787
-                     /note="DR34-1"
-                     /rpt_type=dispersed
-     repeat_region   332788..332874
-                     /note="DR98-1"
-                     /rpt_type=dispersed
-     repeat_region   332814..332898
-                     /note="DR107-2"
-                     /rpt_type=dispersed
-     repeat_region   332874..332934
-                     /note="DR86-1"
-                     /rpt_type=dispersed
-     repeat_region   332903..332955
-                     /note="DR30-1"
-                     /rpt_type=dispersed
-     repeat_region   333027..333094
-                     /note="DR4-1"
-                     /rpt_type=dispersed
-     repeat_region   333065..333115
-                     /note="DR16-3"
-                     /rpt_type=dispersed
-     repeat_region   333122..333174
-                     /note="DR1-3"
-                     /rpt_type=dispersed
-     repeat_region   339767..339776
-                     /note="SR12-8"
-                     /rpt_type=tandem
-     repeat_region   342458..342469
-                     /note="SR17-3"
-                     /rpt_type=tandem
-     repeat_region   342839..342872
-                     /note="TR38-1"
-                     /rpt_type=tandem
-     repeat_region   342845..342879
-                     /note="TR2-1"
-                     /rpt_type=tandem
-     repeat_region   345311..345320
-                     /note="SR1-15"
-                     /rpt_type=tandem
-     repeat_region   346109..346120
-                     /note="SR2-5"
-                     /rpt_type=tandem
-     repeat_region   346208..346715
-                     /note="DR11-2"
-                     /rpt_type=dispersed
      gene            346454..346526
                      /gene="trnK-UUU"
-                     /locus_tag="ATHMT_0355"
+                     /locus_tag="ATHMT_0060"
      tRNA            346454..346526
                      /gene="trnK-UUU"
-                     /locus_tag="ATHMT_0355"
+                     /locus_tag="ATHMT_0060"
                      /product="tRNA-Lys"
-     repeat_region   346714..346763
-                     /note="DR22-2"
-                     /rpt_type=dispersed
-     repeat_region   347512..347576
-                     /note="DR140-2"
-                     /rpt_type=dispersed
-     repeat_region   348601..348612
-                     /note="SR41-1"
-                     /rpt_type=tandem
-     repeat_region   353470..353524
-                     /note="TR32-1"
-                     /rpt_type=tandem
-     repeat_region   354686..354735
-                     /note="TR46-1"
-                     /rpt_type=tandem
-     repeat_region   354774..354823
-                     /note="DR123-2"
-                     /rpt_type=dispersed
-     repeat_region   355371..355404
-                     /note="TR18-1"
-                     /rpt_type=tandem
-     repeat_region   357983..358033
-                     /note="DR80-2"
-                     /rpt_type=dispersed
-     repeat_region   358518..358570
-                     /note="DR110-2"
-                     /rpt_type=dispersed
-     repeat_region   358524..358614
-                     /note="DR28-2"
-                     /rpt_type=dispersed
-     repeat_region   358721..358773
-                     /note="DR118-2"
-                     /rpt_type=dispersed
-     repeat_region   358778..358830
-                     /note="DR38-2"
-                     /rpt_type=dispersed
-     repeat_region   358888..358955
-                     /note="DR4-2"
-                     /rpt_type=dispersed
-     repeat_region   358982..359037
-                     /note="DR30-2"
-                     /rpt_type=dispersed
-     repeat_region   359006..359067
-                     /note="DR86-2"
-                     /rpt_type=dispersed
-     repeat_region   359069..359155
-                     /note="DR98-2"
-                     /rpt_type=dispersed
-     repeat_region   359165..359273
-                     /note="DR34-2"
-                     /rpt_type=dispersed
-     repeat_region   359442..359494
-                     /note="DR72-2"
-                     /rpt_type=dispersed
-     repeat_region   360667..360677
-                     /note="SR1-16"
-                     /rpt_type=tandem
-     repeat_region   360869..361049
-                     /note="DR114-2"
-                     /rpt_type=dispersed
+     gene            complement(355895..355972)
+                     /gene="trnM-CAU-cp"
+                     /locus_tag="ATHMT_0061"
+                     /note="cp-derived"
+     tRNA            complement(355895..355972)
+                     /gene="trnM-CAU-cp"
+                     /locus_tag="ATHMT_0061"
+                     /product="tRNA-Met"
      gene            361637..361939
                      /gene="nad4L"
-                     /locus_tag="ATHMT_0376"
-     mRNA            361637..361939
-                     /gene="nad4L"
-                     /locus_tag="ATHMT_0376"
-                     /product="NADH dehydrogenase subunit 4L"
+                     /locus_tag="ATHMT_0062"
      CDS             361637..361939
                      /gene="nad4L"
-                     /locus_tag="ATHMT_0376"
+                     /locus_tag="ATHMT_0062"
                      /codon_start=1
                      /product="NADH dehydrogenase subunit 4L"
                      /protein_id="ATHMT:nad4L-1.t1:cds"
                      /translation="MDLIKYFTFSMIISILGIRGILLNRRNIPIMSMPIESMLLAVNS
                      NFLVFSVSSDDMMGQVFASLVPTVAAAESAIGLAIFVITFRVRGTIAVEFINSIQG"
-     repeat_region   362083..362199
-                     /note="DR47-3"
-                     /rpt_type=dispersed
      gene            362206..362784
                      /gene="atp4"
-                     /locus_tag="ATHMT_0378"
-     mRNA            362206..362784
-                     /gene="atp4"
-                     /locus_tag="ATHMT_0378"
-                     /product="ATP synthase subunit 4"
+                     /locus_tag="ATHMT_0063"
      CDS             362206..362784
                      /gene="atp4"
-                     /locus_tag="ATHMT_0378"
+                     /locus_tag="ATHMT_0063"
                      /codon_start=1
                      /product="ATP synthase subunit 4"
                      /protein_id="ATHMT:atp4-1.t1:cds"
@@ -1870,23 +762,6 @@ FEATURES             Location/Qualifiers
                      FIIFSRKSLGTTFKVTLDGRIQAIQEESQQFPNPNEVVPPESNEQQRLLRISLRICGT
                      VVESLPMARCAPKCEKTVQALLCRNLNVKSATLTNATSSRRIRFQDDLVTKFYTLVGK
                      QFAYSCISKAERVEFIRESLVVLRMVRGGGFS"
-     repeat_region   362765..362774
-                     /gene="atp4"
-                     /locus_tag="ATHMT_0378"
-                     /note="SR12-9"
-                     /rpt_type=tandem
-     repeat_region   366617..366665
-                     /note="TR7-1"
-                     /rpt_type=tandem
-     repeat_region   366773..366842
-                     /note="TR41-1"
-                     /rpt_type=tandem
-     repeat_region   366782..366858
-                     /note="TR34-1"
-                     /rpt_type=tandem
-     repeat_region   367677..367728
-                     /note="DR111-2"
-                     /rpt_type=dispersed
 BASE COUNT   102130 a  82530 c  82219 g 100929 t
 ORIGIN      
         1 agaggtcaga ggtaacttgt tatataggta gccatgcgtg ttaatagatc ttcttcttga

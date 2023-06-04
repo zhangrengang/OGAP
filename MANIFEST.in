@@ -1,0 +1,6 @@
+recursive-include db *
+recursive-include bin *
+include OGAP.py
+include *db.py
+include compare.py
+include __init__.py

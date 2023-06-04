@@ -139,7 +139,7 @@ class Grid(object):
 		elif 'Slurm' in name:
 			return 'slurm'
 		else:
-			logger.warn('Please provide your grid system `{}` to auther'.format(name))
+			logger.warn('Please provide your grid system `{}` to author'.format(name))
 def run_tasks(cmd_list, tc_tasks=None, mode='grid', grid_opts='', cpu=1, mem='1g', cont=1,
 			retry=1, script=None, out_path=None, completed=None, cmd_sep='\n', **kargs):
 	if not cmd_list:
@@ -228,7 +228,7 @@ JID={}
 PWD={}
 CMD="{} {}"
 DATE=`date +"%Y-%m-%d-%H-%M-%S"`
-echo "$JID:$PWD:\"$CMD\":$(whoami):$DATE" >> $LOGFILE
+echo "$JID:$PWD:'$CMD':$(whoami):$DATE" >> $LOGFILE
 '''.format(jid, pwd, opts, cmd)
     run_cmd(wlog)
 		
@@ -380,6 +380,9 @@ def main():
 	parser.add_option("-m","--mode", action="store", type="choice",\
 					dest="mode", default='grid', choices=['local', 'grid'], \
 					help='run mode [default=%default]')
+	parser.add_option("-b", action="store", type="int",\
+                    dest="by_bin", default=1, \
+                    help="task number per chunk [default=%default]")
 	parser.add_option("--retry", action="store", type="int",\
 					dest="retry", default=1, \
 					help="retry times [default=%default]")
@@ -408,7 +411,7 @@ def main():
 	stdout = options.stdout
 #	submit_pp(cmd_file, processors=processors, \
 #				cmd_sep=separation, cont=to_be_continue)
-	run_job(cmd_file, cmd_list, tc_tasks=processors, mode=mode, grid_opts=grid_opts,
+	run_job(cmd_file, cmd_list, tc_tasks=processors, mode=mode, grid_opts=grid_opts, by_bin=options.by_bin,
                 cont=to_be_continue, retry=retry, cmd_sep=separation, stdout=stdout)
 def run_job(cmd_file=None, cmd_list=None, by_bin=1, tc_tasks=8, mode='grid', grid_opts='-tc {tc}', cont=1, fail_exit=True,
             ckpt=None, retry=1, out_path=None, cmd_sep='\n', **kargs):

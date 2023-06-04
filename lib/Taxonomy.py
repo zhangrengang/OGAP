@@ -13,13 +13,13 @@ class Taxonomy():
 		self.jsonfile = jsonfile
 		if os.path.exists(jsonfile) and load:
 			self.load_db()
-		elif dbfile is None:
+		elif dbfile is None or not os.path.exists(jsonfile):
 			homedir = os.environ['HOME']
 			homedir = '/export/tmp'
 			dbfile = '{}/.etetoolkit/taxa.sqlite'.format(homedir)
 			if not os.path.exists(dbfile):
 				cmd = 'ete3 ncbiquery --search 9606 --info'
-				run_cmd(cmd)
+				run_cmd(cmd, log=True)
 			if load:
 				self.dbfile = dbfile
 				self.dump_db()

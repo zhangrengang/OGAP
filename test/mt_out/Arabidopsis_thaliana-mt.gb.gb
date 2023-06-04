@@ -25,13 +25,13 @@ FEATURES             Location/Qualifiers
                      /db_xref="taxon:3702"
      gene            join(234352..239381,21864..28336)
                      /gene="nad5"
-                     /locus_tag="ATHMT_0004"
+                     /locus_tag="ATHMT_0005"
                      /trans_splicing
      CDS             join(234352..234589,235433..236628,238339..238370,
                      238653..238674,239359..239381,21864..21883,25977..26007,
                      26923..27274,27616..27637,28275..28336)
                      /gene="nad5"
-                     /locus_tag="ATHMT_0004"
+                     /locus_tag="ATHMT_0005"
                      /codon_start=1
                      /product="NADH dehydrogenase subunit 5"
                      /protein_id="ATHMT:nad5-1.t1:cds"
@@ -74,12 +74,19 @@ FEATURES             Location/Qualifiers
                      HSHLGPIRIPPLFPFPPAPFPRNEKEDGTLELYYLSTYCLPKILLLQLVGHRVIQISR
                      VFCGFPMLQLSYQFGRSGMDRLNIPLGSLVLTLLCGIHSRSALGITSSSGWNSSQNPT
                      TSPTLLPLTVSRTSIETEWFHVLSSIGYSSLFVSLFPISVSISLQD"
+     gene            19928..20000
+                     /gene="trnK-UUU"
+                     /locus_tag="ATHMT_0003"
+     tRNA            19928..20000
+                     /gene="trnK-UUU"
+                     /locus_tag="ATHMT_0003"
+                     /product="tRNA-Lys"
      gene            20165..23418
                      /gene="rps3"
-                     /locus_tag="ATHMT_0003"
+                     /locus_tag="ATHMT_0004"
      CDS             join(20165..20191,20447..20472,21786..23418)
                      /gene="rps3"
-                     /locus_tag="ATHMT_0003"
+                     /locus_tag="ATHMT_0004"
                      /codon_start=1
                      /product="ribosomal protein S3"
                      /protein_id="ATHMT:rps3-1.t1:cds"
@@ -95,10 +102,10 @@ FEATURES             Location/Qualifiers
                      CYKHRKTSRNVFNHKIDYAPAEVSTRYGISGVKVWISYSQKKGRRAISETYEI"
      gene            23285..23824
                      /gene="rpl16"
-                     /locus_tag="ATHMT_0005"
+                     /locus_tag="ATHMT_0006"
      CDS             23285..23824
                      /gene="rpl16"
-                     /locus_tag="ATHMT_0005"
+                     /locus_tag="ATHMT_0006"
                      /codon_start=1
                      /product="ribosomal protein L16"
                      /protein_id="ATHMT:rpl16-1.t1:cds"
@@ -108,10 +115,10 @@ FEATURES             Location/Qualifiers
                      AATLAAHKPCSSTKFVQWS"
      gene            24665..25237
                      /gene="nad9"
-                     /locus_tag="ATHMT_0006"
+                     /locus_tag="ATHMT_0007"
      CDS             24665..25237
                      /gene="nad9"
-                     /locus_tag="ATHMT_0006"
+                     /locus_tag="ATHMT_0007"
                      /codon_start=1
                      /product="NADH dehydrogenase subunit 9"
                      /protein_id="ATHMT:nad9-1.t1:cds"
@@ -119,12 +126,47 @@ FEATURES             Location/Qualifiers
                      LKLHTYTRVQVSIDICGVDHPSRKRRFEVVYNLLSTRYNSRIRVQTSADEVTRISPVV
                      SLFPSAGRWEREVWDMFGVSFINHPDLRRISTDYGFEGHPLRKDLPLSGYVEVRYDDP
                      EKRVVSEPIEMTQEFRYFDFASPWEQRSDG"
+     gene            41486..41573
+                     /gene="trnS-GCU"
+                     /locus_tag="ATHMT_0008"
+     tRNA            41486..41573
+                     /gene="trnS-GCU"
+                     /locus_tag="ATHMT_0008"
+                     /product="tRNA-Ser"
+     gene            42116..42190
+                     /gene="trnP-UGG"
+                     /locus_tag="ATHMT_0009"
+     tRNA            42116..42190
+                     /gene="trnP-UGG"
+                     /locus_tag="ATHMT_0009"
+                     /product="tRNA-Pro"
+     gene            42546..42616
+                     /gene="trnC-GCA"
+                     /locus_tag="ATHMT_0010"
+     tRNA            42546..42616
+                     /gene="trnC-GCA"
+                     /locus_tag="ATHMT_0010"
+                     /product="tRNA-Cys"
+     gene            43544..43615
+                     /gene="trnN-GUU-cp"
+                     /locus_tag="ATHMT_0011"
+     tRNA            43544..43615
+                     /gene="trnN-GUU-cp"
+                     /locus_tag="ATHMT_0011"
+                     /product="tRNA-Asn"
+     gene            44462..44544
+                     /gene="trnY-GUA"
+                     /locus_tag="ATHMT_0012"
+     tRNA            44462..44544
+                     /gene="trnY-GUA"
+                     /locus_tag="ATHMT_0012"
+                     /product="tRNA-Tyr"
      gene            49423..50580
                      /gene="atp6"
-                     /locus_tag="ATHMT_0007"
+                     /locus_tag="ATHMT_0013"
      CDS             49423..50580
                      /gene="atp6"
-                     /locus_tag="ATHMT_0007"
+                     /locus_tag="ATHMT_0013"
                      /codon_start=1
                      /product="ATP synthase subunit 6"
                      /protein_id="ATHMT:atp6-1.t1:cds"
@@ -135,17 +177,24 @@ FEATURES             Location/Qualifiers
                      MFFPCILVTFLFLLFCNLQGMIPYSFTVTSHFLITLALSFSIFIGITIVGFQRHGLHF
                      FSFLLPAGVPLPLAPFLVLLELISYCFRALSLGIRLFANMMAGHSLVKILSGFAWTML
                      CMNDIFYFIGALGPLFIVLALTGLELGVAILQAYVFTILICIYLNDAINLH"
+     gene            50626..50712
+                     /gene="trnS-UGA"
+                     /locus_tag="ATHMT_0014"
+     tRNA            50626..50712
+                     /gene="trnS-UGA"
+                     /locus_tag="ATHMT_0014"
+                     /product="tRNA-Ser"
      gene            join(complement(82937..83231),58315..59481,230304..234132)
                      /gene="nad1"
-                     /locus_tag="ATHMT_0008"
+                     /locus_tag="ATHMT_0015"
                      /trans_splicing
                      /pseudo
      gene            complement(67098..68621)
                      /gene="atp1"
-                     /locus_tag="ATHMT_0009"
+                     /locus_tag="ATHMT_0016"
      CDS             complement(67098..68621)
                      /gene="atp1"
-                     /locus_tag="ATHMT_0009"
+                     /locus_tag="ATHMT_0016"
                      /codon_start=1
                      /product="ATP synthase subunit 1"
                      /protein_id="ATHMT:atp1-1.t1:cds"
@@ -160,10 +209,10 @@ FEATURES             Location/Qualifiers
                      AVNGFCDRMPLDRISQYEKAIPNSVKPELLQALKGGLTNERKMEPDAFLKERALALI"
      gene            79559..80005
                      /gene="rps7"
-                     /locus_tag="ATHMT_0010"
+                     /locus_tag="ATHMT_0017"
      CDS             79559..80005
                      /gene="rps7"
-                     /locus_tag="ATHMT_0010"
+                     /locus_tag="ATHMT_0017"
                      /codon_start=1
                      /product="ribosomal protein S7"
                      /protein_id="ATHMT:rps7-1.t1:cds"
@@ -172,15 +221,29 @@ FEATURES             Location/Qualifiers
                      YRISLEKCSFAEILDAYQKRGSARRKRENLHGLASTNRSFAHFRWW"
      gene            join(161832..163357,complement(92819..98042))
                      /gene="nad2"
-                     /locus_tag="ATHMT_0011"
+                     /locus_tag="ATHMT_0018"
                      /trans_splicing
                      /pseudo
+     gene            complement(98586..98660)
+                     /gene="trnY-GUA"
+                     /locus_tag="ATHMT_0019"
+     tRNA            complement(98586..98660)
+                     /gene="trnY-GUA"
+                     /locus_tag="ATHMT_0019"
+                     /product="tRNA-Tyr"
+     gene            102603..102675
+                     /gene="trnM-CAU-cp"
+                     /locus_tag="ATHMT_0020"
+     tRNA            102603..102675
+                     /gene="trnM-CAU-cp"
+                     /locus_tag="ATHMT_0020"
+                     /product="tRNA-Met"
      gene            complement(114762..116345)
                      /gene="cox1"
-                     /locus_tag="ATHMT_0012"
+                     /locus_tag="ATHMT_0021"
      CDS             complement(114762..116345)
                      /gene="cox1"
-                     /locus_tag="ATHMT_0012"
+                     /locus_tag="ATHMT_0021"
                      /codon_start=1
                      /product="cytochrome c oxidase subunit 1"
                      /protein_id="ATHMT:cox1-1.t1:cds"
@@ -194,33 +257,47 @@ FEATURES             Location/Qualifiers
                      AGFYYWVGKIFGRTYPETLGQIHFWITFFGVNLTFFPMHFLGLSGMPRRIPDYPDAYA
                      GWNALSSFGSYISVVGICCFFVVVTITLSSGNNKRCAPSPWALELNSTTLEWMVQSPP
                      AFHTFGELPAIKETKSYVK"
+     gene            complement(124603..124676)
+                     /gene="trnH-GUG-cp"
+                     /locus_tag="ATHMT_0022"
+     tRNA            complement(124603..124676)
+                     /gene="trnH-GUG-cp"
+                     /locus_tag="ATHMT_0022"
+                     /product="tRNA-His"
      gene            complement(126000..126118)
                      /gene="rrn5"
-                     /locus_tag="ATHMT_0013"
+                     /locus_tag="ATHMT_0023"
      rRNA            complement(126000..126118)
                      /gene="rrn5"
-                     /locus_tag="ATHMT_0013"
+                     /locus_tag="ATHMT_0023"
                      /product="5S ribosomal RNA"
      gene            complement(126291..128215)
                      /gene="rrn18"
-                     /locus_tag="ATHMT_0014"
+                     /locus_tag="ATHMT_0024"
      rRNA            complement(126291..128215)
                      /gene="rrn18"
-                     /locus_tag="ATHMT_0014"
+                     /locus_tag="ATHMT_0024"
                      /product="18S ribosomal RNA"
      gene            complement(140796..143965)
                      /gene="rrn26"
-                     /locus_tag="ATHMT_0015"
+                     /locus_tag="ATHMT_0025"
      rRNA            complement(140796..143965)
                      /gene="rrn26"
-                     /locus_tag="ATHMT_0015"
+                     /locus_tag="ATHMT_0025"
                      /product="26S ribosomal RNA"
+     gene            149673..149743
+                     /gene="trnfM-CAU"
+                     /locus_tag="ATHMT_0026"
+     tRNA            149673..149743
+                     /gene="trnfM-CAU"
+                     /locus_tag="ATHMT_0026"
+                     /product="tRNA-Met"
      gene            159980..161068
                      /gene="rps4"
-                     /locus_tag="ATHMT_0016"
+                     /locus_tag="ATHMT_0027"
      CDS             159980..161068
                      /gene="rps4"
-                     /locus_tag="ATHMT_0016"
+                     /locus_tag="ATHMT_0027"
                      /codon_start=1
                      /product="ribosomal protein S4"
                      /protein_id="ATHMT:rps4-1.t1:cds"
@@ -233,10 +310,10 @@ FEATURES             Location/Qualifiers
                      NIGHIPHDIRLKDPNLPLRSRNGRGQNI"
      gene            165838..166455
                      /gene="nad6"
-                     /locus_tag="ATHMT_0017"
+                     /locus_tag="ATHMT_0028"
      CDS             165838..166455
                      /gene="nad6"
-                     /locus_tag="ATHMT_0017"
+                     /locus_tag="ATHMT_0028"
                      /codon_start=1
                      /product="NADH dehydrogenase subunit 6"
                      /protein_id="ATHMT:nad6-1.t1:cds"
@@ -244,12 +321,26 @@ FEATURES             Location/Qualifiers
                      GLDFFAMIFPVVHIGAIAVSFLFVVMMFHIQIAEIHEEVLRYLPVSGIIGLIFWWEMF
                      FILDNESIPLLPTQRNTTSLRYTVYAGKVRSWTNLETLGNLLYTYYSVWFLVPSLILL
                      VAMIGAIVLTMHRTTKVKRQDVFRRNAIDFRRTIMRRTTDPLTIY"
+     gene            complement(171570..171643)
+                     /gene="trnfM-CAU"
+                     /locus_tag="ATHMT_0029"
+     tRNA            complement(171570..171643)
+                     /gene="trnfM-CAU"
+                     /locus_tag="ATHMT_0029"
+                     /product="tRNA-Met"
+     gene            complement(180658..180744)
+                     /gene="trnS-GGA-cp"
+                     /locus_tag="ATHMT_0030"
+     tRNA            complement(180658..180744)
+                     /gene="trnS-GGA-cp"
+                     /locus_tag="ATHMT_0030"
+                     /product="tRNA-Ser"
      gene            complement(181677..182858)
                      /gene="cob"
-                     /locus_tag="ATHMT_0018"
+                     /locus_tag="ATHMT_0031"
      CDS             complement(181677..182858)
                      /gene="cob"
-                     /locus_tag="ATHMT_0018"
+                     /locus_tag="ATHMT_0031"
                      /codon_start=1
                      /product="apocytochrome b"
                      /protein_id="ATHMT:cob-1.t1:cds"
@@ -263,10 +354,10 @@ FEATURES             Location/Qualifiers
                      T"
      gene            complement(184762..185319)
                      /gene="rpl5"
-                     /locus_tag="ATHMT_0019"
+                     /locus_tag="ATHMT_0032"
      CDS             complement(184762..185319)
                      /gene="rpl5"
-                     /locus_tag="ATHMT_0019"
+                     /locus_tag="ATHMT_0032"
                      /codon_start=1
                      /product="ribosomal protein L5"
                      /protein_id="ATHMT:rpl5-1.t1:cds"
@@ -274,12 +365,19 @@ FEATURES             Location/Qualifiers
                      IIKNGKLAMEIPRGQKFIQTQRGSTGKSFRSNPFLGSNKDKGYVSDLARQSTLRGHGM
                      SNFSVRISTVMSLLDFPVEIRKNSIQFSMETEFCEFSPELEDHFEIFEHIRGFNVTII
                      TSANTQDETLPLWSGFLQKDEGETQ"
+     gene            189287..189358
+                     /gene="trnG-GCC"
+                     /locus_tag="ATHMT_0033"
+     tRNA            189287..189358
+                     /gene="trnG-GCC"
+                     /locus_tag="ATHMT_0033"
+                     /product="tRNA-Gly"
      gene            189483..191800
                      /gene="ccmFC"
-                     /locus_tag="ATHMT_0020"
+                     /locus_tag="ATHMT_0034"
      CDS             join(189483..190261,191215..191800)
                      /gene="ccmFC"
-                     /locus_tag="ATHMT_0020"
+                     /locus_tag="ATHMT_0034"
                      /codon_start=1
                      /product="cytochrome c biogenesis FC"
                      /protein_id="ATHMT:ccmFC-1.t1:cds"
@@ -294,12 +392,12 @@ FEATURES             Location/Qualifiers
                      FIIA"
      gene            complement(207580..215562)
                      /gene="nad4"
-                     /locus_tag="ATHMT_0021"
+                     /locus_tag="ATHMT_0035"
      CDS             complement(join(207580..207641,209599..210049,
                      210255..210327,212229..212285,213048..213602,
                      215102..215562))
                      /gene="nad4"
-                     /locus_tag="ATHMT_0021"
+                     /locus_tag="ATHMT_0035"
                      /codon_start=1
                      /product="NADH dehydrogenase subunit 4"
                      /protein_id="ATHMT:nad4-1.t1:cds"
@@ -315,14 +413,14 @@ FEATURES             Location/Qualifiers
                      HKFSDSNGREVSIFIPFLVGGATVLFPDCMHTSVSNLVQHGKFH"
      gene            complement(218904..219746)
                      /gene="mttB"
-                     /locus_tag="ATHMT_0022"
+                     /locus_tag="ATHMT_0036"
                      /pseudo
      gene            complement(219910..222610)
                      /gene="rpl2"
-                     /locus_tag="ATHMT_0023"
+                     /locus_tag="ATHMT_0037"
      CDS             complement(join(219910..220047,221696..222610))
                      /gene="rpl2"
-                     /locus_tag="ATHMT_0023"
+                     /locus_tag="ATHMT_0037"
                      /codon_start=1
                      /product="ribosomal protein L2"
                      /protein_id="ATHMT:rpl2-1.t1:cds"
@@ -335,10 +433,10 @@ FEATURES             Location/Qualifiers
                      FLQSAQNDHPKPLFTV"
      gene            231089..233059
                      /gene="matR"
-                     /locus_tag="ATHMT_0024"
+                     /locus_tag="ATHMT_0038"
      CDS             231089..233059
                      /gene="matR"
-                     /locus_tag="ATHMT_0024"
+                     /locus_tag="ATHMT_0038"
                      /codon_start=1
                      /product="maturase-related protein"
                      /protein_id="ATHMT:matR-1.t1:cds"
@@ -356,12 +454,12 @@ FEATURES             Location/Qualifiers
                      KILAEFPNSIELGKLGPGQDLNKKEHSTTSLV"
      gene            complement(239250..245330)
                      /gene="nad7"
-                     /locus_tag="ATHMT_0025"
+                     /locus_tag="ATHMT_0039"
      CDS             complement(join(239250..239479,239770..239792,
                      241319..241568,242625..243121,244200..244220,
                      244453..244473,245188..245330))
                      /gene="nad7"
-                     /locus_tag="ATHMT_0025"
+                     /locus_tag="ATHMT_0039"
                      /codon_start=1
                      /product="NADH dehydrogenase subunit 7"
                      /protein_id="ATHMT:nad7-1.t1:cds"
@@ -375,33 +473,54 @@ FEATURES             Location/Qualifiers
                      DR"
      gene            complement(247016..247492)
                      /gene="atp8"
-                     /locus_tag="ATHMT_0026"
+                     /locus_tag="ATHMT_0040"
      CDS             complement(247016..247492)
                      /gene="atp8"
-                     /locus_tag="ATHMT_0026"
+                     /locus_tag="ATHMT_0040"
                      /codon_start=1
                      /product="ATP synthase subunit 8"
                      /protein_id="ATHMT:atp8-1.t1:cds"
                      /translation="MPQLDKFTYFSQFFWLCLFFFTFYIFICNDGDGVLGISRILKLR
                      NQLLSHRGKTIRSKDPNSLEDLLRKGFSTGVSYMYASLFEVSQWCKAVDLLGKRRKIT
                      LISCFGEISGSRGMERNILYNISKSSPSNTGRWITCRNCRNDIMLIHVVHGQGSIK"
+     gene            250307..250383
+                     /gene="trnI-CAU"
+                     /locus_tag="ATHMT_0041"
+     tRNA            250307..250383
+                     /gene="trnI-CAU"
+                     /locus_tag="ATHMT_0041"
+                     /product="tRNA-Ile"
+     gene            complement(264335..264421)
+                     /gene="trnS-UGA"
+                     /locus_tag="ATHMT_0042"
+     tRNA            complement(264335..264421)
+                     /gene="trnS-UGA"
+                     /locus_tag="ATHMT_0042"
+                     /product="tRNA-Ser"
      gene            complement(270961..271185)
                      /gene="atp9"
-                     /locus_tag="ATHMT_0027"
+                     /locus_tag="ATHMT_0043"
      CDS             complement(270961..271185)
                      /gene="atp9"
-                     /locus_tag="ATHMT_0027"
+                     /locus_tag="ATHMT_0043"
                      /codon_start=1
                      /product="ATP synthase subunit 9"
                      /protein_id="ATHMT:atp9-1.t1:cds"
                      /translation="MLEGAKSIGAGAATIASAGAAIGIGNVFSSLIHSVARNPSLAKQ
                      SFGYAILGFALTEAIALFAPMMAFLILFVF"
+     gene            complement(274937..275010)
+                     /gene="trnD-GUC-cp"
+                     /locus_tag="ATHMT_0044"
+     tRNA            complement(274937..275010)
+                     /gene="trnD-GUC-cp"
+                     /locus_tag="ATHMT_0044"
+                     /product="tRNA-Asp"
      gene            288044..288400
                      /gene="nad3"
-                     /locus_tag="ATHMT_0028"
+                     /locus_tag="ATHMT_0045"
      CDS             288044..288400
                      /gene="nad3"
-                     /locus_tag="ATHMT_0028"
+                     /locus_tag="ATHMT_0045"
                      /codon_start=1
                      /product="NADH dehydrogenase subunit 3"
                      /protein_id="ATHMT:nad3-1.t1:cds"
@@ -410,22 +529,36 @@ FEATURES             Location/Qualifiers
                      TIGFLYEWKRGASDRE"
      gene            288446..288823
                      /gene="rps12"
-                     /locus_tag="ATHMT_0029"
+                     /locus_tag="ATHMT_0046"
      CDS             288446..288823
                      /gene="rps12"
-                     /locus_tag="ATHMT_0029"
+                     /locus_tag="ATHMT_0046"
                      /codon_start=1
                      /product="ribosomal protein S12"
                      /protein_id="ATHMT:rps12-1.t1:cds"
                      /translation="MPTFNQLIRHGREEKRRTDRTRALDKCPQKTGVCPRVSTRTPKK
                      PNSAPRKIAKVRLSNRHDIFAHIPGEGHNSQEHSTVLIRGGRVKDSPGVKSHCIRGVK
                      DLMGIPGRRRGRSKYGAEKPKSI"
+     gene            294477..294548
+                     /gene="trnQ-UUG"
+                     /locus_tag="ATHMT_0047"
+     tRNA            294477..294548
+                     /gene="trnQ-UUG"
+                     /locus_tag="ATHMT_0047"
+                     /product="tRNA-Gln"
+     gene            298901..298974
+                     /gene="trnW-CCA-cp"
+                     /locus_tag="ATHMT_0048"
+     tRNA            298901..298974
+                     /gene="trnW-CCA-cp"
+                     /locus_tag="ATHMT_0048"
+                     /product="tRNA-Trp"
      gene            308298..309068
                      /gene="ccmC"
-                     /locus_tag="ATHMT_0030"
+                     /locus_tag="ATHMT_0049"
      CDS             308298..309068
                      /gene="ccmC"
-                     /locus_tag="ATHMT_0030"
+                     /locus_tag="ATHMT_0049"
                      /codon_start=1
                      /product="cytochrome c biogenesis C"
                      /protein_id="ATHMT:ccmC-1.t1:cds"
@@ -436,10 +569,10 @@ FEATURES             Location/Qualifiers
                      PSFLESPITEEIEAREGIPKPSSLALFASMAEWLKRPT"
      gene            316013..317161
                      /gene="ccmFN"
-                     /locus_tag="ATHMT_0031"
+                     /locus_tag="ATHMT_0050"
      CDS             316013..317161
                      /gene="ccmFN"
-                     /locus_tag="ATHMT_0031"
+                     /locus_tag="ATHMT_0050"
                      /codon_start=1
                      /product="cytochrome c biogenesis FN"
                      /protein_id="ATHMT:ccmFN-1.t1:cds"
@@ -450,12 +583,26 @@ FEATURES             Location/Qualifiers
                      SIDEQRIDGALGIALFFSPFLSASSDPFVRNFFVCTEPLAESNPVPQDPISAIHPPCI
                      YAGDVASAEGFGLCRSKMMNGIVALHSPPMRKDAAEKNGTLLRSAGCVGSRITSELFT
                      LKFKHVGAKCYPALLLRSNRSPLMLLRRRFFAFSSFWAGARSHSTKRY"
+     gene            complement(321367..321438)
+                     /gene="trnE-UUC"
+                     /locus_tag="ATHMT_0051"
+     tRNA            complement(321367..321438)
+                     /gene="trnE-UUC"
+                     /locus_tag="ATHMT_0051"
+                     /product="tRNA-Glu"
+     gene            complement(321858..321945)
+                     /gene="trnS-GCU"
+                     /locus_tag="ATHMT_0052"
+     tRNA            complement(321858..321945)
+                     /gene="trnS-GCU"
+                     /locus_tag="ATHMT_0052"
+                     /product="tRNA-Ser"
      gene            complement(329761..330048)
                      /gene="sdh4"
-                     /locus_tag="ATHMT_0032"
+                     /locus_tag="ATHMT_0053"
      CDS             complement(329761..330048)
                      /gene="sdh4"
-                     /locus_tag="ATHMT_0032"
+                     /locus_tag="ATHMT_0053"
                      /codon_start=1
                      /product="succinate dehydrogenase subunit 4"
                      /protein_id="ATHMT:sdh4-1.t1:cds"
@@ -463,10 +610,10 @@ FEATURES             Location/Qualifiers
                      QRITAAFPLPLIIIYNKVSSTFLPNLSLFWHINEGIEEIMADHVHQEMTRN"
      gene            complement(329976..330773)
                      /gene="cox3"
-                     /locus_tag="ATHMT_0033"
+                     /locus_tag="ATHMT_0054"
      CDS             complement(329976..330773)
                      /gene="cox3"
-                     /locus_tag="ATHMT_0033"
+                     /locus_tag="ATHMT_0054"
                      /codon_start=1
                      /product="cytochrome c oxidase subunit 3"
                      /protein_id="ATHMT:cox3-1.t1:cds"
@@ -475,12 +622,19 @@ FEATURES             Location/Qualifiers
                      ASSHSSLAPAVEIGGIWPPKGIEVLDPWEIPFLNTPILPSSGAAVTWAHHAILAGKEK
                      RAVYALVATVLLALVFTGFQGMEYYQAPFTISDSIYGSTFFLATGFHGFHVIIGTLFL
                      IICGIRQYLGHLTKEHHVGFEAAAWYWHFVDVVWLFLFVSIYWWGGI"
+     gene            346454..346526
+                     /gene="trnK-UUU"
+                     /locus_tag="ATHMT_0055"
+     tRNA            346454..346526
+                     /gene="trnK-UUU"
+                     /locus_tag="ATHMT_0055"
+                     /product="tRNA-Lys"
      gene            361637..361939
                      /gene="nad4L"
-                     /locus_tag="ATHMT_0034"
+                     /locus_tag="ATHMT_0056"
      CDS             361637..361939
                      /gene="nad4L"
-                     /locus_tag="ATHMT_0034"
+                     /locus_tag="ATHMT_0056"
                      /codon_start=1
                      /product="NADH dehydrogenase subunit 4L"
                      /protein_id="ATHMT:nad4L-1.t1:cds"
@@ -488,10 +642,10 @@ FEATURES             Location/Qualifiers
                      NFLVFSVSSDDMMGQVFASLVPTVAAAESAIGLAIFVITFRVRGTIAVEFINSIQG"
      gene            362206..362784
                      /gene="atp4"
-                     /locus_tag="ATHMT_0035"
+                     /locus_tag="ATHMT_0057"
      CDS             362206..362784
                      /gene="atp4"
-                     /locus_tag="ATHMT_0035"
+                     /locus_tag="ATHMT_0057"
                      /codon_start=1
                      /product="ATP synthase subunit 4"
                      /protein_id="ATHMT:atp4-1.t1:cds"

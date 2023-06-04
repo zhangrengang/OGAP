@@ -16,6 +16,7 @@ dependencies:
   - blas=1.0=mkl
   - blat=36=0
   - boost-cpp=1.74.0=h75c5d50_8
+  - bz2file=0.98=py_0
   - bzip2=1.0.8=h7f98852_4
   - c-ares=1.18.1=h7f98852_0
   - ca-certificates=2023.5.7=hbcca054_0
@@ -186,6 +187,7 @@ dependencies:
   - viennarna=2.5.0=py27pl5321h8f2a353_2
   - vmatch=2.3.0=hec16e2b_4
   - wheel=0.37.1=pyhd8ed1ab_0
+  - xopen=0.7.3=py_0
   - xorg-kbproto=1.0.7=h7f98852_1002
   - xorg-libice=1.0.10=h7f98852_0
   - xorg-libsm=1.2.3=hd9c2040_1000
@@ -200,3 +202,5 @@ dependencies:
   - xz=5.2.5=h516909a_1
   - zlib=1.2.11=h166bdaf_1014
   - zstd=1.5.2=ha95c52a_0
+  - pip:
+    - ogap==1.0

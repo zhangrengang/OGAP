@@ -2521,8 +2521,37 @@ B6E21'H } ,
                     {
                       data
                         gene {
-                          locus "rps3" ,
+                          locus "trnK-UUU" ,
                           locus-tag "ATHMT_0003" } ,
+                      location
+                        int {
+                          from 19927 ,
+                          to 19999 ,
+                          strand plus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        rna {
+                          type tRNA ,
+                          ext
+                            tRNA {
+                              aa
+                                ncbieaa 75 } } ,
+                      location
+                        int {
+                          from 19927 ,
+                          to 19999 ,
+                          strand plus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        gene {
+                          locus "rps3" ,
+                          locus-tag "ATHMT_0004" } ,
                       location
                         int {
                           from 20164 ,
@@ -2535,7 +2564,7 @@ B6E21'H } ,
                       data
                         gene {
                           locus "nad5" ,
-                          locus-tag "ATHMT_0004" } ,
+                          locus-tag "ATHMT_0005" } ,
                       except TRUE ,
                       location
                         mix {
@@ -2558,7 +2587,7 @@ B6E21'H } ,
                       data
                         gene {
                           locus "rpl16" ,
-                          locus-tag "ATHMT_0005" } ,
+                          locus-tag "ATHMT_0006" } ,
                       location
                         int {
                           from 23284 ,
@@ -2571,7 +2600,7 @@ B6E21'H } ,
                       data
                         gene {
                           locus "nad9" ,
-                          locus-tag "ATHMT_0006" } ,
+                          locus-tag "ATHMT_0007" } ,
                       location
                         int {
                           from 24664 ,
@@ -2583,8 +2612,153 @@ B6E21'H } ,
                     {
                       data
                         gene {
+                          locus "trnS-GCU" ,
+                          locus-tag "ATHMT_0008" } ,
+                      location
+                        int {
+                          from 41485 ,
+                          to 41572 ,
+                          strand plus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        rna {
+                          type tRNA ,
+                          ext
+                            tRNA {
+                              aa
+                                ncbieaa 83 } } ,
+                      location
+                        int {
+                          from 41485 ,
+                          to 41572 ,
+                          strand plus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        gene {
+                          locus "trnP-UGG" ,
+                          locus-tag "ATHMT_0009" } ,
+                      location
+                        int {
+                          from 42115 ,
+                          to 42189 ,
+                          strand plus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        rna {
+                          type tRNA ,
+                          ext
+                            tRNA {
+                              aa
+                                ncbieaa 80 } } ,
+                      location
+                        int {
+                          from 42115 ,
+                          to 42189 ,
+                          strand plus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        gene {
+                          locus "trnC-GCA" ,
+                          locus-tag "ATHMT_0010" } ,
+                      location
+                        int {
+                          from 42545 ,
+                          to 42615 ,
+                          strand plus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        rna {
+                          type tRNA ,
+                          ext
+                            tRNA {
+                              aa
+                                ncbieaa 67 } } ,
+                      location
+                        int {
+                          from 42545 ,
+                          to 42615 ,
+                          strand plus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        gene {
+                          locus "trnN-GUU-cp" ,
+                          locus-tag "ATHMT_0011" } ,
+                      location
+                        int {
+                          from 43543 ,
+                          to 43614 ,
+                          strand plus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        rna {
+                          type tRNA ,
+                          ext
+                            tRNA {
+                              aa
+                                ncbieaa 78 } } ,
+                      location
+                        int {
+                          from 43543 ,
+                          to 43614 ,
+                          strand plus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        gene {
+                          locus "trnY-GUA" ,
+                          locus-tag "ATHMT_0012" } ,
+                      location
+                        int {
+                          from 44461 ,
+                          to 44543 ,
+                          strand plus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        rna {
+                          type tRNA ,
+                          ext
+                            tRNA {
+                              aa
+                                ncbieaa 89 } } ,
+                      location
+                        int {
+                          from 44461 ,
+                          to 44543 ,
+                          strand plus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        gene {
                           locus "atp6" ,
-                          locus-tag "ATHMT_0007" } ,
+                          locus-tag "ATHMT_0013" } ,
                       location
                         int {
                           from 49422 ,
@@ -2596,8 +2770,37 @@ B6E21'H } ,
                     {
                       data
                         gene {
+                          locus "trnS-UGA" ,
+                          locus-tag "ATHMT_0014" } ,
+                      location
+                        int {
+                          from 50625 ,
+                          to 50711 ,
+                          strand plus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        rna {
+                          type tRNA ,
+                          ext
+                            tRNA {
+                              aa
+                                ncbieaa 83 } } ,
+                      location
+                        int {
+                          from 50625 ,
+                          to 50711 ,
+                          strand plus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        gene {
                           locus "nad1" ,
-                          locus-tag "ATHMT_0008" } ,
+                          locus-tag "ATHMT_0015" } ,
                       except TRUE ,
                       location
                         mix {
@@ -2628,7 +2831,7 @@ B6E21'H } ,
                       data
                         gene {
                           locus "atp1" ,
-                          locus-tag "ATHMT_0009" } ,
+                          locus-tag "ATHMT_0016" } ,
                       location
                         int {
                           from 67097 ,
@@ -2641,7 +2844,7 @@ B6E21'H } ,
                       data
                         gene {
                           locus "rps7" ,
-                          locus-tag "ATHMT_0010" } ,
+                          locus-tag "ATHMT_0017" } ,
                       location
                         int {
                           from 79558 ,
@@ -2654,7 +2857,7 @@ B6E21'H } ,
                       data
                         gene {
                           locus "nad2" ,
-                          locus-tag "ATHMT_0011" } ,
+                          locus-tag "ATHMT_0018" } ,
                       except TRUE ,
                       location
                         mix {
@@ -2677,8 +2880,66 @@ B6E21'H } ,
                     {
                       data
                         gene {
+                          locus "trnY-GUA" ,
+                          locus-tag "ATHMT_0019" } ,
+                      location
+                        int {
+                          from 98585 ,
+                          to 98659 ,
+                          strand minus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        rna {
+                          type tRNA ,
+                          ext
+                            tRNA {
+                              aa
+                                ncbieaa 89 } } ,
+                      location
+                        int {
+                          from 98585 ,
+                          to 98659 ,
+                          strand minus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        gene {
+                          locus "trnM-CAU-cp" ,
+                          locus-tag "ATHMT_0020" } ,
+                      location
+                        int {
+                          from 102602 ,
+                          to 102674 ,
+                          strand plus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        rna {
+                          type tRNA ,
+                          ext
+                            tRNA {
+                              aa
+                                ncbieaa 77 } } ,
+                      location
+                        int {
+                          from 102602 ,
+                          to 102674 ,
+                          strand plus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        gene {
                           locus "cox1" ,
-                          locus-tag "ATHMT_0012" } ,
+                          locus-tag "ATHMT_0021" } ,
                       location
                         int {
                           from 114761 ,
@@ -2690,8 +2951,37 @@ B6E21'H } ,
                     {
                       data
                         gene {
+                          locus "trnH-GUG-cp" ,
+                          locus-tag "ATHMT_0022" } ,
+                      location
+                        int {
+                          from 124602 ,
+                          to 124675 ,
+                          strand minus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        rna {
+                          type tRNA ,
+                          ext
+                            tRNA {
+                              aa
+                                ncbieaa 72 } } ,
+                      location
+                        int {
+                          from 124602 ,
+                          to 124675 ,
+                          strand minus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        gene {
                           locus "rrn5" ,
-                          locus-tag "ATHMT_0013" } ,
+                          locus-tag "ATHMT_0023" } ,
                       location
                         int {
                           from 125999 ,
@@ -2718,7 +3008,7 @@ B6E21'H } ,
                       data
                         gene {
                           locus "rrn18" ,
-                          locus-tag "ATHMT_0014" } ,
+                          locus-tag "ATHMT_0024" } ,
                       location
                         int {
                           from 126290 ,
@@ -2745,7 +3035,7 @@ B6E21'H } ,
                       data
                         gene {
                           locus "rrn26" ,
-                          locus-tag "ATHMT_0015" } ,
+                          locus-tag "ATHMT_0025" } ,
                       location
                         int {
                           from 140795 ,
@@ -2771,8 +3061,37 @@ B6E21'H } ,
                     {
                       data
                         gene {
+                          locus "trnfM-CAU" ,
+                          locus-tag "ATHMT_0026" } ,
+                      location
+                        int {
+                          from 149672 ,
+                          to 149742 ,
+                          strand plus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        rna {
+                          type tRNA ,
+                          ext
+                            tRNA {
+                              aa
+                                ncbieaa 77 } } ,
+                      location
+                        int {
+                          from 149672 ,
+                          to 149742 ,
+                          strand plus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        gene {
                           locus "rps4" ,
-                          locus-tag "ATHMT_0016" } ,
+                          locus-tag "ATHMT_0027" } ,
                       location
                         int {
                           from 159979 ,
@@ -2785,7 +3104,7 @@ B6E21'H } ,
                       data
                         gene {
                           locus "nad6" ,
-                          locus-tag "ATHMT_0017" } ,
+                          locus-tag "ATHMT_0028" } ,
                       location
                         int {
                           from 165837 ,
@@ -2797,8 +3116,66 @@ B6E21'H } ,
                     {
                       data
                         gene {
+                          locus "trnfM-CAU" ,
+                          locus-tag "ATHMT_0029" } ,
+                      location
+                        int {
+                          from 171569 ,
+                          to 171642 ,
+                          strand minus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        rna {
+                          type tRNA ,
+                          ext
+                            tRNA {
+                              aa
+                                ncbieaa 77 } } ,
+                      location
+                        int {
+                          from 171569 ,
+                          to 171642 ,
+                          strand minus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        gene {
+                          locus "trnS-GGA-cp" ,
+                          locus-tag "ATHMT_0030" } ,
+                      location
+                        int {
+                          from 180657 ,
+                          to 180743 ,
+                          strand minus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        rna {
+                          type tRNA ,
+                          ext
+                            tRNA {
+                              aa
+                                ncbieaa 83 } } ,
+                      location
+                        int {
+                          from 180657 ,
+                          to 180743 ,
+                          strand minus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        gene {
                           locus "cob" ,
-                          locus-tag "ATHMT_0018" } ,
+                          locus-tag "ATHMT_0031" } ,
                       location
                         int {
                           from 181676 ,
@@ -2811,7 +3188,7 @@ B6E21'H } ,
                       data
                         gene {
                           locus "rpl5" ,
-                          locus-tag "ATHMT_0019" } ,
+                          locus-tag "ATHMT_0032" } ,
                       location
                         int {
                           from 184761 ,
@@ -2823,8 +3200,37 @@ B6E21'H } ,
                     {
                       data
                         gene {
+                          locus "trnG-GCC" ,
+                          locus-tag "ATHMT_0033" } ,
+                      location
+                        int {
+                          from 189286 ,
+                          to 189357 ,
+                          strand plus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        rna {
+                          type tRNA ,
+                          ext
+                            tRNA {
+                              aa
+                                ncbieaa 71 } } ,
+                      location
+                        int {
+                          from 189286 ,
+                          to 189357 ,
+                          strand plus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        gene {
                           locus "ccmFC" ,
-                          locus-tag "ATHMT_0020" } ,
+                          locus-tag "ATHMT_0034" } ,
                       location
                         int {
                           from 189482 ,
@@ -2837,7 +3243,7 @@ B6E21'H } ,
                       data
                         gene {
                           locus "nad4" ,
-                          locus-tag "ATHMT_0021" } ,
+                          locus-tag "ATHMT_0035" } ,
                       location
                         int {
                           from 207579 ,
@@ -2850,7 +3256,7 @@ B6E21'H } ,
                       data
                         gene {
                           locus "mttB" ,
-                          locus-tag "ATHMT_0022" } ,
+                          locus-tag "ATHMT_0036" } ,
                       location
                         int {
                           from 218903 ,
@@ -2864,7 +3270,7 @@ B6E21'H } ,
                       data
                         gene {
                           locus "rpl2" ,
-                          locus-tag "ATHMT_0023" } ,
+                          locus-tag "ATHMT_0037" } ,
                       location
                         int {
                           from 219909 ,
@@ -2877,7 +3283,7 @@ B6E21'H } ,
                       data
                         gene {
                           locus "matR" ,
-                          locus-tag "ATHMT_0024" } ,
+                          locus-tag "ATHMT_0038" } ,
                       location
                         int {
                           from 231088 ,
@@ -2890,7 +3296,7 @@ B6E21'H } ,
                       data
                         gene {
                           locus "nad7" ,
-                          locus-tag "ATHMT_0025" } ,
+                          locus-tag "ATHMT_0039" } ,
                       location
                         int {
                           from 239249 ,
@@ -2903,7 +3309,7 @@ B6E21'H } ,
                       data
                         gene {
                           locus "atp8" ,
-                          locus-tag "ATHMT_0026" } ,
+                          locus-tag "ATHMT_0040" } ,
                       location
                         int {
                           from 247015 ,
@@ -2915,8 +3321,66 @@ B6E21'H } ,
                     {
                       data
                         gene {
+                          locus "trnI-CAU" ,
+                          locus-tag "ATHMT_0041" } ,
+                      location
+                        int {
+                          from 250306 ,
+                          to 250382 ,
+                          strand plus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        rna {
+                          type tRNA ,
+                          ext
+                            tRNA {
+                              aa
+                                ncbieaa 73 } } ,
+                      location
+                        int {
+                          from 250306 ,
+                          to 250382 ,
+                          strand plus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        gene {
+                          locus "trnS-UGA" ,
+                          locus-tag "ATHMT_0042" } ,
+                      location
+                        int {
+                          from 264334 ,
+                          to 264420 ,
+                          strand minus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        rna {
+                          type tRNA ,
+                          ext
+                            tRNA {
+                              aa
+                                ncbieaa 83 } } ,
+                      location
+                        int {
+                          from 264334 ,
+                          to 264420 ,
+                          strand minus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        gene {
                           locus "atp9" ,
-                          locus-tag "ATHMT_0027" } ,
+                          locus-tag "ATHMT_0043" } ,
                       location
                         int {
                           from 270960 ,
@@ -2928,8 +3392,37 @@ B6E21'H } ,
                     {
                       data
                         gene {
+                          locus "trnD-GUC-cp" ,
+                          locus-tag "ATHMT_0044" } ,
+                      location
+                        int {
+                          from 274936 ,
+                          to 275009 ,
+                          strand minus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        rna {
+                          type tRNA ,
+                          ext
+                            tRNA {
+                              aa
+                                ncbieaa 68 } } ,
+                      location
+                        int {
+                          from 274936 ,
+                          to 275009 ,
+                          strand minus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        gene {
                           locus "nad3" ,
-                          locus-tag "ATHMT_0028" } ,
+                          locus-tag "ATHMT_0045" } ,
                       location
                         int {
                           from 288043 ,
@@ -2942,7 +3435,7 @@ B6E21'H } ,
                       data
                         gene {
                           locus "rps12" ,
-                          locus-tag "ATHMT_0029" } ,
+                          locus-tag "ATHMT_0046" } ,
                       location
                         int {
                           from 288445 ,
@@ -2954,8 +3447,66 @@ B6E21'H } ,
                     {
                       data
                         gene {
+                          locus "trnQ-UUG" ,
+                          locus-tag "ATHMT_0047" } ,
+                      location
+                        int {
+                          from 294476 ,
+                          to 294547 ,
+                          strand plus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        rna {
+                          type tRNA ,
+                          ext
+                            tRNA {
+                              aa
+                                ncbieaa 81 } } ,
+                      location
+                        int {
+                          from 294476 ,
+                          to 294547 ,
+                          strand plus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        gene {
+                          locus "trnW-CCA-cp" ,
+                          locus-tag "ATHMT_0048" } ,
+                      location
+                        int {
+                          from 298900 ,
+                          to 298973 ,
+                          strand plus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        rna {
+                          type tRNA ,
+                          ext
+                            tRNA {
+                              aa
+                                ncbieaa 87 } } ,
+                      location
+                        int {
+                          from 298900 ,
+                          to 298973 ,
+                          strand plus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        gene {
                           locus "ccmC" ,
-                          locus-tag "ATHMT_0030" } ,
+                          locus-tag "ATHMT_0049" } ,
                       location
                         int {
                           from 308297 ,
@@ -2968,7 +3519,7 @@ B6E21'H } ,
                       data
                         gene {
                           locus "ccmFN" ,
-                          locus-tag "ATHMT_0031" } ,
+                          locus-tag "ATHMT_0050" } ,
                       location
                         int {
                           from 316012 ,
@@ -2980,8 +3531,66 @@ B6E21'H } ,
                     {
                       data
                         gene {
+                          locus "trnE-UUC" ,
+                          locus-tag "ATHMT_0051" } ,
+                      location
+                        int {
+                          from 321366 ,
+                          to 321437 ,
+                          strand minus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        rna {
+                          type tRNA ,
+                          ext
+                            tRNA {
+                              aa
+                                ncbieaa 69 } } ,
+                      location
+                        int {
+                          from 321366 ,
+                          to 321437 ,
+                          strand minus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        gene {
+                          locus "trnS-GCU" ,
+                          locus-tag "ATHMT_0052" } ,
+                      location
+                        int {
+                          from 321857 ,
+                          to 321944 ,
+                          strand minus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        rna {
+                          type tRNA ,
+                          ext
+                            tRNA {
+                              aa
+                                ncbieaa 83 } } ,
+                      location
+                        int {
+                          from 321857 ,
+                          to 321944 ,
+                          strand minus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        gene {
                           locus "sdh4" ,
-                          locus-tag "ATHMT_0032" } ,
+                          locus-tag "ATHMT_0053" } ,
                       location
                         int {
                           from 329760 ,
@@ -2994,7 +3603,7 @@ B6E21'H } ,
                       data
                         gene {
                           locus "cox3" ,
-                          locus-tag "ATHMT_0033" } ,
+                          locus-tag "ATHMT_0054" } ,
                       location
                         int {
                           from 329975 ,
@@ -3006,8 +3615,37 @@ B6E21'H } ,
                     {
                       data
                         gene {
+                          locus "trnK-UUU" ,
+                          locus-tag "ATHMT_0055" } ,
+                      location
+                        int {
+                          from 346453 ,
+                          to 346525 ,
+                          strand plus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        rna {
+                          type tRNA ,
+                          ext
+                            tRNA {
+                              aa
+                                ncbieaa 75 } } ,
+                      location
+                        int {
+                          from 346453 ,
+                          to 346525 ,
+                          strand plus ,
+                          id
+                            local
+                              str "NC_037304.1" } } ,
+                    {
+                      data
+                        gene {
                           locus "nad4L" ,
-                          locus-tag "ATHMT_0034" } ,
+                          locus-tag "ATHMT_0056" } ,
                       location
                         int {
                           from 361636 ,
@@ -3020,7 +3658,7 @@ B6E21'H } ,
                       data
                         gene {
                           locus "atp4" ,
-                          locus-tag "ATHMT_0035" } ,
+                          locus-tag "ATHMT_0057" } ,
                       location
                         int {
                           from 362205 ,

@@ -5,7 +5,7 @@ import itertools
 from Bio import SeqIO
 from RunCmdsMP import run_cmd, logger
 from OrthoFinder import catAln
-from small_tools import mkdirs
+from small_tools import mkdirs, parse_kargs
 
 class PhyloPipeline(object):
 	def __init__(self, indir, 
@@ -14,11 +14,14 @@ class PhyloPipeline(object):
 			tmpdir='./tmp',
 			types=['cds'], #, 'rna'], 
 			root=None,
-			min_shared=50):
+			max_gene_missing=50,
+			min_shared=50	# min_taxa_missing
+			):
 		self.indir = indir
 		self.tmpdir = tmpdir
 		self.types = types
 		self.min_shared = min_shared
+		self.max_gene_missing = max_gene_missing
 		self.outprefix = outprefix
 		self.gnid = gnid
 		self.root = root
@@ -44,10 +47,11 @@ class PhyloPipeline(object):
 		# tree
 		self.iqtree(trimed_alignment)
 
-	def iqtree(self, alnfile, opts='-nt AUTO'):
+	def iqtree(self, alnfile, opts=''):
 		if self.root is not None:
 			opts += ' -o {}'.format(self.root)
-		cmd = 'iqtree -s {} -bb 1000 {} > /dev/null'.format(alnfile, opts)
+#		cmd = 'iqtree -redo -s {} -bb 1000 {} -nt AUTO > /dev/null'.format(alnfile, opts)
+		cmd = 'iqtree2 -redo -s {} -B 1000 {} -T 20 > /dev/null'.format(alnfile, opts)
 		run_cmd(cmd, log=True)
 
 	def trimal(self, inaln, outaln):
@@ -72,10 +76,13 @@ class PhyloPipeline(object):
 			prefixs += prefies
 			fastas += fastafiles
 		d_seqs = {}
-		
+	
+		d_sps = {}
+		genes = set([])
 		for rc, prefix in self.get_seqs(fastas, prefixs):
 			gene = rc.id
-			rc.id = prefix
+			genes.add(gene)
+			rc.taxon = rc.id = prefix
 			if self.gnid:
 				suffix = '-{}'.format(self.d_gnid[prefix])
 				rc.id += suffix
@@ -83,13 +90,29 @@ class PhyloPipeline(object):
 					self.root = rc.id
 			try: d_seqs[gene] += [rc]
 			except KeyError: d_seqs[gene] = [rc]
-
-		nspecies = len(set(prefixs))
+			try: d_sps[prefix] += [gene]
+			except KeyError: d_sps[prefix] = [gene]
+		# remove taxa with too many missing genes
+		sp_to_remove = set([])
+		for sp, _genes in d_sps.items():
+			non_missing = 1e2*len(_genes) / len(genes)
+			logger.info('{}\t{}'.format(sp, non_missing))
+			if (100-non_missing) > self.max_gene_missing:
+				sp_to_remove.add(sp)
+				logger.info('taxon {} only contains {}% genes, removed.\
+                            '.format(sp, non_missing))
+				continue
+		logger.info('to be remove: {}'.format(sp_to_remove))
+		nspecies = len(set(prefixs)) - len(sp_to_remove) 
 		# write
+		gene_to_remove = set([])
 		for gene, records in d_seqs.items():
+			#print >> sys.stderr, [record.taxon for record in records][:10]
+			records = [record for record in records if not record.taxon in sp_to_remove]
 			shared = 1e2*len(records) / nspecies
 			logger.info('{}\t{}'.format(gene, shared))
 			if shared < self.min_shared:
+				gene_to_remove.add(gene)
 				logger.info('gene {} is only shared by {}% species, removed.\
 							'.format(gene, shared))
 				continue
@@ -97,6 +120,8 @@ class PhyloPipeline(object):
 			with open(seqfile, 'w') as fout:
 				for record in records:
 					SeqIO.write(record, fout, 'fasta')
+		logger.info('removed taxon: {}/{}; removed genes: {}/{}'.format(
+			len(sp_to_remove), len(d_sps), len(gene_to_remove), len(d_seqs)))
 		return d_seqs.keys()
 
 	def get_alnfile(self, gene):
@@ -226,12 +251,13 @@ class KaKsPipeline(PhyloPipeline):
 def main():
 	subcmd = sys.argv[1]
 	indir = sys.argv[2]
+	kargs = parse_kargs(sys.argv)
 	if subcmd == 'phylo':
 		try: root = sys.argv[3]
 		except IndexError: root=None
-		PhyloPipeline(indir, root=root).run()
+		PhyloPipeline(indir, root=root, **kargs).run()
 	elif subcmd == 'kaks':
-		KaKsPipeline(indir).run()
+		KaKsPipeline(indir, **kargs).run()
 	elif subcmd == 'summary':
 		Summary(indir).summary()
 	else:

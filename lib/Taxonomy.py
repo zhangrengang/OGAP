@@ -6,16 +6,20 @@ from lazy_property import LazyWritableProperty as lazyproperty
 from RunCmdsMP import run_cmd
 from small_tools import open_file as open
 
+rootdir = os.path.dirname(os.path.realpath(__file__))
+dbdir = '{}/../db'.format(rootdir)
+DB = '{}/taxonomy.json.gz'.format(dbdir)
+
 class Taxonomy():
 	def __init__(self, spname=None, taxid=None,
-				jsonfile='taxonomy.json', load=True, 
+				jsonfile=DB, load=True, 
 				dbfile=None):
 		self.jsonfile = jsonfile
 		if os.path.exists(jsonfile) and load:
 			self.load_db()
 		elif dbfile is None or not os.path.exists(jsonfile):
 			homedir = os.environ['HOME']
-			homedir = '/export/tmp'
+			#homedir = '/export/tmp'
 			dbfile = '{}/.etetoolkit/taxa.sqlite'.format(homedir)
 			if not os.path.exists(dbfile):
 				cmd = 'ete3 ncbiquery --search 9606 --info'
@@ -24,7 +28,7 @@ class Taxonomy():
 				self.dbfile = dbfile
 				self.dump_db()
 				self.load_db()
-			assert os.path.exists(dbfile)
+			assert os.path.exists(dbfile), dbfile
 		self.taxid = taxid
 		self.spname = spname
 		self.dbfile = dbfile
@@ -173,8 +177,28 @@ class Synonym():
 			self = None
 		else:
 			self.taxid, self.spname = record	
+def get_info(lstfile, fout=sys.stdout):
+#	d = Taxonomy().db
+	d_genus = {}
+	for line in open(lstfile):
+		sp0 = line.split()[0]
+		sp = sp0.replace('_', ' ') #.lower()
+		g = sp.split()[0]
+		if g in d_genus:
+			rank = d_genus[g]
+		else:
+			db = Taxonomy(spname=g, load=False)
+			d_tax = db.ranks
+			#taxid, taxonomy, ranks = d[sp]
+			#d_tax = dict(zip(ranks, taxonomy))
+			try: d_genus[g] = rank = [d_tax['order'], d_tax['family'], ','.join(db.taxonomy)]
+			except KeyError:rank = ['error']
+		line = [sp0] + rank
+		print >>fout, '\t'.join(line)
 
 def main():
+	get_info(sys.argv[1])
+	return
 	#Taxonomy(jsonfile='db/taxonomy.json')
 	d = Taxonomy(jsonfile='db/taxonomy.json.gz').db
 	print len(d)

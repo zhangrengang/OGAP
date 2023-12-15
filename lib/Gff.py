@@ -311,20 +311,23 @@ class GffGenes(object):
 	def _parse(self):
 		record = GffRecord(**self.kargs)
 		i = 0
-		ids = set([])
+		j = 0
+		ids = {} #set([])
 		has_gene = False
 		for line in self.parser(self.gff):
 			i += 1
+			j += 1
 			id, parent = line.id, line.parent
 #			if i < 10:
 #				print >> sys.stderr, line
 			if line.type == 'gene':
 				has_gene = True
 			if id in ids:	# duplicated ID of CDS and UTR
+				lasti = ids[id]
 				id = '{}.{}'.format(id, i)
-				if line.type == 'gene':	 # trans-splicing in RefSeq
+				if line.type == 'gene' and i - lasti < 10:	 # trans-splicing in RefSeq
 					continue
-			ids.add(id)
+			ids[id] = j #.add(id)
 			if (parent is None or line.type == 'gene' or (parent not in record and not has_gene) ) \
 					and len(record.nodes()) > 0:
 				yield record
@@ -334,6 +337,33 @@ class GffGenes(object):
 			else:
 				record.add_node(id, line=line, index=i)
 				if parent is not None and line.type != 'gene':	# gene: parent: gene_id
+					record.add_edge(parent, id)
+		if len(record.nodes()) > 0:
+			yield record
+class PasaGffGenes(GffGenes):
+	def __init__(self, gff, parser=GffLines):
+		self.gff = gff
+		self.parser = parser
+	def _parse(self):
+		record = GffRecord()
+		ids = {}
+		i, j = 0, 0
+		for line in self.parser(self.gff):
+			i += 1
+			j += 1
+			id, parent = line.id, line.parent
+			if id in ids:
+				id = '{}.{}'.format(id, i)
+			ids[id] = i
+			if line.type == 'gene' and len(record.nodes()) > 0:
+				yield record
+				record = GffRecord()
+				i = 1
+				ids = {}
+				record.add_node(id, line=line, index=i)
+			else:
+				record.add_node(id, line=line, index=i)
+				if line.type != 'gene':
 					record.add_edge(parent, id)
 		if len(record.nodes()) > 0:
 			yield record
@@ -370,7 +400,7 @@ class GtfGenes(GffGenes):
 			yield record
 class StringTieGtfGenes(GtfGenes):
 	def __init__(self, gff, parser=GtfLines):
-		super(PinfishGtfGenes, self).__init__(gff, parser)
+		super(StringTieGtfGenes, self).__init__(gff, parser)
 	def _parse(self):
 		lines = self.parser(self.gff)
 		record = GffRecord()
@@ -605,11 +635,15 @@ class GffExons(object):
 		if pseudo:
 			attributes0['pseudo'] = 'true'
 		lines = []
-		for part in gene_copy:
+		for i, part in enumerate(gene_copy):
+			_part = '{}/{}'.format(i+1, len(gene_copy))
 			# gene
 			chrom, start, end, strand = (part.seqid, part.start, 
 						part.end, part.strand)
-			line = [chrom, source, type, start, end, score, strand, frame, attributes0]
+			if len(gene_copy) > 1:
+				attributes0['part'] = _part
+			_attributes0 = copy.deepcopy(attributes0)
+			line = [chrom, source, type, start, end, score, strand, frame, _attributes0]
 			line = GffLine(line)
 			lines += [line]
 			# RNA
@@ -623,8 +657,11 @@ class GffExons(object):
 		attributes = copy.deepcopy(attributes0)
 		for key in ['Name', 'gene']:
 			attributes[key] = None
+		if len(gene_copy) > 1:
+			attributes['part'] = None
 		attributes.update(Parent=rna_id)
 		for i, exon in enumerate(self):
+			# CDS, etc.
 			attributes = copy.deepcopy(attributes)
 			line = copy.deepcopy(line)
 			line.__dict__.update(**exon.__dict__)
@@ -635,6 +672,7 @@ class GffExons(object):
 
 			line.__dict__.update(source=source) #, score=score)
 			#print >>sys.stderr, line.attributes
+			# exon
 			if exon.type != 'exon':
 				type = 'exon'
 				exon_line = copy.deepcopy(line)
@@ -1471,7 +1509,10 @@ class GffRecord(nx.DiGraph):
 			return d_positon
 		seq = d_seqs[self.chrom]
 		for RNARecord in GffRNARecords(self):
-			cds = RNARecord.features['CDS']
+			try: cds = RNARecord.features['CDS']
+			except KeyError:
+				print >> sys.stderr, 'RNA {} is non-coding in a coding gene'.format(RNARecord.id)
+				continue
 			reverse = 1 if RNARecord.strand == '-' else 0
 			cds = sorted(cds, key=lambda x:x.start, reverse=reverse)
 			exons = GffExons(cds)
@@ -1483,9 +1524,11 @@ class GffRecord(nx.DiGraph):
 			#   print >>sys.stderr, cds_pos, cds_seq, str(Seq(cds_seq).translate())
 			assert len(cds_seq) == len(cds_pos)
 			if len(cds_seq) % 3 != 0:
-				print >> sys.stderr, '[WARN] CDS of {} is not Multiple of 3 with frame {}'.format(RNARecord.id, frame)
+				print >> sys.stderr, '[WARN] CDS of {} is not Multiple of 3 with frame {}; discarded..'.format(RNARecord.id, frame)
+				continue
 			else:
-				assert frame == 0
+				try: assert frame == 0, '[WARN] {}: frame ({}) of the first CDS region is not 0'.format(RNARecord.id, frame)
+				except AssertionError: pass
 			for i in range(frame, len(cds_pos), 3):
 				codon = cds_seq[i:i+3]
 				cod_pos = cds_pos[i:i+3]

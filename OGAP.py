@@ -21,6 +21,10 @@ from lib.small_tools import open_file as open
 bindir = os.path.dirname(os.path.realpath(__file__))
 os.environ['PATH'] = bindir+'/bin' + ':' + os.environ['PATH']
 
+uid = uuid.uuid1()
+default_tmpdir = os.path.join(os.environ['TMP'], 'ogap-{}'.format(uid))
+
+
 LOCATION = {'pt': 'chloroplast', 'mt': 'mitochondrion'}
 
 def makeArgparse():
@@ -39,9 +43,9 @@ def makeArgparse():
 	parser.add_argument('-trans', action="store_true", default=False,
 					help='transcipt input mode [default=%(default)s]')
 	parser.add_argument("-tmpdir", action="store",
-					default='/dev/shm/tmp', type=str,
+					default=default_tmpdir, type=str,
 					help="temporary directory [default=%(default)s]")
-	parser.add_argument('-cleanup', action="store_true", default=True,
+	parser.add_argument('-cleanup', action="store_true", default=False,
 					help='clean up temporary directory [default=%(default)s]')
 					
 	parser.add_argument('-seqfmt', type=str, choices=['fasta', 'genbank'], default=None,
@@ -385,6 +389,8 @@ class Pipeline():
 		# sort by coordinate
 		records = sorted(records, key=lambda x: (seqids.index(x.chrom), x.start))
 		
+		# locus_tag
+		self.give_locus_tag(records)
 		# to gff
 		self.to_gff3(records)
 
@@ -699,7 +705,6 @@ class Pipeline():
 				cds, new_parts = parts.map_coord(best_gtf.to_exons().filter('CDS'))	# GffExons
 				new_parts = new_parts.link_part()
 				print >> sys.stderr, 'new', new_parts.to_str()
-			#	print >> sys.stderr, parts.to_str()
 				new_parts.source = source
 			#	cds.write(sys.stderr)
 				record = cds.extend_gene(gene, new_parts, rna_type=gene.seq_type, pseudo=pseudo)
@@ -1023,6 +1028,8 @@ class Pipeline():
 			try:
 				print >> f_rna, '>{} {}\n{}'.format(xid, desc, record.rna_seq)
 			except AttributeError: pass
+			if len(set(record.chroms)) > 1:
+				print >>sys.stdout, 'ASSEMBLY:', 'gene={};id={}:'.format(record.name, record.rna_id), record
 		f_cds.close()
 		f_pep.close()
 		f_rna.close()
@@ -1081,18 +1088,30 @@ class Pipeline():
 				SeqIO.write(rc, fout, 'fasta')
 		fout.close()
 
-	def to_sqn(self, records):
+	@property
+	def tag_prefix(self):
 		try: 
 			g,s = self.organism.split()[:2]
 			prefix = g[:1] + s[:2] + self.organ #[0]
 		except ValueError:
 			prefix = self.organism[:3] + self.organ
-		prefix = prefix.upper()
+		return prefix.upper()
+	def give_locus_tag(self, records):
+		prefix = self.tag_prefix
+		i = 0
+		for record in records:
+			i += 1
+			locus_tag = '{}_{:0>4d}'.format(prefix, i)
+			record.locus_tag = locus_tag
+			for line in record:
+				if line.type == 'gene':
+					line.attributes['locus_tag'] = locus_tag
+	def to_sqn(self, records):
 		# to tbl
 		tbl = '{}/{}.tbl'.format(self.outdir, self.prefix)
 		fout = open(tbl, 'w')
-		d_tags = {}
-		i = 0
+#		d_tags = {}
+#		i = 0
 		for seqid in self.seqs.keys():
 			my_records = [record for record in records if seqid in record.chroms]
 			if not my_records:
@@ -1100,12 +1119,13 @@ class Pipeline():
 			print >>fout, '>Feature {}'.format(seqid)
 			for record in my_records:
 				note = record[0].attributes.get('note')
-				if record in d_tags:
-					locus_tag = d_tags[record]
-				else:
-					i += 1
-					locus_tag = '{}_{:0>4d}'.format(prefix, i)
-					d_tags[record] = locus_tag
+#				if record in d_tags:
+#					locus_tag = d_tags[record]
+#				else:
+#					i += 1
+#					locus_tag = '{}_{:0>4d}'.format(prefix, i)
+#					d_tags[record] = locus_tag
+				locus_tag = record.locus_tag
 				record.to_tbl(fout, seqid, transl_table=self.transl_table, 
 						locus_tag=locus_tag, wgs=self.wgs, note=note)
 		fout.close()
@@ -1120,8 +1140,8 @@ class Pipeline():
 		cmd = 'asn2gb -i {} -o {}'.format(sqn, gb)
 		run_cmd(cmd, log=True)
 		if self.nseqs > 1:
-			basename = '{}/{}'.format(self.outdir, self.prefix)
-			cmd = 'rm {basename}.val {basename}.dr errorsummary.val'.format(basename=basename)
+			cmd = 'cd {outdir} && rm {basename}.val {basename}.dr errorsummary.val'.format(
+				outdir=self.outdir, basename=self.prefix)
 			run_cmd(cmd, log=False)
 	def draw_gene_map(self):
 		gb = '{}/{}.gb'.format(self.outdir, self.prefix)

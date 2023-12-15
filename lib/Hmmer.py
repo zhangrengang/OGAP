@@ -303,8 +303,9 @@ class SeqParts():
 				elif end >= exon.start > start and exon.end > end:
 					# |-----|----	# part
 					#     -----		# exon
+					print >>sys.stderr, 'here'
 					if part.strand == '-':
-						exon.start = part.end
+						exon.start = part.start+1	#part.end
 						exon.end = part.start + end - exon_start +1
 						exon.strand = '+' if exon.strand == '-' else '-'
 					else:
@@ -325,7 +326,7 @@ class SeqParts():
 					#   ------		exon
 					if part.strand == '-':
 						exon.start = part.start + end - exon_end +1
-						exon.end = part.start + 1
+						exon.end = part.end #part.start + 1
 						exon.strand = '+' if exon.strand == '-' else '-'
 					else:
 						exon.start = part.start + 1
@@ -335,7 +336,7 @@ class SeqParts():
 				new_exons += [exon]
 				try: d_bins[part] += [exon]
 				except KeyError: d_bins[part] = [exon]
-				#print >>sys.stderr, part, exon
+			#	print >>sys.stderr, part, exon_start, exon_end, start, end, exon
 		new_parts = copy.deepcopy(self)
 		parts = []
 		for part in self:

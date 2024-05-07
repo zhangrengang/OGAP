@@ -1,5 +1,6 @@
 ### Quick install and start ###
 ```
+git config --global http.postBuffer 5242880000
 git clone https://github.com/zhangrengang/OGAP
 cd OGAP
 

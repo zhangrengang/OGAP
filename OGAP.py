@@ -1,4 +1,4 @@
-#!/bin/env python
+#!/bin/env python2
 import sys, os, re
 import copy
 import argparse

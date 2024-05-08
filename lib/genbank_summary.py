@@ -15,7 +15,8 @@ class GenbankSummary:
 		for line in open(self.summary):
 			line = line.strip()
 			if not line and lines:
-				yield GenbankSummaryLines(lines)
+				try: yield GenbankSummaryLines(lines)
+				except AttributeError: pass
 				lines = []
 			if line:
 				lines += [line]
@@ -24,6 +25,8 @@ class GenbankSummary:
 	def select_by_species(self, fout=sys.stdout):
 		d_records = {}
 		for rc in self:
+			if rc.length == 0:
+				continue
 		#	print >>sys.stderr, rc.__dict__
 			try: d_records[rc.species] += [rc]
 			except KeyError: d_records[rc.species] = [rc]
@@ -54,8 +57,9 @@ class GenbankSummaryLines:
 		self.species = self._parse_species()
 		topology = self.lines[1]
 		# circular or not
-		self.length, self.topology = \
+		try: self.length, self.topology = \
 			re.compile(r'([,\d]+)\s+bp\s+(\w+)\s+\S+').match(topology).groups()
+		except AttributeError: self.length, self.topology = '0', ''
 		self.length = int(self.length.replace(',', ''))
 		accession = self.lines[2]
 		self.id = self.accession = \

@@ -1537,11 +1537,12 @@ class GffRecord(nx.DiGraph):
 					if postype is None:
 						continue
 					postype = 'codon{}-{}'.format(j+1, postype)
+					pos.id = RNARecord.id
 					try: d_positon[pos].add(postype)
 					except KeyError: d_positon[pos] = {postype}
 		return d_positon
 	def classify_fold2(self, d_seqs, d_positon=OrderedDict()):
-		'''exclude splicing sites'''
+		'''exclude splicing sites via CDS by CDS'''
 		if not self.is_coding:
 			return d_positon
 		seq = d_seqs[self.chrom]

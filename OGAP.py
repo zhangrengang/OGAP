@@ -22,7 +22,7 @@ bindir = os.path.dirname(os.path.realpath(__file__))
 os.environ['PATH'] = bindir+'/bin' + ':' + os.environ['PATH']
 
 uid = uuid.uuid1()
-default_tmpdir = os.path.join(os.environ['TMP'], 'ogap-{}'.format(uid))
+default_tmpdir = os.path.join(os.environ.get('TMP', '/tmp'), 'ogap-{}'.format(uid))
 
 
 LOCATION = {'pt': 'chloroplast', 'mt': 'mitochondrion'}

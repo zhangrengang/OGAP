@@ -34,14 +34,17 @@ class GenbankSummary:
 		for species, records in sorted(d_records.items()):
 			refseq_records = self.get_refseq(records)
 			if refseq_records:	# refseq first
-				records = refseq_records
+	#			records = refseq_records
+				records = set(records) - set(refseq_records) # genbank first
 			record = self.get_longest(records)
-			species = species.replace(' ', '_')
-			line = [species, record.accession, record.length, record.topology, record.title]
-			tax = record.lineage
-			line += tax
-			line = map(str, line)
-			print >>fout, '\t'.join(line)
+			self.write_info(species, record, fout)
+	def write_info(self, species, record, fout):
+		species = species.replace(' ', '_')
+		line = [species, record.accession, record.length, record.topology, record.title]
+		tax = record.lineage
+		line += tax
+		line = map(str, line)
+		print >>fout, '\t'.join(line)
 	def get_refseq(self, records):
 		return [rc for rc in records if rc.is_refseq]
 	def get_longest(self, records):
@@ -67,7 +70,7 @@ class GenbankSummaryLines:
 	def _parse_species(self):
 		title = self.title.split()
 		s,e = 0,2
-		if title[0].startswith('UNVERIFIED'):
+		if title[0].endswith(':'):
 			title = title[1:]
 		if title[1] == 'x':
 # hybrid

@@ -56,9 +56,12 @@ def makeArgparse():
 	parser.add_argument('-sp', '-organism', type=str, default=None, dest='organism',
 					help="organism to be included in sqn, required for fasta input [default=%(default)s]")
 	parser.add_argument('-linear', action="store_true", default=False,
-					help="topology to be included in sqn [default=circular for one sequence or linear for multiple sequences]")
+					help="topology to be included in sqn [default=circular for one sequence, linear for multiple sequences]")
 	parser.add_argument('-circular', action="store_true", default=None,
                     help="force circular topology even with multiple sequences [default=%(default)s]")
+	parser.add_argument('-circular_suffix', type=str, default=None,
+                    help="suffix (e.g., 'c') for circular topology [default=%(default)s]")
+
 	parser.add_argument('-partial', action="store_true", default=False,
 					help="completeness to be included in sqn [default=complete for one sequence and partial for multiple sequences]")
 	parser.add_argument('-complete', action="store_true", default=None,
@@ -148,6 +151,7 @@ class Pipeline():
 				organism=None,
 				linear=False, 
 				circular=None,
+				circular_suffix=None,
 				partial=False,
 				complete=None,
 				nosqn=False, wgs=False,
@@ -189,6 +193,7 @@ class Pipeline():
 		self.organism = organism
 		self.linear = linear
 		self.circular = circular
+		self.circular_suffix = circular_suffix
 		self.partial = partial
 		self.complete = complete
 		self.nosqn = nosqn
@@ -575,7 +580,7 @@ class Pipeline():
 								min_hmmcov=self.min_rrn_hmmcov, min_part=2,
 								min_cov=self.min_rrn_cov, seq_type='nucl', flank=2000)
 				for i, parts in enumerate(structs):
-					parts.id = '{}-{}'.format(gene, i+1)
+					parts.id = self.format_rna_id(gene, i+1)
 					parts = parts.link_part()
 					print >> sys.stderr, 'old', parts.to_str()
 					genefa = self.get_filename(self.agtoutdir, parts, 'fa')
@@ -611,7 +616,7 @@ class Pipeline():
 							    min_cov=self.min_trn_cov, seq_type='nucl', flank=200)
 				c = 0
 				for i, parts in enumerate(structs):
-					parts.id = '{}-{}'.format(gene, i+1)
+					parts.id = self.format_rna_id(gene, i+1)
 					parts = parts.link_part()
 					print >> sys.stderr, 'old', parts.to_str()
 					genefa = self.get_filename(self.hmmoutdir, parts, 'fa')
@@ -633,7 +638,7 @@ class Pipeline():
 						if rename != gene.name:
 							logger.info('renaming `{}` to `{}`'.format(gene.name, rename))
 							new_gene.name = rename
-						new_parts.id = '{}-{}'.format(gene, c)
+						new_parts.id = self.format_rna_id(gene, c)
 						record = trna.extend_gene(new_gene, new_parts, rna_type=gene.seq_type)	 # GffExons
 						#record.write(sys.stderr)
 						rna_seq = record.extract_seq(self.seqs)
@@ -651,7 +656,8 @@ class Pipeline():
 			#break
 		return records
 
-
+	def format_rna_id(self, gene, idx):
+		return '{}.{}-{}'.format(self.organ, gene, idx)
 	def hmmsearch_protein(self):
 		records = []
 		if self.no_cds:
@@ -675,7 +681,7 @@ class Pipeline():
 							min_hmmcov=self.min_cds_hmmcov,
 							min_cov=self.min_cds_cov, seq_type='prot', flank=5000)
 			for i, parts in enumerate(structs):
-				parts.id = '{}-{}'.format(gene, i+1)	# parts is a copy
+				parts.id = self.format_rna_id(gene, i+1)	# parts is a copy
 				parts = parts.link_part()
 				genefa = self.get_filename(self.agtoutdir, parts, 'fa')
 				with open(genefa, 'w') as fout:
@@ -1075,6 +1081,8 @@ class Pipeline():
 				desc2 = desc + ' [chromosome={}]'.format(chrid)
 			else:
 				desc2 = desc
+			if self.circular_suffix and id.endswith(self.circular_suffix):
+				desc2 += ['[topology=circular]']
 			print >> fout, '>{} {}\n{}'.format(id, desc2, seq)
 		fout.close()
 		return fsa

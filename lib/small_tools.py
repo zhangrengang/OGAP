@@ -24,24 +24,33 @@ import subprocess
 from Bio import SeqIO
 ISOTIMEFORMAT='%Y-%m-%d %X'
 def tr_numeric(val):
-    try: return int(val)
-    except:
-        try: return float(val)
-        except: return val
-def parse_key_opts(args):
-    d = {}
-    pops = []
-    for i, arg in enumerate(args):
-        kv = arg.split('=', 1)
-        if len(kv) != 2:
-            continue
-        pops += [i]
-        key, val = kv
-        val = tr_numeric(val)
-        d[key] = val
-    for i in sorted(pops, reverse=1):
-        args.pop(i)
-    return d
+	try: return int(val)
+	except:
+		try: return float(val)
+		except: return val
+def xls(fl):
+	if test_s(fl):
+		return fl
+	elif test_s(fl+'.gz'):
+		return fl+'.gz'
+	else:
+		raise IOError('{} not found'.format(fl))
+def parse_key_opts(args=None):
+	if args is None:
+		args = sys.argv
+	d = {}
+	pops = []
+	for i, arg in enumerate(args):
+		kv = arg.split('=', 1)
+		if len(kv) != 2:
+			continue
+		pops += [i]
+		key, val = kv
+		val = tr_numeric(val)
+		d[key] = val
+	for i in sorted(pops, reverse=1):
+		args.pop(i)
+	return d
 def parse_kargs(*args):
 	return parse_key_opts(*args)
 
@@ -66,31 +75,31 @@ def get_hex_colors(n):
 	colorVal = [scalarMap.to_rgba(v) for v in values]
 	return [colors.to_hex(v) for v in colorVal]
 def getHtml(url):
-        import urllib2,socket
-        socket.setdefaulttimeout(5)
-        socket.setdefaulttimeout(5)
-        try:
-                page = urllib2.urlopen(url)
-                html = page.read()
-                return html
-        except socket.timeout:
-                print 'time out, trying again!'
-                time.sleep(5)
-                return getHtml(url)
-        except urllib2.HTTPError, e:
-                if e.code == 404:
-                        return e.code
-                print 'HTTPError code: ', e.code, ', trying again!'
-                time.sleep(5)
-                return getHtml(url)
-        except urllib2.URLError, e:
-                print 'URLError reason',e.reason,', trying again!'
-                time.sleep(5)
-                return getHtml(url)
-        except:
-                'UnknownError, trying again!'
-                time.sleep(5)
-                return getHtml(url)
+		import urllib2,socket
+		socket.setdefaulttimeout(5)
+		socket.setdefaulttimeout(5)
+		try:
+				page = urllib2.urlopen(url)
+				html = page.read()
+				return html
+		except socket.timeout:
+				print 'time out, trying again!'
+				time.sleep(5)
+				return getHtml(url)
+		except urllib2.HTTPError, e:
+				if e.code == 404:
+						return e.code
+				print 'HTTPError code: ', e.code, ', trying again!'
+				time.sleep(5)
+				return getHtml(url)
+		except urllib2.URLError, e:
+				print 'URLError reason',e.reason,', trying again!'
+				time.sleep(5)
+				return getHtml(url)
+		except:
+				'UnknownError, trying again!'
+				time.sleep(5)
+				return getHtml(url)
 
 def remove_short_seqs(inSeq, outSeq, minLen=200, format='fasta'):
 	'''Remove sequences shorter than the cutoff.'''
@@ -127,10 +136,10 @@ def rmdirs(*dirs):
 			pass
 
 def test_f(xfile):  #"test -f"
-    return os.path.exists(xfile)
+	return os.path.exists(xfile)
 
 def test_s(xfile):  #"test -s"
-    return os.path.exists(xfile) and os.path.getsize(xfile)>0
+	return os.path.exists(xfile) and os.path.getsize(xfile)>0
 
 def is_complete_cds(Seq, translate_table=1):
 	'''A Bio.Seq object (CDS) is complete (both start and end codons present)?'''
@@ -297,7 +306,7 @@ def flattern(nested):
 	except TypeError:
 		yield nested
 def flatten(*args):
-    return flattern2(*args)
+	return flattern2(*args)
 
 def flattern2(nested):
 	for sublist in nested:

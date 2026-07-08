@@ -9,11 +9,13 @@ from small_tools import open_file as open
 rootdir = os.path.dirname(os.path.realpath(__file__))
 dbdir = '{}/../db'.format(rootdir)
 DB = '{}/taxonomy.json.gz'.format(dbdir)
+#print >>sys.stderr, DB
 
 class Taxonomy():
 	def __init__(self, spname=None, taxid=None,
 				jsonfile=DB, load=True, 
 				dbfile=None):
+		#print >>sys.stderr, jsonfile
 		self.jsonfile = jsonfile
 		if os.path.exists(jsonfile) and load:
 			self.load_db()
@@ -118,6 +120,9 @@ class Taxonomy():
 		for taxid in track[1:]:
 			if self.is_rank(rank, taxid=taxid):
 				return taxid
+	def is_son(self, toplevel):
+		track = self.get_track()
+		return int(toplevel) in track
 	def get_ranks(self):
 		track = self.get_track()
 		d = OrderedDict()
@@ -128,11 +133,11 @@ class Taxonomy():
 			d[rank] = taxid
 		return d
 	def query_rank(self, taxid=None, spname=None):
-		result = self.query_db(taxid=taxid, spname=spname)
+		result = self.query_db(taxid=str(taxid), spname=spname)
 		rank = result.rank
 		return rank
 	def get_track(self):
-		result = self.query_db(taxid=self.taxid, spname=self.spname)
+		result = self.query_db(taxid=str(self.taxid), spname=self.spname)
 		try:
 			track = map(int, result.track.split(','))
 		except AttributeError:

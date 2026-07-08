@@ -5,7 +5,7 @@ import itertools
 from Bio import SeqIO
 from RunCmdsMP import run_cmd, logger
 from OrthoFinder import catAln
-from small_tools import mkdirs, parse_kargs
+from small_tools import mkdirs, parse_kargs, tr_numeric
 
 class PhyloPipeline(object):
 	def __init__(self, indir, 
@@ -15,13 +15,15 @@ class PhyloPipeline(object):
 			types=['cds'], #, 'rna'], 
 			root=None,
 			max_gene_missing=50,
-			min_shared=50	# min_taxa_missing
+			min_shared=50,	# min_taxa_missing
+			min_cov=50, # min coverage
 			):
 		self.indir = indir
 		self.tmpdir = tmpdir
 		self.types = types
 		self.min_shared = min_shared
 		self.max_gene_missing = max_gene_missing
+		self.min_cov = min_cov
 		self.outprefix = outprefix
 		self.gnid = gnid
 		self.root = root
@@ -157,7 +159,13 @@ class PhyloPipeline(object):
 			for rc in SeqIO.parse(fasta, 'fasta'):
 				if re.compile('\-\d+$').search(rc.id):
 					continue
+				attr = self.get_attributes(rc.description)
+				if float(attr['cov']) < self.min_cov:
+					continue
 				yield rc, prefix
+	def get_attributes(self, desc):
+		desc = ' '.join(desc.split(' ')[1:])
+		return dict(kv.split('=') for kv in desc.split(';') if kv)
 class Summary(PhyloPipeline):
 	def __init__(self, indir,):
 		self.indir = indir

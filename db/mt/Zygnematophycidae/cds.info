@@ -1,0 +1,41 @@
+#id	name	product	seq_type	exon_count	trans_splicing	gene_count	species_count	names	products	species
+atp1	atp1	ATP synthase F1 subunit alpha	CDS	1	False	5	5	atp1:5	ATP synthase F1 subunit alpha:5	Closterium_baillyanum:1,Entransia_fimbriata:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+atp4	atp4	ATP synthase F0 subunit beta	CDS	1	False	5	5	atp4:5	ATP synthase F0 subunit beta:3,ATPase subunit 4:2	Closterium_baillyanum:1,Entransia_fimbriata:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+atp6	atp6	ATP synthase F0 subunit 6	CDS	1	False	5	5	atp6:5	ATP synthase F0 subunit 6:5	Closterium_baillyanum:1,Entransia_fimbriata:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+atp8	atp8	ATP synthase F0 subunit 8	CDS	1	False	5	5	atp8:5	ATP synthase F0 subunit 8:5	Closterium_baillyanum:1,Entransia_fimbriata:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+atp9	atp9	ATP synthase F0 subunit 9	CDS	1	False	5	5	atp9:5	ATP synthase F0 subunit 9:5	Closterium_baillyanum:1,Entransia_fimbriata:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+cob	cob	apocytochrome b	CDS	2	False	5	5	cob:5	apocytochrome b:5	Closterium_baillyanum:1,Entransia_fimbriata:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+cox1	cox1	cytochrome c oxidase subunit 1	CDS	1	False	5	5	cox1:5	cytochrome c oxidase subunit 1:5	Closterium_baillyanum:1,Entransia_fimbriata:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+cox2	cox2	cytochrome c oxidase subunit 2	CDS	1	False	5	5	cox2:5	cytochrome c oxidase subunit 2:5	Closterium_baillyanum:1,Entransia_fimbriata:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+cox3	cox3	cytochrome c oxidase subunit 3	CDS	1	False	5	5	cox3:5	cytochrome c oxidase subunit 3:5	Closterium_baillyanum:1,Entransia_fimbriata:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+mttB	mttB	SecY-independent transporter protein	CDS	1	False	5	5	mttB:5	SecY-independent transporter protein:5	Closterium_baillyanum:1,Entransia_fimbriata:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+nad1	nad1	NADH dehydrogenase subunit 1	CDS	1	False	5	5	nad1:5	NADH dehydrogenase subunit 1:5	Closterium_baillyanum:1,Entransia_fimbriata:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+nad2	nad2	NADH dehydrogenase subunit 2	CDS	1	False	5	5	nad2:5	NADH dehydrogenase subunit 2:5	Closterium_baillyanum:1,Entransia_fimbriata:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+nad3	nad3	NADH dehydrogenase subunit 3	CDS	1	False	5	5	nad3:5	NADH dehydrogenase subunit 3:5	Closterium_baillyanum:1,Entransia_fimbriata:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+nad4	nad4	NADH dehydrogenase subunit 4	CDS	1	False	5	5	nad4:5	NADH dehydrogenase subunit 4:5	Closterium_baillyanum:1,Entransia_fimbriata:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+nad4L	nad4L	NADH dehydrogenase subunit 4L	CDS	1	False	5	5	nad4L:5	NADH dehydrogenase subunit 4L:5	Closterium_baillyanum:1,Entransia_fimbriata:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+nad5	nad5	NADH dehydrogenase subunit 5	CDS	1	False	5	5	nad5:5	NADH dehydrogenase subunit 5:5	Closterium_baillyanum:1,Entransia_fimbriata:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+nad6	nad6	NADH dehydrogenase subunit 6	CDS	1	False	5	5	nad6:5	NADH dehydrogenase subunit 6:5	Closterium_baillyanum:1,Entransia_fimbriata:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+nad7	nad7	NADH dehydrogenase subunit 7	CDS	1	False	5	5	nad7:5	NADH dehydrogenase subunit 7:5	Closterium_baillyanum:1,Entransia_fimbriata:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+nad9	nad9	NADH dehydrogenase subunit 9	CDS	1	False	5	5	nad9:5	NADH dehydrogenase subunit 9:5	Closterium_baillyanum:1,Entransia_fimbriata:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+rpl10	rpl10	ribosomal protein L10	CDS	1	False	4	4	rpl10:4	ribosomal protein L10:4	Closterium_baillyanum:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+rpl16	rpl16	ribosomal protein L16	CDS	1	False	5	5	rpl16:5	ribosomal protein L16:5	Closterium_baillyanum:1,Entransia_fimbriata:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+rpl2	rpl2	ribosomal protein L2	CDS	1	False	4	4	rpl2:4	ribosomal protein L2:4	Closterium_baillyanum:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+rpl5	rpl5	ribosomal protein L5	CDS	1	False	5	5	rpl5:5	ribosomal protein L5:5	Closterium_baillyanum:1,Entransia_fimbriata:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+rpl6	rpl6	ribosomal protein L6	CDS	1	False	5	5	rpl6:5	ribosomal protein L6:5	Closterium_baillyanum:1,Entransia_fimbriata:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+rps1	rps1	ribosomal protein S1	CDS	1	False	4	4	rps1:4	ribosomal protein S1:4	Closterium_baillyanum:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+rps10	rps10	ribosomal protein S10	CDS	1	False	4	4	rps10:4	ribosomal protein S10:4	Closterium_baillyanum:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+rps11	rps11	ribosomal protein S11	CDS	1	False	5	5	rps11:5	ribosomal protein S11:5	Closterium_baillyanum:1,Entransia_fimbriata:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+rps12	rps12	ribosomal protein S12	CDS	1	False	5	5	rps12:5	ribosomal protein S12:5	Closterium_baillyanum:1,Entransia_fimbriata:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+rps13	rps13	ribosomal protein S13	CDS	1	False	5	5	rps13:5	ribosomal protein S13:5	Closterium_baillyanum:1,Entransia_fimbriata:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+rps14	rps14	ribosomal protein S14	CDS	1	False	5	5	rps14:5	ribosomal protein S14:5	Closterium_baillyanum:1,Entransia_fimbriata:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+rps19	rps19	ribosomal protein S19	CDS	1	False	4	4	rps19:4	ribosomal protein S19:4	Closterium_baillyanum:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+rps2	rps2	ribosomal protein S2	CDS	1	False	5	5	rps2:5	ribosomal protein S2:5	Closterium_baillyanum:1,Entransia_fimbriata:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+rps3	rps3	ribosomal protein S3	CDS	1	False	5	5	rps3:5	ribosomal protein S3:5	Closterium_baillyanum:1,Entransia_fimbriata:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+rps4	rps4	ribosomal protein S4	CDS	1	False	5	5	rps4:5	ribosomal protein S4:5	Closterium_baillyanum:1,Entransia_fimbriata:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+rps7	rps7	ribosomal protein S7	CDS	1	False	5	5	rps7:5	ribosomal protein S7:5	Closterium_baillyanum:1,Entransia_fimbriata:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+sdh3	sdh3	succinate:cytochrome c oxidoreductase subunit 3	CDS	1	False	5	5	sdh3:5	succinate:cytochrome c oxidoreductase subunit 3:5	Closterium_baillyanum:1,Entransia_fimbriata:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+sdh4	sdh4	succinate:cytochrome c oxidoreductase subunit 4	CDS	1	False	5	5	sdh4:5	succinate:cytochrome c oxidoreductase subunit 4:5	Closterium_baillyanum:1,Entransia_fimbriata:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+yejR	yejR	heme lyase	CDS	1	False	6	4	yejR:3,yejRb:1,orf1220:1,orf1529:1	heme lyase:3,putative reverse transcriptase/maturase:2,truncated heme lyase:1	Closterium_baillyanum:2,Gonatozygon_brebissonii:2,Roya_anglica:1,Roya_obtusa:1
+yejU	yejU	cytochrome c1 ABC transporter subunit	CDS	1	False	4	4	yejU:2,guanaco:2	cytochrome c1 ABC transporter subunit:2,subunit of ABC transporter for cytochrome c1:2	Closterium_baillyanum:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+yejV	yejV	cytochrome c1 ABC transporter channel subunit	CDS	1	False	4	4	yejV:2,ccmB:2	cytochrome c1 ABC transporter channel subunit:2,channel subunit of ABC transporter for cytochrome c1:2	Closterium_baillyanum:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1

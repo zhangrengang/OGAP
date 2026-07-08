@@ -1,0 +1,6 @@
+#id	organism	name_count	cds_count	trn_count	rrn_count	length	GC	taxonomy
+NC_022860.1	Closterium baillyanum	72	49	28	3	152089	39.6	root;cellular organisms;Eukaryota;Viridiplantae;Streptophyta;Streptophytina;Zygnemophyceae;Zygnematophycidae;Desmidiales;Closteriaceae;Closterium;Closterium baillyanum
+NC_022861.1	Entransia fimbriata	66	35	30	3	61645	42.7	root;cellular organisms;Eukaryota;Viridiplantae;Streptophyta;Streptophytina;Zygnemophyceae;Zygnematophycidae;Zygnematales;Zygnemataceae;Entransia;Entransia fimbriata
+NC_046951.1	Gonatozygon brebissonii	69	45	26	3	131939	38.2	root;cellular organisms;Eukaryota;Viridiplantae;Streptophyta;Streptophytina;Zygnemophyceae;Zygnematophycidae;Desmidiales;Gonatozygaceae;Gonatozygon;Gonatozygon brebissonii
+NC_046950.1	Roya anglica	67	42	23	3	69371	26.9	root;cellular organisms;Eukaryota;Viridiplantae;Streptophyta;Streptophytina;Zygnemophyceae;Zygnematophycidae;Zygnematales;Mesotaeniaceae;Roya;Roya anglica
+NC_022863.1	Roya obtusa	68	41	26	3	69465	26.8	root;cellular organisms;Eukaryota;Viridiplantae;Streptophyta;Streptophytina;Zygnemophyceae;Zygnematophycidae;Zygnematales;Mesotaeniaceae;Roya;Roya obtusa

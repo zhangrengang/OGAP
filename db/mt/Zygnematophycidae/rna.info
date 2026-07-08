@@ -1,0 +1,19 @@
+#id	name	product	seq_type	exon_count	trans_splicing	gene_count	species_count	names	products	species
+rnl	rnl	large subunit ribosomal RNA	rRNA	3	False	5	5	rnl:3,rrnL:2	large subunit ribosomal RNA:5	Closterium_baillyanum:1,Entransia_fimbriata:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+rns	rns	small subunit ribosomal RNA	rRNA	1	False	5	5	rns:3,rrnS:2	small subunit ribosomal RNA:5	Closterium_baillyanum:1,Entransia_fimbriata:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+rrn5	rrn5	5S ribosomal RNA	rRNA	1	False	2	2	rrn5:2	5S ribosomal RNA:2	Roya_anglica:1,Roya_obtusa:1
+trnF-gaa	trnF-gaa	tRNA-Phe	tRNA	1	False	5	5	trnF-gaa:3,trnF-GAA:2	tRNA-Phe:5	Closterium_baillyanum:1,Entransia_fimbriata:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+trnG-ucc	trnG-ucc	tRNA-Gly	tRNA	1	False	5	5	trnG-ucc:3,trnG-UCC:2	tRNA-Gly:5	Closterium_baillyanum:1,Entransia_fimbriata:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+trnI-cau	trnI-cau	tRNA-Ile	tRNA	1	False	5	5	trnI-cau:3,trnM-CAU:2	tRNA-Ile:3,tRNA-Met:2	Closterium_baillyanum:1,Entransia_fimbriata:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+trnK-UUU	trnK-UUU	tRNA-Lys	tRNA	1	False	4	4	trnK-UUU:2,trnK-uuu:2	tRNA-Lys:4	Closterium_baillyanum:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+trnL-UAA	trnL-UAA	tRNA-Leu	tRNA	1	False	4	4	trnL-UAA:2,trnL-uaa:2	tRNA-Leu:4	Closterium_baillyanum:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+trnM-CAU	trnM-CAU	tRNA-Met	tRNA	1	False	4	4	trnM-CAU:2,trnMf-cau:2	tRNA-Met:4	Closterium_baillyanum:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+trnN-guu	trnN-guu	tRNA-Asn	tRNA	2	False	2	2	trnN-guu:2	tRNA-Asn:2	Closterium_baillyanum:1,Roya_obtusa:1
+trnP-ugg	trnP-ugg	tRNA-Pro	tRNA	1	False	4	4	trnP-ugg:2,trnP-UGG:2	tRNA-Pro:4	Closterium_baillyanum:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+trnQ-uug	trnQ-uug	tRNA-Gln	tRNA	1	False	3	3	trnQ-uug:2,trnQ-UUG:1	tRNA-Gln:3	Entransia_fimbriata:1,Roya_anglica:1,Roya_obtusa:1
+trnR-acg	trnR-acg	tRNA-Arg	tRNA	1	False	5	5	trnR-acg:2,trnR-ACG:2,trnR-ucg:1	tRNA-Arg:5	Closterium_baillyanum:1,Entransia_fimbriata:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+trnS-gcu	trnS-gcu	tRNA-Ser	tRNA	2	False	2	2	trnS-gcu:2	tRNA-Ser:2	Closterium_baillyanum:1,Roya_obtusa:1
+trnS-uga	trnS-uga	tRNA-Ser	tRNA	1	False	4	4	trnS-uga:2,trnS-UGA:2	tRNA-Ser:4	Closterium_baillyanum:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+trnT-ggu	trnT-ggu	tRNA-Thr	tRNA	1	False	5	5	trnT-ggu:3,trnT-GGU:2	tRNA-Thr:5	Closterium_baillyanum:1,Entransia_fimbriata:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+trnV-UAC	trnV-UAC	tRNA-Val	tRNA	1	False	4	4	trnV-UAC:2,trnV-uac:2	tRNA-Val:4	Closterium_baillyanum:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1
+trnW-CCA	trnW-CCA	tRNA-Trp	tRNA	1	False	4	4	trnW-CCA:2,trnW-cca:2	tRNA-Trp:4	Closterium_baillyanum:1,Gonatozygon_brebissonii:1,Roya_anglica:1,Roya_obtusa:1

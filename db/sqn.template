@@ -8,11 +8,11 @@ Submit-block ::= {
           initials "R.G." } ,
       affil
         std {
-          affil "Ori-Gene Co., Ltd." ,
+          affil "Kunming Institute of Botany" ,
           div "Bioinformatics" ,
-          city "Beijing" ,
+          city "Kunming" ,
           country "China" ,
-          email "zhangrengang@ori-gene.cn" ,
+          email "zhangrengang@mail.kib.ac.cn" ,
           phone "+8613260152782" } } } ,
   cit {
     authors {
@@ -26,9 +26,9 @@ Submit-block ::= {
                 initials "" } } } ,
       affil
         std {
-          affil "Ori-Gene Co., Ltd." ,
+          affil "Kunming Institute of Botany" ,
           div "Bioinformatics" ,
-          city "Beijing" ,
+          city "Kunming" ,
           country "China" } } ,
     date
       std {
@@ -51,8 +51,8 @@ Seqdesc ::= pub {
                   initials "" } } } ,
         affil
           std {
-            affil "Ori-Gene Co., Ltd." ,
+            affil "Kunming Institute of Botany" ,
             div "Bioinformatics" ,
-            city "Beijing" ,
+            city "Kunming" ,
             country "China" } } ,
       title "OGAP: Organelle Genome Annotation Pipeline" } } }

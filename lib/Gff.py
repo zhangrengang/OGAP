@@ -269,10 +269,10 @@ class GffLines(object):
 			if line.startswith('#'):
 				self.annotations += [line]
 				continue
-			line = line.strip().split('\t')
-			if not line:
+			line = line.strip().split('\t') # .split() yield [], but .split('\t') yield [''], for blank line
+			if not line[0]:
 				continue
-			if len(line) != 9 :
+			if len(line) != 9:
 				if HAS_PRINTED < PRINT_LIMIT:
 					print >>sys.stderr, '[WARN] length of {} is not 9'.format(line)
 					HAS_PRINTED += 1
@@ -1426,6 +1426,10 @@ class GffRecord(nx.DiGraph):
 #		print self.id, map(lambda x:x.feature_length, rnas)
 		longest = max(rnas, key=lambda x:x.feature_length.get(type, 0))
 		return longest
+	
+	def get_key_length(self, type='CDS'): # longest
+		longest = self.get_longest_rna(type=type)
+		return longest.feature_length.get(type, 0)
 	@property
 	def UTRs(self):
 		exons, cds = self.feature_regions['exon'], self.feature_regions['CDS']

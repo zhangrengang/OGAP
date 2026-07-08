@@ -49,8 +49,8 @@ rps19	ribosomal protein S19
 sdh3	succinate dehydrogenase subunit 3	
 sdh4	succinate dehydrogenase subunit 4	
 # plant
-rrn18	18S ribosomal RNA	rrn18,18rrn,rrn18S,rrnS
-rrn26	26S ribosomal RNA	rrn26,26rrn,rrn26S,rrnL
+rrnS	small subunit ribosomal RNA	rrn18,18rrn,rrn18S,rrnS
+rrnL	large subunit ribosomal RNA	rrn26,26rrn,rrn26S,rrnL
 rrn5	5S ribosomal RNA	5rrn,rrn5S
 trnA-UGC	tRNA-Ala	tRNA-Ala-UGC
 trnC-GCA	tRNA-Cys	tRNA-Cys-GCA
@@ -121,8 +121,8 @@ ND4		NADH dehydrogenase subunit 4
 ND4L	NADH dehydrogenase subunit 4L
 ND5		NADH dehydrogenase subunit 5
 ND6		NADH dehydrogenase subunit 6
-rrn12	12S ribosomal RNA	rrnS,12S-rRNA,12S-ribosomal-RNA
-rrn16	16S ribosomal RNA	rrnL,16S-rRNA,16S-ribosomal-RNA
+rrnS	small subunit ribosomal RNA	rrnS,rrn12,12S-rRNA,12S-ribosomal-RNA
+rrnL	large subunit ribosomal RNA	rrnL,rrn16,16S-rRNA,16S-ribosomal-RNA
 trnN-guu	tRNA-Asn
 trnP-ugg	tRNA-Pro
 trnR-tcg	tRNA-Arg

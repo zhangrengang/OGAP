@@ -24,13 +24,15 @@
 # For any enquiries send an email to David Emms
 # david_emms@hotmail.com  
 
+from __future__ import absolute_import
+from builtins import str
 import os
 import sys
 import csv
 import gzip
 from scipy import sparse
 
-import util
+from . import util
               
 #def NumberOfSequences(seqsInfo, iSpecies):
 #    return (seqsInfo.seqStartingIndices[iSpecies+1] if iSpecies != seqsInfo.nSpecies-1 else seqsInfo.nSeqs) - seqsInfo.seqStartingIndices[iSpecies] 

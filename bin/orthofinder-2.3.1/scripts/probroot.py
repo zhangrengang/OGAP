@@ -4,6 +4,11 @@ Created on Thu Sep  8 11:00:11 2016
 
 @author: david
 """
+from __future__ import division
+from __future__ import print_function
+from builtins import range
+from builtins import object
+from past.utils import old_div
 import numpy as np
 from scipy.special import beta
  
@@ -189,7 +194,7 @@ class BranchProbModel_corrected(object):
         elif (toA and len(B) == 1) or (not toA and len(A) == 1):
             return 0.
         else:
-            return 0.5*(n-1)/n
+            return old_div(0.5*(n-1),n)
             
 # ===============================================================================================================================
 
@@ -218,14 +223,14 @@ class PoissonModel_IntergrateBranchLenthsSumFP(BranchProbModel_corrected):
         if N == 0:
             return 1.
         alpha = self.a_term if qTerminal else self.a
-        ltp = N/(1+alpha)  # lambda_TP
+        ltp = old_div(N,(1+alpha))  # lambda_TP
         lfp = alpha * ltp  # lambda_FP
         lltp = eln(ltp)
         la = eln(alpha)
         if toM == None:
             ln_pTot = eln(0.)
-            for s in xrange(m+1):
-                for t in xrange(n+1):
+            for s in range(m+1):
+                for t in range(n+1):
                     X = m - s + t
                     Y = n - t + s
                     integral = beta(X+1, Y+1)
@@ -298,14 +303,14 @@ class PoissonModel_WithTeminalModel(BranchProbModel_corrected):
         if N == 0:
             return 1.
         alpha = self.a
-        ltp = N/(1+alpha)  # lambda_TP
+        ltp = old_div(N,(1+alpha))  # lambda_TP
         lfp = alpha * ltp  # lambda_FP
         lltp = eln(ltp)
         la = eln(alpha)
         if toM == None:
             ln_pTot = eln(0.)
-            for s in xrange(m+1):
-                for t in xrange(n+1):
+            for s in range(m+1):
+                for t in range(n+1):
                     X = m - s + t
                     Y = n - t + s
                     integral = beta(X+1, Y+1)
@@ -396,32 +401,32 @@ def GetFinalProbs(biparts, p_cond, tree):
         total += p
         p_final[A] = p
 #        print(p, A, 'final')
-    p_final = {k:(v/total) for k, v in p_final.items()}
+    p_final = {k:(old_div(v,total)) for k, v in list(p_final.items())}
     return p_final
     
 def GetTerminalRates(allSpecies, clades, supported_clusters_counter):
     nAntiTerm = len(allSpecies) - 1
-    termDups = sorted([v for k,v in supported_clusters_counter.items() if len(k) == nAntiTerm], reverse=True)
+    termDups = sorted([v for k,v in list(supported_clusters_counter.items()) if len(k) == nAntiTerm], reverse=True)
     nSp = float(len(allSpecies))
     ntp = sum(termDups[:2]) / 2. 
     nfp = sum(termDups)
     rtp = (ntp + 1)
-    rfp = (nfp + 1)/nSp
+    rfp = old_div((nfp + 1),nSp)
 #    print("Terminal inward rate = %f" % rtp)
 #    print("Terminal inward false-positive rate = %f" % rfp)
     return rtp, rfp, 
     
 def GetAlpha(allSpecies, clades, supported_clusters_counter):
     nSp = len(allSpecies)
-    nTerminal = sum([v for k,v in supported_clusters_counter.items() if (len(k) == 1 or len(k) == nSp-1)])
-    nNonTerminal = sum([v for k,v in supported_clusters_counter.items() if not (len(k) == 1 or len(k) == nSp-1)])
+    nTerminal = sum([v for k,v in list(supported_clusters_counter.items()) if (len(k) == 1 or len(k) == nSp-1)])
+    nNonTerminal = sum([v for k,v in list(supported_clusters_counter.items()) if not (len(k) == 1 or len(k) == nSp-1)])
     contradictions_term = dict()
     contradictions_nonterm = dict()
     for clade in clades:
         clade_p = allSpecies.difference(clade)
         against_term = 0
         against_nonterm = 0
-        for observed, n in supported_clusters_counter.items():
+        for observed, n in list(supported_clusters_counter.items()):
             if (not observed.issubset(clade)) and (not observed.issubset(clade_p)):
                 if len(observed) == 1 or len(allSpecies.difference(observed)) == 1:
                     against_term += n
@@ -454,7 +459,7 @@ def GetProbabilities(species_tree, allSpecies, clades, supported_clusters_counte
     biparts = get_bipartitions(species_tree)
     alpha_nonTerm, alpha_term = GetAlpha(allSpecies, clades, supported_clusters_counter)
     tp_term, fp_term = GetTerminalRates(allSpecies, clades, supported_clusters_counter)
-    probModel = PoissonModel_WithTeminalModel(alpha_nonTerm/10, tp_term, fp_term)
+    probModel = PoissonModel_WithTeminalModel(old_div(alpha_nonTerm,10), tp_term, fp_term)
 #    probModel = PoissonModel_IntergrateBranchLenthsSumFP(alpha_nonTerm/10., alpha_term/10., qExcludeTerminals = True)
     p_cond = GetBranchProbs(supported_clusters_counter, biparts, probModel)
     return GetFinalProbs(biparts, p_cond, species_tree)    

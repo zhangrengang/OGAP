@@ -25,20 +25,29 @@
 # david_emms@hotmail.com 
 
 
+from __future__ import print_function
+from __future__ import absolute_import
+from future import standard_library
+standard_library.install_aliases()
+from builtins import str
+from builtins import map
+from builtins import zip
+from builtins import range
+from builtins import object
 import os
 import sys
 import time
 import numpy as np
 import subprocess
 import datetime
-import Queue
+import queue
 import multiprocessing as mp
 from collections import namedtuple
 
 nAlgDefault = 1
 nThreadsDefault = mp.cpu_count()
 
-import tree, parallel_task_manager
+from . import tree, parallel_task_manager
 
 """
 Utilities
@@ -116,7 +125,7 @@ def Worker_RunCommand(cmd_queue, nProcesses, nToDo, qShell=True, qHideStdout=Tru
             if nDone >= 0 and divmod(nDone, 10 if nToDo <= 200 else 100 if nToDo <= 2000 else 1000)[1] == 0:
                 PrintTime("Done %d of %d" % (nDone, nToDo))
             RunCommand(command, qShell, qHideStdout)
-        except Queue.Empty:
+        except queue.Empty:
             return   
             
 def Worker_RunCommands_And_Move(cmd_and_filename_queue, nProcesses, nToDo, qListOfLists):
@@ -150,7 +159,7 @@ def Worker_RunCommands_And_Move(cmd_and_filename_queue, nProcesses, nToDo, qList
                     actual, target = fns
                     if os.path.exists(actual):
                         os.rename(actual, target)
-        except Queue.Empty:
+        except queue.Empty:
             return               
                             
 def Worker_RunOrderedCommandList(cmd_queue, nProcesses, nToDo, qShell=True, qHideStdout=True):
@@ -166,7 +175,7 @@ def Worker_RunOrderedCommandList(cmd_queue, nProcesses, nToDo, qShell=True, qHid
             if nDone >= 0 and divmod(nDone, 10 if nToDo <= 200 else 100 if nToDo <= 2000 else 1000)[1] == 0:
                 PrintTime("Done %d of %d" % (nDone, nToDo))
             RunOrderedCommandList(commandSet, qShell, qHideStdout)
-        except Queue.Empty:
+        except queue.Empty:
             return   
         
 def RunParallelOrderedCommandLists(nProcesses, commands, qHideStdout = False):
@@ -190,7 +199,7 @@ def ManageQueue(runningProcesses, cmd_queue):
         if runningProcesses.count(None) == len(runningProcesses): break
         time.sleep(2)
 #        for proc in runningProcesses:
-        for i in xrange(nProcesses):
+        for i in range(nProcesses):
             proc = runningProcesses[i]
             if proc == None: continue
             if not proc.is_alive():
@@ -199,7 +208,7 @@ def ManageQueue(runningProcesses, cmd_queue):
                     while True:
                         try:
                             cmd_queue.get(True, 1)
-                        except Queue.Empty:
+                        except queue.Empty:
                             break
                 runningProcesses[i] = None
     if qError:
@@ -214,11 +223,11 @@ def Worker_RunMethod(Function, args_queue):
         try:
             args = args_queue.get(True, 1)
             Function(*args)
-        except Queue.Empty:
+        except queue.Empty:
             return 
 
 def RunMethodParallel(Function, args_queue, nProcesses):
-    runningProcesses = [mp.Process(target=Worker_RunMethod, args=(Function, args_queue)) for i_ in xrange(nProcesses)]
+    runningProcesses = [mp.Process(target=Worker_RunMethod, args=(Function, args_queue)) for i_ in range(nProcesses)]
     for proc in runningProcesses:
         proc.start()
     ManageQueue(runningProcesses, args_queue)
@@ -226,7 +235,7 @@ def RunMethodParallel(Function, args_queue, nProcesses):
 def ExampleRunMethodParallel():
     F = lambda x, y: x**2
     args_queue = mp.Queue()
-    for i in xrange(100): args_queue.put((3,i))
+    for i in range(100): args_queue.put((3,i))
     RunMethodParallel(F, args_queue, 16)
        
 """
@@ -283,7 +292,7 @@ def GetSeqsInfo(inputDirectory, speciesToUse, nSpAll):
     seqStartingIndices = [0]
     nSeqs = 0
     nSeqsPerSpecies = dict()
-    for iFasta in xrange(nSpAll):
+    for iFasta in range(nSpAll):
         fastaFilename = inputDirectory + "Species%d.fa" % iFasta
         n = 0
         with open(fastaFilename) as infile:
@@ -332,7 +341,7 @@ IDExtractor
 """
 
 def GetIDPairFromString(line):
-    return map(int, line.split("_"))
+    return list(map(int, line.split("_")))
 
 class IDExtractor(object):
     """IDExtractor deals with the fact that for different datasets a user will
@@ -524,7 +533,7 @@ def RunParallelCommands(nProcesses, commands, qShell, qHideStdout = False):
     cmd_queue = mp.Queue()
     for i, cmd in enumerate(commands):
         cmd_queue.put((i, cmd))
-    runningProcesses = [mp.Process(target=Worker_RunCommand, args=(cmd_queue, nProcesses, i+1, qShell)) for i_ in xrange(nProcesses)]
+    runningProcesses = [mp.Process(target=Worker_RunCommand, args=(cmd_queue, nProcesses, i+1, qShell)) for i_ in range(nProcesses)]
     for proc in runningProcesses:
         proc.start()
     

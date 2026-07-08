@@ -1,13 +1,22 @@
 #coding: utf-8
+from __future__ import division
+from __future__ import print_function
+from __future__ import absolute_import
+from builtins import str
+from builtins import zip
+from builtins import map
+from builtins import range
+from past.utils import old_div
+from builtins import object
 import sys, os
 import glob
 import itertools
 from Bio import SeqIO
 from Bio import Phylo
 try: from xopen import xopen as open
-except ImportError: from small_tools import open_file as open
+except ImportError: from .small_tools import open_file as open
 from collections import Counter
-from RunCmdsMP import run_cmd, run_job, logger
+from .RunCmdsMP import run_cmd, run_job, logger
 
 def catAln(inALNs, outALN, allow_missing=True):
 	'''首尾相连alignments'''
@@ -42,11 +51,11 @@ def catAln(inALNs, outALN, allow_missing=True):
 	xlens = ','.join(map(str, lens))
 	names = ','.join(names)
 	description = 'taxa:{} genes:{} sites:{} blocks:{} names:{}'.format(ntax, len(lens), sum(lens), xlens, names)
-	for sp, seqs in d_seqs.items():
+	for sp, seqs in list(d_seqs.items()):
 		seqs = ''.join(seqs)
-		print >> outALN, '>{} {}\n{}'.format(sp, description, seqs)
+		print('>{} {}\n{}'.format(sp, description, seqs), file=outALN)
 
-class Group():  # 解析groups.tsv，迭代返回每行
+class Group(object):  # 解析groups.tsv，迭代返回每行
 	def __init__(self, inGrp):
 		self.inGrp = inGrp
 	def __iter__(self):
@@ -78,7 +87,7 @@ class GroupRecord(object): # 解析每行
 		return [len(genes) for genes in self.genes]
 	@property
 	def spdict(self):
-		return dict(zip(self.species, self.genes))
+		return dict(list(zip(self.species, self.genes)))
 	@property
 	def counter(self):
 		return {sp: len(genes) for sp, genes in sorted(self.spdict.items())}
@@ -86,14 +95,14 @@ class GroupRecord(object): # 解析每行
 	@property
 	def singlecopy_ratio(self):
 		singles = [v for v in self.counts if v == 1]
-		return 1.0*len(singles)/len(self.counts)
+		return old_div(1.0*len(singles),len(self.counts))
 	@property
 	def singlecopy_dict(self):
 		return {genes[0]: sp for sp, genes, count in zip(self.species, self.genes, self.counts) if count==1}
 	def _strip(self, values):
 		return [v for v in values if v]
 
-class OrthoMCLGroup():  # 解析groups.txt，迭代返回每行
+class OrthoMCLGroup(object):  # 解析groups.txt，迭代返回每行
 	def __init__(self, inGrp):
 		self.inGrp = inGrp
 	def __iter__(self):
@@ -142,18 +151,18 @@ def to_hybpiper(ResultsDir, cdsSeq=None, outOGSeq=None, species=None, min_single
 		if not og.singlecopy_ratio >= min_singlecopy:
 			continue
 		i += 1
-		for gene, sp in og.singlecopy_dict.items():
+		for gene, sp in list(og.singlecopy_dict.items()):
 			rc = d_seqs[gene]
 			rc.id = '{}-{}'.format(sp.replace('-', '_'), og.id)
 			SeqIO.write(rc, outOGSeq, 'fasta')
 	if only_stats:
-		print >>sys.stderr, '{}\t{}'.format('total', len(ratios))
+		print('{}\t{}'.format('total', len(ratios)), file=sys.stderr)
 		for cutoff in range(50, 105, 5):
-			cutoff = cutoff/1e2
-			ratios = filter(lambda x: x >= cutoff, ratios)
-			print >>sys.stderr, '>={}\t{}'.format(cutoff, len(ratios))
+			cutoff = old_div(cutoff,1e2)
+			ratios = [x for x in ratios if x >= cutoff]
+			print('>={}\t{}'.format(cutoff, len(ratios)), file=sys.stderr)
 		return
-	print >>sys.stderr, '{} OGs'.format(i)
+	print('{} OGs'.format(i), file=sys.stderr)
 def venn(ResultsDir, outTsv, species=None):
 	species = parse_species(species)
 	result = OrthoFinder(ResultsDir)
@@ -165,9 +174,9 @@ def venn(ResultsDir, outTsv, species=None):
 			except KeyError: d_groups[sp] = [ogid]
 	for sp, ogs in sorted(d_groups.items()):
 		line = [sp] + ogs
-		print >> outTsv, '\t'.join(line)
+		print('\t'.join(line), file=outTsv)
 def to_astral(ResultsDir, pepSeq, outTrees, tmpdir='/io/tmp/share', min_singlecopy=0.7):
-	from RunCmdsMP import run_job
+	from .RunCmdsMP import run_job
 	tmpdir = '{}/to_astral.{}'.format(tmpdir, os.getpid())
 	logger.info('change tmpdir to {}'.format(tmpdir))
 	if not os.path.exists(tmpdir):
@@ -182,7 +191,7 @@ def to_astral(ResultsDir, pepSeq, outTrees, tmpdir='/io/tmp/share', min_singleco
 		d_singlecopy = {genes[0]: sp for sp, genes, count in zip(og.species, og.genes, og.counts) if count==1}
 		outSeq = '{}/{}.pep'.format(tmpdir, og.ogid)
 		f = open(outSeq, 'w')
-		for gene, sp in d_singlecopy.items():
+		for gene, sp in list(d_singlecopy.items()):
 			rc = d_seqs[gene]
 			rc.id = sp
 			SeqIO.write(rc, f, 'fasta')
@@ -209,7 +218,7 @@ def to_astral(ResultsDir, pepSeq, outTrees, tmpdir='/io/tmp/share', min_singleco
 			continue
 		for line in open(treefile):
 			outTrees.write(line)
-class OrthoFinder:
+class OrthoFinder(object):
 	def __init__(self, ResultsDir):
 		self.ResultsDir = ResultsDir
 #		self.SpeciesTreeAlignment = '{}/WorkingDirectory/Alignments_ids/SpeciesTreeAlignment.fa'.format(ResultsDir)
@@ -251,7 +260,7 @@ class OrthoFinder:
 		tgz2 = '{}.tgz'.format(xdir.rstrip('/'))
 		if os.path.exists(tgz) and not os.path.exists(fdir):
 			cmd = 'cd {} && tar xzf {}'.format(self.ResultsDir, tgz2)
-			print >>sys.stderr, cmd
+			print(cmd, file=sys.stderr)
 			run_cmd(cmd)
 	def Single_Copy_Codon_Align(self, cdsSeqs, tmpdir='/tmp'):
 		'''生成单拷贝OG的密码子比对'''
@@ -276,7 +285,7 @@ class OrthoFinder:
 			cmd = 'pal2nal.pl -output fasta {} {} > {} 2> /dev/null'.format(pepAln, cdsSeq, cdsAln)
 			os.system(cmd)
 			if os.path.getsize(cdsSeq) >0 and os.path.getsize(cdsAln) == 0:
-				print >> sys.stderr, 'Error in CMDS `{}`'.format(cmd) 
+				print('Error in CMDS `{}`'.format(cmd), file=sys.stderr) 
 				continue
 			cdsTrim = cdsAln + '.trimal'
 			cmd = 'trimal -gt 0.8 -in {} -out {} &> /dev/null'.format(cdsAln, cdsTrim)
@@ -335,7 +344,7 @@ class OrthoFinder:
 	@property
 	def reverse_SpeciesIDdict(self):
 		'''物种名称和新编id的字典'''
-		return dict([(spName, id) for id, spName in self.SpeciesIDdict.items()])
+		return dict([(spName, id) for id, spName in list(self.SpeciesIDdict.items())])
 	def spName2Id(self, *sps):
 		'''获取指定物种的新编id'''
 		d_sp = self.reverse_SpeciesIDdict
@@ -373,7 +382,7 @@ class OrthoFinder:
 				d_genes[gene] = od_id
 		all_sp_genes = set(all_sp_genes)
 		sp_id0 = self.reverse_SpeciesIDdict[sp]
-		for seq_id, gene in self.SequenceIDdict.items():
+		for seq_id, gene in list(self.SequenceIDdict.items()):
 			sp_id, sid = seq_id.split('_')
 			if sp_id == sp_id0 and gene not in all_sp_genes:
 				d_genes[gene] = None
@@ -408,8 +417,8 @@ class OrthoFinder:
 				continue
 			Genes_1 = Genes_1.split(', ')
 			Genes_2 = Genes_2.split(', ')
-			Genes_1 = map(gene_format_p, Genes_1)
-			Genes_2 = map(gene_format_p, Genes_2)
+			Genes_1 = list(map(gene_format_p, Genes_1))
+			Genes_2 = list(map(gene_format_p, Genes_2))
 			for (sp1, g1), (sp2, g2) in itertools.product(Genes_1, Genes_2):
 				if sp1 == sp2:
 					if sp is not None and sp != sp1:
@@ -439,8 +448,8 @@ class OrthoFinder:
 				Orthogroup, Genes_1, Genes_2 = temp
 				Genes_1 = Genes_1.split(', ')
 				Genes_2 = Genes_2.split(', ')
-				Genes_1 = map(gene_format_o, Genes_1)
-				Genes_2 = map(gene_format_o, Genes_2)
+				Genes_1 = list(map(gene_format_o, Genes_1))
+				Genes_2 = list(map(gene_format_o, Genes_2))
 				for Genes in [Genes_1, Genes_2]:
 					if len(Genes) < 2:
 						continue
@@ -489,8 +498,8 @@ class OrthoFinder:
 				Orthogroup, Genes_1, Genes_2 = temp
 				Genes_1 = Genes_1.split(', ')
 				Genes_2 = Genes_2.split(', ')
-				Genes_1 = map(gene_format_o, Genes_1)
-				Genes_2 = map(gene_format_o, Genes_2)
+				Genes_1 = list(map(gene_format_o, Genes_1))
+				Genes_2 = list(map(gene_format_o, Genes_2))
 				for (sp1, g1), (sp2, g2) in itertools.product(Genes_1, Genes_2):
 					assert sp1 != sp2
 					if (g2, g1) in ortho_pairs:
@@ -548,7 +557,7 @@ class OrthoFinder:
 				root = clade
 				break
 		else:
-			print >>sys.stderr, 'root {} is not found'.format(root)
+			print('root {} is not found'.format(root), file=sys.stderr)
 		tree.root_with_outgroup(root)
 		Phylo.write(tree, out_treefile, fmt)
 	def get_aln_len(self, alnfile, fmt='fasta'):
@@ -580,7 +589,7 @@ def to_paml(OFdir, outDir, cdsSeq):
 #			break
 		groups += [select_genes_bytree(genes, d_seqs, j)]
 #	return
-	print 'total {} groups, shared {}, single copy {}'.format(i, j, s)
+	print('total {} groups, shared {}, single copy {}'.format(i, j, s))
 	i = 0
 	d_cds = seq2dict(cdsSeq)
 	outGroup = '{}/groups.txt'.format(outDir)
@@ -588,7 +597,7 @@ def to_paml(OFdir, outDir, cdsSeq):
 	for group in groups:
 		i += 1
 		og = 'OG_{}'.format(i)
-		print >>f, '{}: {}'.format(og, ' '.join(group))
+		print('{}: {}'.format(og, ' '.join(group)), file=f)
 		outSeq = '{}/{}.pep'.format(outDir, og)
 		outCds = '{}/{}.cds'.format(outDir, og)
 		f1 = open(outSeq, 'w')
@@ -619,14 +628,14 @@ def select_genes_bytree(genes, d_seqs, i):
 			rc.id = rc.id.replace('|', '-')
 			SeqIO.write(rc, f, 'fasta')
 	alnSeq = outSeq + '.aln'
-	print "if [ $SGE_TASK_ID -eq {} ]; then".format(i)
+	print("if [ $SGE_TASK_ID -eq {} ]; then".format(i))
 	cmd = 'mafft --auto {} > {} 2> /dev/null'.format(outSeq, alnSeq)
-	print cmd
+	print(cmd)
 #	os.system(cmd)
 	cmd = 'iqtree -s {} -pre {} -nt AUTO &> /dev/null'.format(alnSeq,alnSeq)
 #	os.system(cmd)
-	print cmd
-	print 'fi'
+	print(cmd)
+	print('fi')
 #	return
 	treefile = alnSeq + '.treefile'
 	d_dist = {}
@@ -658,10 +667,10 @@ def select_genes_bytree(genes, d_seqs, i):
 		dist = tree.distance(gene1,node0)
 		try: d_dist[sp1][gene0] = dist
 		except KeyError: d_dist[sp1] = {gene0: dist}
-	for sp, d_sp_dist in d_dist.items():
-		node = min(d_sp_dist.keys(), key=lambda x:d_sp_dist[x])
+	for sp, d_sp_dist in list(d_dist.items()):
+		node = min(list(d_sp_dist.keys()), key=lambda x:d_sp_dist[x])
 		nodes += [node]
-	print sorted(genes),sorted(nodes)
+	print(sorted(genes),sorted(nodes))
 	return nodes
 def single_copy_cds_align(OFdir, cdsSeqs, outALN, tmpdir='./tmp'):
 	'''首尾连接单拷贝的CDS alignment'''
@@ -688,7 +697,7 @@ def cafe_count(OFdir, outCount):
 		if i == 1:
 			species = temp[1:]
 			line = ['Desc', 'Family ID'] + species
-			print >> outCount, '\t'.join(line)
+			print('\t'.join(line), file=outCount)
 			continue
 		ogId = temp[0]
 		group = temp[1:]
@@ -696,14 +705,14 @@ def cafe_count(OFdir, outCount):
 		#if ogId == 'OG0000008':
 		#	print ogId, group, count
 		line = ['(null)', ogId] + count
-		line = map(str, line)
-		print >> outCount, '\t'.join(line)
+		line = list(map(str, line))
+		print('\t'.join(line), file=outCount)
 def species_specific_genes(OFdir, sp, outTsv):
 	'''物种特有基因'''
 	result = OrthoFinder(OFdir)
-	print >> outTsv, '\t'.join(['gene', 'group'])
-	for gene, group in result.get_species_specific(sp).items():
-		print >> outTsv, '\t'.join([gene.split('|')[1], str(group)])
+	print('\t'.join(['gene', 'group']), file=outTsv)
+	for gene, group in list(result.get_species_specific(sp).items()):
+		print('\t'.join([gene.split('|')[1], str(group)]), file=outTsv)
 	
 def bootstrap_species_tree(OFdir, outdir, bootstrap=1000, iqtree_options='-mset JTT'):
 	'''重新用iqtree建树'''
@@ -719,11 +728,11 @@ def bootstrap_species_tree(OFdir, outdir, bootstrap=1000, iqtree_options='-mset 
 #	print >>sys.stderr, 'alignments have {} sites'.format(result.get_aln_len(new_msa))
 	root = result.get_root(result.SpeciesTree_rooted)
 	cmd = "iqtree -s {} -pre {} -bb {} -bnni -nt AUTO  {} -o {} > /dev/null".format(new_msa, prefix, bootstrap, iqtree_options, root)
-	print >>sys.stderr, 'running cmd: {}'.format(cmd)
+	print('running cmd: {}'.format(cmd), file=sys.stderr)
 	os.system(cmd)
 	new_treefile = '{}.treefile'.format(prefix)
 	new_treefile_rooted = '{}.rooted.tre'.format(prefix)
-	print >>sys.stderr, 're-root with {}'.format(root)
+	print('re-root with {}'.format(root), file=sys.stderr)
 	#result.re_root(new_treefile, root, new_treefile_rooted)
 	cmd = 'nw_reroot {} {} > {}'.format(new_treefile, root, new_treefile_rooted)
 	os.system(cmd)
@@ -746,12 +755,12 @@ def singlecopy_tree(OFdir, outdir, bootstrap=1000, iqtree_options='-mset JTT'):
 def get_singlecopy_orthologs(OFdir, outHomo, **kargs):
 	result = OrthoFinder(OFdir)
 	for genes in result.get_singlecopy_orthologs(**kargs):
-		print >> outHomo, '\t'.join(genes)
+		print('\t'.join(genes), file=outHomo)
 def get_orthologs(OFdir, outHomo, **kargs):
 	result = OrthoFinder(OFdir)
 	for g1, g2 in result.get_orthologs(**kargs):
 		line = [g1, g2]
-		print >> outHomo, '\t'.join(line)
+		print('\t'.join(line), file=outHomo)
 	return 
 	orthoFiles = result.Orthologues
 	idx = 0
@@ -766,13 +775,13 @@ def get_orthologs(OFdir, outHomo, **kargs):
 			Orthogroup, Genes_1, Genes_2 = temp
 			Genes_1 = Genes_1.split(', ')
 			Genes_2 = Genes_2.split(', ')
-			Genes_1 = map(gene_format_o, Genes_1)
-			Genes_2 = map(gene_format_o, Genes_2)
+			Genes_1 = list(map(gene_format_o, Genes_1))
+			Genes_2 = list(map(gene_format_o, Genes_2))
 			info = '%s.%s.%s' % (Orthogroup, idx, i-1)
 			for (sp1, g1), (sp2, g2) in itertools.product(Genes_1, Genes_2):
 				if sp1 != sp2:
 					line = [g1, g2, info]
-					print >> outHomo, '\t'.join(line)
+					print('\t'.join(line), file=outHomo)
 def gene_format_o(gene):
 	sp, g = gene.split('|')
 	return (sp, gene)
@@ -791,18 +800,18 @@ def get_paralogs(OFdir, outHomo, min_support=0.5):
 			continue
 		Genes_1 = Genes_1.split(', ')
 		Genes_2 = Genes_2.split(', ')
-		Genes_1 = map(gene_format_p, Genes_1)
-		Genes_2 = map(gene_format_p, Genes_2)
+		Genes_1 = list(map(gene_format_p, Genes_1))
+		Genes_2 = list(map(gene_format_p, Genes_2))
 		info = [Orthogroup, Species_Trer_Node, Gene_Tree_Node, Support, Type]
-		info = map(str, info)
+		info = list(map(str, info))
 		info = '_'.join(info)
 		for (sp1, g1), (sp2, g2) in itertools.product(Genes_1, Genes_2):
 			if sp1 == sp2:
 				line = [g1, g2, info]
-				print >> outHomo, '\t'.join(line)
+				print('\t'.join(line), file=outHomo)
 def gene_format_p(gene):
 	sp, g = gene.split('|')
-	sp = sp[:len(sp)/2]
+	sp = sp[:old_div(len(sp),2)]
 	g = sp + '|' + g
 	return (sp, g)
 def gene_format_common(gene):
@@ -810,8 +819,8 @@ def gene_format_common(gene):
 		sp, g = gene, gene
 		return (sp, g)
 	sp, g = gene.split('|')
-	sp1 = sp[:len(sp)/2]
-	sp2 = sp[len(sp)/2+1:]
+	sp1 = sp[:old_div(len(sp),2)]
+	sp2 = sp[old_div(len(sp),2)+1:]
 	if sp1 == sp2:
 		sp = sp1
 		g = sp + '|' + g
@@ -830,14 +839,14 @@ def MCScanX_transposed(OFdir, tsp, cspp, spmap, gff, datadir='data', outdir='res
 		prepare_gff(gff, t_gff, [tsp], d_spmap)
 		os.mknod(checkpoint)
 	else:
-		print 'checkpoint: %s exists, skipping prepare %s' % (checkpoint, t_gff)
+		print('checkpoint: %s exists, skipping prepare %s' % (checkpoint, t_gff))
 
 	t_blast = '%s/%s.blast' % (datadir, t_abr)
 	d_geneIds = {}
 	checkpoint = t_blast + '.ok'
 	if not os.path.exists(checkpoint):
 		d_geneIds = result.SequenceIDdict
-		print d_geneIds.items()[:10]
+		print(list(d_geneIds.items())[:10])
 		blast_files = result.get_blast_files(tsp, tsp)
 		pairs = result.get_paralogs(tsp)
 		outHomo = '%s/%s.homology' % (datadir, t_abr)
@@ -845,7 +854,7 @@ def MCScanX_transposed(OFdir, tsp, cspp, spmap, gff, datadir='data', outdir='res
 		prepare_blast(tsp, tsp, pairs, d_geneIds, blast_files, t_blast)
 		os.mknod(checkpoint)
 	else:
-		print 'checkpoint: %s exists, skipping prepare %s' % (checkpoint, t_blast)
+		print('checkpoint: %s exists, skipping prepare %s' % (checkpoint, t_blast))
 
 	# prepare c-t.gff, c-t.blast
 	for csp in cspp:
@@ -856,7 +865,7 @@ def MCScanX_transposed(OFdir, tsp, cspp, spmap, gff, datadir='data', outdir='res
 			prepare_gff(gff, c_gff, [tsp,csp], d_spmap)
 			os.mknod(checkpoint)
 		else:
-			print 'checkpoint: %s exists, skipping prepare %s' % (checkpoint, c_gff)
+			print('checkpoint: %s exists, skipping prepare %s' % (checkpoint, c_gff))
 
 		c_blast = '%s/%s_%s.blast' % (datadir, t_abr, c_abr)
 		checkpoint = c_blast + '.ok'
@@ -870,14 +879,14 @@ def MCScanX_transposed(OFdir, tsp, cspp, spmap, gff, datadir='data', outdir='res
 			prepare_blast(tsp, csp, pairs, d_geneIds, blast_files, c_blast)
 			os.mknod(checkpoint)
 		else:
-			print 'checkpoint: %s exists, skipping prepare %s' % (checkpoint, c_blast)
+			print('checkpoint: %s exists, skipping prepare %s' % (checkpoint, c_blast))
 	# run
 	c_abrs = ','.join([d_spmap[csp] for csp in cspp])
 	suffix = '_'.join([d_spmap[sp] for sp in [tsp]+cspp])
 	outdir += '.' + suffix
 	log = 'run_%s.log' % (suffix,)
 	cmd = 'MCScanX_h-transposed.pl -i %s -t %s -c %s -o %s -x %s &> %s' % (datadir, t_abr, c_abrs, outdir, len(cspp), log)
-	print 'CMD: %s' % cmd
+	print('CMD: %s' % cmd)
 	os.system(cmd)
 	outcount = 'run_%s.count.xls' % (suffix,)
 	count_mcscan(t_abr, outdir, outcount)
@@ -894,12 +903,12 @@ def count_mcscan(t_abr, outdir, outcount):
 			temp = line.split()
 			g1, g2 = temp[0], temp[2]
 			line = [g1, g2, Type]
-			print >> outf, '\t'.join(line)
+			print('\t'.join(line), file=outf)
 	pairType = outdir + '.pair.class'
 	f1 = open(pairType, 'w')
 	f = open(outcount, 'w')
 	line = ['mode', 'genes', 'pairs']
-	print >>f, '\t'.join(line)
+	print('\t'.join(line), file=f)
 	for type in ['proximal', 'segmental', 'tandem', 'transposed']:
 		genes = '%s/%s.%s.genes' % (outdir, t_abr, type)
 		pairs = '%s/%s.%s.pairs' % (outdir, t_abr, type)
@@ -907,8 +916,8 @@ def count_mcscan(t_abr, outdir, outcount):
 		gene_num = _count(genes)
 		pair_num = _count(pairs)
 		line = [type, gene_num, pair_num]
-		line = map(str, line)
-		print >>f, '\t'.join(line)
+		line = list(map(str, line))
+		print('\t'.join(line), file=f)
 	for enope in ['after', 'between']:
 		genesx, pairsx = glob.glob('{}/{}.transposed_{}_*.genes'.format(outdir, t_abr, enope)), \
 						 glob.glob('{}/{}.transposed_{}_*.pairs'.format(outdir, t_abr, enope))
@@ -920,17 +929,17 @@ def count_mcscan(t_abr, outdir, outcount):
 			gene_num = _count(genes)
 			pair_num = _count(pairs)
 			line = [type1, gene_num, pair_num]
-			line = map(str, line)
-			print >>f, '\t'.join(line)
+			line = list(map(str, line))
+			print('\t'.join(line), file=f)
 	f1.close()
 	f.close()
 def write_homo(pairs, outHomo):
 	f = open(outHomo, 'w')
 	for line in pairs:
-		print >>f, '\t'.join(line)
+		print('\t'.join(line), file=f)
 	f.close()
 def prepare_blast(sp01, sp02, pairs, d_geneIds, blast_files, outblast):
-	print 'extract blast of {} from {}'.format([sp01, sp02], blast_files)
+	print('extract blast of {} from {}'.format([sp01, sp02], blast_files))
 	sp0x = sorted([sp01, sp02])
 	gene_pair_set = pairs
 
@@ -948,12 +957,12 @@ def prepare_blast(sp01, sp02, pairs, d_geneIds, blast_files, outblast):
 				elif (g1, g2) not in d_blast:
 					d_blast[(g1, g2)] = [temp, bscore]
 	f = open(outblast, 'w')
-	for key, (temp, bscore) in d_blast.items():
-		print >>f, '\t'.join(temp)
+	for key, (temp, bscore) in list(d_blast.items()):
+		print('\t'.join(temp), file=f)
 	f.close()
 
 def prepare_gff(inGff, outGff, spp, d_spmap):
-	print 'extract gff of {} from {}'.format(spp, inGff)
+	print('extract gff of {} from {}'.format(spp, inGff))
 	spp = set(spp)
 	f = open(outGff, 'w')
 	for line in open(inGff):
@@ -977,16 +986,16 @@ def get_unique_logs(OFdir, outPrefix=''):
 	out_para3 = '{}inparalogs3.txt'.format(outPrefix)
 	with open(out_orth, 'w') as f:
 		for g1, g2 in result.get_orthologs():
-			print >>f, '\t'.join([g1, g2])
+			print('\t'.join([g1, g2]), file=f)
 	with open(out_para, 'w') as f:
 		for g1, g2 in result.get_paralogs():
-			print >>f, '\t'.join([g1, g2])
+			print('\t'.join([g1, g2]), file=f)
 	with open(out_para2, 'w') as f:
 		for g1, g2 in result.get_paralogs2():
-			print >>f, '\t'.join([g1, g2])
+			print('\t'.join([g1, g2]), file=f)
 	with open(out_para3, 'w') as f:
 		for g1, g2 in result.get_paralogs3():
-			print >>f, '\t'.join([g1, g2])
+			print('\t'.join([g1, g2]), file=f)
 def aln2beast(inALN, outNEX, partify=True):
 	import re
 	i = 0
@@ -1007,39 +1016,39 @@ def aln2beast(inALN, outNEX, partify=True):
 			try:
 				blocks = re.compile(r'blocks:(.*)').search(desc).groups()[0]
 				partitions = re.compile(r'(\d+)').findall(blocks)
-				partitions = map(int, partitions)
+				partitions = list(map(int, partitions))
 			except:
 				partitions = []
 			assert len(partitions) == int(genes)
-			print >> outNEX, '''#NEXUS
+			print('''#NEXUS
 begin data;
 dimensions ntax={ntax} nchar={nchar};
 format datatype={datatype} interleave=no gap=-;
-matrix'''.format(ntax=ntax, nchar=sites, datatype=datatype)
-		print >> outNEX, '{id}\t{seq}'.format(id=rc.id, seq=rc.seq)
-	print >> outNEX, ''';
-end;'''
+matrix'''.format(ntax=ntax, nchar=sites, datatype=datatype), file=outNEX)
+		print('{id}\t{seq}'.format(id=rc.id, seq=rc.seq), file=outNEX)
+	print(''';
+end;''', file=outNEX)
 	if partify and partitions:
-		print >> outNEX, 'begin assumptions;'
+		print('begin assumptions;', file=outNEX)
 		last_start = 1
 		i = 0
 		for partition in partitions:
 			i +=1
 			end = last_start + partition-1
-			print >> outNEX, '	charset part{part} = {start}-{end};'.format(part=i, start=last_start, end=end)
+			print('	charset part{part} = {start}-{end};'.format(part=i, start=last_start, end=end), file=outNEX)
 			last_start = end + 1
 		assert end == int(sites)
-		print >> outNEX, 'end;'
+		print('end;', file=outNEX)
 
 def guess_seqtype(seq, gap='-'):
 	char_count = Counter(seq.upper())
-	print >>sys.stderr, char_count
+	print(char_count, file=sys.stderr)
 	nACTG = sum([char_count.get(char, 0) for char in 'ACTG'])
 	nACUG = sum([char_count.get(char, 0) for char in 'ACUG'])
 	gap = char_count.get('-', 0)
-	if 1e2*nACTG / (len(seq)-gap) > 80:
+	if old_div(1e2*nACTG, (len(seq)-gap)) > 80:
 		return 'dna'
-	elif 1e2*nACUG / (len(seq)-gap) > 80:
+	elif old_div(1e2*nACUG, (len(seq)-gap)) > 80:
 		return 'rna'
 	else:
 		return 'protein'
@@ -1110,7 +1119,7 @@ def main():
 		try: sp1, sp2 =sys.argv[3:5]
 		except: sp1, sp2 = None, None
 		outHomo = sys.stdout
-		print >> sys.stderr, OFdir, sp1, sp2
+		print(OFdir, sp1, sp2, file=sys.stderr)
 		get_singlecopy_orthologs(OFdir, outHomo, sp1=sp1, sp2=sp2)
 	elif subcommand == 'to_astral': # 生成单拷贝基因树【润楠】
 		OFdir=sys.argv[2]

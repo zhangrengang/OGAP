@@ -1,3 +1,11 @@
+from __future__ import division
+from __future__ import print_function
+from __future__ import absolute_import
+from builtins import str
+from builtins import map
+from builtins import zip
+from past.utils import old_div
+from builtins import object
 import sys
 import itertools
 import copy
@@ -7,8 +15,10 @@ try:
 except ImportError:
 	inf = float("inf")
 from lazy_property import LazyWritableProperty as lazyproperty
-from Gff import GffLine, GtfExons
-from get_record import get_records
+from .Gff import GffLine, GtfExons
+from .get_record import get_records
+# 临时调用
+import sys
 
 class HmmSearch(object):
 	def __init__(self, hmmout, hmmfmt='domtbl'):
@@ -53,31 +63,36 @@ class HmmSearch(object):
 			hit.convert_to_nucl_coord(d_length, seq_type=seq_type)
 	#		print >>sys.stderr, hit.nucl_hit
 			graph.add_node(hit)
-		print >>sys.stderr, 'Contained nodes:'
+		print('Contained nodes:', file=sys.stderr)
 		graph.prune_contained(min_cov=min_contained_cov)
 		graph.link_nodes()
-		print >>sys.stderr, 'Nodes:'
+		print('Nodes:', file=sys.stderr)
+		print('【DEBUG link_nodes之后边数量】', len(graph.edges()), file=sys.stderr)
 		for node in sorted(graph.nodes(), key=lambda x: x.hmmcoord):
-			print >>sys.stderr, node.short
-		print >>sys.stderr, 'Edges:'
+			print(node.short, file=sys.stderr)
+		print('Edges:', file=sys.stderr)
 		for n1, n2 in sorted(graph.edges(), key=lambda x: (x[0].hmmcoord, x[1].hmmcoord)):
-			print >>sys.stderr, n1.short, '-',  n2.short, graph[n1][n2]['dist']
+			print(n1.short, '-',  n2.short, graph[n1][n2]['dist'], file=sys.stderr)
 		graph.prune_graph()
+		print('【DEBUG prune_graph之后边数量】', len(graph.edges()), file=sys.stderr)
 		graph.break_circle()
+
+		graph.compute_sources_targets()
+
 	#	print >>sys.stderr, graph.nodes()
 
-		print >>sys.stderr, 'after pruned:'
+		print('after pruned:', file=sys.stderr)
 		for n1, n2 in sorted(graph.edges(), key=lambda x: (x[0].hmmcoord, x[1].hmmcoord)):
-			print >>sys.stderr, n1.short, '-',  n2.short
+			print(n1.short, '-',  n2.short, file=sys.stderr)
 
 		hmmcovs = []
 		copies = []
 		for path in graph.linearize_path():
 	#		print >>sys.stderr, 'path:', path
 			if path.hmmcov < min_cov:
-				print >>sys.stderr, 'discarded path for low coverage:', path
+				print('discarded path for low coverage:', path, file=sys.stderr)
 				continue
-			print >>sys.stderr, path, len(path.group_nodes()), path.hmmcov
+			print(path, len(path.group_nodes()), path.hmmcov, file=sys.stderr)
 			parts = path.get_parts(d_length, flank=flank)
 		#	print >>sys.stderr, parts
 #			seq = parts.combine_seq()
@@ -90,7 +105,7 @@ class HmmSearch(object):
 			cov_cutoff = max_hmmcov * min_ratio
 			best_copies = [parts for parts, hmmcov in zip(copies, hmmcovs) \
 								if not hmmcov < max_hmmcov*0.99]
-			min_part_number = min(map(len, best_copies))
+			min_part_number = min(list(map(len, best_copies)))
 
 			i = 0
 			for parts, hmmcov in sorted(zip(copies, hmmcovs), key=lambda x:-x[1]):
@@ -104,7 +119,7 @@ class HmmSearch(object):
 		#		print >>sys.stderr, min_part_number, parts
 				yield parts		# maybe multi-copy
 
-class HmmPath():
+class HmmPath(object):
 	def __init__(self, path):
 		self.path = path
 	def __iter__(self):
@@ -159,8 +174,8 @@ class HmmPath():
 	@property
 	def hmmcov(self):
 		first, last = self.path[0], self.path[-1]
-		return 1e2* (last.hmmend - first.hmmstart +1) / first.hmm_length
-class SeqParts():
+		return old_div(1e2* (last.hmmend - first.hmmstart +1), first.hmm_length)
+class SeqParts(object):
 	def __init__(self, parts):
 		self.parts = parts
 	def __iter__(self):
@@ -187,10 +202,10 @@ class SeqParts():
 		try:
 			blocks = [len(part) for part in self]
 		except ValueError:
-			print >> sys.stderr, [str(part) for part in self]
+			print([str(part) for part in self], file=sys.stderr)
 
 		desc = blocks
-		print >> fout, '>{} {}\n{}'.format(self, desc, seq)
+		print('>{} {}\n{}'.format(self, desc, seq), file=fout)
 	def merge(self):
 		starts  = [part.start  for part in self]
 		ends    = [part.end    for part in self]
@@ -242,7 +257,7 @@ class SeqParts():
 			replace = {}
 			for part1, part2 in itertools.combinations(parts, 2):
 				if part1.overlaps(part2):
-					print >>sys.stderr, '{} overlaps {}'.format(part1, part2)
+					print('{} overlaps {}'.format(part1, part2), file=sys.stderr)
 					i += 1
 					if len(part1) >= len(part2):
 						remove += [part2]
@@ -303,7 +318,7 @@ class SeqParts():
 				elif end >= exon.start > start and exon.end > end:
 					# |-----|----	# part
 					#     -----		# exon
-					print >>sys.stderr, 'here'
+					print('here', file=sys.stderr)
 					if part.strand == '-':
 						exon.start = part.start+1	#part.end
 						exon.end = part.start + end - exon_start +1
@@ -367,7 +382,7 @@ class SeqParts():
 				exons += [exon]
 		return GtfExons(exons)
 
-class SeqPart():
+class SeqPart(object):
 	'''Segment'''
 	def __init__(self, seqid, start, end, strand, seq=None):	# 0-based
 		self.seqid = seqid
@@ -389,7 +404,7 @@ class SeqPart():
 			return False
 		return max(0, min(self.end, other.end)-max(self.start, other.start))
 
-class HmmSearchDomHit:
+class HmmSearchDomHit(object):
 	def __init__(self, line):
 		self.line = line.strip().split()
 		self.title = ['tname', 'tacc', 'tlen', 'qname', 'qacc', 'qlen',
@@ -418,10 +433,10 @@ class HmmSearchDomHit:
 		return False
 	@property
 	def edit_score(self):
-		return self.full_score * (1.0*(self.qlen- abs(self.tlen-self.qlen)) / self.qlen)
+		return self.full_score * (old_div(1.0*(self.qlen- abs(self.tlen-self.qlen)), self.qlen))
 	@property
 	def hmmcov(self):
-		return round(1e2*(self.hmmend - self.hmmstart + 1) / self.hmm_length, 1)
+		return round(old_div(1e2*(self.hmmend - self.hmmstart + 1), self.hmm_length), 1)
 	@property
 	def hmmcovlen(self):
 		return self.hmmend - self.hmmstart + 1
@@ -430,7 +445,7 @@ class HmmSearchDomHit:
 		return (self.tname, self.qname, self.hmmstart, self.hmmend, self.alnstart, self.alnend)
 	def contained(self, other):
 		if other.hmmstart >= self.hmmstart and other.hmmend <= self.hmmend:
-			return 1.0*other.hmmcovlen / self.hmmcovlen
+			return old_div(1.0*other.hmmcovlen, self.hmmcovlen)
 		return 2
 	def link_hits(self, other, max_dist=60, min_ovl=-60, min_flank_dist=2):
 		'''--->	 self
@@ -569,31 +584,40 @@ class HmmStructueGraph(DiGraph):
 		for hit1, hit2 in itertools.combinations(self.nodes(), 2):
 			dist_12 = hit1.link_hits(hit2)
 			dist_21 = hit2.link_hits(hit1)
+			#print(f"[LINKDBG] {hit1.short}->{hit2.short} dist={dist_12}, {hit2.short}->{hit1.short} dist={dist_21}", file=sys.stderr)
+
 			#print >>sys.stderr, hit1.short, hit2.short, dist_12, dist_21
 			if not dist_12 is False:
 				self.add_edge(hit1, hit2, dist=dist_12)
+				#print(f"  ADD edge {hit1.short} -> {hit2.short}", file=sys.stderr)
+				
 			if not dist_21 is False:
 				self.add_edge(hit2, hit1, dist=dist_21)
+				#print(f"  ADD edge {hit2.short} -> {hit1.short}", file=sys.stderr)
+
 	def prune_contained(self, min_cov=0.6):
 		tobe_removed = set([])
 		for hit1, hit2 in itertools.combinations(self.nodes(), 2):
 			if hit1.contained(hit2) < min_cov:
-				print >>sys.stderr, hit1.short, '-',  hit2.short
+				print(hit1.short, '-',  hit2.short, file=sys.stderr)
 				tobe_removed.add(hit2)
 			elif hit2.contained(hit1) < min_cov:
-				print >>sys.stderr, hit2.short, '-',  hit1.short
+				print(hit2.short, '-',  hit1.short, file=sys.stderr)
 				tobe_removed.add(hit1)
 		
 		for node in tobe_removed:
 			self.remove_node(node)
+
 	def break_circle(self):
 		for circle in nx.simple_cycles(self):
-#			print circle
+			# print(circle)
 			sg = self.subgraph(circle)
-			max_dist_edge = max(sg.edges(), key=lambda x: sg.get_edge_data(*x))
+			# 重点修改：取出dist数值用于比较
+			max_dist_edge = max(sg.edges(), key=lambda x: sg.get_edge_data(*x)['dist'])
 			n1, n2 = max_dist_edge
-			print >>sys.stderr, 'break circle', n1.short, '-',  n2.short
+			print('break circle', n1.short, '-', n2.short, file=sys.stderr)
 			self.remove_edge(*max_dist_edge)
+
 	def prune_graph(self):
 		# remove bridged edge
 		for node in self.nodes():
@@ -603,7 +627,7 @@ class HmmStructueGraph(DiGraph):
 				if self.has_edge(predecessor, successor):
 					self.remove_edge(predecessor, successor)
 					n1, n2 = predecessor, successor
-					print >>sys.stderr, 'remove bridged edge:', n1.short, '-',  n2.short
+					print('remove bridged edge:', n1.short, '-',  n2.short, file=sys.stderr)
 		# remove distant edge
 		for node in self.nodes():
 			predecessors = set(self.predecessors(node))
@@ -632,7 +656,7 @@ class HmmStructueGraph(DiGraph):
 #			print >>sys.stderr, products, distances, combinations
 			if not distances:
 				continue
-			min_dist, combination = min(zip(distances, combinations), key=lambda x:x[0])
+			min_dist, combination = min(list(zip(distances, combinations)), key=lambda x:x[0])
 			if min_dist == inf:
 				continue
 			for edge in products:
@@ -640,17 +664,50 @@ class HmmStructueGraph(DiGraph):
 					continue
 				self.remove_edge(*edge)
 				n1, n2 = edge
-				print >>sys.stderr, 'remove distant edge:', n1.short, '-',  n2.short
+				print('remove distant edge:', n1.short, '-',  n2.short, file=sys.stderr)
+
+	def compute_sources_targets(self):
+		nodes = list(self.nodes())
+		if not nodes:
+			self._sources = []
+			self._targets = []
+			return
+		# 强制int规避浮点 != 整数匹配失效问题
+		min_start = int(min(n.hmmstart for n in nodes))
+		self._sources = [n for n in nodes if int(n.hmmstart) == min_start]
+
+		max_end = int(max(n.hmmend for n in nodes))
+		self._targets = [n for n in nodes if int(n.hmmend) == max_end]
+
 	def linearize_path(self):
-		for source, target in itertools.product(self.sources, self.targets):
-			for path in nx.all_simple_paths(self, source, target):
-				yield HmmPath(path)
+		import sys, itertools
+		# 有向图使用弱连通分量，按连通块独立寻路
+		for comp_nodes in nx.weakly_connected_components(self):
+			subg = self.subgraph(comp_nodes).copy()
+			subg.compute_sources_targets()
+			sub_sources = subg._sources
+			sub_targets = subg._targets
+
+			print("[DEBUG comp] sources =", [n.short for n in sub_sources], file=sys.stderr)
+			print("[DEBUG comp] targets =", [n.short for n in sub_targets], file=sys.stderr)
+
+			for source, target in itertools.product(sub_sources, sub_targets):
+				print(f"[DEBUG] try path: {source.short} → {target.short}", file=sys.stderr)
+				for path in nx.all_simple_paths(subg, source, target):
+					print(f"[DEBUG] found path length {len(path)}", file=sys.stderr)
+					yield HmmPath(path)
+		# 兜底：生成完全孤立无边节点的单节点路径
+		# 单点连通分量all_simple_paths无法产出，依靠此处补充
 		for node in self.nodes():
-			if not self.predecessors(node) and  not self.successors(node):
+			preds = list(self.predecessors(node))
+			succs = list(self.successors(node))
+			if len(preds) == 0 and len(succs) == 0:
+				print(f"[DEBUG] isolated node {node.short}", file=sys.stderr)
 				yield HmmPath([node])
+
 	def cluster_genes(self):
 		pass
-class ExcludeProduct():
+class ExcludeProduct(object):
 	def __init__(self, product, cutoff=None):
 		self.product = product
 		self.cutoff = cutoff
@@ -672,7 +729,7 @@ class ExcludeProduct():
 				return True
 		return False
 class HmmCluster(object):
-	def __int__(self, hmmout, d_length=None): # only for nucl
+	def __init__(self, hmmout, d_length=None): # only for nucl
 		self.hmmout = hmmout
 		self.d_length = d_length
 	def cluster_by_hmm(self):
@@ -732,6 +789,6 @@ class HmmClusterRecord(object):
 		self.alnstart = records[0].alnstart
 		self.alnend = records[-1].alnend
 		self.tlen = records[0].tlen
-		self.hmmcov = round(1e2*(self.hmmend - self.hmmstart + 1) / self.tlen, 1)
+		self.hmmcov = round(old_div(1e2*(self.hmmend - self.hmmstart + 1), self.tlen), 1)
 		self.evalue = multi(*[rc.evalue for rc in records])
 

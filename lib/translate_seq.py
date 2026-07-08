@@ -1,4 +1,7 @@
 #!/bin/env python
+from __future__ import print_function
+from builtins import zip
+from builtins import range
 import sys,re
 from Bio import SeqIO
 from Bio.Data import CodonTable
@@ -12,12 +15,12 @@ def six_frame_translate(inFa, fout=sys.stdout, seqfmt='fasta', transl_table=1):
 				try: aa_seq = translate_seq(nucl_seq, table=transl_table)
 				except CodonTable.TranslationError: continue   # Codon 'XGA' is invalid
 				suffix = '|{}{}'.format(suffix0, frame+1)
-				print >> fout, '>{}{}\n{}'.format(rc.id, suffix, aa_seq)
+				print('>{}{}\n{}'.format(rc.id, suffix, aa_seq), file=fout)
 		d_length[rc.id] = len(rc.seq)
 	return d_length
 			
 def clean_kargs(kargs):
-	for key in kargs.keys():
+	for key in list(kargs.keys()):
 		if not key in {'to_stop', 'stop_symbol', 'gap'}:
 			del kargs[key]
 
@@ -38,7 +41,7 @@ def main(inFa, outSeq=sys.stdout):
 		try: frame = int(re.compile('frame "(\d+)?";').search(rc.description).groups()[0])
 		except AttributeError: frame = 0
 
-		print >> outSeq, '>{}\n{}'.format(rc.id, translate_seq(rc.seq[frame:]))
+		print('>{}\n{}'.format(rc.id, translate_seq(rc.seq[frame:])), file=outSeq)
 
 if __name__ == '__main__':
 	import sys

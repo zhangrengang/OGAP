@@ -1,4 +1,10 @@
 # coding: utf-8
+from __future__ import division
+from __future__ import print_function
+from builtins import str
+from builtins import map
+from builtins import object
+from past.utils import old_div
 import sys
 import itertools
 #from CAI import RSCU
@@ -28,23 +34,23 @@ class CodonUsage(CU.CodonAdaptationIndex):
 			total = sum([self.codon_count[codon] for codon in codons])
 			denominator = float(total) / len(codons)
 			rcsu.conut = [self.codon_count[codon] for codon in codons]
-			rcsu.rcsu = [self.codon_count[codon] / denominator for codon in codons]
-			rcsu.percent = [1e2*self.codon_count[codon] / total_codon for codon in codons]
+			rcsu.rcsu = [old_div(self.codon_count[codon], denominator) for codon in codons]
+			rcsu.percent = [old_div(1e2*self.codon_count[codon], total_codon) for codon in codons]
 			yield rcsu
 def main(cdsfile, outable, transl_table=1):
 	line = ['AA', 'Codons', 'Count', 'Percent', 'RSCU', 'sum_Count', 'sum_Percent']
-	print >> outable, '\t'.join(line)
+	print('\t'.join(line), file=outable)
 	for rcsu in CodonUsage(cdsfile, transl_table=transl_table):
 		aa = '{} ({})'.format(rcsu.aa3, rcsu.aa)
 		codons = '/'.join(rcsu.codons)
 		count = '/'.join(map(str, rcsu.conut))
-		percent = '/'.join(map(lambda x:'{:.2f}%'.format(x), rcsu.percent))
-		_rcsu = '/'.join(map(lambda x:'{:.2f}'.format(x), rcsu.rcsu))
+		percent = '/'.join(['{:.2f}%'.format(x) for x in rcsu.percent])
+		_rcsu = '/'.join(['{:.2f}'.format(x) for x in rcsu.rcsu])
 		sum_count = sum(rcsu.conut)
 		sum_pervent = '{:.2f}%'.format(sum(rcsu.percent))
 		line = [aa, codons, count, percent, _rcsu, sum_count, sum_pervent]
-		line = map(str, line)
-		print >> outable, '\t'.join(line)
+		line = list(map(str, line))
+		print('\t'.join(line), file=outable)
 
 def main_plot(cdsfiles, transl_table=1):
 	taxa = [list(CodonUsage(cdsfile, transl_table=transl_table)) 
@@ -65,7 +71,7 @@ def bar_plot(taxa, ylabel='RSCU'):
 	aa3s = [rcsu.aa3 for rcsu in taxa[0]]
 	xl = aa3s
 	xind = np.arange(len(xl))
-	width = iwidth/len(taxa)
+	width = old_div(iwidth,len(taxa))
 	fig=plt.figure(figsize=(10,6))
 	ax=plt.subplot(111)
 	plt.tick_params(top= 'off', right= 'off',bottom= 'off', left= 'on')
@@ -80,7 +86,7 @@ def bar_plot(taxa, ylabel='RSCU'):
 	for i, rcsus in enumerate(taxa):	# per taxon
 		for j, rcsu in enumerate(rcsus):			# per AA
 			lasty = 0
-			x = j - iwidth/2 + step
+			x = j - old_div(iwidth,2) + step
 			for k, value in enumerate(rcsu.rcsu):	# per codon
 				ax.bar(x, value, width, facecolor=clist[k], 
 					edgecolor='w', linewidth=0, align='edge', bottom=lasty)
@@ -90,7 +96,7 @@ def bar_plot(taxa, ylabel='RSCU'):
 		step += width*1.1
 
 	# table text
-	print vx, vy
+	print(vx, vy)
 	xx = vx * vy
 	atable = np.array([''] *xx, dtype='|S10').reshape(vy, vx)
 	acolor = np.array(['w']*xx, dtype='|S10').reshape(vy, vx)
@@ -98,15 +104,15 @@ def bar_plot(taxa, ylabel='RSCU'):
 		for k, codon in enumerate(rcsu.codons):
 			atable[k, j] = codon
 			acolor[k, j] = clist[k]
-	print atable
-	print acolor
+	print(atable)
+	print(acolor)
 	fig.linewidth=0
 	the_table = ax.table(cellText=atable,cellColours=acolor,rowLabels=None,colLabels=xl,loc='bottom',
 					cellLoc='center', edges='closed')
-	for key, cell in the_table.get_celld().items():
+	for key, cell in list(the_table.get_celld().items()):
 		cell.set_linewidth(0.0)
 	plt.savefig("CodonUsage.pdf",bbox_inches='tight',format="pdf")
-class SynonymousCodons:
+class SynonymousCodons(object):
 	def __init__(self, transl_table=1):
 		try: 
 			transl_table = int(transl_table)
@@ -118,13 +124,13 @@ class SynonymousCodons:
 		return self.parse_table()
 	def parse_table(self):
 		aa_dict = {}
-		for codon, aa in self.table.items():
+		for codon, aa in list(self.table.items()):
 			try: aa_dict[aa] += [codon]
 			except KeyError: aa_dict[aa] = [codon]
-		for aa, codons in sorted(aa_dict.items(), key=lambda x:protein_letters_1to3[x[0]]):
+		for aa, codons in sorted(list(aa_dict.items()), key=lambda x:protein_letters_1to3[x[0]]):
 			yield AA(aa, codons)
 
-class AA:
+class AA(object):
 	def __init__(self, aa, codons=None):
 		self.aa = aa
 		self.codons = codons

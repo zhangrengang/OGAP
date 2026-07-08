@@ -35,7 +35,12 @@ Users:
 
 The code also contains the help class: PreviousFilesLocator (and child classes of it)
 """
+from __future__ import print_function
+from __future__ import absolute_import
 
+from builtins import next
+from builtins import str
+from builtins import object
 import os
 import sys
 import glob
@@ -43,7 +48,7 @@ import time
 import shutil
 import datetime
 
-import util
+from . import util
 
 class SpeciesInfo(object):
     def __init__(self):
@@ -374,7 +379,7 @@ class __Files_new_dont_manually_create__(object):
         
     def GetSpeciesDict(self):
         d = util.FullAccession(self.GetSpeciesIDsFN()).GetIDToNameDict()
-        return {k:v.rsplit(".",1)[0] for k,v in d.items()}
+        return {k:v.rsplit(".",1)[0] for k,v in list(d.items())}
         
     """ ========================================================================================== """
             
@@ -545,10 +550,10 @@ class PreviousFilesLocator_new(PreviousFilesLocator):
             for line in infile:
                 if line.startswith("Species used:"):
                     self.species_ids_lines = ""
-                    line = infile.next()
+                    line = next(infile)
                     while line.rstrip() != "":
                         self.species_ids_lines += line
-                        line = infile.next()
+                        line = next(infile)
                 wd_base_str = "WorkingDirectory_Base: "
                 wd_trees_str = "WorkingDirectory_Trees: "
                 clusters_str = "FN_Orthogroups: "
@@ -599,7 +604,7 @@ class PreviousFilesLocator_old(PreviousFilesLocator):
             ogs_dir = continuationDir + "../" if options.qStartFromTrees else continuationDir
             self.wd_base, self.orthofinderResultsDir, self.clustersFilename_pairs = self._GetOGsFile(ogs_dir)
             print("\nFound OGs files")
-            print(self.wd_base, self.orthofinderResultsDir, self.clustersFilename_pairs)
+            print((self.wd_base, self.orthofinderResultsDir, self.clustersFilename_pairs))
             if options.qStartFromTrees:
                 self._FindFromTrees(continuationDir, options.speciesTreeFN)
         elif options.qStartFromBlast:

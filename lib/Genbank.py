@@ -1,3 +1,8 @@
+from __future__ import print_function
+from __future__ import absolute_import
+from builtins import str
+from builtins import zip
+from builtins import object
 import sys
 import os
 import re
@@ -6,14 +11,15 @@ from collections import Counter, OrderedDict
 from Bio import SeqIO
 from Bio.SeqRecord import SeqRecord
 from Bio.Seq import Seq
-from Bio.SeqUtils import GC
+# from Bio.SeqUtils import GC
+from Bio.SeqUtils import gc_fraction as GC
 from Bio import SeqFeature
-from Bio.Alphabet import IUPAC
+# from Bio.Alphabet import IUPAC
 from lazy_property import LazyWritableProperty as lazyproperty
-from Taxonomy import Taxonomy
-from small_tools import open_file as open
+from .Taxonomy import Taxonomy
+from .small_tools import open_file as open
 
-class GenbankParser():
+class GenbankParser(object):
 	'''parser of genbank based on SeqIO'''
 	def __init__(self, gbfiles):
 		if isinstance(gbfiles, str):  # one file
@@ -32,7 +38,7 @@ class GenbankParser():
 			d_species = {}
 		else:
 			d_species = Taxonomy(jsonfile=taxonomy_dbfile).db
-		print >>sys.stderr, 'loading genbank records'
+		print('loading genbank records', file=sys.stderr)
 		self.tax = []
 		for record in self:
 			#print >> sys.stderr, record.organism, record.id, record.cds_count, record.rna_count
@@ -43,7 +49,7 @@ class GenbankParser():
 			if key in d_species:
 				taxid, record.taxonomy, record.ranks = d_species[key]
 			else:
-				print >>sys.stderr, '`{}` ({}) is not found'.format(record.organism, record.id)
+				print('`{}` ({}) is not found'.format(record.organism, record.id), file=sys.stderr)
 				continue
 
 			index = record.is_taxon(taxon)
@@ -90,7 +96,7 @@ class GenbankParser():
 def format_taxon(taxon):
 	return re.compile(r'[^\w\.]').sub('_', taxon)
 
-class GenbankRecord():
+class GenbankRecord(object):
 	'''wrapper of one SeqRecord of genbank'''
 	def __init__(self, gb_record):
 		self.__dict__ = copy.deepcopy(gb_record.__dict__)
@@ -202,7 +208,7 @@ class GenbankRecord():
 					feat_id = '{}-{}'.format(feat_id, i)
 				try: nucl_seq = feature.extract(self.seq)
 				except Exception as e:
-					print >> sys.stderr, e, self.organism, self.id, feat_id, feature.type, feature.location
+					print(e, self.organism, self.id, feat_id, feature.type, feature.location, file=sys.stderr)
 					continue
 					#raise Exception(e)
 				features.add(feat_id)
@@ -235,7 +241,7 @@ class GenbankRecord():
 				feat.seq = feat.pep
 			yield feat
 
-class FeatureRecord():
+class FeatureRecord(object):
 	'''wrapper of one SeqFeature'''
 	def __init__(self, id, seq, index, feature):
 		self.__dict__ = copy.deepcopy(feature.__dict__)
@@ -353,5 +359,5 @@ class FeatureRecord():
 	def write_pep(self, fout):
 		self.write_fasta(fout, id=self.id, seq=self.pep, description=self.description)
 	def write_fasta(self, fout, id, seq, description=''):
-		print >> fout, '>{id} {description}\n{seq}'.format(id=id, description=description, seq=seq)
+		print('>{id} {description}\n{seq}'.format(id=id, description=description, seq=seq), file=fout)
 	

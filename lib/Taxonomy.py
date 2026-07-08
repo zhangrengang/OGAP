@@ -1,17 +1,23 @@
+from __future__ import print_function
+from __future__ import absolute_import
+from builtins import str
+from builtins import map
+from builtins import zip
+from builtins import object
 import sys, os
 import sqlite3
 import json
 from collections import OrderedDict
 from lazy_property import LazyWritableProperty as lazyproperty
-from RunCmdsMP import run_cmd
-from small_tools import open_file as open
+from .RunCmdsMP import run_cmd
+from .small_tools import open_file as open
 
 rootdir = os.path.dirname(os.path.realpath(__file__))
 dbdir = '{}/../db'.format(rootdir)
 DB = '{}/taxonomy.json.gz'.format(dbdir)
 #print >>sys.stderr, DB
 
-class Taxonomy():
+class Taxonomy(object):
 	def __init__(self, spname=None, taxid=None,
 				jsonfile=DB, load=True, 
 				dbfile=None):
@@ -36,7 +42,7 @@ class Taxonomy():
 		self.dbfile = dbfile
 
 	def load_db(self):
-		print >>sys.stderr, 'loading from {}'.format(self.jsonfile)
+		print('loading from {}'.format(self.jsonfile), file=sys.stderr)
 		with open(self.jsonfile, 'r') as fin:
 			self.db = json.load(fin)
 	def dump_db(self):
@@ -44,7 +50,7 @@ class Taxonomy():
 		d_names = {}
 		for table, obj in zip(['species', 'synonym'], [Species, Synonym]):
 			query = 'SELECT * FROM {};'.format(table)
-			print >>sys.stderr, query
+			print(query, file=sys.stderr)
 			conn = sqlite3.connect(self.dbfile)
 			curs = conn.cursor()
 			curs.execute(query)
@@ -54,9 +60,9 @@ class Taxonomy():
 					d_results[result.taxid] = result
 				d_names[result.spname] = result.taxid
 		d_species = {}
-		print >>sys.stderr, 'collecting taxonomy'
-		for spname, taxid in d_names.items():
-			track = map(int, d_results[taxid].track.split(','))
+		print('collecting taxonomy', file=sys.stderr)
+		for spname, taxid in list(d_names.items()):
+			track = list(map(int, d_results[taxid].track.split(',')))
 			ranks = [d_results[tid].rank for tid in track]
 			if not 'species' in set(ranks):
 				continue
@@ -68,7 +74,7 @@ class Taxonomy():
 			ranks = ranks[::-1]
 			d_species[spname.lower()] = (taxid, taxonomy, ranks)
 				
-		print >>sys.stderr, 'dumping into {}'.format(self.jsonfile)
+		print('dumping into {}'.format(self.jsonfile), file=sys.stderr)
 		with open(self.jsonfile, 'w') as fout:
 			json.dump(d_species, fout)
 
@@ -139,9 +145,9 @@ class Taxonomy():
 	def get_track(self):
 		result = self.query_db(taxid=str(self.taxid), spname=self.spname)
 		try:
-			track = map(int, result.track.split(','))
+			track = list(map(int, result.track.split(',')))
 		except AttributeError:
-			print >> sys.stderr, '{} queried None'.format((self.taxid, self.spname))
+			print('{} queried None'.format((self.taxid, self.spname)), file=sys.stderr)
 			track = []
 		return track
 	def get_taxonomy(self):
@@ -167,7 +173,7 @@ class Taxonomy():
 	def ranks(self):
 		return OrderedDict([(rank, taxon) for rank, taxon in zip(self.rank, self.taxonomy)])
 
-class Species():
+class Species(object):
 	def __init__(self, record=None):
 		'''a record is fetchone from TABLE species'''
 		self.record = record
@@ -176,7 +182,7 @@ class Species():
 		else:
 			(self.taxid, self.parent, self.spname, 
 				self.common, self.rank, self.track) = record
-class Synonym():
+class Synonym(object):
 	def __init__(self, record=None):
 		if record is None:
 			self = None
@@ -199,16 +205,16 @@ def get_info(lstfile, fout=sys.stdout):
 			try: d_genus[g] = rank = [d_tax['order'], d_tax['family'], ','.join(db.taxonomy)]
 			except KeyError:rank = ['error']
 		line = [sp0] + rank
-		print >>fout, '\t'.join(line)
+		print('\t'.join(line), file=fout)
 
 def main():
 	get_info(sys.argv[1])
 	return
 	#Taxonomy(jsonfile='db/taxonomy.json')
 	d = Taxonomy(jsonfile='db/taxonomy.json.gz').db
-	print len(d)
+	print(len(d))
 	for k in d:
-		print d[k]
+		print(d[k])
 		break
 if __name__ == '__main__':
 	main()

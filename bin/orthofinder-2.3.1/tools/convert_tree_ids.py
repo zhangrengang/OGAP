@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+from __future__ import print_function
 import os
 import sys
 import glob
@@ -46,8 +47,8 @@ def GetSpeciesSequenceIDsDict(sequenceIDsFilename, speciesIDsFN = None):
     idsDict = extract.GetIDToNameDict()    
     if speciesIDsFN != None:
         speciesDict = util.FullAccession(speciesIDsFN).GetIDToNameDict()
-        speciesDict = {k:v.rsplit(".",1)[0].replace(".", "_").replace(" ", "_") for k,v in speciesDict.items()}
-        idsDict = {seqID:speciesDict[seqID.split("_")[0]] + "_" + name for seqID, name in idsDict.items()}
+        speciesDict = {k:v.rsplit(".",1)[0].replace(".", "_").replace(" ", "_") for k,v in list(speciesDict.items())}
+        idsDict = {seqID:speciesDict[seqID.split("_")[0]] + "_" + name for seqID, name in list(idsDict.items())}
     return idsDict
           
 if __name__ == "__main__":

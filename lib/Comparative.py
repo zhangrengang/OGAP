@@ -1,11 +1,17 @@
+from __future__ import division
+from __future__ import print_function
+from __future__ import absolute_import
+from builtins import zip
+from builtins import object
+from past.utils import old_div
 import sys, os
 import re
 import glob
 import itertools
 from Bio import SeqIO
-from RunCmdsMP import run_cmd, logger
-from OrthoFinder import catAln
-from small_tools import mkdirs, parse_kargs, tr_numeric
+from .RunCmdsMP import run_cmd, logger
+from .OrthoFinder import catAln
+from .small_tools import mkdirs, parse_kargs, tr_numeric
 
 class PhyloPipeline(object):
 	def __init__(self, indir, 
@@ -96,8 +102,8 @@ class PhyloPipeline(object):
 			except KeyError: d_sps[prefix] = [gene]
 		# remove taxa with too many missing genes
 		sp_to_remove = set([])
-		for sp, _genes in d_sps.items():
-			non_missing = 1e2*len(_genes) / len(genes)
+		for sp, _genes in list(d_sps.items()):
+			non_missing = old_div(1e2*len(_genes), len(genes))
 			logger.info('{}\t{}'.format(sp, non_missing))
 			if (100-non_missing) > self.max_gene_missing:
 				sp_to_remove.add(sp)
@@ -108,10 +114,10 @@ class PhyloPipeline(object):
 		nspecies = len(set(prefixs)) - len(sp_to_remove) 
 		# write
 		gene_to_remove = set([])
-		for gene, records in d_seqs.items():
+		for gene, records in list(d_seqs.items()):
 			#print >> sys.stderr, [record.taxon for record in records][:10]
 			records = [record for record in records if not record.taxon in sp_to_remove]
-			shared = 1e2*len(records) / nspecies
+			shared = old_div(1e2*len(records), nspecies)
 			logger.info('{}\t{}'.format(gene, shared))
 			if shared < self.min_shared:
 				gene_to_remove.add(gene)
@@ -124,7 +130,7 @@ class PhyloPipeline(object):
 					SeqIO.write(record, fout, 'fasta')
 		logger.info('removed taxon: {}/{}; removed genes: {}/{}'.format(
 			len(sp_to_remove), len(d_sps), len(gene_to_remove), len(d_seqs)))
-		return d_seqs.keys()
+		return list(d_seqs.keys())
 
 	def get_alnfile(self, gene):
 		return '{}/{}.aln'.format(self.tmpdir, gene)
@@ -171,7 +177,7 @@ class Summary(PhyloPipeline):
 		self.indir = indir
 		self.output = '{}.summry'.format(self.indir.rstrip('/'))
 	def summary(self):
-		from Gff import GffGenes
+		from .Gff import GffGenes
 		genes = []
 		d_info = {}
 		for gff, prefix in zip(*self.get_files('.gff3')):
@@ -180,12 +186,12 @@ class Summary(PhyloPipeline):
 				gene = rc.gene
 				try: name = gene.attributes['gene']
 				except KeyError:
-					print >> sys.stderr, '[WARN] gene {} has no cov in {}; please check'.format(gene.id, gff)
+					print('[WARN] gene {} has no cov in {}; please check'.format(gene.id, gff), file=sys.stderr)
 					continue
 				#print(gff, gene, gene.attributes)
 				try: cov = gene.attributes['cov']
 				except KeyError:
-					print >> sys.stderr, '[WARN] gene {} has no cov in {}; please check'.format(name, gff)
+					print('[WARN] gene {} has no cov in {}; please check'.format(name, gff), file=sys.stderr)
 					continue
 				try: d_genes[name] += [cov]
 				except KeyError: d_genes[name] = [cov]
@@ -195,13 +201,13 @@ class Summary(PhyloPipeline):
 		f = open(self.output, 'w')
 		sps = sorted(d_info.keys())
 		line = ['gene', 'type'] + sps
-		print >>f, '\t'.join(line)
+		print('\t'.join(line), file=f)
 		for type, gene in sorted(set(genes)):
 			covs = [d_info[sp].get(gene, ['0']) for sp in sps]
 #			print covs
 			covs = ['/'.join(sorted(cov, key=lambda y:-float(y))) for cov in covs]
 			line = [gene, type] + covs
-			print >>f, '\t'.join(line)
+			print('\t'.join(line), file=f)
 		f.close()
 class KaKsPipeline(PhyloPipeline):
 	def __init__(self, indir, tmpdir='/dev/shm/tmp/', ncpu=20):
@@ -252,7 +258,7 @@ class KaKsPipeline(PhyloPipeline):
 		for gene, ids in sorted(d_genes.items()):
 			ids = sorted(set(ids))
 			for g1, g2 in itertools.combinations(ids, 2):
-				print >>fout, '{}\t{}'.format(g1, g2)
+				print('{}\t{}'.format(g1, g2), file=fout)
 		fout.close()
 		return d_files
 

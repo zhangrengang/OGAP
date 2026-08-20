@@ -1,5 +1,6 @@
 #!/usr/bin/env python
-from lib.__version__ import version
+from __future__ import absolute_import
+from .lib.__version__ import version
 
 from setuptools import setup, find_packages
 from distutils.extension import Extension

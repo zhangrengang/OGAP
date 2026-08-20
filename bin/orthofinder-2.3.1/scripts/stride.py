@@ -25,6 +25,15 @@
 # For any enquiries send an email to David Emms
 # david_emms@hotmail.com
 
+from __future__ import division
+from __future__ import print_function
+from __future__ import absolute_import
+from builtins import zip
+from builtins import str
+from builtins import map
+from builtins import range
+from past.utils import old_div
+from builtins import object
 import os
 import sys
 import csv
@@ -36,8 +45,8 @@ import itertools
 import multiprocessing as mp
 from collections import Counter, defaultdict
 
-import probroot
-import tree 
+from . import probroot
+from . import tree 
 
 def compare(exp, act):
     """exp - expected set of species
@@ -349,7 +358,7 @@ def SupportedHierachies(t, G, S, GeneToSpecies, species, dict_clades, clade_name
         if spSets == None: continue # non-binary
         clades = None
         # check each of three directions to the root
-        for i, j in itertools.combinations(range(3), 2):
+        for i, j in itertools.combinations(list(range(3)), 2):
             s1 = spSets[i]
             s2 = spSets[j]
             # check for terminal duplications
@@ -472,7 +481,7 @@ def ParsimonyRoot(allSpecies, clades, supported_clusters_counter):
     for clade in clades:
         clade_p = allSpecies.difference(clade)
         against = 0
-        for observed, n in supported_clusters_counter.items():
+        for observed, n in list(supported_clusters_counter.items()):
             if (not observed.issubset(clade)) and (not observed.issubset(clade_p)):
                 against += n
         contradictions[clade] = against
@@ -480,11 +489,11 @@ def ParsimonyRoot(allSpecies, clades, supported_clusters_counter):
     n = sum(supported_clusters_counter.values())
     nSupport = n-m
     roots = []
-    for clade, score in contradictions.items():
+    for clade, score in list(contradictions.items()):
         if score == m:
-            if len(clade) > len(allSpecies)/2:
+            if len(clade) > old_div(len(allSpecies),2):
                 roots.append(allSpecies.difference(clade))
-            elif len(clade) == len(allSpecies)/ 2:
+            elif len(clade) == old_div(len(allSpecies), 2):
                 if allSpecies.difference(clade) not in roots: roots.append(clade) 
             else:
                 roots.append(clade)
@@ -543,7 +552,7 @@ def GetRoot(speciesTreeFN, treesDir, GeneToSpeciesMap, nProcessors, qWriteDupTre
 def PrintRootingSummary(roots, clusters_counter, nSupport):
     nAll = sum(clusters_counter.values())
     nFP_mp = nAll - nSupport
-    n_non_trivial = sum([v for k, v in clusters_counter.items() if len(k) > 1])
+    n_non_trivial = sum([v for k, v in list(clusters_counter.items()) if len(k) > 1])
     if len(roots) > 1: print("Identified %d non-terminal duplications.\n%d support the best roots and %d contradict them." % (n_non_trivial, n_non_trivial-nFP_mp, nFP_mp))
     else: print("Identified %d non-terminal duplications.\n%d support the best root and %d contradict it." % (n_non_trivial, n_non_trivial-nFP_mp, nFP_mp))
     print("Most parsimonious outgroup(s) for species tree:")
@@ -671,7 +680,7 @@ def Main_Full(args):
         speciesTree = tree.Tree(args.Species_tree, format=spTreeFormat)
         species, dict_clades, clade_names = AnalyseSpeciesTree(speciesTree)
         c, stride_dup_genes = SupportedHierachies_wrapper(args.gene_trees, GeneToSpecies, species, dict_clades, clade_names)      
-        for k, v in c.items(): print((k, v))
+        for k, v in list(c.items()): print((k, v))
 #    elif args.debug:
 #        speciesTree = tree.Tree(args.Species_tree, format=spTreeFormat)
 #        species, dict_clades, clade_names = AnalyseSpeciesTree(speciesTree)

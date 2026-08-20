@@ -4,13 +4,18 @@ Created on Thu Jul 27 14:15:17 2017
 
 @author: david
 """  
-import parallel_task_manager
+from __future__ import print_function
+from __future__ import absolute_import
+from builtins import next
+from builtins import map
+from builtins import object
+from . import parallel_task_manager
 
 import glob
 import argparse
-import tree as tree_lib
+from . import tree as tree_lib
 
-import trees2ologs_of as om1
+from . import trees2ologs_of as om1
     
 def DetachAndCleanup(top, n):
     """

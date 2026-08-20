@@ -1,4 +1,11 @@
 # coding: utf8
+from __future__ import print_function
+from __future__ import absolute_import
+from builtins import zip
+from builtins import str
+from builtins import map
+from builtins import range
+from builtins import object
 import sys
 import re
 import copy
@@ -10,12 +17,13 @@ from lazy_property import LazyWritableProperty as lazyproperty
 #try: from small_tools import open_file as open
 try: from xopen import xopen as open
 except ImportError: pass
-try: from RunCmdsMP import logger
+try: from .RunCmdsMP import logger
 except ImportError: pass
-try: from translate_seq import translate_seq as translate_cds
+try: from .translate_seq import translate_seq as translate_cds
 except ImportError: pass
 try: from Region import Regions, Region, Position
 except ImportError: pass
+import io
 
 class GffLine(object):
 	'''parse a line of standard gff'''
@@ -48,7 +56,7 @@ class GffLine(object):
 		#print self.attributes_
 		line = [self.chrom, self.source, self.type, self.start, self.end, 
 				self.score, self.strand, self.frame, self.attributes_]
-		line = map(str, line)
+		line = list(map(str, line))
 		return '\t'.join(line)
 	@lazyproperty
 	def key(self):
@@ -116,13 +124,13 @@ class GffLine(object):
 	def format_attr(self):
 		return self._format_attr()
 	def _format_attr(self):
-		return ';'.join(['{}={}'.format(k,v) for k, v in self.attributes.items() if v])
+		return ';'.join(['{}={}'.format(k,v) for k, v in list(self.attributes.items()) if v])
 	def _write(self, fout=sys.stdout):
 		#line = [self.chrom, self.source, self.type, self.start, self.end, 
 		#		self.score, self.strand, self.frame, self._attributes]
 		#line = map(str, line)
 		#print self.attributes_
-		print >>fout, str(self) #'\t'.join(line)
+		print(str(self), file=fout) #'\t'.join(line)
 	def write(self, fout):
 		self.update_attr()
 		self.attributes_ = self.format_attr()
@@ -167,7 +175,7 @@ class GtfLine(GffLine):
 		return d_attr
 #		return OrderedDict(re.compile(r'(\S+) "?(.*?)"?[;$]').findall(attributes))
 	def format_attr(self):
-		return ' '.join(['{} "{}";'.format(k,v) for k, v in self.attributes.items()])
+		return ' '.join(['{} "{}";'.format(k,v) for k, v in list(self.attributes.items())])
 	@lazyproperty
 	def keys(self):
 		return ['gene_id', 'transcript_id']
@@ -258,7 +266,7 @@ class GffLines(object):
 	def _parse(self):
 		HAS_PRINTED = 0
 		PRINT_LIMIT = 2
-		if isinstance(self.gff, file):
+		if isinstance(self.gff, io.IOBase):
 			handle = self.gff
 		elif isinstance(self.gff, str):
 			handle = open(self.gff)
@@ -274,12 +282,12 @@ class GffLines(object):
 				continue
 			if len(line) != 9:
 				if HAS_PRINTED < PRINT_LIMIT:
-					print >>sys.stderr, '[WARN] length of {} is not 9'.format(line)
+					print('[WARN] length of {} is not 9'.format(line), file=sys.stderr)
 					HAS_PRINTED += 1
 				continue
 			try: yield self.parser(line)
 			except ValueError:
-				print >>sys.stderr, '[WARN] LINE {} can not parsed'.format(line)
+				print('[WARN] LINE {} can not parsed'.format(line), file=sys.stderr)
 
 class GtfLines(GffLines):
 	def __init__(self, gff, parser=GtfLine):
@@ -453,7 +461,7 @@ class AugustusGtfGenes(GtfGenes):
 				record.is_complete = True
 			yield record
 			
-class AugustusGtfAnnotations():
+class AugustusGtfAnnotations(object):
 	def __init__(self, lines):
 		self._parse(lines)
 	def _parse(self, lines):
@@ -481,7 +489,7 @@ class AugustusGtfAnnotations():
 			if line.startswith('sequence of block'):
 				self.blocks += [re.compile(r'(\d+)\s+\[([A-Z]+)\]\s+(\d+)').search(line).groups()]	
 			if line.startswith('CDS exons'):
-				self.supported, self.total_exons = map(int, line.split(' ')[-1].split('/'))
+				self.supported, self.total_exons = list(map(int, line.split(' ')[-1].split('/')))
 				exons = True
 			elif exons:
 				if line.startswith('P:'):
@@ -702,16 +710,16 @@ class GffExons(object):
 			start, end = exon.start, exon.end
 			line = [start, end]		# 1-based
 			line += ['repeat_region']
-			line = map(str, line)
-			print >>fout, '\t'.join(line)
+			line = list(map(str, line))
+			print('\t'.join(line), file=fout)
 			try:
 				line = ['', '', 'note', exon.id]
-				print >>fout, '\t'.join(line)
+				print('\t'.join(line), file=fout)
 			except AttributeError:
 				pass
 			try:
 				line = ['', '', 'rpt_type', exon.attributes['rpt_type']]
-				print >>fout, '\t'.join(line)
+				print('\t'.join(line), file=fout)
 			except AttributeError:
 				pass
 			return None
@@ -734,31 +742,31 @@ class GffExons(object):
 			line = [start, end]		# 1-based
 			if i == 0:
 				line += ['gene']
-			line = map(str, line)
-			print >>fout, '\t'.join(line)
+			line = list(map(str, line))
+			print('\t'.join(line), file=fout)
 		try:
 			line = ['', '', 'gene', self.gene]
-			print >>fout, '\t'.join(line)
+			print('\t'.join(line), file=fout)
 		except AttributeError:
 			pass
 		try:
 			if self.trans_splicing:
 				line = ['', '', 'exception', 'trans-splicing']
-				print >>fout, '\t'.join(line)
+				print('\t'.join(line), file=fout)
 		except AttributeError:	# no gene name
 			pass
 		if locus_tag is not None:
 			line = ['', '', 'locus_tag', locus_tag]
-			print >>fout, '\t'.join(line)
+			print('\t'.join(line), file=fout)
 
 		if note:
 			line = ['', '', 'note', note]
-			line = map(str, line)
-			print >>fout, '\t'.join(line)
+			line = list(map(str, line))
+			print('\t'.join(line), file=fout)
 
 		if getattr(self, 'pseudo', None):
 			line = ['', '', 'pseudo']
-			print >>fout, '\t'.join(line)
+			print('\t'.join(line), file=fout)
 			return
 
 		# shared lines by mRNA and CDS
@@ -785,10 +793,10 @@ class GffExons(object):
 				line = [start, end]
 				if i == 0:
 					line += ['mRNA']
-				line = map(str, line)
-				print >>fout, '\t'.join(line)
+				line = list(map(str, line))
+				print('\t'.join(line), file=fout)
 			for line in lines:
-				print >>fout, '\t'.join(line)
+				print('\t'.join(line), file=fout)
 		# CDS		
 		for i, exon in enumerate(exons):
 			start, end = exon.start, exon.end
@@ -799,19 +807,19 @@ class GffExons(object):
 				if rna_type == 'CDS':
 					#print >>sys.stderr, vars(exon)
 					codon_start = exon.frame + 1
-			line = map(str, line)
-			print >>fout, '\t'.join(line)
+			line = list(map(str, line))
+			print('\t'.join(line), file=fout)
 
 		for line in lines:
-			print >>fout, '\t'.join(line)
+			print('\t'.join(line), file=fout)
 		if rna_type == 'CDS' and transl_table != 1:
 			line = ['', '', 'transl_table', transl_table]
-			line = map(str, line)
-			print >>fout, '\t'.join(line)
+			line = list(map(str, line))
+			print('\t'.join(line), file=fout)
 		if rna_type == 'CDS':
 			line = ['', '', 'codon_start', codon_start]
-			line = map(str, line)
-			print >>fout, '\t'.join(line)
+			line = list(map(str, line))
+			print('\t'.join(line), file=fout)
 
 	def reverse(self, length):
 		exons = []
@@ -1027,8 +1035,8 @@ class ExonerateGtfExons(GtfExons):
 		tran_attr = 'ID={};Parent={}'.format(transcript_id,gene_id)
 		for type, attribute in zip(['gene', 'mRNA'], [gene_attr, tran_attr]):
 			line = [chrom, source, type, start, end, score, strand, frame, attribute]
-			line = map(str, line)
-			print >>fout, '\t'.join(line)
+			line = list(map(str, line))
+			print('\t'.join(line), file=fout)
 		for exon in self:	# no intron
 			cds = copy.deepcopy(exon)
 			cds.type = 'CDS'
@@ -1048,8 +1056,8 @@ class ExonerateGtfExons(GtfExons):
 		score, frame = '.', '.'
 		for type, attribute in zip(['gene', 'transcript'], [gene_id, transcript_id]):
 			line = [chrom, source, type, start, end, score, strand, frame, attribute]
-			line = map(str, line)
-			print >>fout, '\t'.join(line)
+			line = list(map(str, line))
+			print('\t'.join(line), file=fout)
 		if self.has_start_codon:
 			if strand == '-':
 				start_codon = copy.deepcopy(last_exon)
@@ -1084,14 +1092,16 @@ class ExonerateGtfExons(GtfExons):
 			stop_codon.gene_id = gene_id
 			stop_codon.transcript_id = transcript_id
 			stop_codon.write(fout)
-		print >> fout, '# coding sequence = [{}]'.format(self.cds_seq)
-		print >> fout, '# protein sequence = [{}]'.format(self.pep_seq)
-		print >> fout, '# hit = {}::{}'.format(self.hit, self.score)
+		print('# coding sequence = [{}]'.format(self.cds_seq), file=fout)
+		print('# protein sequence = [{}]'.format(self.pep_seq), file=fout)
+		print('# hit = {}::{}'.format(self.hit, self.score), file=fout)
 		
 class ExonerateGffGenes(GffGenes):	# each alignment
 	def __init__(self, gff=None, parser=ExonerateGtfLines):
 		self.gff = gff
 		self.parser = parser
+		self._records = None  # 缓存解析完成的record，解决迭代器只能遍历一次
+
 	def _parse(self):
 		record = GffRecord()
 		record.has_frameshift = False
@@ -1117,6 +1127,14 @@ class ExonerateGffGenes(GffGenes):	# each alignment
 					record.add_edge(parent, id)
 		if len(record.nodes()) > 0:
 			yield record
+
+	def __iter__(self):
+		# 只解析一次，后续反复循环直接读取缓存
+		if self._records is None:
+			self._records = list(self._parse())
+		for r in self._records:
+			yield r
+
 	def get_best_hit(self):
 		records = [record for record in self if not record.has_frameshift]
 		return max(records, key=lambda x: x.score)
@@ -1151,7 +1169,7 @@ class ExonerateGffGenes(GffGenes):	# each alignment
 			if fout is not None:
 				seq = d_seqs[record.chrom]
 				exons.seq = exons.extract_seq(seq)
-				print >>fout, '>{}\n{}'.format(exons.id, exons.seq)
+				print('>{}\n{}'.format(exons.id, exons.seq), file=fout)
 			hits += [exons]
 		return hits
 	def cluster(self):
@@ -1187,7 +1205,7 @@ class ExonerateGffGenes(GffGenes):	# each alignment
 		try:
 			assert exons.total_length % 3 == 0
 		except AssertionError:
-			print >>sys.stderr, exons.total_length, exons.score, exons
+			print(exons.total_length, exons.score, exons, file=sys.stderr)
 			
 		exons.trace_stop_codon(seq, **kargs)
 		exons.cds_seq = exons.extract_seq(seq)
@@ -1195,7 +1213,7 @@ class ExonerateGffGenes(GffGenes):	# each alignment
 		try:
 			assert exons.total_length % 3 == 0
 		except AssertionError:
-			print >>sys.stderr, 'not 3 CDS', exons.total_length, exons.score, exons
+			print('not 3 CDS', exons.total_length, exons.score, exons, file=sys.stderr)
 			
 		if '*' in set(exons.pep_seq):
 			exons.truncate_exons(seq, **kargs)
@@ -1204,7 +1222,7 @@ class ExonerateGffGenes(GffGenes):	# each alignment
 		try:
 			assert exons.total_length % 3 == 0
 		except AssertionError:
-			print >>sys.stderr, 'not 3 CDS', exons.total_length, exons.score, exons
+			print('not 3 CDS', exons.total_length, exons.score, exons, file=sys.stderr)
 		return exons
 
 	def to_hints(self, fout, src='P', pri=4, source='exonerate', intron_type = 'intronpart'):
@@ -1274,7 +1292,7 @@ class GffRecord(nx.DiGraph):
 		return hash(self) == hash(other)
 	@property
 	def lines(self):
-		return [self.node[node]['line'] for node in self.sort_nodes()]
+		return [self.nodes[node]['line'] for node in self.sort_nodes()]
 	@property
 	def rna_type(self):
 		for line in self.lines:
@@ -1292,8 +1310,8 @@ class GffRecord(nx.DiGraph):
 	def rnas(self):
 		return GffRNARecords(self)	
 	def sort_nodes(self):
-		nodes = [node for node in self.nodes() if 'index' in self.node[node]]	# only lines
-		return sorted(nodes, key=lambda x: self.node[x]['index'])
+		nodes = [node for node in self.nodes() if 'index' in self.nodes[node]]	# only lines
+		return sorted(nodes, key=lambda x: self.nodes[x]['index'])
 	def recur_remove_node(self, node):
 		last_nodes = [node]
 		nodes_to_del = [] + last_nodes
@@ -1364,13 +1382,13 @@ class GffRecord(nx.DiGraph):
 	def sort_features(self, fetures):
 		return sorted(fetures, key=lambda x: self.get_node_index(x))
 	def get_node_feature(self, node):
-		try: return self.node[node]['line']
+		try: return self.nodes[node]['line']
 		except KeyError as e:
-			print >>sys.stderr, 'get_node_feature-KeyError', node, self.nodes()
+			print('get_node_feature-KeyError', node, self.nodes(), file=sys.stderr)
 			raise KeyError(e)
 	@lazyproperty
 	def empty_nodes(self):
-		return {node for node in self.nodes() if 'line' not in self.node[node]}
+		return {node for node in self.nodes() if 'line' not in self.nodes[node]}
 	@lazyproperty
 	def non_empty_nodes(self):
 		return set(self.nodes()) - self.empty_nodes
@@ -1413,7 +1431,7 @@ class GffRecord(nx.DiGraph):
 	@lazyproperty
 	def feature_regions(self):
 		d_regions = {}
-		for type, features in self.features.items():
+		for type, features in list(self.features.items()):
 			regions = [feature.region for feature in features]
 			d_regions[type] = regions
 		return d_regions
@@ -1515,7 +1533,7 @@ class GffRecord(nx.DiGraph):
 		for RNARecord in GffRNARecords(self):
 			try: cds = RNARecord.features['CDS']
 			except KeyError:
-				print >> sys.stderr, 'RNA {} is non-coding in a coding gene'.format(RNARecord.id)
+				print('RNA {} is non-coding in a coding gene'.format(RNARecord.id), file=sys.stderr)
 				continue
 			reverse = 1 if RNARecord.strand == '-' else 0
 			cds = sorted(cds, key=lambda x:x.start, reverse=reverse)
@@ -1528,7 +1546,7 @@ class GffRecord(nx.DiGraph):
 			#   print >>sys.stderr, cds_pos, cds_seq, str(Seq(cds_seq).translate())
 			assert len(cds_seq) == len(cds_pos)
 			if len(cds_seq) % 3 != 0:
-				print >> sys.stderr, '[WARN] CDS of {} is not Multiple of 3 with frame {}; discarded..'.format(RNARecord.id, frame)
+				print('[WARN] CDS of {} is not Multiple of 3 with frame {}; discarded..'.format(RNARecord.id, frame), file=sys.stderr)
 				continue
 			else:
 				try: assert frame == 0, '[WARN] {}: frame ({}) of the first CDS region is not 0'.format(RNARecord.id, frame)
@@ -1536,7 +1554,7 @@ class GffRecord(nx.DiGraph):
 			for i in range(frame, len(cds_pos), 3):
 				codon = cds_seq[i:i+3]
 				cod_pos = cds_pos[i:i+3]
-				for j, pos in zip(range(3), cod_pos):
+				for j, pos in zip(list(range(3)), cod_pos):
 					postype = fold_codon(codon, j)
 					if postype is None:
 						continue
@@ -1561,7 +1579,7 @@ class GffRecord(nx.DiGraph):
 				for i in range(0, len(cds_pos), 3):
 					codon = cds_seq[i:i+3]
 					cod_pos = cds_pos[i:i+3]
-					for j, pos in zip(range(3), cod_pos):
+					for j, pos in zip(list(range(3)), cod_pos):
 						postype = fold_codon(codon, j)
 						if postype is None:
 							continue
@@ -1587,7 +1605,7 @@ def fold_codon(codon, index):
 		return 'fold4'
 	return None
 		
-class GffRNARecords():
+class GffRNARecords(object):
 	def __init__(self, GeneRecord):
 		self._GeneRecord = GeneRecord
 	def __iter__(self):

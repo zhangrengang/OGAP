@@ -1,9 +1,18 @@
+from __future__ import division
+from __future__ import print_function
+from __future__ import absolute_import
+from builtins import zip
+from builtins import str
+from builtins import map
+from past.utils import old_div
+from builtins import object
 import sys, re
-from Gff import GffLine, GffExons
+from .Gff import GffLine, GffExons
+import io
 
-class PslParser():
+class PslParser(object):
 	def __init__(self, psl):
-		if isinstance(psl, file):
+		if isinstance(psl, io.IOBase):
 			self.psl = psl
 		else:
 			self.psl = open(psl)
@@ -22,11 +31,11 @@ class PslParser():
 			if fout is not None:
 				seq = d_seqs[record.qname]
 				exons.seq = exons.extract_seq(seq)
-				print >>fout, '>{}\n{}'.format(exons.id, exons.seq)
+				print('>{}\n{}'.format(exons.id, exons.seq), file=fout)
 			hits += [exons]
 		return hits
 
-class PslRecord():
+class PslRecord(object):
 	def __init__(self, line):
 		line = line.strip().split('\t')
 		match, mismatch, rep_match, Ns, \
@@ -36,11 +45,11 @@ class PslRecord():
 		match, mismatch, rep_match, Ns, \
 			qgap_count, qgap_bases, tgap_count, tgap_bases, \
 			qsize, qstart, qend, tsize, tstart, tend, \
-			block_count = map(int, [
+			block_count = list(map(int, [
 		match, mismatch, rep_match, Ns, \
 			qgap_count, qgap_bases, tgap_count, tgap_bases, \
 			qsize, qstart, qend, tsize, tstart, tend, \
-			block_count])
+			block_count]))
 
 #		block_sizes = map(int, block_sizes.strip(',').split(','))
 #		qstarts = map(int, qstarts.strip(',').split(','))
@@ -68,17 +77,17 @@ class PslRecord():
             self.qname, self.qsize, self.qstart, self.qend,
             self.tname, self.tsize, self.tstart, self.tend,
             self.block_count, self.block_sizes, self.qstarts, self.tstarts]
-		line = map(str, line)
+		line = list(map(str, line))
 		return '\t'.join(line)
 	@property
 	def block_sizes(self):
-		return map(int, self._block_sizes.strip(',').split(','))
+		return list(map(int, self._block_sizes.strip(',').split(',')))
 	@property
 	def qstarts(self):
-		return map(int, self._qstarts.strip(',').split(','))
+		return list(map(int, self._qstarts.strip(',').split(',')))
 	@property
 	def tstarts(self):
-		return map(int, self._tstarts.strip(',').split(','))
+		return list(map(int, self._tstarts.strip(',').split(',')))
 	def to_exons(self, minintron=200):
 		starts = self.qstarts
 		name = self.qname
@@ -106,29 +115,29 @@ class PslRecord():
 		return self.match - self.mismatch - self.qgap_count - self.qgap_bases - self.tgap_count - self.tgap_bases - self.block_count - self.qlclip - self.qrclip
 	@property
 	def qcov(self):
-		return 1.0*(self.qend - self.qstart) / self.qsize
+		return old_div(1.0*(self.qend - self.qstart), self.qsize)
 	@property
 	def tcov(self):	# global
-		return 1.0*(self.tend - self.tstart) / self.tsize
+		return old_div(1.0*(self.tend - self.tstart), self.tsize)
 	@property
 	def qmcov(self):
-		return 1.0*(self.match+self.mismatch) / self.qsize
+		return old_div(1.0*(self.match+self.mismatch), self.qsize)
 	@property
 	def tmcov(self):
-		return 1.0*(self.match+self.mismatch) / self.tsize
+		return old_div(1.0*(self.match+self.mismatch), self.tsize)
 
 	@property
 	def identity(self):	# local
-		return 1e2 * self.match/ (self.match+self.mismatch)
+		return old_div(1e2 * self.match, (self.match+self.mismatch))
 	@property
 	def global_identity(self):
-		return 1e2 * self.match/ (self.match+self.mismatch+self.qgap_bases+self.tgap_bases+self.qlclip+self.qrclip)
+		return old_div(1e2 * self.match, (self.match+self.mismatch+self.qgap_bases+self.tgap_bases+self.qlclip+self.qrclip))
 def test():
 	#psl = sys.stdin
 	psl = sys.argv[1]
 	for rc in PslParser(psl):
 	#	print rc.line, rc.score
-		print rc.qname, rc.tname, rc.identity, rc.qcov, rc.tcov
+		print(rc.qname, rc.tname, rc.identity, rc.qcov, rc.tcov)
 
 
 title = ['qname', 'tname', 'qsize', 'tsize',
@@ -148,20 +157,20 @@ def _get_full_length(psl, min_qcov=0.95, min_tcov=0.95):
 		yield rc
 
 def get_full_length(psl, outab, min_qcov=0.95, min_tcov=0.95):
-	print >> outab, '\t'.join(title)
+	print('\t'.join(title), file=outab)
 	for rc in _get_full_length(psl, min_qcov=min_qcov, min_tcov=min_tcov):
-		line = map(str, rc.line)
-		print >> outab, '\t'.join(line)
+		line = list(map(str, rc.line))
+		print('\t'.join(line), file=outab)
 def get_best_full_length(psl, outab, min_qcov=0.95, min_tcov=0.95):
 	d_rcs = {}
 	for rc in _get_full_length(psl, min_qcov=min_qcov, min_tcov=min_tcov):
 		try: d_rcs[rc.qname] += [rc]
 		except KeyError: d_rcs[rc.qname] = [rc]
-	print >> outab, '\t'.join(title)
-	for qname, rcs in d_rcs.items():
+	print('\t'.join(title), file=outab)
+	for qname, rcs in list(d_rcs.items()):
 		best = max(rcs, key=lambda x:x.score)
-		line = map(str, best.line)
-		print >> outab, '\t'.join(line)
+		line = list(map(str, best.line))
+		print('\t'.join(line), file=outab)
 def get_full_length2(psl, outab, min_qcov=0.95):
 	return get_full_length(psl, outab, min_qcov=min_qcov, min_tcov=None)
 

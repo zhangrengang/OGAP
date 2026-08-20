@@ -25,6 +25,11 @@
 # For any enquiries send an email to David Emms
 # david_emms@hotmail.comhor: david
 
+from __future__ import print_function
+from __future__ import absolute_import
+from builtins import zip
+from builtins import range
+from builtins import object
 import os
 import json
 import time
@@ -32,7 +37,7 @@ import shutil
 import subprocess
 import multiprocessing as mp
 
-import util
+from . import util
 
 class InvalidEntryException(Exception):
     pass
@@ -78,7 +83,7 @@ class ProgramCaller(object):
                 print("WARNING: Incorrecty formatted configuration file %s" % configure_file)
                 print("File is not in .json format. No user-confgurable multiple sequence alignment or tree inference methods have been added.\n")
                 return
-            for name, v in d.items():
+            for name, v in list(d.items()):
                 if name == "__comment": continue
                 if " " in name:
                     print("WARNING: Incorrecty formatted configuration file entry: %s" % name)
@@ -329,7 +334,7 @@ def RunParallelCommandsAndMoveResultsFile(nProcesses, commands_and_filenames, qL
     i = -1
     for i, cmd in enumerate(commands_and_filenames):
         cmd_queue.put((i, cmd))
-    runningProcesses = [mp.Process(target=util.Worker_RunCommands_And_Move, args=(cmd_queue, nProcesses, i+1, qListOfList)) for _ in xrange(nProcesses)]
+    runningProcesses = [mp.Process(target=util.Worker_RunCommands_And_Move, args=(cmd_queue, nProcesses, i+1, qListOfList)) for _ in range(nProcesses)]
     for proc in runningProcesses:
         proc.start()
     

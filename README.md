@@ -103,3 +103,60 @@ python ../lib/Comparative.py summary re_anno/
 python ../lib/Comparative.py phylo re_anno/
 python ../lib/Comparative.py kaks re_anno/
 ```
+
+## Dependencies
+This Python3‑ported version is tested with:
+- python: 3.12.13
+- biopython: 1.87
+- networkx: 3.6.1
+- hmmer: 3.4
+- exonerate: 2.4.0
+- augustus: 3.1
+
+Build the environment via conda/mamba for best compatibility.
+
+## Status
+This is a work‑in‑progress Python3 port of OGAP.
+Core annotation pipeline can run and output GFF3 results.
+
+### Known limitations
+- The main pipeline does **not** check for internal stop codons within predicted CDS.
+  Predictions derived from MTPT/homologous fossil DNA fragments may be output as false‑positives.
+  A standalone post‑processing filter tool is planned for future commits.
+- For research use only, not yet production‑ready.
+
+## Post‑processing filter tools
+Two helper scripts under `tools/` for quality assessment of OGAP mitochondrial annotation output.
+
+1. filter_internal_stop.py
+Detect internal premature stop codon inside predicted CDS.
+Modes:
+- `--mode report`: only output tsv report for manual review (recommended first step)
+- `--mode remove`: output filtered gff3 and cds fasta, remove bad genes
+
+2. filter_by_cov.py
+Filter genes by HMM domain coverage value `cov=` from fasta header.
+Argument `--min‑cov` set coverage threshold (e.g. 80.0).
+
+Note:
+- These scripts handle OGAP transcript suffix `.t1/.t2` to align gene ID between gff and cds fasta.
+- Cannot detect pseudogenes caused by frameshift, RNA‑editing or post‑transcription truncation.
+- Always run report mode first and inspect tsv report before using remove mode.
+
+Example:
+```bash
+# Check internal stop codon
+python3 tools/filter_internal_stop.py \
+  --gff result.gff3 \
+  --cds-fa result.cds.fasta \
+  --code 1 \
+  --mode report \
+  --report stop_report.tsv
+
+# Check hmm coverage
+python3 tools/filter_by_cov.py \
+  --gff result.gff3 \
+  --cds-fa result.cds.fasta \
+  --min-cov 80.0 \
+  --mode report \
+  --report cov_report.tsv

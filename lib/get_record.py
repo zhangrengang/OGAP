@@ -1,22 +1,24 @@
 ﻿#!/bin/env python
 #coding: utf-8
+from __future__ import print_function
+from __future__ import absolute_import
 import sys, getopt
 from Bio import SeqIO
-from small_tools import open_file as open
+from .small_tools import open_file as open
 
 def usage():
-	print 'usage: %s [options] -i RECORD -a LIST -o SUBRECORD' %sys.argv[0]
-	print ''
-	print '  -i RECORD         input a RECORD FILE'
-	print '  -a LIST           input a LIST FILE, one RECORD ID per line'
-	print '  -o SUBRECORD      output to SUBRECORD FILE'
-	print '  -t RECORD TYPE    RECORD FILE TYPE [table|fasta|fastq|hmm][default: table]'
-	print '  -g STR            [get|remove] RECORD [default: get]'
-	print '  -k NUM            if a table RECORD, the column NUM of RECORD ID[default: 1]'
-	print '  -f NUM            if a table RECORD, retain the row NUM as header [default: 1]'
-	print '  -s SEP            if a table RECORD, seperation [default: "\\t"]'
-	print '  -d                remove duplicates when get table records'
-	print '  -h                show this help message and exit'
+	print('usage: %s [options] -i RECORD -a LIST -o SUBRECORD' %sys.argv[0])
+	print('')
+	print('  -i RECORD         input a RECORD FILE')
+	print('  -a LIST           input a LIST FILE, one RECORD ID per line')
+	print('  -o SUBRECORD      output to SUBRECORD FILE')
+	print('  -t RECORD TYPE    RECORD FILE TYPE [table|fasta|fastq|hmm][default: table]')
+	print('  -g STR            [get|remove] RECORD [default: get]')
+	print('  -k NUM            if a table RECORD, the column NUM of RECORD ID[default: 1]')
+	print('  -f NUM            if a table RECORD, retain the row NUM as header [default: 1]')
+	print('  -s SEP            if a table RECORD, seperation [default: "\\t"]')
+	print('  -d                remove duplicates when get table records')
+	print('  -h                show this help message and exit')
 
 def main():
 	opts, args = getopt.getopt(sys.argv[1:], 'hi:a:o:t:g:k:f:s:x:d')
@@ -143,7 +145,7 @@ def get_records(input_file, output_file, in_accnos,
 	not_get = d_accnos-set(lst_get)
 	if not_get:
 		for not_get_id in not_get:
-			print not_get_id
+			print(not_get_id)
 
 if __name__ == '__main__':
 	main()

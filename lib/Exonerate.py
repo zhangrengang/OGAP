@@ -1,4 +1,5 @@
+from builtins import object
 import sys
 
-class Exonerate():
+class Exonerate(object):
 	pass

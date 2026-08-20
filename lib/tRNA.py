@@ -1,6 +1,11 @@
+from __future__ import print_function
+from __future__ import absolute_import
+from builtins import zip
+from builtins import str
+from builtins import object
 import sys
 import re
-from Gff import GffLine, GffExons
+from .Gff import GffLine, GffExons
 
 AA = {
     'Phe':'F',
@@ -24,7 +29,7 @@ AA = {
     'Gly':'G',
     'Trp':'W',
 }
-class tRNAscan():
+class tRNAscan(object):
 	def __init__(self, output=None, struct=None, **kargs):
 		self.output = output
 		self.struct = struct
@@ -36,7 +41,7 @@ class tRNAscan():
 			if not re.compile(r'\s\d+\s').search(line):
 				continue
 			yield tRNAscanRecord(line, **self.kargs)
-class tRNAscanRecord():
+class tRNAscanRecord(object):
 	def __init__(self, line=None, min_intron=20):
 		if line is None:
 			return
@@ -60,7 +65,7 @@ class tRNAscanRecord():
 		try:
 			return AA[self.type]
 		except KeyError:
-			print >>sys.stderr, 'Unknown tRNA product: {}, ignored'.format(self.type)
+			print('Unknown tRNA product: {}, ignored'.format(self.type), file=sys.stderr)
 			return 'XX'
 	@property
 	def name(self):
@@ -128,12 +133,12 @@ class tRNAscanRecord():
 			return True
 		elif trn_anti_codon == self.anti_codon:
 			# trnI-cau vs trnM-cau
-			print >>sys.stderr, 'same tRNA anti-codon: {} with different product: {} vs {}, retrained'.format(
-							trn_anti_codon, trn_aa, self.aa)
+			print('same tRNA anti-codon: {} with different product: {} vs {}, retrained'.format(
+							trn_anti_codon, trn_aa, self.aa), file=sys.stderr)
 			return True
 		elif trn_aa == self.aa:
-			print >>sys.stderr, 'same tRNA product: {} with different anti-codon: {} vs {}, ignored'.format(
-							self.type, trn_anti_codon, self.anti_codon)
+			print('same tRNA product: {} with different anti-codon: {} vs {}, ignored'.format(
+							self.type, trn_anti_codon, self.anti_codon), file=sys.stderr)
 		return False
 	def to_exons(self):
 		self.strand = '+'
@@ -167,7 +172,7 @@ class tRNAscanRecord():
 		exons = GffExons(exons)
 		return exons
 
-class tRNAscanStructs():
+class tRNAscanStructs(object):
 	def __init__(self, struct, **kargs):
 		self.struct = struct
 	def __iter__(self):

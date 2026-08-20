@@ -24,11 +24,16 @@
 # For any enquiries send an email to David Emms
 # david_emms@hotmail.com
 
+from __future__ import absolute_import
+from future import standard_library
+standard_library.install_aliases()
+from builtins import zip
+from builtins import range
 import os
 import glob
-import cPickle as pic
+import pickle as pic
 
-import util, files
+from . import util, files
 
 def DumpMatrix(name, m, iSpecies, jSpecies):
     with open(files.FileHandler.GetPickleDir() + "%s%d_%d.pic" % (name, iSpecies, jSpecies), 'wb') as picFile:
@@ -45,7 +50,7 @@ def LoadMatrix(name, iSpecies, jSpecies):
         
 def LoadMatrixArray(name, seqsInfo, iSpecies, row=True):
     matrixArray = []
-    for jSpecies in xrange(seqsInfo.nSpecies):
+    for jSpecies in range(seqsInfo.nSpecies):
         if row == True:
             matrixArray.append(LoadMatrix(name, iSpecies, jSpecies))
         else:

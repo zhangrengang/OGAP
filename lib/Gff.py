@@ -1097,9 +1097,10 @@ class ExonerateGtfExons(GtfExons):
 		print('# hit = {}::{}'.format(self.hit, self.score), file=fout)
 		
 class ExonerateGffGenes(GffGenes):	# each alignment
-	def __init__(self, gff=None, parser=ExonerateGtfLines):
+	def __init__(self, gff=None, parser=ExonerateGtfLines, forced_gene_name=None):
 		self.gff = gff
 		self.parser = parser
+		self.forced_gene_name = forced_gene_name   # 新增：外部传入真实gene名
 		self._records = None  # 缓存解析完成的record，解决迭代器只能遍历一次
 
 	def _parse(self):
@@ -1138,9 +1139,11 @@ class ExonerateGffGenes(GffGenes):	# each alignment
 	def get_best_hit(self):
 		records = [record for record in self if not record.has_frameshift]
 		return max(records, key=lambda x: x.score)
+
 	def get_gene_gtf(self, d_seqs, fout=None, transl_table=1, max_dist=150):
 		#best_hit = self.get_best_hit()
 		#seq = d_seqs[best_hit.chrom]
+		logger.info(f"[INFO-DBG-EXON] forced_gene_name={repr(self.forced_gene_name)}")
 		hits = []
 		for i, record in enumerate(self):
 			if record.has_frameshift:	# exclude frameshift
@@ -1148,10 +1151,20 @@ class ExonerateGffGenes(GffGenes):	# each alignment
 			seq = d_seqs[record.chrom]
 			exons = self.fit_structure(record, seq,
 						transl_table=transl_table, max_dist=max_dist)
+			# =========修复这里，替换原来两行=========
+			if self.forced_gene_name is not None:
+				if hasattr(self.forced_gene_name, "name"):
+					exons.name = self.forced_gene_name.name
+				else:
+					exons.name = self.forced_gene_name
+			# ========================================
+			
 			if fout is not None:
 				exons.to_augustus_gtf(fout, index=i)
 			hits += [exons]
 		return hits
+
+
 	def to_exons(self, d_seqs=None, fout=None):
 		hits = []
 		for i, record in enumerate(self):

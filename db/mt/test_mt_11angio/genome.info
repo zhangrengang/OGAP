@@ -1,0 +1,12 @@
+#id	organism	name_count	cds_count	trn_count	rrn_count	length	GC	taxonomy
+NC_037304.1	Arabidopsis thaliana	58	33	22	3	367808	0.4	
+NC_042143.1	Boechera stricta	55	31	21	3	271601	0.4	
+NC_008285.1	Brassica napus	51	79	17	3	221853	0.5	
+NC_020455.1	Glycine max	58	88	19	3	402558	0.5	
+NC_029998.1	Gossypium raimondii	75	39	30	6	676078	0.4	
+NC_030753.1	Nelumbo nucifera	71	44	21	6	524797	0.5	
+NC_006581.1	Nicotiana tabacum	61	156	23	4	430597	0.4	
+NC_011033.1	Oryza sativa Japonica Group	53	53	22	3	490520	0.4	
+NC_035963.1	Solanum lycopersicum	72	39	27	5	446257	0.5	
+NC_012119.1	Vitis vinifera	100	74	31	3	773279	0.4	
+NC_007982.1	Zea mays subsp. mays	62	163	29	4	569630	0.4	

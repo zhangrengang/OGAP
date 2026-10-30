@@ -19,6 +19,8 @@ from .Gff import GffLine, GtfExons
 from .get_record import get_records
 # 临时调用
 import sys
+import os
+
 
 class HmmSearch(object):
 	def __init__(self, hmmout, hmmfmt='domtbl'):
@@ -26,12 +28,17 @@ class HmmSearch(object):
 		self.hmmfmt = hmmfmt
 	def __iter__(self):
 		return self.parse()
+
 	def parse(self):
-		for line in open(self.hmmout):
-			if line.startswith('#'):
-				continue
-			if self.hmmfmt == 'domtbl':
-				yield HmmSearchDomHit(line)
+		if not os.path.exists(self.hmmout):
+			return
+		with open(self.hmmout) as fh:
+			for line in fh:
+				if line.startswith('#'):
+					continue
+				if self.hmmfmt == 'domtbl':
+					yield HmmSearchDomHit(line)
+
 	def get_best_hit(self, score=False):
 		best_hit = None
 		d_cov = {}
@@ -53,15 +60,16 @@ class HmmSearch(object):
 			hit.split_name()
 			nucl_names += [hit.nucl_name]
 		get_records(inseq, outseq, nucl_names, type='fasta')
+
 	def get_gene_structure(self, d_length, max_copies=4, min_part=1,
-			min_hmmcov=0, min_contained_cov=0.95,
-			min_cov=80, min_ratio=0.9, seq_type='prot', flank=1000):
+				min_hmmcov=0, min_contained_cov=0.95,
+				min_cov=80, min_ratio=0.9, seq_type='prot', flank=1000):
 		graph = HmmStructueGraph()
 		for hit in self:
 			if hit.hmmcov < min_hmmcov:
 				continue
 			hit.convert_to_nucl_coord(d_length, seq_type=seq_type)
-	#		print >>sys.stderr, hit.nucl_hit
+		#		print >>sys.stderr, hit.nucl_hit
 			graph.add_node(hit)
 		print('Contained nodes:', file=sys.stderr)
 		graph.prune_contained(min_cov=min_contained_cov)
@@ -76,11 +84,8 @@ class HmmSearch(object):
 		graph.prune_graph()
 		print('【DEBUG prune_graph之后边数量】', len(graph.edges()), file=sys.stderr)
 		graph.break_circle()
-
 		graph.compute_sources_targets()
-
-	#	print >>sys.stderr, graph.nodes()
-
+#		print >>sys.stderr, graph.nodes()
 		print('after pruned:', file=sys.stderr)
 		for n1, n2 in sorted(graph.edges(), key=lambda x: (x[0].hmmcoord, x[1].hmmcoord)):
 			print(n1.short, '-',  n2.short, file=sys.stderr)
@@ -98,6 +103,7 @@ class HmmSearch(object):
 #			seq = parts.combine_seq()
 			copies += [parts]
 			hmmcovs += [path.hmmcov]
+		
 		# filter out too many parts
 		if len(copies) > 0:
 	#		min_part_number = min(map(len, copies))
@@ -106,7 +112,6 @@ class HmmSearch(object):
 			best_copies = [parts for parts, hmmcov in zip(copies, hmmcovs) \
 								if not hmmcov < max_hmmcov*0.99]
 			min_part_number = min(list(map(len, best_copies)))
-
 			i = 0
 			for parts, hmmcov in sorted(zip(copies, hmmcovs), key=lambda x:-x[1]):
 				if len(parts) > min_part_number+min_part:
@@ -116,8 +121,9 @@ class HmmSearch(object):
 				i += 1
 				if i > max_copies and hmmcov < max_hmmcov*0.99:
 					continue
-		#		print >>sys.stderr, min_part_number, parts
+	#		print >>sys.stderr, min_part_number, parts
 				yield parts		# maybe multi-copy
+
 
 class HmmPath(object):
 	def __init__(self, path):
@@ -610,14 +616,30 @@ class HmmStructueGraph(DiGraph):
 
 	def break_circle(self):
 		for circle in nx.simple_cycles(self):
-			# print(circle)
 			sg = self.subgraph(circle)
-			# 重点修改：取出dist数值用于比较
-			max_dist_edge = max(sg.edges(), key=lambda x: sg.get_edge_data(*x)['dist'])
-			n1, n2 = max_dist_edge
-			print('break circle', n1.short, '-', n2.short, file=sys.stderr)
-			self.remove_edge(*max_dist_edge)
+			edges_in_circle = list(sg.edges())
 
+			# ===== 新增兜底：自环/空环边，跳过破环 =====
+			if not edges_in_circle:
+				continue
+			# ==========================================
+
+			def edge_is_low_confidence(e):
+				n1, n2 = e
+				threshold = 20.0
+				return (n1.score < threshold) or (n2.score < threshold)
+			low_conf_edges = [e for e in edges_in_circle if edge_is_low_confidence(e)]
+			if low_conf_edges:
+				max_dist_edge = max(low_conf_edges, key=lambda x: sg.get_edge_data(*x)['dist'])
+			else:
+				max_dist_edge = max(edges_in_circle, key=lambda x: sg.get_edge_data(*x)['dist'])
+			n1, n2 = max_dist_edge
+			self.remove_edge(*max_dist_edge)
+			# 新增：如果反向边也在环内，一并删除，处理双向伪环
+			reverse_edge = (n2, n1)
+			if reverse_edge in edges_in_circle:
+				self.remove_edge(*reverse_edge)
+	
 	def prune_graph(self):
 		# remove bridged edge
 		for node in self.nodes():

@@ -122,24 +122,37 @@ class tRNAscanRecord(object):
 		if match:
 			return True
 		return False
+
 	def is_trn(self, trn=None):
 		if trn is None:
 			trn = self.target
 		trn_aa = self.get_aa(trn)
 		trn_anti_codon = self.get_codon(trn)
+
+		# 辅助函数：RNA的U转为T，仅用于反密码子比对，不修改输出名称
+		def _norm_anti(anti_str):
+			if anti_str is None:
+				return None
+			return anti_str.upper().replace("U", "T")
+
+		norm_trn_anti = _norm_anti(trn_anti_codon)
+		norm_self_anti = _norm_anti(self.anti_codon)
+
 		if trn_anti_codon is None and trn_aa == self.aa:
 			return True
-		elif trn_aa == self.aa and trn_anti_codon == self.anti_codon:
+		elif trn_aa == self.aa and norm_trn_anti is not None and norm_self_anti is not None and norm_trn_anti == norm_self_anti:
 			return True
-		elif trn_anti_codon == self.anti_codon:
+		elif norm_trn_anti is not None and norm_self_anti is not None and norm_trn_anti == norm_self_anti:
 			# trnI-cau vs trnM-cau
 			print('same tRNA anti-codon: {} with different product: {} vs {}, retrained'.format(
-							trn_anti_codon, trn_aa, self.aa), file=sys.stderr)
+					trn_anti_codon, trn_aa, self.aa), file=sys.stderr)
 			return True
 		elif trn_aa == self.aa:
 			print('same tRNA product: {} with different anti-codon: {} vs {}, ignored'.format(
-							self.type, trn_anti_codon, self.anti_codon), file=sys.stderr)
+					self.type, trn_anti_codon, self.anti_codon), file=sys.stderr)
+			return False
 		return False
+		
 	def to_exons(self):
 		self.strand = '+'
 		start, end = self.start, self.end

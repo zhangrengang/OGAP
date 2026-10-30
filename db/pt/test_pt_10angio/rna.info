@@ -1,0 +1,61 @@
+#id	name	product	seq_type	exon_count	trans_splicing	gene_count	species_count	names	products	species
+rrn16S	rrn16S	16S ribosomal RNA	rRNA	1	false	1	1	rrn16S	16S ribosomal RNA	Arabidopsis thaliana
+rrn23S	rrn23S	23S ribosomal RNA	rRNA	1	false	1	1	rrn23S	23S ribosomal RNA	Arabidopsis thaliana
+rrn4.5S	rrn4.5S	4.5S ribosomal RNA	rRNA	1	false	1	1	rrn4.5S	4.5S ribosomal RNA	Arabidopsis thaliana
+trnH	trnH	tRNA-His	tRNA	1	false	2	2	trnH	tRNA-His	Arabidopsis thaliana;Nicotiana tabacum
+trnK	trnK	tRNA-Lys	tRNA	1	false	4	4	trnK	tRNA-Lys	Arabidopsis thaliana;Nicotiana tabacum;Oryza sativa Japonica Group;Populus trichocarpa
+trnQ	trnQ	tRNA-Gln	tRNA	1	false	2	2	trnQ	tRNA-Gln	Arabidopsis thaliana;Nicotiana tabacum
+trnS	trnS	tRNA-Ser	tRNA	1	false	6	2	trnS	tRNA-Ser	Arabidopsis thaliana;Nicotiana tabacum
+trnG	trnG	tRNA-Gly	tRNA	1	false	4	2	trnG	tRNA-Gly	Arabidopsis thaliana;Nicotiana tabacum
+trnR	trnR	tRNA-Arg	tRNA	1	false	6	2	trnR	tRNA-Arg	Arabidopsis thaliana;Nicotiana tabacum
+trnC	trnC	tRNA-Cys	tRNA	1	false	2	2	trnC	tRNA-Cys	Arabidopsis thaliana;Nicotiana tabacum
+trnD	trnD	tRNA-Asp	tRNA	1	false	2	2	trnD	tRNA-Asp	Arabidopsis thaliana;Nicotiana tabacum
+trnY	trnY	tRNA-Tyr	tRNA	1	false	2	2	trnY	tRNA-Tyr	Arabidopsis thaliana;Nicotiana tabacum
+trnE	trnE	tRNA-Glu	tRNA	1	false	2	2	trnE	tRNA-Glu	Arabidopsis thaliana;Nicotiana tabacum
+trnT	trnT	tRNA-Thr	tRNA	1	false	3	2	trnT	tRNA-Thr	Arabidopsis thaliana;Nicotiana tabacum
+trnfM	trnfM	tRNA-Met	tRNA	1	false	2	2	trnfM	tRNA-Met	Arabidopsis thaliana;Nicotiana tabacum
+trnL	trnL	tRNA-Leu	tRNA	1	false	8	2	trnL	tRNA-Leu	Arabidopsis thaliana;Nicotiana tabacum
+trnF	trnF	tRNA-Phe	tRNA	1	false	2	2	trnF	tRNA-Phe	Arabidopsis thaliana;Nicotiana tabacum
+trnV	trnV	tRNA-Val	tRNA	1	false	5	2	trnV	tRNA-Val	Arabidopsis thaliana;Nicotiana tabacum
+trnM	trnM	tRNA-Met	tRNA	1	false	2	2	trnM	tRNA-Met	Arabidopsis thaliana;Nicotiana tabacum
+trnW	trnW	tRNA-Trp	tRNA	1	false	2	2	trnW	tRNA-Trp	Arabidopsis thaliana;Nicotiana tabacum
+trnP	trnP	tRNA-Pro	tRNA	1	false	2	2	trnP	tRNA-Pro	Arabidopsis thaliana;Nicotiana tabacum
+trnI	trnI	tRNA-Ile	tRNA	1	false	8	2	trnI	tRNA-Ile	Arabidopsis thaliana;Nicotiana tabacum
+trnA	trnA	tRNA-Ala	tRNA	1	false	6	3	trnA	;tRNA-Ala	Arabidopsis thaliana;Nicotiana tabacum;Populus trichocarpa
+trnN	trnN	tRNA-Asn	tRNA	1	false	4	2	trnN	tRNA-Asn	Arabidopsis thaliana;Nicotiana tabacum
+rrn16	rrn16	16S ribosomal RNA	rRNA	1	false	6	3	rrn16	16S ribosomal RNA	Coffea canephora;Cucumis melo subsp. melo;Glycine max
+rrn23	rrn23	23S ribosomal RNA	rRNA	1	false	6	3	rrn23	23S ribosomal RNA	Coffea canephora;Cucumis melo subsp. melo;Glycine max
+rrn4.5	rrn4.5	4.5S ribosomal RNA	rRNA	1	false	6	3	rrn4.5	4.5S ribosomal RNA	Coffea canephora;Cucumis melo subsp. melo;Glycine max
+rrn5	rrn5	5S ribosomal RNA	rRNA	1	false	6	3	rrn5	5S ribosomal RNA	Coffea canephora;Cucumis melo subsp. melo;Glycine max
+trnH-GUG	trnH-GUG	tRNA-His	tRNA	1	false	6	6	trnH-GUG	tRNA-His	Coffea canephora;Cucumis melo subsp. melo;Glycine max;Prunus persica;Solanum lycopersicum;Vitis vinifera
+trnK-UUU	trnK-UUU	tRNA-Lys	tRNA	1	false	6	5	trnK-UUU	tRNA-Lys	Coffea canephora;Glycine max;Prunus persica;Solanum lycopersicum;Vitis vinifera
+trnQ-UUG	trnQ-UUG	tRNA-Gln	tRNA	1	false	6	6	trnQ-UUG	tRNA-Gln	Coffea canephora;Cucumis melo subsp. melo;Glycine max;Prunus persica;Solanum lycopersicum;Vitis vinifera
+trnS-GCU	trnS-GCU	tRNA-Ser	tRNA	1	false	6	6	trnS-GCU	tRNA-Ser	Coffea canephora;Cucumis melo subsp. melo;Glycine max;Prunus persica;Solanum lycopersicum;Vitis vinifera
+trnG-GCC	trnG-GCC	tRNA-Gly	tRNA	1	false	10	6	trnG-GCC	tRNA-Gly	Coffea canephora;Cucumis melo subsp. melo;Glycine max;Prunus persica;Solanum lycopersicum;Vitis vinifera
+trnR-UCU	trnR-UCU	tRNA-Arg	tRNA	1	false	6	6	trnR-UCU	tRNA-Arg	Coffea canephora;Cucumis melo subsp. melo;Glycine max;Prunus persica;Solanum lycopersicum;Vitis vinifera
+trnC-GCA	trnC-GCA	tRNA-Cys	tRNA	1	false	6	6	trnC-GCA	tRNA-Cys	Coffea canephora;Cucumis melo subsp. melo;Glycine max;Prunus persica;Solanum lycopersicum;Vitis vinifera
+trnD-GUC	trnD-GUC	tRNA-Asp	tRNA	1	false	6	6	trnD-GUC	tRNA-Asp	Coffea canephora;Cucumis melo subsp. melo;Glycine max;Prunus persica;Solanum lycopersicum;Vitis vinifera
+trnY-GUA	trnY-GUA	tRNA-Tyr	tRNA	1	false	6	6	trnY-GUA	tRNA-Tyr	Coffea canephora;Cucumis melo subsp. melo;Glycine max;Prunus persica;Solanum lycopersicum;Vitis vinifera
+trnE-UUC	trnE-UUC	tRNA-Glu	tRNA	1	false	6	6	trnE-UUC	tRNA-Glu	Coffea canephora;Cucumis melo subsp. melo;Glycine max;Prunus persica;Solanum lycopersicum;Vitis vinifera
+trnT-GGU	trnT-GGU	tRNA-Thr	tRNA	1	false	6	6	trnT-GGU	tRNA-Thr	Coffea canephora;Cucumis melo subsp. melo;Glycine max;Prunus persica;Solanum lycopersicum;Vitis vinifera
+trnS-UGA	trnS-UGA	tRNA-Ser	tRNA	1	false	6	6	trnS-UGA	tRNA-Ser	Coffea canephora;Cucumis melo subsp. melo;Glycine max;Prunus persica;Solanum lycopersicum;Vitis vinifera
+trnfM-CAU	trnfM-CAU	tRNA-Met	tRNA	1	false	6	6	trnfM-CAU	tRNA-Met	Coffea canephora;Cucumis melo subsp. melo;Glycine max;Prunus persica;Solanum lycopersicum;Vitis vinifera
+trnS-GGA	trnS-GGA	tRNA-Ser	tRNA	1	false	6	6	trnS-GGA	tRNA-Ser	Coffea canephora;Cucumis melo subsp. melo;Glycine max;Prunus persica;Solanum lycopersicum;Vitis vinifera
+trnT-UGU	trnT-UGU	tRNA-Thr	tRNA	1	false	6	6	trnT-UGU	tRNA-Thr	Coffea canephora;Cucumis melo subsp. melo;Glycine max;Prunus persica;Solanum lycopersicum;Vitis vinifera
+trnL-UAA	trnL-UAA	tRNA-Leu	tRNA	1	false	7	6	trnL-UAA	tRNA-Leu	Coffea canephora;Cucumis melo subsp. melo;Glycine max;Prunus persica;Solanum lycopersicum;Vitis vinifera
+trnF-GAA	trnF-GAA	tRNA-Phe	tRNA	1	false	6	6	trnF-GAA	tRNA-Phe	Coffea canephora;Cucumis melo subsp. melo;Glycine max;Prunus persica;Solanum lycopersicum;Vitis vinifera
+trnV-UAC	trnV-UAC	tRNA-Val	tRNA	1	false	7	6	trnV-UAC	tRNA-Val	Coffea canephora;Cucumis melo subsp. melo;Glycine max;Prunus persica;Solanum lycopersicum;Vitis vinifera
+trnM-CAU	trnM-CAU	tRNA-Met	tRNA	1	false	6	6	trnM-CAU	tRNA-Met	Coffea canephora;Cucumis melo subsp. melo;Glycine max;Prunus persica;Solanum lycopersicum;Vitis vinifera
+trnW-CCA	trnW-CCA	tRNA-Trp	tRNA	1	false	6	6	trnW-CCA	tRNA-Trp	Coffea canephora;Cucumis melo subsp. melo;Glycine max;Prunus persica;Solanum lycopersicum;Vitis vinifera
+trnP-UGG	trnP-UGG	tRNA-Pro	tRNA	1	false	6	6	trnP-UGG	tRNA-Pro	Coffea canephora;Cucumis melo subsp. melo;Glycine max;Prunus persica;Solanum lycopersicum;Vitis vinifera
+trnI-CAU	trnI-CAU	tRNA-Ile	tRNA	1	false	14	7	trnI-CAU	tRNA-Ile	Coffea canephora;Cucumis melo subsp. melo;Glycine max;Populus trichocarpa;Prunus persica;Solanum lycopersicum;Vitis vinifera
+trnL-CAA	trnL-CAA	tRNA-Leu	tRNA	1	false	12	6	trnL-CAA	tRNA-Leu	Coffea canephora;Cucumis melo subsp. melo;Glycine max;Prunus persica;Solanum lycopersicum;Vitis vinifera
+trnV-GAC	trnV-GAC	tRNA-Val	tRNA	1	false	12	6	trnV-GAC	tRNA-Val	Coffea canephora;Cucumis melo subsp. melo;Glycine max;Prunus persica;Solanum lycopersicum;Vitis vinifera
+trnI-GAU	trnI-GAU	tRNA-Ile	tRNA	1	false	13	6	trnI-GAU	tRNA-Ile	Coffea canephora;Cucumis melo subsp. melo;Glycine max;Prunus persica;Solanum lycopersicum;Vitis vinifera
+trnA-UGC	trnA-UGC	tRNA-Ala	tRNA	1	false	14	6	trnA-UGC	tRNA-Ala	Coffea canephora;Cucumis melo subsp. melo;Glycine max;Prunus persica;Solanum lycopersicum;Vitis vinifera
+trnR-ACG	trnR-ACG	tRNA-Arg	tRNA	1	false	12	6	trnR-ACG	tRNA-Arg	Coffea canephora;Cucumis melo subsp. melo;Glycine max;Prunus persica;Solanum lycopersicum;Vitis vinifera
+trnN-GUU	trnN-GUU	tRNA-Asn	tRNA	1	false	12	6	trnN-GUU	tRNA-Asn	Coffea canephora;Cucumis melo subsp. melo;Glycine max;Prunus persica;Solanum lycopersicum;Vitis vinifera
+trnL-UAG	trnL-UAG	tRNA-Leu	tRNA	1	false	6	6	trnL-UAG	tRNA-Leu	Coffea canephora;Cucumis melo subsp. melo;Glycine max;Prunus persica;Solanum lycopersicum;Vitis vinifera
+trnG-UCC	trnG-UCC	tRNA-Gly	tRNA	1	false	2	2	trnG-UCC	tRNA-Gly	Cucumis melo subsp. melo;Glycine max
+trnI-UAG	trnI-UAG	tRNA-Ile	tRNA	1	false	1	1	trnI-UAG	tRNA-Ile	Glycine max
+trnk-UUU	trnk-UUU	tRNA-Lys	tRNA	1	false	1	1	trnk-UUU	tRNA-Lys	Cucumis melo subsp. melo

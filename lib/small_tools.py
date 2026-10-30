@@ -320,3 +320,27 @@ def flattern2(nested):
 	for sublist in nested:
 		for element in sublist:
 			yield element
+
+def fix_prfl_for_new_libstdc__(prfl_in: str, tmp_outdir: str) -> str:
+    """
+    规避 augustus prfl解析bug：新版libstdc++ >>ws会提前触发eof
+    只修改[dist]块数值行，清除数字后面尾随空白；输出临时prfl副本
+    """
+    basename = os.path.basename(prfl_in)
+    tmp_prfl = os.path.join(tmp_outdir, f"fixed_{basename}")
+
+    with open(prfl_in, "r") as fhin, open(tmp_prfl, "w") as fhout:
+        lines = fhin.readlines()
+        idx = 0
+        while idx < len(lines):
+            line = lines[idx]
+            fhout.write(line)
+            if line.strip() == "[dist]":
+                idx += 1
+                raw = lines[idx]
+                tokens = raw.strip().split()
+                number_part = tokens[0]
+                fhout.write(f"{number_part}\n")
+            idx += 1
+    return tmp_prfl
+

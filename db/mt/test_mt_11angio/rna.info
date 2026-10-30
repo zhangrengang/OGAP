@@ -1,0 +1,128 @@
+#id	name	product	seq_type	exon_count	trans_splicing	gene_count	species_count	names	products	species
+rrn5	rrn5	5S ribosomal RNA	rRNA	1	false	11	9	rrn5	5S ribosomal RNA	Arabidopsis thaliana;Boechera stricta;Brassica napus;Glycine max;Gossypium raimondii;Nicotiana tabacum;Oryza sativa Japonica Group;Solanum lycopersicum;Zea mays subsp. mays
+rrn18	rrn18	18S ribosomal RNA	rRNA	1	false	9	7	rrn18	18S ribosomal RNA	Arabidopsis thaliana;Brassica napus;Gossypium raimondii;Nicotiana tabacum;Oryza sativa Japonica Group;Solanum lycopersicum;Zea mays subsp. mays
+rrn26	rrn26	26S ribosomal RNA	rRNA	1	false	9	7	rrn26	26S ribosomal RNA	Arabidopsis thaliana;Brassica napus;Gossypium raimondii;Nicotiana tabacum;Oryza sativa Japonica Group;Solanum lycopersicum;Zea mays subsp. mays
+trnK-TTT	trnK-TTT	tRNA-Lys	tRNA	1	false	5	4	trnK(TTT);trnK-TTT	tRNA-Lys	Arabidopsis thaliana;Gossypium raimondii;Nelumbo nucifera;Solanum lycopersicum
+trnS-GCT	trnS-GCT	tRNA-Ser	tRNA	1	false	5	4	trnS(GCT)	tRNA-Ser	Arabidopsis thaliana;Gossypium raimondii;Nelumbo nucifera;Solanum lycopersicum
+trnP-TGG	trnP-TGG	tRNA-Pro	tRNA	1	false	4	3	trnP(TGG)	tRNA-Pro	Arabidopsis thaliana;Nelumbo nucifera;Solanum lycopersicum
+trnC-GCA	trnC-GCA	tRNA-Cys	tRNA	1	false	4	4	trnC(GCA)	tRNA-Cys	Arabidopsis thaliana;Gossypium raimondii;Nelumbo nucifera;Solanum lycopersicum
+trnN-GTT	trnN-GTT	tRNA-Asn	tRNA	1	false	3	2	trnN(GTT)	tRNA-Asn	Arabidopsis thaliana;Solanum lycopersicum
+trnY-GTA	trnY-GTA	tRNA-Tyr	tRNA	1	false	5	4	trnY(GTA)	tRNA-Tyr	Arabidopsis thaliana;Gossypium raimondii;Nelumbo nucifera;Solanum lycopersicum
+trnS-TGA	trnS-TGA	tRNA-Ser	tRNA	1	false	4	3	trnS(TGA)	tRNA-Ser	Arabidopsis thaliana;Nelumbo nucifera;Solanum lycopersicum
+trnM-CAT	trnM-CAT	tRNA-Met	tRNA	1	false	5	3	trnM(CAT)	tRNA-Met	Arabidopsis thaliana;Nelumbo nucifera;Solanum lycopersicum
+trnH-GTG	trnH-GTG	tRNA-His	tRNA	1	false	1	1	trnH(GTG)	tRNA-His	Arabidopsis thaliana
+trnfM-CAT	trnfM-CAT	tRNA-Met	tRNA	1	false	2	1	trnfM(CAT)	tRNA-Met	Arabidopsis thaliana
+trnS-GGA	trnS-GGA	tRNA-Ser	tRNA	1	false	3	3	trnS(GGA)	tRNA-Ser	Arabidopsis thaliana;Gossypium raimondii;Solanum lycopersicum
+trnG-GCC	trnG-GCC	tRNA-Gly	tRNA	1	false	5	4	trnG(GCC);trnG-GCC	tRNA-Gly	Arabidopsis thaliana;Gossypium raimondii;Nelumbo nucifera;Solanum lycopersicum
+tRNAI-CAT	tRNAI-CAT	tRNA-Ile	tRNA	1	false	1	1	tRNAI(CAT)	tRNA-Ile	Arabidopsis thaliana
+trnD-GTC	trnD-GTC	tRNA-Asp	tRNA	1	false	2	2	trnD(GTC)	tRNA-Asp	Arabidopsis thaliana;Solanum lycopersicum
+trnQ-TTG	trnQ-TTG	tRNA-Gln	tRNA	1	false	5	4	trnQ(TTG)	tRNA-Gln	Arabidopsis thaliana;Gossypium raimondii;Nelumbo nucifera;Solanum lycopersicum
+trnW-CCA	trnW-CCA	tRNA-Trp	tRNA	1	false	3	3	trnW(CCA)	tRNA-Trp	Arabidopsis thaliana;Gossypium raimondii;Solanum lycopersicum
+trnE-TTC	trnE-TTC	tRNA-Glu	tRNA	1	false	3	3	trnE(TTC)	tRNA-Glu	Arabidopsis thaliana;Nelumbo nucifera;Solanum lycopersicum
+rrnL	rrnL	large subunit ribosomal RNA	rRNA	1	false	2	2	rrnL	large subunit ribosomal RNA	Boechera stricta;Glycine max
+rrnS	rrnS	small subunit ribosomal RNA	rRNA	1	false	2	2	rrnS	small subunit ribosomal RNA	Boechera stricta;Glycine max
+trnP	trnP	tRNA-Pro	tRNA	1	false	4	4	trnP	tRNA-Pro	Boechera stricta;Brassica napus;Glycine max;Oryza sativa Japonica Group
+trnC	trnC	tRNA-Cys	tRNA	1	false	4	4	trnC	tRNA-Cys	Boechera stricta;Brassica napus;Glycine max;Oryza sativa Japonica Group
+trnN	trnN	tRNA-Asn	tRNA	1	false	5	5	trnN	tRNA-Asn	Boechera stricta;Brassica napus;Glycine max;Gossypium raimondii;Oryza sativa Japonica Group
+trnY	trnY	tRNA-Tyr	tRNA	1	false	7	5	trnY	tRNA-Tyr	Boechera stricta;Brassica napus;Glycine max;Oryza sativa Japonica Group;Zea mays subsp. mays
+trnQ	trnQ	tRNA-Gln	tRNA	1	false	5	5	trnQ	tRNA-Gln	Boechera stricta;Brassica napus;Glycine max;Oryza sativa Japonica Group;Zea mays subsp. mays
+trnW	trnW	tRNA-Trp	tRNA	1	false	5	5	trnW	tRNA-Trp	Boechera stricta;Brassica napus;Glycine max;Gossypium raimondii;Oryza sativa Japonica Group
+trnK	trnK	tRNA-Lys	tRNA	1	false	6	5	trnK	tRNA-Lys	Boechera stricta;Brassica napus;Glycine max;Oryza sativa Japonica Group;Zea mays subsp. mays
+trnS	trnS	tRNA-Ser	tRNA	1	false	11	4	trnS	tRNA-Ser	Boechera stricta;Brassica napus;Glycine max;Oryza sativa Japonica Group
+trnD	trnD	tRNA-Asp	tRNA	1	false	4	4	trnD	tRNA-Asp	Boechera stricta;Brassica napus;Glycine max;Oryza sativa Japonica Group
+trnfM	trnfM	tRNA-Met	tRNA	1	false	4	4	trnfM	tRNA-Met	Boechera stricta;Brassica napus;Oryza sativa Japonica Group;Zea mays subsp. mays
+trnE	trnE	tRNA-Glu	tRNA	1	false	4	4	trnE	tRNA-Glu	Boechera stricta;Brassica napus;Glycine max;Oryza sativa Japonica Group
+trnG	trnG	tRNA-Gly	tRNA	1	false	3	3	trnG	tRNA-Gly	Boechera stricta;Brassica napus;Glycine max
+trnI	trnI	tRNA-Ile	tRNA	1	false	4	4	trnI	tRNA-Ile	Boechera stricta;Brassica napus;Glycine max;Oryza sativa Japonica Group
+trnM	trnM	tRNA-Met	tRNA	1	false	7	6	trnM	tRNA-Met	Boechera stricta;Brassica napus;Glycine max;Gossypium raimondii;Oryza sativa Japonica Group;Zea mays subsp. mays
+trnH	trnH	tRNA-His	tRNA	1	false	6	6	trnH	tRNA-His	Boechera stricta;Brassica napus;Glycine max;Gossypium raimondii;Oryza sativa Japonica Group;Solanum lycopersicum
+trnF	trnF	tRNA-Phe	tRNA	1	false	2	2	trnF	tRNA-Phe	Glycine max;Oryza sativa Japonica Group
+trnfM-1	trnfM-1	tRNA-Met	tRNA	1	false	1	1	trnfM-1	tRNA-Met	Glycine max
+trnfM-2	trnfM-2	tRNA-Met	tRNA	1	false	1	1	trnfM-2	tRNA-Met	Glycine max
+trnfM-3	trnfM-3	tRNA-Met	tRNA	1	false	1	1	trnfM-3	tRNA-Met	Glycine max
+trnfM-4	trnfM-4	tRNA-Met	tRNA	1	false	1	1	trnfM-4	tRNA-Met	Glycine max
+trnL-CAA	trnL-CAA	tRNA-Leu	tRNA	1	false	1	1	trnL(CAA)	tRNA-Leu	Solanum lycopersicum
+trnF-GAA	trnF-GAA	tRNA-Phe	tRNA	1	false	3	3	trnF(GAA)	tRNA-Phe	Gossypium raimondii;Nelumbo nucifera;Solanum lycopersicum
+trnI-CAT	trnI-CAT	tRNA-Met	tRNA	1	false	3	1	trnI(CAT)	tRNA-Met	Solanum lycopersicum
+rRNA18	rRNA18	18S ribosomal RNA	rRNA	1	false	2	1	rRNA18	18S ribosomal RNA	Nelumbo nucifera
+rRNA5-a	rRNA5-a	5S ribosomal RNA	rRNA	1	false	1	1	rRNA5-a	5S ribosomal RNA	Nelumbo nucifera
+rRNA26	rRNA26	26S ribosomal RNA	rRNA	1	false	2	1	rRNA26	26S ribosomal RNA	Nelumbo nucifera
+rRNA5-b	rRNA5-b	5S ribosomal RNA	rRNA	1	false	1	1	rRNA5-b	5S ribosomal RNA	Nelumbo nucifera
+tRNA-fMet-CATb2	tRNA-fMet-CATb2	tRNA-Met	tRNA	1	false	1	1	tRNA-fMet(CAT)b2	tRNA-Met	Nelumbo nucifera
+trnM-CAT-cp	trnM-CAT-cp	tRNA-Met	tRNA	1	false	1	1	trnM(CAT)(cp)	tRNA-Met	Nelumbo nucifera
+tRNA-fMet-CATa	tRNA-fMet-CATa	tRNA-Met	tRNA	1	false	1	1	tRNA-fMet(CAT)a	tRNA-Met	Nelumbo nucifera
+tRNA-fMet-CATb1	tRNA-fMet-CATb1	tRNA-Met	tRNA	1	false	1	1	tRNA-fMet(CAT)b1	tRNA-Met	Nelumbo nucifera
+trnN-GTT-cp	trnN-GTT-cp	tRNA-Asn	tRNA	1	false	1	1	trnN(GTT)(cp)	tRNA-Asn	Nelumbo nucifera
+trnD-GTC-cp	trnD-GTC-cp	tRNA-Asp	tRNA	1	false	1	1	trnD(GTC)(cp)	tRNA-Asp	Nelumbo nucifera
+trnT-GGT-cp	trnT-GGT-cp	tRNA-Thr	tRNA	1	false	1	1	trnT(GGT)(cp)	tRNA-Thr	Nelumbo nucifera
+trnH-GTG-cp	trnH-GTG-cp	tRNA-His	tRNA	1	false	1	1	trnH(GTG)(cp)	tRNA-His	Nelumbo nucifera
+trnP-TGG-cp	trnP-TGG-cp	tRNA-Pro	tRNA	1	false	1	1	trnP(TGG)(cp)	tRNA-Pro	Nelumbo nucifera
+trnW-CCA-cp	trnW-CCA-cp	tRNA-Trp	tRNA	1	false	1	1	trnW(CCA)(cp)	tRNA-Trp	Nelumbo nucifera
+trnM-CAU	trnM-CAU	tRNA-Met	tRNA	1	false	4	1	trnM(CAU)	tRNA-Met	Gossypium raimondii
+trnfM-CAU	trnfM-CAU	tRNA-Met	tRNA	1	false	5	1	trnfM(CAU)	tRNA-Met	Gossypium raimondii
+trnD-GUC	trnD-GUC	tRNA-Asp	tRNA	1	false	3	1	trnD(GUC)	tRNA-Asp	Gossypium raimondii
+trnS-UGA	trnS-UGA	tRNA-Ser	tRNA	1	false	1	1	trnS(UGA)	tRNA-Ser	Gossypium raimondii
+trnE-UUC	trnE-UUC	tRNA-Glu	tRNA	1	false	1	1	trnE(UUC)	tRNA-Glu	Gossypium raimondii
+trnP-UGG	trnP-UGG	tRNA-Pro	tRNA	1	false	1	1	trnP(UGG)	tRNA-Pro	Gossypium raimondii
+trnV-GAC	trnV-GAC	tRNA-Val	tRNA	1	false	1	1	trnV(GAC)	tRNA-Val	Gossypium raimondii
+trnI-UAU	trnI-UAU	tRNA-Ile	tRNA	1	false	1	1	trnI(UAU)	tRNA-Ile	Gossypium raimondii
+18Srrn	18Srrn	18S ribosomal RNA	rRNA	1	false	1	1	18Srrn	18S ribosomal RNA	Vitis vinifera
+5Srrn	5Srrn	5S ribosomal RNA	rRNA	1	false	1	1	5Srrn	5S ribosomal RNA	Vitis vinifera
+26Srrn	26Srrn	26S ribosomal RNA	rRNA	1	false	1	1	26Srrn	26S ribosomal RNA	Vitis vinifera
+tRNA-Gln -UUG	tRNA-Gln -UUG	tRNA-Gln	tRNA	1	false	1	1	tRNA-Gln (UUG)	tRNA-Gln	Vitis vinifera
+tRNA-Gly -GCC	tRNA-Gly -GCC	tRNA-Gly	tRNA	1	false	1	1	tRNA-Gly (GCC)	tRNA-Gly	Vitis vinifera
+tRNA-Asp -GUC	tRNA-Asp -GUC	tRNA-Asp	tRNA	1	false	2	1	tRNA-Asp (GUC)	tRNA-Asp	Vitis vinifera
+tRNA-Asn -GUU	tRNA-Asn -GUU	tRNA-Asn	tRNA	1	false	3	1	tRNA-Asn (GUU)	tRNA-Asn	Vitis vinifera
+tRNA-Glu -UUC	tRNA-Glu -UUC	tRNA-Glu	tRNA	1	false	1	1	tRNA-Glu (UUC)	tRNA-Glu	Vitis vinifera
+tRNA-His -GUG	tRNA-His -GUG	tRNA-His	tRNA	1	false	1	1	tRNA-His (GUG)	tRNA-His	Vitis vinifera
+tRNA-Lys -UUU	tRNA-Lys -UUU	tRNA-Lys	tRNA	1	false	2	1	tRNA-Lys (UUU)	tRNA-Lys	Vitis vinifera
+tRNA-Ser -GCU	tRNA-Ser -GCU	tRNA-Ser	tRNA	1	false	1	1	tRNA-Ser (GCU)	tRNA-Ser	Vitis vinifera
+tRNA-Phe -GAA	tRNA-Phe -GAA	tRNA-Phe	tRNA	1	false	1	1	tRNA-Phe (GAA)	tRNA-Phe	Vitis vinifera
+tRNA-Pro -UGG	tRNA-Pro -UGG	tRNA-Pro	tRNA	1	false	3	1	tRNA-Pro (UGG)	tRNA-Pro	Vitis vinifera
+tRNA-Trp -CCA	tRNA-Trp -CCA	tRNA-Trp	tRNA	1	false	2	1	tRNA-Trp (CCA)	tRNA-Trp	Vitis vinifera
+tRNA-Ile -UAU	tRNA-Ile -UAU	tRNA-Ile	tRNA	1	false	1	1	tRNA-Ile (UAU)	tRNA-Ile	Vitis vinifera
+tRNA-Met -CAU	tRNA-Met -CAU	tRNA-Met	tRNA	1	false	2	1	tRNA-Met (CAU)	tRNA-Met	Vitis vinifera
+tRNA-Ser -UGA	tRNA-Ser -UGA	tRNA-Ser	tRNA	1	false	1	1	tRNA-Ser (UGA)	tRNA-Ser	Vitis vinifera
+tRNA-Leu -UAG	tRNA-Leu -UAG	tRNA-Leu	tRNA	1	false	1	1	tRNA-Leu (UAG)	tRNA-Leu	Vitis vinifera
+tRNA-Cys -GCA	tRNA-Cys -GCA	tRNA-Cys	tRNA	1	false	1	1	tRNA-Cys (GCA)	tRNA-Cys	Vitis vinifera
+tRNA-Tyr -GUA	tRNA-Tyr -GUA	tRNA-Tyr	tRNA	1	false	2	1	tRNA-Tyr (GUA)	tRNA-Tyr	Vitis vinifera
+tRNA-Arg -UCU	tRNA-Arg -UCU	tRNA-Arg	tRNA	1	false	1	1	tRNA-Arg (UCU)	tRNA-Arg	Vitis vinifera
+tRNA-Gly -UCC	tRNA-Gly -UCC	tRNA-Gly	tRNA	1	false	1	1	tRNA-Gly (UCC)	tRNA-Gly	Vitis vinifera
+tRNA-fMet-CAU	tRNA-fMet-CAU	tRNA-Met	tRNA	1	false	1	1	tRNA-fMet(CAU)	tRNA-Met	Vitis vinifera
+tRNA-Thr -GGU	tRNA-Thr -GGU	tRNA-Thr	tRNA	1	false	1	1	tRNA-Thr (GGU)	tRNA-Thr	Vitis vinifera
+trnR	trnR	tRNA-Arg	tRNA	1	false	1	1	trnR	tRNA-Arg	Oryza sativa Japonica Group
+trnI-cau	trnI-cau	tRNA-Ile	tRNA	1	false	2	1	trnI(cau)	tRNA-Ile	Nicotiana tabacum
+trnfM-cau	trnfM-cau	tRNA-Met	tRNA	1	false	2	1	trnfM(cau)	tRNA-Met	Nicotiana tabacum
+trnS-uga	trnS-uga	tRNA-Ser	tRNA	1	false	1	1	trnS(uga)	tRNA-Ser	Nicotiana tabacum
+trnS-gga	trnS-gga	tRNA-Ser	tRNA	1	false	1	1	trnS(gga)	tRNA-Ser	Nicotiana tabacum
+trnD-guc	trnD-guc	tRNA-Asp	tRNA	1	false	1	1	trnD(guc)	tRNA-Asp	Nicotiana tabacum
+trnC-gca	trnC-gca	tRNA-Cys	tRNA	1	false	1	1	trnC(gca)	tRNA-Cys	Nicotiana tabacum
+trnN-guu	trnN-guu	tRNA-Asn	tRNA	1	false	1	1	trnN(guu)	tRNA-Asn	Nicotiana tabacum
+trnY-gua	trnY-gua	tRNA-Tyr	tRNA	1	false	1	1	trnY(gua)	tRNA-Tyr	Nicotiana tabacum
+trnQ-uug	trnQ-uug	tRNA-Gln	tRNA	1	false	1	1	trnQ(uug)	tRNA-Gln	Nicotiana tabacum
+trnG-gcc	trnG-gcc	tRNA-Gly	tRNA	1	false	1	1	trnG(gcc)	tRNA-Gly	Nicotiana tabacum
+trnE-uuc	trnE-uuc	tRNA-Glu	tRNA	1	false	2	1	trnE(uuc)	tRNA-Glu	Nicotiana tabacum
+trnM-cau	trnM-cau	tRNA-Met	tRNA	1	false	1	1	trnM(cau)	tRNA-Met	Nicotiana tabacum
+trnP-ugg	trnP-ugg	tRNA-Pro	tRNA	1	false	2	1	trnP(ugg)	tRNA-Pro	Nicotiana tabacum
+trnF-gaa	trnF-gaa	tRNA-Phe	tRNA	1	false	1	1	trnF(gaa)	tRNA-Phe	Nicotiana tabacum
+trnS-gcu	trnS-gcu	tRNA-Ser	tRNA	1	false	1	1	trnS(gcu)	tRNA-Ser	Nicotiana tabacum
+trnH-gug	trnH-gug	tRNA-His	tRNA	1	false	1	1	trnH(gug)	tRNA-His	Nicotiana tabacum
+trnW-cca	trnW-cca	tRNA-Trp	tRNA	1	false	1	1	trnW(cca)	tRNA-Trp	Nicotiana tabacum
+trnK-uuu	trnK-uuu	tRNA-Lys	tRNA	1	false	1	1	trnK(uuu)	tRNA-Lys	Nicotiana tabacum
+rrn16-ct	rrn16-ct	16S ribosomal RNA	rRNA	1	false	1	1	rrn16-ct	16S ribosomal RNA	Zea mays subsp. mays
+trnN-a1-ct	trnN-a1-ct	tRNA-Asn	tRNA	1	false	1	1	trnN-a1-ct	tRNA-Asn	Zea mays subsp. mays
+trnD-a1	trnD-a1	tRNA-Asp	tRNA	1	false	1	1	trnD-a1	tRNA-Asp	Zea mays subsp. mays
+trnI-a1	trnI-a1	tRNA-Met	tRNA	1	false	1	1	trnI-a1	tRNA-Met	Zea mays subsp. mays
+trnE-a1	trnE-a1	tRNA-Glu	tRNA	1	false	1	1	trnE-a1	tRNA-Glu	Zea mays subsp. mays
+trnP-a1	trnP-a1	tRNA-Pro	tRNA	1	false	1	1	trnP-a1	tRNA-Pro	Zea mays subsp. mays
+trnP-a2	trnP-a2	tRNA-Pro	tRNA	1	false	1	1	trnP-a2	tRNA-Pro	Zea mays subsp. mays
+trnE-a2	trnE-a2	tRNA-Glu	tRNA	1	false	1	1	trnE-a2	tRNA-Glu	Zea mays subsp. mays
+trnI-a2	trnI-a2	tRNA-Met	tRNA	1	false	1	1	trnI-a2	tRNA-Met	Zea mays subsp. mays
+trnD-a2	trnD-a2	tRNA-Asp	tRNA	1	false	1	1	trnD-a2	tRNA-Asp	Zea mays subsp. mays
+trnN-a2-ct	trnN-a2-ct	tRNA-Asn	tRNA	1	false	1	1	trnN-a2-ct	tRNA-Asn	Zea mays subsp. mays
+trnF-ct	trnF-ct	tRNA-Phe	tRNA	1	false	1	1	trnF-ct	tRNA-Phe	Zea mays subsp. mays
+trnC-ct	trnC-ct	tRNA-Cys	tRNA	1	false	1	1	trnC-ct	tRNA-Cys	Zea mays subsp. mays
+trnS-a	trnS-a	tRNA-Ser	tRNA	1	false	1	1	trnS-a	tRNA-Ser	Zea mays subsp. mays
+trnI-ct	trnI-ct	tRNA-Ile	tRNA	1	false	1	1	trnI-ct	tRNA-Ile	Zea mays subsp. mays
+trnH-ct	trnH-ct	tRNA-His	tRNA	1	false	1	1	trnH-ct	tRNA-His	Zea mays subsp. mays
+trnS-b	trnS-b	tRNA-Ser	tRNA	1	false	1	1	trnS-b	tRNA-Ser	Zea mays subsp. mays

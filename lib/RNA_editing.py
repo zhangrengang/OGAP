@@ -1,8 +1,10 @@
+from __future__ import absolute_import
+from builtins import object
 import sys, os
 import re
 import glob
 import argparse
-from RunCmdsMP import run_cmd, logger
+from .RunCmdsMP import run_cmd, logger
 def makeArgparse():
 	parser = argparse.ArgumentParser( \
 		formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -29,7 +31,7 @@ def addReditArgs(parser):
 			default='-d 12 -c 10 -C 10 -v 5 -V 0 -f 0.1 -F 1.0 -e -u',
 			help="options for selectPositions [default='%(default)s']")
 
-class ReditPipeline():
+class ReditPipeline(object):
 	def __init__(self, genome, 
 				rna_bam, dna_bam=None,
 				tmpdir='/tmp/',
@@ -58,7 +60,7 @@ class ReditPipeline():
 			self.select_opts += ' -d 12'
 		self.options += ' -o {}'.format(self.out_folder)
 		if gff is not None:
-			
+			pass	
 		self.main_cmd = '{} -i {} -f {} {}'.format(self.tools,
 				self.rna_bam, self.genome, self.options)
 

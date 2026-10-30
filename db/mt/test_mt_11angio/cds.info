@@ -1,0 +1,399 @@
+#id	name	product	seq_type	exon_count	trans_splicing	gene_count	species_count	names	products	species
+nad5	nad5	NADH dehydrogenase subunit 5	CDS	1	false	10	10	nad5	NADH dehydrogenase subunit 5	Arabidopsis_thaliana;Boechera_stricta;Brassica_napus;Glycine_max;Gossypium_raimondii;Nelumbo_nucifera;Nicotiana_tabacum;Oryza_sativa_Japonica_Group;Vitis_vinifera;Zea_mays_subsp._mays
+cox2	cox2	cytochrome c oxidase subunit 2	CDS	1	false	9	9	cox2	cox2;cytochrome c oxidase subunit 2;cytochrome oxidase subunit 2	Arabidopsis_thaliana;Boechera_stricta;Glycine_max;Gossypium_raimondii;Nelumbo_nucifera;Nicotiana_tabacum;Oryza_sativa_Japonica_Group;Vitis_vinifera;Zea_mays_subsp._mays
+ccmB	ccmB	cytochrome c biogenesis B	CDS	1	false	11	11	ccmB	cytochrome c biogenesis B;cytochrome c biogenesis ccmB;cytochrome c maturation protein B;cytochrome c maturation protein CcmB	Arabidopsis_thaliana;Boechera_stricta;Brassica_napus;Glycine_max;Gossypium_raimondii;Nelumbo_nucifera;Nicotiana_tabacum;Oryza_sativa_Japonica_Group;Solanum_lycopersicum;Vitis_vinifera;Zea_mays_subsp._mays
+rps3	rps3	ribosomal protein S3	CDS	1	false	13	11	rps3	ribosomal protein S3	Arabidopsis_thaliana;Boechera_stricta;Brassica_napus;Glycine_max;Gossypium_raimondii;Nelumbo_nucifera;Nicotiana_tabacum;Oryza_sativa_Japonica_Group;Solanum_lycopersicum;Vitis_vinifera;Zea_mays_subsp._mays
+rpl16	rpl16	ribosomal protein L16	CDS	1	false	11	9	rpl16	ribosomal protein L16;ribosomal protein L16-like	Arabidopsis_thaliana;Boechera_stricta;Glycine_max;Gossypium_raimondii;Nelumbo_nucifera;Nicotiana_tabacum;Solanum_lycopersicum;Vitis_vinifera;Zea_mays_subsp._mays
+nad9	nad9	NADH dehydrogenase subunit 9	CDS	1	false	12	11	nad9	NADH dehydrogenase subunit 9	Arabidopsis_thaliana;Boechera_stricta;Brassica_napus;Glycine_max;Gossypium_raimondii;Nelumbo_nucifera;Nicotiana_tabacum;Oryza_sativa_Japonica_Group;Solanum_lycopersicum;Vitis_vinifera;Zea_mays_subsp._mays
+atp6	atp6	ATPase subunit 6	CDS	1	false	11	10	atp6	ATP synthase F0 subunit 6;ATP synthase subunit 6;ATPase subunit 6	Arabidopsis_thaliana;Boechera_stricta;Brassica_napus;Gossypium_raimondii;Nelumbo_nucifera;Nicotiana_tabacum;Oryza_sativa_Japonica_Group;Solanum_lycopersicum;Vitis_vinifera;Zea_mays_subsp._mays
+nad1	nad1	NADH dehydrogenase subunit 1	CDS	1	false	11	10	nad1	NADH dehydrogenase subunit 1	Arabidopsis_thaliana;Boechera_stricta;Brassica_napus;Glycine_max;Gossypium_raimondii;Nelumbo_nucifera;Nicotiana_tabacum;Oryza_sativa_Japonica_Group;Vitis_vinifera;Zea_mays_subsp._mays
+atp1	atp1	ATPase subunit 1	CDS	1	false	9	9	atp1	ATP synthase F0 subunit 1;ATP synthase F1 subunit 1;ATP synthase subunit 1;ATPase subunit 1	Arabidopsis_thaliana;Boechera_stricta;Brassica_napus;Gossypium_raimondii;Nelumbo_nucifera;Nicotiana_tabacum;Oryza_sativa_Japonica_Group;Solanum_lycopersicum;Vitis_vinifera
+rps7	rps7	ribosomal protein S7	CDS	1	false	7	7	rps7	ribosomal protein S7	Arabidopsis_thaliana;Brassica_napus;Gossypium_raimondii;Nelumbo_nucifera;Oryza_sativa_Japonica_Group;Vitis_vinifera;Zea_mays_subsp._mays
+nad2	nad2	NADH dehydrogenase subunit 2	CDS	1	false	11	10	nad2	NADH dehydrogenase subunit 2	Arabidopsis_thaliana;Boechera_stricta;Brassica_napus;Glycine_max;Gossypium_raimondii;Nelumbo_nucifera;Nicotiana_tabacum;Oryza_sativa_Japonica_Group;Vitis_vinifera;Zea_mays_subsp._mays
+cox1	cox1	cytochrome c oxidase subunit 1	CDS	1	false	11	11	cox1	cytochrome c oxidase subunit 1;cytochrome c oxidase subunit1;cytochrome oxidase subunit 1	Arabidopsis_thaliana;Boechera_stricta;Brassica_napus;Glycine_max;Gossypium_raimondii;Nelumbo_nucifera;Nicotiana_tabacum;Oryza_sativa_Japonica_Group;Solanum_lycopersicum;Vitis_vinifera;Zea_mays_subsp._mays
+rps4	rps4	ribosomal protein S4	CDS	1	false	11	11	rps4	ribosomal protein 4;ribosomal protein S4	Arabidopsis_thaliana;Boechera_stricta;Brassica_napus;Glycine_max;Gossypium_raimondii;Nelumbo_nucifera;Nicotiana_tabacum;Oryza_sativa_Japonica_Group;Solanum_lycopersicum;Vitis_vinifera;Zea_mays_subsp._mays
+nad6	nad6	NADH dehydrogenase subunit 6	CDS	1	false	11	11	nad6	NADH dehydrogenase subunit 6	Arabidopsis_thaliana;Boechera_stricta;Brassica_napus;Glycine_max;Gossypium_raimondii;Nelumbo_nucifera;Nicotiana_tabacum;Oryza_sativa_Japonica_Group;Solanum_lycopersicum;Vitis_vinifera;Zea_mays_subsp._mays
+cob	cob	apocytochrome b	CDS	1	false	10	10	cob	apocytochrome b	Arabidopsis_thaliana;Boechera_stricta;Brassica_napus;Glycine_max;Gossypium_raimondii;Nelumbo_nucifera;Nicotiana_tabacum;Oryza_sativa_Japonica_Group;Solanum_lycopersicum;Zea_mays_subsp._mays
+rpl5	rpl5	ribosomal protein L5	CDS	1	false	9	9	rpl5	ribosomal protein L5	Arabidopsis_thaliana;Boechera_stricta;Brassica_napus;Gossypium_raimondii;Nelumbo_nucifera;Nicotiana_tabacum;Oryza_sativa_Japonica_Group;Solanum_lycopersicum;Vitis_vinifera
+ccmFC	ccmFC	cytochrome c biogenesis FC	CDS	1	false	6	6	ccmFC	cytochrome c biogenesis FC;cytochrome c biogenesis ccmF	Arabidopsis_thaliana;Brassica_napus;Gossypium_raimondii;Nelumbo_nucifera;Vitis_vinifera;Zea_mays_subsp._mays
+nad4	nad4	NADH dehydrogenase subunit 4	CDS	1	false	12	11	nad4	NADH dehydrogenase subunit 4	Arabidopsis_thaliana;Boechera_stricta;Brassica_napus;Glycine_max;Gossypium_raimondii;Nelumbo_nucifera;Nicotiana_tabacum;Oryza_sativa_Japonica_Group;Solanum_lycopersicum;Vitis_vinifera;Zea_mays_subsp._mays
+mttB	mttB	transport membrane protein	CDS	1	false	6	5	mttB	SecY-independent transporter protein;transport membrane protein	Arabidopsis_thaliana;Boechera_stricta;Glycine_max;Gossypium_raimondii;Solanum_lycopersicum
+rpl2	rpl2	ribosomal protein L2	CDS	1	false	10	9	rpl2	ribosomal protein L2	Arabidopsis_thaliana;Boechera_stricta;Brassica_napus;Gossypium_raimondii;Nelumbo_nucifera;Nicotiana_tabacum;Oryza_sativa_Japonica_Group;Solanum_lycopersicum;Vitis_vinifera
+matR	matR	maturase	CDS	1	false	8	8	matR	maturase;maturase R;maturase-related protein	Arabidopsis_thaliana;Boechera_stricta;Brassica_napus;Glycine_max;Gossypium_raimondii;Nelumbo_nucifera;Solanum_lycopersicum;Vitis_vinifera
+nad7	nad7	NADH dehydrogenase subunit 7	CDS	1	false	11	11	nad7	NADH dehydrogenase subunit 7	Arabidopsis_thaliana;Boechera_stricta;Brassica_napus;Glycine_max;Gossypium_raimondii;Nelumbo_nucifera;Nicotiana_tabacum;Oryza_sativa_Japonica_Group;Solanum_lycopersicum;Vitis_vinifera;Zea_mays_subsp._mays
+atp8	atp8	ATPase subunit 8	CDS	1	false	8	8	atp8	ATP synthase subunit 8;ATPase subunit 8	Arabidopsis_thaliana;Boechera_stricta;Glycine_max;Gossypium_raimondii;Nelumbo_nucifera;Solanum_lycopersicum;Vitis_vinifera;Zea_mays_subsp._mays
+atp9	atp9	ATPase subunit 9	CDS	1	false	12	11	atp9	ATP synthase F0 subunit 9;ATP synthase subunit 9;ATPase subunit 9	Arabidopsis_thaliana;Boechera_stricta;Brassica_napus;Glycine_max;Gossypium_raimondii;Nelumbo_nucifera;Nicotiana_tabacum;Oryza_sativa_Japonica_Group;Solanum_lycopersicum;Vitis_vinifera;Zea_mays_subsp._mays
+nad3	nad3	NADH dehydrogenase subunit 3	CDS	1	false	12	11	nad3	NADH dehydrogenase subunit 3	Arabidopsis_thaliana;Boechera_stricta;Brassica_napus;Glycine_max;Gossypium_raimondii;Nelumbo_nucifera;Nicotiana_tabacum;Oryza_sativa_Japonica_Group;Solanum_lycopersicum;Vitis_vinifera;Zea_mays_subsp._mays
+rps12	rps12	ribosomal protein S12	CDS	1	false	11	11	rps12	ribosomal protein S12	Arabidopsis_thaliana;Boechera_stricta;Brassica_napus;Glycine_max;Gossypium_raimondii;Nelumbo_nucifera;Nicotiana_tabacum;Oryza_sativa_Japonica_Group;Solanum_lycopersicum;Vitis_vinifera;Zea_mays_subsp._mays
+ccmFN2	ccmFN2	cytochrome c biogenesis FN2	CDS	1	false	2	2	ccmFN2	cytochrome c biogenesis FN2;cytochrome c biogenesis ccmF	Arabidopsis_thaliana;Brassica_napus
+ccmC	ccmC	cytochrome c biogenesis C	CDS	1	false	11	11	ccmC	cytochrome c biogenesis C;cytochrome c biogenesis ccmB;cytochrome c biogenesis ccmC;cytochrome c maturation protein CcmC	Arabidopsis_thaliana;Boechera_stricta;Brassica_napus;Glycine_max;Gossypium_raimondii;Nelumbo_nucifera;Nicotiana_tabacum;Oryza_sativa_Japonica_Group;Solanum_lycopersicum;Vitis_vinifera;Zea_mays_subsp._mays
+ccmFN1	ccmFN1	cytochrome c biogenesis FN1	CDS	1	false	2	2	ccmFN1	cytochrome c biogenesis FN1;cytochrome c biogenesis ccmF	Arabidopsis_thaliana;Brassica_napus
+cox3	cox3	cytochrome c oxidase subunit 3	CDS	1	false	11	11	cox3	cytochrome c oxidase subunit 3;cytochrome c oxidase subunit III;cytochrome oxidase subunit 3	Arabidopsis_thaliana;Boechera_stricta;Brassica_napus;Glycine_max;Gossypium_raimondii;Nelumbo_nucifera;Nicotiana_tabacum;Oryza_sativa_Japonica_Group;Solanum_lycopersicum;Vitis_vinifera;Zea_mays_subsp._mays
+nad4L	nad4L	NADH dehydrogenase subunit 4L	CDS	1	false	10	10	nad4L	NADH dehydrogenase subunit 4L	Arabidopsis_thaliana;Boechera_stricta;Brassica_napus;Gossypium_raimondii;Nelumbo_nucifera;Nicotiana_tabacum;Oryza_sativa_Japonica_Group;Solanum_lycopersicum;Vitis_vinifera;Zea_mays_subsp._mays
+atp4	atp4	ATPase subunit 4	CDS	1	false	8	8	atp4	ATP synthase subunit 4;ATPase subunit 4	Arabidopsis_thaliana;Boechera_stricta;Glycine_max;Gossypium_raimondii;Nelumbo_nucifera;Solanum_lycopersicum;Vitis_vinifera;Zea_mays_subsp._mays
+ccmFn	ccmFn	cytochrome c biogenesis FN	CDS	1	false	3	3	ccmFn	cytochrome c biogenesis FN;cytochrome c biogenesis Fn	Boechera_stricta;Glycine_max;Oryza_sativa_Japonica_Group
+sdh4	sdh4	succinate dehydrogenase subunit 4	CDS	1	false	5	5	sdh4	succinate dehydrogenase subunit 4	Boechera_stricta;Gossypium_raimondii;Nelumbo_nucifera;Solanum_lycopersicum;Vitis_vinifera
+ccmFc	ccmFc	cytochrome c biogenesis ccmF	CDS	1	false	5	5	ccmFc	cytochrome c biogenesis FC;cytochrome c biogenesis Fc;cytochrome c biogenesis ccmF;cytochrome c maturation protein CcmFC;cytochrome c maturation protein CcmFc	Boechera_stricta;Glycine_max;Nicotiana_tabacum;Oryza_sativa_Japonica_Group;Solanum_lycopersicum
+orf104a	orf104a	hypothetical protein	CDS	1	false	1	1	orf104a	hypothetical protein	Glycine_max
+orf150	orf150	hypothetical protein	CDS	1	false	1	1	orf150	hypothetical protein	Glycine_max
+orf271	orf271	hypothetical protein	CDS	1	false	1	1	orf271	hypothetical protein	Glycine_max
+rp15	rp15	ribosomal protein subunit L5	CDS	1	false	1	1	rp15	ribosomal protein subunit L5	Glycine_max
+rps14	rps14	ribosomal protein subunit S14	CDS	1	false	6	6	rps14	ribosomal protein S14;ribosomal protein subunit S14	Brassica_napus;Glycine_max;Gossypium_raimondii;Nelumbo_nucifera;Nicotiana_tabacum;Vitis_vinifera
+orf129	orf129	hypothetical protein	CDS	1	false	2	2	orf129	hypothetical protein	Glycine_max;Nicotiana_tabacum
+orf152	orf152	hypothetical protein	CDS	1	false	2	2	orf152	hypothetical protein	Glycine_max;Nicotiana_tabacum
+orf100a	orf100a	hypothetical protein	CDS	1	false	2	2	orf100a	hypothetical protein	Brassica_napus;Glycine_max
+orf287	orf287	hypothetical protein	CDS	1	false	1	1	orf287	hypothetical protein	Glycine_max
+orf202	orf202	hypothetical protein	CDS	1	false	2	2	orf202	hypothetical protein	Glycine_max;Nicotiana_tabacum
+rps10	rps10	ribosomal protein S10	CDS	1	false	6	6	rps10	ribosomal protein S10	Glycine_max;Gossypium_raimondii;Nelumbo_nucifera;Nicotiana_tabacum;Solanum_lycopersicum;Vitis_vinifera
+atp6-1	atp6-1	ATPase subunit 6	CDS	1	false	1	1	atp6-1	ATPase subunit 6	Glycine_max
+orf103a-2	orf103a-2	hypothetical protein	CDS	1	false	1	1	orf103a-2	hypothetical protein	Glycine_max
+orf110a	orf110a	hypothetical protein	CDS	1	false	2	2	orf110a	hypothetical protein	Glycine_max;Nicotiana_tabacum
+orf110e	orf110e	hypothetical protein	CDS	1	false	1	1	orf110e	hypothetical protein	Glycine_max
+orf109	orf109	hypothetical protein	CDS	1	false	2	2	orf109	hypothetical protein	Brassica_napus;Glycine_max
+orf104b	orf104b	hypothetical protein	CDS	1	false	2	2	orf104b	hypothetical protein	Glycine_max;Nicotiana_tabacum
+orf106a	orf106a	hypothetical protein	CDS	1	false	3	3	orf106a	hypothetical protein	Brassica_napus;Glycine_max;Nicotiana_tabacum
+orf114b	orf114b	hypothetical protein	CDS	1	false	2	2	orf114b	hypothetical protein	Glycine_max;Nicotiana_tabacum
+nad4L-1	nad4L-1	NADH dehydrogenase subunit 4L	CDS	1	false	1	1	nad4L-1	NADH dehydrogenase subunit 4L	Glycine_max
+orf189	orf189	hypothetical protein	CDS	1	false	1	1	orf189	hypothetical protein	Glycine_max
+orf117	orf117	hypothetical protein	CDS	1	false	1	1	orf117	hypothetical protein	Glycine_max
+orf110b	orf110b	hypothetical protein	CDS	1	false	2	2	orf110b	hypothetical protein	Glycine_max;Nicotiana_tabacum
+atp1-1	atp1-1	ATPase subunit 1	CDS	1	false	1	1	atp1-1	ATPase subunit 1	Glycine_max
+orf172-1	orf172-1	hypothetical protein	CDS	1	false	1	1	orf172-1	hypothetical protein	Glycine_max
+orf167	orf167	hypothetical protein	CDS	1	false	1	1	orf167	hypothetical protein	Glycine_max
+orf102	orf102	hypothetical protein	CDS	1	false	3	3	orf102	hypothetical protein;orf102	Glycine_max;Nicotiana_tabacum;Vitis_vinifera
+orf160a	orf160a	hypothetical protein	CDS	1	false	1	1	orf160a	hypothetical protein	Glycine_max
+orf113	orf113	hypothetical protein	CDS	1	false	1	1	orf113	hypothetical protein	Glycine_max
+orf160b	orf160b	hypothetical protein	CDS	1	false	1	1	orf160b	hypothetical protein	Glycine_max
+nad4L-2	nad4L-2	NADH dehydrogenase subunit 4L	CDS	1	false	1	1	nad4L-2	NADH dehydrogenase subunit 4L	Glycine_max
+orf151	orf151	hypothetical protein	CDS	1	false	2	2	orf151	hypothetical protein	Glycine_max;Nicotiana_tabacum
+orf261	orf261	hypothetical protein	CDS	1	false	2	2	orf261	hypothetical protein	Brassica_napus;Glycine_max
+orf103a-1	orf103a-1	hypothetical protein	CDS	1	false	1	1	orf103a-1	hypothetical protein	Glycine_max
+orf139-1	orf139-1	hypothetical protein	CDS	1	false	1	1	orf139-1	hypothetical protein	Glycine_max
+rps1	rps1	ribosomal protein S1	CDS	1	false	6	6	rps1	ribosomal protein S1	Glycine_max;Nelumbo_nucifera;Oryza_sativa_Japonica_Group;Solanum_lycopersicum;Vitis_vinifera;Zea_mays_subsp._mays
+orf101a	orf101a	hypothetical protein	CDS	1	false	3	3	orf101a	hypothetical protein	Brassica_napus;Glycine_max;Nicotiana_tabacum
+atp1-2	atp1-2	ATPase subunit 1	CDS	1	false	1	1	atp1-2	ATPase subunit 1	Glycine_max
+orf172-2	orf172-2	hypothetical protein	CDS	1	false	1	1	orf172-2	hypothetical protein	Glycine_max
+orf107a	orf107a	hypothetical protein	CDS	1	false	1	1	orf107a	hypothetical protein	Glycine_max
+orf105a	orf105a	hypothetical protein	CDS	1	false	2	2	orf105a	hypothetical protein	Glycine_max;Nicotiana_tabacum
+orf107b	orf107b	hypothetical protein	CDS	1	false	1	1	orf107b	hypothetical protein	Glycine_max
+orf100b	orf100b	hypothetical protein	CDS	1	false	2	2	orf100b	hypothetical protein	Brassica_napus;Glycine_max
+orf105b	orf105b	hypothetical protein	CDS	1	false	1	1	orf105b	hypothetical protein	Glycine_max
+orf110c	orf110c	hypothetical protein	CDS	1	false	1	1	orf110c	hypothetical protein	Glycine_max
+orf101b	orf101b	hypothetical protein	CDS	1	false	3	3	orf101b	hypothetical protein	Brassica_napus;Glycine_max;Nicotiana_tabacum
+orf136a	orf136a	hypothetical protein	CDS	1	false	1	1	orf136a	hypothetical protein	Glycine_max
+orf103b	orf103b	hypothetical protein	CDS	1	false	2	2	orf103b	hypothetical protein	Glycine_max;Nicotiana_tabacum
+orf215	orf215	hypothetical protein	CDS	1	false	2	2	orf215	hypothetical protein	Glycine_max;Nicotiana_tabacum
+orf106b	orf106b	hypothetical protein	CDS	1	false	3	3	orf106b	hypothetical protein	Brassica_napus;Glycine_max;Nicotiana_tabacum
+orf114a	orf114a	hypothetical protein	CDS	1	false	2	2	orf114a	hypothetical protein	Glycine_max;Nicotiana_tabacum
+orf100c	orf100c	hypothetical protein	CDS	1	false	1	1	orf100c	hypothetical protein	Glycine_max
+orf136b	orf136b	hypothetical protein	CDS	1	false	1	1	orf136b	hypothetical protein	Glycine_max
+orf241	orf241	hypothetical protein	CDS	1	false	2	2	orf241	hypothetical protein	Glycine_max;Oryza_sativa_Japonica_Group
+atp1-3	atp1-3	ATPase subunit 1	CDS	1	false	1	1	atp1-3	ATPase subunit 1	Glycine_max
+orf172-3	orf172-3	hypothetical protein	CDS	1	false	1	1	orf172-3	hypothetical protein	Glycine_max
+atp6-2	atp6-2	ATPase subunit 6	CDS	1	false	1	1	atp6-2	ATPase subunit 6	Glycine_max
+orf110d	orf110d	hypothetical protein	CDS	1	false	1	1	orf110d	hypothetical protein	Glycine_max
+orf145	orf145	hypothetical protein	CDS	1	false	3	3	orf145	hypothetical protein;orf145	Glycine_max;Vitis_vinifera;Zea_mays_subsp._mays
+orf103c	orf103c	hypothetical protein	CDS	1	false	2	2	orf103c	hypothetical protein	Glycine_max;Nicotiana_tabacum
+orf178	orf178	hypothetical protein	CDS	1	false	1	1	orf178	hypothetical protein	Glycine_max
+orf139-2	orf139-2	hypothetical protein	CDS	1	false	1	1	orf139-2	hypothetical protein	Glycine_max
+orf103d	orf103d	hypothetical protein	CDS	1	false	2	2	orf103d	hypothetical protein	Glycine_max;Nicotiana_tabacum
+orf120	orf120	hypothetical protein	CDS	1	false	3	3	orf120	hypothetical protein	Brassica_napus;Nicotiana_tabacum;Zea_mays_subsp._mays
+orf115a	orf115a	hypothetical protein	CDS	1	false	1	1	orf115a	hypothetical protein	Brassica_napus
+orf114	orf114	hypothetical protein	CDS	1	false	1	1	orf114	hypothetical protein	Brassica_napus
+orfB	orfB	hypothetical protein	CDS	1	false	3	3	orfB	ORFB protein;hypothetical protein;orfB protein	Brassica_napus;Nicotiana_tabacum;Oryza_sativa_Japonica_Group
+orf124	orf124	hypothetical protein	CDS	1	false	1	1	orf124	hypothetical protein	Brassica_napus
+orf286	orf286	hypothetical protein	CDS	1	false	1	1	orf286	hypothetical protein	Brassica_napus
+orf113a	orf113a	hypothetical protein	CDS	1	false	1	1	orf113a	hypothetical protein	Brassica_napus
+orf110	orf110	hypothetical protein	CDS	1	false	1	1	orf110	hypothetical protein	Brassica_napus
+orf123	orf123	hypothetical protein	CDS	1	false	2	2	orf123	hypothetical protein	Brassica_napus;Nicotiana_tabacum
+orf113b	orf113b	hypothetical protein	CDS	1	false	1	1	orf113b	hypothetical protein	Brassica_napus
+orf25	orf25	hypothetical protein	CDS	1	false	3	3	orf25	hypothetical protein	Brassica_napus;Nicotiana_tabacum;Oryza_sativa_Japonica_Group
+orf222	orf222	hypothetical protein	CDS	1	false	2	2	orf222	hypothetical protein	Brassica_napus;Nicotiana_tabacum
+orf188	orf188	hypothetical protein	CDS	1	false	1	1	orf188	hypothetical protein	Brassica_napus
+orf119	orf119	hypothetical protein	CDS	1	false	1	1	orf119	hypothetical protein	Brassica_napus
+orf125	orf125	hypothetical protein	CDS	1	false	3	3	orf125	hypothetical protein	Brassica_napus;Nicotiana_tabacum;Zea_mays_subsp._mays
+orf161	orf161	hypothetical protein	CDS	1	false	4	4	orf161	hypothetical protein;orf161	Brassica_napus;Nicotiana_tabacum;Oryza_sativa_Japonica_Group;Zea_mays_subsp._mays
+orf159	orf159	hypothetical protein	CDS	1	false	2	2	orf159	hypothetical protein;orf159	Brassica_napus;Vitis_vinifera
+orf115b	orf115b	hypothetical protein	CDS	1	false	1	1	orf115b	hypothetical protein	Brassica_napus
+orf104	orf104	hypothetical protein	CDS	1	false	3	3	orf104	hypothetical protein;orf104	Brassica_napus;Nicotiana_tabacum;Vitis_vinifera
+cox2-2	cox2-2	cytochrome c oxidase subunit 2	CDS	1	false	1	1	cox2-2	cytochrome c oxidase subunit 2	Brassica_napus
+orf195	orf195	hypothetical protein	CDS	1	false	1	1	orf195	hypothetical protein	Brassica_napus
+orf115c	orf115c	hypothetical protein	CDS	1	false	1	1	orf115c	hypothetical protein	Brassica_napus
+orf108a	orf108a	hypothetical protein	CDS	1	false	1	1	orf108a	hypothetical protein	Brassica_napus
+orf146	orf146	hypothetical protein	CDS	1	false	1	1	orf146	hypothetical protein	Brassica_napus
+orf147	orf147	hypothetical protein	CDS	1	false	2	2	orf147	hypothetical protein	Brassica_napus;Nicotiana_tabacum
+orf164	orf164	hypothetical protein	CDS	1	false	1	1	orf164	hypothetical protein	Brassica_napus
+orf117a	orf117a	hypothetical protein	CDS	1	false	1	1	orf117a	hypothetical protein	Brassica_napus
+orf108b	orf108b	hypothetical protein	CDS	1	false	1	1	orf108b	hypothetical protein	Brassica_napus
+orf115d	orf115d	hypothetical protein	CDS	1	false	1	1	orf115d	hypothetical protein	Brassica_napus
+orf322	orf322	hypothetical protein	CDS	1	false	1	1	orf322	hypothetical protein	Brassica_napus
+orf101c	orf101c	hypothetical protein	CDS	1	false	2	2	orf101c	hypothetical protein	Brassica_napus;Nicotiana_tabacum
+orf112	orf112	hypothetical protein	CDS	1	false	1	1	orf112	hypothetical protein	Brassica_napus
+orf128	orf128	hypothetical protein	CDS	1	false	2	2	orf128	hypothetical protein	Brassica_napus;Zea_mays_subsp._mays
+orf101d	orf101d	hypothetical protein	CDS	1	false	2	2	orf101d	hypothetical protein	Brassica_napus;Nicotiana_tabacum
+orf117b	orf117b	hypothetical protein	CDS	1	false	1	1	orf117b	hypothetical protein	Brassica_napus
+orfX	orfX	hypothetical protein	CDS	1	false	4	4	orfX	hypothetical protein;hypothetical protein X	Brassica_napus;Nicotiana_tabacum;Oryza_sativa_Japonica_Group;Zea_mays_subsp._mays
+orf116	orf116	hypothetical protein	CDS	1	false	2	2	orf116	hypothetical protein	Brassica_napus;Nicotiana_tabacum
+orf448	orf448	hypothetical protein	CDS	1	false	1	1	orf448	hypothetical protein	Brassica_napus
+orf135	orf135	hypothetical protein	CDS	1	false	2	2	orf135	hypothetical protein	Brassica_napus;Zea_mays_subsp._mays
+orf257	orf257	hypothetical protein	CDS	1	false	1	1	orf257	hypothetical protein	Brassica_napus
+orf101e	orf101e	hypothetical protein	CDS	1	false	1	1	orf101e	hypothetical protein	Brassica_napus
+cox2-1	cox2-1	cytochrome c oxidase subunit 2	CDS	1	false	1	1	cox2-1	cytochrome c oxidase subunit 2	Brassica_napus
+orf101f	orf101f	hypothetical protein	CDS	1	false	1	1	orf101f	hypothetical protein	Brassica_napus
+rps19	rps19	ribosomal protein S19	CDS	1	false	9	5	rps19	ribosomal protein S19	Nelumbo_nucifera;Nicotiana_tabacum;Oryza_sativa_Japonica_Group;Solanum_lycopersicum;Vitis_vinifera
+sdh3	sdh3	succinate dehydrogenase subunit 3	CDS	1	false	6	4	sdh3	succinate dehydrogenase subunit 3	Gossypium_raimondii;Nicotiana_tabacum;Solanum_lycopersicum;Vitis_vinifera
+rpl10	rpl10	ribosomal protein L10	CDS	1	false	4	3	rpl10	ribosomal protein L10	Gossypium_raimondii;Nelumbo_nucifera;Solanum_lycopersicum
+ccmFN	ccmFN	cytochrome c maturation protein CcmFN	CDS	1	false	7	6	ccmFN	CcmFN;cytochrome c biogenesis FN;cytochrome c maturation protein CcmFN;cytochrome c maturation protein ccmFN	Gossypium_raimondii;Nelumbo_nucifera;Nicotiana_tabacum;Solanum_lycopersicum;Vitis_vinifera;Zea_mays_subsp._mays
+rps13	rps13	ribosomal protein S13	CDS	1	false	6	6	rps13	ribosomal protein S13	Nelumbo_nucifera;Nicotiana_tabacum;Oryza_sativa_Japonica_Group;Solanum_lycopersicum;Vitis_vinifera;Zea_mays_subsp._mays
+sdh3b	sdh3b	succinate dehydrogenase subunit 3	CDS	1	false	1	1	sdh3b	succinate dehydrogenase subunit 3	Nelumbo_nucifera
+rps2	rps2	ribosomal protein S2	CDS	1	false	2	2	rps2	ribosomal protein S2	Nelumbo_nucifera;Oryza_sativa_Japonica_Group
+rps11	rps11	ribosomal protein S11	CDS	1	false	2	2	rps11	ribosomal protein S11	Nelumbo_nucifera;Vitis_vinifera
+petN(cp)	petN(cp)	cytochrome b6/f complex subunit VIII	CDS	1	false	1	1	petN(cp)	cytochrome b6/f complex subunit VIII	Nelumbo_nucifera
+sdh3a	sdh3a	succinate dehydrogenase subunit 3	CDS	1	false	1	1	sdh3a	succinate dehydrogenase subunit 3	Nelumbo_nucifera
+petA	petA	cytochrome f	CDS	1	false	1	1	petA	cytochrome f	Vitis_vinifera
+ycf4	ycf4	ycf4	CDS	1	false	1	1	ycf4	ycf4	Vitis_vinifera
+rbcL	rbcL	ribulose-1;5-bisphosphate carboxylase/oxygenase large subunit	CDS	1	false	1	1	rbcL	ribulose-1;5-bisphosphate carboxylase/oxygenase large subunit	Vitis_vinifera
+orf106	orf106	orf106	CDS	1	false	1	1	orf106	orf106	Vitis_vinifera
+psbJ	psbJ	PSII reaction center subunit X	CDS	1	false	1	1	psbJ	PSII reaction center subunit X	Vitis_vinifera
+petL	petL	cyt b6 f complex subunit VI	CDS	1	false	2	1	petL	cyt b6 f complex subunit VI	Vitis_vinifera
+petG	petG	cyt b6 f complex subunit V	CDS	1	false	2	1	petG	cyt b6 f complex subunit V	Vitis_vinifera
+orf185	orf185	orf185	CDS	1	false	1	1	orf185	orf185	Vitis_vinifera
+RNA_pol	RNA_pol	DNA-dependent RNA polymerase	CDS	1	false	1	1	RNA_pol	DNA-dependent RNA polymerase	Vitis_vinifera
+cob2	cob2	apocytochrome b	CDS	1	false	1	1	cob2	apocytochrome b	Vitis_vinifera
+rps15	rps15	ribosomal protein S15	CDS	1	false	1	1	rps15	ribosomal protein S15	Vitis_vinifera
+psbA	psbA	PSII 32 kDa protein	CDS	1	false	1	1	psbA	PSII 32 kDa protein	Vitis_vinifera
+orf333	orf333	orf333	CDS	1	false	1	1	orf333	orf333	Vitis_vinifera
+rpl32	rpl32	ribosomal protein L32	CDS	1	false	1	1	rpl32	ribosomal protein L32	Vitis_vinifera
+psaC	psaC	PSI 9 kDa protein	CDS	1	false	1	1	psaC	PSI 9 kDa protein	Vitis_vinifera
+ndhE	ndhE	NADH dehydrogenase subunit 4L	CDS	1	false	1	1	ndhE	NADH dehydrogenase subunit 4L	Vitis_vinifera
+rpl20	rpl20	ribosomal protein L20	CDS	1	false	1	1	rpl20	ribosomal protein L20	Vitis_vinifera
+rps18	rps18	ribosomal protein S18	CDS	1	false	1	1	rps18	ribosomal protein S18	Vitis_vinifera
+rpl33	rpl33	ribosomal protein L33	CDS	1	false	1	1	rpl33	ribosomal protein L33	Vitis_vinifera
+psaJ	psaJ	PSI reaction centre subunit IX	CDS	1	false	1	1	psaJ	PSI reaction centre subunit IX	Vitis_vinifera
+psbT	psbT	PSII T-protein	CDS	1	false	1	1	psbT	PSII T-protein	Vitis_vinifera
+psbN	psbN	PSII N-protein	CDS	1	false	1	1	psbN	PSII N-protein	Vitis_vinifera
+atpA	atpA	ATPase alpha subunit	CDS	1	false	1	1	atpA	ATPase alpha subunit	Vitis_vinifera
+orf86	orf86	orf86	CDS	1	false	1	1	orf86	orf86	Vitis_vinifera
+rpl14	rpl14	ribosomal protein L14	CDS	1	false	1	1	rpl14	ribosomal protein L14	Vitis_vinifera
+infA	infA	initiation factor 1	CDS	1	false	1	1	infA	initiation factor 1	Vitis_vinifera
+rpl36	rpl36	ribosomal protein L36	CDS	1	false	1	1	rpl36	ribosomal protein L36	Vitis_vinifera
+psbM	psbM	PSII M protein	CDS	1	false	1	1	psbM	PSII M protein	Vitis_vinifera
+orf152a	orf152a	hypothetical protein	CDS	1	false	1	1	orf152a	hypothetical protein	Oryza_sativa_Japonica_Group
+orf490	orf490	orf490	CDS	1	false	1	1	orf490	orf490	Oryza_sativa_Japonica_Group
+orf258	orf258	orf258	CDS	1	false	1	1	orf258	orf258	Oryza_sativa_Japonica_Group
+orf181	orf181	orf181	CDS	1	false	1	1	orf181	orf181	Oryza_sativa_Japonica_Group
+orf183	orf183	orf183	CDS	1	false	1	1	orf183	orf183	Oryza_sativa_Japonica_Group
+orf288	orf288	orf288	CDS	1	false	1	1	orf288	orf288	Oryza_sativa_Japonica_Group
+orf194	orf194	hypothetical protein	CDS	1	false	1	1	orf194	hypothetical protein	Oryza_sativa_Japonica_Group
+orf224	orf224	hypothetical protein	CDS	1	false	1	1	orf224	hypothetical protein	Oryza_sativa_Japonica_Group
+orf152b	orf152b	orf152b	CDS	1	false	1	1	orf152b	orf152b	Oryza_sativa_Japonica_Group
+orf187	orf187	Nuclear-like sequence	CDS	1	false	1	1	orf187	Nuclear-like sequence	Oryza_sativa_Japonica_Group
+orf153	orf153	hypothetical protein	CDS	1	false	1	1	orf153	hypothetical protein	Oryza_sativa_Japonica_Group
+orf176	orf176	hypothetical protein	CDS	1	false	1	1	orf176	hypothetical protein	Oryza_sativa_Japonica_Group
+mat-r	mat-r	maturase-related protein	CDS	1	false	2	2	mat-r	maturase;maturase-related protein	Oryza_sativa_Japonica_Group;Zea_mays_subsp._mays
+orf165	orf165	orf165	CDS	1	false	2	2	orf165	hypothetical protein;orf165	Oryza_sativa_Japonica_Group;Zea_mays_subsp._mays
+orf284	orf284	hypothetical protein	CDS	1	false	1	1	orf284	hypothetical protein	Oryza_sativa_Japonica_Group
+orf173	orf173	hypothetical protein	CDS	1	false	3	2	orf173	hypothetical protein	Nicotiana_tabacum;Oryza_sativa_Japonica_Group
+orf162	orf162	hypothetical protein	CDS	1	false	2	2	orf162	hypothetical protein	Nicotiana_tabacum;Oryza_sativa_Japonica_Group
+orf160	orf160	hypothetical protein	CDS	1	false	2	2	orf160	hypothetical protein	Nicotiana_tabacum;Oryza_sativa_Japonica_Group
+orf125a	orf125a	hypothetical protein	CDS	1	false	1	1	orf125a	hypothetical protein	Nicotiana_tabacum
+orf138a	orf138a	hypothetical protein	CDS	1	false	1	1	orf138a	hypothetical protein	Nicotiana_tabacum
+mat-R	mat-R	maturase-related protein	CDS	1	false	1	1	mat-R	maturase-related protein	Nicotiana_tabacum
+orf171a	orf171a	hypothetical protein	CDS	1	false	1	1	orf171a	hypothetical protein	Nicotiana_tabacum
+orf129a	orf129a	hypothetical protein	CDS	1	false	1	1	orf129a	hypothetical protein	Nicotiana_tabacum
+orf297a	orf297a	orf297a	CDS	1	false	1	1	orf297a	orf297a	Nicotiana_tabacum
+orf133	orf133	hypothetical protein	CDS	1	false	1	1	orf133	hypothetical protein	Nicotiana_tabacum
+orf112a	orf112a	hypothetical protein	CDS	1	false	1	1	orf112a	hypothetical protein	Nicotiana_tabacum
+orf177	orf177	hypothetical protein	CDS	1	false	1	1	orf177	hypothetical protein	Nicotiana_tabacum
+orf112b	orf112b	hypothetical protein	CDS	1	false	1	1	orf112b	hypothetical protein	Nicotiana_tabacum
+orf121a	orf121a	hypothetical protein	CDS	1	false	1	1	orf121a	hypothetical protein	Nicotiana_tabacum
+orf132	orf132	hypothetical protein	CDS	1	false	3	2	orf132	hypothetical protein	Nicotiana_tabacum;Zea_mays_subsp._mays
+orf119a	orf119a	hypothetical protein	CDS	1	false	1	1	orf119a	hypothetical protein	Nicotiana_tabacum
+orf138b	orf138b	hypothetical protein	CDS	1	false	1	1	orf138b	hypothetical protein	Nicotiana_tabacum
+orf197	orf197	hypothetical protein	CDS	1	false	1	1	orf197	hypothetical protein	Nicotiana_tabacum
+orf265a	orf265a	hypothetical protein	CDS	1	false	1	1	orf265a	hypothetical protein	Nicotiana_tabacum
+orf125b	orf125b	hypothetical protein	CDS	1	false	1	1	orf125b	hypothetical protein	Nicotiana_tabacum
+orf129b	orf129b	hypothetical protein	CDS	1	false	1	1	orf129b	hypothetical protein	Nicotiana_tabacum
+orf175	orf175	hypothetical protein	CDS	1	false	1	1	orf175	hypothetical protein	Nicotiana_tabacum
+orf108	orf108	hypothetical protein	CDS	1	false	1	1	orf108	hypothetical protein	Nicotiana_tabacum
+orf130a	orf130a	hypothetical protein	CDS	1	false	1	1	orf130a	hypothetical protein	Nicotiana_tabacum
+orf102a	orf102a	hypothetical protein	CDS	1	false	1	1	orf102a	hypothetical protein	Nicotiana_tabacum
+orf102b	orf102b	hypothetical protein	CDS	1	false	1	1	orf102b	hypothetical protein	Nicotiana_tabacum
+orf315	orf315	hypothetical protein	CDS	1	false	1	1	orf315	hypothetical protein	Nicotiana_tabacum
+orf158	orf158	hypothetical protein	CDS	1	false	1	1	orf158	hypothetical protein	Nicotiana_tabacum
+orf142	orf142	hypothetical protein	CDS	1	false	1	1	orf142	hypothetical protein	Nicotiana_tabacum
+orf159a	orf159a	hypothetical protein	CDS	1	false	1	1	orf159a	hypothetical protein	Nicotiana_tabacum
+orf237	orf237	hypothetical protein	CDS	1	false	1	1	orf237	hypothetical protein	Nicotiana_tabacum
+orf111	orf111	hypothetical protein	CDS	1	false	1	1	orf111	hypothetical protein	Nicotiana_tabacum
+orf136	orf136	hypothetical protein	CDS	1	false	1	1	orf136	hypothetical protein	Nicotiana_tabacum
+orf239	orf239	hypothetical protein	CDS	1	false	1	1	orf239	hypothetical protein	Nicotiana_tabacum
+orf171	orf171	hypothetical protein	CDS	1	false	1	1	orf171	hypothetical protein	Nicotiana_tabacum
+orf134	orf134	hypothetical protein	CDS	1	false	1	1	orf134	hypothetical protein	Nicotiana_tabacum
+orf122	orf122	hypothetical protein	CDS	1	false	2	2	orf122	hypothetical protein	Nicotiana_tabacum;Zea_mays_subsp._mays
+orf216	orf216	hypothetical protein	CDS	1	false	1	1	orf216	hypothetical protein	Nicotiana_tabacum
+orf103a	orf103a	hypothetical protein	CDS	1	false	1	1	orf103a	hypothetical protein	Nicotiana_tabacum
+orf105	orf105	hypothetical protein	CDS	1	false	2	1	orf105	hypothetical protein	Nicotiana_tabacum
+orf214	orf214	hypothetical protein	CDS	1	false	1	1	orf214	hypothetical protein	Nicotiana_tabacum
+orf119b	orf119b	hypothetical protein	CDS	1	false	1	1	orf119b	hypothetical protein	Nicotiana_tabacum
+orf306	orf306	hypothetical protein	CDS	1	false	1	1	orf306	hypothetical protein	Nicotiana_tabacum
+orf155	orf155	hypothetical protein	CDS	1	false	1	1	orf155	hypothetical protein	Nicotiana_tabacum
+orf166a	orf166a	hypothetical protein	CDS	1	false	1	1	orf166a	hypothetical protein	Nicotiana_tabacum
+orf143	orf143	hypothetical protein	CDS	1	false	1	1	orf143	hypothetical protein	Nicotiana_tabacum
+orf111b	orf111b	hypothetical protein	CDS	1	false	1	1	orf111b	hypothetical protein	Nicotiana_tabacum
+orf138c	orf138c	hypothetical protein	CDS	1	false	2	1	orf138c	hypothetical protein	Nicotiana_tabacum
+orf144	orf144	hypothetical protein	CDS	1	false	1	1	orf144	hypothetical protein	Nicotiana_tabacum
+orf118	orf118	hypothetical protein	CDS	1	false	2	2	orf118	hypothetical protein	Nicotiana_tabacum;Zea_mays_subsp._mays
+orf109a	orf109a	hypothetical protein	CDS	1	false	1	1	orf109a	hypothetical protein	Nicotiana_tabacum
+orf114c	orf114c	hypothetical protein	CDS	1	false	1	1	orf114c	hypothetical protein	Nicotiana_tabacum
+orf107	orf107	hypothetical protein	CDS	1	false	1	1	orf107	hypothetical protein	Nicotiana_tabacum
+orf114d	orf114d	hypothetical protein	CDS	1	false	1	1	orf114d	hypothetical protein	Nicotiana_tabacum
+orf129d	orf129d	hypothetical protein	CDS	1	false	1	1	orf129d	hypothetical protein	Nicotiana_tabacum
+orf190	orf190	hypothetical protein	CDS	1	false	1	1	orf190	hypothetical protein	Nicotiana_tabacum
+orf111c	orf111c	hypothetical protein	CDS	1	false	1	1	orf111c	hypothetical protein	Nicotiana_tabacum
+orf125d	orf125d	hypothetical protein	CDS	1	false	1	1	orf125d	hypothetical protein	Nicotiana_tabacum
+orf125e	orf125e	hypothetical protein	CDS	1	false	1	1	orf125e	hypothetical protein	Nicotiana_tabacum
+orf274	orf274	hypothetical protein	CDS	1	false	1	1	orf274	hypothetical protein	Nicotiana_tabacum
+orf121b	orf121b	hypothetical protein	CDS	1	false	1	1	orf121b	hypothetical protein	Nicotiana_tabacum
+orf120b	orf120b	hypothetical protein	CDS	1	false	2	1	orf120b	hypothetical protein	Nicotiana_tabacum
+orf131b	orf131b	hypothetical protein	CDS	1	false	2	1	orf131b	hypothetical protein	Nicotiana_tabacum
+orf265b	orf265b	hypothetical protein	CDS	1	false	1	1	orf265b	hypothetical protein	Nicotiana_tabacum
+orf104c	orf104c	hypothetical protein	CDS	1	false	1	1	orf104c	hypothetical protein	Nicotiana_tabacum
+orf115	orf115	hypothetical protein	CDS	1	false	1	1	orf115	hypothetical protein	Nicotiana_tabacum
+orf137	orf137	hypothetical protein	CDS	1	false	1	1	orf137	hypothetical protein	Nicotiana_tabacum
+orf109b	orf109b	hypothetical protein	CDS	1	false	1	1	orf109b	hypothetical protein	Nicotiana_tabacum
+orf131c	orf131c	hypothetical protein	CDS	1	false	1	1	orf131c	hypothetical protein	Nicotiana_tabacum
+orf166b	orf166b	hypothetical protein	CDS	1	false	1	1	orf166b	hypothetical protein	Nicotiana_tabacum
+orf116b	orf116b	hypothetical protein	CDS	1	false	1	1	orf116b	hypothetical protein	Nicotiana_tabacum
+orf122b	orf122b	hypothetical protein	CDS	1	false	1	1	orf122b	hypothetical protein	Nicotiana_tabacum
+orf159b	orf159b	hypothetical protein	CDS	1	false	1	1	orf159b	hypothetical protein	Nicotiana_tabacum
+orf125f	orf125f	hypothetical protein	CDS	1	false	1	1	orf125f	hypothetical protein	Nicotiana_tabacum
+orf109c	orf109c	hypothetical protein	CDS	1	false	1	1	orf109c	hypothetical protein	Nicotiana_tabacum
+orf103e	orf103e	hypothetical protein	CDS	1	false	1	1	orf103e	hypothetical protein	Nicotiana_tabacum
+orf125g	orf125g	hypothetical protein	CDS	1	false	1	1	orf125g	hypothetical protein	Nicotiana_tabacum
+orf141	orf141	hypothetical protein	CDS	1	false	1	1	orf141	hypothetical protein	Nicotiana_tabacum
+orf210	orf210	hypothetical protein	CDS	1	false	1	1	orf210	hypothetical protein	Nicotiana_tabacum
+orf121c	orf121c	hypothetical protein	CDS	1	false	1	1	orf121c	hypothetical protein	Nicotiana_tabacum
+orf112c	orf112c	hypothetical protein	CDS	1	false	1	1	orf112c	hypothetical protein	Nicotiana_tabacum
+orf134b	orf134b	hypothetical protein	CDS	1	false	1	1	orf134b	hypothetical protein	Nicotiana_tabacum
+orf119c	orf119c	hypothetical protein	CDS	1	false	1	1	orf119c	hypothetical protein	Nicotiana_tabacum
+orf197b	orf197b	hypothetical protein	CDS	1	false	1	1	orf197b	hypothetical protein	Nicotiana_tabacum
+orf115-a1	orf115-a1	hypothetical protein	CDS	1	false	1	1	orf115-a1	hypothetical protein	Zea_mays_subsp._mays
+orf444	orf444	hypothetical protein	CDS	1	false	1	1	orf444	hypothetical protein	Zea_mays_subsp._mays
+orf387	orf387	hypothetical protein	CDS	1	false	1	1	orf387	hypothetical protein	Zea_mays_subsp._mays
+orf734	orf734	hypothetical protein	CDS	1	false	1	1	orf734	hypothetical protein	Zea_mays_subsp._mays
+orf116-a	orf116-a	hypothetical protein	CDS	1	false	1	1	orf116-a	hypothetical protein	Zea_mays_subsp._mays
+orf248	orf248	hypothetical protein	CDS	1	false	1	1	orf248	hypothetical protein	Zea_mays_subsp._mays
+orf115-b	orf115-b	hypothetical protein	CDS	1	false	1	1	orf115-b	hypothetical protein	Zea_mays_subsp._mays
+orf396	orf396	hypothetical protein	CDS	1	false	1	1	orf396	hypothetical protein	Zea_mays_subsp._mays
+orf342	orf342	hypothetical protein	CDS	1	false	1	1	orf342	hypothetical protein	Zea_mays_subsp._mays
+orf110-a	orf110-a	hypothetical protein	CDS	1	false	1	1	orf110-a	hypothetical protein	Zea_mays_subsp._mays
+orf126-a	orf126-a	hypothetical protein	CDS	1	false	1	1	orf126-a	hypothetical protein	Zea_mays_subsp._mays
+orf99-a1	orf99-a1	hypothetical protein	CDS	1	false	1	1	orf99-a1	hypothetical protein	Zea_mays_subsp._mays
+orf99-b1	orf99-b1	hypothetical protein	CDS	1	false	1	1	orf99-b1	hypothetical protein	Zea_mays_subsp._mays
+orf158-a1	orf158-a1	hypothetical protein	CDS	1	false	1	1	orf158-a1	hypothetical protein	Zea_mays_subsp._mays
+orf911	orf911	hypothetical protein	CDS	1	false	1	1	orf911	hypothetical protein	Zea_mays_subsp._mays
+orf127	orf127	hypothetical protein	CDS	1	false	1	1	orf127	hypothetical protein	Zea_mays_subsp._mays
+orf126-b1	orf126-b1	hypothetical protein	CDS	1	false	1	1	orf126-b1	hypothetical protein	Zea_mays_subsp._mays
+orf115-c1	orf115-c1	hypothetical protein	CDS	1	false	1	1	orf115-c1	hypothetical protein	Zea_mays_subsp._mays
+orf106-a1	orf106-a1	hypothetical protein	CDS	1	false	1	1	orf106-a1	hypothetical protein	Zea_mays_subsp._mays
+orf112-a1	orf112-a1	hypothetical protein	CDS	1	false	1	1	orf112-a1	hypothetical protein	Zea_mays_subsp._mays
+orf100-a1	orf100-a1	hypothetical protein	CDS	1	false	1	1	orf100-a1	hypothetical protein	Zea_mays_subsp._mays
+orf121-a-ct	orf121-a-ct	chloroplast hypothetical protein	CDS	1	false	1	1	orf121-a-ct	chloroplast hypothetical protein	Zea_mays_subsp._mays
+orf102-a	orf102-a	hypothetical protein	CDS	1	false	1	1	orf102-a	hypothetical protein	Zea_mays_subsp._mays
+orf104-a	orf104-a	hypothetical protein	CDS	1	false	1	1	orf104-a	hypothetical protein	Zea_mays_subsp._mays
+orf116-b	orf116-b	hypothetical protein	CDS	1	false	1	1	orf116-b	hypothetical protein	Zea_mays_subsp._mays
+orf117-a	orf117-a	hypothetical protein	CDS	1	false	1	1	orf117-a	hypothetical protein	Zea_mays_subsp._mays
+orf114-a	orf114-a	hypothetical protein	CDS	1	false	1	1	orf114-a	hypothetical protein	Zea_mays_subsp._mays
+orf99-c	orf99-c	hypothetical protein	CDS	1	false	1	1	orf99-c	hypothetical protein	Zea_mays_subsp._mays
+orf105-a	orf105-a	hypothetical protein	CDS	1	false	1	1	orf105-a	hypothetical protein	Zea_mays_subsp._mays
+orf140-a	orf140-a	hypothetical protein	CDS	1	false	1	1	orf140-a	hypothetical protein	Zea_mays_subsp._mays
+orf101-a	orf101-a	hypothetical protein	CDS	1	false	1	1	orf101-a	hypothetical protein	Zea_mays_subsp._mays
+orf158-a2	orf158-a2	hypothetical protein	CDS	1	false	1	1	orf158-a2	hypothetical protein	Zea_mays_subsp._mays
+orf99-b2	orf99-b2	hypothetical protein	CDS	1	false	1	1	orf99-b2	hypothetical protein	Zea_mays_subsp._mays
+orf99-a2	orf99-a2	hypothetical protein	CDS	1	false	1	1	orf99-a2	hypothetical protein	Zea_mays_subsp._mays
+orf101-b	orf101-b	hypothetical protein	CDS	1	false	1	1	orf101-b	hypothetical protein	Zea_mays_subsp._mays
+orf99-d	orf99-d	hypothetical protein	CDS	1	false	1	1	orf99-d	hypothetical protein	Zea_mays_subsp._mays
+orf119-a	orf119-a	hypothetical protein	CDS	1	false	1	1	orf119-a	hypothetical protein	Zea_mays_subsp._mays
+orf110-b	orf110-b	hypothetical protein	CDS	1	false	1	1	orf110-b	hypothetical protein	Zea_mays_subsp._mays
+orf206	orf206	hypothetical protein	CDS	1	false	1	1	orf206	hypothetical protein	Zea_mays_subsp._mays
+orf117-b	orf117-b	hypothetical protein	CDS	1	false	1	1	orf117-b	hypothetical protein	Zea_mays_subsp._mays
+orf106-b	orf106-b	hypothetical protein	CDS	1	false	1	1	orf106-b	hypothetical protein	Zea_mays_subsp._mays
+orf109-a	orf109-a	hypothetical protein	CDS	1	false	1	1	orf109-a	hypothetical protein	Zea_mays_subsp._mays
+orf126-b2	orf126-b2	hypothetical protein	CDS	1	false	1	1	orf126-b2	hypothetical protein	Zea_mays_subsp._mays
+orf115-c2	orf115-c2	hypothetical protein	CDS	1	false	1	1	orf115-c2	hypothetical protein	Zea_mays_subsp._mays
+orf106-a2	orf106-a2	hypothetical protein	CDS	1	false	1	1	orf106-a2	hypothetical protein	Zea_mays_subsp._mays
+orf112-a2	orf112-a2	hypothetical protein	CDS	1	false	1	1	orf112-a2	hypothetical protein	Zea_mays_subsp._mays
+orf100-a2	orf100-a2	hypothetical protein	CDS	1	false	1	1	orf100-a2	hypothetical protein	Zea_mays_subsp._mays
+orf227-ct	orf227-ct	chloroplast hypothetical protein	CDS	1	false	1	1	orf227-ct	chloroplast hypothetical protein	Zea_mays_subsp._mays
+orf160-a	orf160-a	hypothetical protein	CDS	1	false	1	1	orf160-a	hypothetical protein	Zea_mays_subsp._mays
+orf138-a	orf138-a	hypothetical protein	CDS	1	false	1	1	orf138-a	hypothetical protein	Zea_mays_subsp._mays
+orf105-b	orf105-b	hypothetical protein	CDS	1	false	1	1	orf105-b	hypothetical protein	Zea_mays_subsp._mays
+orf107-c	orf107-c	hypothetical protein	CDS	1	false	1	1	orf107-c	hypothetical protein	Zea_mays_subsp._mays
+orf105-c	orf105-c	hypothetical protein	CDS	1	false	1	1	orf105-c	hypothetical protein	Zea_mays_subsp._mays
+orf126-c	orf126-c	hypothetical protein	CDS	1	false	1	1	orf126-c	hypothetical protein	Zea_mays_subsp._mays
+orf104-b	orf104-b	hypothetical protein	CDS	1	false	1	1	orf104-b	hypothetical protein	Zea_mays_subsp._mays
+orf138-b	orf138-b	hypothetical protein	CDS	1	false	1	1	orf138-b	hypothetical protein	Zea_mays_subsp._mays
+orf131-a	orf131-a	hypothetical protein	CDS	1	false	1	1	orf131-a	hypothetical protein	Zea_mays_subsp._mays
+orf302	orf302	hypothetical protein	CDS	1	false	1	1	orf302	hypothetical protein	Zea_mays_subsp._mays
+orf130	orf130	hypothetical protein	CDS	1	false	1	1	orf130	hypothetical protein	Zea_mays_subsp._mays
+orf111-a	orf111-a	hypothetical protein	CDS	1	false	1	1	orf111-a	hypothetical protein	Zea_mays_subsp._mays
+orf121-b	orf121-b	hypothetical protein	CDS	1	false	1	1	orf121-b	hypothetical protein	Zea_mays_subsp._mays
+orf191	orf191	hypothetical protein	CDS	1	false	1	1	orf191	hypothetical protein	Zea_mays_subsp._mays
+orf115-a2	orf115-a2	hypothetical protein	CDS	1	false	1	1	orf115-a2	hypothetical protein	Zea_mays_subsp._mays
+orf1159	orf1159	hypothetical protein	CDS	1	false	1	1	orf1159	hypothetical protein	Zea_mays_subsp._mays
+orf115-d	orf115-d	hypothetical protein	CDS	1	false	1	1	orf115-d	hypothetical protein	Zea_mays_subsp._mays
+orf275	orf275	hypothetical protein	CDS	1	false	1	1	orf275	hypothetical protein	Zea_mays_subsp._mays
+orf179	orf179	hypothetical protein	CDS	1	false	1	1	orf179	hypothetical protein	Zea_mays_subsp._mays
+orf140-b	orf140-b	hypothetical protein	CDS	1	false	1	1	orf140-b	hypothetical protein	Zea_mays_subsp._mays
+orf114-b	orf114-b	hypothetical protein	CDS	1	false	1	1	orf114-b	hypothetical protein	Zea_mays_subsp._mays
+orf146-a	orf146-a	hypothetical protein	CDS	1	false	1	1	orf146-a	hypothetical protein	Zea_mays_subsp._mays
+orf149-b	orf149-b	hypothetical protein	CDS	1	false	1	1	orf149-b	hypothetical protein	Zea_mays_subsp._mays
+orf133-a	orf133-a	hypothetical protein	CDS	1	false	1	1	orf133-a	hypothetical protein	Zea_mays_subsp._mays
+orf126-d	orf126-d	hypothetical protein	CDS	1	false	1	1	orf126-d	hypothetical protein	Zea_mays_subsp._mays
+orf105-f	orf105-f	hypothetical protein	CDS	1	false	1	1	orf105-f	hypothetical protein	Zea_mays_subsp._mays
+orf105-g	orf105-g	hypothetical protein	CDS	1	false	1	1	orf105-g	hypothetical protein	Zea_mays_subsp._mays
+orf113-a	orf113-a	hypothetical protein	CDS	1	false	1	1	orf113-a	hypothetical protein	Zea_mays_subsp._mays
+orf147-a	orf147-a	hypothetical protein	CDS	1	false	1	1	orf147-a	hypothetical protein	Zea_mays_subsp._mays
+orf99-e	orf99-e	hypothetical protein	CDS	1	false	1	1	orf99-e	hypothetical protein	Zea_mays_subsp._mays
+orf119-b	orf119-b	hypothetical protein	CDS	1	false	1	1	orf119-b	hypothetical protein	Zea_mays_subsp._mays
+orf107-a	orf107-a	hypothetical protein	CDS	1	false	1	1	orf107-a	hypothetical protein	Zea_mays_subsp._mays
+orf134-a-ct	orf134-a-ct	hypothetical protein	CDS	1	false	1	1	orf134-a-ct	hypothetical protein	Zea_mays_subsp._mays
+rps7-ct	rps7-ct	ribosomal protein S7	CDS	1	false	1	1	rps7-ct	ribosomal protein S7	Zea_mays_subsp._mays
+orf131-b-ct	orf131-b-ct	hypothetical protein	CDS	1	false	1	1	orf131-b-ct	hypothetical protein	Zea_mays_subsp._mays
+orf247-ct	orf247-ct	hypothetical protein	CDS	1	false	1	1	orf247-ct	hypothetical protein	Zea_mays_subsp._mays
+orf137-a-ct	orf137-a-ct	hypothetical protein	CDS	1	false	1	1	orf137-a-ct	hypothetical protein	Zea_mays_subsp._mays
+orf109-b-ct	orf109-b-ct	hypothetical protein	CDS	1	false	1	1	orf109-b-ct	hypothetical protein	Zea_mays_subsp._mays
+orf134-b	orf134-b	hypothetical protein	CDS	1	false	1	1	orf134-b	hypothetical protein	Zea_mays_subsp._mays
+orf147-b	orf147-b	hypothetical protein	CDS	1	false	1	1	orf147-b	hypothetical protein	Zea_mays_subsp._mays
+orf417	orf417	hypothetical protein	CDS	1	false	1	1	orf417	hypothetical protein	Zea_mays_subsp._mays
+orf107-d	orf107-d	hypothetical protein	CDS	1	false	1	1	orf107-d	hypothetical protein	Zea_mays_subsp._mays
+orf131-c	orf131-c	hypothetical protein	CDS	1	false	1	1	orf131-c	hypothetical protein	Zea_mays_subsp._mays
+orf117-d	orf117-d	hypothetical protein	CDS	1	false	1	1	orf117-d	hypothetical protein	Zea_mays_subsp._mays
+orf107-b	orf107-b	hypothetical protein	CDS	1	false	1	1	orf107-b	hypothetical protein	Zea_mays_subsp._mays
+orf99-f	orf99-f	hypothetical protein	CDS	1	false	1	1	orf99-f	hypothetical protein	Zea_mays_subsp._mays
+orf129-a	orf129-a	hypothetical protein	CDS	1	false	1	1	orf129-a	hypothetical protein	Zea_mays_subsp._mays
+orf113-b	orf113-b	hypothetical protein	CDS	1	false	1	1	orf113-b	hypothetical protein	Zea_mays_subsp._mays
+orf133-b	orf133-b	hypothetical protein	CDS	1	false	1	1	orf133-b	hypothetical protein	Zea_mays_subsp._mays
+orf102-b	orf102-b	hypothetical protein	CDS	1	false	1	1	orf102-b	hypothetical protein	Zea_mays_subsp._mays
+orf99-g	orf99-g	hypothetical protein	CDS	1	false	1	1	orf99-g	hypothetical protein	Zea_mays_subsp._mays
+orf163	orf163	hypothetical protein	CDS	1	false	1	1	orf163	hypothetical protein	Zea_mays_subsp._mays
+rps2B	rps2B	ribosomal protein S2	CDS	1	false	1	1	rps2B	ribosomal protein S2	Zea_mays_subsp._mays
+orf111-b	orf111-b	hypothetical protein	CDS	1	false	1	1	orf111-b	hypothetical protein	Zea_mays_subsp._mays
+orf140-c	orf140-c	hypothetical protein	CDS	1	false	1	1	orf140-c	hypothetical protein	Zea_mays_subsp._mays
+atp1-a1	atp1-a1	ATPase subunit 1	CDS	1	false	1	1	atp1-a1	ATPase subunit 1	Zea_mays_subsp._mays
+orf193-a1	orf193-a1	hypothetical protein	CDS	1	false	1	1	orf193-a1	hypothetical protein	Zea_mays_subsp._mays
+orf105-d	orf105-d	hypothetical protein	CDS	1	false	1	1	orf105-d	hypothetical protein	Zea_mays_subsp._mays
+orf129-b	orf129-b	hypothetical protein	CDS	1	false	1	1	orf129-b	hypothetical protein	Zea_mays_subsp._mays
+rps2A	rps2A	ribosomal protein S2	CDS	1	false	1	1	rps2A	ribosomal protein S2	Zea_mays_subsp._mays
+orf106-c	orf106-c	hypothetical protein	CDS	1	false	1	1	orf106-c	hypothetical protein	Zea_mays_subsp._mays
+orf119-c	orf119-c	hypothetical protein	CDS	1	false	1	1	orf119-c	hypothetical protein	Zea_mays_subsp._mays
+orf115-e	orf115-e	hypothetical protein	CDS	1	false	1	1	orf115-e	hypothetical protein	Zea_mays_subsp._mays
+orf105-e	orf105-e	hypothetical protein	CDS	1	false	1	1	orf105-e	hypothetical protein	Zea_mays_subsp._mays
+orf117-c	orf117-c	hypothetical protein	CDS	1	false	1	1	orf117-c	hypothetical protein	Zea_mays_subsp._mays
+orf101-c	orf101-c	hypothetical protein	CDS	1	false	1	1	orf101-c	hypothetical protein	Zea_mays_subsp._mays
+orf186	orf186	hypothetical protein	CDS	1	false	1	1	orf186	hypothetical protein	Zea_mays_subsp._mays
+atp1-a2	atp1-a2	ATPase subunit 1	CDS	1	false	1	1	atp1-a2	ATPase subunit 1	Zea_mays_subsp._mays
+orf193-a2	orf193-a2	hypothetical protein	CDS	1	false	1	1	orf193-a2	hypothetical protein	Zea_mays_subsp._mays
+orf110-c	orf110-c	hypothetical protein	CDS	1	false	1	1	orf110-c	hypothetical protein	Zea_mays_subsp._mays
+orf121-c	orf121-c	hypothetical protein	CDS	1	false	1	1	orf121-c	hypothetical protein	Zea_mays_subsp._mays
+orf149-a	orf149-a	hypothetical protein	CDS	1	false	1	1	orf149-a	hypothetical protein	Zea_mays_subsp._mays

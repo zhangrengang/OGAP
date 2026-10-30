@@ -1,4 +1,5 @@
-from lib.Comparative import main as _main
+from __future__ import absolute_import
+from .lib.Comparative import main as _main
 def main():
 	_main()
 

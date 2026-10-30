@@ -24,6 +24,7 @@
 # For any enquiries send an email to David Emms
 # david_emms@hotmail.com
 
+from builtins import map
 def GetPredictedOGs(clustersFilename):
     predictedOGs = []
     nOGsString = ""
@@ -62,7 +63,7 @@ def GetPredictedOGs(clustersFilename):
     return predictedOGs
     
 def GetSingleID(speciesStartingIndices, seq, speciesToUse):    
-    iSpecies, iSeq = map(int, seq.split("_"))
+    iSpecies, iSeq = list(map(int, seq.split("_")))
     offset = speciesStartingIndices[speciesToUse.index(iSpecies)]
     return iSeq + offset  
 

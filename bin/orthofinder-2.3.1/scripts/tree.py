@@ -37,6 +37,21 @@
 #
 # 
 # #END_LICENSE#############################################################
+from __future__ import division
+from __future__ import print_function
+from __future__ import absolute_import
+from builtins import next
+from past.builtins import cmp
+from future import standard_library
+standard_library.install_aliases()
+from builtins import map
+from builtins import hex
+from builtins import zip
+from builtins import str
+from builtins import range
+from future.utils import raise_
+from builtins import object
+from past.utils import old_div
 __VERSION__="ete2-2.2rev1026" 
 #START_LICENSE###########################################################
 #
@@ -61,12 +76,12 @@ __VERSION__="ete2-2.2rev1026"
 #
 # #END_LICENSE#############################################################
 import os
-import cPickle
+import pickle
 import random
 import copy
 from collections import deque 
 import itertools
-from newick import read_newick, write_newick
+from .newick import read_newick, write_newick
 
 TREEVIEW = False
 __all__ = ["Tree", "TreeNode"]
@@ -217,7 +232,7 @@ class TreeNode(object):
             read_newick(newick, root_node = self, format=format)
            
 
-    def __nonzero__(self):
+    def __bool__(self):
         return True
 
     def __repr__(self):
@@ -228,10 +243,10 @@ class TreeNode(object):
         whose name is A"""
         value=str(value)
         try:
-            first_match = self.iter_search_nodes(name=value).next()
+            first_match = next(self.iter_search_nodes(name=value))
             return first_match
         except StopIteration:
-            raise ValueError, "Node not found"
+            raise ValueError("Node not found")
 
     def __add__(self, value):
         """ This allows to sum two trees."""
@@ -242,7 +257,7 @@ class TreeNode(object):
             new_root.add_child(value)
             return new_root
         else:
-            raise ValueError, "Invalid node type"
+            raise ValueError("Invalid node type")
 
     def __str__(self):
         """ Print tree in newick format. """
@@ -275,7 +290,7 @@ class TreeNode(object):
     def add_features(self, **features):
         """ 
         Add or update several features. """
-        for fname, fvalue in features.iteritems():
+        for fname, fvalue in list(features.items()):
             setattr(self, fname, fvalue)
             self.features.add(fname)
 
@@ -322,8 +337,8 @@ class TreeNode(object):
         """
         try:
             self.children.remove(child)
-        except ValueError, e:
-            raise TreeError, e
+        except ValueError as e:
+            raise_(TreeError, e)
         else:
             child.up = None
             return child
@@ -469,7 +484,7 @@ class TreeNode(object):
         # their path to the common ancestor.
         n2count = {}
         n2depth = {}
-        for seed, path in node2path.iteritems():
+        for seed, path in list(node2path.items()):
             for visited_node in path: 
                 if visited_node not in n2depth:
                     depth = visited_node.get_distance(start, topology_only=True)
@@ -480,12 +495,12 @@ class TreeNode(object):
         # if several internal nodes are in the path of exactly the
         # same kept nodes, only one should be maintain. 
         visitors2nodes = {}
-        for node, visitors in n2count.iteritems():
+        for node, visitors in list(n2count.items()):
             # keep nodes connection at least two other nodes
             if len(visitors)>1: 
                 visitor_key = frozenset(visitors)
                 visitors2nodes.setdefault(visitor_key, set()).add(node)
-        for visitors, nodes in visitors2nodes.iteritems():
+        for visitors, nodes in list(visitors2nodes.items()):
             s = sorted(nodes, cmp_nodes)
             to_keep.add(s[0])
 
@@ -777,11 +792,11 @@ class TreeNode(object):
             rooting = "Unknown"
         max_node, max_dist = self.get_farthest_leaf()
         cached_content = self.get_cached_content()
-        print "Number of leaf nodes:\t%d" % len(cached_content[self])
-        print "Number of internal nodes:\t%d" % len(cached_content)
-        print "Rooted:\t%s" %rooting
-        print "Most distant node:\t%s" %max_node.name
-        print "Max. distance:\t%f" %max_dist
+        print("Number of leaf nodes:\t%d" % len(cached_content[self]))
+        print("Number of internal nodes:\t%d" % len(cached_content))
+        print("Rooted:\t%s" %rooting)
+        print("Most distant node:\t%s" %max_node.name)
+        print("Max. distance:\t%f" %max_dist)
         
     def write(self, features=None, outfile=None, format=0, is_leaf_fn=None,
               format_root_node=False):
@@ -881,7 +896,7 @@ class TreeNode(object):
         common = None
         for n in reference:
             broken = False
-            for node, path in n2path.iteritems():
+            for node, path in list(n2path.items()):
                 if node is not ref_node and n not in path:
                     broken = True
                     break
@@ -907,7 +922,7 @@ class TreeNode(object):
         
         for n in self.traverse():
             conditions_passed = 0
-            for key, value in conditions.iteritems():
+            for key, value in list(conditions.items()):
                 if hasattr(n, key) and getattr(n, key) == value:
                     conditions_passed +=1
             if conditions_passed == len(conditions):
@@ -983,7 +998,7 @@ class TreeNode(object):
         target, target2 = _translate_nodes(root, target, target2)
         ancestor = root.get_common_ancestor(target, target2)
         if ancestor is None:
-            raise TreeError, "Nodes are not connected"
+            raise TreeError("Nodes are not connected")
 
         dist = 0.0
         for n in [target2, target]:
@@ -1162,7 +1177,7 @@ class TreeNode(object):
             root = self
 
         next = deque([root])
-        for i in xrange(size-1):
+        for i in range(size-1):
             if random.randint(0, 1):
                 p = next.pop()
             else:
@@ -1195,7 +1210,7 @@ class TreeNode(object):
                 else:
                     tname = names_library.pop()
             else:
-                tname = ''.join(avail_names.next())
+                tname = ''.join(next(avail_names))
             n.name = tname
             
 
@@ -1212,7 +1227,7 @@ class TreeNode(object):
         outgroup = _translate_nodes(self, outgroup)
 
         if self == outgroup:
-            raise ValueError, "Cannot set myself as outgroup"
+            raise ValueError("Cannot set myself as outgroup")
 
         parent_outgroup = outgroup.up
 
@@ -1279,7 +1294,7 @@ class TreeNode(object):
         # outgroup is always the first children. Some function my
         # trust on this fact, so do no change this.
         self.children = [outgroup,outgroup2]
-        middist = (outgroup2.dist + outgroup.dist)/2
+        middist = old_div((outgroup2.dist + outgroup.dist),2)
         outgroup.dist = middist
         outgroup2.dist = middist
         outgroup2.support = outgroup.support
@@ -1293,14 +1308,14 @@ class TreeNode(object):
         """
         # if is rooted
         if not self.is_root():
-            print >>sys.stderr, "Warning. You are unrooting an internal node.!!"
+            print("Warning. You are unrooting an internal node.!!", file=sys.stderr)
         if len(self.children)==2:
             if not self.children[0].is_leaf():
                 self.children[0].delete()
             elif not self.children[1].is_leaf():
                 self.children[1].delete()
             else:
-                raise TreeError, "Cannot unroot a tree with only two leaves"
+                raise TreeError("Cannot unroot a tree with only two leaves")
 
     def copy(self, method="cpickle"):
         """.. versionadded: 2.1
@@ -1345,7 +1360,7 @@ class TreeNode(object):
         elif method == "cpickle":
             parent = self.up
             self.up = None
-            new_node = cPickle.loads(cPickle.dumps(self, 2))
+            new_node = pickle.loads(pickle.dumps(self, 2))
             self.up = parent
         else:
             raise ValuerError("Invalid copy method")
@@ -1386,7 +1401,7 @@ class TreeNode(object):
                 result.pop()
             (lo, hi, end) = (mids[0], mids[-1], len(result))
             prefixes = [PAD] * (lo+1) + [PA+'|'] * (hi-lo-1) + [PAD] * (end-hi)
-            mid = (lo + hi) / 2
+            mid = old_div((lo + hi), 2)
             prefixes[mid] = char1 + '-'*(LEN-2) + prefixes[mid][-1]
             result = [p+l for (p,l) in zip(prefixes, result)]
             if show_internal:
@@ -1561,10 +1576,10 @@ class TreeNode(object):
 
         r1 = set([",".join(sorted([getattr(_c, attr_t1) for _c in cont
                                    if getattr(_c, attr_t1) in common_names]))
-                  for cont in t1content.values() if len(cont)>1])
+                  for cont in list(t1content.values()) if len(cont)>1])
         r2 = set([",".join(sorted([getattr(_c, attr_t2) for _c in cont
                                    if getattr(_c, attr_t2) in common_names]))
-                  for cont in t2content.values() if len(cont)>1])
+                  for cont in list(t2content.values()) if len(cont)>1])
         r1.discard("")
         r2.discard("")              
         inters = r1.intersection(r2)
@@ -1624,10 +1639,10 @@ class TreeNode(object):
                 node2max_depth[node] = 1
         node2dist = {self: 0.0}
         tree_length = float(tree_length)
-        step = tree_length / node2max_depth[self]
+        step = old_div(tree_length, node2max_depth[self])
         for node in self.iter_descendants("levelorder"):
             if strategy == "balanced":
-                node.dist = (tree_length - node2dist[node.up]) / node2max_depth[node]
+                node.dist = old_div((tree_length - node2dist[node.up]), node2max_depth[node])
                 node2dist[node] =  node.dist + node2dist[node.up]
             elif strategy == "fixed":
                 if not node.is_leaf():
@@ -1756,7 +1771,7 @@ class TreeNode(object):
                 children = list(node.children)
                 node.children = []
                 next_node = root = node
-                for i in xrange(len(children)-2):
+                for i in range(len(children)-2):
                     next_node = next_node.add_child()
                     next_node.dist = default_dist
                     next_node.support = default_support
@@ -1778,23 +1793,23 @@ def _translate_nodes(root, *nodes):
     for n in root.traverse():
         if n.name in name2node:
             if name2node[n.name] is not None:
-                raise ValueError, "Ambiguous node name: "+str(n.name)
+                raise_(ValueError, "Ambiguous node name: "+str(n.name))
             else:
                 name2node[n.name] = n
 
-    if None in name2node.values():
-        notfound = [key for key, value in name2node.iteritems() if value is None]
+    if None in list(name2node.values()):
+        notfound = [key for key, value in list(name2node.items()) if value is None]
         raise ValueError("Node names not found: "+str(notfound))
 
     valid_nodes = []
     for n in nodes: 
         if type(n) is not str:
             if type(n) is not root.__class__ :
-                raise ValueError, "Invalid target node: "+str(n)
+                raise_(ValueError, "Invalid target node: "+str(n))
             else:
                 valid_nodes.append(n)
             
-    valid_nodes.extend(name2node.values())
+    valid_nodes.extend(list(name2node.values()))
     if len(valid_nodes) == 1:
         return valid_nodes[0]
     else:
@@ -1807,13 +1822,13 @@ def OLD_translate_nodes(root, *nodes):
         if type(n) is str:
             mnodes = root.search_nodes(name=n)
             if len(mnodes) == 0:
-                raise ValueError, "Node name not found: "+str(n)
+                raise_(ValueError, "Node name not found: "+str(n))
             elif len(mnodes)>1:
-                raise ValueError, "Ambiguous node name: "+str(n)
+                raise_(ValueError, "Ambiguous node name: "+str(n))
             else:
                 target_nodes.append(mnodes[0])
         elif type(n) != root.__class__:
-            raise ValueError, "Invalid target node: "+str(n)
+            raise_(ValueError, "Invalid target node: "+str(n))
         else:
             target_nodes.append(n)
      
@@ -1827,8 +1842,8 @@ def asETE(R_phylo_tree):
     try:
         import rpy2.robjects as robjects
         R = robjects.r
-    except ImportError, e:
-        print e
+    except ImportError as e:
+        print(e)
         raise Exception ("RPy >= 2.0 is required to connect")
 
     R.library("ape")
@@ -1838,8 +1853,8 @@ def asRphylo(ETE_tree):
     try:
         import rpy2.robjects as robjects
         R = robjects.r
-    except ImportError, e:
-        print e
+    except ImportError as e:
+        print(e)
         raise Exception("RPy >= 2.0 is required to connect")
 
     R.library("ape")

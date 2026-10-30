@@ -21,12 +21,17 @@
 # For any enquiries send an email to David Emms
 # david_emms@hotmail.com
 
+from __future__ import division
+from __future__ import print_function
+from __future__ import absolute_import
+from past.utils import old_div
+from builtins import object
 import time
 import glob
 import argparse
 from collections import Counter, defaultdict
 
-import tree
+from . import tree
 
 class BitVector(object):
     """
@@ -42,7 +47,7 @@ class BitVector(object):
             taxa_index - the dictionary from taxa to their indices 
             taxon - the name of the taxon (string)
         """
-        self.X = long()
+        self.X = int()
         self.n = len(taxa_index)
         self.taxa_index = taxa_index
         if taxon != None:
@@ -218,7 +223,7 @@ def ConstructTree(compatible_splits, split_lengths, taxa_index, taxa_ordered, nT
                 if iInsert == None:
                     iInsert = i
                     node_new = tree.TreeNode()
-                    node_new.support = nSup/nTrees
+                    node_new.support = old_div(nSup,nTrees)
                     node_new.dist = sum(split_lengths[x]) / float(len(split_lengths[x]))
                     node_new.add_child(node.detach())
                     nodes_list[i] = node_new

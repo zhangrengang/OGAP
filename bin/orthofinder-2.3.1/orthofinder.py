@@ -24,7 +24,19 @@
 #
 # For any enquiries send an email to David Emms
 # david_emms@hotmail.com
-from scripts import parallel_task_manager
+from __future__ import division
+from __future__ import print_function
+from __future__ import absolute_import
+from future import standard_library
+standard_library.install_aliases()
+from builtins import next
+from builtins import str
+from builtins import map
+from builtins import zip
+from builtins import range
+from builtins import object
+from past.utils import old_div
+from .scripts import parallel_task_manager
 
 import sys                                      # Y
 import subprocess                               # Y
@@ -46,14 +58,14 @@ from collections import defaultdict             # Y
 import xml.etree.ElementTree as ET              # Y
 from xml.etree.ElementTree import SubElement    # Y
 from xml.dom import minidom                     # Y
-import Queue                                    # Y
+import queue                                    # Y
 import warnings                                 # Y
 
-import scripts.mcl as MCLread
-import scripts.blast_file_processor as BlastFileProcessor
-from scripts import util, matrices, orthologues
-from scripts import program_caller as pcs
-import scripts.files
+from . import scripts.mcl as MCLread
+from . import scripts.blast_file_processor as BlastFileProcessor
+from .scripts import util, matrices, orthologues
+from .scripts import program_caller as pcs
+from . import scripts.files
 
 # Get directory containing script/bundle
 if getattr(sys, 'frozen', False):
@@ -68,7 +80,7 @@ while not ok:
         csv.field_size_limit(max_int)
         ok = True
     except OverflowError:
-        max_int = int(max_int/10)
+        max_int = int(old_div(max_int,10))
     
 fastaExtensions = {"fa", "faa", "fasta", "fas"}
 if sys.platform.startswith("linux"):
@@ -112,7 +124,7 @@ def SpeciesNameDict(speciesIDsFN):
 MCL
 -------------------------------------------------------------------------------
 """    
-class MCL:
+class MCL(object):
     @staticmethod
     def CreateOGs(predictedOGs, outputFilename, idDict):
         with open(outputFilename, 'wb') as outputFile:
@@ -161,7 +173,7 @@ class MCL:
     #            speciesDatabaseNode.set('transcriptLink', "")  # skip
             allGenesNode = SubElement(speciesDatabaseNode, "genes")
             speciesStartingIndices.append(iGene_all)
-            for iGene_species in xrange(nSeqs):
+            for iGene_species in range(nSeqs):
                 geneNode = SubElement(allGenesNode, 'gene')
                 geneNode.set("geneId", idDict["%d_%d" % (iSpecies , iGene_species)])  
                 geneNode.set('id', str(iGene_all))       # required
@@ -238,7 +250,7 @@ class MCL:
         nSpecies = len(speciesNamesDict) 
         
         ogs_names = [[idToNameDict[seq] for seq in og] for og in ogs]
-        ogs_ints = [[map(int, sequence.split("_")) for sequence in og] for og in ogs]
+        ogs_ints = [[list(map(int, sequence.split("_"))) for sequence in og] for og in ogs]
     
         # write out
         outputFilename = resultsBaseFilename + ".tsv"
@@ -259,13 +271,13 @@ class MCL:
                 thisOutputWriter = fileWriter
                 # separate it into sequences from each species
                 if len(og) == 1:
-                    row.extend(['' for x in xrange(nSpecies)])
+                    row.extend(['' for x in range(nSpecies)])
                     row[speciesToUse.index(og[0][0]) + 1] = og_names[0]
                     thisOutputWriter = singleGeneWriter
                 else:
                     for (iSpecies, iSequence), name in zip(og, og_names):
                         ogDict[speciesToUse.index(iSpecies)].append(name)
-                    for iSpecies in xrange(nSpecies):
+                    for iSpecies in range(nSpecies):
                         row.append(", ".join(sorted(ogDict[iSpecies])))
                     counts = Counter([iSpecies for iSpecies, _ in og])
                     counts_row = [counts[iSpecies] for iSpecies in speciesToUse]
@@ -278,7 +290,7 @@ class MCL:
 scnorm
 -------------------------------------------------------------------------------
 """
-class scnorm:
+class scnorm(object):
     @staticmethod
     def loglinear(x, a, b):
         return a*np.log10(x)+b     
@@ -295,7 +307,7 @@ class scnorm:
     def GetTopPercentileOfScores(L, S, percentileToKeep):
         # Get the top x% of hits at each length
         nScores = len(S)
-        t_sort = sorted(zip(L, range(nScores)))
+        t_sort = sorted(zip(L, list(range(nScores))))
         indices = [j for i, j in t_sort]
         s_sorted = [S[i] for i in indices]
         l_sorted = [L[i] for i in indices]
@@ -306,7 +318,7 @@ class scnorm:
         nBins, remainder = divmod(nScores, nInBins)
         topScores = []
         topLengths = []
-        for i in xrange(nBins):
+        for i in range(nBins):
             first = i*nInBins
             last = min((i+1)*nInBins-1, nScores - 1)
             theseLengths = l_sorted[first:last+1]
@@ -324,8 +336,8 @@ class scnorm:
            
     @staticmethod   
     def NormaliseScoresByLogLengthProduct(b, Lq, Lh, params): 
-        rangeq = range(len(Lq))
-        rangeh = range(len(Lh))
+        rangeq = list(range(len(Lq)))
+        rangeh = list(range(len(Lh)))
         li_vals = Lq**(-params[0])
         lj_vals = Lh**(-params[0])
         li_matrix = sparse.csr_matrix((li_vals, (rangeq, rangeq)))
@@ -374,8 +386,8 @@ def GetOrderedSearchCommands(seqsInfo, speciesInfoObj, qDoubleBlast, search_prog
     ordered so that the commands predicted to take the longest come first. This allows the load to be balanced better when processing 
     the BLAST commands.
     """
-    iSpeciesPrevious = range(speciesInfoObj.iFirstNewSpecies)
-    iSpeciesNew = range(speciesInfoObj.iFirstNewSpecies, speciesInfoObj.nSpAll)
+    iSpeciesPrevious = list(range(speciesInfoObj.iFirstNewSpecies))
+    iSpeciesNew = list(range(speciesInfoObj.iFirstNewSpecies, speciesInfoObj.nSpAll))
     speciesPairs = [(i, j) for i, j in itertools.product(iSpeciesNew, iSpeciesNew) if (qDoubleBlast or i <=j)] + \
                    [(i, j) for i, j in itertools.product(iSpeciesNew, iSpeciesPrevious) if (qDoubleBlast or i <=j)] + \
                    [(i, j) for i, j in itertools.product(iSpeciesPrevious, iSpeciesNew) if (qDoubleBlast or i <=j)] 
@@ -395,15 +407,15 @@ Matrices
 def GetBH_s(pairwiseScoresMatrices, seqsInfo, iSpecies, tol=1e-3):
     nSeqs_i = seqsInfo.nSeqsPerSpecies[seqsInfo.speciesToUse[iSpecies]]
     bestHitForSequence = -1*np.ones(nSeqs_i)
-    H = [None for i_ in xrange(seqsInfo.nSpecies)] # create array of Nones to be replace by matrices
-    for j in xrange(seqsInfo.nSpecies):
+    H = [None for i_ in range(seqsInfo.nSpecies)] # create array of Nones to be replace by matrices
+    for j in range(seqsInfo.nSpecies):
         if iSpecies == j:
             # identify orthologs then come back to paralogs
             continue
         W = pairwiseScoresMatrices[j]
         I = []
         J = []
-        for kRow in xrange(nSeqs_i):
+        for kRow in range(nSeqs_i):
             values=W.getrowview(kRow)
             if values.nnz == 0:
                 continue
@@ -418,7 +430,7 @@ def GetBH_s(pairwiseScoresMatrices, seqsInfo, iSpecies, tol=1e-3):
     I = []
     J = []
     W = pairwiseScoresMatrices[iSpecies]
-    for kRow in xrange(nSeqs_i):
+    for kRow in range(nSeqs_i):
         values=W.getrowview(kRow)
         if values.nnz == 0:
             continue
@@ -439,7 +451,7 @@ def WriteGraph_perSpecies(args):
     # calculate the 2-way connections for one query species
     with open(graphFN + "_%d" % iSpec, 'wb') as graphFile:
         connect2 = []
-        for jSpec in xrange(seqsInfo.nSpecies):
+        for jSpec in range(seqsInfo.nSpecies):
             m1 = matrices.LoadMatrix("connect", iSpec, jSpec)
             m2tr = numeric.transpose(matrices.LoadMatrix("connect", jSpec, iSpec))
             connect2.append(m1 + m2tr)
@@ -447,10 +459,10 @@ def WriteGraph_perSpecies(args):
         B_connect = matrices.MatricesAnd_s(connect2, B)
         
         W = [b.sorted_indices().tolil() for b in B_connect]
-        for query in xrange(seqsInfo.nSeqsPerSpecies[seqsInfo.speciesToUse[iSpec]]):
+        for query in range(seqsInfo.nSeqsPerSpecies[seqsInfo.speciesToUse[iSpec]]):
             offset = seqsInfo.seqStartingIndices[iSpec]
             graphFile.write("%d    " % (offset + query))
-            for jSpec in xrange(seqsInfo.nSpecies):
+            for jSpec in range(seqsInfo.nSpecies):
                 row = W[jSpec].getrowview(query)
                 jOffset = seqsInfo.seqStartingIndices[jSpec]
                 for j, value in zip(row.rows[0], row.data[0]):
@@ -460,7 +472,7 @@ def WriteGraph_perSpecies(args):
         util.PrintTime("Written final scores for species %d to graph file" % iSpec)
             
             
-class WaterfallMethod:    
+class WaterfallMethod(object):    
     @staticmethod
     def NormaliseScores(B, Lengths, iSpecies, jSpecies):    
         Li, Lj, scores = scnorm.GetLengthArraysForMatrix(B, Lengths[iSpecies], Lengths[jSpecies])
@@ -479,7 +491,7 @@ class WaterfallMethod:
             warnings.simplefilter("ignore")
             # process up to the best hits for each species
             Bi = []
-            for jSpecies in xrange(seqsInfo.nSpecies):
+            for jSpecies in range(seqsInfo.nSpecies):
                 Bij = BlastFileProcessor.GetBLAST6Scores(seqsInfo, blastDir, seqsInfo.speciesToUse[iSpecies], seqsInfo.speciesToUse[jSpecies], qDoubleBlast=qDoubleBlast)  
                 Bij = WaterfallMethod.NormaliseScores(Bij, Lengths, iSpecies, jSpecies)
                 Bi.append(Bij)
@@ -494,7 +506,7 @@ class WaterfallMethod:
             try:
                 args = cmd_queue.get(True, 1)
                 WaterfallMethod.ProcessBlastHits(*args, qDoubleBlast=qDoubleBlast)
-            except Queue.Empty:
+            except queue.Empty:
                 return 
 
     @staticmethod
@@ -515,7 +527,7 @@ class WaterfallMethod:
                 try:
                     args = cmd_queue.get(True, 1)
                     WaterfallMethod.ConnectCognates(*args)
-                except Queue.Empty:
+                except queue.Empty:
                     return  
                                    
     @staticmethod
@@ -527,8 +539,8 @@ class WaterfallMethod:
                 graphFile.write("\n(mclmatrix\nbegin\n\n") 
             pool = mp.Pool(nProcess)
             graphFN = scripts.files.FileHandler.GetGraphFilename()
-            pool.map(WriteGraph_perSpecies, [(seqsInfo, graphFN, iSpec) for iSpec in xrange(seqsInfo.nSpecies)])
-            for iSp in xrange(seqsInfo.nSpecies):
+            pool.map(WriteGraph_perSpecies, [(seqsInfo, graphFN, iSpec) for iSpec in range(seqsInfo.nSpecies)])
+            for iSp in range(seqsInfo.nSpecies):
                 subprocess.call("cat " + graphFN + "_%d" % iSp + " >> " + graphFN, shell=True)
                 os.remove(graphFN + "_%d" % iSp)
             # Cleanup
@@ -538,7 +550,7 @@ class WaterfallMethod:
     @staticmethod
     def GetMostDistant_s(RBH, B, seqsInfo, iSpec):
         mostDistant = numeric.transpose(np.ones(seqsInfo.nSeqsPerSpecies[seqsInfo.speciesToUse[iSpec]])*1e9)
-        for kSpec in xrange(seqsInfo.nSpecies):
+        for kSpec in range(seqsInfo.nSpecies):
             B[kSpec] = B[kSpec].tocsr()
             if iSpec == kSpec:
                 continue
@@ -551,7 +563,7 @@ class WaterfallMethod:
     def ConnectAllBetterThanCutoff_s(B, mostDistant, seqsInfo, iSpec):
         connect = []
         nSeqs_i = seqsInfo.nSeqsPerSpecies[seqsInfo.speciesToUse[iSpec]]
-        for jSpec in xrange(seqsInfo.nSpecies):
+        for jSpec in range(seqsInfo.nSpecies):
             M=B[jSpec].tolil()
             if iSpec != jSpec:
                 IIJJ = [(i,j) for i, (valueRow, indexRow) in enumerate(zip(M.data, M.rows)) for j, v in zip(indexRow, valueRow) if v >= mostDistant[i]]
@@ -615,18 +627,18 @@ def Stats_SizeTable(writer_sum, writer_sp, properOGs, allGenesCounter, iSpecies,
     table_PG = [["Number of genes per-species in orthogroup"] + ["Percentage of genes" for _ in iSpecies]]        # percentage of genes
     for start, end in zip(bins, bins[1:]):
         binName = "<1" if start == 0 else ("'%d" % start) if start+1 == end else "'%d+" % start if end == 9e99 else "%d-%d" % (start, end-1)
-        nOrthogroups = sum([count for size, count in counters_GenesPerOG.items() if start*nSp<=size<end*nSp])
-        nGenes = sum([size*count for size, count in counters_GenesPerOG.items() if start*nSp<=size<end*nSp])
-        row_sum = [binName, nOrthogroups, percentFormat % (100.*nOrthogroups/nOGs), nGenes, percentFormat % (100.*nGenes/nGenesTotal)]
+        nOrthogroups = sum([count for size, count in list(counters_GenesPerOG.items()) if start*nSp<=size<end*nSp])
+        nGenes = sum([size*count for size, count in list(counters_GenesPerOG.items()) if start*nSp<=size<end*nSp])
+        row_sum = [binName, nOrthogroups, percentFormat % (old_div(100.*nOrthogroups,nOGs)), nGenes, percentFormat % (old_div(100.*nGenes,nGenesTotal))]
         writer_sum.writerow(row_sum)        
         # Per-species stats
         if binName == "<1": binName = "'0"
-        nOrthogroups_ps = [sum([number for size, number in c.items() if start<=size<end]) for c in counters_GenesPerOGPerSpecies]
-        nGenes_ps = [sum([size*number for size, number in c.items() if start<=size<end]) for c in counters_GenesPerOGPerSpecies]
+        nOrthogroups_ps = [sum([number for size, number in list(c.items()) if start<=size<end]) for c in counters_GenesPerOGPerSpecies]
+        nGenes_ps = [sum([size*number for size, number in list(c.items()) if start<=size<end]) for c in counters_GenesPerOGPerSpecies]
         table_NO.append([binName] + nOrthogroups_ps)
-        table_PO.append([binName] + [percentFormat % (100.*n/nOGs) for n in nOrthogroups_ps])
+        table_PO.append([binName] + [percentFormat % (old_div(100.*n,nOGs)) for n in nOrthogroups_ps])
         table_NG.append([binName] + nGenes_ps)
-        table_PG.append([binName] + [percentFormat % (100.*n/allGenesCounter[iSp]) for iSp, n in zip(iSpecies, nGenes_ps)])
+        table_PG.append([binName] + [percentFormat % (old_div(100.*n,allGenesCounter[iSp])) for iSp, n in zip(iSpecies, nGenes_ps)])
     writer_sp.writerow([])
     for r in table_NO: writer_sp.writerow(r)
     writer_sp.writerow([])
@@ -637,15 +649,15 @@ def Stats_SizeTable(writer_sum, writer_sp, properOGs, allGenesCounter, iSpecies,
     for r in table_PG: writer_sp.writerow(r)
         
     # Species presence
-    n = map(len, speciesPresence)
+    n = list(map(len, speciesPresence))
     writer_sum.writerow([])
     writer_sum.writerow(["Number of species in orthogroup", "Number of orthogroups"])
-    for i in xrange(1, nSp+1):
+    for i in range(1, nSp+1):
         writer_sum.writerow([i, n.count(i)])
 
 def Stats(ogs, speciesNamesDict, iSpecies, iResultsVersion):
     """ Top-level method for calcualtion of stats for the orthogroups"""
-    allOgs = [[map(int, g.split("_")) for g in og] for og in ogs]
+    allOgs = [[list(map(int, g.split("_"))) for g in og] for og in ogs]
     properOGs = [og for og in allOgs if len(og) > 1]
     allGenes = [g for og in allOgs for g in og]
     ogStatsResultsDir = scripts.files.FileHandler.GetOGsStatsResultsDirectory()
@@ -675,8 +687,8 @@ def Stats(ogs, speciesNamesDict, iSpecies, iResultsVersion):
         writer_sp.writerow(["Number of unassigned genes"] + [allGenesCounter[iSp] - assignedGenesCounter[iSp] for iSp in iSpecies])
         writer_sum.writerow(["Number of unassigned genes"] + [nGenes - nAssigned])     
         # Percentages
-        pAssigned = 100.*nAssigned/nGenes
-        writer_sp.writerow(["Percentage of genes in orthogroups"] + [percentFormat % (100.*assignedGenesCounter[iSp]/allGenesCounter[iSp]) for iSp in iSpecies])
+        pAssigned = old_div(100.*nAssigned,nGenes)
+        writer_sp.writerow(["Percentage of genes in orthogroups"] + [percentFormat % (old_div(100.*assignedGenesCounter[iSp],allGenesCounter[iSp])) for iSp in iSpecies])
         writer_sum.writerow(["Percentage of genes in orthogroups", percentFormat % pAssigned])   
         writer_sp.writerow(["Percentage of unassigned genes"] + [percentFormat % (100*(1.-(float(assignedGenesCounter[iSp])/allGenesCounter[iSp]))) for iSp in iSpecies])
         writer_sum.writerow(["Percentage of unassigned genes", percentFormat % (100*(1.-(float(nAssigned)/nGenes)))])
@@ -686,7 +698,7 @@ def Stats(ogs, speciesNamesDict, iSpecies, iResultsVersion):
         nOgs = len(properOGs)
         writer_sum.writerow(["Number of orthogroups", nOgs])
         writer_sp.writerow(["Number of orthogroups containing species"] + [sum([iSp in og_sp for og_sp in speciesPresence]) for iSp in iSpecies])
-        writer_sp.writerow(["Percentage of orthogroups containing species"] + [percentFormat % ((100.*sum([iSp in og_sp for og_sp in speciesPresence])/len(properOGs)) if len(properOGs) > 0 else 0.) for iSp in iSpecies])
+        writer_sp.writerow(["Percentage of orthogroups containing species"] + [percentFormat % ((old_div(100.*sum([iSp in og_sp for og_sp in speciesPresence]),len(properOGs))) if len(properOGs) > 0 else 0.) for iSp in iSpecies])
         
         # Species specific orthogroups - orthogroups-based
         speciesSpecificOGsCounter = Counter([next(iter(og_sp)) for og_sp in speciesPresence if len(og_sp) == 1])
@@ -698,19 +710,19 @@ def Stats(ogs, speciesNamesDict, iSpecies, iResultsVersion):
         iSpSpecificOGsGeneCounts = [sum([len(properOGs[iog]) for iog in iSpeciesSpecificOGs if properOGs[iog][0][0] == iSp]) for iSp in iSpecies]
         writer_sp.writerow(["Number of genes in species-specific orthogroups"] + iSpSpecificOGsGeneCounts)
         writer_sum.writerow(["Number of genes in species-specific orthogroups", sum(iSpSpecificOGsGeneCounts)])
-        writer_sp.writerow(["Percentage of genes in species-specific orthogroups"] + [percentFormat % (100.*n_ss/allGenesCounter[iSp]) for n_ss, iSp in zip(iSpSpecificOGsGeneCounts, iSpecies)])
-        writer_sum.writerow(["Percentage of genes in species-specific orthogroups", percentFormat % (100.*sum(iSpSpecificOGsGeneCounts)/nGenes)])
+        writer_sp.writerow(["Percentage of genes in species-specific orthogroups"] + [percentFormat % (old_div(100.*n_ss,allGenesCounter[iSp])) for n_ss, iSp in zip(iSpSpecificOGsGeneCounts, iSpecies)])
+        writer_sum.writerow(["Percentage of genes in species-specific orthogroups", percentFormat % (old_div(100.*sum(iSpSpecificOGsGeneCounts),nGenes))])
         
         # 'averages'
-        l = list(reversed(map(len, properOGs)))
+        l = list(reversed(list(map(len, properOGs))))
         writer_sum.writerow(["Mean orthogroup size", "%0.1f" % np.mean(l)])
         writer_sum.writerow(["Median orthogroup size", np.median(l)])
         L = np.cumsum(l)
-        j, _ = next((i, x) for i, x in enumerate(L) if x > nAssigned/2)
+        j, _ = next((i, x) for i, x in enumerate(L) if x > old_div(nAssigned,2))
         writer_sum.writerow(["G50 (assigned genes)",l[j]])
-        l2 = list(reversed(map(len, ogs)))
+        l2 = list(reversed(list(map(len, ogs))))
         L2 = np.cumsum(l2)
-        j2, _ = next((i, x) for i, x in enumerate(L2) if x > nGenes/2)
+        j2, _ = next((i, x) for i, x in enumerate(L2) if x > old_div(nGenes,2))
         G50 = l2[j2]
         writer_sum.writerow(["G50 (all genes)", G50])
         writer_sum.writerow(["O50 (assigned genes)", len(l) - j])
@@ -901,7 +913,7 @@ class Options(object):#
         self.mclInflation = g_mclInflation
     
     def what(self):
-        for k, v in self.__dict__.items():
+        for k, v in list(self.__dict__.items()):
             if v == True:
                 print(k)
                                  
@@ -1195,7 +1207,7 @@ def GetXMLSpeciesInfo(seqsInfoObj, options):
     # do this now so that we can alert user to any errors prior to running the algorithm
     speciesXML = [[] for i_ in seqsInfoObj.speciesToUse]
     speciesNamesDict = SpeciesNameDict(scripts.files.FileHandler.GetSpeciesIDsFN())
-    speciesRevDict = {v:k for k,v in speciesNamesDict.items()}
+    speciesRevDict = {v:k for k,v in list(speciesNamesDict.items())}
     userFastaFilenames = [os.path.split(speciesNamesDict[i])[1] for i in seqsInfoObj.speciesToUse]
     with open(options.speciesXMLInfoFN, 'rb') as speciesInfoFile:
         reader = csv.reader(speciesInfoFile, delimiter = "\t")
@@ -1275,17 +1287,17 @@ def DoOrthogroups(options, speciesInfoObj, seqsInfo, qDoubleBlast):
     util.PrintTime("Initial processing of each species")
     cmd_queue = mp.Queue()
     blastDir = scripts.files.FileHandler.GetBlastResultsDir()
-    for iSpecies in xrange(seqsInfo.nSpecies):
+    for iSpecies in range(seqsInfo.nSpecies):
         cmd_queue.put((seqsInfo, blastDir, Lengths, iSpecies))
-    runningProcesses = [mp.Process(target=WaterfallMethod.Worker_ProcessBlastHits, args=(cmd_queue, qDoubleBlast)) for i_ in xrange(options.nProcessAlg)]
+    runningProcesses = [mp.Process(target=WaterfallMethod.Worker_ProcessBlastHits, args=(cmd_queue, qDoubleBlast)) for i_ in range(options.nProcessAlg)]
     for proc in runningProcesses:
         proc.start()
     util.ManageQueue(runningProcesses, cmd_queue)
     
     cmd_queue = mp.Queue()
-    for iSpecies in xrange(seqsInfo.nSpecies):
+    for iSpecies in range(seqsInfo.nSpecies):
         cmd_queue.put((seqsInfo, iSpecies))
-    runningProcesses = [mp.Process(target=WaterfallMethod.Worker_ConnectCognates, args=(cmd_queue, )) for i_ in xrange(options.nProcessAlg)]
+    runningProcesses = [mp.Process(target=WaterfallMethod.Worker_ConnectCognates, args=(cmd_queue, )) for i_ in range(options.nProcessAlg)]
     for proc in runningProcesses:
         proc.start()
     util.ManageQueue(runningProcesses, cmd_queue)
@@ -1399,7 +1411,7 @@ def ProcessPreviousFiles(workingDir, qDoubleBlast):
 # 6
 def CreateSearchDatabases(seqsInfoObj, options, program_caller):
     nDB = max(seqsInfoObj.speciesToUse) + 1
-    for iSp in xrange(nDB):
+    for iSp in range(nDB):
         if options.search_program == "blast":
             command = ["makeblastdb", "-dbtype", "prot", "-in", scripts.files.FileHandler.GetSpeciesFastaFN(iSp), "-out", scripts.files.FileHandler.GetSpeciesDatabaseN(iSp)]
             util.PrintTime("Creating Blast database %d of %d" % (iSp + 1, nDB))
@@ -1426,7 +1438,7 @@ def RunSearch(options, speciessInfoObj, seqsInfo, program_caller):
     cmd_queue = mp.Queue()
     for iCmd, cmd in enumerate(commands):
         cmd_queue.put((iCmd+1, cmd))           
-    runningProcesses = [mp.Process(target=util.Worker_RunCommand, args=(cmd_queue, options.nBlast, len(commands), True)) for i_ in xrange(options.nBlast)]
+    runningProcesses = [mp.Process(target=util.Worker_RunCommand, args=(cmd_queue, options.nBlast, len(commands), True)) for i_ in range(options.nBlast)]
     for proc in runningProcesses:
         proc.start()#
     for proc in runningProcesses:
@@ -1438,8 +1450,8 @@ def RunSearch(options, speciessInfoObj, seqsInfo, program_caller):
         for f in glob.glob(scripts.files.FileHandler.GetWorkingDirectory1_Read() + "BlastDBSpecies*"):
             os.remove(f)
     if options.search_program == "mmseqs":
-        for i in xrange(dirs.nSpAll):
-            for j in xrange(dirs.nSpAll):
+        for i in range(dirs.nSpAll):
+            for j in range(dirs.nSpAll):
                 tmp_dir = "/tmp/tmpBlast%d_%d.txt" % (i,j)
                 if os.path.exists(tmp_dir):
                     try:
@@ -1554,7 +1566,7 @@ def CheckOptions(options):
     - user supplied species tree
     """
     if options.speciesTreeFN:
-        expSpecies = SpeciesNameDict(scripts.files.FileHandler.GetSpeciesIDsFN()).values()
+        expSpecies = list(SpeciesNameDict(scripts.files.FileHandler.GetSpeciesIDsFN()).values())
         orthologues.CheckUserSpeciesTree(options.speciesTreeFN, expSpecies)
         
     if options.qStopAfterSeqs and (not options.qMSATrees):

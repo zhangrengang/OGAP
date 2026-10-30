@@ -4,7 +4,11 @@ Created on Fri Dec 16 15:20:28 2016
 
 @author: david
 """
+from __future__ import print_function
+from __future__ import absolute_import
 
+from builtins import str
+from builtins import range
 import os
 import sys
 import time
@@ -12,9 +16,9 @@ import subprocess
 import fileinput
 from collections import defaultdict, Counter
 
-import util
-import tree as tree_lib
-import files
+from . import util
+from . import tree as tree_lib
+from . import files
 
 def WriteGeneralOptions(filename, baseDir, qRunSingley, nOGs):
     x="""######## First, data files ########
@@ -55,7 +59,7 @@ output.losses.tree.file=$(RESULT)$(DATA).LossTree
 
 use.quality.filters=false""" % baseDir
     if qRunSingley:
-        for i in xrange(nOGs):
+        for i in range(nOGs):
             base, ext = os.path.splitext(filename)
             og = "OG%07d" % i
             outFN = base + "_" + og + ext
@@ -105,7 +109,7 @@ optimization.message_handler=none
 optimization.profiler=none
 optimization.reparametrization=no"""
     exclude = set(exclude)
-    for i in xrange(nOGs):
+    for i in range(nOGs):
         if i in exclude: continue
         ogName = "OG%07d" % i
         with open(phyldogDir + ogName + ".opt", 'wb') as outfile: 
@@ -125,7 +129,7 @@ def WriteGeneMaps(outputDir, ogs, exclude):
             name = seq.ToString()
             genesForSpecies[name.split("_")[0]].append(name)
         with open(outputDir + "OG%07d.map.txt" % i, 'wb') as outfile:
-            for species, genes in genesForSpecies.items():
+            for species, genes in list(genesForSpecies.items()):
                 outfile.write("%s:%s\n" % (species, ";".join(genes)))
 
 #def WriteGeneMaps(phyldogDir, ogs):
@@ -185,14 +189,14 @@ def WriteStandardFiles(phyldogDir, speciesToUse, qRunSingley, nOGs):
 
 def WriteListGenes(phyldogDir, nOGs, exclude, qRunSingley):
     if qRunSingley:
-        for i in xrange(nOGs):
+        for i in range(nOGs):
             if i in exclude: continue
             with open(phyldogDir + "ListGenes_OG%07d.opt" % i, 'wb') as outfile:
                     outfile.write(phyldogDir + "OG%07d.opt:%s\n" % (i, str(os.stat( phyldogDir + "../Alignments_ids/OG%07d.fa" % i )[6])))   # phyldog prepareData.py method
     
     else:
         with open(phyldogDir + "ListGenes.opt", 'wb') as outfile:
-            for i in xrange(nOGs):
+            for i in range(nOGs):
                 if i in exclude: continue
                 outfile.write(phyldogDir + "OG%07d.opt:%s\n" % (i, str(os.stat( phyldogDir + "../Alignments_ids/OG%07d.fa" % i )[6])))   # phyldog prepareData.py method
     
@@ -213,7 +217,7 @@ def RunPhyldogAnalysis(phyldogDir, ogs, speciesToUse, nParallel):
     start = time.time()
     if qRunSingley:
         nOGs = len(ogs)
-        cmds = [["mpirun -np 2 phyldog param=%s%s"  % (phyldogDir, "GeneralOptions_OG%07d.opt" % i)] for i in xrange(nOGs)]
+        cmds = [["mpirun -np 2 phyldog param=%s%s"  % (phyldogDir, "GeneralOptions_OG%07d.opt" % i)] for i in range(nOGs)]
         util.RunParallelCommands(nParallel, cmds, True, qHideStdout=True)
     else:
         subprocess.call("mpirun -np %d phyldog param=GeneralOptions.opt" % nParallel, shell=True, cwd=phyldogDir, stdout=subprocess.PIPE, stderr=subprocess.PIPE)

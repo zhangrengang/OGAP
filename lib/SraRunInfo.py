@@ -1,3 +1,8 @@
+from __future__ import print_function
+from __future__ import absolute_import
+from builtins import zip
+from builtins import map
+from builtins import object
 import sys
 import re
 import csv
@@ -63,7 +68,7 @@ class SraRunInfo(object):
 		#		print line
 				if not line:
 					continue
-				if line[0] == ITEMTYPE.keys()[0]:
+				if line[0] == list(ITEMTYPE.keys())[0]:
 					continue
 				yield RunInfoRecord(line)
 	def filter(self, critera):
@@ -78,7 +83,7 @@ class SraRunInfo(object):
 				yield record
 	def write(self, records=None, fout=sys.stdout):
 		writer = csv.writer(fout)
-		writer.writerow(ITEMTYPE.keys())
+		writer.writerow(list(ITEMTYPE.keys()))
 		for record in records:
 			writer.writerow(record.line)
 	def select(self, columns, records=None, fout=sys.stdout):
@@ -91,8 +96,8 @@ class SraRunInfo(object):
 #			print >> fout, '\t'.join(line)
 			yield RunInfoRecord2(columns, line)
 	def add_taxonomy(self, fout=sys.stdout):
-		from Taxonomy import Taxonomy
-		from Database import Database
+		from .Taxonomy import Taxonomy
+		from .Database import Database
 		taxonomy_dbfile = Database().taxonomy_dbfile
 		d_species = Taxonomy(jsonfile=taxonomy_dbfile).db
 		records = []
@@ -107,7 +112,7 @@ class RunInfoRecord(object):
 	def __init__(self, line):
 		self.line = line
 		self.dict = OrderedDict()
-		for (key, func), value in zip(ITEMTYPE.items(), line):
+		for (key, func), value in zip(list(ITEMTYPE.items()), line):
 			try:
 				value = func(value)
 			except ValueError:
@@ -115,9 +120,9 @@ class RunInfoRecord(object):
 			setattr(self, key, value)
 			self.dict[key] = value
 	def write(self, fout):
-		print >>fout, '\t'.join(self.line)
+		print('\t'.join(self.line), file=fout)
 	def write_head(self, fout):
-		print >>fout, '\t'.join(ITEMTYPE.keys())
+		print('\t'.join(list(ITEMTYPE.keys())), file=fout)
 class RunInfoRecord2(object):
 	def __init__(self, keys, values):
 		self.values = values
@@ -126,7 +131,7 @@ class RunInfoRecord2(object):
 			self.dict[key] = value
 			setattr(self, key, value)
 	def __str__(self):
-		self.values = map(str, self.values)
+		self.values = list(map(str, self.values))
 		return '\t'.join(self.values)
 def add_taxonomy(run_info, fout=sys.stdout):
 	SraRunInfo(run_info).add_taxonomy(fout=fout)
@@ -141,17 +146,17 @@ def stats_by_bioproject(run_info, fout=sys.stdout):
 
 	columns = ['BioProject', 'Runs', 'BioSamples', 'Taxas', 'Taxa', 'LibrarySelection', 'Platforms', 'Platform',
 			   'mean_bases', 'median_bases', 'mean_avgLength', 'median_avgLength']
-	print >>fout, '\t'.join(columns)
-	for proj, runs in sorted(d_porject.items(), key=lambda x:len(x[1]), reverse=1): # sort by RUN number
+	print('\t'.join(columns), file=fout)
+	for proj, runs in sorted(list(d_porject.items()), key=lambda x:len(x[1]), reverse=1): # sort by RUN number
 		sra_num = len(runs)
 		sample_num = len({run.dict['BioSample'] for run in runs})
 		taxa = [run.dict['ScientificName'] for run in runs]
 		taxa_count = Counter(taxa)
 		taxa_num = len(taxa_count)
-		taxa_count = sorted(taxa_count.items(), key=lambda x:x[1], reverse=1)
+		taxa_count = sorted(list(taxa_count.items()), key=lambda x:x[1], reverse=1)
 		selection = [run.dict['LibrarySelection'] for run in runs]
 		selc_count = Counter(selection)
-		selc_count = sorted(selc_count.items(), key=lambda x:x[1], reverse=1)
+		selc_count = sorted(list(selc_count.items()), key=lambda x:x[1], reverse=1)
 		bases = [run.dict['bases'] for run in runs]
 		bases_mean = np.mean(bases)
 		bases_median = np.median(bases)
@@ -161,10 +166,10 @@ def stats_by_bioproject(run_info, fout=sys.stdout):
 		platforms = [run.dict['Platform'] for run in runs]
 		pf_count = Counter(platforms)
 		pf_num = len(pf_count)
-		pf_count = sorted(pf_count.items(), key=lambda x:x[1], reverse=1)
+		pf_count = sorted(list(pf_count.items()), key=lambda x:x[1], reverse=1)
 		line = [proj, sra_num, sample_num, taxa_num, taxa_count, selc_count, pf_num, pf_count, bases_mean, bases_median, len_mean, len_median]
-		line = map(str, line)
-		print >> fout, '\t'.join(line)
+		line = list(map(str, line))
+		print('\t'.join(line), file=fout)
 def filter_and_select_runinfo(
 		run_info, 
 		fout=sys.stdout,
@@ -176,20 +181,20 @@ def filter_and_select_runinfo(
 		):
 	filter_out = SraRunInfo(run_info).filter(critera)
 	#print filter_out
-	print >> fout, '\t'.join(columns)
+	print('\t'.join(columns), file=fout)
 	lines = []
 	for line in SraRunInfo().select(columns, records=filter_out, fout=fout):
-		print >>fout, line
+		print(line, file=fout)
 		lines.append(line)
 	return lines
 def get_singletons(run_info, fout=sys.stdout):
 	lines = filter_and_select_runinfo(run_info, fout=sys.stderr)
 	taxa = [line.TaxID for line in lines]
 	taxa_count = Counter(taxa)
-	singletons = {tax for tax,count in taxa_count.items() if count == 1} # set
+	singletons = {tax for tax,count in list(taxa_count.items()) if count == 1} # set
 	for line in lines:
 		if line.TaxID in singletons:
-			print >>fout, line
+			print(line, file=fout)
 	return singletons
 def get_last(run_info, fout=sys.stdout):
 	lines = filter_and_select_runinfo(run_info, fout=sys.stderr)
@@ -199,7 +204,7 @@ def get_last(run_info, fout=sys.stdout):
 		if key in d_last and line.BioSample != d_last[key].BioSample:
 			continue
 		d_last[key] = line
-		print >>fout, line
+		print(line, file=fout)
 if __name__ == '__main__':
 	subcmd = sys.argv[1]
 	run_info = sys.argv[2]

@@ -23,12 +23,17 @@
 #
 # For any enquiries send an email to David Emms
 # david_emms@hotmail.com 
+from __future__ import absolute_import
+from future import standard_library
+standard_library.install_aliases()
+from builtins import range
+from builtins import object
 import os
 import time
 import multiprocessing as mp
-import Queue
+import queue
 
-import util
+from . import util
 import sys
 import subprocess
 
@@ -58,9 +63,9 @@ def _I_Spawn_Processes(message_to_spawner, message_to_PTM, cmds_queue):
             # In which case, thread has been informed that there are tasks in the queue.
             nParallel, nTasks, qShell, qListOfLists, qHideStdout = message
             if qListOfLists:
-                runningProcesses = [mp.Process(target=util.Worker_RunOrderedCommandList, args = (cmds_queue, nParallel, nTasks, qShell, qHideStdout)) for i_ in xrange(nParallel)]           
+                runningProcesses = [mp.Process(target=util.Worker_RunOrderedCommandList, args = (cmds_queue, nParallel, nTasks, qShell, qHideStdout)) for i_ in range(nParallel)]           
             else:
-                runningProcesses = [mp.Process(target=util.Worker_RunCommand, args = (cmds_queue, nParallel, nTasks, qShell, qHideStdout)) for i_ in xrange(nParallel)] 
+                runningProcesses = [mp.Process(target=util.Worker_RunCommand, args = (cmds_queue, nParallel, nTasks, qShell, qHideStdout)) for i_ in range(nParallel)] 
             for proc in runningProcesses:
                 proc.start()
             for proc in runningProcesses:
@@ -68,12 +73,12 @@ def _I_Spawn_Processes(message_to_spawner, message_to_PTM, cmds_queue):
                     proc.join() 
             message_to_PTM.put("Done")
             time.sleep(2)
-        except Queue.Empty:
+        except queue.Empty:
             time.sleep(4) # there wasn't anything this time, sleep then try again
     pass
     
 
-class ParallelTaskManager_singleton:
+class ParallelTaskManager_singleton(object):
     class __Singleton(object):
         def __init__(self):
             """Implementation:
@@ -115,7 +120,7 @@ class ParallelTaskManager_singleton:
                 signal = self.instance.message_to_PTM.get()
                 if signal == "Done": 
                     return                 
-            except Queue.Empty:
+            except queue.Empty:
                 pass
             time.sleep(1)
                 

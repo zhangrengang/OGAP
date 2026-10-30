@@ -1,0 +1,11 @@
+#id	organism	name_count	cds_count	trn_count	rrn_count	length	GC	taxonomy
+NC_000932.1	Arabidopsis thaliana	123	85	37	7	154478	0.4	
+NC_030053.1	Coffea canephora	131	86	37	8	154751	0.4	
+NC_015983.1	Cucumis melo subsp. melo	131	88	37	8	156017	0.4	
+NC_007942.1	Glycine max	128	83	37	8	152218	0.4	
+NC_001879.1	Nicotiana tabacum	117	102	37	8	155939	0.4	
+NC_001320.1	Oryza sativa Japonica Group	82	106	37	8	134525	0.4	
+NC_009143.1	Populus trichocarpa	87	98	37	8	157033	0.4	
+NC_014697.1	Prunus persica	122	85	37	8	157790	0.4	
+NC_007898.3	Solanum lycopersicum	132	87	45	8	155461	0.4	
+NC_007957.1	Vitis vinifera	121	84	37	8	160928	0.4	

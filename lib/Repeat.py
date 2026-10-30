@@ -1,3 +1,12 @@
+from __future__ import division
+from __future__ import print_function
+from __future__ import absolute_import
+from builtins import zip
+from builtins import str
+from builtins import map
+from builtins import range
+from past.utils import old_div
+from builtins import object
 import sys, os
 import re
 import glob
@@ -7,8 +16,8 @@ from itertools import combinations
 from collections import OrderedDict
 from Bio import SeqIO
 from Bio.Seq import Seq
-from Gff import GffLine, GffExons
-from RunCmdsMP import run_cmd, logger
+from .Gff import GffLine, GffExons
+from .RunCmdsMP import run_cmd, logger
 
 def makeArgparse():
 	parser = argparse.ArgumentParser( \
@@ -28,7 +37,7 @@ def addRepeatArgs(parser):
 					help="options for simple repeats by regular expression [default='%(default)s']")
 
 
-class RepeatPipeline():
+class RepeatPipeline(object):
 	def __init__(self, genome, tmpdir='/dev/shm/tmp', 
 				prefix=None,
 				dr_opts='-p -d -l 50 -e 3',
@@ -84,7 +93,7 @@ class RepeatPipeline():
 			try: d_names[node.name] += [node]
 			except: d_names[node.name] = [node]
 		remove_nodes = []
-		for xnodes in d_names.values():
+		for xnodes in list(d_names.values()):
 			if len(xnodes) == 1:
 				remove_nodes += xnodes
 		remove_nodes = set(remove_nodes)
@@ -129,10 +138,10 @@ class RepeatGraph(nx.Graph):
 
 	def set_node_attributes(self, **kargs):
 		for node in self.nodes():
-			for key, value in kargs.items():
+			for key, value in list(kargs.items()):
 				setattr(node, key, value)
 
-class RepeatSegemnt:
+class RepeatSegemnt(object):
 	def __init__(self, chrom, start, end):	# 1-based
 		self.chrom, self.start, self.end = chrom, start, end
 		self.strand = '+'
@@ -187,7 +196,7 @@ class RepeatSegemnt:
 			return True
 		return False
 
-class Vmatch:
+class Vmatch(object):
 	def __init__(self, matchfile, d_no=None, prefix='DR', rpt_type='dispersed', source='vmatch'):
 		self.matchfile = matchfile
 		self.d_no = d_no
@@ -296,7 +305,7 @@ class SSR(TRF):
 				source='regex',
 				definition='1-10 2-5 3-4 4-3 5-3 6-3'):
 		self.genome = genome
-		self.definition = [map(int, pair.split('-')) for pair in definition.split()]
+		self.definition = [list(map(int, pair.split('-'))) for pair in definition.split()]
 		self.prefix = prefix
 		self.rpt_type = rpt_type
 		self.source = source
@@ -316,7 +325,7 @@ class SSR(TRF):
 #					if unit_size == 5:
 #						print >>sys.stderr, rc.id, start, end, unit, mseq
 					for i in range(1, unit_size):
-						redmotif = r'^([ATCG]{%s})(\1{%s})$' % (i, unit_size/i-1)
+						redmotif = r'^([ATCG]{%s})(\1{%s})$' % (i, old_div(unit_size,i)-1)
 						if re.compile(redmotif).match(unit):
 							redundant = True
 							break
@@ -329,7 +338,7 @@ class SSRRecord(TRFRecord):
 	def __init__(self, chrom, start, end, unit, seq):
 		self.chrom, self.start, self.end = chrom, start, end
 		self.unit, self.seq = unit, seq
-		self.repeats = len(seq) / len(unit)
+		self.repeats = old_div(len(seq), len(unit))
 		self.ssr = '({}){}'.format(unit, self.repeats)
 		self.type = SSR_TYPE[len(unit)]
 		self.segment = RepeatSegemnt(self.chrom, self.start, self.end)
@@ -338,7 +347,7 @@ class SSRRecord(TRFRecord):
 
 def main():
 	args = makeArgparse()
-	print >>sys.stderr, args.__dict__
+	print(args.__dict__, file=sys.stderr)
 	pipeline = RepeatPipeline(**args.__dict__)
 	pipeline.run()
 

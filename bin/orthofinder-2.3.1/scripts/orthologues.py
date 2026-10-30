@@ -25,6 +25,16 @@
 # For any enquiries send an email to David Emms
 # david_emms@hotmail.comhor: david
 
+from __future__ import print_function
+from __future__ import absolute_import
+from future import standard_library
+standard_library.install_aliases()
+from builtins import next
+from builtins import zip
+from builtins import map
+from builtins import str
+from builtins import range
+from builtins import object
 import os
 import sys
 import csv
@@ -35,20 +45,20 @@ import subprocess
 from collections import Counter, defaultdict
 import itertools
 import multiprocessing as mp
-import Queue
+import queue
 import warnings
 
-import util
-import tree
-import mcl as MCL
-import stride
-import trees2ologs_dlcpar
-import trees2ologs_of
-import blast_file_processor as BlastFileProcessor
-import trees_msa
-import wrapper_phyldog
-import stag
-import files
+from . import util
+from . import tree
+from . import mcl as MCL
+from . import stride
+from . import trees2ologs_dlcpar
+from . import trees2ologs_of
+from . import blast_file_processor as BlastFileProcessor
+from . import trees_msa
+from . import wrapper_phyldog
+from . import stag
+from . import files
 
 nThreads = util.nThreadsDefault
 
@@ -70,10 +80,10 @@ class Seq(object):
         Seq object accordingly. If performance is really important then can write 
         individual an @classmethod to do that without the checks"""
         if type(seqInput) is str:
-            self.iSp, self.iSeq = map(int, seqInput.split("_"))
+            self.iSp, self.iSeq = list(map(int, seqInput.split("_")))
         elif len(seqInput) == 2:
             if seqInput[0] is str:
-                self.iSp, self.iSeq = map(int, seqInput)
+                self.iSp, self.iSeq = list(map(int, seqInput))
             else:
                 self.iSp= seqInput[0]
                 self.iSeq = seqInput[1]
@@ -122,15 +132,15 @@ class OrthoGroupsSet(object):
         
     def SpeciesDict(self):
         d = self.speciesIDsEx.GetIDToNameDict()
-        return {k:v.rsplit(".",1)[0] for k,v in d.items()}
+        return {k:v.rsplit(".",1)[0] for k,v in list(d.items())}
         
     def Spec_SeqDict(self):
         if self._Spec_SeqIDs != None:
             return self._Spec_SeqIDs
         seqs = self.SequenceDict()
         specs = self.SpeciesDict()
-        specs_ed = {k:v.replace(".", "_").replace(" ", "_") for k,v in specs.items()}
-        self._Spec_SeqIDs = {seqID:specs_ed[seqID.split("_")[0]] + "_" + name for seqID, name in seqs.items()}
+        specs_ed = {k:v.replace(".", "_").replace(" ", "_") for k,v in list(specs.items())}
+        self._Spec_SeqIDs = {seqID:specs_ed[seqID.split("_")[0]] + "_" + name for seqID, name in list(seqs.items())}
         return self._Spec_SeqIDs
     
     def OGs(self, qInclAll=False):
@@ -173,7 +183,7 @@ class OrthoGroupsSet(object):
 def lil_min(M):
     n = M.shape[0]
     mins = np.ones((n, 1), dtype = np.float64) * 9e99
-    for kRow in xrange(n):
+    for kRow in range(n):
         values=M.getrowview(kRow)
         if values.nnz == 0:
             continue
@@ -183,7 +193,7 @@ def lil_min(M):
 def lil_max(M):
     n = M.shape[0]
     maxes = np.zeros((n, 1), dtype = np.float64)
-    for kRow in xrange(n):
+    for kRow in range(n):
         values=M.getrowview(kRow)
         if values.nnz == 0:
             continue
@@ -194,7 +204,7 @@ def lil_minmax(M):
     n = M.shape[0]
     mins = np.ones((n, 1), dtype = np.float64) * 9e99
     maxes = np.zeros((n, 1), dtype = np.float64)
-    for kRow in xrange(n):
+    for kRow in range(n):
         values=M.getrowview(kRow)
         if values.nnz == 0:
             continue
@@ -249,7 +259,7 @@ def Worker_OGMatrices_ReadBLASTAndUpdateDistances(cmd_queue, worker_status_queue
                             for gj, j in og[jjSp]:
                                     m[i][j] = 0.5*max(B[gi.iSeq, gj.iSeq], mins[gi.iSeq]) * maxes_inv[gi.iSeq]
                 worker_status_queue.put(("finish", iWorker, iiSp))
-            except Queue.Empty:
+            except queue.Empty:
                 worker_status_queue.put(("empty", iWorker, None))
                 return 
 
@@ -280,16 +290,16 @@ class DendroBLASTTrees(object):
             ogsPerSpecies = [[[(g, i) for i, g in enumerate(og) if g.iSp == iSp] for iSp in self.ogSet.seqsInfo.speciesToUse] for og in ogs]
             nGenes = [len(og) for og in ogs]
             nSeqs = self.ogSet.seqsInfo.nSeqsPerSpecies
-            ogMatrices = [[mp.Array('d', n, lock=False) for _ in xrange(n)] for n in nGenes]
+            ogMatrices = [[mp.Array('d', n, lock=False) for _ in range(n)] for n in nGenes]
             blastDir = files.FileHandler.GetBlastResultsDir()
             cmd_queue = mp.Queue()
             for iiSp, sp1 in enumerate(self.ogSet.seqsInfo.speciesToUse):
                 cmd_queue.put((iiSp, sp1, nSeqs[sp1]))
             worker_status_queue = mp.Queue()
-            runningProcesses = [mp.Process(target=Worker_OGMatrices_ReadBLASTAndUpdateDistances, args=(cmd_queue, worker_status_queue, iWorker, ogMatrices, nGenes, self.ogSet.seqsInfo, blastDir, ogsPerSpecies, self.qDoubleBlast)) for iWorker in xrange(self.nProcesses)]
+            runningProcesses = [mp.Process(target=Worker_OGMatrices_ReadBLASTAndUpdateDistances, args=(cmd_queue, worker_status_queue, iWorker, ogMatrices, nGenes, self.ogSet.seqsInfo, blastDir, ogsPerSpecies, self.qDoubleBlast)) for iWorker in range(self.nProcesses)]
             for proc in runningProcesses:
                 proc.start()
-            rota = [None for iWorker in xrange(self.nProcesses)]
+            rota = [None for iWorker in range(self.nProcesses)]
             unfinished = []
             while True:
                 # get process alive/dead
@@ -305,7 +315,7 @@ class DendroBLASTTrees(object):
                             rota[iWorker] = None
                         elif status == "empty":
                             rota[iWorker] = "empty"
-                except Queue.Empty:
+                except queue.Empty:
                     pass
                 # if worker is dead but didn't finish task, issue warning
                 for al, r in zip(alive, rota):
@@ -332,8 +342,8 @@ class DendroBLASTTrees(object):
             n = m.shape[0]
             m2 = np.zeros(m.shape)
             max_og = -9e99
-            for i in xrange(n):
-                for j in xrange(i):
+            for i in range(n):
+                for j in range(i):
                     m2[i, j] = -np.log(m[i,j] + m[j,i])  
                     m2[j, i] = m2[i, j]  
                     max_og = max(max_og, m2[i,j])
@@ -349,8 +359,8 @@ class DendroBLASTTrees(object):
             n = len(m)
             max_og = -9e99
             # Careful not to over-write a value and then attempt to try to use the old value
-            for i in xrange(n):
-                for j in xrange(i):
+            for i in range(n):
+                for j in range(i):
                     m[i][j] = -np.log(m[i][j] + m[j][i])  
                     m[j][i] = m[i][j]  
                     max_og = max(max_og, m[i][j])
@@ -367,7 +377,7 @@ class DendroBLASTTrees(object):
         with open(outFN, 'wb') as outfile:
             n = len(m)
             outfile.write("%d\n" % n)
-            for i in xrange(n):
+            for i in range(n):
                 outfile.write(names[i] + " ")
                 # values could be -inf, these are the most distantly related so replace with max_og
                 V = [0. + (m[i][j] if m[i][j] > -9e99 else max_og) for j in range(n)] # "0. +": hack to avoid printing out "-0"
@@ -406,7 +416,7 @@ class DendroBLASTTrees(object):
         sliver = 1e-6
         with open(speciesMatrixFN, 'wb') as outfile:
             outfile.write("%d\n" % n)
-            for i in xrange(n):
+            for i in range(n):
                 outfile.write(str(self.ogSet.seqsInfo.speciesToUse[i]) + " ")
                 V = [(0. + M[i,j]) for j in range(n)]  # hack to avoid printing out "-0"
                 V = [sliver if 0 < v < sliver else v for v in V]  # make sure scientific notation is not used (not accepted by fastme)
@@ -419,7 +429,7 @@ class DendroBLASTTrees(object):
     def PrepareGeneTreeCommand(self):
         cmds = []
         ogs = self.ogSet.OGs()
-        for iog in xrange(len(ogs)):
+        for iog in range(len(ogs)):
             nTaxa = len(ogs[iog])
             cmds.append([" ".join(["fastme", "-i", files.FileHandler.GetOGsDistMatFN(iog), "-o", files.FileHandler.GetOGsTreeFN(iog), "-N", "-w", "O"] + (["-s"] if nTaxa < 1000 else []))])
         return cmds
@@ -456,7 +466,7 @@ class DendroBLASTTrees(object):
             spTreeFN_ids = files.FileHandler.GetSpeciesTreeUnrootedFN()
             stag.Run_ForOrthoFinder(files.FileHandler.GetOGsTreeDir(), files.FileHandler.GetWorkingDirectory_Write(), self.ogSet.seqsInfo.speciesToUse, spTreeFN_ids)
         seqDict = self.ogSet.Spec_SeqDict()
-        for iog in xrange(len(self.ogSet.OGs())):
+        for iog in range(len(self.ogSet.OGs())):
             util.RenameTreeTaxa(files.FileHandler.GetOGsTreeFN(iog), files.FileHandler.GetOGsTreeFN(iog, True), seqDict, qSupport=False, qFixNegatives=True)
         if qSpeciesTree:
             util.RenameTreeTaxa(spTreeFN_ids, files.FileHandler.GetSpeciesTreeUnrootedFN(True), self.ogSet.SpeciesDict(), qSupport=False, qFixNegatives=True)        
@@ -531,7 +541,7 @@ def CheckUserSpeciesTree(speciesTreeFN, expSpecies):
 def ConvertUserSpeciesTree(speciesTreeFN_in, speciesDict, speciesTreeFN_out):
     t = tree.Tree(speciesTreeFN_in, format=1)  
     t.prune(t.get_leaf_names())
-    revDict = {v:k for k,v in speciesDict.items()}
+    revDict = {v:k for k,v in list(speciesDict.items())}
     for sp in t:
         sp.name = revDict[sp.name]       
     t.write(outfile=speciesTreeFN_out)
@@ -566,7 +576,7 @@ def CanRunOrthologueDependencies(workingDir, qMSAGeneTrees, qPhyldog, qStopAfter
             capture = subprocess.Popen("dlcpar_search --version", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, env=my_env)
             stdout = "".join([x for x in capture.stdout])
             version = stdout.split()[-1]
-            major, minor, release = map(int, version.split("."))
+            major, minor, release = list(map(int, version.split(".")))
             # require 1.0.1 or above            
             actual = (major, minor, release)
             required = [1,0,1]
@@ -689,7 +699,7 @@ def WriteOrthologuesStats(ogSet, nOrtho_sp):
     ogCount_50 = defaultdict(int)
     with open(files.FileHandler.GetDuplicationsFN(), 'rb') as infile:
         reader = csv.reader(infile, delimiter="\t")
-        reader.next()
+        next(reader)
         for og, node, _, support, _, _, _ in reader:
             support = float(support)
             nodeCount[node] += 1
@@ -715,9 +725,9 @@ def WriteOrthologuesStats(ogSet, nOrtho_sp):
         writer = csv.writer(outfile, delimiter="\t")
         writer.writerow(["Orthogroup", "Duplications (all)", "Duplications (50% support)"])
         if len(ogCount) > 0:
-            max_og = max([int(s[2:]) for s in ogCount.keys()]) 
+            max_og = max([int(s[2:]) for s in list(ogCount.keys())]) 
             pat = files.FileHandler.baseOgFormat 
-            for i in xrange(max_og + 1):
+            for i in range(max_og + 1):
                 og = pat % i
                 writer.writerow([og, ogCount[og], ogCount_50[og]])
 
@@ -758,7 +768,7 @@ def TwoAndThreeGeneOrthogroups(ogSet, resultsDir):
                 d1[g[2][0]].append(g[2][1])
                 orthologues.append((d0,d1, d_empty, d_empty))
             elif nSp == 2:             
-                sp0, sp1 = c.keys()
+                sp0, sp1 = list(c.keys())
                 d0 = defaultdict(list)
                 d0[str(sp0)] = [str(g.iSeq) for g in og if g.iSp == sp0]
                 d1 = defaultdict(list)
@@ -792,7 +802,7 @@ def ReconciliationAndOrthologues(recon_method, ogSet, nParallel, iSpeciesTree=No
         dlcparResultsDir, dlcparLocusTreePat = trees2ologs_dlcpar.RunDlcpar(ogSet, speciesTree_ids_fn, workingDir, nParallel, qDeepSearch)
         util.PrintTime("Done DLCpar")
         spec_seq_dict = ogSet.Spec_SeqDict()
-        for iog in xrange(len(ogSet.OGs())):
+        for iog in range(len(ogSet.OGs())):
             util.RenameTreeTaxa(dlcparResultsDir + dlcparLocusTreePat % iog, files.FileHandler.GetOGsReconTreeFN(iog), spec_seq_dict, qSupport=False, qFixNegatives=False, inFormat=8, label='n')
     
         # Orthologue lists
@@ -969,7 +979,7 @@ def OrthologuesWorkflow(speciesToUse, nSpAll,
         util.PrintTime("Done STRIDE")
         nAll = sum(clusters_counter.values())
         nFP_mp = nAll - nSupport
-        n_non_trivial = sum([v for k, v in clusters_counter.items() if len(k) > 1])
+        n_non_trivial = sum([v for k, v in list(clusters_counter.items()) if len(k) > 1])
         if len(roots) > 1:
             print("Observed %d well-supported, non-terminal duplications. %d support the best roots and %d contradict them." % (n_non_trivial, n_non_trivial-nFP_mp, nFP_mp))
             print("Best outgroups for species tree:")  

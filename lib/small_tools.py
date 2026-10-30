@@ -13,7 +13,15 @@
 2016-8-28	backup_file	ZRG
 2016-9-21	count_record ZRG
 '''
+from __future__ import division
+from __future__ import print_function
 
+from future import standard_library
+standard_library.install_aliases()
+from builtins import zip
+from builtins import range
+from builtins import object
+from past.utils import old_div
 import sys
 import os
 import gzip
@@ -68,32 +76,32 @@ def get_hex_colors(n):
 	import matplotlib.pyplot as plt
 	import matplotlib.colors as colors
 	import matplotlib.cm as cmx
-	values = range(n)
+	values = list(range(n))
 	jet = cm = plt.get_cmap('jet')
 	cNorm  = colors.Normalize(vmin=0, vmax=values[-1])
 	scalarMap = cmx.ScalarMappable(norm=cNorm, cmap=jet)
 	colorVal = [scalarMap.to_rgba(v) for v in values]
 	return [colors.to_hex(v) for v in colorVal]
 def getHtml(url):
-		import urllib2,socket
+		import urllib.request, urllib.error, urllib.parse,socket
 		socket.setdefaulttimeout(5)
 		socket.setdefaulttimeout(5)
 		try:
-				page = urllib2.urlopen(url)
+				page = urllib.request.urlopen(url)
 				html = page.read()
 				return html
 		except socket.timeout:
-				print 'time out, trying again!'
+				print('time out, trying again!')
 				time.sleep(5)
 				return getHtml(url)
-		except urllib2.HTTPError, e:
+		except urllib.error.HTTPError as e:
 				if e.code == 404:
 						return e.code
-				print 'HTTPError code: ', e.code, ', trying again!'
+				print('HTTPError code: ', e.code, ', trying again!')
 				time.sleep(5)
 				return getHtml(url)
-		except urllib2.URLError, e:
-				print 'URLError reason',e.reason,', trying again!'
+		except urllib.error.URLError as e:
+				print('URLError reason',e.reason,', trying again!')
 				time.sleep(5)
 				return getHtml(url)
 		except:
@@ -157,8 +165,8 @@ ISOTIMEFORMAT='%Y-%m-%d %X'
 start = time.time()
 end = time.time()
 time_convert(end-start)'''
-	hour = int(number/3600)
-	min = int((number-3600*hour)/60)
+	hour = int(old_div(number,3600))
+	min = int(old_div((number-3600*hour),60))
 	sec = number - 3600*hour - 60*min
 	return '%sh%sm%0.2fs' %(hour,min,sec)
 
@@ -226,18 +234,18 @@ def run_time(func):
 		start = time.time()
 		logFile = 'main.logfile'
 		f = open(logFile,'a')
-		print >>f, 'Start at %s ...' % time.strftime(ISOTIMEFORMAT, time.localtime())
-		print >>f, 'Runing commands:'
+		print('Start at %s ...' % time.strftime(ISOTIMEFORMAT, time.localtime()), file=f)
+		print('Runing commands:', file=f)
 
-		print >>f, '  %s' % func()
+		print('  %s' % func(), file=f)
 
-		print >>f, 'End   at %s .' % time.strftime(ISOTIMEFORMAT, time.localtime())
+		print('End   at %s .' % time.strftime(ISOTIMEFORMAT, time.localtime()), file=f)
 		end = time.time()
-		print >>f, 'Total Time Used: %s\n' % time_convert(end-start)
+		print('Total Time Used: %s\n' % time_convert(end-start), file=f)
 		f.close()
 	return _run_time
 
-class pypsl:
+class pypsl(object):
 	def __init__(self, inPsl):
 		self.input = inPsl
 	def read(self):
@@ -296,7 +304,7 @@ def count_record(inFile, format):
 					stderr=subprocess.PIPE,shell=True)
 	output = job.communicate()
 	try: return int(output[0])
-	except ValueError: print output
+	except ValueError: print(output)
 
 def flattern(nested):
 	try:
@@ -312,3 +320,27 @@ def flattern2(nested):
 	for sublist in nested:
 		for element in sublist:
 			yield element
+
+def fix_prfl_for_new_libstdc__(prfl_in: str, tmp_outdir: str) -> str:
+    """
+    规避 augustus prfl解析bug：新版libstdc++ >>ws会提前触发eof
+    只修改[dist]块数值行，清除数字后面尾随空白；输出临时prfl副本
+    """
+    basename = os.path.basename(prfl_in)
+    tmp_prfl = os.path.join(tmp_outdir, f"fixed_{basename}")
+
+    with open(prfl_in, "r") as fhin, open(tmp_prfl, "w") as fhout:
+        lines = fhin.readlines()
+        idx = 0
+        while idx < len(lines):
+            line = lines[idx]
+            fhout.write(line)
+            if line.strip() == "[dist]":
+                idx += 1
+                raw = lines[idx]
+                tokens = raw.strip().split()
+                number_part = tokens[0]
+                fhout.write(f"{number_part}\n")
+            idx += 1
+    return tmp_prfl
+

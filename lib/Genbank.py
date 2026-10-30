@@ -1,19 +1,29 @@
+from __future__ import print_function
+from __future__ import absolute_import
+from builtins import str
+from builtins import zip
+from builtins import object
 import sys
 import os
 import re
 import copy
+import gzip
 from collections import Counter, OrderedDict
 from Bio import SeqIO
 from Bio.SeqRecord import SeqRecord
 from Bio.Seq import Seq
-from Bio.SeqUtils import GC
+# from Bio.SeqUtils import GC
+from Bio.SeqUtils import gc_fraction as GC
 from Bio import SeqFeature
-from Bio.Alphabet import IUPAC
+# from Bio.Alphabet import IUPAC
 from lazy_property import LazyWritableProperty as lazyproperty
-from Taxonomy import Taxonomy
-from small_tools import open_file as open
+from .Taxonomy import Taxonomy
+from .small_tools import open_file as open
 
-class GenbankParser():
+from ete3 import NCBITaxa
+ncbi = NCBITaxa()
+
+class GenbankParser(object):
 	'''parser of genbank based on SeqIO'''
 	def __init__(self, gbfiles):
 		if isinstance(gbfiles, str):  # one file
@@ -22,75 +32,159 @@ class GenbankParser():
 			self.gbfiles = list(gbfiles)
 	def __iter__(self):
 		return self._parse()
+
 	def _parse(self):
 		for gbfile in self.gbfiles:
-			for record in SeqIO.parse(open(gbfile), 'genbank'):
-				yield GenbankRecord(record)
+			if gbfile.endswith(".gz"):
+				fp = gzip.open(gbfile, mode="rt")
+			else:
+				fp = open(gbfile, mode="r")
+			try:
+				for record in SeqIO.parse(fp, 'genbank'):
+					try:
+						yield GenbankRecord(record)
+					except Exception as e:
+						import sys
+						print(f"WARNING: skip bad record, error: {e}", file=sys.stderr)
+						continue
+			finally:
+				fp.close()
+
+
+
 	def filter_by_taxon(self, taxon=None, exclude=None, taxonomy_dbfile=None):
+
 		i = 0
 		if taxonomy_dbfile is None:
 			d_species = {}
 		else:
 			d_species = Taxonomy(jsonfile=taxonomy_dbfile).db
-		print >>sys.stderr, 'loading genbank records'
+		print('loading genbank records', file=sys.stderr)
 		self.tax = []
 		for record in self:
 			#print >> sys.stderr, record.organism, record.id, record.cds_count, record.rna_count
 			if not (record.cds_count + record.rna_count>0):
 				continue
 			key = record.organism.lower()
+
+			print(f"[DEBUG] rec.org:>{record.organism}< | key:>{key}<", file=sys.stderr)
+			dbg_keys = list(d_species.keys())[:10]
+			print(f"[DEBUG] d_species keys sample: {dbg_keys}", file=sys.stderr)
+
 			#print >> sys.stderr, record.organism, record.id
+			
 			if key in d_species:
-				taxid, record.taxonomy, record.ranks = d_species[key]
+				taxid, tax_lineage, tax_ranks = d_species[key]
 			else:
-				print >>sys.stderr, '`{}` ({}) is not found'.format(record.organism, record.id)
+				print(f'`{record.organism}` ({record.id}) is not found, key={key}', file=sys.stderr)
 				continue
 
 			index = record.is_taxon(taxon)
-			#if record.organism =='Sus scrofa':
-			#	print >>sys.stderr, i, record.taxonomy, record.ranks, index
-			#print >> sys.stderr, record.organism, record.id
+			print(f"[DBG‑is_taxon] taxon={taxon}, index={index}", file=sys.stderr)
 			if not index:
+				print(f"[DBG‑SKIP] is_taxon False skip {record.id}", file=sys.stderr)
 				continue
+
 			if exclude is not None:
 				to_exclude = False
 				for ex_taxon in exclude:
-					if record.is_taxon(taxon):	# exclude
+					if record.is_taxon(ex_taxon):
 						to_exclude = True
 						break
 				if to_exclude:
+					print(f"[DBG‑SKIP] excluded skip {record.id}", file=sys.stderr)
 					continue
-			record.ranks = OrderedDict([(rank, tax) \
-                    for rank, tax in zip(record.ranks, record.taxonomy)])
-			record.organism = str(record.ranks['species'])
+
+			# 直接写实例字典，绕开 @property 只读限制
+			#record.ranks = OrderedDict([(rank, tax) for rank, tax in zip(tax_ranks, tax_lineage)])
+			#record.__dict__['taxonomy'] = tax_lineage
+			#record.__dict__['ranks'] = tax_ranks
+			#record.organism = str(record.ranks['species'])
+
+			# 直接写实例字典，绕开 @property 只读限制
+			new_ranks = OrderedDict([(rank, tax) for rank, tax in zip(tax_ranks, tax_lineage)])
+
+			# 1. taxid lineage → 翻译成分类名称字符串列表
+			taxid_2_name = ncbi.get_taxid_translator(tax_lineage)
+			taxonomy_name_list = [taxid_2_name[tid] for tid in tax_lineage]
+
+			# 2. 获取物种名字
+			sp_tid = new_ranks['species']
+			sp_name = ncbi.get_taxid_translator([sp_tid])[sp_tid]
+
+			# 全部写入实例 __dict__
+			record.__dict__['ranks'] = new_ranks
+			record.__dict__['taxonomy'] = taxonomy_name_list
+			record.__dict__['organism'] = sp_name
+			
 			if not record.name_count:	# some taxa without annotation
 				continue
-			#print >> sys.stderr, record.organism, record.id
+
 			i += 1
-			self.tax += [record.taxonomy[:index]]
+			# ✅ 关键修复：self.tax 存入【分类名称字符串切片】，不是taxid数字切片！
+			self.tax += [taxonomy_name_list[:index]]
+			record.__dict__['taxid'] = taxid
+			print(f"[DBG‑KEEP] keep record {record.id}, i={i}", file=sys.stderr)
 			yield record
-		self.ntaxa = i
+
+
 		#print >> sys.stderr, Counter(self.taxa)
+
 	def write_seqs_by_taxon(self, outdir, feat_type='protein', records=None, taxon=None):
+		import sys
 		features = []
-		if records is None:
-			records = self.filter_by_taxon(taxon=taxon)
+		if records is not None:
+			records = list(records)
+		else:
+			records = list(self.filter_by_taxon(taxon=taxon))
+		print(f"[DBG-write_seq] feat_type={feat_type}, total records={len(records)}", file=sys.stderr)
 		for rc in records:	# rc is GenbankRecord
-			outfile = '{}/{}.fasta'.format(outdir, rc.species)
+			sp_name_safe = rc.species.replace(" ", "_")
+			outfile = '{}/{}.fasta'.format(outdir, sp_name_safe)
+			print(f"[DBG-write_seq] process species: {rc.species}, seq is None? {rc.seq is None}", file=sys.stderr)
+			# =========修复1：protein映射到CDS；rRNA/tRNA元组处理=========
+			if feat_type == "protein":
+				feat_list = list(rc.get_features("CDS"))
+			else:
+				feat_list = []
+				for ft in feat_type:
+					feat_list.extend(rc.get_features(ft))
+			print(f"[DBG-write_seq] got {len(feat_list)} features for {rc.species}", file=sys.stderr)
 			with open(outfile, 'a') as fout:
-				for feat in rc.get_features(feat_type):
-					feat.write(fout, feat_type)
-					features.append(feat)
-			if os.path.getsize(outfile) == 0:
+				feat_idx = 0
+				for feat in feat_list:
+					try:
+						if feat_type == "protein":
+							nuc_seq = feat.location.extract(rc.seq)
+							print(f"[DBG‑trans] nuc len={len(nuc_seq)}", file=sys.stderr)
+							transl_table = int(feat.qualifiers.get("transl_table", [11])[0])
+							prot_seq = nuc_seq.translate(table=transl_table, to_stop=True)
+							# 先赋值gene_id，再print、再写fasta
+							gene_id = feat.qualifiers.get("gene", feat.qualifiers.get("locus_tag", ["unknown_gene"]))[0]
+							gene_id = gene_id.replace(" ", "_")   # fasta标题不能有空格，必加
+							unique_gid = f"{gene_id}_{feat_idx}"
+							feat_idx += 1
+							print(f"[DBG‑trans] prot len={len(prot_seq)} gene_id={unique_gid}", file=sys.stderr)
+							fout.write(f">{unique_gid}\n{prot_seq}\n")
+						else:
+							feat.write(fout, feat_type)
+						# if‑else两个分支成功都append
+						features.append(feat)
+					except Exception as e:
+						print(f"[DBG-write_seq] write feat failed: {type(e)} {e}", file=sys.stderr)
+			if os.path.exists(outfile) and os.path.getsize(outfile) == 0:
 				os.remove(outfile)
+		# =========❗❗ return退出，退到for循环外面，全部物种跑完再返回=========
+		print(f"[DBG‑write_seq‑RETURN] total collected features = {len(features)}", file=sys.stderr)
 		return features
+
 	def get_augustus_train_set(self, genes):
 		pass
 
 def format_taxon(taxon):
 	return re.compile(r'[^\w\.]').sub('_', taxon)
 
-class GenbankRecord():
+class GenbankRecord(object):
 	'''wrapper of one SeqRecord of genbank'''
 	def __init__(self, gb_record):
 		self.__dict__ = copy.deepcopy(gb_record.__dict__)
@@ -100,14 +194,14 @@ class GenbankRecord():
 	def prune(self):
 		del self.record
 		del self.seq
-		del self.features
+		#del self.features
 		return self
-	@lazyproperty
+	@property
 	def species(self):
 		#return self.annotations['organism'].replace(' ', '_')
 		#return format_taxon(self.annotations['organism'])
 		return format_taxon(self.organism)
-	@lazyproperty
+	@property
 	def organism(self):
 		return self.annotations['organism']
 #		org = self.annotations['organism']
@@ -115,14 +209,14 @@ class GenbankRecord():
 #			return re.compile(r'(\S+.?\S+).?(subsp|var)?').match(org).groups()[0]
 #		else:
 #			return org
-	@lazyproperty
+	@property
 	def genus(self):
 		#return self.annotations['organism'].split()[0]
 		return self.ranks.get('genus')
-	@lazyproperty
+	@property
 	def family(self):
 		return self.ranks.get('family')
-	@lazyproperty
+	@property
 	def order(self):
 		return self.ranks.get('order')
 #	def get_rank(self, rank):
@@ -133,34 +227,53 @@ class GenbankRecord():
 #	@lazyproperty
 #	def taxonomy(self):
 #		return self.annotations['taxonomy']
-	@lazyproperty
+
+	@property
 	def ranks(self):	# OrderedDict
-		return self.Taxonomy.ranks
-	@lazyproperty
+		if 'ranks' in self.__dict__:
+			return self.__dict__['ranks']
+		# 未预先注入，回退原逻辑，依赖 self.Taxonomy
+		if hasattr(self, "Taxonomy"):
+			return self.Taxonomy.ranks
+		else:
+			# custom模式没有Taxonomy对象，返回空有序字典
+			from collections import OrderedDict
+			return OrderedDict()
+
+	@property
 	def taxonomy(self):
-		return self.Taxonomy.taxonomy
+		if 'taxonomy' in self.__dict__:
+			return self.__dict__['taxonomy']
+		# 未预先注入，回退原逻辑，依赖 self.Taxonomy
+		if hasattr(self, "Taxonomy"):
+			return self.Taxonomy.taxonomy
+		else:
+			# custom模式没有Taxonomy对象，返回空列表
+			return []
+
+
 #	@lazyproperty
 #	def Taxonomy(self):
 #		return Taxonomy(spname=self.organism)
-	@lazyproperty
+	@property
 	def length(self):
 		return len(self.seq)
-	@lazyproperty
+	@property
 	def GC(self):
 		return round(GC(self.seq), 1)
-	@lazyproperty
+	@property
 	def cds_count(self):
 		return self.count_feature('CDS')
-	@lazyproperty
+	@property
 	def rrn_count(self):
 		return self.count_feature('rRNA')
-	@lazyproperty
+	@property
 	def trn_count(self):
 		return self.count_feature('tRNA')
-	@lazyproperty
+	@property
 	def rna_count(self):
 		return self.rrn_count + self.trn_count
-	@lazyproperty
+	@property
 	def name_count(self):
 		return self.count_qualifier('gene')
 	
@@ -178,12 +291,17 @@ class GenbankRecord():
 				not feature.qualifiers[qualifier][0].startswith('orf'):
 				count += 1
 		return count
+
 	def is_taxon(self, taxon):
 		'''example: 'Viridiplantae' in ['Eukaryota', 'Viridiplantae', 'Streptophyta',]'''
-		try:
-			return self.taxonomy.index(taxon) + 1
-		except ValueError:
-			return False
+		if taxon is None:
+			return True
+			try:
+				return self.taxonomy.index(taxon) + 1
+			except ValueError:
+				return False
+
+
 	def extract_feature_seqs(self, feature_types):
 		if isinstance(feature_types, str):
 			feature_types = {feature_types}
@@ -202,7 +320,7 @@ class GenbankRecord():
 					feat_id = '{}-{}'.format(feat_id, i)
 				try: nucl_seq = feature.extract(self.seq)
 				except Exception as e:
-					print >> sys.stderr, e, self.organism, self.id, feat_id, feature.type, feature.location
+					print(e, self.organism, self.id, feat_id, feature.type, feature.location, file=sys.stderr)
 					continue
 					#raise Exception(e)
 				features.add(feat_id)
@@ -235,7 +353,7 @@ class GenbankRecord():
 				feat.seq = feat.pep
 			yield feat
 
-class FeatureRecord():
+class FeatureRecord(object):
 	'''wrapper of one SeqFeature'''
 	def __init__(self, id, seq, index, feature):
 		self.__dict__ = copy.deepcopy(feature.__dict__)
@@ -353,5 +471,5 @@ class FeatureRecord():
 	def write_pep(self, fout):
 		self.write_fasta(fout, id=self.id, seq=self.pep, description=self.description)
 	def write_fasta(self, fout, id, seq, description=''):
-		print >> fout, '>{id} {description}\n{seq}'.format(id=id, description=description, seq=seq)
+		print('>{id} {description}\n{seq}'.format(id=id, description=description, seq=seq), file=fout)
 	

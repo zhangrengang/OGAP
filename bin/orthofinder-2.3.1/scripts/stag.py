@@ -21,6 +21,13 @@
 # For any enquiries send an email to David Emms
 # david_emms@hotmail.com
 
+from __future__ import print_function
+from __future__ import absolute_import
+from builtins import str
+from builtins import zip
+from builtins import map
+from builtins import range
+from builtins import object
 import os
 import sys
 import glob
@@ -30,8 +37,8 @@ import subprocess
 import numpy as np
 from itertools import combinations
 
-import tree, newick
-import consensus_tree as cons
+from . import tree, newick
+from . import consensus_tree as cons
         
 def CanRunCommand(command, qAllowStderr = False, qPrint = True):
     if qPrint: sys.stdout.write("Test can run \"%s\"" % command)      
@@ -70,7 +77,7 @@ def WritePhylipMatrix(m, names, outFN, max_og=1e6):
     with open(outFN, 'wb') as outfile:
         n = len(m)
         outfile.write("%d\n" % n)
-        for i in xrange(n):
+        for i in range(n):
             outfile.write(names[i] + " ")
             # values could be -inf, these are the most distantly related so replace with max_og
             V = [0. + (m[i][j] if m[i][j] > -9e99 else max_og) for j in range(n)] # "0. +": hack to avoid printing out "-0"
@@ -107,7 +114,7 @@ class GeneToSpecies(object):
                         self.startswith[g[:-1]] = sp
                     else:
                         self.exact[g] = sp
-        self.species = sorted(list(set(self.exact.values() + self.startswith.values())))
+        self.species = sorted(list(set(list(self.exact.values()) + list(self.startswith.values()))))
         print("%d species in mapping file:" % len(self.species))
         for s in self.species:
             print(s)
@@ -117,7 +124,7 @@ class GeneToSpecies(object):
     def ToSpecies(self, gene):
         if gene in self.exact: return self.exact[gene]
         else:
-            for k, v in self.startswith.items():
+            for k, v in list(self.startswith.items()):
                 if gene.startswith(k): return v
             # if not found then raise an Exceptions
             raise UnrecognisedGene(gene)
@@ -133,7 +140,7 @@ class GeneToSpecies_OrthoFinder(GeneToSpecies):
         # no exact conversions
         self.exact = dict()
         self.startswith = {("%d_" % sp):str(sp) for sp in speciesToUse}
-        self.species = map(str,speciesToUse)
+        self.species = list(map(str,speciesToUse))
         self.sp_to_i = {s:i for i,s in enumerate(self.species)}
             
 
@@ -161,17 +168,17 @@ def GetDistances_fast(t, nSp, g_to_i):
         else:
             children = n.get_children()
             for ch0, ch1 in combinations(children,2):
-                for sp0,dist0 in ch0.d.items():
-                    for sp1,dist1 in ch1.d.items():
+                for sp0,dist0 in list(ch0.d.items()):
+                    for sp1,dist1 in list(ch1.d.items()):
                         if sp0==sp1: continue
                         i = sp0 if sp0<sp1 else sp1
                         j = sp1 if sp0<sp1 else sp0
                         D[i,j] = min(D[i,j], dist0+dist1)
-                spp = {k for ch in children for k in ch.d.keys()}
+                spp = {k for ch in children for k in list(ch.d.keys())}
                 d = {k:(min([ch.d[k] for ch in children if k in ch.d])+max(0.0, n.dist)) for k in spp}
                 n.add_feature('d', d)
-    for i in xrange(nSp):
-        for j in xrange(i):
+    for i in range(nSp):
+        for j in range(i):
             D[i,j] = D[j, i]
         D[i,i]=0.
     return D
@@ -192,8 +199,8 @@ def ProcessTrees(dir_in, dir_matrices, dir_trees_out, GeneToSpecies, qVerbose=Tr
             continue
         try:
             genes = t.get_leaf_names()
-            species = map(GeneToSpecies.ToSpecies, genes)
-        except UnrecognisedGene, e:
+            species = list(map(GeneToSpecies.ToSpecies, genes))
+        except UnrecognisedGene as e:
             print(os.path.split(fn)[1] + " - WARNING: unrecognised gene, %s" % e.message)
             nFail += 1
             continue
@@ -212,7 +219,7 @@ def ProcessTrees(dir_in, dir_matrices, dir_trees_out, GeneToSpecies, qVerbose=Tr
             continue
         g_to_i = {g:s_to_i[s] for g,s in zip(genes, species)}
         D = GetDistances_fast(t, nSp, g_to_i)
-        species_names_fastme = map(str,xrange(nSp))
+        species_names_fastme = list(map(str,list(range(nSp))))
         matrixFN = dir_matrices + os.path.split(fn)[1] + ".dist.phylip"
         treeOutFN = dir_trees_out + os.path.split(fn)[1] + ".tre"
         WritePhylipMatrix(D, species_names_fastme, matrixFN, max_og=1e6)

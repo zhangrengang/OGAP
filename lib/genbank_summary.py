@@ -1,11 +1,15 @@
 '''python /share/home/nature/users/zrg/ogap/lib/genbank_summary.py popular-mt.txt'''
+from __future__ import print_function
+from __future__ import absolute_import
+from builtins import map
+from builtins import object
 import sys
 import re
-from Database import Database
+from .Database import Database
 
 db = Database()
 
-class GenbankSummary:
+class GenbankSummary(object):
 	def __init__(self, summary):
 		self.summary = summary
 	def __iter__(self):
@@ -30,7 +34,7 @@ class GenbankSummary:
 		#	print >>sys.stderr, rc.__dict__
 			try: d_records[rc.species] += [rc]
 			except KeyError: d_records[rc.species] = [rc]
-		print >>sys.stderr, d_records.keys()
+		print(list(d_records.keys()), file=sys.stderr)
 		for species, records in sorted(d_records.items()):
 			refseq_records = self.get_refseq(records)
 			if refseq_records:	# refseq first
@@ -43,13 +47,13 @@ class GenbankSummary:
 		line = [species, record.accession, record.length, record.topology, record.title]
 		tax = record.lineage
 		line += tax
-		line = map(str, line)
-		print >>fout, '\t'.join(line)
+		line = list(map(str, line))
+		print('\t'.join(line), file=fout)
 	def get_refseq(self, records):
 		return [rc for rc in records if rc.is_refseq]
 	def get_longest(self, records):
 		return max(records, key=lambda x:x.length)
-class GenbankSummaryLines:
+class GenbankSummaryLines(object):
 	def __init__(self, lines):
 		self.lines = lines
 		self._parse()
@@ -98,7 +102,7 @@ class GenbankSummaryLines:
 		try:
 			return db.get_taxonomy(self.species)
 		except ValueError as e:
-			print >>sys.stderr, e
+			print(e, file=sys.stderr)
 			return []
 
 def main():

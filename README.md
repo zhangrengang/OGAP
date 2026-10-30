@@ -103,3 +103,25 @@ python ../lib/Comparative.py summary re_anno/
 python ../lib/Comparative.py phylo re_anno/
 python ../lib/Comparative.py kaks re_anno/
 ```
+
+## Dependencies
+This Python3‑ported version is tested with:
+- python: 3.12.13
+- biopython: 1.87
+- networkx: 3.6.1
+- hmmer: 3.4
+- exonerate: 2.4.0
+- augustus: 3.1
+
+Build the environment via conda/mamba for best compatibility.
+
+## Status
+This is a work‑in‑progress Python3 port of OGAP.
+Core annotation pipeline can run and output GFF3 results.
+
+### Known limitations
+- The main pipeline does **not** check for internal stop codons within predicted CDS.
+  Predictions derived from MTPT/homologous fossil DNA fragments may be output as false‑positives.
+  A standalone post‑processing filter tool is planned for future commits.
+- For research use only, not yet production‑ready.
+

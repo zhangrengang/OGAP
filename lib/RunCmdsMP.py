@@ -1,6 +1,12 @@
 #!/bin/env python
 #coding utf-8
 '''RUN system CoMmanDS in Multi-Processing'''
+from __future__ import division
+from __future__ import print_function
+from builtins import zip
+from builtins import range
+from past.utils import old_div
+from builtins import object
 import sys
 import os, stat
 import shutil
@@ -72,7 +78,7 @@ class Grid(object):
 			self.stdout = stdout
 
 	def make_script(self, fout=sys.stdout):
-		print >> fout, '#!/bin/bash'
+		print('#!/bin/bash', file=fout)
 		if self.template is None:
 			self.template = 'if [ $SGE_TASK_ID -eq {id} ]; then\n{cmd}\nfi'
 			if self.grid == 'sge':
@@ -82,7 +88,7 @@ class Grid(object):
 				self.template = 'if [ $SLURM_ARRAY_TASK_ID -eq {id} ]; then\n{cmd}\nfi'
 		for i, cmd in enumerate(self.cmd_list):
 			grid_cmd = self.template.format(id=i+1, cmd=cmd)
-			print >> fout, grid_cmd
+			print(grid_cmd, file=fout)
 	def submit(self):
 		job_status = []
 		s = drmaa.Session()
@@ -184,7 +190,7 @@ def run_tasks(cmd_list, tc_tasks=None, mode='grid', grid_opts='', cpu=1, mem='1g
 			for (stdout, stderr, status) in job_status:
 				if fout is not None:
 			#		print >>fout, '>>STATUS:\t{}\n>>STDOUT:\n{}\n>>STDERR:\n{}'.format(status, stdout, stderr)
-					print >>fout, '>>STATUS:\t{}\n>>STDERR:\n{}'.format(status, stderr)
+					print('>>STATUS:\t{}\n>>STDERR:\n{}'.format(status, stderr), file=fout)
 				f.write(stdout)
 				exit_codes += [status]
 			if fout is not None:
@@ -207,13 +213,13 @@ def run_tasks(cmd_list, tc_tasks=None, mode='grid', grid_opts='', cpu=1, mem='1g
 def avail_cpu(cpu):
 	import psutil
 	cpu_count = psutil.cpu_count()
-	return max(1, int(1.0*cpu_count/cpu))
+	return max(1, int(old_div(1.0*cpu_count,cpu)))
 def avail_mem(mem):
 	import psutil
 	memory = psutil.virtual_memory()
 	mem_free = memory.available
 	mem = mem2float(mem)
-	return max(1, int(1.0*mem_free/mem))
+	return max(1, int(old_div(1.0*mem_free,mem)))
 def mem2float(mem):
 	import re
 	d_mem = {'':1e1, 'k':1e3, 'm':1e6, 'g':1e9, 't':1e12}
@@ -317,16 +323,16 @@ def submit_pp(cmd_file, processors=None, cmd_sep="\n", cont=True):
 		if len(cmd.split('\n')) > 100:
 			son_cmd_file = '%s.%s.sh' % (cmd_file, i)
 			with open(son_cmd_file, 'w') as f:
-				print >>f, cmd
+				print(cmd, file=f)
 			cmd_uncpd_list[i] = 'sh %s' % (son_cmd_file,)
 
-	print '''
+	print('''
 	total commands:\t%s
 	skipped commands:\t%s
 	retained commands:\t%s
 	''' % (len(set(cmd_list)), \
 	len(set(cmd_list))-len(cmd_uncpd_list), \
-	len(cmd_uncpd_list))
+	len(cmd_uncpd_list)))
 
 	if not processors:
 		processors = default_processors(len(cmd_uncpd_list))
@@ -428,7 +434,7 @@ def run_job(cmd_file=None, cmd_list=None, by_bin=1, tc_tasks=8, mode='grid', gri
 			cmd_list = cmd_list2
 		cmd_sep = '\n'+cmd_sep+'\n' #if cmd_sep !='\n' else cmd_sep
 		with open(cmd_file, 'w') as fp:
-			print >> fp, cmd_sep.join(cmd_list)
+			print(cmd_sep.join(cmd_list), file=fp)
 	if kargs.get('cpu') is None:
 		kargs['cpu'] = 1
 	if kargs.get('mem') is None:

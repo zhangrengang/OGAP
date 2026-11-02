@@ -1,226 +1,184 @@
-# OGAP — Organelle Genome Annotation Pipeline
-
-> Note: Adapted for major Python3 upgrade.
-
-## 1. Project Introduction
+# Short Introduction
 
 - **Tool purpose**: Automatic annotation pipeline for chloroplast (pt) / mitochondrial (mt) organelle genomes.
 - **Applicable taxa**: Mainly plants; good performance for animal protein‑coding gene annotation.
 - **Main outputs**:
   `cov_report_Ara.tsv`, `filtered.gff3`, `sequence.fasta.fsa`, `sequence.fasta.gff3`, `sequence.fasta.rna.fasta`, `filtered.cds.fasta`, `sequence.fasta.cds.fasta`, `sequence.fasta.gb`, `sequence.fasta.pep.fasta`, `stop_report.tsv`
-  > Note: Some files are only generated under specific workflows.
+# Quick install and start
 
-- **Current version**: Python3 refactored release (legacy Python2 version archived in branch `old_python2`, no longer maintained).
+```bash
+# download
+git config --global http.postBuffer 5242880000
+git clone https://github.com/zhangrengang/OGAP
+cd OGAP
+
+# install
+conda env create -f OGAP.yaml
+conda activate OGAP
+
+# start
+cd test
+python ../OGAP.py Arabidopsis_thaliana-mt.gb -mt -o mt_out
+python ../OGAP.py Arabidopsis_thaliana-mt.fa -mt -o mt_out -sp Arabidopsis_thaliana
+python ../OGAP.py Arabidopsis_thaliana-pt.gb -pt -o pt_out
+python ../OGAP.py Arabidopsis_thaliana-mt.gb -mt -pt -o mt_out
+```
+---
+
+# Installation
+Core dependencies are managed by conda via `OGAP.yaml`.
+Binaries including `blat`, `tbl2asn`, `asn2gb` are bundled in the `bin/` folder of this repository.
+
++ [python 3](https://www.python.org/) (tested: 3.12.13; minimum supported: 3.8)
+    + [biopython](https://biopython.org/): >=1.85, tested on 1.87 (required if orthofinder downstream function is used)
+    + [networkx](http://networkx.github.io/): >=3.6.1
++ [hmmsearch](http://hmmer.org/) (3.1 ~ 3.4, backward compatible): compatible with HMMER3/f database format
++ [exonerate](https://www.ebi.ac.uk/about/vertebrate-genomics/software/exonerate) for coding genes annotation (2.2 ~ 2.4.0)
++ [augustus](http://bioinf.uni-greifswald.de/webaugustus/) for coding genes annotation (3.1 ~ 3.5)
+> Note: Augustus training function is available, but the prfl generation module has cross-version compatibility issues caused by libstdc++. Please validate prfl files manually.
++ [tRNAscan-SE](http://trna.ucsc.edu/software/) for tRNA genes annotation
++ [blat](http://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/blat/) for rRNA genes annotation (bundled in bin/)
++ [tbl2asn](https://ftp.ncbi.nih.gov/toolbox/ncbi_tools/converters/by_program/tbl2asn/) output sqn file for submitting to GenBank (bundled in bin/)
++ [asn2gb](https://ftp.ncbi.nih.gov/toolbox/ncbi_tools/converters/by_program/asn2gb/) output genbank file (bundled in bin/)
+
++ without `-taxon` option to automatically get taxon from organism
+    + [ete3](http://etetoolkit.org/) for taxonomy mapping from organism (optional)
++ `-trn_struct` option to plot tRNA secondary structure
+    + [RNAplot in ViennaRNA](https://www.tbi.univie.ac.at/RNA/) (optional)
+    + ps2pdf (optional)
++ `-draw_map` option to draw Genome Map
+    + [OGDraw](https://chlorobox.mpimp-golm.mpg.de/OGDraw-Downloads.html) (optional, not in conda)
++ `-compare_map` option to draw Genome Map together with the raw genbank record
+    + OGDraw (optional, not in conda)
+    + latex (optional, not in conda)
++ `-repeat` option to annotate repeat region
+    + [vmatch](http://www.vmatch.de/) (optional)
+    + [trf](http://tandem.bu.edu/trf/trf.html) (optional)
+
+- to compare multiple annotations (Comparative.py, optional)
+    - phylogenetics
+        - [mafft](https://mafft.cbrc.jp/alignment/software/)
+        - [trimal](http://trimal.cgenomics.org/)
+        - [iqtree](http://www.iqtree.org/)
+    - KaKs
+        - [ParaAT](http://bigd.big.ac.cn/tools/paraat)
+        - [KaKs_Calculator](https://bigd.big.ac.cn/tools/kaks)
+
+* to build custom database (ogap_build_db.py, optional)
+    * [OrthoFinder 3.1.5](https://github.com/davidemms/OrthoFinder): NOT bundled with OGAP, install separately if homology grouping is needed
+    * [cd-hit](http://cd-hit.org/): required for clustering
 
 ---
 
-## 2. Major Release Notes [Core section for this upgrade]
-
-### 2.1 Underlying migration: Python2 → Python3.8+
-
-- Python2 is no longer supported.
-- Fixed compatibility issues for syntax, encoding, iterators and I/O.
-- Compatibility adapted for external software: AUGUSTUS / HMMER / tRNAscan‑SE / BLAT / Exonerate.
-
-### 2.2 Pipeline structural refactoring
-
-- New standalone database‑building script `ogap_build_db.py` for building custom databases.
-- Separate management for pt and mt databases; independent `hmms`, `rna.info`, `cds.info`.
-- Supports automatic generation of AUGUSTUS training profile (prfl). Models produced by custom training can be used for annotation. The prfl‑generation step is affected by system `libstdc++`. Compatibility anomalies occur after upgrading `libstdc++` from 6.027 to 6.035; nevertheless, trained models remain functional for annotation. Users need to manually validate output prfl files.
-
-### 2.3 New features
-
-- **rRNA alias whitelist normalization module**: Standardize rRNA gene names and resolve duplicate‑counting artifacts caused by inconsistent naming in legacy reference databases.
-
-### 2.4 Deprecations & adjustments
-
-- Archive all original Python2 scripts in branch `old_python2`.
-- Adjust partial default parameters for Exonerate and remove unstable logic.
-
----
-
-## 3. Environment & Dependencies
-
-### 3.1 Python Environment
-
-> Conda environment is recommended to avoid conflicts with system‑level Python libraries.
-
-- **Python**: 3.12.13; minimum compatible version 3.8, **Python2 is unsupported**.
-- **Biopython**: 1.87; minimum version 1.85 if OrthoFinder extended functions are enabled.
-- **networkx**: 3.6.1.
-
-### 3.2 External Bioinformatics Software
-
-**✅ Required for main annotation workflow**
-
-- **blat**: 36x series recommended; mainstream releases are generally compatible.
-- **exonerate**: 2.4.0; backward‑compatible, baseline support for 2.2.x.
-- **hmmsearch (HMMER)**: 3.4; backward‑compatible with 3.1, 3.2, 3.3 series.
-- **tRNAscan‑SE**: Version 2.0 or higher is recommended.
-- **AUGUSTUS**: Baseline version 3.1; tested up to 3.5, main annotation workflow runs correctly.
-  > ⚠️ AUGUSTUS note: Custom‑training workflow remains available, trained models can be used for annotation. prfl generation is affected by system `libstdc++`. After upgrading `libstdc++` from 6.027 to 6.035, prfl format anomalies may occur. Trained models still work for annotation; manually validate prfl output when using custom training.
-
-**✅ Invoked only by auxiliary scripts (not used in main annotation)**
-
-- **hmmbuild**: Used exclusively in `ogap_build_db.py` for database construction; part of the HMMER suite, keep version consistent with hmmsearch.
-
-**⚠️ Extended tools (not distributed with OGAP, download manually if needed)**
-
-- **orthofinder‑3.1.5**: Required only for homology‑related extended functions during database building. Not required for standard pt/mt annotation. Version **3.1.5** is tested and functional. OGAP does not ship this binary; obtain it manually if needed.
-
-> Remaining tools: aragorn, asn2gb; no invocation in pipeline code, not required.
-
-### 3.3 Non‑core but pipeline‑supporting functions & dependencies (install on demand)
-
-> The functional modules below are actually invoked by OGAP and contribute to full‑pipeline operation. They are **not part of the main annotation workflow**, are not bundled with OGAP, and have no enforced version constraints. Install corresponding tools manually only when activating these features.
-
-| Functional module | Dependent tools | Trigger |
-|---|---|---|
-| Automatic taxonomic mapping | ete3 | `-taxon` omitted; taxon inferred from organism string |
-| tRNA secondary‑structure plotting | RNAplot (ViennaRNA), ps2pdf | `-trn_struct` |
-| Genome map drawing | OGDraw, latex | `-draw_map` |
-| Comparative genome map (overlay raw GenBank record) | OGDraw, latex | `-compare_map` |
-| Repeat‑region annotation | vmatch, trf | `-repeat` |
-| Multi‑annotation comparison (phylogenetics) | mafft, trimal, iqtree | `Comparative.py` |
-| Multi‑annotation comparison (KaKs calculation) | ParaAT, KaKs_Calculator | `Comparative.py` |
-
----
-
-## 4. Database Preparation (New key feature)
-
-### 4.1 Database design logic
-
-- Databases are partitioned by organelle type (pt/mt) and taxonomic group.
-- Database file description: `hmms`, `rna.info`, `cds.info`, reference sequences.
-
-### 4.2 Example command for database construction
-
-```bash
-python3 ./OGAP_master/ogap_build_db.py \
--organ pt \
--gbfiles ./*.gb \
--custom name \
---dbroot-dir ./bd_made/ \
---orthofinder-exe ./orthofinder‑3.1.5/orthofinder.py \
---overwrite
+## Get OGAP
+```
+git clone https://github.com/zhangrengang/OGAP
 ```
 
-> Note: `--orthofinder‑exe` is an argument for homology‑related extended functions. It can be removed for ordinary database construction.
-
----
-
-## 5. Quick Start
-
-> Short parameters `-pt` / `-mt` are aliases for `--ogtype pt` / `--ogtype mt`.
-
-### 5.1 Minimal running examples
-
-**Chloroplast (pt) annotation example**
-
+## Quick Start
+#### Mitochondrion genome in GenBank format
 ```bash
-python3 ./OGAP_master/OGAP.py \
-./sequence.fasta \
--pt \
--o ./test1/ \
--sp Arabidopsis_thaliana \
--taxon Brassicaceae
+cd OGAP/test
+python ../OGAP.py Arabidopsis_thaliana-mt.gb -mt -o mt_out
+```
+By default, the organism name will be extracted from the GenBank `ORGANISM` field, and the annotation database is automatically selected via taxonomy mapping.
+
+
+#### Mitochondrion genome in FASTA format
+```bash
+python ../OGAP.py Arabidopsis_thaliana-mt.fa -mt -o mt_out -sp Arabidopsis_thaliana
+```
+FASTA files lack embedded organism information; the `-sp` argument is required for automatic taxonomy mapping.
+
+#### Mitochondrion genome with manually specified taxon (-taxon)
+```bash
+python ../OGAP.py Arabidopsis_thaliana-mt.fa -mt -o mt_out -sp Arabidopsis_thaliana -taxon rosids
 ```
 
-**Mitochondrial (mt) annotation example**
+#### Multiple taxon databases are supported
+```bash
+python ../OGAP.py Arabidopsis_thaliana-mt.fa -mt -o mt_out -sp Arabidopsis_thaliana -taxon rosids malvids
+```
+#### Plastid / chloroplast genome (use `-pt` mode instead of `-mt`)
 
 ```bash
-python3 ./OGAP_master/OGAP.py \
-./sequence.fasta \
--mt \
--o ./test1/ \
--sp Arabidopsis_thaliana \
--taxon Magnoliopsida
+python ../OGAP.py Arabidopsis_thaliana-pt.gb -pt -o pt_out
 ```
-
-**Locusta migratoria mitochondrial example (real‑world test command)**
-
+#### Annotate sequences containing both mitochondrial and chloroplast-derived fragments
 ```bash
-python3 ./OGAP_master/OGAP.py \
-./sequence.fasta \
--mt \
--min_rrn_score=0.6 \
--trn-opts='-O -X 5' \
--o ./test/ \
--sp Locusta_migratoria \
--taxon Insecta
+python ../OGAP.py Arabidopsis_thaliana-mixed.gb -mt -pt -o mt_out
 ```
 
-### 5.2 Core parameter description
+> ⚠️ Warning: `-mt -pt` combined mode searches both mitochondrial and plastid gene models.
+> This is only recommended for mixed organelle contigs. Do NOT use this for pure mitochondrial or pure plastid sequences, as it increases runtime and false positives.
+
+
+### Pipeline for multiple genomes (optional downstream workflow)
+```bash
+for sp in Arabidopsis_thaliana Vitis_vinifera Oryza_sativa Salix_suchowensis Citrus_sinensis
+do
+    python ../OGAP.py genbank/$sp.gb -mt -prefix $sp -outdir re_anno &> $sp.log
+done
+
+# Comparative analysis (optional, requires extra comparative dependencies)
+python ../lib/Comparative.py summary re_anno/
+python ../lib/Comparative.py phylo re_anno/
+python ../lib/Comparative.py kaks re_anno/
+```
+
+#### Core parameter description
 
 | Parameter | Description |
 |---|---|
 | `-pt` / `-mt` | Specify organelle type; alias for `--ogtype pt/mt` |
 | `-sp` | Species name, matches AUGUSTUS species model |
 | `-taxon` | Taxonomic group, used for internal pipeline filtering and scoring |
-| `--no‑rrna‑alias` | Disable rRNA alias normalization, revert to original annotation baseline |
+| `--no-rrna-alias` | Disable rRNA alias normalization, revert to original annotation baseline |
 | `-min_rrn_score=0.6` | HMM score threshold for rRNA; 0.6 commonly‑used for mitochondria, adjust per taxon |
-| `-trn-opts='‑O ‑X 5'` | Arguments passed to tRNAscan‑SE; commonly‑used settings for mitochondrial mode |
+| `-trn-opts='-O -X 5'` | Arguments passed to tRNAscan‑SE; commonly‑used settings for mitochondrial mode |
 | `-o` | Output directory path |
 
+- **Note:** 
+The & runs jobs in parallel. Adjust the loop carefully on shared computing clusters to avoid overloading resources.
+Comparative analysis functions are optional and require additional tools: mafft, trimal, iqtree, ParaAT, KaKs_Calculator.
+- **General note for all test examples:**
+The Arabidopsis sequence files are not bundled in the repository. These examples show syntax only.
 ---
 
-## 6. Output File Description
+### Build custom organelle database
+- **ogap_build_db.py, optional**
+  
+OGAP allows users to build custom mitochondrial or plastid databases for specialized taxonomic groups.
+This step is **NOT required for normal annotation**; you only need it when the default built-in databases are not suitable for your target species.
 
-### 6.1 List of major output files
+Required dependency: `cd-hit`
+Optional dependency: OrthoFinder 3.1.5 (only for homology grouping during database construction, not bundled)
 
-- **GFF annotation file**
-- **Extracted gene FASTA sequences**
-- **Runtime summary logs** (focus on `summary by source` / `summary by gene type`)
-- **Hint files** (AUGUSTUS‑compatible annotation hints)
+##### Basic usage (build a mitochondrial database)
+```bash
+# pt
+python3 ./OGAP_master/ogap_build_db.py \
+  -organ pt \
+  -gbfiles ./*.gb \
+  -custom <taxon_name> \
+  --dbroot-dir ./db/pt \
+  --orthofinder-exe ./orthofinder-3.1.5/orthofinder.py \
+  --overwrite
 
-### 6.2 Log interpretation notes
-
-> Distinguish two concepts:
->
-> - **Biological true multi‑copy**: e.g. duplicated rRNA genes in chloroplast IR regions, retained by the pipeline.
-> - **Alias‑caused duplicate counting**: one gene with multiple names. This artifact is resolved by the rRNA alias normalization module.
-
----
-
-## 7. Detailed Feature Description (for advanced users)
-
-### 7.1 rRNA alias normalization module
-
-- **Background**: Legacy reference databases contain mixed rRNA aliases (e.g. `rrn16` / `rrn16S`). Identical rRNA sequences with different names are counted as separate genes.
-- **Mechanism**: Whitelist‑based mapping; only predefined aliases are converted.
-- **Mapping example**:
-
-```python
-rrn_alias = {
-    # chloroplast
-    "S5": "rrn5",
-    "rrn5S": "rrn5",
-    "5S": "rrn5",
-    "4.5S": "rrn4.5",
-    "16S": "rrn16",
-    "rrn16S": "rrn16",
-    "23S": "rrn23",
-    "rrn23S": "rrn23",
-    # insect mitochondria
-    "rrn12S": "rrnS",
-    "rrn16S": "rrnL"
-}
+# mt
+python3 ./OGAP_master/ogap_build_db.py \
+  -organ mt \
+  -gbfiles ./*.gb \
+  -custom <taxon_name> \
+  --dbroot-dir ./db/mt \
+  --orthofinder-exe ./orthofinder-3.1.5/orthofinder.py \
+  --overwrite
 ```
 
-- **Runtime log marker**: Log prints `rRNA rename: raw=xxx, mapped=xxx` for alias‑conversion traceability.
-- **Boundary note**: Only modifies gene name field. **Does not change prediction sensitivity, coordinates or sequences**.
-- **Limitation**: Whitelist‑driven. Manually extend the dictionary when encountering unrecorded new rRNA aliases.
+- `-organ pt/mt`: build plastid or mitochondrial database
+- `-gbfiles ./*.gb`: input a set of GenBank reference files
+- `-custom <taxon_name>`: name for your custom taxon (used later with OGAP `-taxon`)
+- `--dbroot-dir`: output directory for the built database
+- `--orthofinder-exe`: - `--orthofinder-exe`: safe fallback option; manually supply the full path to orthofinder.py, works regardless of whether OrthoFinder is in PATH
+- `--overwrite`: overwrite existing database files
 
----
-
-## 8. Known Issues & Limitations
-
-- **tRNAscan‑SE**: Limited sensitivity for mitochondrial tRNA prediction in certain taxa; false negatives may occur.
-- **rRNA aliases**: Whitelist‑driven. Unrecorded new rRNA aliases require manual dictionary extension.
-- **AUGUSTUS prfl generation**: Affected by system `libstdc++`. Format anomalies appear after upgrading `libstdc++` from 6.027 to 6.035. **Main gene‑prediction workflow is unaffected. Custom‑trained models remain usable for annotation; users must manually validate prfl outputs**.
-
----
-
-## 9. Citation, Contact & License
-
-> To‑be‑filled later.

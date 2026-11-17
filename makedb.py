@@ -82,7 +82,7 @@ def main():
         "--dbroot-dir",
         type=str,
         default=None,
-        help="Output root directory for built database. Default: project internal db folder."
+        help="Output root directory for built database. If omitted, use OGAP default: pt=./db/pt, mt=./db/mt (inside OGAP_master)."
     )
     parser.add_argument(
         "--ncpu",
@@ -145,11 +145,19 @@ def main():
             display_name = taxon
             print(f"\n===== Building {args.organ}‑{display_name} =====")
 
+        # ===================== 核心：默认路径绑定 OGAP_master/db =====================
+        if args.dbroot_dir is not None:
+            final_dbroot = args.dbroot_dir
+        else:
+            final_dbroot = os.path.join(SCRIPT_DIR, "db")
+            print(f"INFO: --dbroot-dir not provided, using default root: {final_dbroot}")
+        # ============================================================================
+
         db_obj = Database(
             organ=args.organ,
             taxon=taxon,
             custom=args.taxon,
-            dbrootdir=args.dbroot_dir,
+            dbrootdir=final_dbroot,
             gbfiles=args.gbfiles,
             ncpu=args.ncpu,
             cleanup=True,
@@ -180,4 +188,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

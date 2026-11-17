@@ -235,7 +235,7 @@ These files use the user-defined project prefix `<project>` (usually the name yo
 
 
 ### Build custom organelle database
-- **makedb.py(optional) **
+- **makedb.py(optional)**
 
 OGAP allows users to build custom mitochondrial or plastid databases for specialized taxonomic groups.
 This step is **NOT required for normal annotation**; you only need it when the default built-in databases are not suitable for your target species.

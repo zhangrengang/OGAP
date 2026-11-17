@@ -136,6 +136,9 @@ class Database(object):
 		return max(dbs, key=lambda x: x.index)
 	
 	def get_taxonomy(self, organism):
+		#import sys
+		print("!!! LOADED Database.py:", __file__, file=sys.stderr)
+
 		organism = organism.split()[0]	# use genus, which is more common
 		try:
 			lineage = d_lineage[organism] 
@@ -144,6 +147,10 @@ class Database(object):
 		except KeyError: pass
 		cmd = 'ete3 ncbiquery --search "{}" --info'.format(organism)
 		stdout, stderr, status = run_cmd(cmd, log=True)
+		# ========= 在这里新增两行 =========
+		if isinstance(stdout, bytes):
+			stdout = stdout.decode("utf-8", errors="replace")
+		# =================================
 		for info in Ete3TaxonomyInfo(stdout):
 			lineage = info.named_lineage
 			d_lineage[organism] = lineage
@@ -638,7 +645,7 @@ class Database(object):
 			# ============ OF 调用块 START ============
 			if feat_type == "protein":
 				#from ogap_build_db import OF_SCRIPT, get_of_subenv
-				from ogap_build_db import get_of_subenv
+				from makedb import get_of_subenv
 
 				# =========【这里插入AGST开关判断代码】==========
 				# AGST执行开关：判断是否存在gb/gbff注释文件
@@ -746,10 +753,7 @@ class Database(object):
 				logger.info("Parsing orthogroups file: %s", og_tsv)
 			# ============ OF调用块 END ============
 
-				#import csv
-				#from Bio import SeqIO
-				#from io import StringIO
-				# -------------------------- 配置：线粒体核心基因白名单 --------------------------
+				# -------------------------- 配置：细胞器核心基因白名单 --------------------------
 				mt_core_genes = {
 					"atp1","atp4","atp6","atp8","atp9",
 					"nad1","nad2","nad3","nad4","nad4L","nad5","nad6","nad7","nad9",
@@ -759,10 +763,33 @@ class Database(object):
 					"rps1","rps3","rps4","rps7","rps10","rps12","rps13","rps14","rps19",
 					"sdh3","sdh4"
 				}
+				pt_core_genes = {
+					"psaA","psaB","psaC","psaI","psaJ",
+					"psbA","psbB","psbC","psbD","psbE","psbF","psbH","psbI","psbJ","psbK","psbL","psbM","psbN","psbT","psbZ",
+					"atpA","atpB","atpE","atpF","atpH","atpI",
+					"petA","petB","petD","petG","petL","petN",
+					"rpl2","rpl14","rpl16","rpl20","rpl22","rpl23","rpl32","rpl33","rpl36",
+					"rps2","rps3","rps4","rps7","rps8","rps11","rps12","rps14","rps15","rps16","rps18","rps19",
+					"rpoA","rpoB","rpoC1","rpoC2",
+					"clpP","matK","ccmA","ccmB","ccmC","ccmD","ccmF","ccmN","ccmFn",
+					"ycf1","ycf2","ycf3","ycf4"
+				}
+
+				# 根据ogtype选择对应的核心基因集合
+				if self.ogtype == "mt":
+					core_gene_set = mt_core_genes
+					logger.info("[OG name picker] Using mitochondrial core gene set")
+				elif self.ogtype == "pt":
+					core_gene_set = pt_core_genes
+					logger.info("[OG name picker] Using chloroplast(pt) core gene set")
+				else:
+					core_gene_set = set()
+					logger.warning("[OG name picker] ogtype unknown, no core gene priority enabled")
+
 				# 次优先：其他标准基因，最低优先级：orf开头
 				def pick_best_gene_name(name_set):
 					# 优先匹配白名单核心基因
-					hit = name_set & mt_core_genes
+					hit = name_set & core_gene_set
 					if hit:
 						return sorted(list(hit))[0]
 					# 排除orf类，剩下的标准基因
@@ -796,7 +823,8 @@ class Database(object):
 							if gid in self.prot_id2gene:
 								gname = self.prot_id2gene[gid]
 								if gname:
-									name_set.add(gname)
+									gname_std = GENE_ALIAS.get(gname, gname)
+									name_set.add(gname_std)
 						og_gene_names[og_id] = name_set
 
 				# -------------------------- Step2：构建 og2gene 映射（白名单选基因名） --------------------------
@@ -2008,6 +2036,9 @@ class TaxonomyInfoLine(GeneInfoLine):
 		
 class Ete3TaxonomyInfo(Info):
 	def __init__(self, infolines):
+		if isinstance(infolines, bytes):
+		#	infolines = infolines.decode("utf-8")
+			infolines = infolines.decode("utf-8", errors="replace")
 		self.infofile = infolines.split('\n')
 		self.ban = 'WARN'
 	def _parse_line(self, line):

@@ -1,0 +1,21 @@
+import os
+import shutil
+import sys
+
+# 1: 完全复刻你真实OGAP启动逻辑
+bindir = os.path.dirname(os.path.realpath(__file__))
+os.environ['PATH'] = bindir+'/bin' + ':' + os.environ['PATH']
+
+print("===== bindir =====")
+print(bindir)
+
+print("\n===== Python进程内最终PATH（OGAP运行时真实PATH） =====")
+for idx,item in enumerate(os.environ['PATH'].split(os.pathsep)):
+    print(f"{idx:2d}: {item}")
+
+print("\n===== shutil.which() 得到的真实二进制路径 =====")
+tools = ["exonerate", "hmmbuild", "hmmsearch", "blat", "aragorn", "orthofinder"]
+for t in tools:
+    loc = shutil.which(t)
+    print(f"{t:12s} → {loc}")
+

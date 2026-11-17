@@ -617,7 +617,7 @@ class Pipeline(object):
 			# 归一化比对，仅当除去U/T差异后仍然不一致，才判定名字损坏
 			if normalize_trn_name(gene.name) != normalize_trn_name(real_gene):
 				logger.warning(f"FIX-DBG(rna): gene.name corrupted! fix {gene.name} → {real_gene}")
-				gene.name = real_gene
+			#	gene.name = real_gene
 			# ========================================================================
 
 			if gene.seq_type == 'rRNA' and self.no_rrn:
@@ -740,6 +740,8 @@ class Pipeline(object):
 			    "rrn5S": "rrn5",
 			    "5S": "rrn5",
 			    "4.5S": "rrn4.5",
+			    "rrn4-5": "rrn4.5",
+			    "rrn4-5S": "rrn4.5",
 			    "12S": "rrn12",
 			    "16S": "rrn16",
 			    "18S": "rrn18",
@@ -823,7 +825,7 @@ class Pipeline(object):
 			real_gene = gene.id
 			if gene.name != real_gene:
 				logger.warning(f"FIX‑DBG: gene.name corrupted! fix {gene.name} → {real_gene}")
-				gene.name = real_gene
+			#	gene.name = real_gene
 			# =====================================================
 
 			if self.genes is not None and gene.name not in set(self.genes):

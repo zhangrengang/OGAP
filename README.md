@@ -173,8 +173,6 @@ done
 
 #### Comparative analysis (optional)
 Run these three subcommands on the folder containing all species annotation results (`re_anno/`) to get orthogroup summary, multiple-sequence alignments, species tree and Ka/Ks estimates.
->**Important:** `summary` must run first; `phylo` and `kaks` rely on orthogroup information produced by `summary`.
-
 ```bash
 python ../compare.py summary re_anno/
 python ../compare.py phylo re_anno/
@@ -196,7 +194,6 @@ The Arabidopsis sequence files are not bundled in the repository. These examples
 | `-taxon` | Name(s) of reference database(s) under `./db`; can be built-in OGAP databases or custom databases built by `makedb.py`. Multiple database names separated by space are supported. |
 | `-prefix` | Prefix for output files when running batch annotation. |
 | `-o` / `--outdir` |Output directory path; all results will be saved here.|
-| `--no-rrna-alias` | Disable rRNA alias normalization; keep original rRNA annotation labels. This option is mainly used for animal mitochondrial data, and generally not required for plants. |
 | `-min_rrn_score=0.6` | HMM score threshold for rRNA identification; 0.6 is a typical cutoff for animal mitochondrial data, adjust according to your taxon. Usually not modified for plant organelle annotation. |
 | `-trn-opts='-O -X 5'` | Extra arguments passed to tRNAscan‑SE; this preset is intended for animal mitochondrial tRNA prediction, and generally not needed for plants. |
 
@@ -258,18 +255,18 @@ tar -zxvf orthofinder-linux-intel-3.1.5.tar.gz
 >**Note:** We use the precompiled Linux Intel build orthofinder-linux-intel-3.1.5.tar.gz. The smaller orthofinder-3.1.5.tar.gz is source code and not recommended, as extra compilation is required.
 
 #### Basic usage
-Two typical usage modes:
+Three usage modes:
 
-**Model A**
-All input GenBank files are used directly to build one database, without any taxon filtering.
-`-taxon` sets the name for this custom database. You will use this name later in OGAP annotation with `-taxon`.
+**Mode 1: Build database from all input GenBank files (default path, recommended)**
+All input GenBank records are used directly, without taxon filtering.
+`-taxon` defines your custom database name, which will be invoked later in OGAP annotation with `-taxon`.
+`--dbroot-dir` is omitted here; the database will be saved automatically to `OGAP_master/db/{mt,pt}/<custom_db_name>`.
 ```bash
 # pt
 python3 ./OGAP_master/makedb.py \
   -organ pt \
   -gbfiles ./*.gb \
   -taxon <custom_db_name> \
-  --dbroot-dir ./db/pt \
   --orthofinder-exe ./orthofinder-linux-intel-3.1.5/orthofinder.py \
   --overwrite
 
@@ -278,24 +275,22 @@ python3 ./OGAP_master/makedb.py \
   -organ mt \
   -gbfiles ./*.gb \
   -taxon <custom_db_name> \
-  --dbroot-dir ./db/mt \
   --orthofinder-exe ./orthofinder-linux-intel-3.1.5/orthofinder.py \
   --overwrite
 ```
 - `-taxon`: name of your custom database, used for calling this database in OGAP annotation
-- All provided `.gb` records are included; no taxon filtering is performed
+- All provided .gb records are included; no taxon filtering is performed
 
-**Model B**
-First filter your GenBank records to retain only sequences belonging to the target taxon, then build the database.
-`--filter-taxon` controls the filtering rule; `-taxon` sets the final name for your custom database.
+**Mode 2: Build database with taxon filtering (default path, recommended)**
+Filter input GenBank records and retain only sequences belonging to the target taxon, then build the database.
+The database name is the taxon name you supplied to --filter-taxon.
+`--dbroot-dir` is omitted here; the database will be saved automatically to `OGAP_master/db/{mt,pt}/<taxon_name>`.
 ```bash
 # pt
 python3 ./OGAP_master/makedb.py \
   -organ pt \
   -gbfiles ./*.gb \
   --filter-taxon <taxon_to_filter> \
-  -taxon <custom_db_name> \
-  --dbroot-dir ./db/pt \
   --orthofinder-exe ./orthofinder-linux-intel-3.1.5/orthofinder.py \
   --overwrite
 
@@ -304,28 +299,41 @@ python3 ./OGAP_master/makedb.py \
   -organ mt \
   -gbfiles ./*.gb \
   --filter-taxon <taxon_to_filter> \
-  -taxon <custom_db_name> \
-  --dbroot-dir ./db/mt \
   --orthofinder-exe ./orthofinder-linux-intel-3.1.5/orthofinder.py \
   --overwrite
 ```
-- `--filter-taxon`: filter input GenBank files, keep only records matching this taxon name
-- `-taxon`: name of your custom database, used for calling this database in OGAP annotation
-- For batch filtering of multiple taxa, use `--filter-taxon-list` (one taxon name per line in the text file)
->**Note:** OrthoFinder is required for homology grouping and classification profile generation. If you omit --orthofinder-exe, this homology grouping step will be skipped.
-After construction, you can call this custom database in OGAP annotation with **`-taxon <custom_db_name>`**.
+- `--filter-taxon`: filter input GenBank records, keep only sequences assigned to this taxon
+- For batch building databases for many taxa, use `--filter-taxon-list` (one taxon name per line in the text file)
+**Important:** `--filter-taxon` / `--filter-taxon-list` cannot be used together with -taxon.
 
-**After building,** place your custom database folder under ./db/pt or ./db/mt so OGAP can locate it when using -taxon.
+**Mode 3: Advanced — custom output root directory**
+Add `--dbroot-dir` to specify your own output root folder, instead of the default `OGAP_master/db/`.
+This flag works for both unfiltered (`-taxon`) and filtered (`--filter-taxon`) workflows.
+```bash
+# Example: unfiltered custom database with custom root
+python3 ./OGAP_master/makedb.py \
+  -organ mt \
+  -gbfiles ./*.gb \
+  -taxon <custom_db_name> \
+  --dbroot-dir /your/custom/path \
+  --orthofinder-exe ./orthofinder-linux-intel-3.1.5/orthofinder.py \
+  --overwrite
+```
+`--dbroot-dir`: custom root directory for database output (for advanced users)
+>**Note:** OrthoFinder is required for homology grouping and classification profile generation. If you omit `--orthofinder-exe`, this homology grouping step will be skipped.
+>After construction, OGAP can automatically discover databases under the default `OGAP_master/db/pt` or `OGAP_master/db/mtwhen `using `-taxon`.
+
 
 #### **Parameter overview**
 - `-organ pt/mt`: build plastid or mitochondrial database
 - `-gbfiles ./*.gb`: input a set of GenBank flat files (GBFF). Both `.gb` and `.gbff` are supported. Files are parsed as GenBank format regardless of filename suffix, provided the content is valid GBFF.
-- `-taxon`: unique name for your custom database, used to call this database in OGAP annotation
-- `--filter-taxon`: keep only GenBank records matching this taxon name
-- `--filter-taxon-list`: path to a text file, one taxon name per line for batch filtering
-- `--dbroot-dir`: output directory to store the built database
+- `-taxon`: unique name for your custom database, used to call this database in OGAP annotation. Mutually exclusive with `--filter-taxon` / `--filter-taxon-list`.
+- `--filter-taxon`: keep only GenBank records matching this taxon name. Mutually exclusive with `-taxon`.
+- `--filter-taxon-list`: path to a text file, one taxon name per line for batch filtering and database construction. Mutually exclusive with `-taxon`.
+- `--dbroot-dir`: custom root directory to store the built database. If omitted, defaults to `OGAP_master/db/`.
 - `--orthofinder-exe`: manually provide the full path to `orthofinder.py`. This is a safe option and does not require OrthoFinder to be in your PATH
 - `--overwrite`: overwrite existing database files if they already exist
+
 
 #### Outputs of `makedb` database construction
 The database directory is named `<db_name>`. All generated files and folders are listed below:

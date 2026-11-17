@@ -20,6 +20,9 @@ from .RunCmdsMP import run_cmd, run_job, logger
 
 def catAln(inALNs, outALN, allow_missing=True):
 	'''首尾相连alignments'''
+	if not inALNs:
+		logger.error("No shared alignment files found, skip concatenate.")
+		return
 	if allow_missing:
 		species = set([])
 		for inALN in inALNs:
@@ -34,20 +37,23 @@ def catAln(inALNs, outALN, allow_missing=True):
 			continue
 		ntax = 0
 		sps = set([])
+		gene_aln_len = None
 		for rc in SeqIO.parse(inALN, 'fasta'):
 			ntax += 1
 			sp, g = gene_format_common(rc.id)
 			seq = str(rc.seq)
+			if gene_aln_len is None:
+				gene_aln_len = len(seq)
 			try: d_seqs[sp] += [seq]
 			except KeyError: d_seqs[sp] = [seq]
 			sps.add(sp)
-		lens += [len(seq)]
+		lens += [gene_aln_len]
 		if allow_missing:
 			for sp in species-sps:
 				ntax += 1
-				seq = ''.join(['-']*len(seq))
-				try: d_seqs[sp] += [seq]
-				except KeyError: d_seqs[sp] = [seq]
+				gap_seq = '-' * gene_aln_len
+				try: d_seqs[sp] += [gap_seq]
+				except KeyError: d_seqs[sp] = [gap_seq]
 	xlens = ','.join(map(str, lens))
 	names = ','.join(names)
 	description = 'taxa:{} genes:{} sites:{} blocks:{} names:{}'.format(ntax, len(lens), sum(lens), xlens, names)
@@ -815,16 +821,17 @@ def gene_format_p(gene):
 	g = sp + '|' + g
 	return (sp, g)
 def gene_format_common(gene):
-	if not '|' in gene:
-		sp, g = gene, gene
+	if '|' in gene:
+		sp, g = gene.split('|', 1)
 		return (sp, g)
-	sp, g = gene.split('|')
-	sp1 = sp[:old_div(len(sp),2)]
-	sp2 = sp[old_div(len(sp),2)+1:]
-	if sp1 == sp2:
-		sp = sp1
-		g = sp + '|' + g
-	return (sp, g)
+	else:
+		if '-' in gene:
+			sp, g = gene.split('-', 1)
+			return (sp, g)
+		else:
+			sp, g = gene, gene
+			return (sp, g)
+
 def MCScanX_transposed(OFdir, tsp, cspp, spmap, gff, datadir='data', outdir='result',):
 	'''MCScanX_transposed流程'''
 	if not os.path.exists(datadir):

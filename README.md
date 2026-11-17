@@ -2,9 +2,14 @@
 
 - **Tool purpose**: Automatic annotation pipeline for chloroplast (pt) / mitochondrial (mt) organelle genomes.
 - **Applicable taxa**: Mainly plants; good performance for animal protein‑coding gene annotation.
-- **Main outputs**:
-  `cov_report_Ara.tsv`, `filtered.gff3`, `sequence.fasta.fsa`, `sequence.fasta.gff3`, `sequence.fasta.rna.fasta`, `filtered.cds.fasta`, `sequence.fasta.cds.fasta`, `sequence.fasta.gb`, `sequence.fasta.pep.fasta`, `stop_report.tsv`
+
 # Quick install and start
+> **Recommendation:**
+ Use a dedicated conda environment for OGAP.
+This section covers the standard workflow for **organelle genome annotation (core function).**
+We use the lighter `OGAP.yaml` environment here, which does not include OrthoFinder.
+This setup avoids dependency version conflicts for tools such as AUGUSTUS, HMMER.
+OrthoFinder is only required for custom database building (`makedb.py`), and OrthoFinder itself also recommends isolated environments for stable execution.
 
 ```bash
 # download
@@ -13,16 +18,24 @@ git clone https://github.com/zhangrengang/OGAP
 cd OGAP
 
 # install
-conda env create -f OGAP.yaml
+conda env create -f ./config/OGAP.yaml
 conda activate OGAP
 
 # start
 cd test
+# Input: GenBank  | Mode: -mt (mitochondrion)
 python ../OGAP.py Arabidopsis_thaliana-mt.gb -mt -o mt_out
+# Input: FASTA    | Mode: -mt (mitochondrion, -sp REQUIRED)
 python ../OGAP.py Arabidopsis_thaliana-mt.fa -mt -o mt_out -sp Arabidopsis_thaliana
+# Input: GenBank  | Mode: -pt (plastid)
 python ../OGAP.py Arabidopsis_thaliana-pt.gb -pt -o pt_out
+# Input: GenBank  | Mode: -mt -pt (combined search)
 python ../OGAP.py Arabidopsis_thaliana-mt.gb -mt -pt -o mt_out
 ```
+## Input requirements
+- GenBank format (`.gb` / `.gbff`): Complete GenBank flatfile with `ORGANISM` field; preferred input type.
+- FASTA format (.fa / .fasta): Only raw nucleotide sequence. `-sp <species_name>` is required. The name will first be used for taxonomic lookup. If lookup fails, it serves only as a label placeholder.
+- Mixed contig assemblies are supported. The `-mt -pt` combined mode is designed for this scenario, to detect plastid fragments integrated into mitochondrial sequences.
 ---
 
 # Installation
@@ -32,6 +45,10 @@ Binaries including `blat`, `tbl2asn`, `asn2gb` are bundled in the `bin/` folder 
 + [python 3](https://www.python.org/) (tested: 3.12.13; minimum supported: 3.8)
     + [biopython](https://biopython.org/): >=1.85, tested on 1.87 (required if orthofinder downstream function is used)
     + [networkx](http://networkx.github.io/): >=3.6.1
+    + [numpy](https://numpy.org/) >=2.3.2
+    + [scipy](https://scipy.org/) >=1.16
+    + [rich](https://rich.readthedocs.io/) >=14.1.0
+    + [scikit-learn](https://scikit-learn.org/) >=1.7.1
 + [hmmsearch](http://hmmer.org/) (3.1 ~ 3.4, backward compatible): compatible with HMMER3/f database format
 + [exonerate](https://www.ebi.ac.uk/about/vertebrate-genomics/software/exonerate) for coding genes annotation (2.2 ~ 2.4.0)
 + [augustus](http://bioinf.uni-greifswald.de/webaugustus/) for coding genes annotation (3.1 ~ 3.5)
@@ -40,9 +57,23 @@ Binaries including `blat`, `tbl2asn`, `asn2gb` are bundled in the `bin/` folder 
 + [blat](http://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/blat/) for rRNA genes annotation (bundled in bin/)
 + [tbl2asn](https://ftp.ncbi.nih.gov/toolbox/ncbi_tools/converters/by_program/tbl2asn/) output sqn file for submitting to GenBank (bundled in bin/)
 + [asn2gb](https://ftp.ncbi.nih.gov/toolbox/ncbi_tools/converters/by_program/asn2gb/) output genbank file (bundled in bin/)
++ [MAFFT](https://mafft.cbrc.jp/alignment/software/) multiple sequence alignment
++ [Trimal](http://trimal.cgenomics.org/) alignment trimming
++ [IQ-TREE](http://www.iqtree.org/) phylogenetic tree inference
++ [FAMSA](https://github.com/GarrettGunn/FAMSA) multiple sequence alignment
++ [FastTree](http://www.microbesonline.org/fasttree/) >=2.1.11, approximate phylogenetic tree
++ [BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi) local sequence alignment
++ [pal2nal](http://www.bork.embl.de/pal2nal/) convert protein alignment to codon alignment
++ [KaKs_Calculator2](https://bigd.big.ac.cn/tools/kaks) calculate Ka/Ks values
+
+Python packages installed via pip:
++ [future](https://python-future.org/)
++ [ete3](http://etetoolkit.org/) >=3.1.3, <4.0 (for taxonomy mapping)
++ [lazy-property](https://pypi.org/project/lazy-property/)
++ [xopen](https://pypi.org/project/xopen/)
 
 + without `-taxon` option to automatically get taxon from organism
-    + [ete3](http://etetoolkit.org/) for taxonomy mapping from organism (optional)
+    + ete3 (optional, already listed above)
 + `-trn_struct` option to plot tRNA secondary structure
     + [RNAplot in ViennaRNA](https://www.tbi.univie.ac.at/RNA/) (optional)
     + ps2pdf (optional)
@@ -57,21 +88,21 @@ Binaries including `blat`, `tbl2asn`, `asn2gb` are bundled in the `bin/` folder 
 
 - to compare multiple annotations (Comparative.py, optional)
     - phylogenetics
-        - [mafft](https://mafft.cbrc.jp/alignment/software/)
-        - [trimal](http://trimal.cgenomics.org/)
-        - [iqtree](http://www.iqtree.org/)
-    - KaKs
-        - [ParaAT](http://bigd.big.ac.cn/tools/paraat)
-        - [KaKs_Calculator](https://bigd.big.ac.cn/tools/kaks)
+        - MAFFT
+        - Trimal
+        - IQ-TREE
+    - Ka/Ks calculation
+        - pal2nal
+        - KaKs_Calculator2
 
-* to build custom database (ogap_build_db.py, optional)
-    * [OrthoFinder 3.1.5](https://github.com/davidemms/OrthoFinder): NOT bundled with OGAP, install separately if homology grouping is needed
-    * [cd-hit](http://cd-hit.org/): required for clustering
-
+- to build custom database (makedb.py, optional)
+    - [OrthoFinder 3.1.5](https://github.com/davidemms/OrthoFinder): NOT bundled with OGAP, install separately if homology grouping is needed
+    - [cd-hit](http://cd-hit.org/): required for sequence clustering
 ---
 
 ## Get OGAP
-```
+Clone the repository if you prefer manual environment setup.
+```bash
 git clone https://github.com/zhangrengang/OGAP
 ```
 
@@ -94,91 +125,221 @@ FASTA files lack embedded organism information; the `-sp` argument is required f
 ```bash
 python ../OGAP.py Arabidopsis_thaliana-mt.fa -mt -o mt_out -sp Arabidopsis_thaliana -taxon rosids
 ```
+Use `-taxon` to explicitly select reference database(s) from the `./db` folder, overriding the automatic taxon-based database selection.
+The name can be either an OGAP built-in database or a custom database built by `makedb.py`.
 
 #### Multiple taxon databases are supported
 ```bash
 python ../OGAP.py Arabidopsis_thaliana-mt.fa -mt -o mt_out -sp Arabidopsis_thaliana -taxon rosids malvids
 ```
-#### Plastid / chloroplast genome (use `-pt` mode instead of `-mt`)
+You can supply **multiple database names** to `-taxon`.
+OGAP will query all these databases together for annotation.
+These names correspond to database entries under your `./db` directory, either built-in OGAP databases or custom databases created with `makedb.py`.
 
+#### Plastid / chloroplast genome (use `-pt` mode instead of `-mt`)
 ```bash
+# pt: plastid (chloroplast) genome annotation
 python ../OGAP.py Arabidopsis_thaliana-pt.gb -pt -o pt_out
+
+# mt: mitochondrial genome annotation
+python ../OGAP.py Arabidopsis_thaliana-mt.gb -mt -o mt_out
 ```
+
+
 #### Annotate sequences containing both mitochondrial and chloroplast-derived fragments
 ```bash
 python ../OGAP.py Arabidopsis_thaliana-mixed.gb -mt -pt -o mt_out
 ```
+Combined `-mt -pt` mode searches against both mitochondrial and plastid gene models.
+It can be used to identify plastid genes integrated into mitochondrial contigs, a common feature in plant mitochondrial genomes.
+This mode also helps assess the confidence of mitochondrial gene annotations.
 
-> ⚠️ Warning: `-mt -pt` combined mode searches both mitochondrial and plastid gene models.
-> This is only recommended for mixed organelle contigs. Do NOT use this for pure mitochondrial or pure plastid sequences, as it increases runtime and false positives.
-
-
-### Pipeline for multiple genomes (optional downstream workflow)
+#### Multiple-genome pipeline (optional downstream workflow)
+`-prefix` assigns a species-specific prefix for output files, so annotation files from different species will not overwrite each other.
 ```bash
-for sp in Arabidopsis_thaliana Vitis_vinifera Oryza_sativa Salix_suchowensis Citrus_sinensis
+# Batch annotation for multiple organelle genomes
+for sp in Arabidopsis_thaliana Vitis_vinifera Oryza_sativa
 do
-    python ../OGAP.py genbank/$sp.gb -mt -prefix $sp -outdir re_anno &> $sp.log
+    python ../OGAP.py ../test/genbank/$sp.gb \
+    -mt -prefix $sp \
+    -o re_anno \
+    &> $sp.log
 done
-
-# Comparative analysis (optional, requires extra comparative dependencies)
-python ../lib/Comparative.py summary re_anno/
-python ../lib/Comparative.py phylo re_anno/
-python ../lib/Comparative.py kaks re_anno/
 ```
+>**Note:**
+>- This loop runs OGAP annotation for each species separately. All results are written into the shared re_anno/ folder.
+>- The **`` & ``** submits jobs in parallel. On shared clusters, control the number of concurrent jobs to avoid resource overload.
+>- This step only generates individual annotation files for each species, and does not perform comparative analysis.
 
-#### Core parameter description
+#### Comparative analysis (optional)
+Run these three subcommands on the folder containing all species annotation results (`re_anno/`) to get orthogroup summary, multiple-sequence alignments, species tree and Ka/Ks estimates.
+>**Important:** `summary` must run first; `phylo` and `kaks` rely on orthogroup information produced by `summary`.
 
-| Parameter | Description |
-|---|---|
-| `-pt` / `-mt` | Specify organelle type; alias for `--ogtype pt/mt` |
-| `-sp` | Species name, matches AUGUSTUS species model |
-| `-taxon` | Taxonomic group, used for internal pipeline filtering and scoring |
-| `--no-rrna-alias` | Disable rRNA alias normalization, revert to original annotation baseline |
-| `-min_rrn_score=0.6` | HMM score threshold for rRNA; 0.6 commonly‑used for mitochondria, adjust per taxon |
-| `-trn-opts='-O -X 5'` | Arguments passed to tRNAscan‑SE; commonly‑used settings for mitochondrial mode |
-| `-o` | Output directory path |
+```bash
+python ../compare.py summary re_anno/
+python ../compare.py phylo re_anno/
+python ../compare.py kaks re_anno/
+```
+>**Note:**
+>- These subcommands belong to compare.py, separate from the main OGAP.py annotation parameters.
+>- Extra dependencies (mafft, trimal, iqtree, pal2nal, KaKs_Calculator) are required for this module.
+>- pal2nal is only required for the kaks step.
 
-- **Note:** 
-The & runs jobs in parallel. Adjust the loop carefully on shared computing clusters to avoid overloading resources.
-Comparative analysis functions are optional and require additional tools: mafft, trimal, iqtree, ParaAT, KaKs_Calculator.
-- **General note for all test examples:**
+##### **General note for all test examples:**
 The Arabidopsis sequence files are not bundled in the repository. These examples show syntax only.
+
+### Core parameter description
+| Parameter | Description |
+| ---- | ---- |
+| `-pt` / `-mt` | Enable chloroplast (`-pt`) or mitochondrial (`-mt`) annotation mode. Combine `-pt -mt` for mixed mode. |
+| `-sp` | Species label. This label is used for taxonomic mapping (**ete3**) and downstream comparative analysis. For FASTA input mode, a valid scientific name is required for taxon recognition; if unrecognized, it only serves as a custom identifier. |
+| `-taxon` | Name(s) of reference database(s) under `./db`; can be built-in OGAP databases or custom databases built by `makedb.py`. Multiple database names separated by space are supported. |
+| `-prefix` | Prefix for output files when running batch annotation. |
+| `-o` / `--outdir` |Output directory path; all results will be saved here.|
+| `--no-rrna-alias` | Disable rRNA alias normalization; keep original rRNA annotation labels. This option is mainly used for animal mitochondrial data, and generally not required for plants. |
+| `-min_rrn_score=0.6` | HMM score threshold for rRNA identification; 0.6 is a typical cutoff for animal mitochondrial data, adjust according to your taxon. Usually not modified for plant organelle annotation. |
+| `-trn-opts='-O -X 5'` | Extra arguments passed to tRNAscan‑SE; this preset is intended for animal mitochondrial tRNA prediction, and generally not needed for plants. |
+
+#### Main outputs:
+Output files share the same prefix `<name>`, which is derived from the basename of your input FASTA or GenBank file.
+
+`<name>.fsa`, `<name>.gff3`, `<name>.rna.fasta`, `<name>.cds.fasta`, `<name>.gb`, `<name>.pep.fasta`, `<name>.tbl`, `<name>.sqn`
+
+- `.tbl` / `.sqn`: NCBI submission-ready feature table and sqn files
+- `.fsa`: cleaned input genomic sequence
+- `.gff3`: final annotation in GFF3 format
+- `.rna.fasta`: rRNA and tRNA nucleotide sequences
+- `.cds.fasta`: CDS (coding DNA sequences)
+- `.pep.fasta`: translated protein sequences
+- `.gb`: GenBank format annotation file
+
+> **Note:** For batch multiple-genome annotation, all species results are placed in the shared output directory. Each species uses its own `<name>` (controlled by `-prefix`
+) for file prefixes to avoid overwriting.
+
+#### Comparative analysis outputs (../compare.py)
+These files use the user-defined project prefix `<project>` (usually the name you assign to the comparison output directory), and this prefix is independent of the single-genome `<name>` prefix.
+
+`<project>.summry`, `<project>.kaks.xls`, `<project>-cds.aln`, `<project>-cds.aln.trimal`, `<project>-cds.aln.trimal.iqtree`, `<project>-cds.aln.trimal.treefile`
+
+- `<project>.summry`: Summary table of gene presence/absence and copy number across all species (stored in the top-level project directory)
+- `<project>.kaks.xls`: Ka/Ks calculation results for orthologous gene pairs (stored in the top-level project directory)
+- `<project>-cds.aln`: Raw codon alignment of orthogroups
+- `<project>-cds.aln.trimal`: Trimmed codon alignment after Trimal filtering
+- `<project>-cds.aln.trimal.iqtree`: IQ-TREE log file
+- `<project>-cds.aln.trimal.treefile`: Final species tree (Newick format)
+- `kaks_origin.log`: Log for Ka/Ks calculation pipeline
+- `phylo_origin.log`: Log for phylogenetic reconstruction pipeline
+
+> Note: Species-level annotation files (`<species>.gb`, `<species>.gff3`, `<species>.cds.fasta`, etc.) are also generated inside the comparison directory. These are individual annotation outputs for each taxon, not comparative results.
 ---
 
+
 ### Build custom organelle database
-- **ogap_build_db.py, optional**
-  
+- **makedb.py(optional)**
+
 OGAP allows users to build custom mitochondrial or plastid databases for specialized taxonomic groups.
 This step is **NOT required for normal annotation**; you only need it when the default built-in databases are not suitable for your target species.
 
 Required dependency: `cd-hit`
-Optional dependency: OrthoFinder 3.1.5 (only for homology grouping during database construction, not bundled)
+Optional dependency: OrthoFinder 3.1.5 (used for homology grouping during database construction; not bundled with conda environment)
 
-##### Basic usage (build a mitochondrial database)
+##### **Environment preparation**
+To run `makedb.py` with OrthoFinder homology grouping, use the all-in-one conda environment and download the precompiled OrthoFinder release:
+```bash
+# Environment installation
+conda deactivate
+conda env create -f ./config/orthofinder_build.yaml
+conda activate ogap-build
+
+# OrthoFinder download & setup
+wget https://github.com/OrthoFinder/OrthoFinder/releases/download/v3.1.5/orthofinder-linux-intel-3.1.5.tar.gz
+tar -zxvf orthofinder-linux-intel-3.1.5.tar.gz
+```
+>**Note:** We use the precompiled Linux Intel build orthofinder-linux-intel-3.1.5.tar.gz. The smaller orthofinder-3.1.5.tar.gz is source code and not recommended, as extra compilation is required.
+
+#### Basic usage
+Two typical usage modes:
+
+**Model A**
+All input GenBank files are used directly to build one database, without any taxon filtering.
+`-taxon` sets the name for this custom database. You will use this name later in OGAP annotation with `-taxon`.
 ```bash
 # pt
-python3 ./OGAP_master/ogap_build_db.py \
+python3 ./OGAP_master/makedb.py \
   -organ pt \
   -gbfiles ./*.gb \
-  -custom <taxon_name> \
+  -taxon <custom_db_name> \
   --dbroot-dir ./db/pt \
-  --orthofinder-exe ./orthofinder-3.1.5/orthofinder.py \
+  --orthofinder-exe ./orthofinder-linux-intel-3.1.5/orthofinder.py \
   --overwrite
 
 # mt
-python3 ./OGAP_master/ogap_build_db.py \
+python3 ./OGAP_master/makedb.py \
   -organ mt \
   -gbfiles ./*.gb \
-  -custom <taxon_name> \
+  -taxon <custom_db_name> \
   --dbroot-dir ./db/mt \
-  --orthofinder-exe ./orthofinder-3.1.5/orthofinder.py \
+  --orthofinder-exe ./orthofinder-linux-intel-3.1.5/orthofinder.py \
   --overwrite
 ```
+- `-taxon`: name of your custom database, used for calling this database in OGAP annotation
+- All provided `.gb` records are included; no taxon filtering is performed
 
+**Model B**
+First filter your GenBank records to retain only sequences belonging to the target taxon, then build the database.
+`--filter-taxon` controls the filtering rule; `-taxon` sets the final name for your custom database.
+```bash
+# pt
+python3 ./OGAP_master/makedb.py \
+  -organ pt \
+  -gbfiles ./*.gb \
+  --filter-taxon <taxon_to_filter> \
+  -taxon <custom_db_name> \
+  --dbroot-dir ./db/pt \
+  --orthofinder-exe ./orthofinder-linux-intel-3.1.5/orthofinder.py \
+  --overwrite
+
+# mt
+python3 ./OGAP_master/makedb.py \
+  -organ mt \
+  -gbfiles ./*.gb \
+  --filter-taxon <taxon_to_filter> \
+  -taxon <custom_db_name> \
+  --dbroot-dir ./db/mt \
+  --orthofinder-exe ./orthofinder-linux-intel-3.1.5/orthofinder.py \
+  --overwrite
+```
+- `--filter-taxon`: filter input GenBank files, keep only records matching this taxon name
+- `-taxon`: name of your custom database, used for calling this database in OGAP annotation
+- For batch filtering of multiple taxa, use `--filter-taxon-list` (one taxon name per line in the text file)
+>**Note:** OrthoFinder is required for homology grouping and classification profile generation. If you omit --orthofinder-exe, this homology grouping step will be skipped.
+After construction, you can call this custom database in OGAP annotation with **`-taxon <custom_db_name>`**.
+
+**After building,** place your custom database folder under ./db/pt or ./db/mt so OGAP can locate it when using -taxon.
+
+#### **Parameter overview**
 - `-organ pt/mt`: build plastid or mitochondrial database
-- `-gbfiles ./*.gb`: input a set of GenBank reference files
-- `-custom <taxon_name>`: name for your custom taxon (used later with OGAP `-taxon`)
-- `--dbroot-dir`: output directory for the built database
-- `--orthofinder-exe`: - `--orthofinder-exe`: safe fallback option; manually supply the full path to orthofinder.py, works regardless of whether OrthoFinder is in PATH
-- `--overwrite`: overwrite existing database files
+- `-gbfiles ./*.gb`: input a set of GenBank flat files (GBFF). Both `.gb` and `.gbff` are supported. Files are parsed as GenBank format regardless of filename suffix, provided the content is valid GBFF.
+- `-taxon`: unique name for your custom database, used to call this database in OGAP annotation
+- `--filter-taxon`: keep only GenBank records matching this taxon name
+- `--filter-taxon-list`: path to a text file, one taxon name per line for batch filtering
+- `--dbroot-dir`: output directory to store the built database
+- `--orthofinder-exe`: manually provide the full path to `orthofinder.py`. This is a safe option and does not require OrthoFinder to be in your PATH
+- `--overwrite`: overwrite existing database files if they already exist
 
+#### Outputs of `makedb` database construction
+The database directory is named `<db_name>`. All generated files and folders are listed below:
+<db_name>/
+- `agst.tgz`  : Archive of AGST training files
+-  `cds.info`  : Metadata table for CDS sequences
+- `genome.info` : Basic information of source genomes
+- `hmms.tgz` : Compressed archive of gene HMM profiles
+- `msas.tgz` : Compressed archive of multiple sequence alignments
+- `prfl.tgz`  : Archive of auxiliary profile files
+- `protein.info`  : Metadata table for protein sequences
+- `rna.info`  : Metadata table for rRNA and tRNA genes
+- `seqs.tgz` :  Compressed archive of raw CDS and protein sequences
+- `species.treefile` : Species tree inferred from orthogroups
+- `taxonomy.info` : Plain-text taxonomy summary
+- `taxonomy.json.gz` : Compressed JSON taxonomy mapping file
+- `version ` : Database version marker
